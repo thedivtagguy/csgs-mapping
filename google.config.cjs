@@ -1,7 +1,12 @@
 module.exports = [
   {
-    id: "1yAxc5nIrCe_KkVsDgr34puXx-HgzN0g6wD2eLyfdaYA",
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
     gid: "0",
-    filepath: "src/data/stories.csv"
+    filepath: "src/data/organizations.csv"
+  },
+  {
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
+    gid: "1139916238",
+    filepath: "src/data/publications.csv"
   },
 ];

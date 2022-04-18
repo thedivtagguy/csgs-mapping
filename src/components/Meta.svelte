@@ -1,7 +1,7 @@
 <script>
-  export let title = "Aman Bhargava";
+  export let title = "CSGS Project";
   export let description =
-    "Aman's platform for a regular mishmash of design and code gimmickry";
+    "Mapping Resources for CSGS Project";
   export let url = "https://thedivtagguy.com";
   // export let slug = 
   //   "common/assets/thumbnails/960/social.jpg"

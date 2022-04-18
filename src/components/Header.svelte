@@ -21,7 +21,7 @@ export const  publicationsData = data;
         <div class="flex items-center justify-between">
           <div class="ml-4">
             <p class="text-sm leading-5 font-medium text-gray-900">
-              <a href="#" class="hover:underline">{publication.Title}</a>
+              <a href="/" class="hover:underline">{publication.Title}</a>
             </p>
             <div class="flex text-sm leading-5 text-gray-500">
               <time datetime="2020-03-16">{publication.Genre}</time>

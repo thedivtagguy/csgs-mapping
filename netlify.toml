@@ -1,0 +1,31 @@
+[[redirects]]
+  from = "/projects/food-apps"
+  to = "https://thedivtagguy.netlify.app/projects/food-apps/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/projects/bellybutton"
+  to = "https://thedivtagguy.netlify.app/projects/bellybutton/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/projects/manifesto"
+  to = "https://thedivtagguy.netlify.app/projects/manifesto/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/projects/whatsapp"
+  to = "https://thedivtagguy.netlify.app/projects/whatsapp/"
+  status = 200
+  force = true
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+    

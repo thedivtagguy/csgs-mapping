@@ -6,6 +6,7 @@ const header = publications.shift();
 // Create a new JSON object with first 5 rows of data
 const data = publications.slice(0, 5);
 export const  publicationsData = data;
+import Form from "../components/Form.svelte";
 </script>
 
 <header class="py-1">
@@ -31,4 +32,10 @@ export const  publicationsData = data;
     </div>
     {/each}
     </div>
+
+    <!-- Add Form -->
+    <div class="mt-10">
+      <Form />
+    </div>
+  </div>
 </header>

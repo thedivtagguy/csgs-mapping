@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <form name="aman" method="POST" data-netlify="true">
     <p>
       <label>Your Name: <input type="text" name="name" /></label>

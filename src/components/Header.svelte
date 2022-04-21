@@ -12,13 +12,12 @@ import Form from "../components/Form.svelte";
 <header class="py-1">
   <div class="py-12 ">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <p class="mt-2 text-3xl leading-8 w-1/2 mx-auto font-extrabold tracking-tight text-gray-900 sm:text-4xl">CSGS</p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Mapping Resources</p>
-      </div>
+      <h2 class="text-lg font-bold leading-6 text-gray-900">
+        Publications
+      </h2>
       <!-- Render publicationsData -->
       {#each publicationsData as publication}
-      <div class="mt-10">
+      <div class="mt-4">
         <div class="flex items-center justify-between">
           <div class="ml-4">
             <p class="text-sm leading-5 font-medium text-gray-900">
@@ -33,9 +32,5 @@ import Form from "../components/Form.svelte";
     {/each}
     </div>
 
-    <!-- Add Form -->
-    <div class="mt-10">
-      <Form />
-    </div>
   </div>
 </header>

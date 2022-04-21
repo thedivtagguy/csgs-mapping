@@ -3,7 +3,7 @@
         <div class="container px-6 py-3 mx-auto md:flex">
             <div class="flex items-center justify-between">
                 <div>
-                    <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">CSGS</a>
+                    <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">CSGS</a>
                 </div>
                 
                 <!-- Mobile menu button -->

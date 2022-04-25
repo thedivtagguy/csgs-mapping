@@ -1,7 +1,6 @@
-Genre,Title,Year of Publication,Author(s),Publisher/ Journal ,Language,Format,Keywords,Additional Comments
-,Publications sorted chronologically,,,,,,,
+genre,title,year,author,publisher,language,format,keywords,comments
 Literature,Lihaaf / The Quilt,1942,Ismat Chugtai,Idab-i-Latif,Urdu,Short Story,Lesbian narratives,
-Literature,Prateeksha / Waiting,1962,Rajendra Yadav,,Hindi,Short Story,"Lesbian love story, Fiction, Romance",A translated into English version has been included in Same-Sex Love in India
+Literature,Prateeksha / The Waiting,1962,Rajendra Yadav,,Hindi,Short Story,"Lesbian love story, Fiction, Romance",A translated into English version has been included in Same-Sex Love in India
 Literature,Gomathi,1964,Ki. Rajanarayanan,Deepam Magazine,Tamil,Short Story,"Trans narrative, fiction",
 Literature,A Story,1968,Bhupen Khakkar,Kriti Magazine,Gujrati,Short Story,"Bisexuality, Kinship, Family, Society",A translated into English version has been included in Same-Sex Love in India
 Literature,Maya Mridanga / Drums of Maya,1972,Syed Mustafa Siraj,Dey's Publishing,Bengali,Novel,"Alkaap Bengali Folk form, Chhokra, Rural queer expressions",
@@ -146,7 +145,6 @@ Literature,Lament of Riti / Ka Jingiam Ka Riti,,Kynpham Sing Nongkynrih,,English
 Literature,Naduve Suliva Hennu / Woman Who Emerges In Between,,Manjamma Jogathi,Dr Arun Joladkudlige,Kannada,Biography,"Jogathi Nrithya, Biography, Trans lives",
 Literature,Kabalisidha Kranthi Kadu,,Shilok Mukkati,,Kannada,Poem ,"Trans lives, Queer narratives, Poetry",
 Literature,Aan Nadhi,,Vijayaraja Mallika,Mythri Books,Malayalam,Anthology of poems,"Trans lives, poetry, Queer narratives",
-,,,,,,,,
 Theory,Pragmatics of Hindu Right: Politics of Women's Organization,1991,Tanika Sarkar,Economic & Political Weekly,English,Journal Article,"Right wing, Feminism and Right wing, Gender and Politics",
 Theory,Politics of Diversity: Religious Communities and multiple patriarchies,1995,"Kumkum Sangari, Uma Chakravarti",Economic & Political Weekly,English,Journal Article,"Gender, Religion, Feminism",
 Theory,Women and the Hindu Right: A collection of Essays,1995,"Tanika Sarkar, Urvashi Butalia (editors)",Zubaan,English,Academic Book,"Gender, Caste, Right wing, Politics",
@@ -227,8 +225,6 @@ Theory,The Algorithms of Desire: The Field of the Pornographic,2020,Karen Gabrie
 Theory,Gender-affirmative Technologies and the Contemporary Making of Gender in India,2021,Asha Achuthan ,Economy and Society,English,Journal Article,"Feminist Science Studies, Gender and technology",
 Theory,"Sexuality, Abjection and Queer Existence in Contemporary India",2021,Pushpesh Kumar (editor),Routledge ,English,Academic Book,"Sexuality, Marginality, Queer lives",
 Theory,The Law of Desire: Rulings of Sex and Sexuality in India,2021,Madhavi Menon,Speaking Tiger Publishing Pvt. Ltd.,English,Academic Book,"Sexuality, Desire, Law",
-,,,,,,,,
-,,,,,,,,
 "Politics, Law, Citizenship, and State","Mother, Mother communities and Mother Politics in Tamilnadu",1990,C S Lakshmi,Economic & Political Weekly,English,Journal Article,"Motherhood, Mother Politics, Tamil Nadu",
 "Politics, Law, Citizenship, and State",A Space Within the Struggle: Women's Participation in People's movement,1990,Ilina Sen (editor),Zubaan,English,Academic Book,"Women's movement, People's Movement",
 "Politics, Law, Citizenship, and State",Gender and Political Discourse,1991,V Geetha,Economic & Political Weekly,English,Journal Article,Gender and Politics,
@@ -336,8 +332,6 @@ http://www.kashmirlit.org/parveena-ahangars-rafto-acceptance-speech/ "
 "Politics, Law, Citizenship, and State","Construction(s) of Female Criminality: Gender, Caste and State Violence",2021,"Nikita Sonavane, Srujana Bej, Ameya Bokil",Economic & Political Weekly,English,Journal Article,"Female Criminality, Criminal Law, Caste, State Repression",
 "Politics, Law, Citizenship, and State",Unacceptable Citizens: Queer communities and Homonationalism in India,2021,Himadri Roy,Routledge,English,Book Chapter,"Queer Communities, Homonationalism",Article contained within Nationalism in India: Texts and Contexts
 "Politics, Law, Citizenship, and State",Why should Marital Rape Exception be removed?,2021,Ayushi Agarwal,Economic & Political Weekly,English,Journal Article,"Marital Rape, Indian Penal Code",
-,,,,,,,,
-,,,,,,,,
 Gender and the Development Discourse,Towards Equality: Report of the Committee on the Status of Women in India,1974,"Phulrenu Guha, Maniben Kara, Savitri Shyam, Neera Dogra, Vikram Mahajan, Leela Dube, Sakina A. Hasan, Urmila Haksar, Lotika Sarkar, Vina Mazumdar","Ministry of Education and Social Welfare, Department of Social Welfare, Government of India",English,Report,"Women's rights, Gender equality",
 Gender and the Development Discourse,Women's Studies in India: Some Perspectives,1987,Maithreyi Krishnaraj (editor),Sangam Books Ltd,English,Academic Book,Women's Studies,
 Gender and the Development Discourse,Women and AIDS - Denial and Blame,1990,"Arun Bhandari, Manoj, D. Dalip, Dr. P.S. Sahni, Dr. J.P. Jain, Renu, J.S. Kohli, Shalini, Lalitha S.A, Siddhartha Gautam",AIDS Bhedbhav Virodhi Andolan,English,Report,"HIV/AIDS, Women and Health care",
@@ -383,9 +377,7 @@ Gender and the Development Discourse,Gendering of Development Data in India: Bey
 Gender and the Development Discourse,Violence against Women and Girls: Understanding Responses and Approaches in the Indian Health Sector ,2020,"Sangeeta Rege, Padma Bhate-Deosthali, T K Sundari Ravindran (editors)",Routledge,English,Academic Book,"Health care in India, Gender Based Violence",
 Gender and the Development Discourse,Women in the Worlds of Labour: Interdisciplinary and Intersectional Perspectives,2021,"Mary E. John, Meena Gopal (editors)",Orient BlackSwan,English,Academic Book,"Labour Politics, Work and Economics, Women and Work",
 Gender and the Development Discourse,Scaling up the Health systems response to Violence against Women: Lessons from Hospital intervention in Maharashtra,2021,"CEHAT, World Health Organization, Human Reproduction Programme",World Health Organisation,English,Report,"Gender Based Violence, Gender and Health, Violence Against Women",
-Gender and the Development Discourse,Shareer ki Jaankari,"1998, 1999, 2000, 2002, 2005",75 women participants in the Women's Development Programme Rajasthan,Kali for Women,"Hindi, Gujarati, Oriya, Bengali, Marathi, English",Resource Material,"Sex Education, Rural Women",https://mahilajanadhikar.org/publications/
-,,,,,,,,
-,,,,,,,,
+Gender and the Development Discourse,Shareer ki Jaankari,1998,75 women participants in the Women's Development Programme Rajasthan,Kali for Women,"Hindi, Gujarati, Oriya, Bengali, Marathi, English",Resource Material,"Sex Education, Rural Women",https://mahilajanadhikar.org/publications/
 Masculinities,Colonial Masculinity: The Manly Englishman and the Effiminate Bengali in the Late Ninteenth Century,1995,Mrinalini Sinha,Manchester University Press,English,Academic Book,"Masculinity, Colonialism, Imperialism",
 Masculinities,"The Garden of Rational Delights: The Nation as Experiment, Science as Masculinity",1996,Sanjay Srivastava,Social Analysis: The International Journal of Anthropology,English,Journal Article,"Masculinity Politics, Masculine Cultures",
 Masculinities,"Circumcision, Body and Community",1996,Deepak Mehta,Contributions to Indian Sociology,English,Journal Article,"Circumcision, Musalmani, Barabanki, Uttar Pradesh",
@@ -415,8 +407,6 @@ Masculinities,"The Action Heroes of Bengali Cinema: Industrial, Technological an
 Genre, Stars, Public Cultures"
 Masculinities,Motorcycle Masculinity in Indian Cinema,2020,Shaista Anwar,Tasveer Ghar--A Digital Archive of South Asian Popular Visual Culture,English,Journal Article,"Motorcycle Masculinity, Indian Cinema, Popular Culture",
 Masculinities,Sleepless Fathers in Malayalam Cinema: Unraveling the Dynamics of Caste and Masculinity,2020,Navaneetha Mokkil,South Asian Popular Culture,English,Journal Article,"Malayalam Cinema, Fatherhood, Caste",
-,,,,,,,,
-,,,,,,,,
 Work and Economics,"Structure and Strategy: Women, work and Family",1989,"Leela Dubey, Rajni Palriwala (editors)",Sage Publication,English,Academic Book,"Gender. Economics, Work",
 Work and Economics,The Gendered politics of Fuel in India,1991,Padmini Swaminathan,Sage Publication,English,Journal Article,"Gender. Economics, Work",
 Work and Economics,Making a Difference: Feminist Publishing in the South,1995,"Urvashi Butalia, Ritu Menon",Bellagio Pub. Network,English,Academic Book,"Gender, Publication, Feminist Publishing",
@@ -444,8 +434,6 @@ Work and Economics,Bans & Bar Girls: Performing Caste in Mumbai’s Dance Bars,2
 Work and Economics,Queeristan: LGBTQ Inclusion in the Indian Workplace,2020,Parmesh Shahani,Westland,English,Non-Fiction,"LGBTQ inclusion, Corporate India, Workplaces",
 Work and Economics,Mobile Girls Kootam: Working Women Speak,2021,Madhumita Dutta,Zubaan,English,Non-Fiction,"Gender, Work, Economics",
 Work and Economics,"House maids, Urban Spacing and Negotiating the ‘Other’ During Covid Times",2022,Amrita Ghosh,Routledge ,English,Book Chapter,"Gender, Labour, Pandemic",Article contained within COVID-19 Assemblages: Queer and Feminist Ethnographies From South Asia
-,,,,,,,,
-,,,,,,,,
 Religion and Customary Practices,Politics of Diversity-Religious Communities and Multiple Patriarchies,1995,Kumkum Sangari ,Economic & Political Weekly,English,Journal Article,"Religion, Gender, Patriarchy",
 Religion and Customary Practices,"Marriage, Sexuality and the Female Ascetic-Understanding a Hindu Sect",1996,Prem Chowdhry,Economic & Political Weekly,English,Journal Article,"Religion, Gender, Hinduism",
 Religion and Customary Practices,The Qur'an Women and Modern Society,2005,Asghar Ali Engineer,New Dawn Press Group ,English,Academic Book,"Islam, Religion, Gender",
@@ -459,8 +447,6 @@ Religion and Customary Practices,Intercaste Marriage and the Shakta: Myths of Ka
 Religion and Customary Practices,The Role of Male Dais (Huarku) in Childbirth in a Tribal Block in Nandurbar District of Maharashtra State,2018,"Sneha Baldeo Makkad, Dr Mira Sadgopal",Routledge,English,Journal Article,"Gender, Custormary Practice, Childbirth","Article contained in Global Masculinities: Interrogations and reconstructions
 Interrogations and Reconstructions"
 Religion and Customary Practices,How Can Feminist Theology reduce gender inequality in Religion,2018,Vineeta Sharma,Economic & Political Weekly,English,Journal Article,"Feminist Theory, Theology",
-,,,,,,,,
-,,,,,,,,
 "Art, Cinema and Pop Culture","Third World Women's Cinema-Notes on Narrative, Reflections on Opacity",1986,Susie Tharu,Economic & Political Weekly,English,Journal Article,"Women in Film, Women and Cinema",
 "Art, Cinema and Pop Culture",Dialectic of Public and Private-Representation of Women in Bhoomika and Mirch Masala,1991,Ranjani Mazumdar,Economic & Political Weekly ,English,Journal Article,"Women in Film, Women and Cinema, Media Representation",
 "Art, Cinema and Pop Culture",Conceptualising Popular Culture: 'Lavani' and 'Powada' in Maharashtra',2002,Sharmila Rege,Economic & Political Weekly,English,Journal Article,"Caste, Cultural Labour, Lavani, Powada",
@@ -529,8 +515,6 @@ Genre, Stars, Public Cultures"
 "Art, Cinema and Pop Culture",Improvised Futures: Encountering the body in Performance,2021,Ranjana Dave (editors),Tulika Books,English,Academic Book,"Body, Perfomance, Resistance Politics",
 "Art, Cinema and Pop Culture",Safe And Strong: An LGBTQIA plus Guide To Facebook And Instagram,,"Rafiul Alom Rahman, Sonaksha Iyengar(illustrator)",The Queer Muslim Project,English,Booklet,"Queer Muslim, Digital Narratives",
 "Art, Cinema and Pop Culture",Objects of Desire: Commodification of Gender on the Titles of Popular Hindi Novels,,Atmaram K. Bhakal,Tasveer Ghar--A Digital Archive of South Asian Popular Visual Culture,English,Journal Article,"Hindi Novels, Popular Culture, Gender Representation",
-,,,,,,,,
-,,,,,,,,
 Culture and Society,Daughters of the Vitasta: A History of Kashmiri Women from Early Times to the Present Day,1959,Prem Nath Bazaz,Pamposh Publications,English,Historical Biography,"Kashmiri Women, History",
 Culture and Society,The World of Homosexuals,1977,Shakuntala Devi,Vikas Publishing House,English,Non-Fiction,"Indian Homosexuality, History, Society",queer theory and sexuality studies
 Culture and Society,Less Than Gay,1991,AIDS Bhedbhav Virodhi Andolan,AIDS Bhedbhav Virodhi Andolan,English,Report,"Gay narratives, Queer lives, Society",

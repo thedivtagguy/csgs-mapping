@@ -46,7 +46,7 @@
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 	const padding = { top: 20, right: 50, bottom: 35, left: 25 };
 
-	let width = 1000;
+	let width = 1100;
 	let height = 600;
 
 	$: xScale = scaleLinear()
@@ -58,7 +58,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 135; 
+	$: barWidth = innerWidth / xTicks.length - 152; 
 
 </script>
 
@@ -76,8 +76,8 @@
 
 		<g class="axis x-axis">
 			{#each data2 as point, i}
-				<g class="tick" transform="translate({xScale(i)/7 + 20} ,{height})">
-					<text x="{barWidth/2}" y="-15">{point[0].year}</text>
+				<g class="tick" transform="translate({xScale(i)/7 + 5} ,{height})">
+					<text x="{barWidth/2}" y="-17">{point[0].year}</text>
 				</g>
 			{/each}
 		</g>
@@ -85,7 +85,7 @@
 		<g class='bars'>
 			{#each data2 as point, i}
 				{#each {length: point[0].totalCount} as book, j}
-				<rect class="bars"  x="{xScale(i)/7 + 19}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
+				<rect class="bars"  x="{xScale(i)/7 + 5}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
 				{/each}
 			{/each}
 			</g>
@@ -100,7 +100,7 @@
 
 	.chart {
 		width: 100%;
-		max-width: 1000px;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 

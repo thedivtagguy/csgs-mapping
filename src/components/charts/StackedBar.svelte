@@ -89,6 +89,11 @@
 			return '#d3d3d3';
 		}
 	}
+
+	// Function to change genreSelection when a genre is clicked
+	$: handleClick = (d) => {
+		genreSelection = d;
+	}
 </script>
 
 <div id="facets" class="flex flex-row">
@@ -96,7 +101,7 @@
 		<div class="w-1/3">
 			<div class="flex flex-col items-center">
 					<div class="w-full h-full bg-gray-200 rounded-lg shadow-lg">
-						<div class="text-center text-gray-700 text-xs">{genre}</div>
+						<div on:click={handleClick(genre)} class="text-center text-gray-700 text-xs">{genre}</div>
 					</div>
 			</div>
 		</div>

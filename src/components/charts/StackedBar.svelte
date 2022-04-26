@@ -57,6 +57,8 @@
 		});
 	});
 
+	////////////////////////////////////////////////////////////////////
+
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 	const padding = { top: 20, right: 50, bottom: 35, left: 25 };
@@ -74,9 +76,32 @@
 
 	$: innerWidth = width - (padding.left + padding.right);
 	$: barWidth = innerWidth / xTicks.length - 152; 
-	console.log(data2[0][0]);
+	
+	$: genreSelection = null;
+
+	// Function to handleFill. 
+	// If a genre is selected, then return that color. If not then return gray
+	// Color only that genre
+	$: handleFill = (d) => {
+		if (genreSelection === d.genre) {
+			return d.color;
+		} else {
+			return '#d3d3d3';
+		}
+	}
 </script>
 
+<div id="facets" class="flex flex-row">
+	{#each genres as genre}
+		<div class="w-1/3">
+			<div class="flex flex-col items-center">
+					<div class="w-full h-full bg-gray-200 rounded-lg shadow-lg">
+						<div class="text-center text-gray-700 text-xs">{genre}</div>
+					</div>
+			</div>
+		</div>
+	{/each}
+</div>
 
 <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 	<svg>
@@ -101,7 +126,7 @@
 			{#each data2 as point, i}
 				{#each {length: point[0].totalCount} as book, j}
 				<rect class="bars"  
-				fill="{point[j].color}"
+				fill="{handleFill(point[j])}"
 				x="{xScale(i)/7 + 5}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
 				{/each}
 			{/each}

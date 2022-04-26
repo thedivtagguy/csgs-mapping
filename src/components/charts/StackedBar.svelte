@@ -9,6 +9,7 @@
 		genre: d.genre,
 		totalCount: 0,
 	}));
+
 	// Delete items where year is empty
 	data.forEach(d => {
 		if (d.year !== '') {
@@ -40,6 +41,22 @@
 	// Convert that to an array of objects
 	let data2 = Object.values(result);
 
+
+	////////////////////////////////////////////////////////////////////
+	/////////// Genre Filters //////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////
+
+	// Create an array of unique genres
+	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
+	const genreColors = ["#fd7f6f", "#7eb0d5", "#b2e061", "#bd7ebe", "#ffb55a", "#ffee65", "#beb9db", "#fdcce5", "#8bd3c7"]
+
+	// Iterate through data2 and add an item called color with the associated color for each book
+	data2.forEach(d => {
+		d.forEach(d => {
+			d.color = genreColors[genres.indexOf(d.genre)];
+		});
+	});
+
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 	const padding = { top: 20, right: 50, bottom: 35, left: 25 };
@@ -57,7 +74,7 @@
 
 	$: innerWidth = width - (padding.left + padding.right);
 	$: barWidth = innerWidth / xTicks.length - 152; 
-
+	console.log(data2[0][0]);
 </script>
 
 
@@ -83,7 +100,9 @@
 		<g class='bars'>
 			{#each data2 as point, i}
 				{#each {length: point[0].totalCount} as book, j}
-				<rect class="bars"  x="{xScale(i)/7 + 5}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
+				<rect class="bars"  
+				fill="{point[j].color}"
+				x="{xScale(i)/7 + 5}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
 				{/each}
 			{/each}
 			</g>
@@ -133,7 +152,6 @@
 	}
 
 	.bars rect {
-		fill: #a11;
 		stroke: none;
 		opacity: 0.65;
 	}

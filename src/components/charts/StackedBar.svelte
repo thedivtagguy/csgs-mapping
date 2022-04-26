@@ -16,8 +16,6 @@
 		}
 	});
 	refined.sort((a, b) => a.year - b.year);
-	// Print year of the first item
-	console.log(refined);
 
 	// Count the number of books in each year and add that to the totalCount
 	refined.forEach(d => {
@@ -31,16 +29,16 @@
 		d.year = +d.year;
 	});
 
-	// Group items under the year key
+	// Convert the dataset from an array to an array of objects
+	// Where each year is a key and it contains objects for each book
 	let result = refined.reduce(function (r, a){
 		r[a.year] = r[a.year] || [];
 		r[a.year].push(a);
 		return r;
 	}, Object.create(null));
 
-	console.log(result);
+	// Convert that to an array of objects
 	let data2 = Object.values(result);
-	console.log(data);
 
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];

@@ -1,6 +1,5 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
-
 	import publications from "$data/publications.csv";
 	const refined = [];
 	// We will keep only year, title, genre
@@ -32,18 +31,23 @@
 		d.year = +d.year;
 	});
 
-	const points = refined;
+	// Group items under the year key
+	let result = refined.reduce(function (r, a){
+		r[a.year] = r[a.year] || [];
+		r[a.year].push(a);
+		return r;
+	}, Object.create(null));
+
+	console.log(result);
+	let data2 = Object.values(result);
+	console.log(data);
 
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-	const padding = { top: 20, right: 50, bottom: 20, left: 25 };
+	const padding = { top: 20, right: 50, bottom: 35, left: 25 };
 
 	let width = 1000;
-	let height = 500;
-
-	function formatMobile(tick) {
-		return "'" + tick.toString().slice(-2);
-	}
+	let height = 600;
 
 	$: xScale = scaleLinear()
 		.domain([0, xTicks.length ])
@@ -54,13 +58,13 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 140; 
+	$: barWidth = innerWidth / xTicks.length - 135; 
+
 </script>
 
 
 <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 	<svg>
-		<!-- y axis -->
 		<g class="axis y-axis">
 			{#each yTicks as tick}
 				<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
@@ -70,30 +74,26 @@
 			{/each}
 		</g>
 
-		<!-- x axis -->
 		<g class="axis x-axis">
-			{#each points as point, i}
-				<g class="tick" transform="translate({xScale(i)} ,{height})">
-					<text x="{barWidth/2}" y="-4">{width > 380 ? point.year : formatMobile(point.year)}</text>
+			{#each data2 as point, i}
+				<g class="tick" transform="translate({xScale(i)/7 + 20} ,{height})">
+					<text x="{barWidth/2}" y="-15">{point[0].year}</text>
 				</g>
 			{/each}
 		</g>
 
 		<g class='bars'>
-			{#each points as point, i}
-				
-				<rect
-					x="{xScale(i)/14}"
-					y="{yScale(point.totalCount)}"
-					width="{barWidth - 4}"
-					height="{yScale(0) - yScale(point.totalCount)}"
-				></rect>
+			{#each data2 as point, i}
+				{#each {length: point[0].totalCount} as book, j}
+				<rect class="bars"  x="{xScale(i)/7 + 19}" y="{yScale(j) -8}" width="{barWidth}" height="8px"></rect>
+				{/each}
 			{/each}
-		</g>
+			</g>
 	</svg>
 </div>
 
 <style>
+	
 	h2 {
 		text-align: center;
 	}
@@ -112,7 +112,7 @@
 
 	.tick {
 		font-family: Helvetica, Arial;
-		font-size: .725em;
+		font-size: .525em;
 		font-weight: 200;
 	}
 
@@ -122,7 +122,7 @@
 	}
 
 	.tick text {
-		fill: #ccc;
+		fill: rgb(137, 137, 137);
 		text-anchor: start;
 	}
 

@@ -483,6 +483,15 @@ p {
 .h-full {
   height: 100%;
 }
+.h-\[20px\] {
+  height: 20px;
+}
+.h-\[50px\] {
+  height: 50px;
+}
+.h-\[30px\] {
+  height: 30px;
+}
 .w-\[40px\] {
   width: 40px;
 }
@@ -498,6 +507,9 @@ p {
 .w-1\/3 {
   width: 33.333333%;
 }
+.w-\[20px\] {
+  width: 20px;
+}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -507,6 +519,9 @@ p {
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));

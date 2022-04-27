@@ -53,7 +53,7 @@
 
 	// Create an array of unique genres
 	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
-	const genreColors = ["#392744", "#8E6472", "#E6DA99", "#FC706E", "#08A388", "#DB5526", "#8E4635", "#39081E", "#0E8587"]
+	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
 
 	// Iterate through data2 and add an item called color with the associated color for each book
 	data2.forEach(d => {
@@ -76,7 +76,6 @@
 	$: xScale = scaleLinear()
 		.domain([0, xTicks.length ])
 		.range([padding.left, width - padding.right]);
-
 	$: yScale = scaleLinear()
 		.domain([0, Math.max.apply(null, yTicks)])
 		.range([height - padding.bottom, padding.top]);
@@ -107,56 +106,55 @@
 	$: handleClick = (d) => {
 		genreSelection = d;
 	}
+
+
 </script>
-
-<div id="facets" class="flex flex-row">
-	{#each genres as genre}
-		<div class="w-full">
-			<div class="flex flex-col items-center">
-					<div  on:click={handleClick(genre)} class="h-[30px]  cursor-pointer w-full bg-gray-200 rounded-lg shadow-lg">
-						<h4 class="text-center text-gray-700 text-xs">{genre}</h4>
-					</div>
+<main>
+	<div id="facets" class="flex flex-row">
+		{#each genres as genre}
+			<div class="w-full">
+				<div class="flex flex-col items-center">
+						<div  on:click={handleClick(genre)} class="h-[30px]  cursor-pointer w-full bg-gray-200 rounded-lg ">
+							<h4 class="text-center text-gray-700 text-xs">{genre}</h4>
+						</div>
+				</div>
 			</div>
-		</div>
-	{/each}
-</div>
-
-<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
-	<svg>
-		<g class="axis y-axis">
-			{#each yTicks as tick}
-				<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
-					<line x2="100%"></line>
-					<text y="-4">{tick}</text>
-				</g>
-			{/each}
-		</g>
-
-		<g class="axis x-axis">
-			{#each data2 as point, i}
-				<g class="tick" transform="translate({xScale(i)/7 + 2} ,{height})">
-					<text x="{barWidth/2}" y="-17">{point[0].year}</text>
-				</g>
-			{/each}
-		</g>
-
-		<g class='bars'>
-			{#each data2 as point, i}
-				{#each {length: point[0].totalCount} as book, j}
-				<rect class="bars"  
-				fill="{handleFill(point[j])}"
-				x="{xScale(i)/7 + 2}" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
+		{/each}
+	</div>
+	
+	<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
+		<svg>
+			<g class="axis y-axis">
+				{#each yTicks as tick}
+					<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
+						<line x2="100%"></line>
+					</g>
 				{/each}
-			{/each}
 			</g>
-	</svg>
-</div>
+	
+			<g class="axis x-axis">
+				{#each data2 as point, i}
+					<g class="tick" transform="translate({xScale(i)/7} ,{height})">
+						<text x="{barWidth/2}" y="-17">{point[0].year}</text>
+					</g>
+				{/each}
+			</g>
+	
+			<g class='bars'>
+				{#each data2 as point, i}
+					{#each {length: point[0].totalCount} as book, j}
+					<rect class="bars"
+					fill="{handleFill(point[j])}"
+					x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
+					{/each}
+				{/each}
+				</g>
+		</svg>
+	</div>
+</main>
 
 <style>
 	
-	h2 {
-		text-align: center;
-	}
 
 	.chart {
 		width: 100%;
@@ -200,4 +198,18 @@
 		opacity: 0.65;
 		margin-bottom: 17px;
 	}
+
+	.bars rect:hover {
+		opacity: 1;
+		stroke: #000000;
+		cursor: pointer;
+	}
+
+	.bar rect:active {
+		opacity: 1;
+		stroke: #000000;
+		cursor: pointer;
+	}
+
+	
 </style>

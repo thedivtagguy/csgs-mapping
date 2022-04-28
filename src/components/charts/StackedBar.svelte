@@ -81,7 +81,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 120; 
+	$: barWidth = innerWidth / xTicks.length - 121; 
 	
 
 	////////////////////////////////////////////////////////////////////
@@ -131,6 +131,36 @@
 		shouldShow = false;
 	}
 
+	// Add a Search Box
+	$: searchBox = "";
+
+	// Function to handle search
+	// Search should look for a book title, genre
+	// The result should be highlighted in the chart in red
+
+	$: search = () => {
+		const searchValue = searchBox;
+		console.log(searchValue);
+		
+		// Iterate through the data2 object. Iterate over each key and the objects in each key
+		// If the title or genre of the book matches the searchValue, then highlight it in red
+		// Keep only the books that match the searchValue
+		data2.forEach(d => {
+			d.forEach(d => {
+				if (d.title.toLowerCase().includes(searchValue.toLowerCase()) || d.genre.toLowerCase().includes(searchValue.toLowerCase())) {
+					d.color = '#ff0000';
+				}
+			});
+		});
+		
+		// Clear value of searchBox
+		searchBox = "";
+	}
+
+
+
+
+
 </script>
 <main>
 	
@@ -140,20 +170,26 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
+
+			<!-- Search Box -->
+			<div class="flex flex-col items-center">
+				<input bind:value={searchBox} />
+				<button class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:click={search()}>Search</button>
+			</div>
 		</div>
 		<div class="col-span-8">		
 			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 				<svg>
 					{#if shouldShow}
 					<!-- Display book details -->
-					<g class="details">
-						<text x="{xScale(0)}" y="100" class="text-gray-600 text-sm">
+					<g class="details bg-black">
+						<text id="bookTitle" x="{xScale(0)}" y="100" >
 								{currentBookTitle}
 						</text>
-						<text x="{xScale(0)}" y="120" class="text-gray-600 text-sm">
+						<text id="bookGenre" x="{xScale(0)}" y="120" >
 								{currentBookGenre}
 						</text>
-						<text x="{xScale(0)}" y="140" class="text-gray-600 text-sm">
+						<text id="bookYear" x="{xScale(0)}" y="140" >
 								{currentBookYear}
 						</text>
 					</g>
@@ -184,7 +220,7 @@
 							<rect class="bars"
 							fill="{handleFill(point[j])}"
 							on:click="{displayDetails(point[j])}"
-							x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="11"></rect>
+							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11"></rect>
 							{/each}
 						{/each}
 						</g>
@@ -246,8 +282,8 @@
 	}
 
 	.bars rect {
-		stroke: #000000;
-		stroke-width: 0.6px;
+		stroke: #828282;
+		stroke-width: 1px;
 		opacity: 0.65;
 		margin-bottom: 17px;
 	}
@@ -258,9 +294,6 @@
 		cursor: pointer;
 	}
 
-	.details g{
-		width: 20px;
-	}
 
 	
 </style>

@@ -108,15 +108,66 @@
 	}
 
 	////////////////////////////////////////////////////////////////////
-	////// Show more info when hovering over a bar /////////////////////
+	////// Show more info when clicking over a bar /////////////////////
 	////////////////////////////////////////////////////////////////////
+
+	$: currentBookTitle = null;
+	$: currentBookGenre = null;
+	$: currentBookYear = null;
+
+	// Function to handle mouseover
+	$: handleMouseOver = (d) => {
+		currentBookTitle = d.title;
+		currentBookGenre = d.genre;
+		currentBookYear = d.year;
+	}
+
+	// Function to handle mouseout
+	$: handleMouseOut = (d) => {
+		currentBookTitle = null;
+		currentBookGenre = null;
+		currentBookYear = null;
+	}
 
 
 </script>
 <main>
 	
-	<section class="grid grid-cols-12 gap-6">
-		<div class="col-span-2">hi</div>
+	<section class="grid grid-cols-12 gap-6 ">
+		<div class="col-span-2">
+			<h1 class="text-2xl font-bold">Publications</h1>
+			<p class="text-gray-600 py-4 text-sm">
+				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
+			</p>
+			
+			<!-- Card -->
+			<div class="bg-slate-100 border-2 h-full p-6 border-slate-200 border-dashed">
+				<!-- Print first book from data2 -->
+				<div class="flex flex-col">
+					<div class="flex-1">
+						<h2 class="text-xl font-bold">
+							<span class="text-gray-600">
+								{#if currentBookTitle}
+									{currentBookTitle}
+								{/if}
+							</span>
+						</h2>
+						<p class="text-gray-600">
+							{#if currentBookGenre}
+									{currentBookGenre}
+								{/if}
+						</p>
+					</div>
+					<div class="flex-1">
+						<p class="text-gray-600">
+							{#if currentBookYear}
+									{currentBookYear}
+								{/if}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="col-span-8">		
 			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 				<svg>
@@ -143,6 +194,8 @@
 							{#each {length: point[0].totalCount} as book, j}
 							<rect class="bars"
 							fill="{handleFill(point[j])}"
+							on:mouseover="{handleMouseOver(point[j])}"
+							on:mouseout="{handleMouseOut(point[j])}"
 							x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
 							{/each}
 						{/each}

@@ -23,7 +23,6 @@
 		}
 	});
 	refined.sort((a, b) => a.year - b.year);
-
 	// Count the number of books in each year and add that to the totalCount
 	refined.forEach(d => {
 		const year = d.year;
@@ -107,6 +106,10 @@
 	$: highlightGenre = (d) => {
 		genreSelection = d;
 	}
+
+	////////////////////////////////////////////////////////////////////
+	////// Show more info when hovering over a bar /////////////////////
+	////////////////////////////////////////////////////////////////////
 
 
 </script>

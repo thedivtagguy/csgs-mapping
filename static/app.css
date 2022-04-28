@@ -418,6 +418,12 @@ p {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -471,8 +477,11 @@ p {
 .h-5 {
   height: 1.25rem;
 }
-.h-\[30px\] {
-  height: 30px;
+.h-full {
+  height: 100%;
+}
+.h-\[35px\] {
+  height: 35px;
 }
 .w-\[40px\] {
   width: 40px;
@@ -489,8 +498,8 @@ p {
 .max-w-5xl {
   max-width: 64rem;
 }
-.max-w-7xl {
-  max-width: 80rem;
+.max-w-\[85rem\] {
+  max-width: 85rem;
 }
 .transform {
   -webkit-transform: var(--tw-transform);
@@ -502,10 +511,8 @@ p {
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
-.flex-row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .flex-col {
   -webkit-box-orient: vertical;
@@ -535,6 +542,9 @@ p {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .gap-4 {
   gap: 1rem;
@@ -737,12 +747,6 @@ p {
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }

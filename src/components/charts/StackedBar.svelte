@@ -1,7 +1,7 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
-	import rough from "roughjs;
+	import rough from "roughjs";
 	import { onMount } from 'svelte';
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -82,7 +82,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 150; 
+	$: barWidth = innerWidth / xTicks.length - 122; 
 	
 
 	////////////////////////////////////////////////////////////////////
@@ -104,54 +104,60 @@
 	}
 
 	// Function to change genreSelection when a genre is clicked
-	$: handleClick = (d) => {
+	$: highlightGenre = (d) => {
 		genreSelection = d;
 	}
 
 
 </script>
 <main>
-	<div id="facets" class="flex flex-row">
-		{#each genres as genre}
-			<div class="w-full">
-				<div class="flex flex-col items-center">
-						<div  on:click={handleClick(genre)} class="h-[30px]  cursor-pointer w-full bg-gray-200 rounded-lg ">
-							<h4 class="text-center text-gray-700 text-xs">{genre}</h4>
-						</div>
-				</div>
+	
+	<section class="grid grid-cols-12 gap-6">
+		<div class="col-span-2">hi</div>
+		<div class="col-span-8">		
+			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
+				<svg>
+					<g class="axis y-axis">
+						{#each yTicks as tick}
+							<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
+								<line x2="100%"></line>
+							</g>
+						{/each}
+					</g>
+			
+					<g class="axis x-axis">
+						{#each data2 as point, i}
+						{#if i % 4 === 0 }	
+						<g class="tick" transform="translate({xScale(i)/7} ,{height})">
+								<text x="{barWidth/2}" y="-17">{point[0].year}</text>
+							</g>
+							{/if}
+						{/each}
+					</g>
+			
+					<g class='bars'>
+						{#each data2 as point, i}
+							{#each {length: point[0].totalCount} as book, j}
+							<rect class="bars"
+							fill="{handleFill(point[j])}"
+							x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
+							{/each}
+						{/each}
+						</g>
+				</svg>
 			</div>
-		{/each}
-	</div>
-	
-	<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
-		<svg>
-			<g class="axis y-axis">
-				{#each yTicks as tick}
-					<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
-						<line x2="100%"></line>
-					</g>
+		</div>
+		<div class="col-span-2">
+			<div id="facets" class="flex flex-col gap-8 h-full justify-center items-center">
+				{#each genres as genre}
+								<div  on:click={highlightGenre(genre)} class="h-[35px] px-4 flex justify-items-center items-center  cursor-pointer w-full bg-gray-200 rounded-lg ">
+									<h4 class="text-gray-700 text-xs">{genre}</h4>
+								</div>
 				{/each}
-			</g>
+			</div>
+		</div>
+	</section>
 	
-			<g class="axis x-axis">
-				{#each data2 as point, i}
-					<g class="tick" transform="translate({xScale(i)/7} ,{height})">
-						<text x="{barWidth/2}" y="-17">{point[0].year}</text>
-					</g>
-				{/each}
-			</g>
-	
-			<g class='bars'>
-				{#each data2 as point, i}
-					{#each {length: point[0].totalCount} as book, j}
-					<rect class="bars"
-					fill="{handleFill(point[j])}"
-					x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
-					{/each}
-				{/each}
-				</g>
-		</svg>
-	</div>
 </main>
 
 <style>
@@ -183,10 +189,12 @@
 	.tick text {
 		fill: rgb(137, 137, 137);
 		text-anchor: start;
+		font-size: 10px;
 	}
 
 	.tick.tick-0 line {
 		stroke-dasharray: 0;
+		stroke: rgb(187, 187, 187);
 	}
 
 	.x-axis .tick text {
@@ -206,11 +214,7 @@
 		cursor: pointer;
 	}
 
-	.bar rect:active {
-		opacity: 1;
-		stroke: #000000;
-		cursor: pointer;
-	}
+
 
 	
 </style>

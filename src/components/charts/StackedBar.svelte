@@ -1,8 +1,8 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
-	import rough from "roughjs";
-	import { onMount } from 'svelte';
+	import {clickOutside} from '../scripts/clickOutside.js';
+
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 122; 
+	$: barWidth = innerWidth / xTicks.length - 120; 
 	
 
 	////////////////////////////////////////////////////////////////////
@@ -114,63 +114,52 @@
 	$: currentBookTitle = null;
 	$: currentBookGenre = null;
 	$: currentBookYear = null;
+	$$: isClicked = false;
+	$: shouldShow = false;
 
 	// Function to handle mouseover
-	$: handleMouseOver = (d) => {
+	$: displayDetails = (d) => {
 		currentBookTitle = d.title;
 		currentBookGenre = d.genre;
 		currentBookYear = d.year;
+		$$: isClicked = true;
+		shouldShow = true;
 	}
 
-	// Function to handle mouseout
-	$: handleMouseOut = (d) => {
-		currentBookTitle = null;
-		currentBookGenre = null;
-		currentBookYear = null;
+	$: closeDetails = () => {
+		$$: isClicked = false;
+		shouldShow = false;
 	}
-
 
 </script>
 <main>
 	
 	<section class="grid grid-cols-12 gap-6 ">
-		<div class="col-span-2">
+		<div class="col-span-2 py-6">
 			<h1 class="text-2xl font-bold">Publications</h1>
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
-			
-			<!-- Card -->
-			<div class="bg-slate-100 border-2 h-full p-6 border-slate-200 border-dashed">
-				<!-- Print first book from data2 -->
-				<div class="flex flex-col">
-					<div class="flex-1">
-						<h2 class="text-xl font-bold">
-							<span class="text-gray-600">
-								{#if currentBookTitle}
-									{currentBookTitle}
-								{/if}
-							</span>
-						</h2>
-						<p class="text-gray-600">
-							{#if currentBookGenre}
-									{currentBookGenre}
-								{/if}
-						</p>
-					</div>
-					<div class="flex-1">
-						<p class="text-gray-600">
-							{#if currentBookYear}
-									{currentBookYear}
-								{/if}
-						</p>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div class="col-span-8">		
 			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 				<svg>
+					{#if shouldShow}
+					<!-- Display book details -->
+					<g class="details">
+						<text x="{xScale(0)}" y="100" class="text-gray-600 text-sm">
+								{currentBookTitle}
+						</text>
+						<text x="{xScale(0)}" y="120" class="text-gray-600 text-sm">
+								{currentBookGenre}
+						</text>
+						<text x="{xScale(0)}" y="140" class="text-gray-600 text-sm">
+								{currentBookYear}
+						</text>
+					</g>
+					{/if}
+						
+
 					<g class="axis y-axis">
 						{#each yTicks as tick}
 							<g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
@@ -194,9 +183,8 @@
 							{#each {length: point[0].totalCount} as book, j}
 							<rect class="bars"
 							fill="{handleFill(point[j])}"
-							on:mouseover="{handleMouseOver(point[j])}"
-							on:mouseout="{handleMouseOut(point[j])}"
-							x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="8"></rect>
+							on:click="{displayDetails(point[j])}"
+							x="{xScale(i)/7 }" y="{yScale(j) -8}" width="{barWidth}" height="11"></rect>
 							{/each}
 						{/each}
 						</g>
@@ -206,9 +194,9 @@
 		<div class="col-span-2">
 			<div id="facets" class="flex flex-col gap-8 h-full justify-center items-center">
 				{#each genres as genre}
-								<div  on:click={highlightGenre(genre)} class="h-[35px] px-4 flex justify-items-center items-center  cursor-pointer w-full bg-gray-200 rounded-lg ">
-									<h4 class="text-gray-700 text-xs">{genre}</h4>
-								</div>
+					<div  on:click={highlightGenre(genre)} class="h-[35px] px-4 flex justify-items-center items-center  cursor-pointer w-full bg-gray-200 rounded-lg ">
+						<h4 class="text-gray-700 text-xs">{genre}</h4>
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -228,7 +216,7 @@
 	svg {
 		position: relative;
 		width: 100%;
-		height: 600px;
+		height: 700px;
 	}
 
 	.tick {
@@ -259,7 +247,7 @@
 
 	.bars rect {
 		stroke: #000000;
-		stroke-width: 0.5px;
+		stroke-width: 0.6px;
 		opacity: 0.65;
 		margin-bottom: 17px;
 	}
@@ -270,7 +258,9 @@
 		cursor: pointer;
 	}
 
-
+	.details g{
+		width: 20px;
+	}
 
 	
 </style>

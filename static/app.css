@@ -483,6 +483,9 @@ p {
 .h-\[35px\] {
   height: 35px;
 }
+.h-\[30px\] {
+  height: 30px;
+}
 .w-\[40px\] {
   width: 40px;
 }
@@ -501,6 +504,9 @@ p {
 .max-w-\[85rem\] {
   max-width: 85rem;
 }
+.max-w-7xl {
+  max-width: 80rem;
+}
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
@@ -513,6 +519,11 @@ p {
 }
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 .flex-col {
   -webkit-box-orient: vertical;

@@ -1,66 +1,13 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
-	import {clickOutside} from '../scripts/clickOutside.js';
+	import cleanPublication from './cleanPublications.js';
+	let color = '#d3d3d3';
 
-	///////////////////////////////////////////////////////////////////
-	// Data Preprocessing /////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////
-
-	const refined = [];
-	// We will keep only year, title, genre
-	const data = publications.map(d => ({
-		year: d.year,
-		title: d.title,
-		genre: d.genre,
-		totalCount: 0,
-	}));
-
-	// Delete items where year is empty
-	data.forEach(d => {
-		if (d.year !== '') {
-			refined.push(d);
-		}
-	});
-	refined.sort((a, b) => a.year - b.year);
-	// Count the number of books in each year and add that to the totalCount
-	refined.forEach(d => {
-		const year = d.year;
-		const count = refined.filter(d => d.year === year).length;
-		d.totalCount = count;
-	});
-
-	// Convert year to number
-	refined.forEach(d => {
-		d.year = +d.year;
-	});
-
-	// Convert the dataset from an array to an array of objects
-	// Where each year is a key and it contains objects for each book
-	let result = refined.reduce(function (r, a){
-		r[a.year] = r[a.year] || [];
-		r[a.year].push(a);
-		return r;
-	}, Object.create(null));
-
-	// Convert that to an array of objects
-	let data2 = Object.values(result);
-
-
-	////////////////////////////////////////////////////////////////////
-	/////////// Genre Filters //////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////
-
-	// Create an array of unique genres
-	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
-	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
-
-	// Iterate through data2 and add an item called color with the associated color for each book
-	data2.forEach(d => {
-		d.forEach(d => {
-			d.color = genreColors[genres.indexOf(d.genre)];
-		});
-	});
+	const data = cleanPublication(publications);
+	const data2 = data.data2;
+	const genres = data.genres;
+	console.log(data2);
 
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
@@ -97,9 +44,7 @@
 	$: handleFill = (d) => {
 		if (genreSelection === d.genre) {
 			return d.color;
-		} else {
-			return '#d3d3d3';
-		}
+		} 
 	}
 
 	// Function to change genreSelection when a genre is clicked
@@ -114,7 +59,6 @@
 	$: currentBookTitle = null;
 	$: currentBookGenre = null;
 	$: currentBookYear = null;
-	$$: isClicked = false;
 	$: shouldShow = false;
 
 	// Function to handle mouseover
@@ -122,21 +66,13 @@
 		currentBookTitle = d.title;
 		currentBookGenre = d.genre;
 		currentBookYear = d.year;
-		$$: isClicked = true;
 		shouldShow = true;
 	}
 
-	$: closeDetails = () => {
-		$$: isClicked = false;
-		shouldShow = false;
-	}
+	
 
 	// Add a Search Box
 	$: searchBox = "";
-
-	// Function to handle search
-	// Search should look for a book title, genre
-	// The result should be highlighted in the chart in red
 
 	$: search = () => {
 		const searchValue = searchBox;
@@ -148,21 +84,16 @@
 		data2.forEach(d => {
 			d.forEach(d => {
 				if (d.title.toLowerCase().includes(searchValue.toLowerCase()) || d.genre.toLowerCase().includes(searchValue.toLowerCase())) {
-					d.color = '#ff0000';
+				// Add a class to that rect to highlight it
+
 				}
 			});
 		});
 		
-		// Clear value of searchBox
-		searchBox = "";
+		
 	}
-
-
-
-
-
 </script>
-<main>
+<main style="--box-color: {color}">
 	
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-2 py-6">
@@ -219,7 +150,7 @@
 							{#each {length: point[0].totalCount} as book, j}
 							<rect class="bars"
 							fill="{handleFill(point[j])}"
-							on:click="{displayDetails(point[j])}"
+							on:click="{displayDetails(point[j]) }"
 							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11"></rect>
 							{/each}
 						{/each}
@@ -237,7 +168,6 @@
 			</div>
 		</div>
 	</section>
-	
 </main>
 
 <style>
@@ -283,9 +213,14 @@
 
 	.bars rect {
 		stroke: #828282;
+		fill: var(--box-color);
 		stroke-width: 1px;
 		opacity: 0.65;
 		margin-bottom: 17px;
+	}
+
+	.bars rect.active {
+		fill: red;
 	}
 
 	.bars rect:hover {

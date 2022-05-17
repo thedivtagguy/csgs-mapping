@@ -1,14 +1,72 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
-	import cleanPublication from './cleanPublications.js';
-	let color = '#d3d3d3';
+	import * as d3 from 'd3';
 
-	const data = cleanPublication(publications);
-	const data2 = data.data2;
-	const genres = data.genres;
-	console.log(data2);
+	///////////////////////////////////////////////////////////////////
+	// Data Preprocessing /////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////
 
+	const refined = [];
+	// We will keep only year, title, genre
+	const data = publications.map(d => ({
+		year: d.year,
+		title: d.title,
+		genre: d.genre,
+		totalCount: 0,
+	}));
+
+	// Delete items where year is empty
+	data.forEach(d => {
+		if (d.year !== '') {
+			refined.push(d);
+		}
+	});
+	refined.sort((a, b) => a.year - b.year);
+	// Count the number of books in each year and add that to the totalCount
+	refined.forEach(d => {
+		const year = d.year;
+		const count = refined.filter(d => d.year === year).length;
+		d.totalCount = count;
+	});
+
+	// Convert year to number
+	refined.forEach(d => {
+		d.year = +d.year;
+	});
+
+	// Convert the dataset from an array to an array of objects
+	// Where each year is a key and it contains objects for each book
+	let result = refined.reduce(function (r, a){
+		r[a.year] = r[a.year] || [];
+		r[a.year].push(a);
+		return r;
+	}, Object.create(null));
+
+	// Convert that to an array of objects
+	let data2 = Object.values(result);
+
+
+	////////////////////////////////////////////////////////////////////
+	/////////// Genre Filters //////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////
+
+	// Create an array of unique genres
+	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
+	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
+
+	// Iterate through data2 and add an item called color with the associated color for each book
+	let i = 1;
+
+	data2.forEach(d => {
+		d.forEach(d=> {
+			d.color = genreColors[genres.indexOf(d.genre)];
+			d.id = i;
+			i++;
+		});
+	});
+
+	console.log(data2)
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -44,7 +102,9 @@
 	$: handleFill = (d) => {
 		if (genreSelection === d.genre) {
 			return d.color;
-		} 
+		} else {
+			return '#d3d3d3';
+		}
 	}
 
 	// Function to change genreSelection when a genre is clicked
@@ -69,31 +129,46 @@
 		shouldShow = true;
 	}
 
-	
-
-	// Add a Search Box
-	$: searchBox = "";
-
-	$: search = () => {
-		const searchValue = searchBox;
-		console.log(searchValue);
-		
-		// Iterate through the data2 object. Iterate over each key and the objects in each key
-		// If the title or genre of the book matches the searchValue, then highlight it in red
-		// Keep only the books that match the searchValue
+	let searchTerm = '';
+	$: searchArray = [];
+	// Based on the search term, function to filter those IDs
+	$: searchResults = () => {
+		// Clear the search array
 		data2.forEach(d => {
 			d.forEach(d => {
-				if (d.title.toLowerCase().includes(searchValue.toLowerCase()) || d.genre.toLowerCase().includes(searchValue.toLowerCase())) {
-				// Add a class to that rect to highlight it
-
+				if (d.title.toLowerCase().includes(searchTerm.toLowerCase()) || d.genre.toLowerCase().includes(searchTerm.toLowerCase())) {
+					// Add this ID to array
+					searchArray.push(d.id)
 				}
-			});
-		});
-		
-		
+			})
+		})
+		highlightResults();
+	
+	} 
+
+	$: highlightResults = () => {
+		console.log(searchArray)
+		// Apply bars.ctive class to the Ids in searchArray
+		// rects have ID of the form 'bar-{id}'
+		// Select all the IDs in searchArray
+
+		searchArray.map(
+			d => d3.select('#bar-' + d)
+				.classed('active', true)
+		)
+		// Clear the search array
+		console.log(searchArray)
+	}
+
+	$: clearResults = () => {
+		// Remove the active class from all the bars
+		d3.selectAll('.active')
+			.classed('active', false)
+		// Clear the search array
+		searchArray = [];
 	}
 </script>
-<main style="--box-color: {color}">
+<main>
 	
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-2 py-6">
@@ -101,12 +176,11 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
-
-			<!-- Search Box -->
 			<div class="flex flex-col items-center">
-				<input bind:value={searchBox} />
-				<button class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:click={search()}>Search</button>
+				<input bind:value={searchTerm} />
+				<button class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
+			{searchTerm}
 		</div>
 		<div class="col-span-8">		
 			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
@@ -149,8 +223,9 @@
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
 							<rect class="bars"
+							id="bar-{point[j].id}"
 							fill="{handleFill(point[j])}"
-							on:click="{displayDetails(point[j]) }"
+							on:click="{displayDetails(point[j])}"
 							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11"></rect>
 							{/each}
 						{/each}
@@ -168,6 +243,7 @@
 			</div>
 		</div>
 	</section>
+	
 </main>
 
 <style>
@@ -211,16 +287,16 @@
 		text-anchor: middle;
 	}
 
-	.bars rect {
+	.bars  {
 		stroke: #828282;
-		fill: var(--box-color);
 		stroke-width: 1px;
 		opacity: 0.65;
 		margin-bottom: 17px;
 	}
 
-	.bars rect.active {
-		fill: red;
+	.bars.active {
+		stroke: red;
+		stroke-width: 2px;
 	}
 
 	.bars rect:hover {

@@ -1,6 +1,5 @@
 import sveltePreprocess from "svelte-preprocess";
 import svelte from "rollup-plugin-svelte";
-import resolve from 'rollup-plugin-node-resolve';
 import { mdsvex } from "mdsvex";
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,8 +15,7 @@ export default {
     svelte({
 			// tell svelte to handle mdsvex files
 			extensions: [".svelte", ".svx"],
-			preprocess: mdsvex(),
-      dedupe: ['svelte', 'svelte/transition', 'svelte/internal'], // important!
+			preprocess: mdsvex()
 		})
   ]
 };

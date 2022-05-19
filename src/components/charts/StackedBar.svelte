@@ -95,12 +95,13 @@
 
 
 	$: genreSelection = null;
+	$: selectedGenre = null; 
 
 	// Function to handleFill. 
 	// If a genre is selected, then return that color. If not then return gray
 	// Color only that genre
 	$: handleFill = (d) => {
-		if (genreSelection === d.genre) {
+		if (selectedGenre === d.genre) {
 			return d.color;
 		} else {
 			return '#d3d3d3';
@@ -109,12 +110,13 @@
 
 	// Function to change genreSelection when a genre is clicked
 	$: highlightGenre = (d) => {
-		genreSelection = d;
+		selectedGenre = d;
 	}
 
 	////////////////////////////////////////////////////////////////////
 	////// Show more info when clicking over a bar /////////////////////
 	////////////////////////////////////////////////////////////////////
+	let answer = '';
 
 	$: currentBookTitle = null;
 	$: currentBookGenre = null;
@@ -178,7 +180,7 @@
 			</p>
 			<div class="flex flex-col items-center">
 				<input bind:value={searchTerm} />
-				<button class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
+				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
 			{searchTerm}
 		</div>
@@ -235,6 +237,14 @@
 		</div>
 		<div class="col-span-2">
 			<div id="facets" class="flex flex-col gap-8 h-full justify-center items-center">
+				<select value={selectedGenre} on:change="{highlightGenre(selectedGenre)}">
+					{#each genres as genre}
+						<option value={genre}>
+							{genre}
+						</option>
+					{/each}
+				</select>
+				
 				{#each genres as genre}
 					<div  on:click={highlightGenre(genre)} class="h-[35px] px-4 flex justify-items-center items-center  cursor-pointer w-full bg-gray-200 rounded-lg ">
 						<h4 class="text-gray-700 text-xs">{genre}</h4>

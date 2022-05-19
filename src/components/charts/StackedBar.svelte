@@ -2,6 +2,7 @@
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
 	import * as d3 from 'd3';
+import translate from '$utils/translate';
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -169,6 +170,32 @@
 		// Clear the search array
 		
 	}
+
+	////////////////////////////////////////////////////////////////////
+	// Polygon Generator ///////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
+
+	// Function to generate the polygon
+
+	$: polygonGenerator = (w, h, xStartingPos, yStartingPos) => {
+	
+		// Geerate a polygon with random points
+		let polygon = 'M' + xStartingPos + ',' + yStartingPos;
+		let x = xStartingPos;
+		let y = yStartingPos;
+		let r = Math.random() * w;
+		let theta = Math.random() * 2 * Math.PI;
+		let x2 = x + r * Math.cos(theta);
+		let y2 = y + r * Math.sin(theta);
+		polygon += 'L' + x2 + ',' + y2;
+		polygon += 'L' + x2 + ',' + (y2 + h);
+		polygon += 'L' + x + ',' + (y2 + h);
+		polygon += 'L' + x + ',' + y;
+		polygon += 'Z';
+		return polygon;
+	}
+
+	
 </script>
 <main>
 	
@@ -224,10 +251,15 @@
 					<g class='bars'>
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
+							<path 
+								class="bar"
+								id="shape-{point[j].id}"
+								fill="{handleFill(point[j])}"
+								d="{polygonGenerator(barWidth, 11, xScale(i)/7, yScale(j))}"
+							></path>
 							<rect class="bars"
 							id="bar-{point[j].id}"
 							fill="{handleFill(point[j])}"
-							on:click="{displayDetails(point[j])}"
 							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11"></rect>
 							{/each}
 						{/each}

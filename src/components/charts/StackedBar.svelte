@@ -134,6 +134,7 @@
 	// Based on the search term, function to filter those IDs
 	$: searchResults = () => {
 		// Clear the search array
+		clearResults();
 		data2.forEach(d => {
 			d.forEach(d => {
 				if (d.title.toLowerCase().includes(searchTerm.toLowerCase()) || d.genre.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -142,30 +143,29 @@
 				}
 			})
 		})
-		highlightResults();
 	
+		highlightResults();
+
 	} 
 
 	$: highlightResults = () => {
-		console.log(searchArray)
 		// Apply bars.ctive class to the Ids in searchArray
 		// rects have ID of the form 'bar-{id}'
 		// Select all the IDs in searchArray
-
 		searchArray.map(
 			d => d3.select('#bar-' + d)
 				.classed('active', true)
 		)
-		// Clear the search array
 		console.log(searchArray)
 	}
 
 	$: clearResults = () => {
-		// Remove the active class from all the bars
+		// Empty the array
+		searchArray = [];
 		d3.selectAll('.active')
 			.classed('active', false)
 		// Clear the search array
-		searchArray = [];
+		
 	}
 </script>
 <main>

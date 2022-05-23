@@ -53,6 +53,10 @@
 
 	// Create an array of unique genres
 	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
+	// Add 'All Genres' to genres array
+
+
+
 	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
 
 	// Iterate through data2 and add an item called color with the associated color for each book
@@ -65,6 +69,7 @@
 			i++;
 		});
 	});
+	genres.unshift('All Genres');
 
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
@@ -184,12 +189,12 @@
 		let polygon = 'M' + xStartingPos + ',' + yStartingPos;
 		let x = xStartingPos ;
 		let y = yStartingPos ;
-		let r = 8;
+		let r = 10;
 		let x2 = 10+ x + r * Math.random(7,8);
-		let y2 =  y - 2 +r * Math.random(7,8);
+		let y2 =  y - 2 + r * Math.random(7,8);
 		polygon += 'L' + x2 + ',' + y2;	
-		polygon += 'L' + x2 + ',' + (y2 + 12);
-		polygon += 'L' + x + ',' + (y2 + 12);
+		polygon += 'L' + x2 + ',' + (y2 +10);
+		polygon += 'L' + x + ',' + (y2 + 8);
 		polygon += 'L' + x + ',' + y2  ;
 		polygon += 'Z';
 		return polygon;
@@ -204,18 +209,29 @@
 <main>
 	
 	<section class="grid grid-cols-12 gap-6 ">
-		<div class="col-span-2 py-6">
+		<div class="col-span-3 py-6">
 			<h1 class="text-2xl font-bold">Publications</h1>
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
-			<div class="flex flex-col items-center">
-				<input bind:value={searchTerm} />
+			<div class="flex h-20 flex-col items-center">
+				<input bind:value={searchTerm} class="w-full my-2"/>
 				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
 			{searchTerm}
+			<div id="facets" class="flex flex-col gap-8 h-full justify-start my-8">
+				<select on:change="{highlightGenre(selectedGenre)}">
+					{#each genres as genre}
+						<option on:click="{highlightGenre(genre)}" value={genre}>
+							{genre}
+						</option>
+					{/each}
+				</select>
+			
+			</div>
 		</div>
-		<div class="col-span-8">		
+		<div class="col-span-9">	
+				
 			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
 				<svg>
 					{#if shouldShow}
@@ -274,21 +290,7 @@
 			</div>
 		</div>
 		<div class="col-span-2">
-			<div id="facets" class="flex flex-col gap-8 h-full justify-center items-center">
-				<select on:change="{highlightGenre(selectedGenre)}">
-					{#each genres as genre}
-						<option on:change="{highlightGenre(genre)}" value={genre}>
-							{genre}
-						</option>
-					{/each}
-				</select>
-				
-				{#each genres as genre}
-					<div  on:click={highlightGenre(genre)} class="h-[35px] px-4 flex justify-items-center items-center  cursor-pointer w-full bg-gray-200 rounded-lg ">
-						<h4 class="text-gray-700 text-xs">{genre}</h4>
-					</div>
-				{/each}
-			</div>
+		
 		</div>
 	</section>
 	

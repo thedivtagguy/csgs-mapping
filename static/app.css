@@ -436,6 +436,14 @@ p {
   margin-left: -1rem;
   margin-right: -1rem;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -799,6 +807,9 @@ p {
 /* custom CSS goes here */
 /* Directive controlling where Tailwind injects responsive variations of utilities.
    By default Tailwind normally append these at the end of your stylesheet. */
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
 .hover\:bg-indigo-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));

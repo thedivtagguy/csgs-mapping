@@ -2,7 +2,6 @@
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
 	import * as d3 from 'd3';
-import translate from '$utils/translate';
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -67,7 +66,6 @@ import translate from '$utils/translate';
 		});
 	});
 
-	console.log(data2)
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -95,7 +93,6 @@ import translate from '$utils/translate';
 	////////////////////////////////////////////////////////////////////
 
 
-	$: genreSelection = null;
 	$: selectedGenre = null; 
 
 	// Function to handleFill. 
@@ -117,7 +114,6 @@ import translate from '$utils/translate';
 	////////////////////////////////////////////////////////////////////
 	////// Show more info when clicking over a bar /////////////////////
 	////////////////////////////////////////////////////////////////////
-	let answer = '';
 
 	$: currentBookTitle = null;
 	$: currentBookGenre = null;
@@ -146,7 +142,12 @@ import translate from '$utils/translate';
 				}
 			})
 		})
-	
+	   // Error handling
+	   if (searchTerm === '') {
+		   	clearResults();
+		} else if (searchArray.length === 0) {
+			alert('No results found');
+		}
 		highlightResults();
 
 	} 
@@ -177,24 +178,27 @@ import translate from '$utils/translate';
 
 	// Function to generate the polygon
 
-	$: polygonGenerator = (w, h, xStartingPos, yStartingPos) => {
-	
-		// Geerate a polygon with random points
+	$: polygonGenerator = (xStartingPos , yStartingPos) => {
+		yStartingPos -= 16;
+		// Generate a polygon with random points
 		let polygon = 'M' + xStartingPos + ',' + yStartingPos;
-		let x = xStartingPos;
-		let y = yStartingPos;
-		let r = Math.random() * w;
-		let theta = Math.random() * 2 * Math.PI;
-		let x2 = x + r * Math.cos(theta);
-		let y2 = y + r * Math.sin(theta);
-		polygon += 'L' + x2 + ',' + y2;
-		polygon += 'L' + x2 + ',' + (y2 + h);
-		polygon += 'L' + x + ',' + (y2 + h);
-		polygon += 'L' + x + ',' + y;
+		let x = xStartingPos ;
+		let y = yStartingPos ;
+		let r = 8;
+		let x2 = 10+ x + r * Math.random(7,8);
+		let y2 =  y - 2 +r * Math.random(7,8);
+		polygon += 'L' + x2 + ',' + y2;	
+		polygon += 'L' + x2 + ',' + (y2 + 12);
+		polygon += 'L' + x + ',' + (y2 + 12);
+		polygon += 'L' + x + ',' + y2  ;
 		polygon += 'Z';
 		return polygon;
 	}
 
+	// $: trapezoidGenerator = (w, h, xStartingPos, yStartingPos) => {
+	// 	// Generate a skewed trapezoid polygon
+	// 	let polygon = 'M' + xStartingPos + 
+	// }
 	
 </script>
 <main>
@@ -252,15 +256,17 @@ import translate from '$utils/translate';
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
 							<path 
-								class="bar"
-								id="shape-{point[j].id}"
+								class="bars hover:cursor-pointer"
+								id="bar-{point[j].id}"
 								fill="{handleFill(point[j])}"
-								d="{polygonGenerator(barWidth, 11, xScale(i)/7, yScale(j))}"
+								on:click="{displayDetails(point[j])}"
+								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>
-							<rect class="bars"
+							<!-- <rect class="bars"
 							id="bar-{point[j].id}"
 							fill="{handleFill(point[j])}"
-							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11"></rect>
+							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11">
+							</rect> -->
 							{/each}
 						{/each}
 						</g>
@@ -269,9 +275,9 @@ import translate from '$utils/translate';
 		</div>
 		<div class="col-span-2">
 			<div id="facets" class="flex flex-col gap-8 h-full justify-center items-center">
-				<select value={selectedGenre} on:change="{highlightGenre(selectedGenre)}">
+				<select on:change="{highlightGenre(selectedGenre)}">
 					{#each genres as genre}
-						<option value={genre}>
+						<option on:change="{highlightGenre(genre)}" value={genre}>
 							{genre}
 						</option>
 					{/each}
@@ -331,8 +337,7 @@ import translate from '$utils/translate';
 
 	.bars  {
 		stroke: #828282;
-		stroke-width: 1px;
-		opacity: 0.65;
+		stroke-width: 0.5px;
 		margin-bottom: 17px;
 	}
 
@@ -341,11 +346,7 @@ import translate from '$utils/translate';
 		stroke-width: 2px;
 	}
 
-	.bars rect:hover {
-		opacity: 1;
-		stroke: #000000;
-		cursor: pointer;
-	}
+	
 
 
 	

@@ -418,20 +418,14 @@ p {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-.col-span-10 {
-  grid-column: span 10 / span 10;
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 .col-span-9 {
   grid-column: span 9 / span 9;
 }
-.col-span-3 {
-  grid-column: span 3 / span 3;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 .mx-auto {
   margin-left: auto;
@@ -445,25 +439,13 @@ p {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -506,17 +488,11 @@ p {
 .h-5 {
   height: 1.25rem;
 }
-.h-full {
-  height: 100%;
-}
-.h-\[35px\] {
-  height: 35px;
-}
-.h-12 {
-  height: 3rem;
-}
 .h-20 {
   height: 5rem;
+}
+.h-full {
+  height: 100%;
 }
 .w-\[40px\] {
   width: 40px;
@@ -540,9 +516,6 @@ p {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
 }
-.cursor-pointer {
-  cursor: pointer;
-}
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -556,10 +529,6 @@ p {
 }
 .flex-wrap {
   flex-wrap: wrap;
-}
-.items-start {
-  -webkit-box-align: start;
-          align-items: flex-start;
 }
 .items-center {
   -webkit-box-align: center;

@@ -7,10 +7,12 @@ const header = publications.shift();
 const data = publications.slice(0, 5);
 export const  publicationsData = data;
 import StackedBar from "../components/charts/StackedBar.svelte";
+import Circles from "./charts/Circles.svelte"
 </script>
 
 <header class="py-1">
   <div class="py-12 ">
     <StackedBar/>
+    <Circles />
   </div>
 </header>

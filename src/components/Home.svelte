@@ -1,4 +1,5 @@
 <script>
+import Form from "./Form.svelte";
 import Header from "./Header.svelte";
 import Menu from "./Menu.svelte";
 </script>
@@ -7,5 +8,5 @@ import Menu from "./Menu.svelte";
 <main class="">
     <Menu />
 <Header />
-
+<Form />
 </main>

@@ -214,8 +214,8 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
-			<div class="flex h-20 flex-col items-center">
-				<input bind:value={searchTerm} class="w-full my-2"/>
+			<div class="flex h-28 flex-col items-center">
+				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 border-gray-200 rounded-md h-12"/>
 				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
 			{searchTerm}

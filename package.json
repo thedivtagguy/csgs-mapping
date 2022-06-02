@@ -58,6 +58,7 @@
     "d3-scale": "^4.0.2",
     "dotenv": "^10.0.0",
     "googleapis": "^92.0.0",
+    "leaflet": "^1.8.0",
     "mkdirp": "^1.0.4",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",

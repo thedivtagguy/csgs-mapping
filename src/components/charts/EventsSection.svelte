@@ -22,7 +22,6 @@ import EventCard from "./EventCard.svelte";
             conferences[event.id] = event;
         } 
     });
-    console.log(marches);
 
     // Convert march, festival and concert objects to arrays
     let marchArray = Object.values(marches);

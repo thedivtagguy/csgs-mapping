@@ -1,7 +1,7 @@
 <script>
 
   let active = false;
-  export let label;
+  export let label = 'Example';
   let width, viewBoxWidth;
   // Get width of text bounding box
   let textWidth = label.length * 8;

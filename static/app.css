@@ -701,10 +701,6 @@ p {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -778,10 +774,6 @@ p {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -891,9 +883,6 @@ p {
 .uppercase {
   text-transform: uppercase;
 }
-.capitalize {
-  text-transform: capitalize;
-}
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -902,9 +891,6 @@ p {
 }
 .leading-tight {
   line-height: 1.25;
-}
-.tracking-wide {
-  letter-spacing: 0.025em;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -1015,10 +1001,6 @@ p {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
-.hover\:bg-blue-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
 .hover\:bg-gray-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -1084,9 +1066,6 @@ p {
 .focus\:ring-blue-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
-}
-.focus\:ring-opacity-80:focus {
-  --tw-ring-opacity: 0.8;
 }
 .focus\:ring-opacity-40:focus {
   --tw-ring-opacity: 0.4;

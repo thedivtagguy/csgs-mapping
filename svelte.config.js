@@ -6,10 +6,11 @@ import dsv from "@rollup/plugin-dsv";
 import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 import { indexAlgolia } from 'svelte-algolia/server-side'
-
+import fetch from "node-fetch";
 
 import 'dotenv/config' // optional
-import d3 from 'd3'
+import * as d3 from 'd3';
+
 async function loadData() {
   // Fetch data from publications.csv and turn it into a JSON array
   const publications = await d3.csv('publications.csv')

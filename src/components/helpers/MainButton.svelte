@@ -1,8 +1,9 @@
 <script>
 
   let active = false;
-  export let label;
   let width, viewBoxWidth;
+  export let label = 'Example';
+
   // Get width of text bounding box
   let textWidth = label.length * 8;
   // Set width of viewBox based on text width
@@ -13,6 +14,8 @@
   if (label === "") {
     label = "Click me";
   }
+
+
 </script>
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">

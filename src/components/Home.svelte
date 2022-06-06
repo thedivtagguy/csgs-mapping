@@ -15,6 +15,7 @@ import MainButton from "./helpers/MainButton.svelte";
 <div class="py-12 ">
     <StackedBar/>
     <Circles />
+    <StackedBar />
     <EventsSection />
   </div>
 </main>

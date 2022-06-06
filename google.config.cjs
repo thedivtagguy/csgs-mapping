@@ -13,5 +13,20 @@ module.exports = [
     id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
     gid: "2075778452",
     filepath: "src/data/events.csv"
+  },
+   {
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
+    gid: "335863507",
+    filepath: "src/data/avMaterial.csv"
+  },
+  {
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
+    gid: "1271181511",
+    filepath: "src/data/miscellaneous.csv"
+  },
+  {
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
+    gid: "689889318",
+    filepath: "src/data/digitalSpaces.csv"
   }
 ];

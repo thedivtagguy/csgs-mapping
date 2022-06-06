@@ -1,5 +1,4 @@
-Region,Name of Institution/Organisation,Location,Type ,Active since,Contact,Programs (Courses/ Campaigns),Keywords,Additional comments
-"North (Chandigarh, Delhi, Haryana, Himachal, J&K, Ladakh, Punjab, Rajasthan, Uttar Pradesh, Uttarakhand)",,,,,,,,
+region,name,location,type,activeSince,contect,programs,keywords,comments
 Delhi,Nirantar,https://www.nirantar.net/,NGO,1993,nirantar.mail@gmail.com,"1. Women's Education and Empowerment.
     1.1 Annual Literacy and Empowerment training
     1.2. Knowledge creation and educational  material in regional language for and by newly literate women.
@@ -451,26 +450,6 @@ Himachal Pradesh,Sambaavnaa Institute of Public Policy and Politics,https://www.
    1.1. Theatre of The Oppressed
    1.2. Beyond the Binary of Gender: Transfeminist perspectives from India
    1.3. Ethnographic Research Methods for Activists","Education, Gender, Sexuality, Research",
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-"East (Andamans, Arunachal, Assam, Bihar, Chhatisgarh, Jharkhand, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, West Bengal)",,,,,,,,
 "Assam, Meghalaya, Nagaland",North East Network (NEN),https://northeastnetwork.org/,NGO,1995,nen@northeastnetwork.org,"1. Workshops, awareness campaigns, and gender sensitisation programs addressing Gender Discrimination and Violence Against Women
 2. Capacity building training, leadership skills program, and discussions on gender, identity, land rights, women's rights. 
 3. Advocacy and training programs with a focus on natural resource management and livelihood","Capacity building programs, Women's rights, Advocacy",
@@ -686,28 +665,6 @@ Nagaland,Guardian Angel,,NGO,,,"1. Advocacy for the rights of the LGBT community
 Assam ,Omeo Kumar Das Institute of Social Change and Development,http://www.okd.in/,Academic Research Centre,1989,dkdscd@yahoo.co.in,"1. Research projects on Gender Studies
    1.1. Women and Economy in Assam: Liberalization and Women Accessibility to Market
    1.2. Making Women Count for Peace: Gender Empowerment and Conflict in South Asia","Gender, Education, Research",
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-"West (Dadra & Nagar Haveli & Daman & Diu, Goa, Gujarat, Maharashtra, Madhya Pradesh)",Name,Website,type ,Active since,Contact detail,Programs,Keywords,
 Maharashtra,The Godrej India Culture Lab ,https://indiaculturelab.org/about/,Multi-disciplinary Cultural space,2011,indiaculturelab@godrejinds.com,"1. Leadership programme 2. Summer fellowships to study contemporary issues in India 3. Events on sexuality and gender diversity, gender-themed newsletters","Multi-Disciplinary Cultural space, Advocacy",
 Maharashtra,Jnanapravaha,https://www.jp-india.org/#,Academic Research Centre,2007,info@jp-india.org,"Offers Post Graduate programs in Indian Aesthetics,
 Criticism And Theory
@@ -798,21 +755,6 @@ Maharashtra,Lawyer's Collective,https://lawyerscollective.org/,Legal resource gr
 3. Advocacy, campaigns, and legal services for dignity, participation and evidence based policies for drug users
 4. Research and legal aid services to People Living with HIV (PLHIV) using a human rights framework
 5. Research, campaign and legal aid for Lesbian, Gay, Bisexual, and Transgender rights and the rights of sex workers","Legal aid and support services, PLHIV, LGBTQ, Sex workers",
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-"South (Andhra Pradesh, Karnataka, Kerala, Tamil Nadu, Lakshadweep, Odisha, Puducherry, Telangana)",,,,,,,,
 Telangana,Prajwala,https://www.prajwalaindia.com/,NGO,1996,https://www.prajwalaindia.com/contactus.html,"work on Sex trafficking, Rescue and Rehabilation ","Sex Trafficking, Rehabilitation",
 Telangana,Anveshi: Research centre for Women's Studies,https://www.anveshi.org.in/,Research Organization,1985,91 40 27153690,"They have offered short courses on introduction to Women's studies and Queer Studies. Thrust areas of research include 1.Dalit Studies
 2. Minorities Studies

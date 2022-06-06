@@ -20,6 +20,8 @@ async function loadData() {
             // Create new field called ID and create an ID from the publication's row number
             id: publication.row,
     }))
+
+    console.log(publications)
 }
 
 const algoliaConfig = {

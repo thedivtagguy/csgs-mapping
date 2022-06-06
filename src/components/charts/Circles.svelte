@@ -16,6 +16,13 @@ const data = [{ "name": "A", "group": 1 }, { "name": "B", "group": 1 }, { "name"
             { "name": "G", "group": 2 }, { "name": "H", "group": 2 }, { "name": "I", "group": 2 }, { "name": "J", "group": 2 }, { "name": "K", "group": 2 }, { "name": "L", "group": 2 },
             { "name": "M", "group": 3 }, { "name": "N", "group": 3 }, { "name": "O", "group": 3 }]
 
+
+const blobs = ['"M51.7,-12.6C60.2,9.1,55.3,39.3,37.3,52.7C19.3,66,-11.8,62.6,-34.1,46.5C-56.3,30.4,-69.7,1.7,-62.5,-18.3C-55.4,-38.2,-27.7,-49.5,-3,-48.5C21.7,-47.5,43.3,-34.3,51.7,-12.6Z"',
+               '"M45.7,-19.2C52.3,5.5,46,30,29.2,42.8C12.5,55.5,-14.6,56.5,-36.4,42.5C-58.1,28.5,-74.6,-0.5,-67.6,-25.7C-60.6,-50.9,-30.3,-72.2,-5.4,-70.4C19.5,-68.7,39.1,-43.9,45.7,-19.2Z"',
+               '"M57.1,-19.7C65,5.8,56.2,35.5,35.3,51.4C14.3,67.3,-18.8,69.4,-40,54.1C-61.3,38.9,-70.7,6.5,-62.1,-20C-53.4,-46.5,-26.7,-67,-1,-66.6C24.6,-66.3,49.2,-45.1,57.1,-19.7Z"']
+
+
+
 // A scale that gives a X target position for each group
 const x = d3.scaleOrdinal()
   .domain([1, 2, 3])
@@ -27,6 +34,8 @@ const color = d3.scaleOrdinal()
   .range([ "#F8766D", "#00BA38", "#619CFF"])
 
 // Initialize the circle: all located at the center of the svg area
+
+
 const node = svg.append("g")
   .selectAll("circle")
   .data(data)

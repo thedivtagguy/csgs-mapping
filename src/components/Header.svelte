@@ -1,4 +1,7 @@
-
+<script>
+  import MainButton from "./helpers/MainButton.svelte";
+  let pages = ['Institutions', 'Events', 'Publications', 'Digital Spaces'];
+</script>
 
 
 <section class="bg-white flex justify-center items-center flex-col py-16 h-screen">
@@ -12,26 +15,11 @@
 
   <div class="container px-8 mx-auto sm:px-12 lg:px-20">
       <div class="grid items-center justify-center grid-cols-12 py-12  gap-y-8">
+        {#each pages as page}
           <div class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-3">
-             <button class="px-12 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                Institutions
-            </button>
+            <MainButton label={page} />
           </div>
-          <div class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-3">
-            <button class="px-12 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-              Publications
-          </button>          
-          </div>
-          <div class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-3">
-            <button class="px-12 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-              Events
-          </button>
-          </div>
-          <div class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-3">
-            <button class="px-12 py-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-              Digital Spaces
-          </button>
+        {/each}
         </div>
-      </div>
   </div>
 </section>

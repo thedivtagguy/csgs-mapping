@@ -1,6 +1,7 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
+	import MainButton from '$components/helpers/MainButton.svelte';
 	import * as d3 from 'd3';
 
 	///////////////////////////////////////////////////////////////////
@@ -135,6 +136,7 @@
 
 	let searchTerm = '';
 	$: searchArray = [];
+	$: everythingElse = [];
 	// Based on the search term, function to filter those IDs
 	$: searchResults = () => {
 		// Clear the search array
@@ -147,6 +149,16 @@
 				}
 			})
 		})
+
+		// everythingElse is everything else
+		data2.forEach(d => {
+			d.forEach(d => {
+				if (!searchArray.includes(d.id)) {
+					everythingElse.push(d.id)
+				}
+			})
+		})
+
 	   // Error handling
 	   if (searchTerm === '') {
 		   	clearResults();
@@ -165,7 +177,13 @@
 			d => d3.select('#bar-' + d)
 				.classed('active', true)
 		)
-		console.log(searchArray)
+		// Reduce opacity of bars in everythingElse
+		everythingElse.map(
+			d => d3.select('#bar-' + d)
+				.classed('inactive', true)
+		)
+		console.log(everythingElse);
+
 	}
 
 	$: clearResults = () => {
@@ -173,7 +191,11 @@
 		searchArray = [];
 		d3.selectAll('.active')
 			.classed('active', false)
-		// Clear the search array
+		// Clear the everythingElse array
+		everythingElse = [];
+		d3.selectAll('.inactive')
+			.classed('inactive', false)
+
 		
 	}
 
@@ -185,40 +207,40 @@
 
 	$: polygonGenerator = (xStartingPos , yStartingPos) => {
 
-yStartingPos -= 16;
-// Generate a polygon with random points
+			yStartingPos -= 16;
+			// Generate a polygon with random points
 
-let r = 2; //r is the maximum a vertex can vary. Might also need to be a function of screenwidth
+			let r = 2; //r is the maximum a vertex can vary. Might also need to be a function of screenwidth
 
-let c1 = r * Math.random();
-let c2 = r * Math.random();
-let c3 = r * Math.random();
-let c4 = r * Math.random();
+			let c1 = r * Math.random();
+			let c2 = r * Math.random();
+			let c3 = r * Math.random();
+			let c4 = r * Math.random();
 
 
-let x = xStartingPos + c1;
-let y = yStartingPos + c1;
+			let x = xStartingPos + c1;
+			let y = yStartingPos + c1;
 
-//width (a) and height (b) of rectangle sides. Should ideally be a function of screenwidth?
-let a = 18;
-let b = 12;
+			//width (a) and height (b) of rectangle sides. Should ideally be a function of screenwidth?
+			let a = 18;
+			let b = 12;
 
-let x2 = a + xStartingPos - c2;
-let y2 =  yStartingPos + c2;
+			let x2 = a + xStartingPos - c2;
+			let y2 =  yStartingPos + c2;
 
-let x3 = a + xStartingPos - c3;
-let y3 = b + yStartingPos -c3;
+			let x3 = a + xStartingPos - c3;
+			let y3 = b + yStartingPos -c3;
 
-let x4 = xStartingPos + c4;
-let y4 = b + yStartingPos -c4;
+			let x4 = xStartingPos + c4;
+			let y4 = b + yStartingPos -c4;
 
-let polygon = 'M' + x + ',' + y;
-polygon += 'L' + x2 + ',' + y2;	
-polygon += 'L' + x3 + ',' + y3;
-polygon += 'L' + x4 + ',' + y4;
-//polygon += 'L' + x + ',' + y  ;
-polygon += 'Z';
-return polygon;
+			let polygon = 'M' + x + ',' + y;
+			polygon += 'L' + x2 + ',' + y2;	
+			polygon += 'L' + x3 + ',' + y3;
+			polygon += 'L' + x4 + ',' + y4;
+			//polygon += 'L' + x + ',' + y  ;
+			polygon += 'Z';
+			return polygon;
 
 }
 
@@ -240,7 +262,6 @@ return polygon;
 				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 border-gray-200 rounded-md h-12"/>
 				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
-			{searchTerm}
 			<div id="facets" class="flex flex-col gap-8 h-full justify-start my-8">
 				<select on:change="{highlightGenre(selectedGenre)}">
 					{#each genres as genre}
@@ -294,7 +315,7 @@ return polygon;
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
 							<path 
-								class="bars hover:cursor-pointer"
+								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{handleFill(point[j])}"
 								on:click="{displayDetails(point[j])}"
@@ -366,11 +387,12 @@ return polygon;
 	}
 
 	.bars.active {
-		stroke: red;
-		stroke-width: 2px;
+		opacity: 1;
 	}
 
-	
+	.bars.inactive {
+		opacity: 0.3;
+	}
 
 
 	

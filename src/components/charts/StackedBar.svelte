@@ -3,6 +3,7 @@
 	import publications from "$data/publications.csv";
 	import MainButton from '$components/helpers/MainButton.svelte';
 	import * as d3 from 'd3';
+import { point } from 'leaflet';
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -244,14 +245,16 @@
 
 }
 
-	// $: trapezoidGenerator = (w, h, xStartingPos, yStartingPos) => {
-	// 	// Generate a skewed trapezoid polygon
-	// 	let polygon = 'M' + xStartingPos + 
-	// }
-	
+
 </script>
 <main>
-	
+	<datalist id="titles">
+		{#each data2 as point, i}
+			{#each {length: point[0].totalCount} as book, j}
+				<option value="{point[j].title}">
+			{/each}
+		{/each}
+	</datalist>
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-3 py-6">
 			<h1 class="text-2xl font-bold">Publications</h1>
@@ -259,7 +262,9 @@
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
 			<div class="flex h-28 flex-col items-center">
-				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 border-gray-200 rounded-md h-12"/>
+				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 border-gray-200 rounded-md h-12" list="titles"
+				size="50"
+				autocomplete="off" />
 				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
 			<div id="facets" class="flex flex-col gap-8 h-full justify-start my-8">

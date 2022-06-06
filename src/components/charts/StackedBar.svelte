@@ -1,9 +1,7 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
-	import MainButton from '$components/helpers/MainButton.svelte';
 	import * as d3 from 'd3';
-import { point } from 'leaflet';
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////

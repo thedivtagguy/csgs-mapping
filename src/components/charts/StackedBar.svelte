@@ -2,7 +2,8 @@
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
 	import * as d3 from 'd3';
-
+	import Modal from '$components/helpers/Modal.svelte';
+	let modal;
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
@@ -54,8 +55,6 @@
 	// Create an array of unique genres
 	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
 	// Add 'All Genres' to genres array
-
-
 
 	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
 
@@ -324,11 +323,7 @@
 								on:click="{displayDetails(point[j])}"
 								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>
-							<!-- <rect class="bars"
-							id="bar-{point[j].id}"
-							fill="{handleFill(point[j])}"
-							x="{xScale(i)/7 }" y="{yScale(j) - 11}" width="{barWidth}" height="11">
-							</rect> -->
+							
 							{/each}
 						{/each}
 						</g>

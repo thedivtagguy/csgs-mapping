@@ -242,7 +242,6 @@
 
 }
 
-
 </script>
 <main>
 	<datalist id="titles">
@@ -320,10 +319,11 @@
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{handleFill(point[j])}"
-								on:click="{displayDetails(point[j])}"
+								on:click={() => modal.show()}
 								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>
-							
+						
+
 							{/each}
 						{/each}
 						</g>

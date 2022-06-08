@@ -4,7 +4,10 @@ import Menu from "./Menu.svelte";
 import StackedBar from "./charts/StackedBar.svelte";
 import Circles from "./charts/Circles.svelte";
 import EventsSection from "./charts/EventsSection.svelte";
+import Map from "./charts/Map.svelte";
 </script>
+
+
 
 <!-- Iterate and show all story headings -->
 <main class="">
@@ -12,8 +15,9 @@ import EventsSection from "./charts/EventsSection.svelte";
 <Header />
 <div class="py-12 ">
     <StackedBar/>
+  <Map/>
     <Circles />
     <StackedBar />
     <EventsSection />
-  </div>
+</div>
 </main>

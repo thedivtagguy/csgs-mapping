@@ -7,9 +7,9 @@ import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 import { indexAlgolia } from 'svelte-algolia/server-side'
 import fetch from "node-fetch";
-
+import * as d3 from "d3";
 import 'dotenv/config' // optional
-import * as d3 from 'd3';
+
 
 async function loadData() {
   // Fetch data from publications.csv and turn it into a JSON array
@@ -19,9 +19,8 @@ async function loadData() {
             ...publication,
             // Create new field called ID and create an ID from the publication's row number
             id: publication.row,
-    }))
+  }))
 
-    console.log(publications)
 }
 
 const algoliaConfig = {

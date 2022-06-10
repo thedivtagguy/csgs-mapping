@@ -1,35 +1,47 @@
 <script>
-    import {onMount} from "svelte";
-    import {GeoJSON, LeafletMap, TileLayer} from 'svelte-leafletjs/src';
-    const mapOptions = {
-        center: [1.250111, 103.830933],
-        zoom: 13,
-    };
-    const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    const tileLayerOptions = {
-        minZoom: 0,
-        maxZoom: 20,
-        maxNativeZoom: 19,
-        attribution: "© OpenStreetMap contributors",
-    };
-    const geoJsonOptions = {
-        style: function (geoJsonFeature) {
-            console.log('style', geoJsonFeature);
-            return {};
-        },
-        onEachFeature: function (feature, layer) {
-            console.log('onEachFeature', feature, layer);
-        },
-    };
-    let leafletMap;
-    onMount(() => {
-        leafletMap.getMap().fitBounds([[1.266835, 103.796403], [1.232988, 103.854861]]);
-    });
+	import { onDestroy, setContext } from 'svelte';
+	import { mapbox, key } from './mapbox.js';
+
+	setContext(key, {
+		getMap: () => map,
+	});
+
+	export let lat;
+	export let lon;
+	export let zoom;
+
+	let container;
+	let map;
+
+	// Function load to create a new map and add to div
+	const load = () => {
+		map = new mapbox.Map({
+			container: container,
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [lon, lat],
+			zoom: zoom,
+		});
+	};
 </script>
 
-<div class="example" style="width: 100%; height: 100%;">
-    <LeafletMap bind:this={leafletMap} options={mapOptions}>
-        <TileLayer url={tileUrl} options={tileLayerOptions}/>
-        <GeoJSON url="example.geojson" options={geoJsonOptions}/>
-    </LeafletMap>
+<!-- this special element will be explained in a later section -->
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css"
+		on:load={load}
+	/>
+</svelte:head>
+
+<div bind:this={container}>
+	{#if map}
+		<slot />
+	{/if}
 </div>
+
+<style>
+	div {
+		width: 100%;
+		height: 500px;
+	}
+</style>

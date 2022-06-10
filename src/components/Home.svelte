@@ -4,7 +4,7 @@ import Menu from "./Menu.svelte";
 import StackedBar from "./charts/StackedBar.svelte";
 import Circles from "./charts/Circles.svelte";
 import EventsSection from "./charts/EventsSection.svelte";
-import Map from "./charts/Map.svelte";
+import Mapbox from "./charts/Mapbox.svelte";
 </script>
 
 
@@ -15,7 +15,7 @@ import Map from "./charts/Map.svelte";
 <Header />
 <div class="py-12 ">
     <StackedBar/>
-  <Map/>
+    <Mapbox />
     <Circles />
     <StackedBar />
     <EventsSection />

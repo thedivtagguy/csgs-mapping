@@ -3,17 +3,30 @@
 	import MapMarker from './MapMarker.svelte';
 	import places from "$data/indices/organizations-geocoded.csv.json";
 
-	console.log(places);
+	// Go through all regions. Create an objec with unique region and their coordinates
+	const regions = [];
+	places.forEach(place => {
+		if (place.region) {
+			if (!regions.find(region => region.region === place.region)) {
+				regions.push({
+					region: place.region,
+					latitude: place.lat,
+					longitude: place.lng,
+				});
+			}
+		}
+	});
+
+	console.log(regions);
+
 </script>
 
 <main>
-	<Map lat={35} lon={-84} zoom={3.5}>
-		<MapMarker lat={37.8225} lon={-122.0024} label="Svelte Body Shaping"/>
-		<MapMarker lat={33.8981} lon={-118.4169} label="Svelte Barbershop & Essentials"/>
-		<MapMarker lat={29.7230} lon={-95.4189} label="Svelte Waxing Studio"/>
-		<MapMarker lat={28.3378} lon={-81.3966} label="Svelte 30 Nutritional Consultants"/>
-		<MapMarker lat={40.6483} lon={-74.0237} label="Svelte Brands LLC"/>
-		<MapMarker lat={40.6986} lon={-74.4100} label="Svelte Medical Systems"/>
+	<Map lat={21} lon={78} zoom={4.5}>
+		<!-- Do this for all regions -->
+		{#each regions as region}
+			<MapMarker lat={region.latitude} lon={region.longitude} label="Test"/>
+		{/each}
 	</Map>
 </main>
 

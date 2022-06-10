@@ -24,6 +24,10 @@ files.forEach(file => {
     console.log(`Converting ${file} to JSON`);
     // Convert to JSON and save
     const json = parse(csv, { columns: true });
+    // Add a new key called id to each object in the array
+    // ID is a unique number that is used to identify each object
+    const jsonWithId = json.map((el, i) => ({ ...el, id: i + 1 }));
+    
     // Write JSON file
-    fs.writeFileSync(`${outPath}/${file}.json`, JSON.stringify(json))
+    fs.writeFileSync(`${outPath}/${file}.json`, JSON.stringify(jsonWithId))
 });

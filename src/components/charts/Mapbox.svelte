@@ -22,10 +22,10 @@
 </script>
 
 <main>
-	<Map lat={21} lon={78} zoom={4.5}>
+	<Map lat={22} lon={82} zoom={4.1}>
 		<!-- Do this for all regions -->
 		{#each regions as region}
-			<MapMarker lat={region.latitude} lon={region.longitude} label="Test"/>
+			<MapMarker lat={region.latitude} lon={region.longitude}/>
 		{/each}
 	</Map>
 </main>

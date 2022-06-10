@@ -20,6 +20,8 @@
 			style: 'mapbox://styles/mapbox/streets-v11',
 			center: [lon, lat],
 			zoom: zoom,
+			// Disable drag and pan
+			interactive: false,
 		});
 	};
 	
@@ -42,7 +44,7 @@
 
 <style>
 	div {
-		width: 100%;
-		height: 800px;
+		width: 60%;
+		height: 100vh;
 	}
 </style>

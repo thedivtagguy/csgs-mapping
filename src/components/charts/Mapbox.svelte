@@ -1,6 +1,9 @@
 <script>
 	import Map from './Map.svelte';
 	import MapMarker from './MapMarker.svelte';
+	import places from "$data/indices/organizations-geocoded.csv.json";
+
+	console.log(places);
 </script>
 
 <main>

@@ -44,7 +44,7 @@
 
 <style>
 	div {
-		width: 60%;
+		width: 100%;
 		height: 100vh;
 	}
 </style>

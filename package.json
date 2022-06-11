@@ -2,7 +2,7 @@
   "name": "svelte-starter",
   "version": "3.0.0",
   "scripts": {
-    "gdoc": "npm run docs && node tasks/fetch-google.cjs",
+    "gdoc": "npm run docs && node tasks/fetch-google.cjs && npm run json",
     "docs": "node tasks/collect-docs.cjs",
     "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
     "geo": "node tasks/geocode.cjs",

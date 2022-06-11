@@ -9,7 +9,12 @@
 
 <main class="w-full">
     <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-bold leading-none text-gray-900 ">Organizations</h3>
+        <h3 class="text-xl font-bold leading-none text-gray-900 ">Organizations
+            {#if region}
+                in {region.region}
+            {/if}
+
+        </h3>
    </div>
     <section class="flex w-full h-[250px] overflow-y-auto">
         <!-- component -->
@@ -29,9 +34,7 @@
                         <p class="text-sm font-medium text-gray-900 truncate ">
                             {organization.name}
                         </p>
-                        <p class="text-sm text-gray-500 truncate ">
-                            {organization.region}
-                        </p>
+                        
                     </div>
                 </div>
             </li>

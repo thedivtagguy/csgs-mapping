@@ -11,5 +11,5 @@
       {appId}
       {searchKey}
       indices={{ publications: Hit }}
-      placeholder="Search Pokedex" />
+      placeholder="Search Index" />
   </header>

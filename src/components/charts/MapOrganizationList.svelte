@@ -5,11 +5,14 @@
     // Filter the organizations by region
     $: organizations = places.filter(place => place.region === region.region);
 
+    // Function to set 
 </script>
 
 <main class="w-full">
     <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-bold leading-none text-gray-900 ">Organizations
+        <h3 class="text-xl font-bold leading-none text-gray-900 ">
+            
+            Organizations
             {#if region}
                 in {region.region}
             {/if}
@@ -28,13 +31,12 @@
             {#if organizations}
             {#each organizations as organization, i}
 
-            <li class="py-3 sm:py-4">
+            <li  class="py-3 sm:py-4">
                 <div class="flex items-center space-x-4">
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate ">
                             {organization.name}
                         </p>
-                        
                     </div>
                 </div>
             </li>

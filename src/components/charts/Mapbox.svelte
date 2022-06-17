@@ -25,15 +25,27 @@
 		}
 	});
 
+	// Create an object with all organizations and their coordinates
+	const organizations = [];
+	places.forEach(place => {
+		if (place.region) {
+			organizations.push({
+				organization: place.name,
+				latitude: place.lat,
+				longitude: place.lng,
+			});
+		}
+	});
+	console.log(organizations);
 </script>
 
-<main class="grid w-full gap-4 grid-cols-2">
+<main>
 	<div class="col-span-1">
 		<Map lat={22} lon={82} zoom={4.1}>
-			<!-- Do this for all regions -->
-			{#each regions as region, i}
+			<!-- Do this for all regions
+			{#each organizations as region, i}
 				<MapMarker lat={region.latitude} lon={region.longitude} id={i} on:action={() => setRegion(region)}/>
-			{/each}
+			{/each} -->
 		</Map>
 	</div>
 	<div class="col-span-1">

@@ -6,9 +6,11 @@
   
   <div>
     <ul>
-      <li>Type: {@html hit.genre}</li>
-      <li>Height: {@html hit.year}</li>
+      <li>{@html hit.genre}</li>
+      <li>{@html hit.year}</li>
     </ul>
+    <!-- Horizontal line -->
+    <hr class="border-gray-200 border-2">
   </div>
   
   <style>

@@ -1,46 +1,48 @@
 <script>
 	import { scaleLinear } from 'd3-scale';
-	import publications from "$data/publications.csv";
 	import * as d3 from 'd3';
 	import ModalOpen from '../modal/ModalOpen.svelte';
+
+	import polygonGenerator from './polygons.js';
+
+	///////////////////////////////////////////////////////////////////
 	let modal;
+	export let dataset = [];	// The dataset to be used
+	export let facet = "";		// What do we want to include in the dropdown?
+	export let colors = [];		// Array of colors for facets
+	export let title = "";		// Title to be displayed
+	export let height = 800;	// Height of the chart
+	export let width = 900;	    // Width of the chart
+	export let id = "";			// ID prefix of the chart
+	export let sortBy = "year";		// What do we want to sort by?
+
+
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
 
 	const refined = [];
-	// We will keep only year, title, genre
-	const data = publications.map(d => ({
-		year: d.year,
-		title: d.title,
-		genre: d.genre,
-		totalCount: 0,
-	}));
 
 	// Delete items where year is empty
-	data.forEach(d => {
+	dataset.forEach(d => {
 		if (d.year !== '') {
 			refined.push(d);
 		}
 	});
-	refined.sort((a, b) => a.year - b.year);
+	refined.sort((a, b) => a[sortBy] - b[sortBy]);
 	// Count the number of books in each year and add that to the totalCount
 	refined.forEach(d => {
-		const year = d.year;
-		const count = refined.filter(d => d.year === year).length;
+		const counter = d[sortBy];
+		const count = refined.filter(d => d[sortBy] === counter).length;
 		d.totalCount = count;
 	});
 
-	// Convert year to number
-	refined.forEach(d => {
-		d.year = +d.year;
-	});
 
-	// Convert the dataset from an array to an array of objects
-	// Where each year is a key and it contains objects for each book
+// Convert the dataset from an array to an array of objects
+	// Where each sortBy is a key and it contains objects for each book
 	let result = refined.reduce(function (r, a){
-		r[a.year] = r[a.year] || [];
-		r[a.year].push(a);
+		r[a[sortBy]] = r[a[sortBy]] || [];
+		r[a[sortBy]].push(a);
 		return r;
 	}, Object.create(null));
 
@@ -49,26 +51,24 @@
 
 
 	////////////////////////////////////////////////////////////////////
-	/////////// Genre Filters //////////////////////////////////////////
+	/////////// facet Filters //////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
 
-	// Create an array of unique genres
-	const genres = data.map(d => d.genre).filter((v, i, a) => a.indexOf(v) === i);
-	// Add 'All Genres' to genres array
+	// Create an array of unique facets
 
-	const genreColors = ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"]
+	const facets = dataset.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
 
 	// Iterate through data2 and add an item called color with the associated color for each book
 	let i = 1;
 
 	data2.forEach(d => {
 		d.forEach(d=> {
-			d.color = genreColors[genres.indexOf(d.genre)];
-			d.id = i;
+			d.color = colors[facets.indexOf(d[facet])];
+			d.id = `${id}-${i}`;
 			i++;
 		});
 	});
-	genres.unshift('All Genres');
+	facets.unshift(`All ${facet}s`);
 
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
@@ -76,10 +76,8 @@
 
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-	const padding = { top: 20, right: 65, bottom: 35, left: 25 };
+	const padding = { top: 100, right: 65, bottom: 100, left: 25 };
 
-	let width = 900;
-	let height = 800;
 
 	$: xScale = scaleLinear()
 		.domain([0, xTicks.length ])
@@ -97,42 +95,26 @@
 	////////////////////////////////////////////////////////////////////
 
 
-	$: selectedGenre = null; 
+	$: selectedFacet = null; 
 
 	// Function to handleFill. 
-	// If a genre is selected, then return that color. If not then return gray
-	// Color only that genre
+	// If a facet is selected, then return that color. If not then return gray
+	// Color only that facet
 	$: handleFill = (d) => {
-		if (selectedGenre === d.genre) {
+		if (selectedFacet === d[facet]) {
 			return d.color;
 		} else {
 			return '#d3d3d3';
 		}
 	}
 
-	// Function to change genreSelection when a genre is clicked
-	$: highlightGenre = (d) => {
-		selectedGenre = d;
+	// Function to change genreSelection when a facet is clicked
+	$: highlightFacet = (d) => {
+		selectedFacet = d;
 	}
 
-	////////////////////////////////////////////////////////////////////
-	////// Show more info when clicking over a bar /////////////////////
-	////////////////////////////////////////////////////////////////////
 
-	$: currentBookTitle = null;
-	$: currentBookGenre = null;
-	$: currentBookYear = null;
-	$: shouldShow = false;
-
-	// Function to handle mouseover
-	$: displayDetails = (d) => {
-		currentBookTitle = d.title;
-		currentBookGenre = d.genre;
-		currentBookYear = d.year;
-		shouldShow = true;
-	}
-
-	let searchTerm = '';
+	$: searchTerm = '';
 	$: searchArray = [];
 	$: everythingElse = [];
 	// Based on the search term, function to filter those IDs
@@ -141,12 +123,14 @@
 		clearResults();
 		data2.forEach(d => {
 			d.forEach(d => {
-				if (d.title.toLowerCase().includes(searchTerm.toLowerCase()) || d.genre.toLowerCase().includes(searchTerm.toLowerCase())) {
+				if (d.title.toLowerCase().includes(searchTerm.toLowerCase()) || d[facet].toLowerCase().includes(searchTerm.toLowerCase())) {
 					// Add this ID to array
 					searchArray.push(d.id)
 				}
 			})
 		})
+
+		
 
 		// everythingElse is everything else
 		data2.forEach(d => {
@@ -180,7 +164,6 @@
 			d => d3.select('#bar-' + d)
 				.classed('inactive', true)
 		)
-		console.log(everythingElse);
 
 	}
 
@@ -197,51 +180,6 @@
 		
 	}
 
-	////////////////////////////////////////////////////////////////////
-	// Polygon Generator ///////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////
-
-	// Function to generate the polygon
-
-	$: polygonGenerator = (xStartingPos , yStartingPos) => {
-
-			yStartingPos -= 16;
-			// Generate a polygon with random points
-
-			let r = 2; //r is the maximum a vertex can vary. Might also need to be a function of screenwidth
-
-			let c1 = r * Math.random();
-			let c2 = r * Math.random();
-			let c3 = r * Math.random();
-			let c4 = r * Math.random();
-
-
-			let x = xStartingPos + c1;
-			let y = yStartingPos + c1;
-
-			//width (a) and height (b) of rectangle sides. Should ideally be a function of screenwidth?
-			let a = 18;
-			let b = 12;
-
-			let x2 = a + xStartingPos - c2;
-			let y2 =  yStartingPos + c2;
-
-			let x3 = a + xStartingPos - c3;
-			let y3 = b + yStartingPos -c3;
-
-			let x4 = xStartingPos + c4;
-			let y4 = b + yStartingPos -c4;
-
-			let polygon = 'M' + x + ',' + y;
-			polygon += 'L' + x2 + ',' + y2;	
-			polygon += 'L' + x3 + ',' + y3;
-			polygon += 'L' + x4 + ',' + y4;
-			//polygon += 'L' + x + ',' + y  ;
-			polygon += 'Z';
-			return polygon;
-
-}
-
 </script>
 <main>
 	
@@ -257,13 +195,13 @@
 	
 	<!-- Modal component binding -->
 
-	<ModalOpen bind:this={modal} which="publications"/>
+	<ModalOpen bind:this={modal}/>
 
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-3 py-6">
-			<h1 class="text-4xl uppercase font-bold">Publications</h1>
+			<h1 class="text-4xl uppercase font-bold">{title}</h1>
 			<p class="text-gray-600 py-4 text-sm">
-				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
+				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
 
 			<!-- Search bar -->
@@ -281,12 +219,12 @@
 			
 			<!-- Dropdown for selecting facets -->
 
-			<div class="chart relative " bind:clientWidth={width} bind:clientHeight={height}>
+			<div class="chart relative " >
 				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
-					<select class="rounded-md" on:change="{highlightGenre(selectedGenre)}">
-						{#each genres as genre}
-							<option on:click="{highlightGenre(genre)}" value={genre}>
-								{genre}
+					<select class="rounded-md" on:change="{highlightFacet(selectedFacet)}">
+						{#each facets as facet}
+							<option on:click="{highlightFacet(facet)}" value={facet}>
+								{facet}
 							</option>
 						{/each}
 					</select>
@@ -305,8 +243,8 @@
 					<g class="axis x-axis">
 						{#each data2 as point, i}
 						{#if i % 4 === 0 }	
-						<g class="tick" transform="translate({xScale(i)/7} ,{height})">
-								<text x="{barWidth/2}" y="-17">{point[0].year}</text>
+						<g class="tick" transform="translate({xScale(i)/7} ,{height + 10})">
+								<text x="{barWidth/2}" y="-90">{point[0].year}</text>
 							</g>
 							{/if}
 						{/each}
@@ -348,7 +286,7 @@
 	svg {
 		position: relative;
 		width: 100%;
-		height: 700px;
+		height: 720px;
 	}
 
 	.tick {

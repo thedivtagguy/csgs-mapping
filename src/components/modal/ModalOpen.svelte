@@ -11,23 +11,20 @@
 
   </script>
   
-  <button on:click={handleOpen}>
-      open
-  </button>
-  
   <Modals>
     <div
       slot="backdrop"
       class="backdrop"
           transition:fade
-      on:click={closeModal}
+          on:click={closeModal}
+
     />
   </Modals>
   
   <style>
     .backdrop {
       position: fixed;
-      z-index: 21;
+      z-index: 19;
       top: 0;
       bottom: 0;
       right: 0;

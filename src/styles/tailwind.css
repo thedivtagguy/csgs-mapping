@@ -12,7 +12,17 @@
   .link {
     @apply underline text-blue-800 hover:text-divpurple decoration-dashed;
   }
+ 
+  body {
+    background-color: var(--color-background);
 
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading-text) !important;
+  }
+  a {
+    color: var(--color-text);
+  }
 }
 
 /* Injects Tailwind's component classes & any component classes registered by plugins. */

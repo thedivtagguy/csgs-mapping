@@ -1,16 +1,16 @@
 /**
  * Do not edit directly
- * Generated on Mon, 20 Dec 2021 18:00:14 GMT
+ * Generated on Sun, 19 Jun 2022 06:42:28 GMT
  */
 
 :root {
-  --category-blue: #4477aa;
-  --category-red: #ee6677;
+  --category-blue: #4477AA;
+  --category-red: #EE6677;
   --category-green: #228833;
-  --category-yellow: #ccbb44;
-  --category-cyan: #66ccee;
-  --category-purple: #aa3377;
-  --category-gray: #bbbbbb;
+  --category-yellow: #CCBB44;
+  --category-cyan: #66CCEE;
+  --category-purple: #AA3377;
+  --category-gray: #BBBBBB;
   --color-black: #000000;
   --color-off-black: #282828;
   --color-gray-dark: #5b5b5b;
@@ -19,8 +19,21 @@
   --color-off-white: #f0f0f0;
   --color-white: #ffffff;
   --color-purple: #a239ca;
-  --color-blue: #4717f6;
-  --color-green: #34a29e;
-  --color-red: #ff533d;
-  --color-yellow: #e5e338;
+  --color-non-blue: #4717f6;
+  --color-non-green: #34a29e;
+  --color-non-red: #ff533d;
+  --color-non-yellow: #e5e338;
+  --color-background: #e8e5da;
+  --color-subtitle: #818181;
+  --color-heading-text: #3a3a3a;
+  --color-green: #cadead;
+  --color-pink: #f3bef1;
+  --color-red: #f67c87;
+  --color-orange: #f7b289;
+  --color-yellow: #f3df8c;
+  --color-aqua: #a8dcc6;
+  --color-turquoise: #79a5ae;
+  --color-text: #3a3a3a;
+  --color-darker-background: #e4e2d4;
+  --color-dark-text: #3a3a3a;
 }

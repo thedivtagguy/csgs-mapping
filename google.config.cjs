@@ -28,5 +28,10 @@ module.exports = [
     id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
     gid: "689889318",
     filepath: "src/data/digitalSpaces.csv"
+  },
+  {
+    id: "1JDokc6P3BQECsfADTLSRpalAy5OWzXqlbaOkKdbdlWA",
+    gid: "0",
+    filepath: "src/data/organizationsScatter.csv"
   }
 ];

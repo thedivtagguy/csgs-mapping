@@ -24,16 +24,16 @@
     "purple": {
       "value": "#a239ca"
     },
-    "blue": {
+    "non-blue": {
       "value": "#4717f6"
     },
-    "green": {
+    "non-green": {
       "value": "#34a29e"
     },
-    "red": {
+    "non-red": {
       "value": "#ff533d"
     },
-    "yellow": {
+    "non-yellow": {
       "value": "#e5e338"
     }
   }

@@ -17,10 +17,10 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">
   <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" class="button">
-    <line class:active-top={active} x1="10%" y1="20" x2="90%" y2="20" class="button__bar button__bar--top" />
-    <line class:active-left={active} x1="10%" y1="20" x2="20" y2="80" class="button__bar button__bar--mid side-left" />
-    <line class:active-right={active} x1="90%" y1="20" x2="100%" y2="80" class="button__bar button__bar--mid side-right" />
-    <line class:active-bot={active} x1="20" y1="80" x2="100%" y2="80" class="button__bar button__bar--bot" />
+    <line class:active-top={active} x1="0%" y1="20" x2="100%" y2="20" class="button__bar button__bar--top" />
+    <line class:active-left={active} x1="0%" y1="20" x2="0" y2="80" class="button__bar button__bar--mid side-left" />
+    <line class:active-right={active} x1="100%" y1="20" x2="100%" y2="80" class="button__bar button__bar--mid side-right" />
+    <line class:active-bot={active} x1="0" y1="80" x2="100%" y2="80" class="button__bar button__bar--bot" />
     <text x="50%" y="55%" class="button__label">{label}</text>
   </svg>
 </button>

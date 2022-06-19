@@ -124,7 +124,7 @@ const data = digital.filter(d => genres.includes(d.genre));
 
   
 <!-- Section 1 -->
-<section class="px-2 w-full py-32 bg-white md:px-0">
+<section class="px-2 w-full py-32 md:px-0">
   <div class=" items-center max-w-6xl px-8 mx-auto xl:px-5">
     <div class="grid grid-cols-12 items-center sm:-mx-3">
       <div class="w-full col-span-6 md:w-1/2 md:px-3">

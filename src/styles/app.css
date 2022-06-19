@@ -31,3 +31,6 @@
   --color-highlight: var(--color-yellow);
 }
 
+body {
+  background-color: var(--background);
+}

@@ -17,9 +17,22 @@
     "off-white": "#f0f0f0",
     "white": "#ffffff",
     "purple": "#a239ca",
-    "blue": "#4717f6",
-    "green": "#34a29e",
-    "red": "#ff533d",
-    "yellow": "#e5e338"
+    "non-blue": "#4717f6",
+    "non-green": "#34a29e",
+    "non-red": "#ff533d",
+    "non-yellow": "#e5e338",
+    "background": "#e8e5daff",
+    "subtitle": "#818181ff",
+    "heading-text": "#3a3a3aff",
+    "green": "#cadeadff",
+    "pink": "#f3bef1ff",
+    "red": "#f67c87ff",
+    "orange": "#f7b289ff",
+    "yellow": "#f3df8cff",
+    "aqua": "#a8dcc6ff",
+    "turquoise": "#79a5aeff",
+    "text": "#3a3a3aff",
+    "darker-background": "#E4E2D4",
+    "dark-text": "#3A3A3A"
   }
 }

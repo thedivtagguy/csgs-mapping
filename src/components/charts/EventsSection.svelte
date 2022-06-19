@@ -31,7 +31,7 @@ import EventCard from "./EventCard.svelte";
 </script>
 
     
-<section class="relative py-20 overflow-hidden bg-white">
+<section class="relative py-20 overflow-hidden ">
     <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
         <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-blue-50"></span>
     </span>
@@ -50,7 +50,7 @@ import EventCard from "./EventCard.svelte";
 </section>
 
     
-<section class="relative py-20 overflow-hidden bg-white">
+<section class="relative py-20 overflow-hidden ">
     <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
         <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-green-50"></span>
     </span>
@@ -68,7 +68,7 @@ import EventCard from "./EventCard.svelte";
     </div>
 </section>
 
-<section class="relative py-20 overflow-hidden bg-white">
+<section class="relative py-20 overflow-hidden ">
     <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
         <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-red-50"></span>
     </span>

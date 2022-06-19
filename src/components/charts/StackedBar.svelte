@@ -76,9 +76,9 @@
 
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-	const padding = { top: 20, right: 50, bottom: 35, left: 25 };
+	const padding = { top: 20, right: 65, bottom: 35, left: 25 };
 
-	let width = 1100;
+	let width = 900;
 	let height = 800;
 
 	$: xScale = scaleLinear()
@@ -89,7 +89,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 121; 
+	$: barWidth = innerWidth / xTicks.length - 118; 
 	
 
 	////////////////////////////////////////////////////////////////////
@@ -253,31 +253,33 @@
 	</datalist>
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-3 py-6">
-			<h1 class="text-2xl font-bold">Publications</h1>
+			<h1 class="text-4xl uppercase font-bold">Publications</h1>
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
 			<div class="flex h-28 flex-col items-center">
-				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 border-gray-200 rounded-md h-12" list="titles"
+				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 focus:ring focus:ring-gray-400 bg-[color:var(--color-darker-background)]  border-amber-600 rounded-md h-12" list="titles"
 				size="50"
 				autocomplete="off" />
-				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
+				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-[color:var(--color-orange)] rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
 			</div>
-			<div id="facets" class="flex flex-col gap-8 h-full justify-start my-8">
-				<select on:change="{highlightGenre(selectedGenre)}">
-					{#each genres as genre}
-						<option on:click="{highlightGenre(genre)}" value={genre}>
-							{genre}
-						</option>
-					{/each}
-				</select>
 			
-			</div>
 		</div>
+		
 		<div class="col-span-9">	
 				
-			<div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
-				<svg>
+			<div class="chart relative " bind:clientWidth={width} bind:clientHeight={height}>
+				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
+					<select class="rounded-md" on:change="{highlightGenre(selectedGenre)}">
+						{#each genres as genre}
+							<option on:click="{highlightGenre(genre)}" value={genre}>
+								{genre}
+							</option>
+						{/each}
+					</select>
+				
+				</div>
+				<svg class="relative">
 					{#if shouldShow}
 					<!-- Display book details -->
 					<g class="details bg-black">
@@ -392,6 +394,20 @@
 		opacity: 0.3;
 	}
 
+	select::-ms-expand {
+  display: none;
+}
+select {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.5em 1em 0.5em 0.5em;
+  border: 1px solid #eee;
+  font: inherit;
+  line-height: inherit;
+  color:var(--color-heading);
+  font-weight: 500;
+  background-color: var(--color-orange);
 
+}
 	
 </style>

@@ -1,7 +1,8 @@
 <script>
 	import { setContext } from 'svelte';
 	import { mapbox, key } from './mapbox.js';
-
+    import places from "$data/indices/organizationsScatter.csv.json";
+    console.log(places);
 	setContext(key, {
 		getMap: () => map,
 	});
@@ -17,7 +18,7 @@
 const load = () => {
     map = new mapbox.Map({
         container: container,
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
         center: [-103.5917, 40.6699],
         zoom: 3
     });
@@ -30,6 +31,7 @@ const load = () => {
             type: 'geojson',
             // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
             // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+            //'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson'
             data: 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
             cluster: true,
             clusterMaxZoom: 14, // Max zoom to cluster points on
@@ -129,7 +131,7 @@ const load = () => {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            new mapboxgl.Popup()
+            new mapbox.Popup()
                 .setLngLat(coordinates)
                 .setHTML(
                     `magnitude: ${mag}<br>Was there a tsunami?: ${tsunami}`

@@ -36,10 +36,9 @@
 			});
 		}
 	});
-	console.log(organizations);
 </script>
 
-<main>
+<main class="py-16">
 	<div class="col-span-1">
 		<Map lat={22} lon={82} zoom={4.1}>
 			<!-- Do this for all regions
@@ -48,9 +47,9 @@
 			{/each} -->
 		</Map>
 	</div>
-	<div class="col-span-1">
+	<!-- <div class="col-span-1">
 		<MapOrganizationList region={selectedRegion}/>
-	</div>
+	</div> -->
 </main>
 
 <style>

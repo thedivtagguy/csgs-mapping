@@ -545,6 +545,9 @@ a {
 .ml-2 {
   margin-left: 0.5rem;
 }
+.-ml-4 {
+  margin-left: -1rem;
+}
 .block {
   display: block;
 }
@@ -610,8 +613,23 @@ a {
 .h-4 {
   height: 1rem;
 }
+.h-1\/2 {
+  height: 50%;
+}
 .min-h-\[300px\] {
   min-height: 300px;
+}
+.min-h-\[350px\] {
+  min-height: 350px;
+}
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+.min-h-\[480px\] {
+  min-height: 480px;
 }
 .w-\[40px\] {
   width: 40px;
@@ -930,6 +948,27 @@ a {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
+.bg-\[color\:var\(--color-\{randomColor\}\)\] {
+  background-color: var(--color-{randomColor});
+}
+.bg-\[color\:var\(--color-\{color\}\)\] {
+  background-color: var(--color-{color});
+}
+.bg-\[color\:var\(--color-green\)\] {
+  background-color: var(--color-green);
+}
+.bg-\[color\:var\(--color-aqua\)\] {
+  background-color: var(--color-aqua);
+}
+.bg-\[color\:var\(--color-yellow\)\] {
+  background-color: var(--color-yellow);
+}
+.bg-\[color\:var\(--color-\{event\.color\}\)\] {
+  background-color: var(--color-{event.color});
+}
+.bg-\[color\:var\(--color-pink\)\] {
+  background-color: var(--color-pink);
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1013,6 +1052,10 @@ a {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;

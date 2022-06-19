@@ -26,6 +26,10 @@ let genreColors =  ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4
         facet="format"
         colors={genreColors}
         sortBy="year"
+        modalContent={{
+            label: "format",
+            title: "title"
+        }}
     />
     <Circles />
     <StackedBar 
@@ -36,6 +40,10 @@ let genreColors =  ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4
         facet="genre" 
         colors={genreColors}
         sortBy="year"
+        modalContent={{
+            label: "genre",
+            title: "title"
+        }}
     />
     <EventsSection />
     <SearchSection />

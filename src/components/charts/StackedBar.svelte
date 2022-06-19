@@ -15,7 +15,7 @@
 	export let width = 900;	    // Width of the chart
 	export let id = "";			// ID prefix of the chart
 	export let sortBy = "year";		// What do we want to sort by?
-
+	export let modalContent;
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -258,7 +258,7 @@
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{handleFill(point[j])}"
-								on:click={() => modal.handleOpen(point[j])}
+								on:click={() => modal.handleOpen(point[j], modalContent)}
 								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>
 						

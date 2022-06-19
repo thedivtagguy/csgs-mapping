@@ -1,6 +1,7 @@
 <script>
 
   let active = false;
+  let click = true;
   export let label = 'Example';
   let width, viewBoxWidth;
   // Get width of text bounding box
@@ -17,7 +18,11 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">
   <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" class="button">
-    <line class:active-top={active} x1="0%" y1="20" x2="100%" y2="20" class="button__bar button__bar--top" />
+    <line on:click={() => click = !click} class:active-top={active}
+
+      
+      
+      x1="0%" y1="20" x2="100%" y2="20" class="button__bar button__bar--top" />
     <line class:active-left={active} x1="0%" y1="20" x2="0" y2="80" class="button__bar button__bar--mid side-left" />
     <line class:active-right={active} x1="100%" y1="20" x2="100%" y2="80" class="button__bar button__bar--mid side-right" />
     <line class:active-bot={active} x1="0" y1="80" x2="100%" y2="80" class="button__bar button__bar--bot" />
@@ -62,6 +67,24 @@
   transform: translateX(20px);
 
 
+}
+
+.click-top {
+  transform: translateY(-15px);
+}
+
+.click-bot {
+  transform: rotate(-1.5deg);
+}
+
+.click-left {
+  transform: rotate(-2.5deg);
+  transform: translateX(-25px);
+}
+
+.click-right {
+  transform: rotate(5.5deg);
+  transform: translateX(25px);
 }
 
   </style>

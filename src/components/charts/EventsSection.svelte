@@ -1,6 +1,6 @@
 <script>
     import events from "$data/events.csv";
-import EventCard from "./EventCard.svelte";
+    import EventCard from "./EventCard.svelte";
     // Add new id to each event
     events.forEach((event, index) => {
         event.id = index;
@@ -8,7 +8,10 @@ import EventCard from "./EventCard.svelte";
     let marches = {};
     let festivals = {};
     let conferences = {};
-    $: choice = "";
+    import { Tabs, TabList, TabPanel, Tab } from '$components/Tabs/tabs.js';
+
+    const colors = ['red', 'turquoise', 'yellow', 'green', 'pink', 'orange', 'aqua'];
+
     
     // Read in events and look for the type column. If type is march, add that row to the march object
     // If type is festival, add that row to the festival object
@@ -28,64 +31,87 @@ import EventCard from "./EventCard.svelte";
     let festivalArray = Object.values(festivals);
     let conferencesArray = Object.values(conferences);
 
-</script>
+    // Assign a color randomly to each event from the array of colors
+    // This is done by choosing a random index from the array of colors
+    // Then using that index to select a color from the array of colors
+    // Then assigning the color to the event
 
-    
-<section class="relative py-20 overflow-hidden ">
-    <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
-        <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-blue-50"></span>
-    </span>
-    <span class="absolute bottom-0 left-0"> </span>
-    <div class="relative px-8 mx-auto max-w-7xl">
-        <h2 class="relative font-bold max-w-lg mt-5 mb-10 text-4xl leading-tight lg:text-5xl">Pride Marches</h2>
-    </div>
+    marchArray.forEach(event => {
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        event.color = color;
+    });
 
-    <div class="main flex">
-        {#each marchArray as event}
-        <div class="portfolio_item p-8">
-            <EventCard event={event} />
-        </div>
-       {/each}
-    </div>
-</section>
+    festivalArray.forEach(event => {
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        event.color = color;
+    });
 
-    
-<section class="relative py-20 overflow-hidden ">
-    <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
-        <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-green-50"></span>
-    </span>
-    <span class="absolute bottom-0 left-0"> </span>
-    <div class="relative px-8 mx-auto max-w-7xl">
-        <h2 class="relative font-bold max-w-lg mt-5 mb-10 text-4xl leading-tight lg:text-5xl">Festivals</h2>
-    </div>
+    conferencesArray.forEach(event => {
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        event.color = color;
+    });
 
-    <div class="main flex">
-        {#each festivalArray as event}
-        <div class="portfolio_item p-8">
-            <EventCard event={event} />
-        </div>
-       {/each}
-    </div>
-</section>
 
-<section class="relative py-20 overflow-hidden ">
-    <span class="absolute top-0 right-0 flex flex-col items-end mt-0 -mr-16 opacity-60">
-        <span class="container hidden w-screen h-16 max-w-xs mt-24 transform rounded-full rounded-r-none md:block md:max-w-xs lg:max-w-lg 2xl:max-w-3xl bg-red-50"></span>
-    </span>
-    <span class="absolute bottom-0 left-0"> </span>
-    <div class="relative px-8 mx-auto max-w-7xl">
-        <h2 class="relative font-bold max-w-lg mt-5 mb-10 text-4xl leading-tight lg:text-5xl">Conferences</h2>
-    </div>
-
-    <div class="main flex">
-        {#each conferencesArray as event}
-        <div class="portfolio_item p-8">
-            <EventCard event={event} />
-        </div>
-       {/each}
-    </div>
-</section>
-
+</script><main class="py-24">
+    <h1 class="text-4xl uppercase font-bold">Upcoming Events</h1>
+ 
+    <Tabs>
+        <TabList>
+           <Tab>Marches</Tab>
+           <Tab>Festivals</Tab>
+           <Tab>Conferences</Tab>
+        </TabList>
+        <TabPanel>
+           <section class="relative overflow-hidden ">
+              <span class="absolute bottom-0 left-0"> </span>
+              <!-- <div class="relative mx-auto max-w-7xl">
+                 <h2 class="relative font-bold max-w-lg mt-5  text-4xl leading-tight lg:text-5xl">Pride Marches</h2>
+              </div> -->
+              <div class="main flex">
+                 {#each marchArray as event, i}
+                 <div class="portfolio_item -ml-4 p-4">
+                    <EventCard event={event}
+                       />
+                 </div>
+                 {/each}
+              </div>
+           </section>
+        </TabPanel>
+        <TabPanel>
+            <section class="relative overflow-hidden ">
+                <span class="absolute bottom-0 left-0"> </span>
+                <!-- <div class="relative mx-auto max-w-7xl">
+                   <h2 class="relative font-bold max-w-lg mt-5  text-4xl leading-tight lg:text-5xl">Festivals</h2>
+                </div> -->
+                <div class="main flex">
+                   {#each festivalArray as event, i}
+                   <div class="portfolio_item -ml-4 p-4">
+                      <EventCard event={event}
+                         />
+                   </div>
+                   {/each}
+                </div>
+             </section>
+        </TabPanel>
+        <TabPanel>
+            <section class="relative overflow-hidden ">
+                <span class="absolute bottom-0 left-0"> </span>
+                <!-- <div class="relative mx-auto max-w-7xl">
+                   <h2 class="relative font-bold max-w-lg mt-5  text-4xl leading-tight lg:text-5xl">Conferences</h2>
+                </div> -->
+                <div class="main flex">
+                   {#each conferencesArray as event, i}
+                   <div class="portfolio_item -ml-4 p-4">
+                      <EventCard event={event}
+                         />
+                   </div>
+                   {/each}
+                </div>
+             </section>
+        </TabPanel>
+     </Tabs>
+</main>
+ 
 <style>
         .main {
         flex-direction: row;

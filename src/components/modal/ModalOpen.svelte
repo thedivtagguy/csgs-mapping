@@ -2,10 +2,9 @@
     import { Modals, closeModal, openModal, modals } from 'svelte-modals'
       import { fade } from 'svelte/transition'
       import Modal from './Modal.svelte'
-      export let which;
-      export const handleOpen = (data) => {
+      export const handleOpen = (data, modalContent) => {
           openModal(Modal, { 
-              data, which
+              data, modalContent
           })
       }
 

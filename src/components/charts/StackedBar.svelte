@@ -2,7 +2,7 @@
 	import { scaleLinear } from 'd3-scale';
 	import publications from "$data/publications.csv";
 	import * as d3 from 'd3';
-	import Modal from '$components/helpers/Modal.svelte';
+	import ModalOpen from '../modal/ModalOpen.svelte';
 	let modal;
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -244,6 +244,9 @@
 
 </script>
 <main>
+	
+	<!-- Datalist for the titles and other searchable content -->
+
 	<datalist id="titles">
 		{#each data2 as point, i}
 			{#each {length: point[0].totalCount} as book, j}
@@ -251,12 +254,20 @@
 			{/each}
 		{/each}
 	</datalist>
+	
+	<!-- Modal component binding -->
+
+	<ModalOpen bind:this={modal} which="publications"/>
+
 	<section class="grid grid-cols-12 gap-6 ">
 		<div class="col-span-3 py-6">
 			<h1 class="text-4xl uppercase font-bold">Publications</h1>
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by genre or click on a box to read more.
 			</p>
+
+			<!-- Search bar -->
+
 			<div class="flex h-28 flex-col items-center">
 				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 focus:ring focus:ring-gray-400 bg-[color:var(--color-darker-background)]  border-amber-600 rounded-md h-12" list="titles"
 				size="50"
@@ -267,7 +278,9 @@
 		</div>
 		
 		<div class="col-span-9">	
-				
+			
+			<!-- Dropdown for selecting facets -->
+
 			<div class="chart relative " bind:clientWidth={width} bind:clientHeight={height}>
 				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
 					<select class="rounded-md" on:change="{highlightGenre(selectedGenre)}">
@@ -279,22 +292,7 @@
 					</select>
 				
 				</div>
-				<svg class="relative">
-					{#if shouldShow}
-					<!-- Display book details -->
-					<g class="details bg-black">
-						<text id="bookTitle" x="{xScale(0)}" y="100" >
-								{currentBookTitle}
-						</text>
-						<text id="bookGenre" x="{xScale(0)}" y="120" >
-								{currentBookGenre}
-						</text>
-						<text id="bookYear" x="{xScale(0)}" y="140" >
-								{currentBookYear}
-						</text>
-					</g>
-					{/if}
-						
+				<svg class="relative">						
 
 					<g class="axis y-axis">
 						{#each yTicks as tick}
@@ -318,10 +316,11 @@
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
 							<path 
+								
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{handleFill(point[j])}"
-								on:click={() => modal.show()}
+								on:click={() => modal.handleOpen(point[j])}
 								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>
 						
@@ -332,9 +331,7 @@
 				</svg>
 			</div>
 		</div>
-		<div class="col-span-2">
-		
-		</div>
+	
 	</section>
 	
 </main>

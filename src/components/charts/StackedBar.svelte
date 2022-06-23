@@ -204,14 +204,14 @@
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
 
-			<!-- Search bar -->
+			<!-- Search bar
 
 			<div class="flex h-28 flex-col items-center">
 				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 focus:ring focus:ring-gray-400 bg-[color:var(--color-darker-background)]  border-amber-600 rounded-md h-12" list="titles"
 				size="50"
 				autocomplete="off" />
 				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-[color:var(--color-orange)] rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
-			</div>
+			</div> -->
 			
 		</div>
 		

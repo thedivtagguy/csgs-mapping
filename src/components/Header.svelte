@@ -1,6 +1,27 @@
 <script>
   import MainButton from "./helpers/MainButton.svelte";
-  let pages = ['Institutions', 'Events', 'Publications', 'Digital Spaces'];
+  let pages = [
+    {
+      title: "Institutions",
+      url: "#map",
+    },
+    {
+      title: "Publications",
+      url: "#publications",
+    },
+    {
+      title: "Digital Spaces",
+      url: "#digital-spaces",
+    },
+    {
+      title: "Audio Visual Material",
+      url: "#av-material",
+    },
+    {
+      title: "Events",
+      url: "#events",
+    },
+  ];
 </script>
 
 
@@ -16,7 +37,7 @@
       <div class="flex flex-col justify-start items-start ">
         {#each pages as page}
           <div class="flex items-center justify-center">
-            <MainButton label={page} />
+            <MainButton label={page.title} link={page.url}/>
           </div>
         {/each}
         </div>

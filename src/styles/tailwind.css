@@ -23,6 +23,10 @@
   a {
     color: var(--color-text);
   }
+  html {
+    scroll-behavior: smooth;
+    --scroll-speed: 0.5s;
+  }
 }
 
 /* Injects Tailwind's component classes & any component classes registered by plugins. */

@@ -1,6 +1,7 @@
 <script>
     import events from "$data/events.csv";
     import EventCard from "./EventCard.svelte";
+    export let preview = false;
     // Add new id to each event
     events.forEach((event, index) => {
         event.id = index;
@@ -50,7 +51,15 @@
         let color = colors[Math.floor(Math.random() * colors.length)];
         event.color = color;
     });
-
+    if(preview) {
+    // Sort by date and keep only the first 4
+      marchArray.sort((a, b) => new Date(a.date) - new Date(b.date));
+      marchArray = marchArray.slice(0, 4);
+      festivalArray.sort((a, b) => new Date(a.date) - new Date(b.date));
+      festivalArray = festivalArray.slice(0, 4);
+      conferencesArray.sort((a, b) => new Date(a.date) - new Date(b.date));
+      conferencesArray = conferencesArray.slice(0, 4);
+    }
 
 </script><main class="py-24">
     <h1 class="text-4xl uppercase font-bold">Upcoming Events</h1>
@@ -114,16 +123,14 @@
  
 <style>
         .main {
-        flex-direction: row;
-        -webkit-flex-direction: row;
-        overflow-x: scroll;
+        flex-direction: col;
         width: 100%;
 
         }
 
         .portfolio_item {  
-        min-width: 30%;
-        width:50%;
+        min-width: 25%;
+        width:30%;
         }
 
         .flex {

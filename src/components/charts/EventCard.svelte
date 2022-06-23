@@ -8,9 +8,9 @@
     background-color: var(--color-{event.color});
 "
   >
-  <img class="inset-0 h-1/2 w-full object-cover" src="/assets/placeholder.png" alt="">
+  <img class="inset-0 max-h-[200px] w-full object-cover" src="/assets/placeholder.png" alt="">
   <div class="p-8 flex justify-between flex-col">
-        <h2 class="text-lg font-bold sm:text-xl md:text-2xl">{event.title}</h2>
+        <h2 class="text-lg font-bold sm:text-xl md:text-lg">{event.title}</h2>
         <p class="pt-2 text-sm font-medium">
           <span class="mr-1 underline">{event.location}</span> · <span class="mx-1">{event.year}</span>
         </p>

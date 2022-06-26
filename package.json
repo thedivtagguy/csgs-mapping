@@ -40,6 +40,7 @@
     "postcss-import": "^14.0.2",
     "prettier": "2.4.1",
     "prettier-plugin-svelte": "2.4.0",
+    "rollup-plugin-geojson": "^0.1.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "2.0.0",
     "style-dictionary": "3.0.3",

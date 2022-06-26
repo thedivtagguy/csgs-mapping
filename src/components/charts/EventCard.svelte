@@ -4,7 +4,7 @@
 
   <div
    
-    class="flex rounded-md flex-col h-full hover:shadow-lg items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4"  style="
+    class="flex rounded-md flex-col min-h-[500px] h-full hover:shadow-lg items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4"  style="
     background-color: var(--color-{event.color});
 "
   >

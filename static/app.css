@@ -557,9 +557,6 @@ html {
 .h-full {
   height: 100%;
 }
-.h-1\/2 {
-  height: 50%;
-}
 .h-\[250px\] {
   height: 250px;
 }
@@ -571,6 +568,9 @@ html {
 }
 .max-h-\[200px\] {
   max-height: 200px;
+}
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 .w-\[40px\] {
   width: 40px;
@@ -1283,10 +1283,6 @@ html {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
   .md\:text-lg {
     font-size: 1.125rem;

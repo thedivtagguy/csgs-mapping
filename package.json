@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "@sveltejs/pancake": "^0.0.18",
+    "algoliasearch": "^4.13.1",
     "colorthief": "^2.3.2",
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
@@ -68,6 +69,7 @@
     "d3-collection": "^1.0.7",
     "d3-scale": "^4.0.2",
     "googleapis": "^92.0.0",
+    "instantsearch.js": "^4.42.0",
     "mkdirp": "^1.0.4",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",

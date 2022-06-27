@@ -1,7 +1,7 @@
 <script>
   import algoliasearch from 'algoliasearch/lite.js';
 import instantsearch from 'instantsearch.js';
-import { searchBox, hits, index } from 'instantsearch.js/es/widgets';
+import { searchBox, hits, index } from 'instantsearch.js/es/widgets.js';
 import {onMount} from 'svelte';
 
 const searchClient = algoliasearch('8P43BBJQAR', '2c3f24b6adc627d1edf4a3e6879e1e62');

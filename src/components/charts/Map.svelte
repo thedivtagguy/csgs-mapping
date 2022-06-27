@@ -9,11 +9,7 @@
 		getMap: () => map,
 	});
 
-	export let lat;
-	export let lon;
-	export let zoom;
 
-	let container;
 	let map;
 
 
@@ -21,9 +17,10 @@
 		
 		map = new mapboxgl.Map({
 			container: container,
-			style: 'mapbox://styles/mapbox/dark-v10',
+			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
 			center: [80.9, 22.7],
-			zoom: 3
+			zoom: 4,
+			maxZoom: 13
 		});
 
 		map.on('load', () => {
@@ -34,7 +31,7 @@
 				type: 'geojson',
 				// Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
 				// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-				data: 'https://gist.githubusercontent.com/thedivtagguy/0a07453f2081be9c0f5b6fc2a2681a0f/raw/3c41dbbba93f88a78af1cf13e88443d2eed7d6ec/geodata.geojson',
+				data: geoData,
 				cluster: true,
 				clusterMaxZoom: 14, // Max zoom to cluster points on
 				clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
@@ -63,11 +60,11 @@
 					'circle-radius': [
 						'step',
 						['get', 'point_count'],
-						20,
-						100,
 						30,
+						100,
+						40,
 						750,
-						40
+						50
 					]
 				}
 			});
@@ -116,16 +113,15 @@
 				);
 			});
 
+
+			
 			// When a click event occurs on a feature in
 			// the unclustered-point layer, open a popup at
 			// the location of the feature, with
 			// description HTML from its properties.
-			map.on('click', 'unclustered-point', (e) => {
+			map.on('mouseover', 'unclustered-point', (e) => {
 				const coordinates = e.features[0].geometry.coordinates.slice();
-				const mag = e.features[0].properties.mag;
-				const tsunami =
-							e.features[0].properties.tsunami === 1 ? 'yes' : 'no';
-
+				
 				// Ensure that if the map is zoomed out such that
 				// multiple copies of the feature are visible, the
 				// popup appears over the copy being pointed to.
@@ -136,11 +132,24 @@
 				new mapboxgl.Popup()
 					.setLngLat(coordinates)
 					.setHTML(
-					`magnitude: ${mag}<br>Was there a tsunami?: ${tsunami}`
+					`${e.features[0].properties.name}<br> ${e.features[0].properties.region}`
 				)
 					.addTo(map);
+
+
 			});
 
+			// On clicking point, show sidebar
+			map.on('click', 'unclustered-point', (e) => {
+				// Select #sidebar and change visisbility to visible
+				document.getElementById('sidebar').style.visibility = 'visible';
+				// Populate sidebar with data from clicked point
+				document.getElementById('name').innerHTML = e.features[0].properties.name;
+				document.getElementById('region').innerHTML = e.features[0].properties.region;
+
+			})
+
+		
 			map.on('mouseenter', 'clusters', () => {
 				map.getCanvas().style.cursor = 'pointer';
 			});
@@ -162,7 +171,13 @@
 	/>
 </svelte:head>
 
-<div use:initMap></div>
+<div id="map-background" use:initMap>
+
+	<div id="sidebar">
+		<div id="name"></div>
+		<div id="region"></div>
+	</div>
+</div>
 
 
 <style>
@@ -171,4 +186,22 @@
 		height: 100vh;
 	}
     
+	#map-background {
+		position: relative;
+	}
+
+	#sidebar {
+		visibility: hidden;
+		position: absolute;
+		top: 10;
+		left: 10;
+		bottom: 10;
+		width: 300px;
+		height: 50%;
+		background: #fff;
+		padding: 20px;
+		margin: 30px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
 </style>

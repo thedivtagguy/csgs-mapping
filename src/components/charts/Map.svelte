@@ -4,7 +4,7 @@
     import places from "$data/indices/organizationsScatter.csv.json";
     import geoData from "$data/organizationsScatter.json"
 
-
+	
 	setContext(key, {
 		getMap: () => map,
 	});
@@ -20,7 +20,7 @@
 			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
 			center: [80.9, 22.7],
 			zoom: 4,
-			maxZoom: 13
+			maxZoom: 20
 		});
 
 		map.on('load', () => {
@@ -34,7 +34,7 @@
 				data: geoData,
 				cluster: true,
 				clusterMaxZoom: 14, // Max zoom to cluster points on
-				clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+				clusterRadius: 20 // Radius of each cluster when clustering points (defaults to 50)
 			});
 
 			map.addLayer({
@@ -88,7 +88,7 @@
 				filter: ['!', ['has', 'point_count']],
 				paint: {
 					'circle-color': '#11b4da',
-					'circle-radius': 4,
+					'circle-radius': 10,
 					'circle-stroke-width': 1,
 					'circle-stroke-color': '#fff'
 				}
@@ -141,12 +141,18 @@
 
 			// On clicking point, show sidebar
 			map.on('click', 'unclustered-point', (e) => {
-				// Select #sidebar and change visisbility to visible
+				console.log(e.features[0].properties);
 				document.getElementById('sidebar').style.visibility = 'visible';
-				// Populate sidebar with data from clicked point
-				document.getElementById('name').innerHTML = e.features[0].properties.name;
-				document.getElementById('region').innerHTML = e.features[0].properties.region;
 
+				document.getElementById('name').innerHTML = e.features[0].properties.name;
+	
+				let keywords = e.features[0].properties.keywords.split(',');
+				let keywordsHTML = '';
+				keywords.forEach(keyword => {
+					keywordsHTML += `<p id="keyword">${keyword}</p>`;
+				});
+				document.getElementById('keywords').innerHTML = keywordsHTML;
+				document.getElementById('type').innerHTML = e.features[0].properties.type;
 			})
 
 		
@@ -174,8 +180,12 @@
 <div id="map-background" use:initMap>
 
 	<div id="sidebar">
-		<div id="name"></div>
-		<div id="region"></div>
+		<p id="name"></p>
+		<div id="keywords">
+			<p id="keyword"></p>
+		</div>
+		<p id="type"></p>
+		<p id="region"></p>
 	</div>
 </div>
 
@@ -196,12 +206,38 @@
 		top: 10;
 		left: 10;
 		bottom: 10;
-		width: 300px;
+		width: 400px;
 		height: 50%;
-		background: #fff;
-		padding: 20px;
-		margin: 30px;
+		background: var(--color-background);
+		margin: 10px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		z-index: 1;
+	}
+
+	#name {
+		width: 100%;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.2em;
+		padding: 10px;
+		text-transform: uppercase;
+		background-color: var(--color-aqua);
+		color: var(--color-heading-text);
+	}
+
+	#keywords {
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: start;
+		padding: 10px;
+	}
+
+	:global(#keyword) {
+		background-color: var(--color-orange);
+		font-weight: 600;
+		padding: 5px 10px 5px 10px;
+		font-size: 14px;
+		text-transform: uppercase;
 	}
 </style>

@@ -5,7 +5,7 @@
   /* custom CSS goes here */
   p {
     font-size: 18px;
-    font-family: 'Source Sans Pro', 'sans-serif';
+    font-family: 'Roboto', 'sans-serif';
     line-height: 1.85rem;
   }
 
@@ -19,6 +19,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading-text) !important;
+    font-family: 'Roboto', 'sans-serif';
   }
   a {
     color: var(--color-text);

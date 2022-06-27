@@ -4,6 +4,7 @@
 	import ModalOpen from '../modal/ModalOpen.svelte';
 
 	import polygonGenerator from './polygons.js';
+import { select } from 'd3';
 
 	///////////////////////////////////////////////////////////////////
 	let modal;
@@ -95,90 +96,24 @@
 	////////////////////////////////////////////////////////////////////
 
 
-	$: selectedFacet = null; 
+	$: selectedFacet = null;
+	// Function to change genreSelection when a facet is clicked
+	const highlightFacet = facet => {
+		console.log(facet);
+		selectedFacet = facet;
+		handleFill(selectedFacet);
+	}
 
-	// Function to handleFill. 
-	// If a facet is selected, then return that color. If not then return gray
-	// Color only that facet
-	$: handleFill = (d) => {
-		if (selectedFacet === d[facet]) {
+	const handleFill = d => {
+		if (selectedFacet === null) {
+			return d.color;
+		} else if (d.facet === selectedFacet) {
 			return d.color;
 		} else {
-			return '#d3d3d3';
+			return '#f2f2f2';
 		}
 	}
 
-	// Function to change genreSelection when a facet is clicked
-	$: highlightFacet = (d) => {
-		selectedFacet = d;
-	}
-
-
-	$: searchTerm = '';
-	$: searchArray = [];
-	$: everythingElse = [];
-	// Based on the search term, function to filter those IDs
-	$: searchResults = () => {
-		// Clear the search array
-		clearResults();
-		data2.forEach(d => {
-			d.forEach(d => {
-				if (d.title.toLowerCase().includes(searchTerm.toLowerCase()) || d[facet].toLowerCase().includes(searchTerm.toLowerCase())) {
-					// Add this ID to array
-					searchArray.push(d.id)
-				}
-			})
-		})
-
-		
-
-		// everythingElse is everything else
-		data2.forEach(d => {
-			d.forEach(d => {
-				if (!searchArray.includes(d.id)) {
-					everythingElse.push(d.id)
-				}
-			})
-		})
-
-	   // Error handling
-	   if (searchTerm === '') {
-		   	clearResults();
-		} else if (searchArray.length === 0) {
-			alert('No results found');
-		}
-		highlightResults();
-
-	} 
-
-	$: highlightResults = () => {
-		// Apply bars.ctive class to the Ids in searchArray
-		// rects have ID of the form 'bar-{id}'
-		// Select all the IDs in searchArray
-		searchArray.map(
-			d => d3.select('#bar-' + d)
-				.classed('active', true)
-		)
-		// Reduce opacity of bars in everythingElse
-		everythingElse.map(
-			d => d3.select('#bar-' + d)
-				.classed('inactive', true)
-		)
-
-	}
-
-	$: clearResults = () => {
-		// Empty the array
-		searchArray = [];
-		d3.selectAll('.active')
-			.classed('active', false)
-		// Clear the everythingElse array
-		everythingElse = [];
-		d3.selectAll('.inactive')
-			.classed('inactive', false)
-
-		
-	}
 
 </script>
 <main>
@@ -221,9 +156,9 @@
 
 			<div class="chart relative " >
 				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
-					<select class="rounded-md" on:change="{highlightFacet(selectedFacet)}">
+					<select bind:value={selectedFacet} on:change="{highlightFacet(selectedFacet)}"  class="rounded-md" >
 						{#each facets as facet}
-							<option on:click="{highlightFacet(facet)}" value={facet}>
+							<option value={facet}>
 								{facet}
 							</option>
 						{/each}

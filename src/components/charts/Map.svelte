@@ -1,9 +1,9 @@
 <script>
 	import { setContext } from 'svelte';
 	import { mapboxgl, key } from './mapbox.js';
-    import places from "$data/indices/organizationsScatter.csv.json";
     import geoData from "$data/organizationsScatter.json"
-
+	import { fade, blur, fly, slide, scale } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
 	
 	setContext(key, {
 		getMap: () => map,
@@ -14,7 +14,11 @@
 
 
 	function initMap(container) {
-		
+			// Create a popup, but don't add it to the map yet.
+	const popup = new mapboxgl.Popup({
+		closeButton: false,
+		closeOnClick: false
+	});
 		map = new mapboxgl.Map({
 			container: container,
 			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
@@ -51,7 +55,7 @@
 					'circle-color': [
 						'step',
 						['get', 'point_count'],
-						'#51bbd6',
+						'#F67C87',
 						100,
 						'#f1f075',
 						750,
@@ -87,7 +91,7 @@
 				source: 'earthquakes',
 				filter: ['!', ['has', 'point_count']],
 				paint: {
-					'circle-color': '#11b4da',
+					'circle-color': '#c43540',
 					'circle-radius': 10,
 					'circle-stroke-width': 1,
 					'circle-stroke-color': '#fff'
@@ -119,7 +123,7 @@
 			// the unclustered-point layer, open a popup at
 			// the location of the feature, with
 			// description HTML from its properties.
-			map.on('mouseover', 'unclustered-point', (e) => {
+			map.on('mouseenter', 'unclustered-point', (e) => {
 				const coordinates = e.features[0].geometry.coordinates.slice();
 				
 				// Ensure that if the map is zoomed out such that
@@ -129,7 +133,7 @@
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 				}
 
-				new mapboxgl.Popup()
+				popup
 					.setLngLat(coordinates)
 					.setHTML(
 					`${e.features[0].properties.name}<br> ${e.features[0].properties.region}`
@@ -138,6 +142,11 @@
 
 
 			});
+
+			map.on('mouseleave', 'unclustered-point', () => {
+				popup.remove();
+			});
+			
 
 			// On clicking point, show sidebar
 			map.on('click', 'unclustered-point', (e) => {
@@ -179,7 +188,7 @@
 
 <div id="map-background" use:initMap>
 
-	<div id="sidebar">
+	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} id="sidebar">
 		<p id="name"></p>
 		<div id="keywords">
 			<p id="keyword"></p>
@@ -193,7 +202,7 @@
 <style>
 	div {
 		width: 100%;
-		height: 100vh;
+		height: 90vh;
 	}
     
 	#map-background {

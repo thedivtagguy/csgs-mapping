@@ -1,5 +1,5 @@
 <script>
-  import algoliasearch from 'algoliasearch/lite';
+  import algoliasearch from 'algoliasearch/lite.js';
 import instantsearch from 'instantsearch.js';
 import { searchBox, hits, index } from 'instantsearch.js/es/widgets';
 import {onMount} from 'svelte';

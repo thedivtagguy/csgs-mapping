@@ -19,5 +19,6 @@ export default {
 			preprocess: mdsvex()
 		}),
     geojson()
-  ]
+  ],
+  external: ["instantsearch.js/es/widgets.js"],
 };

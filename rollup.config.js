@@ -20,5 +20,4 @@ export default {
 		}),
     geojson()
   ],
-  external: ["instantsearch.js/es/widgets.js"],
 };

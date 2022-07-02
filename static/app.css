@@ -582,6 +582,9 @@ html {
 .min-h-\[500px\] {
   min-height: 500px;
 }
+.min-h-\[300px\] {
+  min-height: 300px;
+}
 .w-\[40px\] {
   width: 40px;
 }
@@ -924,6 +927,14 @@ html {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -985,6 +996,10 @@ html {
 .text-orange-800 {
   --tw-text-opacity: 1;
   color: rgb(154 52 18 / var(--tw-text-opacity));
+}
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

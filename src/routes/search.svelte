@@ -1,12 +1,15 @@
+<script context="module">
+  import "../styles/tailwind.css";
+  export const prerender = true;
+	export const router = true;
+</script>
+
 <script>
   import Footer from "$components/Footer.svelte";
-import Menu from "$components/Menu.svelte";
   import Meta from "$components/Meta.svelte";
-  import SearchSection from "$components/Search/SearchSection.svelte";
+import SearchPage from "$components/SearchPage.svelte";
 </script>
-<section>
-  <Meta/>
-  <Menu/>
-  <SearchSection />
-  <Footer />
-</section>
+
+<Meta />
+<SearchPage  />
+<Footer />

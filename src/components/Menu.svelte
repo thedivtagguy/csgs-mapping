@@ -2,9 +2,11 @@
     <nav class="">
         <div class="container px-6 py-3 mx-auto md:flex">
             <div class="flex items-center justify-between">
-                <div>
-                    <img src="./assets/csgs-logo.png" alt="CSGS logo" width="100">
-                </div>
+                <a href="/">
+                    <div>
+                        <img src="./assets/csgs-logo.png" alt="CSGS logo" width="100">
+                    </div>
+                </a>
                 
                 <!-- Mobile menu button -->
                 <div class="flex md:hidden">

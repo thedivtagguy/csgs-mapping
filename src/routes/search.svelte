@@ -7,7 +7,7 @@
 <script>
   import Footer from "$components/Footer.svelte";
   import Meta from "$components/Meta.svelte";
-import SearchPage from "$components/SearchPage.svelte";
+  import SearchPage from "$components/SearchPage.svelte";
 </script>
 
 <Meta />

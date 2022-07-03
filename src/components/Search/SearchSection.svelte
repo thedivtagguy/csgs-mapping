@@ -5,12 +5,7 @@ import { stats, searchBox, hits, index, pagination } from 'instantsearch.js/es/w
 import {onMount} from 'svelte';
 const searchClient = algoliasearch('8P43BBJQAR', '2c3f24b6adc627d1edf4a3e6879e1e62');
 let selected;
-let searchIDs = {
-  'publications-search': true,
-  'av-search': true,
-  'events-search': true,
-  'digital-spaces-search': true,
-}
+
 // Add onMount 
 onMount(() => {
 

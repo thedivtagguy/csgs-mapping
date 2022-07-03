@@ -1,7 +1,6 @@
 <script>
-    import {createUrlStore} from '$utils/url.js';
-
-    import { getContext, setContext } from 'svelte'
+  import {createUrlStore} from '$utils/url.js';
+  import { getContext, setContext } from 'svelte'
   export let ssrUrl = ''
   setContext('APP', { url: createUrlStore(ssrUrl) })
   // Usage across descendants for SSR support
@@ -20,7 +19,7 @@
             <div class="flex items-center justify-between">
                 <a on:click={handleLinkClick} href="/">
                     <div>
-                        <img src="./assets/csgs-logo.png" alt="CSGS logo" width="100">
+                        <img rel="preload" src="./assets/csgs-logo.png" alt="CSGS logo" width="100">
                     </div>
                 </a>
                 
@@ -57,8 +56,8 @@
               
                
                 <div class="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
-                    <a rel="external" on:click={handleLinkClick} href="/" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Home</a>
-                    <a  rel="external" on:click={handleLinkClick} href="/contact" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Contact</a>
+                    <a  on:click={handleLinkClick} href="/" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Home</a>
+                    <a  on:click={handleLinkClick} href="/contact" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Contact</a>
                 </div>
             </div>
         </div>

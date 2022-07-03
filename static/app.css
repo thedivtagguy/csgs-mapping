@@ -525,6 +525,12 @@ html {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.-mt-8 {
+  margin-top: -2rem;
+}
+.-mt-2 {
+  margin-top: -0.5rem;
+}
 .block {
   display: block;
 }
@@ -592,6 +598,18 @@ html {
 }
 .w-1\/3 {
   width: 33.333333%;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-\[100px\] {
+  width: 100px;
+}
+.w-\[700px\] {
+  width: 700px;
+}
+.w-\[200px\] {
+  width: 200px;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1088,6 +1106,10 @@ html {
 .hover\:bg-gray-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[color\:\#f0f0f0\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
 }
 .hover\:text-purple-800:hover {
   --tw-text-opacity: 1;

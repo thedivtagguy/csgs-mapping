@@ -23,7 +23,7 @@ search.addWidgets([
     placeholder: 'Search our archive',
     templates: {
     submit: `
-<div class="bg-[color:#d5d2bf] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
+<div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
   <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="30" height="30" viewBox="-5 -5 28 28">
     <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
       <circle cx="7.11" cy="7.11" r="7.11"/>
@@ -32,6 +32,20 @@ search.addWidgets([
   </svg>
 </div>
     `,
+    reset: `
+    <div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
+  <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="25" height="25" viewBox="-200 -200 700 700">
+    <g fill="black" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
+      <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
+    </g>
+  </svg>
+</div>
+    `
   },
   }),
 
@@ -98,17 +112,23 @@ search.start();
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 </svelte:head>
 <main class="py-12">
-  <div class="flex justify-end w-full gap-24 items-center">
+  <div class="flex justify-start w-2/3 gap-24 items-center">
     <div id="searchbox"></div>
+    <div id="facets" class="flex flex-col gap-8 justify-start my-8">
+      <select class="rounded-md w-[200px] " >
+        <option value="">All</option>
+        <option value="">Books</option>
+        <option value="">Events</option>
+      </select>
+    </div>
     <div id="paginate"></div>
-
   </div>
   <section class="grid  py-12 grid-cols-12">
     <div class="col-span-3">
       <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Publications</h3>
     </div>
     <div class="col-span-9">
-      <div id="publications-search"></div>
+      <div id="publications-search" class="-mt-2"></div>
     </div>
   </section>
 
@@ -150,5 +170,17 @@ search.start();
   }
   .ais-Pagination-item:hover {
     background-color: #f0f0f0;
+  }
+
+  select {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.5em 1em 0.5em 0.5em;
+  border: 1px solid #eee;
+  font: inherit;
+  line-height: inherit;
+  color:var(--color-heading);
+  font-weight: 500;
+  background-color: var(--color-orange);
   }
 </style>

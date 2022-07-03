@@ -4,8 +4,13 @@ import instantsearch from 'instantsearch.js';
 import { stats, searchBox, hits, index, pagination } from 'instantsearch.js/es/widgets/index.js';
 import {onMount} from 'svelte';
 const searchClient = algoliasearch('8P43BBJQAR', '2c3f24b6adc627d1edf4a3e6879e1e62');
-
-
+let selected;
+let searchIDs = {
+  'publications-search': true,
+  'av-search': true,
+  'events-search': true,
+  'digital-spaces-search': true,
+}
 // Add onMount 
 onMount(() => {
 
@@ -90,7 +95,7 @@ search.addWidgets([
     },
   }),
 
-  index({ indexName: 'events' })
+  index({ indexName: 'events',   hitsPerPage: 10 })
     .addWidgets([
       hits({
         container: '#events-search',
@@ -105,7 +110,8 @@ search.addWidgets([
             <p> | </p>
             <p class="text-sm hit-description">{{ year }}</p>
           </div>
-          <p class="text-sm hit-description">{{ organiser }} <a href="mailto:{{ contact }}">{{contact}}</a><</p>
+          <p class="text-sm hit-description">{{ organiser }}</p>
+          <h6 class="text-sm"><span class="font-bold"><a href="mailto:{{ contact }}">{{contact}}</a></span></h6>
           </div>
            `,
         },
@@ -126,31 +132,39 @@ search.start();
   <div class="flex justify-start w-2/3 gap-24 items-center">
     <div id="searchbox"></div>
     <div id="facets" class="flex flex-col gap-8 justify-start my-8">
-      <select class="rounded-md w-[200px] " >
-        <option value="">All</option>
-        <option value="">Books</option>
-        <option value="">Events</option>
+      <select bind:value={selected} 
+ 
+      class="rounded-md w-[200px] " >
+        <option value="all">All</option>
+        <option value="publications-search">Publications</option>
+        <option value="events-search">Events</option>
       </select>
     </div>
     <div id="paginate"></div>
   </div>
-  <section class="grid  py-12 grid-cols-12">
-    <div class="col-span-3">
-      <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Publications</h3>
-    </div>
-    <div class="col-span-9">
-      <div id="publications-search" class="-mt-2"></div>
-    </div>
-  </section>
 
-  <section class="grid  grid-cols-12">
-    <div class="col-span-3">
-      <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Events</h3>
-    </div>
-    <div class="col-span-9">
-      <div id="events-search"></div>
-    </div>
-  </section>
+
+  <div hidden={selected === 'publications-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid  py-12 grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Publications</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="publications-search" class="-mt-2"></div>
+      </div>
+    </section>
+  </div>
+
+  <div hidden={selected === 'events-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid  py-12 grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Events</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="events-search"></div>
+      </div>
+    </section>
+  </div>
 </main>
 
 <style global>

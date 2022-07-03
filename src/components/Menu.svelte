@@ -24,10 +24,10 @@
             <div class="w-full md:flex md:items-center md:justify-end">
               
                
-                <div class="flex">
+                <div class="flex  justify-center items-center">
                    
 
-                        <input bind:value={query} type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+                        <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
                         <!-- Submit button -->
                         <a rel="external" href="/search?publications[query]={query}">
                             <div class="bg-[color:#d5d2bf] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
@@ -47,3 +47,9 @@
             </div>
         </div>
     </nav>
+
+<style>
+    .searchbar {
+        height: 40px;
+    }
+</style>

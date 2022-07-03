@@ -982,6 +982,9 @@ html {
 .uppercase {
   text-transform: uppercase;
 }
+.capitalize {
+  text-transform: capitalize;
+}
 .leading-6 {
   line-height: 1.5rem;
 }

@@ -1,9 +1,7 @@
 <script>
-	import Button from '$components/helpers/Button.svelte';
-import { scaleLinear } from 'd3-scale';
+	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
-
 	let selected;
 
 	///////////////////////////////////////////////////////////////////
@@ -17,6 +15,7 @@ import { scaleLinear } from 'd3-scale';
 	export let id = "";			// ID prefix of the chart
 	export let sortBy = "year";		// What do we want to sort by?
 	export let modalContent;
+	export let colorBy = "";		// What do we want to color by?
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -57,14 +56,27 @@ import { scaleLinear } from 'd3-scale';
 
 	// Create an array of unique facets
 
-	const facets = dataset.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+	let facets = dataset.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+	// Remove empty facets
+	facets.forEach(d => {
+		if (d === '') {
+			facets.splice(facets.indexOf(d), 1);
+		}
+	});
+	// Capitalize the facets
+	facets.forEach(d => {
+		d = d.charAt(0).toUpperCase() + d.slice(1);
+	});
+
+	const colorBys = dataset.map(d => d[colorBy]).filter((v, i, a) => a.indexOf(v) === i);
+
 
 	// Iterate through data2 and add an item called color with the associated color for each book
 	let i = 1;
 
 	data2.forEach(d => {
 		d.forEach(d=> {
-			d.color = colors[facets.indexOf(d[facet])];
+			d.color = colors[colorBys.indexOf(d[colorBy])];
 			d.id = `${id}-${i}`;
 			i++;
 		});
@@ -91,8 +103,6 @@ import { scaleLinear } from 'd3-scale';
 	$: barWidth = innerWidth / xTicks.length - 118; 
 	
 
-	console.log(data2[0][0][facet]);
-	console.log(facet);
 </script>
 <main>
 	
@@ -126,9 +136,9 @@ import { scaleLinear } from 'd3-scale';
 
 			<div class="chart relative " >
 				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
-					<select bind:value={selected} class="rounded-md" >
+					<select bind:value={selected} class="rounded-md capitalize" >
 						{#each facets as facet}
-							<option value={facet}>
+							<option class="capitalize" value={facet}>
 								{facet}
 							</option>
 						{/each}
@@ -251,7 +261,10 @@ select {
   color:var(--color-heading);
   font-weight: 500;
   background-color: var(--color-orange);
+  text-transform: capitalize;
 
 }
-	
+	option {
+		text-transform: capitalize;
+	}
 </style>

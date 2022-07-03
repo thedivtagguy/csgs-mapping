@@ -36,7 +36,7 @@
             <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
             <div class="w-full md:flex md:items-center md:justify-end">
               
-                {#if $url.pathname  === '/' || $url.pathname  === '#/' || $url.pathname === "/about" || $url.pathname === "/contact"}
+                <!-- {#if $url.pathname  === '/' || $url.pathname  === '#/' || $url.pathname === "/about" || $url.pathname === "/contact"} -->
                 <div class="flex  justify-center items-center">
     
                     <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
@@ -52,12 +52,12 @@
                           </div>
                     </a>
             </div>
-              {/if}
+              <!-- {/if} -->
               
                
                 <div class="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
-                    <a  on:click={handleLinkClick} href="/" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Home</a>
-                    <a  on:click={handleLinkClick} href="/contact" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Contact</a>
+                    <a  href="/" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Home</a>
+                    <a  href="/contact" class="px-2 py-1 text-sm font-bold text-gray-700 transition-colors duration-200 transform rounded  hover:bg-gray-900 hover:text-gray-100 md:mx-2">Contact</a>
                 </div>
             </div>
         </div>

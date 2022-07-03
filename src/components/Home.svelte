@@ -6,7 +6,6 @@
     import Circles from "./charts/Circles.svelte";
     import EventsSection from "./charts/EventsSection.svelte";
     import Mapbox from "./charts/Mapbox.svelte";
-    import SearchSection from "./Search/SearchSection.svelte";
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
     let genreColors =  ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"];
@@ -26,8 +25,9 @@
         id="publications"
         title="Publications"
         width={950}
+        colorBy="genre"
         dataset={publications}
-        facet="genre"
+        facet="keyword"
         colors={genreColors}
         sortBy="year"
         modalContent={{
@@ -45,6 +45,7 @@
             title="Audio Visual Material"
             dataset={av}
             facet="format"
+            colorBy="format"
             colors={genreColors}
             sortBy="year"
             modalContent={{

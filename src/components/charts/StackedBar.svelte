@@ -1,10 +1,10 @@
 <script>
-	import { scaleLinear } from 'd3-scale';
-	import * as d3 from 'd3';
+	import Button from '$components/helpers/Button.svelte';
+import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
-
 	import polygonGenerator from './polygons.js';
-import { select } from 'd3';
+
+	let selected;
 
 	///////////////////////////////////////////////////////////////////
 	let modal;
@@ -91,42 +91,12 @@ import { select } from 'd3';
 	$: barWidth = innerWidth / xTicks.length - 118; 
 	
 
-	////////////////////////////////////////////////////////////////////
-	//////// Filters and Hover /////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////
-
-
-	$: selectedFacet = null;
-	// Function to change genreSelection when a facet is clicked
-	const highlightFacet = facet => {
-		console.log(facet);
-		selectedFacet = facet;
-		handleFill(selectedFacet);
-	}
-
-	const handleFill = d => {
-		if (selectedFacet === null) {
-			return d.color;
-		} else if (d.facet === selectedFacet) {
-			return d.color;
-		} else {
-			return '#f2f2f2';
-		}
-	}
-
-
+	console.log(data2[0][0][facet]);
+	console.log(facet);
 </script>
 <main>
 	
-	<!-- Datalist for the titles and other searchable content -->
 
-	<datalist id="titles">
-		{#each data2 as point, i}
-			{#each {length: point[0].totalCount} as book, j}
-				<option value="{point[j].title}">
-			{/each}
-		{/each}
-	</datalist>
 	
 	<!-- Modal component binding -->
 
@@ -156,7 +126,7 @@ import { select } from 'd3';
 
 			<div class="chart relative " >
 				<div id="facets" class="flex z-10 right-0 absolute flex-col gap-8 justify-start my-8">
-					<select bind:value={selectedFacet} on:change="{highlightFacet(selectedFacet)}"  class="rounded-md" >
+					<select bind:value={selected} class="rounded-md" >
 						{#each facets as facet}
 							<option value={facet}>
 								{facet}
@@ -188,11 +158,15 @@ import { select } from 'd3';
 					<g class='bars'>
 						{#each data2 as point, i}
 							{#each {length: point[0].totalCount} as book, j}
+							
 							<path 
-								
+								style="opacity:{
+								// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
+								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
+								}"
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
-								fill="{handleFill(point[j])}"
+								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
 								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
 							></path>

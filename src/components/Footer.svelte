@@ -15,8 +15,9 @@
 
 <footer class="max-w-5xl mx-auto  py-4">
 <section class="about py-4">
-  <div class="w-[40px] mx-auto pb-4">
-    <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
+  <div class="w-1/4 mx-auto pb-4">
+    <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">
+    <img src="/assets/full_logo.png" alt="The thedivtagguy" /></a>
   </div>
   <!-- <section class="flex mx-auto font-sans pb-4 font-bold gap-6 text-xs justify-center items-center ">
     {#each links as link}
@@ -30,7 +31,7 @@
     {/each}
   </section> -->
   <p class="text-center mx-auto text-xs font-mono font-semibold  text-black  whitespace-pre-wrap">
-    &lt;/&gt; with Svelte, Tailwind, Google Docs & &lt;3 in Bangalore, IN
+   A Project by CSGS, Ashoka University
   </p>
 
 </section>

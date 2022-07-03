@@ -611,6 +611,12 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+.w-1\/2 {
+  width: 50%;
+}
+.w-1\/4 {
+  width: 25%;
+}
 .min-w-0 {
   min-width: 0px;
 }

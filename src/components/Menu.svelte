@@ -19,7 +19,7 @@
             <div class="flex items-center justify-between">
                 <a on:click={handleLinkClick} href="/">
                     <div>
-                        <img rel="preload" src="./assets/csgs-logo.png" alt="CSGS logo" width="100">
+                        <img rel="preload" src="/assets/csgs-logo.png" alt="CSGS logo" width="100">
                     </div>
                 </a>
                 

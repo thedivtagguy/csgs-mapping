@@ -56,6 +56,5 @@
     <section id="events">
         <EventsSection preview = {true}/>
     </section>
-    <SearchSection />
 </div>
 </main>

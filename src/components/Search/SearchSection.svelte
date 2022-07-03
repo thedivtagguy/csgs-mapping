@@ -1,45 +1,9 @@
 <script>
 import algoliasearch from 'algoliasearch/lite.js';
 import instantsearch from 'instantsearch.js';
-import { highlight } from 'instantsearch.js/es/helpers/index.js';
-import { connectHits } from 'instantsearch.js/es/connectors/index.js'
-import { searchBox, hits, index } from 'instantsearch.js/es/widgets/index.js';
+import { stats, searchBox, hits, index, pagination } from 'instantsearch.js/es/widgets/index.js';
 import {onMount} from 'svelte';
-import { connectSearchBox } from 'instantsearch.js/es/connectors/index.js'
 const searchClient = algoliasearch('8P43BBJQAR', '2c3f24b6adc627d1edf4a3e6879e1e62');
-
-	
-// Create a render function
-const renderSearchBox = (renderOptions, isFirstRender) => {
-  const { query, refine, clear, isSearchStalled, widgetParams } = renderOptions;
-
-  if (isFirstRender) {
-    const input = document.createElement('input');
-
-    const loadingIndicator = document.createElement('span');
-    loadingIndicator.textContent = 'Loading...';
-
-    const button = document.createElement('button');
-    button.innerHTML = `<svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40"> <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path> </svg>`;
-
-    button.addEventListener('click', event => {
-      refine(event.target.value);
-    });
-
-
-    widgetParams.container.appendChild(input);
-    widgetParams.container.appendChild(loadingIndicator);
-    widgetParams.container.appendChild(button);
-  }
-
-  widgetParams.container.querySelector('input').value = query;
-  widgetParams.container.querySelector('span').hidden = !isSearchStalled;
-};
-
-// create custom widget
-const customSearchBox = connectSearchBox(
-  renderSearchBox
-);
 
 
 // Add onMount 
@@ -49,6 +13,7 @@ onMount(() => {
   indexName: 'publications',
   searchClient,
   routing: true,
+  hitsPerPage: 10,
 });
 
 search.addWidgets([
@@ -56,14 +21,42 @@ search.addWidgets([
     container: '#searchbox',
     searchAsYouType: false,
     placeholder: 'Search our archive',
+    templates: {
+    submit: `
+<div class="bg-[color:#d5d2bf] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
+  <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="30" height="30" viewBox="-5 -5 28 28">
+    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
+      <circle cx="7.11" cy="7.11" r="7.11"/>
+      <path d="M16 16l-3.87-3.87"/>
+    </g>
+  </svg>
+</div>
+    `,
+  },
   }),
 
-  customSearchBox({
-    container: document.querySelector('#searchbox2'),
-    searchAsYouType: false,
-
-  }),
- 
+ pagination({
+  container: '#paginate',
+  padding: 1,
+  showFirst: false,
+  showLast: false,
+  templates: {
+    previous: `
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143">
+    <path d="M9 5H1M5 9L1 5l4-4"/>
+  </g>
+</svg>
+    `,
+    next: `
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143">
+    <path d="M1 5h8M5 9l4-4-4-4"/>
+  </g>
+</svg>
+    `,
+  },
+ }),
 
   hits({
     container: '#publications-search',
@@ -71,9 +64,11 @@ search.addWidgets([
       item:
         `
         <div class="py-4">
-          <h4 class="font-semibold text-2xl">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h4>
-          <div class="flex flex-row gap-6">
+          <h4 class="font-semibold text-xl">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h4>
+          <p class="text-sm hit-description">{{ author }}</p>
+          <div class="flex flex-row justify-items-center items-center gap-4">
             <p class="text-sm hit-description">{{ genre }}</p>
+            <p> | </p>
             <p class="text-sm hit-description">{{ year }}</p>
           </div>
         </div>
@@ -102,12 +97,14 @@ search.start();
 <svelte:head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 </svelte:head>
-<main>
-  <section class="grid min-h-[500px] py-12 grid-cols-12">
-    <div class="col-span-3">
-      <div id="searchbox"></div>
-      <div id="searchbox2"></div>
+<main class="py-12">
+  <div class="flex justify-end w-full gap-24 items-center">
+    <div id="searchbox"></div>
+    <div id="paginate"></div>
 
+  </div>
+  <section class="grid  py-12 grid-cols-12">
+    <div class="col-span-3">
       <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Publications</h3>
     </div>
     <div class="col-span-9">
@@ -115,7 +112,7 @@ search.start();
     </div>
   </section>
 
-  <section class="grid min-h-[500px] grid-cols-12">
+  <section class="grid  grid-cols-12">
     <div class="col-span-3">
       <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Events</h3>
     </div>
@@ -129,11 +126,29 @@ search.start();
   
   .ais-SearchBox-input {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #d5d2bf;
     border-radius: 6px;
+    width: 600px;
   }
 
-  .ais-SearchBox-submitIcon{
+  .ais-SearchBox-submitIcon path{
     width: 45px;
+    stroke-width: 12px ;
+    stroke: #f0f0f0;
+  }
+
+  .ais-SearchBox-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .ais-Pagination-item  {
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: large;
+  }
+  .ais-Pagination-item:hover {
+    background-color: #f0f0f0;
   }
 </style>

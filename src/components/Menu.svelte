@@ -48,7 +48,7 @@
 
                         <input bind:value={query} type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md  dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
                         <!-- Submit button -->
-                        <a href="/search?publications[query]=${query}">Search</a>
+                        <a href="/search?publications[query]={query}">Search</a>
                     </form>
                 </div>
                 <div class="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">

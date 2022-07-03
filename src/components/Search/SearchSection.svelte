@@ -96,7 +96,18 @@ search.addWidgets([
         container: '#events-search',
         templates: {
           item:
-            '{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}',
+           `
+        <div class="py-4">
+          <h4 class="font-semibold text-xl">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h4>
+          <p class="text-sm hit-description">{{ type }}</p>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ location }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ year }}</p>
+          </div>
+          <p class="text-sm hit-description">{{ organiser }} <a href="mailto:{{ contact }}">{{contact}}</a><</p>
+          </div>
+           `,
         },
       }),
     ]),

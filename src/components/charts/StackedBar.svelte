@@ -108,7 +108,7 @@
 	
 
 	
-	<!-- Modal component binding -->
+	<!-- Modal component binding-->
 
 	<ModalOpen bind:this={modal}/>
 

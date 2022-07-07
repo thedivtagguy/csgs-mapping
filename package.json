@@ -33,6 +33,7 @@
     "dotenv": "^16.0.1",
     "feather-icons": "4.28.0",
     "google-drive-getfilelist": "^1.0.5",
+    "instantsearch.js": "^4.42.0",
     "lodash.debounce": "4.0.8",
     "mapbox-gl": "^2.8.2",
     "node-fetch": "^2.6.7",
@@ -48,7 +49,6 @@
     "svelte-algolia": "^0.2.15",
     "svelte-preprocess": "4.9.8",
     "tailwindcss": "^3.0.7",
-    "instantsearch.js": "^4.42.0",
     "vite-plugin-svgstring": "1.0.0"
   },
   "type": "module",
@@ -60,6 +60,7 @@
     "subdirectory": ""
   },
   "dependencies": {
+    "@lottiefiles/svelte-lottie-player": "^0.2.0",
     "@sveltejs/pancake": "^0.0.18",
     "algoliasearch": "^4.13.1",
     "colorthief": "^2.3.2",

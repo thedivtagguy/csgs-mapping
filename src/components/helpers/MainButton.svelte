@@ -19,7 +19,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <a href="{link}">
   <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">
-    <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" class="button">
+    <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" fill="black" class="button">
       <line on:click={() => click = !click} class:active-top={active}
   
   
@@ -34,7 +34,6 @@
 </a>
 
   <style>
-      
 
 .button__bar {
   transition-property: transform;

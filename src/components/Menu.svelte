@@ -17,7 +17,7 @@
     <nav class="">
         <div class="container px-6 py-3 mx-auto md:flex">
             <div class="flex items-center justify-between">
-                <a href="/">
+                <a href="https://csgs.ashoka.edu.in/">
                     <div>
                         <img rel="preload" src="/assets/csgs-logo.png" alt="CSGS logo" width="100">
                     </div>

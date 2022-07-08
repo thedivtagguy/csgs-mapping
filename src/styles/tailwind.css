@@ -20,6 +20,7 @@
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading-text) !important;
     font-family: 'Roboto', 'sans-serif';
+    font-weight: 700;
   }
   a {
     color: var(--color-text);

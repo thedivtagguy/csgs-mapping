@@ -156,7 +156,7 @@ var simulation = d3.forceSimulation()
       <div class="w-full col-span-2 md:w-1/3 md:px-3">
         <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
           <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-            <span class="block xl:inline">Digital Spaces</span>
+            <span class="block font-sans xl:inline">Digital Spaces</span>
           </h1>
          
           <h3 id="spaceName" class="text-xl font-bold tracking-tight text-gray-900 "> </h3>

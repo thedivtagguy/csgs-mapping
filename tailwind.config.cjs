@@ -7,8 +7,11 @@ module.exports = {
         divpurple: "#623cea",
         divorange: "#f85e00"
         // ...
-      }
+      },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"]
     }
+  },
   },
   future: {
     purgeLayersByDefault: true,

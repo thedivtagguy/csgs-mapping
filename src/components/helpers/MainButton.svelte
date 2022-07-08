@@ -51,8 +51,10 @@
   font-weight: 700;
   text-anchor: middle;
 }
+
 .active-top  {
   transform: translateY(-10px);
+  transform: rotate(2deg);
 }
 
 .active-bot {
@@ -60,7 +62,7 @@
 }
 
 .active-left {
-   transform: rotate(-2deg);
+   transform: rotate(-7deg);
   transform: translateX(-20px);
   
 }
@@ -74,6 +76,7 @@
 
 .click-top {
   transform: translateY(-15px);
+  
 }
 
 .click-bot {

@@ -17,8 +17,8 @@ export default function polygonGenerator (xStartingPos , yStartingPos){
     let y = yStartingPos + c1;
 
     //width (a) and height (b) of rectangle sides. Should ideally be a function of screenwidth?
-    let a = 18;
-    let b = 12;
+    let a = 23;
+    let b = 14;
 
     let x2 = a + xStartingPos - c2;
     let y2 =  yStartingPos + c2;

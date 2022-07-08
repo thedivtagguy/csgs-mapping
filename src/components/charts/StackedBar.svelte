@@ -4,7 +4,7 @@
 	import polygonGenerator from './polygons.js';
 	let selected;
 
-	///////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
 	let modal;
 	export let dataset = [];	// The dataset to be used
 	export let facet = "";		// What do we want to include in the dropdown?
@@ -178,7 +178,7 @@
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
-								d="{polygonGenerator(xScale(i)/7, yScale(j))}"
+								d="{polygonGenerator(xScale(i)/6, yScale(j))}"
 							></path>
 						
 

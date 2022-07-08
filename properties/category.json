@@ -1,22 +1,22 @@
 {
   "category": {
     "blue": {
-      "value": "#4477AA"
+      "value": "#79A5AE"
     },
     "red": {
-      "value": "#EE6677"
+      "value": "#F67C87"
     },
     "green": {
-      "value": "#228833"
+      "value": "#F67C87"
     },
     "yellow": {
-      "value": "#CCBB44"
+      "value": "#F3DF8C"
     },
     "cyan": {
-      "value": "#66CCEE"
+      "value": "#A8DCC6"
     },
     "purple": {
-      "value": "#AA3377"
+      "value": "#F3BEF1"
     },
     "gray": {
       "value": "#BBBBBB"

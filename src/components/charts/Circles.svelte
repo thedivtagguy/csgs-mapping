@@ -1,10 +1,12 @@
 <script>
 import * as d3 from 'd3';
+
 import {
     onMount
 } from 'svelte';
 
 import digital from "$data/indices/digitalSpaces.csv.json";
+import { append } from 'svelte/internal';
 
 
     // A color scale 
@@ -45,7 +47,7 @@ onMount(async () => {
     const svg = d3.select("#my_dataviz")
         .append("svg")
         .attr("width", 800)
-        .attr("height", 500)
+        .attr("height", 700)
 
  // Get choose top 5 genres from the data based on the number of spaces  
 const topGenres = digital.reduce((acc, curr) => {
@@ -60,25 +62,53 @@ const topGenres = digital.reduce((acc, curr) => {
 const genres = Object.keys(topGenres).sort((a, b) => topGenres[b] - topGenres[a]).slice(0, 3);
 const data = digital;
 
+///////////////////////////////////////////////////////////////////////////////
+//Blob generation function
+///////////////////////////////////////////////////////////////////////////////
+
+function pathGenerator(i) {
+var a = 60; // a is sort of the radius of the blob
+
+//Generating 4 random numbers by which each vertex can vary.
+
+var c1 = 7 * Math.random();
+var c2 = 8 * Math.random();
+var c3 = 6 * Math.random();
+var c4 = 7* Math.random();
+
+var path1 = d3.path();
+path1.moveTo(c1, a / 2 - c1);
+path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
+path1.bezierCurveTo(a - c2, (9 * a) / 8 - c4,  c1,  (9 * a) / 8 + c3,  c1,  a / 2 - c1);
+
+// Closing the path
+path1.closePath();
+
+
+return path1;
+}
+///////////////////////////////////////////////////////////////////////////////
+//Blob generation function
+///////////////////////////////////////////////////////////////////////////////
 
 
     // A scale that gives a X target position for each group
     const x = d3.scaleOrdinal()
         .domain([1, 2, 3])
-        .range([50, 200, 340])
+        .range([50, 300, 550])
 
 
 
     const node = svg.append("g")
-        .selectAll("circle")
-        .data(data)
-        .join("circle")
-        .attr("r", 18)
-        .attr("class", "cursor-pointer")
-        .attr("cx", width / 2)
-        .attr("cy", height / 2)
-        .style("fill", d => d.color)
-        .style("fill-opacity", 0.9)
+            .selectAll("g")
+            .data(data)
+            .enter()
+            .append("path")
+            .attr("d", function(d,i) {return pathGenerator(i)})
+            .attr("transform", 'translate (' + width / 2 + ',' + height / 2+ ')')
+            .attr("class", "cursor-pointer")
+            .style("fill", d => d.color)
+            .style("fill-opacity", 0.9)
 
         .call(d3.drag() // call specific function when circle is dragged
             .on("start", dragstarted)
@@ -108,7 +138,7 @@ var simulation = d3.forceSimulation()
     .force("y", d3.forceY().strength(0.1).y( height/2 ))
     .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
     .force("charge", d3.forceManyBody().strength(3)) // Nodes are attracted one each other of value is > 0
-    .force("collide", d3.forceCollide().strength(.1).radius(25).iterations(1)) // Force that avoids circle overlapping
+    .force("collide", d3.forceCollide().strength(.1).radius(35).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -116,8 +146,7 @@ var simulation = d3.forceSimulation()
         .nodes(data)
         .on("tick", function(d) {
             node
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y)
+          .attr("transform", function(d) {return 'translate (' + d.x + ',' + d.y +')' })
         });
 
     // What happens when a circle is dragged?

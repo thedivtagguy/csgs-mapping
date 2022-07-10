@@ -112,6 +112,83 @@ search.addWidgets([
         },
       }),
     ]),
+
+
+    index({ indexName: 'organizations',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#institutions-search',
+        templates: {
+          item:
+           `
+        <div class="py-4">
+          <h4 class="font-semibold text-xl">{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h4>
+          <p class="text-sm hit-description">{{ type }}</p>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ region }}</p>
+            <p> | </p>
+            <a href={{location}}><p class="text-sm hit-description">{{ location }}</p></a>
+          </div>
+          <h6 class="text-sm"><span class="font-bold"><a href="mailto:{{ contact }}">{{contact}}</a></span></h6>
+          <p class="text-sm hit-description">>{{#helpers.highlight}}{ "attribute": "programs" }{{/helpers.highlight}}</p>
+          </div>
+           `,
+        },
+      }),
+    ]),
+
+
+
+    index({ indexName: 'avMaterial',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#av-search',
+        templates: {
+          item:
+           `
+           <div class="py-4">
+          <h4 class="font-semibold text-xl">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h4>
+          <p class="text-sm hit-description">{{ director }}</p>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ format }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ year }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ language }}</p>
+          </div>
+          <p class="text-sm hit-description">{{#helpers.highlight}}{ "attribute": "keywords" }{{/helpers.highlight}}</p>
+        </div>
+           `,
+        },
+      }),
+    ]),
+
+
+
+    
+    index({ indexName: 'digitalSpaces',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#digital-spaces-search',
+        templates: {
+          item:
+           `
+           <div class="py-4">
+          <h4 class="font-semibold text-xl">{{name }}</h4>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ genre }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ active }}</p>
+            <p> | </p>
+           <a href={{{link}}}> <p class="text-sm hit-description">{{ link }}</p></a>
+          </div>
+          <p class="font-bold text-sm"><a href="mailto:{{ contact }}">{{ contact }}</a></p>
+          <p class="text-sm hit-description">{{keywords}}</p>
+        </div>
+           `,
+        },
+      }),
+    ]),
 ]);
 
 search.start();
@@ -124,7 +201,12 @@ search.start();
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 </svelte:head>
 <main class="py-12">
-  <div class="flex justify-start w-2/3 gap-24 items-center">
+  <div class="flex justify-start  gap-8 items-center">
+    <a href="/">
+      <button class="bg-[color:var(--color-orange)] hover:bg-[color:var(--color-green)] text-black font-bold py-2 px-4 " onclick="search.start()">
+        Back to Home
+      </button>
+    </a>
     <div id="searchbox"></div>
     <div id="facets" class="flex flex-col gap-8 justify-start my-8">
       <select bind:value={selected} 
@@ -133,6 +215,9 @@ search.start();
         <option value="all">All</option>
         <option value="publications-search">Publications</option>
         <option value="events-search">Events</option>
+        <option value="av-search">Audio Visual Materials</option>
+        <option value="institutions-search">Institutions</option>
+        <option value="digital-spaces-search">Digital Spaces</option>
       </select>
     </div>
     <div id="paginate"></div>
@@ -157,6 +242,39 @@ search.start();
       </div>
       <div class="col-span-9">
         <div id="events-search"></div>
+      </div>
+    </section>
+  </div>
+
+  <div hidden={selected === 'institutions-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid  py-12 grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Institutions</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="institutions-search"></div>
+      </div>
+    </section>
+  </div>
+
+  <div hidden={selected === 'av-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid  py-12 grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Audio Visual Material</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="av-search"></div>
+      </div>
+    </section>
+  </div>
+
+  <div hidden={selected === 'digital-spaces-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid  py-12 grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Digital Spaces</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="digital-spaces-search"></div>
       </div>
     </section>
   </div>

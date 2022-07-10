@@ -710,6 +710,9 @@ html {
 .gap-24 {
   gap: 6rem;
 }
+.gap-12 {
+  gap: 3rem;
+}
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -824,6 +827,13 @@ html {
 }
 .bg-\[color\:var\(--color-aqua\)\] {
   background-color: var(--color-aqua);
+}
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+.bg-\[color\:var\(--color-orange\)\] {
+  background-color: var(--color-orange);
 }
 .fill-current {
   fill: currentColor;
@@ -1127,6 +1137,13 @@ html {
 .hover\:bg-\[color\:\#f0f0f0\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+}
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[color\:var\(--color-green\)\]:hover {
+  background-color: var(--color-green);
 }
 .hover\:text-purple-800:hover {
   --tw-text-opacity: 1;

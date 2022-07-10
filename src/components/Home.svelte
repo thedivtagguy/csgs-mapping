@@ -23,7 +23,7 @@
 
     <div class="container my-12">
         <div class="box">
-          <img width="1200" src="/assets/animation.gif" alt="animation">
+          <img  width="1200" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
 
@@ -54,6 +54,9 @@
         }}
         />
     </section>
+    <section id="events">
+        <EventsSection preview = {true}/>
+    </section>
     <section id="digital-spaces">
         <Circles />
     </section>
@@ -71,9 +74,6 @@
                 title: "title"
             }}
         />
-    </section>
-    <section id="events">
-        <EventsSection preview = {true}/>
     </section>
 </div>
 </main>

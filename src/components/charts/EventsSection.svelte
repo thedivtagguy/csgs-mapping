@@ -11,7 +11,7 @@
     let conferences = {};
     import { Tabs, TabList, TabPanel, Tab } from '$components/Tabs/tabs.js';
 
-    const colors = ['red', 'turquoise', 'yellow', 'green', 'pink', 'orange', 'aqua'];
+    const colors = [ 'yellow', 'green', 'orange'];
 
     
     // Read in events and look for the type column. If type is march, add that row to the march object
@@ -38,17 +38,17 @@
     // Then assigning the color to the event
 
     marchArray.forEach(event => {
-        let color = colors[Math.floor(Math.random() * colors.length)];
+        let color = colors[0];
         event.color = color;
     });
 
     festivalArray.forEach(event => {
-        let color = colors[Math.floor(Math.random() * colors.length)];
+        let color = colors[1];
         event.color = color;
     });
 
     conferencesArray.forEach(event => {
-        let color = colors[Math.floor(Math.random() * colors.length)];
+        let color = colors[2];
         event.color = color;
     });
     if(preview) {

@@ -14,6 +14,7 @@
     import Mapbox from "./charts/Mapbox.svelte";
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
+import Events from './Events.svelte';
     let genreColors =  ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"];
 
 </script>
@@ -55,7 +56,7 @@
         />
     </section>
     <section id="events">
-        <EventsSection preview = {true}/>
+        <Events upcoming = {true}/>
     </section>
     <section id="digital-spaces">
         <Circles />

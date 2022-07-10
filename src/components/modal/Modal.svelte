@@ -10,61 +10,86 @@
   {#if isOpen}
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
-        <div class="w-1/3 ">
+        <div class="contents w-1/3">
             <div class="c-card block bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-            <div class="relative pb-48 overflow-hidden">
-              <img class="absolute inset-0 h-full w-full object-cover" src="/assets/placeholder.png" alt="">
-            </div>
-            <div class="p-4">
-              <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">
-
-               {data[modalContent.label]}
-
-              </span>
-              <h2 class="mt-2 mb-2 text-left  font-bold">{data.title}</h2>
-              
-             
-              <div class="mt-3 flex items-center">
-                <span class="font-bold text-xl">{data.author}</span>
+          
+            <div class="p-4 bg-[color:var(--color-aqua)]">
+              <div class="flex  justify-between gap-6 items-center">
+                <h3 class="text-lg font-sans font-bold">{data.title}</h3>
+                <button class="text-gray-600 hover:text-gray-800" on:click={closeModal}>
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
               </div>
-              <p class="text-lg font-semibold">
-                    {data.year}
-              </p>
+              
             </div>
+            <div class="py-4">
+              <div class="px-4">
+                <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 font-semibold uppercase tracking-wide text-xs">
+                  {data[modalContent.label]}
+                 </span>
+              </div>
+                <div class="my-2 px-4 flex flex-col justify-start items-start">
+                  {#if data.author}
+                  <p class="font-bold text-sm">Author: <span class="font-normal">{data.author}</span></p>
+                  {/if}
+                  {#if data.director}
+                  <p class="font-bold text-sm">Director: <span class="font-normal">{data.director}</span></p>
+                  {/if}
+                  <p class="font-bold text-sm">Year: <span class="font-normal">{data.year}</span></p>
+                  {#if data.publisher}
+                  <p class="font-bold text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
+                  {/if}
+                  {#if data.producedBy}
+                  <p class="font-bold text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
+                  {/if}
+                  <p class="font-bold text-sm">Language: <span class="font-normal">{data.language}</span></p>
+                </div>
+            </div>
+             
            
-         
+           
           </div>
           </div>    
     </div>
   {/if}
   
   <style>
-    .modal {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    z-index: 22;
-      /* allow click-through to backdrop */
-      pointer-events: none;
-    }
-  
-    
-  
-    h2 {
-      text-align: left;
-      font-size: 24px;
-    }
-  
-    p {
-      text-align: left;
-      margin-top: 16px;
-    }
-  
+ .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    /* allow click-through to backdrop */
+    pointer-events: none;
+  }
+
+  .contents {
+    min-width: 240px;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: auto;
+  }
+
+
+
+
+
+  .actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
    
   
   </style>

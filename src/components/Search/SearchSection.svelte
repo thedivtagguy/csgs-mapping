@@ -129,7 +129,7 @@ search.start();
     <div id="facets" class="flex flex-col gap-8 justify-start my-8">
       <select bind:value={selected} 
  
-      class="rounded-md w-[200px] " >
+      class="rounded-md h-12 w-[200px] " >
         <option value="all">All</option>
         <option value="publications-search">Publications</option>
         <option value="events-search">Events</option>

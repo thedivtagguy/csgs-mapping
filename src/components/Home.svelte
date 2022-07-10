@@ -23,17 +23,7 @@
 
     <div class="container my-12">
         <div class="box">
-            {#if toRender}
-            <LottiePlayer
-            src="https://assets1.lottiefiles.com/packages/lf20_szjmvam9.json"
-            autoplay="{true}"
-            loop="{true}"
-            renderer="svg"
-            background="transparent"
-            height="{800}"
-            width="{1250}"
-          />
-          {/if}
+          <img width="1200" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
 

@@ -1,7 +1,7 @@
 <script>
-  export let title = "CSGS Project";
+  export let title = "Center for Sexuality and Gender Studies";
   export let description =
-    "Mapping Resources for CSGS Project";
+    "Center for Sexuality and Gender Studies Resources";
   export let url = "https://thedivtagguy.com";
   // export let slug = 
   //   "common/assets/thumbnails/960/social.jpg"
@@ -13,11 +13,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="description" content={description} />
-  <meta name="author" content="Aman Bhargava" />
+  <meta name="author" content="Center for Sexuality and Gender Studies" />
   <meta name="news_keywords" content="" />
 
   <meta property="og:title" content={title} />
-  <meta property="og:site_name" content="thedivtagguy" />
+  <meta property="og:site_name" content="Center for Sexuality and Gender Studies" />
   <meta property="og:url" content={url} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="article" />
@@ -29,7 +29,7 @@
   <meta property="og:image:height" content="600" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="https://thedivtagguy.com" />
+  <meta name="twitter:site" content="https://csgs.ac.in" />
   <meta name="twitter:creator" content="@thedivtagguy" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
@@ -40,8 +40,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=block" rel="stylesheet"> 
   <link rel="canonical" href="{url}/" />
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/common/assets/resources/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/common/assets/resources/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/common/assets/resources/favicon/favicon-16x16.png"> -->
-  <!-- <link rel="manifest" href="/common/assets/resources/favicon/site.webmanifest"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> 
+  <link rel="manifest" href="/assets/site.webmanifest">
 </svelte:head>

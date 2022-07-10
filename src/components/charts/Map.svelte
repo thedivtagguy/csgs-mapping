@@ -185,7 +185,8 @@
 		
 	/>
 </svelte:head>
-
+	<h3 class="text-4xl py-6 uppercase font-sans font-bold">Institutions</h3>
+	
 <div id="map-background" use:initMap>
 
 	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} id="sidebar">

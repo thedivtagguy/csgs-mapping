@@ -91,7 +91,7 @@
     <div class="main grid grid-cols-4">
         {#each events as event}
         {#if event.type == type}
-        <div class="portfolio_item -ml-4 p-4">
+        <div class="-ml-4 p-4">
            <EventCard event={event}
               />
         </div>

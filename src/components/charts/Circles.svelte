@@ -149,28 +149,45 @@
     
       
     <!-- Section 1 -->
-    <section class="px-2 w-full py-12 md:px-0">
-      <div class=" items-center max-w-6xl px-8 mx-auto xl:px-5">
-        <div class="grid grid-cols-12 gap-12 items-center sm:-mx-3">
-          <div class="w-full col-span-2 md:w-1/3 md:px-3">
-            <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-              <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-                <span class="block xl:inline">Digital Spaces</span>
-              </h1>
-             
-              <h3 id="spaceName" class="text-xl font-bold tracking-tight text-gray-900 "> </h3>
-              <h4 id="spaceGenre" class="text-base font-bold tracking-tight text-gray-900 "> </h4>
-             
-            </div>
-          </div>
-          <div class="w-full col-span-10 md:w-2/3">
-            <div class="w-full px-24 h-auto ">
-              <div id="my_dataviz"></div>
-    
+    <section class="px-2 w-full grid grid-cols-12 justify-center items-center py-12 md:px-0">
+              <div class="col-span-4">
+                  <div class=" flex flex-col justify-between gap-6">
+                      <div>
+                          <h3 class="text-xl uppercase font-bold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                            <span class="block xl:inline">Digital Spaces</span>
+                          </h3>
+                      </div>
+                      <div>
+                          <p class="text-base leading-6 text-gray-500">
+                           Click on a blob to know more
+                            </p>
+                      </div>
+                      <div>
+                          <!-- Create a legend -->
+                            <h4 class="text-base font-semibold tracking-tight text-gray-900 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">Format</h4>
+                          <h3 id="spaceName" class="text-xl font-bold tracking-tight text-gray-900 "> 
+                            <!-- Use pathGenerator to create a SVG blob -->
+                            <div class="flex justify-start gap-8 item-center">
+                                <div>
+                                    <svg viewBox="0 0  100 100"  width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#FF0066" d="M68,-17.5C76.2,3.2,62.8,35.6,40.3,50.8C17.8,66.1,-13.8,64.3,-33.3,49.3C-52.8,34.3,-60.3,6.1,-52.7,-13.7C-45.2,-33.5,-22.6,-44.9,3.7,-46.1C29.9,-47.3,59.8,-38.2,68,-17.5Z" transform="translate(100 100)" />
+                                      </svg>
+                                </div>
+                                    <h4 class="text-xl font-semibold ">
+                                        Audio
+                                    </h4>
+                            </div>
+                              
+                            
+                          </h3>
+                          <h4 id="spaceGenre" class="text-base font-bold tracking-tight text-gray-900 "> </h4>
+                      </div>
+                  </div>
               </div>
+             
+          <div class="w-full col-span-8 md:w-2/3">
+              <div id="my_dataviz"></div>
           </div>
-        </div>
-      </div>
     </section>
     
     </main>

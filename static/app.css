@@ -466,6 +466,12 @@ html {
 .col-span-9 {
   grid-column: span 9 / span 9;
 }
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
 .m-1 {
   margin: 0.25rem;
 }
@@ -497,11 +503,26 @@ html {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.-mx-8 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+.-ml-4 {
+  margin-left: -1rem;
 }
 .mt-10 {
   margin-top: 2.5rem;
@@ -514,9 +535,6 @@ html {
 }
 .mr-1 {
   margin-right: 0.25rem;
-}
-.-ml-4 {
-  margin-left: -1rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -630,6 +648,9 @@ html {
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -654,6 +675,10 @@ html {
 .justify-start {
   -webkit-box-pack: start;
           justify-content: flex-start;
+}
+.justify-end {
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 .justify-center {
   -webkit-box-pack: center;
@@ -708,6 +733,9 @@ html {
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -741,6 +769,9 @@ html {
 .border-b {
   border-bottom-width: 1px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
@@ -759,6 +790,14 @@ html {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -796,6 +835,12 @@ html {
 .bg-\[color\:var\(--color-orange\)\] {
   background-color: var(--color-orange);
 }
+.bg-\[color\:var\(--color-blue\)\] {
+  background-color: var(--color-blue);
+}
+.bg-\[color\:var\(--color-turquoise\)\] {
+  background-color: var(--color-turquoise);
+}
 .fill-current {
   fill: currentColor;
 }
@@ -803,18 +848,22 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-4 {
+  padding: 1rem;
+}
 .p-1 {
   padding: 0.25rem;
 }
 .p-8 {
   padding: 2rem;
 }
-.p-4 {
-  padding: 1rem;
-}
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -847,10 +896,6 @@ html {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -921,10 +966,6 @@ html {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -932,6 +973,10 @@ html {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -945,9 +990,6 @@ html {
 }
 .font-medium {
   font-weight: 500;
-}
-.font-extrabold {
-  font-weight: 800;
 }
 .font-normal {
   font-weight: 400;
@@ -1112,6 +1154,10 @@ html {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1240,6 +1286,10 @@ html {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 768px) {
   .md\:col-span-1 {
@@ -1322,6 +1372,10 @@ html {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px) {
   .lg\:col-span-2 {
@@ -1341,6 +1395,10 @@ html {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -1362,5 +1420,9 @@ html {
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }

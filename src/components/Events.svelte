@@ -53,12 +53,15 @@
         event.color = color;
     });
   
+  const types = ["Pride Marches", "Literary and Film Festivals", "Conferences"];
 </script>
 
 <!-- Iterate and show all story headings -->
 <main class="py-12">
     {#if upcoming}
-    <h1 class="text-5xl uppercase font-bold text-left">Upcoming Events</h1>
+    <div class="col-span-3 py-6">
+        <h3 class="text-4xl uppercase font-sans font-bold">Upcoming Events</h3>
+      </div>
     <div class="main flex">
         {#each events as event}
         {#if event.upcoming == "TRUE"}
@@ -70,28 +73,44 @@
         {/if}
         {/each}
      </div>
+     <div class="flex justify-end">
+         <a href="/events">
+            <button class="bg-[color:var(--color-turquoise)] mx-4 hover:bg-[color:var(--color-green)] text-black font-bold py-2 px-4 " onclick="search.start()">
+              See All Events
+            </button>
+          </a>
+     </div>
     {/if}
     {#if !upcoming}
     <h1 class="text-5xl uppercase font-bold text-left">All Events</h1>
-    <div class="main flex flex-row">
+     <!-- Divider -->
+        <div class="w-full my-6 border-b-2 border-gray-400"></div>
+    {#each types as type}
+    <h2 class="text-4xl uppercase font-bold text-left">{type}</h2>
+    <!-- Show all events in a flex grid -->
+    <div class="main grid grid-cols-4">
         {#each events as event}
+        {#if event.type == type}
         <div class="portfolio_item -ml-4 p-4">
            <EventCard event={event}
               />
         </div>
+        {/if}
         {/each}
+        
      </div>
+     <div class="w-full my-6 border-b-2 border-gray-400"></div>
+
+     {/each}
+    
     {/if}
      
 </main>
 <style>
-
-
     .portfolio_item {  
     min-width: 25%;
     width:30%;
     }
-
     .flex {
     display: flex;
     display: -webkit-flex;

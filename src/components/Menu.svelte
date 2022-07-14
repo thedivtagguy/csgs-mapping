@@ -1,7 +1,8 @@
 <script>
   import {createUrlStore} from '$utils/url.js';
   import { getContext, setContext } from 'svelte'
-  export let ssrUrl = ''
+  import { goto } from '$app/navigation';
+    export let ssrUrl = ''
   setContext('APP', { url: createUrlStore(ssrUrl) })
   // Usage across descendants for SSR support
   const { url } = getContext('APP')
@@ -11,8 +12,11 @@
     history.pushState(href, '', href)
   }
     let query = '';
-
-
+// On Submit, redirect to /search?publications[query]={query}
+function goToSearch(e){
+    e.preventDefault();
+    goto('/search?publications[query]=' + query);
+}
 </script>
     <nav class="">
         <div class="container px-6 py-3 mx-auto md:flex">
@@ -42,7 +46,7 @@
         
                         <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
                         <!-- Submit button -->
-                        
+                        <input type="submit" class="w-full hidden bg-gray-800 text-white rounded-md border-0 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" value="Search" on:click={goToSearch}>
                             <a  rel="external" href="/search?publications[query]={query}">
                                 <div class="bg-[color:#d5d2bf] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="30" height="30" viewBox="-5 -5 28 28">

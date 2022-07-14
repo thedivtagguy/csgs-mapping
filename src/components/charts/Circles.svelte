@@ -5,42 +5,45 @@ import {
     onMount
 } from 'svelte';
 
-import digital from "$data/indices/digitalSpaces.csv.json";
+import digital from "$data/indices/Digital Spaces.json";
 import { append } from 'svelte/internal';
 
-
-    // A color scale 
-    // If genre = 'Digital Spaces' then color = '#cadead'
-    // If genre = 'Media' then color = '#F67C87'
-    // If genre = 'Art Project' then color = '#F3DF8C'
-    // If genre = 'Magazine' then color = '#79A5AE'
-    // If genre = 'Blog' then color = '#F3BEF1'
-    // If genre = 'Community' then color = '#F7B289'
-    // If genre = 'Radio Show' then color = '#F3BEF1'
+   
     console.log(digital);
     // Go through the data and create a new key for each genre with the value of the color
     digital.forEach(function(d) {
     d.color = "#cadead";
-        if (d.genre == 'Digital Spaces') {
+        if (d.genre == 'Art Project') {
             d.color = '#cadead';
-        } else if (d.genre == 'Media') {
-            d.color = '#F67C87';
-        } else if (d.genre == 'Art Project') {
-            d.color = '#F3DF8C';
-        } else if (d.genre == 'Magazine') {
-            d.color = '#79A5AE';
         } else if (d.genre == 'Blog') {
-            d.color = '#F3BEF1';
+            d.color = '#F67C87';
         } else if (d.genre == 'Community') {
-            d.color = '#F7B289';
-        } else if (d.genre == 'Radio Show') {
+            d.color = '#F3DF8C';
+        } else if (d.genre == 'Digital Advocacy') {
+            d.color = '#79A5AE';
+        } else if (d.genre == 'Digital Archive') {
             d.color = '#F3BEF1';
+        } else if (d.genre == 'Magazine') {
+            d.color = '#F7B289';
+        } else if (d.genre == 'Media') {
+            d.color = '#A8DCC6';
+        } else if (d.genre == 'Photo Project') {
+            d.color = '#BEF3E0';
+        } else if (d.genre == 'Support Group') {
+            d.color = '#BED6F3';
+        } else if (d.genre == 'Virtual Book Club') {
+            d.color = '#D1BB80';
+        } else if (d.genre == 'Media') {
+            d.color = '#D08C87';
+        }
+        else {
+            d.color = '#3a3a3a';
         }
     });
 
 
 // set the dimensions and margins of the graph
-const width = 700
+const width = 800
 const height = 600
 onMount(async () => {
     // append the svg object to the body of the page
@@ -67,7 +70,7 @@ const data = digital;
 ///////////////////////////////////////////////////////////////////////////////
 
 function pathGenerator(i) {
-var a = 60; // a is sort of the radius of the blob
+var a = 50; // a is sort of the radius of the blob
 
 //Generating 4 random numbers by which each vertex can vary.
 
@@ -79,12 +82,10 @@ var c4 = 7* Math.random();
 var path1 = d3.path();
 path1.moveTo(c1, a / 2 - c1);
 path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
-path1.bezierCurveTo(a - c2, (9 * a) / 8 - c4,  c1,  (9 * a) / 8 + c3,  c1,  a / 2 - c1);
+path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
 
 // Closing the path
 path1.closePath();
-
-
 return path1;
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -94,8 +95,8 @@ return path1;
 
     // A scale that gives a X target position for each group
     const x = d3.scaleOrdinal()
-        .domain([1, 2, 3])
-        .range([50, 300, 550])
+        .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        .range([50, 100, 150, 200, 250, 300, 350,400, 500])
 
 
 

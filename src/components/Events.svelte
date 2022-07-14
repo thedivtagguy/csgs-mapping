@@ -18,6 +18,8 @@
     // Read in events and look for the type column. If type is march, add that row to the march object
     // If type is festival, add that row to the festival object
     // If type is conference, add that row to the conference object
+
+    
     events.forEach(event => {
         if (event.type === "Pride Marches") {
             marches[event.id] = event;

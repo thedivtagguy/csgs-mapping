@@ -1,17 +1,13 @@
 <script>
-  import {createUrlStore} from '$utils/url.js';
-  import { getContext, setContext } from 'svelte'
-  export let ssrUrl = ''
-  setContext('APP', { url: createUrlStore(ssrUrl) })
-  // Usage across descendants for SSR support
-  const { url } = getContext('APP')
-  function handleLinkClick(e) {
-    e.preventDefault()
-    const href = e.target.href
-    history.pushState(href, '', href)
-  }
-    let query = '';
-
+  
+  import { goto } from '$app/navigation';
+let query;
+    // On submit, redirect to /search?publications[query]={query}
+    function handleSubmit(e) {
+      e.preventDefault();
+      const query = e.target.query.value;
+      goto('/search?publications[query]=' + query);
+    }
 
 </script>
     <nav class="">
@@ -40,7 +36,7 @@
                 <div class="flex  justify-center items-center">
     <form class="flex  justify-center items-center" >
         
-                        <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
+                        <input type="text" bind:value={query} class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
                         <!-- Submit button -->
                         
                             <a  rel="external" href="/search?publications[query]={query}">

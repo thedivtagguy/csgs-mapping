@@ -4,7 +4,9 @@
         onMount
     } from 'svelte';
     import digital from "$data/indices/digitalSpaces.csv.json";
-    import { append } from 'svelte/internal';
+    import ModalOpen from "../modal/ModalOpen.svelte";
+    export let modalContent;
+    let modal;
         // A color scale 
         // If genre = 'Digital Spaces' then color = '#cadead'
         // If genre = 'Media' then color = '#F67C87'
@@ -13,7 +15,6 @@
         // If genre = 'Blog' then color = '#F3BEF1'
         // If genre = 'Community' then color = '#F7B289'
         // If genre = 'Radio Show' then color = '#F3BEF1'
-        console.log(digital);
         // Go through the data and create a new key for each genre with the value of the color
         digital.forEach(function(d) {
         d.color = "#cadead";
@@ -92,18 +93,10 @@
                 .on("drag", dragged)
                 .on("end", dragended));
        let clickCount = 0;
-     // Function to display details of a circle when hovered
-        node.on("click", (e, d) => {
-            clickCount++;
-            console.log(d);
-            if (clickCount % 2 === 0) {
-                d3.select(".details").remove();
-            } else {
-                // Select id spaceName and add the text of the spaceName
-                d3.select("#spaceName").text(d.name);
-                d3.select("#spaceGenre").text(d.genre);
-                clickCount = 0;
-            }
+     // Function to open modal when clicked   on:click={() => modal.handleOpen(point[j], modalContent)}
+     node.on("click", function(d, i) {
+     
+            modal.handleOpen(i, modalContent);
         });
         
         
@@ -146,7 +139,8 @@
     });
     </script>
     <main>
-    
+    <ModalOpen bind:this={modal} />
+
       
     <!-- Section 1 -->
     <section class="px-2 w-full grid grid-cols-12 justify-center items-center py-12 md:px-0">

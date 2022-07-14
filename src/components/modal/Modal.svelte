@@ -10,12 +10,14 @@
   {#if isOpen}
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
-        <div class="contents w-1/3">
-            <div class="c-card block bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+        <div class="contents relative w-1/3">
+            <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded-lg overflow-hidden">
           
             <div class="p-4 bg-[color:var(--color-aqua)]">
               <div class="flex  justify-between gap-6 items-center">
-                <h3 class="text-lg font-sans font-bold">{data.title}</h3>
+               
+                <h3 class="text-lg font-sans font-bold"> {data[modalContent.title]}</h3>
+             
                 <button class="text-gray-600 hover:text-gray-800" on:click={closeModal}>
                   <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -30,21 +32,34 @@
                   {data[modalContent.label]}
                  </span>
               </div>
-                <div class="my-2 px-4 flex flex-col justify-start items-start">
+                <div class="my-2 px-4  flex flex-col justify-start items-start">
                   {#if data.author}
                   <p class="font-bold text-sm">Author: <span class="font-normal">{data.author}</span></p>
                   {/if}
                   {#if data.director}
                   <p class="font-bold text-sm">Director: <span class="font-normal">{data.director}</span></p>
                   {/if}
-                  <p class="font-bold text-sm">Year: <span class="font-normal">{data.year}</span></p>
+                  <p class="font-bold text-sm">Year: <span class="font-normal"> {data[modalContent.year]}</span></p>
                   {#if data.publisher}
                   <p class="font-bold text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
                   {#if data.producedBy}
                   <p class="font-bold text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
                   {/if}
+                  {#if data.language}
                   <p class="font-bold text-sm">Language: <span class="font-normal">{data.language}</span></p>
+                  {/if}
+                  {#if data[modalContent.contact]}
+                  <p class="font-bold text-sm">Contact:
+                    <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
+                  {/if}
+                  {#if data[modalContent.link]}
+                  <a href="{data[modalContent.link]}" class=" absolute right-10 bottom-10" rel="external">
+                    <button class="bg-[color:var(--color-orange)]  text-sm my-2 hover:bg-[color:var(--color-green)] text-black font-bold py-1 px-2 " onclick="search.start()">
+                      Read More
+                    </button>
+                  </a>
+                  {/if}
                 </div>
             </div>
              

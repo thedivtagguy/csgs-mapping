@@ -51,7 +51,8 @@ import Events from './Events.svelte';
         sortBy="year"
         modalContent={{
             label: "genre",
-            title: "title"
+            title: "title",
+            year: "year",
         }}
         />
     </section>
@@ -59,7 +60,16 @@ import Events from './Events.svelte';
         <Events upcoming = {true}/>
     </section>
     <section id="digital-spaces">
-        <Circles />
+        <Circles
+        
+        modalContent={{
+            label: "genre",
+            title: "name",
+            year: "active",
+            link: "link",
+            contact: "contact",
+        }}
+        />
     </section>
     <section id="av-material">
         <StackedBar
@@ -72,7 +82,8 @@ import Events from './Events.svelte';
             sortBy="year"
             modalContent={{
                 label: "format",
-                title: "title"
+                title: "title",
+                year: "year",
             }}
         />
     </section>

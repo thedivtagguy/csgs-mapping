@@ -236,7 +236,7 @@
 		</div>
 		<p class="text-sm px-[10px]" id="type">{pointData.type} | {pointData.region}</p>
 		<div class="overflow-y-auto">
-			{#if pointData.programs && pointData.programs.length > 0}
+			{#if pointData.programs && pointData.programs instanceof Array}
 				<p class="text-lg font-bold py-2 px-[10px]" id="programs">Programs:</p>
 				<ul class=" list-none px-[10px] list-inside">
 					{#each pointData.programs as program}

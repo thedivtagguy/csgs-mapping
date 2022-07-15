@@ -4,6 +4,8 @@
     import geoData from "$data/organizationsScatter.json"
 	import { fade, blur, fly, slide, scale } from "svelte/transition";
   import { quintOut } from "svelte/easing";
+  import { closeModal } from 'svelte-modals'
+
 	
 	setContext(key, {
 		getMap: () => map,
@@ -11,6 +13,7 @@
 
 
 	let map;
+	$: pointData = {};
 
 
 	function initMap(container) {
@@ -91,7 +94,29 @@
 				source: 'earthquakes',
 				filter: ['!', ['has', 'point_count']],
 				paint: {
-					'circle-color': '#c43540',
+					// Color is from the color key of the point
+					'circle-color': [
+						'match', 
+						['get', 'type'],
+						'Academic Research Centre',
+						'#CADEAD',
+						'Collective',
+						'#F67C87',
+						'Community Organization',
+						'#F3DF8C',
+						'NGO',
+						'#79A5AE',
+						'Publishing house',
+						'#F3BEF1',
+						'Non-profit organization',
+						'#f3bef1',
+						'Resource Group',
+						'#F7B289',
+						'Service Provider',
+						'#F3BEF1',
+						'#C43540'
+
+					],
 					'circle-radius': 10,
 					'circle-stroke-width': 1,
 					'circle-stroke-color': '#fff'
@@ -147,21 +172,26 @@
 				popup.remove();
 			});
 			
+	
+
+
 
 			// On clicking point, show sidebar
 			map.on('click', 'unclustered-point', (e) => {
-				console.log(e.features[0].properties);
+				let regex = /(\d+\.\d*)\s?(.*?)(?=\d+\.|$)/gs;
 				document.getElementById('sidebar').style.visibility = 'visible';
-
-				document.getElementById('name').innerHTML = e.features[0].properties.name;
-	
+				pointData = e.features[0].properties;
 				let keywords = e.features[0].properties.keywords.split(',');
 				let keywordsHTML = '';
 				keywords.forEach(keyword => {
 					keywordsHTML += `<p id="keyword">${keyword}</p>`;
 				});
 				document.getElementById('keywords').innerHTML = keywordsHTML;
-				document.getElementById('type').innerHTML = e.features[0].properties.type;
+				let programArray = pointData.programs.match(regex);
+				if(programArray != null && programArray.length > 0){
+					pointData.programs = programArray;
+				}
+				console.log(pointData);
 			})
 
 		
@@ -175,6 +205,11 @@
 
 	}
 	// Add clustering to the map
+		function hideBar () {
+			console.log('hide');
+				document.getElementById('sidebar').style.visibility = 'hidden';
+			}
+		
 </script>
 
 <!-- this special element will be explained in a later section -->
@@ -189,39 +224,54 @@
 	
 <div id="map-background" use:initMap>
 
-	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} id="sidebar">
-		<p id="name"></p>
+	<div class="pb-8"  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} id="sidebar">
+		<div class="p-4 bg-[color:var(--color-aqua)]">
+			<div class="flex  justify-between gap-6 items-center">
+			  <h3 class="text-xl font-sans font-bold"> {pointData.name}</h3>
+			</div>
+			
+		  </div>
 		<div id="keywords">
 			<p id="keyword"></p>
 		</div>
-		<p id="type"></p>
-		<p id="region"></p>
+		<p class="text-sm px-[10px]" id="type">{pointData.type} | {pointData.region}</p>
+		<div class="overflow-y-auto">
+			{#if pointData.programs && pointData.programs.length > 0}
+				<p class="text-lg font-bold py-2 px-[10px]" id="programs">Programs:</p>
+				<ul class=" list-none px-[10px] list-inside">
+					{#each pointData.programs as program}
+						<li class="text-sm py-1">{program}</li>
+					{/each}
+				</ul>
+			{:else}
+				<p class="text-sm py-2 px-[10px]" id="programs">{pointData.programs}</p>
+			{/if}
+		</div>
+			
+		
 	</div>
 </div>
 
 
 <style>
-	div {
-		width: 100%;
-		height: 90vh;
-	}
+
     
 	#map-background {
 		position: relative;
+		width: 100%;
+		height: 85vh;
 	}
 
 	#sidebar {
 		visibility: hidden;
 		position: absolute;
-		top: 10;
-		left: 10;
-		bottom: 10;
-		width: 400px;
+		width: 350px;
 		height: 50%;
 		background: var(--color-background);
-		margin: 10px;
+		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		z-index: 1;
+		overflow: auto;
 	}
 
 	#name {
@@ -235,6 +285,8 @@
 		color: var(--color-heading-text);
 	}
 
+
+
 	#keywords {
 		display: flex;
 		flex-direction: row;
@@ -246,7 +298,7 @@
 	:global(#keyword) {
 		background-color: var(--color-orange);
 		font-weight: 600;
-		padding: 5px 10px 5px 10px;
+		padding: 1px 10px 1px 10px;
 		font-size: 14px;
 		text-transform: uppercase;
 	}

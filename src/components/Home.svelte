@@ -1,5 +1,4 @@
 <script>
-      import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
   import  { onMount } from "svelte";
   let toRender = false;
 
@@ -10,25 +9,22 @@
     import Menu from "./Menu.svelte";
     import StackedBar from "./charts/StackedBar.svelte";
     import Circles from "./charts/Circles.svelte";
-    import EventsSection from "./charts/EventsSection.svelte";
     import Mapbox from "./charts/Mapbox.svelte";
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
 import Events from './Events.svelte';
-    let genreColors =  ["#Fac937", "#1d7485", "#88ab46", "#99262a", "#381b37", "#Ac4447", "#993300", "#818181", "#0E8587"];
-
+let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#BEF3E0", "#BED6F3", "#0E8587","#818181"];
 </script>
 
 <!-- Iterate and show all story headings -->
 <main class="">
+    <Menu />
 
     <div class="container my-12">
         <div class="box">
           <img  width="1200" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
-
-            <Menu />
             <Header />
         </div>
     </div>
@@ -85,6 +81,7 @@ import Events from './Events.svelte';
                 title: "title",
                 year: "year",
             }}
+            direction="left"
         />
     </section>
 </div>

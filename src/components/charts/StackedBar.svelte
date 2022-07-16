@@ -2,6 +2,7 @@
 	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
+	import * as d3 from 'd3';
 	let selected;
 
 	//////////////////////////////////////////////////////////////////
@@ -16,7 +17,7 @@
 	export let sortBy = "year";		// What do we want to sort by?
 	export let modalContent;
 	export let colorBy = "";		// What do we want to color by?
-  export let direction = "right";
+  	export let direction = "right";
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -88,9 +89,9 @@
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
 
-	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
+	const xTicks = ["1990-2030", 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-	const padding = { top: 100, right: 65, bottom: 100, left: 25 };
+	const padding = { top: 100, right: 65, bottom: 30, left: 25 };
 
 
 	$: xScale = scaleLinear()
@@ -103,6 +104,21 @@
 	$: innerWidth = width - (padding.left + padding.right);
 	$: barWidth = innerWidth / xTicks.length - 118; 
 	
+
+	
+	let name;
+	let positionX, positionY = [10, 10]
+	// Function tooltip to display the data of the selected bar
+	function tooltip(d,i, j) {
+		name = d.title;
+		// Position it right next to the bar
+		positionX = xScale(i)/6;
+		positionY = j - 100;
+		console.log("i: ", positionX, "j: ", positionY);
+
+	}
+
+// Use D3 to create tooltip on hover
 
 </script>
 <main>
@@ -120,21 +136,13 @@
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
 
-			<!-- Search bar
-			<div class="flex h-28 flex-col items-center">
-				<input bind:value={searchTerm} class="w-full my-2 border-2 px-4 focus:ring focus:ring-gray-400 bg-[color:var(--color-darker-background)]  border-amber-600 rounded-md h-12" list="titles"
-				size="50"
-				autocomplete="off" />
-				<button type="submit" class="w-full px-4 py-2 text-gray-700 bg-[color:var(--color-orange)] rounded-lg" on:change={clearResults()} on:click={searchResults()}>Search</button>
-			</div> -->
-			
 		</div>
 		
 		<div class="col-span-9">	
 			
 			<!-- Dropdown for selecting facets -->
 
-			<div class="chart relative " >
+			<div class="chart relative" >
 				<div id="facets" class="flex z-10 {direction}-0 absolute flex-col gap-8 justify-start my-8">
 					<select bind:value={selected} class="rounded-md capitalize" >
 						{#each facets as facet}
@@ -145,7 +153,31 @@
 					</select>
 				
 				</div>
-				<svg class="relative">						
+
+				<div 
+				id="infobox"
+				style="top: {positionY}px;
+				right: {positionX}px;
+				visibility: {name ? 'visible' : 'hidden'};
+				background-color: var(--color-background);
+				z-index: 3;"
+				class="border-[1px] px-4 py-2 max-w-md border-gray-400 border-dashed absolute">
+					<div class="flex flex-col justify-center items-center">
+						<div class="text-gray-600 text-sm">
+							<p class="font-bold text-sm">
+								{#if name}
+									{name}
+								{:else}
+								Hover the chart to begin
+								{/if}
+							</p>
+						</div>
+						
+					</div>
+				</div>
+
+
+				<svg >						
 
 					<g class="axis y-axis">
 						{#each yTicks as tick}
@@ -173,12 +205,19 @@
 								style="opacity:{
 								// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
 								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
+								};
+								pointer-events: {
+									// If selected is equal to null, pointer events are all. If selected is not null and not equal to the facet, pointer events are none.
+									selected === `All ${facet}s` ? 'all' : selected !== point[j][facet] ? 'none' : 'all'
 								}"
+								
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
-								d="{polygonGenerator(xScale(i)/6, yScale(j))}"
+								d="{polygonGenerator(xScale(i)/6, yScale(j)).polygon}"
+								on:mouseover="{() => tooltip(point[j], i, polygonGenerator(xScale(i), yScale(j)).y)}"
+								on:mouseleave="{() => [name] = [null]}"
 							></path>
 						
 
@@ -194,7 +233,7 @@
 </main>
 
 <style>
-	
+
 
 	.chart {
 		width: 100%;
@@ -267,4 +306,5 @@ select {
 	option {
 		text-transform: capitalize;
 	}
+
 </style>

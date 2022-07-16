@@ -9,7 +9,60 @@ import digital from "$data/indices/digitalSpaces.csv.json";
 import ModalOpen from "../modal/ModalOpen.svelte";
     export let modalContent;
     let modal;
-   
+    // Create an object genres that contains the genre and the genre color
+    const genres = [
+        {
+            genre: "Art Project",
+            color: "#cadead"
+        },
+        {
+            genre: "Blog",
+            color: "#F67C87"
+        },
+        {
+            genre: "Community",
+            color: "#F3DF8C"
+        },
+        {
+            genre: "Digital Advocacy",
+            color: "#79A5AE"
+        },
+        {
+            genre: "Digital Archive",
+            color: "#F3BEF1"
+        },
+        {
+            genre: "Magazine",
+            color: "#F7B289"
+        },
+        {
+            genre: "Media",
+            color: "#A8DCC6"
+        },
+        {
+            genre: "Photo Project",
+            color: "#BEF3E0"
+        },
+        {
+            genre: "Support Group",
+            color: "#BED6F3"
+        },
+        {
+            genre: "Virtual Book Club",
+            color: "#D1BB80"
+        },
+        {
+            genre: "Media",
+            color: "#D08C87"
+        },
+        {
+            genre: "Other",
+            color: "#3a3a3a"
+        }
+    ];
+
+
+    
     console.log(digital);
     // Go through the data and create a new key for each genre with the value of the color
     digital.forEach(function(d) {
@@ -53,17 +106,7 @@ onMount(async () => {
         .attr("width", 800)
         .attr("height", 700)
 
- // Get choose top 5 genres from the data based on the number of spaces  
-const topGenres = digital.reduce((acc, curr) => {
-    if (acc[curr.genre]) {
-        acc[curr.genre] += 1;
-    } else {
-        acc[curr.genre] = 1;
-    }
-    return acc;
-}, {});
-// eep only the top 5 genres
-const genres = Object.keys(topGenres).sort((a, b) => topGenres[b] - topGenres[a]).slice(0, 3);
+
 const data = digital;
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -71,23 +114,23 @@ const data = digital;
 ///////////////////////////////////////////////////////////////////////////////
 
 function pathGenerator(i) {
-var a = 50; // a is sort of the radius of the blob
+        var a = 50; // a is sort of the radius of the blob
 
-//Generating 4 random numbers by which each vertex can vary.
+        //Generating 4 random numbers by which each vertex can vary.
 
-var c1 = 7 * Math.random();
-var c2 = 8 * Math.random();
-var c3 = 6 * Math.random();
-var c4 = 7* Math.random();
+        var c1 = 7 * Math.random();
+        var c2 = 8 * Math.random();
+        var c3 = 6 * Math.random();
+        var c4 = 7* Math.random();
 
-var path1 = d3.path();
-path1.moveTo(c1, a / 2 - c1);
-path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
-path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
+        var path1 = d3.path();
+        path1.moveTo(c1, a / 2 - c1);
+        path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
+        path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
 
-// Closing the path
-path1.closePath();
-return path1;
+        // Closing the path
+        path1.closePath();
+        return path1;
 }
 ///////////////////////////////////////////////////////////////////////////////
 //Blob generation function
@@ -117,16 +160,13 @@ return path1;
             .on("drag", dragged)
             .on("end", dragended));
 
-   let clickCount = 0;
  // Function to display details of a circle when hovered
  node.on("click", function(d, i) {
      
      modal.handleOpen(i, modalContent);
  });
  
-    
-
-    
+   
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
     .force("x", d3.forceX().strength(0.5).x(d => x(d.genre)))
@@ -175,25 +215,36 @@ var simulation = d3.forceSimulation()
   
 <!-- Section 1 -->
 <section class="px-2 w-full py-32 md:px-0">
-  <div class=" items-center max-w-6xl px-8 mx-auto xl:px-5">
+  <div class=" items-center max-w-7xl  mx-auto ">
     <div class="grid grid-cols-12 items-center sm:-mx-3">
-      <div class="w-full col-span-2 md:w-1/3 md:px-3">
+      <div class="w-full col-span-4 ">
         <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
           <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
             <span class="block xl:inline">Digital Spaces</span>
           </h1>
+          <div class="flex flex-col gap-4">
+            <!-- Create a legend of formats and their colors -->
+            {#each genres as genre}
+            <div class="flex items-center">
+              <div class="w-4 h-4 mr-2">
+              </div>
+              <div class="text-xs flex-1 font-medium "><p class=" text-[{genre.color}] text-xs">{genre.genre} 5</p></div>
+            </div>  
+            {/each}
+          </div>
          
           <h3 id="spaceName" class="text-xl font-bold tracking-tight text-gray-900 "> </h3>
           <h4 id="spaceGenre" class="text-base font-bold tracking-tight text-gray-900 "> </h4>
          
         </div>
       </div>
-      <div class="w-full col-span-10 md:w-2/3">
+      <div class="w-full col-span-8 ">
         <div class="w-full h-auto ">
           <div id="my_dataviz"></div>
 
           </div>
       </div>
+    
     </div>
   </div>
 </section>

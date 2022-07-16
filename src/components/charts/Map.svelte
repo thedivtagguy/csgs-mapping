@@ -2,9 +2,8 @@
 	import { setContext } from 'svelte';
 	import { mapboxgl, key } from './mapbox.js';
     import geoData from "$data/organizationsScatter.json"
-	import { fade, blur, fly, slide, scale } from "svelte/transition";
+	import {scale } from "svelte/transition";
   import { quintOut } from "svelte/easing";
-  import { closeModal } from 'svelte-modals'
 
 	
 	setContext(key, {
@@ -13,6 +12,7 @@
 
 
 	let map;
+	let show = false;
 	$: pointData = {};
 
 
@@ -27,7 +27,7 @@
 			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
 			center: [80.9, 22.7],
 			zoom: 4,
-			maxZoom: 20
+			maxZoom: 15
 		});
 
 		map.on('load', () => {
@@ -40,8 +40,8 @@
 				// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
 				data: geoData,
 				cluster: true,
-				clusterMaxZoom: 14, // Max zoom to cluster points on
-				clusterRadius: 20 // Radius of each cluster when clustering points (defaults to 50)
+				clusterMaxZoom: 6, // Max zoom to cluster points on
+				clusterRadius: 40 // Radius of each cluster when clustering points (defaults to 50)
 			});
 
 			map.addLayer({
@@ -117,7 +117,7 @@
 						'#C43540'
 
 					],
-					'circle-radius': 10,
+					'circle-radius': 8,
 					'circle-stroke-width': 1,
 					'circle-stroke-color': '#fff'
 				}
@@ -141,8 +141,11 @@
 					}
 				);
 			});
-
-
+			map.scrollZoom.disable();
+			// Disable zoom on map click
+			map.on('click', () => {
+				map.scrollZoom.enable();
+			})
 			
 			// When a click event occurs on a feature in
 			// the unclustered-point layer, open a popup at
@@ -179,7 +182,9 @@
 			// On clicking point, show sidebar
 			map.on('click', 'unclustered-point', (e) => {
 				let regex = /(\d+\.\d*)\s?(.*?)(?=\d+\.|$)/gs;
-				document.getElementById('sidebar').style.visibility = 'visible';
+				console.log(show);
+				show = true;
+				console.log(show);
 				pointData = e.features[0].properties;
 				let keywords = e.features[0].properties.keywords.split(',');
 				let keywordsHTML = '';
@@ -191,7 +196,6 @@
 				if(programArray != null && programArray.length > 0){
 					pointData.programs = programArray;
 				}
-				console.log(pointData);
 			})
 
 		
@@ -204,11 +208,6 @@
 		});
 
 	}
-	// Add clustering to the map
-		function hideBar () {
-			console.log('hide');
-				document.getElementById('sidebar').style.visibility = 'hidden';
-			}
 		
 </script>
 
@@ -224,10 +223,17 @@
 	
 <div id="map-background" use:initMap>
 
-	<div class="pb-8"  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} id="sidebar">
+	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} class:sidebar-active={show} class="sidebar pb-8" >
 		<div class="p-4 bg-[color:var(--color-aqua)]">
 			<div class="flex  justify-between gap-6 items-center">
-			  <h3 class="text-xl font-sans font-bold"> {pointData.name}</h3>
+			 
+			  <h3 class="text-lg font-sans font-bold"> {pointData.name}</h3>
+		   
+			  <button class="text-gray-600 hover:text-gray-800" >
+				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+				</svg>
+			  </button>
 			</div>
 			
 		  </div>
@@ -235,7 +241,7 @@
 			<p id="keyword"></p>
 		</div>
 		<p class="text-sm px-[10px]" id="type">{pointData.type} | {pointData.region}</p>
-		<div class="overflow-y-auto">
+		<div >
 			{#if pointData.programs && pointData.programs instanceof Array}
 				<p class="text-lg font-bold py-2 px-[10px]" id="programs">Programs:</p>
 				<ul class=" list-none px-[10px] list-inside">
@@ -253,27 +259,34 @@
 </div>
 
 
-<style>
-
-    
+<style>    
 	#map-background {
 		position: relative;
 		width: 100%;
 		height: 85vh;
 	}
 
-	#sidebar {
+	.sidebar {
 		visibility: hidden;
 		position: absolute;
-		width: 350px;
+		width: 380px;
 		height: 50%;
 		background: var(--color-background);
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		z-index: 1;
-		overflow: auto;
 	}
-
+	.sidebar-visible {
+		visibility: visible;
+		visibility: hidden;
+		position: absolute;
+		width: 380px;
+		height: 50%;
+		background: var(--color-background);
+		margin: 20px 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
 	#name {
 		width: 100%;
 		font-weight: 700;

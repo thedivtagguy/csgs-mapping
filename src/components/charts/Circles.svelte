@@ -215,7 +215,7 @@ var simulation = d3.forceSimulation()
     <div class="grid grid-cols-12 items-center sm:-mx-3">
       <div class="w-full col-span-4 ">
         <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-          <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-2xl lg:text-2xl uppercase xl:text-4xl">
             <span class="block xl:inline">Digital Spaces</span>
           </h1>
           <div class="flex flex-col gap-2">
@@ -232,10 +232,7 @@ var simulation = d3.forceSimulation()
             </div>  
             {/each}
           </div>
-         
-          <h3 id="spaceName" class="text-xl font-bold tracking-tight text-gray-900 "> </h3>
-          <h4 id="spaceGenre" class="text-base font-bold tracking-tight text-gray-900 "> </h4>
-         
+       
         </div>
       </div>
       <div class="w-full col-span-8 ">

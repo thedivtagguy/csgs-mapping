@@ -85,6 +85,16 @@
 	});
 	facets.unshift(`All ${facet}s`);
 
+	// Each colorBy and its color 
+	const colorByColors = colorBys.map(d => {
+		return {
+			color: colors[colorBys.indexOf(d)],
+			name: d
+		};
+	});
+
+	console.log(colorByColors);
+
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -135,7 +145,23 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
-
+			<div class="flex flex-col gap-2">
+				<!-- Create a legend of formats and their colors -->
+				{#each colorByColors as item, i}
+				<div class="flex gap-2 justify-center items-center">
+				  <div class="mr-2">
+					<!-- Small svg polygon -->
+					<svg width="40" height="20">
+					  <path d="{polygonGenerator(true, 20 ,30 )}" fill={item.color} />
+						
+					</svg>
+				  </div>
+				  <div class=" flex-1 font-medium ">
+					<p class="text-sm">{item.name}</p></div>
+				</div>  
+				{/each}
+			  </div>
+		   
 		</div>
 		
 		<div class="col-span-9">	
@@ -177,7 +203,7 @@
 				</div>
 
 
-				<svg >						
+				<svg class="chartSVG">						
 
 					<g class="axis y-axis">
 						{#each yTicks as tick}
@@ -215,7 +241,7 @@
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
-								d="{polygonGenerator(xScale(i)/6, yScale(j)).polygon}"
+								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
 								on:mouseover="{() => tooltip(point[j], i, polygonGenerator(xScale(i), yScale(j)).y)}"
 								on:mouseleave="{() => [name] = [null]}"
 							></path>
@@ -241,7 +267,7 @@
 		margin: 0 auto;
 	}
 
-	svg {
+	.chartSVG {
 		position: relative;
 		width: 100%;
 		height: 720px;

@@ -61,7 +61,29 @@ import ModalOpen from "../modal/ModalOpen.svelte";
         }
     ];
 
+///////////////////////////////////////////////////////////////////////////////
+//Blob generation function
+///////////////////////////////////////////////////////////////////////////////
 
+function pathGenerator(i,radius = 50) {
+        var a = radius; // a is sort of the radius of the blob
+
+        //Generating 4 random numbers by which each vertex can vary.
+
+        var c1 = 7 * Math.random();
+        var c2 = 8 * Math.random();
+        var c3 = 6 * Math.random();
+        var c4 = 7* Math.random();
+
+        var path1 = d3.path();
+        path1.moveTo(c1, a / 2 - c1);
+        path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
+        path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
+
+        // Closing the path
+        path1.closePath();
+        return path1;
+    }
     
     console.log(digital);
     // Go through the data and create a new key for each genre with the value of the color
@@ -109,29 +131,7 @@ onMount(async () => {
 
 const data = digital;
 
-///////////////////////////////////////////////////////////////////////////////
-//Blob generation function
-///////////////////////////////////////////////////////////////////////////////
 
-function pathGenerator(i) {
-        var a = 50; // a is sort of the radius of the blob
-
-        //Generating 4 random numbers by which each vertex can vary.
-
-        var c1 = 7 * Math.random();
-        var c2 = 8 * Math.random();
-        var c3 = 6 * Math.random();
-        var c4 = 7* Math.random();
-
-        var path1 = d3.path();
-        path1.moveTo(c1, a / 2 - c1);
-        path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
-        path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
-
-        // Closing the path
-        path1.closePath();
-        return path1;
-}
 ///////////////////////////////////////////////////////////////////////////////
 //Blob generation function
 ///////////////////////////////////////////////////////////////////////////////
@@ -202,11 +202,7 @@ var simulation = d3.forceSimulation()
         d.fy = null;
     }
 
-    /// Limit how far the circles can be dragged
-    function drag_handler(d) {
-        d3.event.sourceEvent.stopPropagation();
-        d3.select(this).attr("cx", d.x = Math.max(50, Math.min(width - 50, d3.event.x))).attr("cy", d.y = Math.max(50, Math.min(height - 50, d3.event.y)));
-    }
+  
  
 });
 </script>
@@ -222,13 +218,17 @@ var simulation = d3.forceSimulation()
           <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
             <span class="block xl:inline">Digital Spaces</span>
           </h1>
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
             <!-- Create a legend of formats and their colors -->
             {#each genres as genre}
-            <div class="flex items-center">
-              <div class="w-4 h-4 mr-2">
+            <div class="flex gap-2 justify-center items-center">
+              <div class="mr-2">
+                <svg height="30" width="30">
+                    <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
+                  </svg> 
               </div>
-              <div class="text-xs flex-1 font-medium "><p class=" text-[{genre.color}] text-xs">{genre.genre} 5</p></div>
+              <div class=" flex-1 font-medium ">
+                <p class="text-sm">{genre.genre}</p></div>
             </div>  
             {/each}
           </div>

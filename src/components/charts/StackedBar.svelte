@@ -242,7 +242,7 @@
 								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
 								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
-								on:mouseover="{() => tooltip(point[j], i, polygonGenerator(xScale(i), yScale(j)).y)}"
+								on:mouseover="{() => tooltip(point[j], i, polygonGenerator(false, xScale(i), yScale(j)).y)}"
 								on:mouseleave="{() => [name] = [null]}"
 							></path>
 						

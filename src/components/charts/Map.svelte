@@ -223,13 +223,13 @@
 	
 <div id="map-background" use:initMap>
 
-	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} class:sidebar-active={show} class="sidebar pb-8" >
+	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} style="visibility: {show ? 'visible' : 'hidden'}" class="sidebar pb-8" >
 		<div class="p-4 bg-[color:var(--color-aqua)]">
 			<div class="flex  justify-between gap-6 items-center">
 			 
 			  <h3 class="text-lg font-sans font-bold"> {pointData.name}</h3>
 		   
-			  <button class="text-gray-600 hover:text-gray-800" >
+			  <button class="text-gray-600 hover:text-gray-800" on:click="{() => show = false}" >
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
 				</svg>
@@ -275,6 +275,7 @@
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		z-index: 1;
+		overflow: auto;
 	}
 	.sidebar-visible {
 		visibility: visible;

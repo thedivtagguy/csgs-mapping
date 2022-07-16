@@ -1,11 +1,11 @@
 genre,title,year,author,publisher,language,format,tags,comments,key,keyword
-Literature,Lihaaf / The Quilt,1942,Ismat Chugtai,Adab-i-Latif,Urdu,Short Story,"Lesbian narratives, Fiction",Chughtai was summoned to the court to defend the story after it was charged with obscenity,Desire,desire
-Literature,Prateeksha / Waiting,1962,Rajendra Yadav,,Hindi,Short Story,"Lesbian narratives, Fiction, Romance",An English translation of the story by Ruth Vanita has been included in the book Same-Sex Love in India,LGBTQ narratives,lgbtq narratives
-Literature,Gomathi,1964,Ki. Rajanarayanan,Deepam Magazine,Tamil,Short Story,"Trans narrative, fiction, Tamil literature",An important early work in the Tamil literature around queer desire,LGBTQ narratives,lgbtq narratives
-Literature,A Story,1968,Bhupen Khakkar,Kriti Magazine,Gujrati,Short Story,"Bisexuality, Kinship, Family",An English translation of the story has been included in the book Same-Sex Love in India,LGBTQ narratives,lgbtq narratives
-Literature,Maya Mridanga / Drums of Maya,1972,Syed Mustafa Siraj,Dey's Publishing,Bengali,Novel,"Bengali literature, queerness",The novel is set in rural Bengal of the 1950s,LGBTQ narratives,lgbtq narratives
-Literature,Mitrachi Goshta / A Friend's Story,1981,Vijay Tendulkar,,Marathi,Play,"Lesbian narratives, Pre-independence India",Described as one of the first modern Indian plays dealing with same-sex desire,LGBTQ narratives,lgbtq narratives
-Literature,Chandana Marangal / The Sandal Trees,1988,Kamala Das,,Malayalam,Short Story,"Lesbian narratives, Fiction, Romance",The story was translated into English as ‘The Sandal Trees’ in 1995 by V.C.Harris and C.K.Mohammed Ummer,LGBTQ narratives,lgbtq narratives
+Literature,Lihaaf / The Quilt,1990,Ismat Chugtai,Adab-i-Latif,Urdu,Short Story,"Lesbian narratives, Fiction",Chughtai was summoned to the court to defend the story after it was charged with obscenity,Desire,desire
+Literature,Prateeksha / Waiting,1990,Rajendra Yadav,,Hindi,Short Story,"Lesbian narratives, Fiction, Romance",An English translation of the story by Ruth Vanita has been included in the book Same-Sex Love in India,LGBTQ narratives,lgbtq narratives
+Literature,Gomathi,1990,Ki. Rajanarayanan,Deepam Magazine,Tamil,Short Story,"Trans narrative, fiction, Tamil literature",An important early work in the Tamil literature around queer desire,LGBTQ narratives,lgbtq narratives
+Literature,A Story,1990,Bhupen Khakkar,Kriti Magazine,Gujrati,Short Story,"Bisexuality, Kinship, Family",An English translation of the story has been included in the book Same-Sex Love in India,LGBTQ narratives,lgbtq narratives
+Literature,Maya Mridanga / Drums of Maya,1990,Syed Mustafa Siraj,Dey's Publishing,Bengali,Novel,"Bengali literature, queerness",The novel is set in rural Bengal of the 1950s,LGBTQ narratives,lgbtq narratives
+Literature,Mitrachi Goshta / A Friend's Story,1990,Vijay Tendulkar,,Marathi,Play,"Lesbian narratives, Pre-independence India",Described as one of the first modern Indian plays dealing with same-sex desire,LGBTQ narratives,lgbtq narratives
+Literature,Chandana Marangal / The Sandal Trees,1990,Kamala Das,,Malayalam,Short Story,"Lesbian narratives, Fiction, Romance",The story was translated into English as ‘The Sandal Trees’ in 1995 by V.C.Harris and C.K.Mohammed Ummer,LGBTQ narratives,lgbtq narratives
 Literature,Trying to Grow,1991,Firdaus Kanga,Trafalgar Square Publishing,English,Semi-autobiographical novel,"Auto-fiction, Queer Disabled narrative",The novel was adapted as a film Sixth Happiness with the author starring as a lead,Disability,disability
 Literature,Padmavati: The Harlot and Other Stories,1992,Kamala Das,Sterling Publishers,English,Anthology of Short Stories,"Short stories, women's narratives",,Desire,desire
 Literature,Slide Show,1992,R Raj Rao,Peepal Tree press ltd.,English,Poetry,"Poetry, Modern fiction",,LGBTQ narratives,lgbtq narratives
@@ -336,8 +336,8 @@ http://www.kashmirlit.org/parveena-ahangars-rafto-acceptance-speech/ ",Activism,
 "Politics, Law, Citizenship, and State",Why should Marital Rape Exception be removed?,2021,Ayushi Agarwal,Economic & Political Weekly,English,Journal Article,"Marital Rape, Indian Penal Code",,Law,law
 ,,,,,,,,,,
 ,,,,,,,,,,
-Gender and the Development Discourse,Towards Equality: Report of the Committee on the Status of Women in India,1974,"Phulrenu Guha, Maniben Kara, Savitri Shyam, Neera Dogra, Vikram Mahajan, Leela Dube, Sakina A. Hasan, Urmila Haksar, Lotika Sarkar, Vina Mazumdar","Ministry of Education and Social Welfare, Department of Social Welfare, Government of India",English,Report,"Women's rights, Gender equality",,Law,law
-Gender and the Development Discourse,Women's Studies in India: Some Perspectives,1987,Maithreyi Krishnaraj (editor),Sangam Books Ltd,English,Academic Book,Women's Studies,,Feminist Historiography,feminist historiography
+Gender and the Development Discourse,Towards Equality: Report of the Committee on the Status of Women in India,1990,"Phulrenu Guha, Maniben Kara, Savitri Shyam, Neera Dogra, Vikram Mahajan, Leela Dube, Sakina A. Hasan, Urmila Haksar, Lotika Sarkar, Vina Mazumdar","Ministry of Education and Social Welfare, Department of Social Welfare, Government of India",English,Report,"Women's rights, Gender equality",,Law,law
+Gender and the Development Discourse,Women's Studies in India: Some Perspectives,1990,Maithreyi Krishnaraj (editor),Sangam Books Ltd,English,Academic Book,Women's Studies,,Feminist Historiography,feminist historiography
 Gender and the Development Discourse,Women and AIDS - Denial and Blame,1990,"Arun Bhandari, Manoj, D. Dalip, Dr. P.S. Sahni, Dr. J.P. Jain, Renu, J.S. Kohli, Shalini, Lalitha S.A, Siddhartha Gautam",AIDS Bhedbhav Virodhi Andolan,English,Report,"HIV/AIDS, Women and Health care",,Sexual and Reproductive Health,sexual and reproductive health
 Gender and the Development Discourse,Women and Violence: A country Report,1991,Maithreyi Krishnaraj (editor),SNDT University Press,English,Report,"Gender Based Violence, Violence, Gender",,Violence,violence
 Gender and the Development Discourse,Women's Studies and the Women's Movement in India: An Interview,1994,Vina Mazumdar,Women's Studies Quarterly,English,Academic Book,"Women's Movement, Women's Studies",,Feminist Historiography,feminist historiography
@@ -415,7 +415,7 @@ Masculinities,Motorcycle Masculinity in Indian Cinema,2020,Shaista Anwar,Tasveer
 Masculinities,Sleepless Fathers in Malayalam Cinema: Unraveling the Dynamics of Caste and Masculinity,2020,Navaneetha Mokkil,South Asian Popular Culture,English,Journal Article,"Malayalam Cinema, Fatherhood, Caste",,,
 ,,,,,,,,,,
 ,,,,,,,,,,
-Work and Economics,"Structure and Strategy: Women, work and Family",1989,"Leela Dubey, Rajni Palriwala (editors)",Sage Publication,English,Academic Book,"Gender. Economics, Work",,Development,development
+Work and Economics,"Structure and Strategy: Women, work and Family",1990,"Leela Dubey, Rajni Palriwala (editors)",Sage Publication,English,Academic Book,"Gender. Economics, Work",,Development,development
 Work and Economics,The Gendered politics of Fuel in India,1991,Padmini Swaminathan,Sage Publication,English,Journal Article,"Gender. Economics, Work",,Development,development
 Work and Economics,Making a Difference: Feminist Publishing in the South,1995,"Urvashi Butalia, Ritu Menon",Bellagio Pub. Network,English,Academic Book,"Gender, Publication, Feminist Publishing",,Feminist Politics,feminist politics
 Work and Economics,When the rolling Pins hit the street: Women in the anti price rise movement in Maharashtra,1996,Nandita Gandhi,Zubaan,English,Academic Book,"Women's Movement, Gender, Work",,Development,development
@@ -459,7 +459,7 @@ Interrogations and Reconstructions",Sexual and Reproductive Health,sexual and re
 Religion and Customary Practices,How Can Feminist Theology reduce gender inequality in Religion,2018,Vineeta Sharma,Economic & Political Weekly,English,Journal Article,"Feminist Theory, Theology",,Feminist Politics,feminist politics
 ,,,,,,,,,,
 ,,,,,,,,,,
-"Art, Cinema and Pop Culture","Third World Women's Cinema-Notes on Narrative, Reflections on Opacity",1986,Susie Tharu,Economic & Political Weekly,English,Journal Article,"Women in Film, Women and Cinema",,Culture,culture
+"Art, Cinema and Pop Culture","Third World Women's Cinema-Notes on Narrative, Reflections on Opacity",1990,Susie Tharu,Economic & Political Weekly,English,Journal Article,"Women in Film, Women and Cinema",,Culture,culture
 "Art, Cinema and Pop Culture",Dialectic of Public and Private-Representation of Women in Bhoomika and Mirch Masala,1991,Ranjani Mazumdar,Economic & Political Weekly ,English,Journal Article,"Women in Film, Women and Cinema, Media Representation",,Culture,culture
 "Art, Cinema and Pop Culture",Conceptualising Popular Culture: 'Lavani' and 'Powada' in Maharashtra',2002,Sharmila Rege,Economic & Political Weekly,English,Journal Article,"Caste, Cultural Labour, Lavani, Powada",,Caste,caste
 "Art, Cinema and Pop Culture",Rethinking Popular Culture,2002,Mangesh Kulkarni,Economic & Political Weekly,English,Journal Article,"Caste, Gender, Performance",,Culture,culture
@@ -528,8 +528,8 @@ Genre, Stars, Public Cultures",LGBTQ Narratives,lgbtq narratives
 "Art, Cinema and Pop Culture",Objects of Desire: Commodification of Gender on the Titles of Popular Hindi Novels,,Atmaram K. Bhakal,Tasveer Ghar--A Digital Archive of South Asian Popular Visual Culture,English,Journal Article,"Hindi Novels, Popular Culture, Gender Representation",,Culture,culture
 ,,,,,,,,,,
 ,,,,,,,,,,
-Culture and Society,Daughters of the Vitasta: A History of Kashmiri Women from Early Times to the Present Day,1959,Prem Nath Bazaz,Pamposh Publications,English,Historical Biography,"Kashmiri Women, History",,Religion,religion
-Culture and Society,The World of Homosexuals,1977,Shakuntala Devi,Vikas Publishing House,English,Non-Fiction,"Indian Homosexuality, History, Society",queer theory and sexuality studies,Society,society
+Culture and Society,Daughters of the Vitasta: A History of Kashmiri Women from Early Times to the Present Day,1990,Prem Nath Bazaz,Pamposh Publications,English,Historical Biography,"Kashmiri Women, History",,Religion,religion
+Culture and Society,The World of Homosexuals,1990,Shakuntala Devi,Vikas Publishing House,English,Non-Fiction,"Indian Homosexuality, History, Society",queer theory and sexuality studies,Society,society
 Culture and Society,Less Than Gay,1991,AIDS Bhedbhav Virodhi Andolan,AIDS Bhedbhav Virodhi Andolan,English,Report,"Gay narratives, Queer lives, Society",,Sexual and Reproductive Health,sexual and reproductive health
 Culture and Society,For People Like Us,1991,"Arun Bhandari, Dr. Paramjit Singh Sahni, Jagdish Bhardwaje",AIDS Bhedbhav Virodhi Andolan,English,Report,"Romance, Lesbian narratives, Orissa",,LGBTQ Narratives,lgbtq narratives
 Culture and Society,"Uncertain Liaisons: Sex, Strife & Togetherness In Urban India",1993,Khushwant Singh,South Asia Books,English,Non-fiction,"Sexuality, Urban India",,Desire,desire

@@ -28,7 +28,7 @@ import { append } from 'svelte/internal';
         } else if (d.genre == 'Media') {
             d.color = '#A8DCC6';
         } else if (d.genre == 'Photo Project') {
-            d.color = '#BEF3E0';
+            d.color = '#9597be';
         } else if (d.genre == 'Support Group') {
             d.color = '#BED6F3';
         } else if (d.genre == 'Virtual Book Club') {
@@ -49,8 +49,8 @@ onMount(async () => {
     // append the svg object to the body of the page
     const svg = d3.select("#my_dataviz")
         .append("svg")
-        .attr("width", 800)
-        .attr("height", 700)
+        .attr("width", 900)
+        .attr("height", 600)
 
  // Get choose top 5 genres from the data based on the number of spaces  
 const topGenres = digital.reduce((acc, curr) => {
@@ -70,19 +70,20 @@ const data = digital;
 ///////////////////////////////////////////////////////////////////////////////
 
 function pathGenerator(i) {
-var a = 50; // a is sort of the radius of the blob
+var a = 50; // a is sort of the diameter of the blob
 
 //Generating 4 random numbers by which each vertex can vary.
+var plusOrMinus = Math.random() < 0.5 ? -1 : 1; //changes sign randomly, so I can add or subtract Bezier corner
 
-var c1 = 7 * Math.random();
+var c1 = 7 * Math.random();//c1 to c4 random values by which to change circle corners
 var c2 = 8 * Math.random();
 var c3 = 6 * Math.random();
-var c4 = 7* Math.random();
+var c4 = 10 * Math.random();
 
 var path1 = d3.path();
-path1.moveTo(c1, a / 2 - c1);
-path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
-path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
+path1.moveTo(c1, a / 2 - c1); //Moving from centre to left point of Bezier curve
+path1.bezierCurveTo(c1, -a / 8 - plusOrMinus*c3, a - c2, -a / 8 + plusOrMinus*c4, a - c2, a / 2 - c2);
+path1.bezierCurveTo(a - c2, (9 * a) / 8 + plusOrMinus*c4,  c1,  (9 * a) / 8 - plusOrMinus*c3,  c1,  a / 2 - c1);
 
 // Closing the path
 path1.closePath();
@@ -96,7 +97,7 @@ return path1;
     // A scale that gives a X target position for each group
     const x = d3.scaleOrdinal()
         .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
-        .range([50, 100, 150, 200, 250, 300, 350,400, 500])
+        .range([50, 130, 210, 290, 370, 450, 530, 610, 690])
 
 
 

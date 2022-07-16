@@ -10,7 +10,7 @@
 	export let facet = "";		// What do we want to include in the dropdown?
 	export let colors = [];		// Array of colors for facets
 	export let title = "";		// Title to be displayed
-	export let height = 800;	// Height of the chart
+	export let height = 700;	// Height of the chart
 	export let width = 900;	    // Width of the chart
 	export let id = "";			// ID prefix of the chart
 	export let sortBy = "year";		// What do we want to sort by?
@@ -89,7 +89,7 @@
 
 	const xTicks = [1990, 1995, 2000, 2005, 2010, 2015];
 	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-	const padding = { top: 100, right: 65, bottom: 100, left: 25 };
+	const padding = { top: 25, right: 65, bottom: 25, left: 25 };
 
 
 	$: xScale = scaleLinear()
@@ -100,7 +100,7 @@
 		.range([height - padding.bottom, padding.top]);
 
 	$: innerWidth = width - (padding.left + padding.right);
-	$: barWidth = innerWidth / xTicks.length - 118; 
+	$: barWidth = innerWidth / xTicks.length ; 
 	
 
 </script>

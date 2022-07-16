@@ -2,7 +2,8 @@
 
 export default function polygonGenerator (xStartingPos , yStartingPos){
 
-    yStartingPos -= 16;
+    yStartingPos -= 90;
+    xStartingPos -= 0;
     // Generate a polygon with random points
 
     let r = 2; //r is the maximum a vertex can vary. Might also need to be a function of screenwidth
@@ -18,7 +19,7 @@ export default function polygonGenerator (xStartingPos , yStartingPos){
 
     //width (a) and height (b) of rectangle sides. Should ideally be a function of screenwidth?
     let a = 23;
-    let b = 14;
+    let b = 13;
 
     let x2 = a + xStartingPos - c2;
     let y2 =  yStartingPos + c2;

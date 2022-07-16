@@ -8,7 +8,7 @@
     import Mapbox from "./charts/Mapbox.svelte";
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
-    let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#BEF3E0", "#BED6F3", "#0E8587","#818181"];
+    let genreColors =  ["#F3DF8C", "#CADEAD","#79A5AE",  "#F67C87", "#F7B289", "#D1BB80", "#D08C87", "#9597BE", "#BED6F3", "#C0AAAF","#A8DCC6", "#F3BEF1"];
 
 </script>
 
@@ -47,6 +47,7 @@
             facet="format"
             colorBy="format"
             colors={genreColors}
+            height = {700}
             sortBy="year"
             modalContent={{
                 label: "format",

@@ -129,8 +129,8 @@
 	function tooltip(d) {
 		nameVar = d.title;
 		// Position it right next to the bar
-		positionX =1100 -  m.offsetX - 250;
-		positionY = m.offsetY - 80;
+		positionX =1100 -  m.offsetX - 350;
+		positionY = m.offsetY - 70;
 		console.log("i: ", positionX, "j: ", positionY);
 
 	}
@@ -194,8 +194,8 @@
 				visibility: {nameVar ? 'visible' : 'hidden'};
 				background-color: var(--color-background);
 				z-index: 3;"
-				class="border-[1px] px-4 py-2 w-1/2 border-gray-400 border-dashed absolute">
-					<div class="flex flex-col w-full justify-start items-center">
+				class="border-[1px] px-4 py-2 w-1/3 shadow-lg border-gray-400 border-dashed absolute">
+					<div class="flex flex-col w-full justify-start items-start">
 						<div class="text-gray-600 text-sm">
 							<p class="font-bold text-sm">
 								{#if nameVar}

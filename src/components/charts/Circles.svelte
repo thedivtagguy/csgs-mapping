@@ -85,7 +85,6 @@ function pathGenerator(i,radius = 50) {
         return path1;
     }
     
-    console.log(digital);
     // Go through the data and create a new key for each genre with the value of the color
     digital.forEach(function(d) {
     d.color = "#cadead";
@@ -166,6 +165,13 @@ const data = digital;
      modal.handleOpen(i, modalContent);
  });
  
+ node.on("mouseover", function(d, i) {
+    tooltip(i);
+ });
+ node.on("mouseout", function(d, i) {
+    nameVar = null;
+    console.log(nameVar);
+ });
    
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
@@ -202,9 +208,32 @@ var simulation = d3.forceSimulation()
         d.fy = null;
     }
 
+    console.log(data);
   
  
 });
+
+
+let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
+
+	function handleMousemove(event) {
+		m.x = event.clientX - 200;
+		m.y = event.clientY;
+		m.offsetX = event.offsetX;
+		m.offsetY = event.offsetY;
+	}
+	
+	let nameVar = null;
+
+	let positionX, positionY = [10, 10]
+	// Function tooltip to display the data of the selected bar
+	function tooltip(d) {
+		nameVar = d.name;
+		// Position it right next to the bar
+		positionX = 800 - m.offsetX - 80;
+		positionY = m.offsetY - 70;
+        console.log(positionX);
+	}
 </script>
 <main>
     <ModalOpen bind:this={modal} />
@@ -235,8 +264,31 @@ var simulation = d3.forceSimulation()
        
         </div>
       </div>
-      <div class="w-full col-span-8 ">
+      <div   on:mousemove={handleMousemove} class="w-full relative col-span-8 ">
         <div class="w-full h-auto ">
+            
+				<div 
+				id="infobox"
+				style="top: {positionY}px;
+				right: {positionX}px;
+				visibility: {nameVar  ? 'visible' : 'hidden'};
+				background-color: var(--color-background);
+				z-index: 3;"
+				class="border-[1px] px-4 py-2 w-1/3 shadow-lg border-gray-400 border-dashed absolute">
+					<div class="flex flex-col w-full justify-start items-start">
+						<div class="text-gray-600 text-sm">
+							<p class="font-bold text-sm">
+								{#if nameVar}
+									{nameVar}
+								{:else}
+								Hover the chart to begin
+								{/if}
+							</p>
+						</div>
+						
+					</div>
+				</div>
+
           <div id="my_dataviz"></div>
 
           </div>

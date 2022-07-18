@@ -2,7 +2,7 @@
 	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
-	import * as d3 from 'd3';
+	
 	let selected;
 
 	//////////////////////////////////////////////////////////////////
@@ -93,7 +93,6 @@
 		};
 	});
 
-	console.log(colorByColors);
 
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
@@ -120,10 +119,10 @@
 		m.y = event.clientY;
 		m.offsetX = event.offsetX;
 		m.offsetY = event.offsetY;
-		console.log(m);
 	}
 	
 	let nameVar;
+
 	let positionX, positionY = [10, 10]
 	// Function tooltip to display the data of the selected bar
 	function tooltip(d) {
@@ -131,11 +130,12 @@
 		// Position it right next to the bar
 		positionX =1100 -  m.offsetX - 350;
 		positionY = m.offsetY - 70;
-		console.log("i: ", positionX, "j: ", positionY);
 
 	}
 
-// Use D3 to create tooltip on hover
+// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
+// If hoverVar 
+
 
 </script>
 <main>

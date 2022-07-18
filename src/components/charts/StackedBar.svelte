@@ -334,7 +334,6 @@ select {
   font-weight: 500;
   background-color: var(--color-orange);
   text-transform: capitalize;
-
 }
 	option {
 		text-transform: capitalize;

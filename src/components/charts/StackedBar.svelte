@@ -113,17 +113,24 @@
 
 	$: innerWidth = width - (padding.left + padding.right);
 	$: barWidth = innerWidth / xTicks.length - 118; 
-	
+	let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 
+	function handleMousemove(event) {
+		m.x = event.clientX - 200;
+		m.y = event.clientY;
+		m.offsetX = event.offsetX;
+		m.offsetY = event.offsetY;
+		console.log(m);
+	}
 	
-	let name;
+	let nameVar;
 	let positionX, positionY = [10, 10]
 	// Function tooltip to display the data of the selected bar
-	function tooltip(d,i, j) {
-		name = d.title;
+	function tooltip(d) {
+		nameVar = d.title;
 		// Position it right next to the bar
-		positionX = xScale(i)/6;
-		positionY = j - 100;
+		positionX =1100 -  m.offsetX - 250;
+		positionY = m.offsetY - 80;
 		console.log("i: ", positionX, "j: ", positionY);
 
 	}
@@ -164,7 +171,7 @@
 		   
 		</div>
 		
-		<div class="col-span-9">	
+		<div  on:mousemove={handleMousemove}  class="col-span-9">	
 			
 			<!-- Dropdown for selecting facets -->
 
@@ -183,16 +190,16 @@
 				<div 
 				id="infobox"
 				style="top: {positionY}px;
-				right: {positionX}px;
-				visibility: {name ? 'visible' : 'hidden'};
+				right: {positionX }px;
+				visibility: {nameVar ? 'visible' : 'hidden'};
 				background-color: var(--color-background);
 				z-index: 3;"
-				class="border-[1px] px-4 py-2 max-w-md border-gray-400 border-dashed absolute">
-					<div class="flex flex-col justify-center items-center">
+				class="border-[1px] px-4 py-2 w-1/2 border-gray-400 border-dashed absolute">
+					<div class="flex flex-col w-full justify-start items-center">
 						<div class="text-gray-600 text-sm">
 							<p class="font-bold text-sm">
-								{#if name}
-									{name}
+								{#if nameVar}
+									{nameVar}
 								{:else}
 								Hover the chart to begin
 								{/if}
@@ -203,7 +210,7 @@
 				</div>
 
 
-				<svg class="chartSVG">						
+				<svg  class="chartSVG">						
 
 					<g class="axis y-axis">
 						{#each yTicks as tick}
@@ -242,8 +249,8 @@
 								fill="{point[j].color}"
 								on:click={() => modal.handleOpen(point[j], modalContent)}
 								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
-								on:mouseover="{() => tooltip(point[j], i, polygonGenerator(false, xScale(i), yScale(j)).y)}"
-								on:mouseleave="{() => [name] = [null]}"
+								on:mouseover="{() => tooltip(point[j])}"
+								on:mouseleave="{() => [nameVar] = [null]}"
 							></path>
 						
 

@@ -10,7 +10,17 @@ import ModalOpen from "../modal/ModalOpen.svelte";
     export let modalContent;
     let modal;
     // Create an object genres that contains the genre and the genre color
+    //genres is for legend
     const genres = [
+        {
+            genre: "Media",
+            color: "#A8DCC6"
+        },
+        {
+            genre: "Photo Project",
+            color: "#9597be"
+        },
+
         {
             genre: "Art Project",
             color: "#cadead"
@@ -23,10 +33,7 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             genre: "Community",
             color: "#F3DF8C"
         },
-        {
-            genre: "Digital Advocacy",
-            color: "#79A5AE"
-        },
+        
         {
             genre: "Digital Archive",
             color: "#F3BEF1"
@@ -35,14 +42,8 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             genre: "Magazine",
             color: "#F7B289"
         },
-        {
-            genre: "Media",
-            color: "#A8DCC6"
-        },
-        {
-            genre: "Photo Project",
-            color: "#BEF3E0"
-        },
+        
+        
         {
             genre: "Support Group",
             color: "#BED6F3"
@@ -52,8 +53,8 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             color: "#D1BB80"
         },
         {
-            genre: "Media",
-            color: "#D08C87"
+            genre: "Digital Advocacy",
+            color: "#79A5AE"
         },
         {
             genre: "Other",
@@ -67,22 +68,24 @@ import ModalOpen from "../modal/ModalOpen.svelte";
 
 function pathGenerator(i,radius = 50) {
         var a = radius; // a is sort of the radius of the blob
-
+        var plusOrMinus = Math.random() < 0.5 ? -1 : 1; //changes sign randomly, so I can add or subtract Bezier corner
         //Generating 4 random numbers by which each vertex can vary.
 
         var c1 = 7 * Math.random();
         var c2 = 8 * Math.random();
         var c3 = 6 * Math.random();
         var c4 = 7* Math.random();
+       
 
         var path1 = d3.path();
-        path1.moveTo(c1, a / 2 - c1);
-        path1.bezierCurveTo(c1, -a / 8 - c3, a - c2, -a / 8 + c4, a - c2, a / 2 - c2);
-        path1.bezierCurveTo(a - c2, (9 * a) / 8 + c4,  c1,  (9 * a) / 8 - c3,  c1,  a / 2 - c1);
+        path1.moveTo(c1, a / 2 - c1); //Moving from centre to left point of Bezier curve
+        path1.bezierCurveTo(c1, -a / 8 - plusOrMinus*c3, a - c2, -a / 8 + plusOrMinus*c4, a - c2, a / 2 - c2);
+        path1.bezierCurveTo(a - c2, (9 * a) / 8 + plusOrMinus*c4,  c1,  (9 * a) / 8 - plusOrMinus*c3,  c1,  a / 2 - c1);
 
         // Closing the path
         path1.closePath();
         return path1;
+
     }
     
     // Go through the data and create a new key for each genre with the value of the color
@@ -103,14 +106,12 @@ function pathGenerator(i,radius = 50) {
         } else if (d.genre == 'Media') {
             d.color = '#A8DCC6';
         } else if (d.genre == 'Photo Project') {
-            d.color = '#BEF3E0';
+            d.color = '#9597be';
         } else if (d.genre == 'Support Group') {
             d.color = '#BED6F3';
         } else if (d.genre == 'Virtual Book Club') {
             d.color = '#D1BB80';
-        } else if (d.genre == 'Media') {
-            d.color = '#D08C87';
-        }
+        } 
         else {
             d.color = '#3a3a3a';
         }

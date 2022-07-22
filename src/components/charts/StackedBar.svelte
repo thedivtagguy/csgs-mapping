@@ -18,6 +18,7 @@
 	export let modalContent;
 	export let colorBy = "";		// What do we want to color by?
   	export let direction = "right";
+	export let facetTwo = null;
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -69,6 +70,21 @@
 	facets.forEach(d => {
 		d = d.charAt(0).toUpperCase() + d.slice(1);
 	});
+
+	if (facetTwo){
+		let facetsTwo = dataset.map(d => d[facetTwo]).filter((v, i, a) => a.indexOf(v) === i);
+		facetsTwo.forEach(d => {
+			if (d === '') {
+				facetsTwo.splice(facetsTwo.indexOf(d), 1);
+			}
+		});
+		facetsTwo.forEach(d => {
+			d = d.charAt(0).toUpperCase() + d.slice(1);
+		});
+		facets = facets.concat(facetsTwo);
+		// Remove duplicates
+		facets = facets.filter((v, i, a) => a.indexOf(v) === i);
+	}
 
 	const colorBys = dataset.map(d => d[colorBy]).filter((v, i, a) => a.indexOf(v) === i);
 
@@ -128,7 +144,7 @@
 	function tooltip(d) {
 		nameVar = d.title;
 		// Position it right next to the bar
-		positionX =1100 -  m.offsetX - 350;
+		positionX = 1100 -  m.offsetX - 350;
 		positionY = m.offsetY - 70;
 
 	}
@@ -177,7 +193,7 @@
 
 			<div class="chart relative" >
 				<div id="facets" class="flex z-10 {direction}-0 absolute flex-col gap-8 justify-start my-8">
-					<select bind:value={selected} class="rounded-md capitalize" >
+					<select bind:value={selected} class="rounded-md " >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
 								{facet}
@@ -223,8 +239,15 @@
 					<g class="axis x-axis">
 						{#each data2 as point, i}
 						{#if i % 4 === 0 }	
-						<g class="tick" transform="translate({xScale(i)/7} ,{height + 10})">
-								<text x="{barWidth/2}" y="-90">{point[0].year}</text>
+						<g class="tick" transform="translate({xScale(i)/6} ,{height + 10})">
+								<text x="{barWidth/2}" y="-90">
+								{#if point[0].year  >= 1920 && point[0].year <= 1990 && id == "publications"}
+									1940 - 1990
+								{:else}
+									{point[0].year}
+								{/if}
+								
+								</text>
 							</g>
 							{/if}
 						{/each}
@@ -247,7 +270,7 @@
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
-								on:click={() => modal.handleOpen(point[j], modalContent)}
+								on:click={() => modal.handleOpen(point[j], modalContent, id)}
 								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
 								on:mouseover="{() => tooltip(point[j])}"
 								on:mouseleave="{() => [nameVar] = [null]}"

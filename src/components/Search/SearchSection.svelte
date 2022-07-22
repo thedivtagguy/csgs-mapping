@@ -189,6 +189,27 @@ search.addWidgets([
         },
       }),
     ]),
+
+
+    stats({
+      container: '#stats',
+      templates: {
+        text: `
+      {{#areHitsSorted}}
+        {{#hasNoSortedResults}}No relevant results{{/hasNoSortedResults}}
+        {{#hasOneSortedResults}}1 relevant result{{/hasOneSortedResults}}
+        {{#hasManySortedResults}}{{#helpers.formatNumber}}{{nbSortedHits}}{{/helpers.formatNumber}} relevant results{{/hasManySortedResults}}
+        sorted out of {{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}
+      {{/areHitsSorted}}
+      {{^areHitsSorted}}
+        {{#hasNoResults}}No results{{/hasNoResults}}
+        {{#hasOneResult}}1 result{{/hasOneResult}}
+        {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results{{/hasManyResults}}
+      {{/areHitsSorted}}
+      found for <span class="font-bold capitalize">{{query}}</span> 
+    `,
+      },
+    }),
 ]);
 
 search.start();
@@ -207,8 +228,11 @@ search.start();
         Back to Home
       </button>
     </a>
-    <div id="searchbox"></div>
-    <div id="facets" class="flex flex-col gap-8 justify-start my-8">
+    <div id="searchbox" class="hidden"></div>
+    <div id="stats">
+      <p id="statsNumber"></p>
+    </div>
+    <div id="facets" class="flex flex-co ml-auto gap-8 justify-start my-8">
       <select bind:value={selected} 
  
       class="rounded-md h-12 w-[200px] " >

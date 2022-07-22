@@ -1,9 +1,9 @@
 <script>
     import { Modals, openModal, modals, closeModal } from 'svelte-modals'
       import Modal from './Modal.svelte'
-      export const handleOpen = (data, modalContent) => {
+      export const handleOpen = (data, modalContent, id) => {
           openModal(Modal, { 
-              data, modalContent
+              data, modalContent,id
           })
       }
 

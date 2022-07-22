@@ -43,6 +43,7 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
         colorBy="genre"
         dataset={publications}
         facet="keyword"
+        facetTwo="keyword2"
         colors={genreColors}
         sortBy="year"
         modalContent={{

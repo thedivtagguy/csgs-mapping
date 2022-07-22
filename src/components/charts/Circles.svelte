@@ -165,10 +165,10 @@ const data = digital;
      modal.handleOpen(i, modalContent);
  });
  
- node.on("mouseover", function(d, i) {
+ node.on("mouseenter", function(d, i) {
     tooltip(i);
  });
- node.on("mouseout", function(d, i) {
+ node.on("mouseleave", function(d, i) {
     nameVar = null;
     console.log(nameVar);
  });
@@ -269,9 +269,10 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
             
 				<div 
 				id="infobox"
-				style="top: {positionY}px;
+				style="
+                visibility: {nameVar || positionX == 710 ? 'visible' : 'hidden'};
+                top: {positionY}px;
 				right: {positionX}px;
-				visibility: {nameVar  ? 'visible' : 'hidden'};
 				background-color: var(--color-background);
 				z-index: 3;"
 				class="border-[1px] px-4 py-2 w-1/3 shadow-lg border-gray-400 border-dashed absolute">

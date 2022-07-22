@@ -5,6 +5,7 @@
     export let isOpen;
     export let data;
     export let modalContent;
+    export let id = '';
   </script>
   
   {#if isOpen}
@@ -15,9 +16,9 @@
           
             <div class="p-4 bg-[color:var(--color-aqua)]">
               <div class="flex  justify-between gap-6 items-center">
-               
+               {#if data[modalContent.title]}
                 <h3 class="text-lg font-sans font-bold"> {data[modalContent.title]}</h3>
-             
+             {/if}
                 <button class="text-gray-600 hover:text-gray-800" on:click={closeModal}>
                   <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -28,9 +29,11 @@
             </div>
             <div class="py-4">
               <div class="px-4">
-                <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 font-semibold uppercase tracking-wide text-xs">
+                {#if data[modalContent.label]}
+                     <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 font-semibold uppercase tracking-wide text-xs">
                   {data[modalContent.label]}
                  </span>
+                {/if}
               </div>
                 <div class="my-2 px-4  flex flex-col justify-start items-start">
                   {#if data.author}
@@ -39,7 +42,11 @@
                   {#if data.director}
                   <p class="font-bold text-sm">Director: <span class="font-normal">{data.director}</span></p>
                   {/if}
+                  {#if id == 'publications'}
+                  <p class="font-bold text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
+                  {:else}
                   <p class="font-bold text-sm">Year: <span class="font-normal"> {data[modalContent.year]}</span></p>
+                  {/if}
                   {#if data.publisher}
                   <p class="font-bold text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}

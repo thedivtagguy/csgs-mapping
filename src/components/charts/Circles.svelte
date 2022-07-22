@@ -29,9 +29,6 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             genre: "Community",
             color: "#F3DF8C"
         },
-        
-        
-        
         {
             genre: "Digital Archive",
             color: "#F3BEF1"
@@ -54,7 +51,7 @@ import ModalOpen from "../modal/ModalOpen.svelte";
         },
         {
             genre: "Digital Advocacy",
-            color: "#79A5AE"
+            color: "#D08C87"
         },
         {
             genre: "Other",
@@ -98,7 +95,7 @@ function pathGenerator(i,radius = 50) {
         } else if (d.genre == 'Community') {
             d.color = '#F3DF8C';
         } else if (d.genre == 'Digital Advocacy') {
-            d.color = '#79A5AE';
+            d.color = '#D08C87';
         } else if (d.genre == 'Digital Archive') {
             d.color = '#F3BEF1';
         } else if (d.genre == 'Magazine') {
@@ -253,7 +250,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
             {#each genres as genre}
             <div class="flex gap-2 justify-center items-center">
               <div class="mr-2">
-                <svg height="35" width="30">
+                <svg height="30" width="30">
                     <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
                   </svg> 
               </div>

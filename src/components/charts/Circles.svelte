@@ -26,13 +26,11 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             color: "#cadead"
         },
         {
-            genre: "Blog",
-            color: "#F67C87"
-        },
-        {
             genre: "Community",
             color: "#F3DF8C"
         },
+        
+        
         
         {
             genre: "Digital Archive",
@@ -42,15 +40,17 @@ import ModalOpen from "../modal/ModalOpen.svelte";
             genre: "Magazine",
             color: "#F7B289"
         },
-        
-        
         {
-            genre: "Support Group",
-            color: "#BED6F3"
+            genre: "Blog",
+            color: "#F67C87"
         },
         {
             genre: "Virtual Book Club",
             color: "#D1BB80"
+        },
+        {
+            genre: "Support Group",
+            color: "#BED6F3"
         },
         {
             genre: "Digital Advocacy",
@@ -253,7 +253,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
             {#each genres as genre}
             <div class="flex gap-2 justify-center items-center">
               <div class="mr-2">
-                <svg height="30" width="30">
+                <svg height="35" width="30">
                     <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
                   </svg> 
               </div>

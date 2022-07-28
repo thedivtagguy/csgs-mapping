@@ -2,8 +2,14 @@
 	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
+import StackedMobile from './StackedMobile.svelte';
 	
 	let selected;
+	let decade = '2020';
+
+	let gridWdith = 10;
+	let gridHeight = 10;
+	$: console.log(decade);
 
 	//////////////////////////////////////////////////////////////////
 	let modal;
@@ -109,7 +115,7 @@
 		};
 	});
 
-
+	console.log(data2);
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -154,7 +160,7 @@
 
 
 </script>
-<main>
+<main >
 	
 
 	
@@ -168,10 +174,10 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
-			<div class="flex md:flex-col flex-wrap gap-2">
+			<div class="flex  md:flex-col flex-wrap gap-2">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
-				<div class="flex gap-2 justify-center items-center">
+				<div class="md:flex hidden gap-2 justify-center items-center">
 				  <div class="mr-2">
 					<!-- Small svg polygon -->
 					<svg width="40" height="20">
@@ -182,6 +188,12 @@
 				  <div class=" flex-1 font-medium ">
 					<p class="text-sm">{item.name}</p></div>
 				</div>  
+
+				<div class="flex md:hidden">
+					<div style="background-color:{item.color};" class="flex-1 px-2 py-1">
+						<p class="text-sm">{item.name}</p>
+					</div>
+				</div>
 				{/each}
 			  </div>
 		   
@@ -192,7 +204,7 @@
 			<!-- Dropdown for selecting facets -->
 
 			<div class="chart relative" >
-				<div id="facets" class="flex z-10 {direction}-0 absolute flex-col gap-8 justify-start my-8">
+				<div id="facets" class="flex z-10 {direction}-0 md:absolute flex-col gap-8 justify-start my-8">
 					<select bind:value={selected} class="rounded-md " >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
@@ -226,7 +238,7 @@
 				</div>
 
 
-				<svg  class="chartSVG">						
+				<svg  class="chartSVG hidden md:block">						
 
 					<g class="axis y-axis">
 						{#each yTicks as tick}
@@ -281,6 +293,25 @@
 						{/each}
 						</g>
 				</svg>
+
+				<!-- Start Mobile -->
+				<StackedMobile
+				id="publications"
+				title="Publications"
+				width={950}
+				colorBy="genre"
+				dataset={dataset}
+				facet="keyword"
+				facetTwo="keyword2"
+				colors={colors}
+				sortBy="year"
+				modalContent={{
+					label: "genre",
+					title: "title",
+					year: "year",
+				}}
+				/>
+
 			</div>
 		</div>
 	
@@ -297,10 +328,10 @@
 		margin: 0 auto;
 	}
 
-	.chartSVG {
+	.chartSVGMobile {
 		position: relative;
 		width: 100%;
-		height: 720px;
+		height: 400px;
 	}
 
 	.tick {

@@ -134,10 +134,10 @@ onMount(async () => {
     let avoidOverlapRadius = 35;
     let nodeRadius = 50;
     if (mobileCheck()) {
-        width = window.innerWidth + 100;
+        width = window.innerWidth/1.2;
         height = window.innerHeight / 3;
         dividedBy = 3;
-        avoidOverlapRadius = 13;
+        avoidOverlapRadius = 12;
         nodeRadius = 25;
     }
 
@@ -147,7 +147,7 @@ onMount(async () => {
     if (window.mobileCheck()) {
         svg = d3.select("#my_dataviz")
         .append("svg")
-        .attr("width", 360)
+        .attr("width", width)
         .attr("height", height)
     } else {
         svg = d3.select("#my_dataviz")
@@ -206,11 +206,11 @@ const data = digital;
    
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
-    .force("x", d3.forceX().strength(0.5).x(d => x(d.genre)))
+    .force("x", d3.forceX().strength(0.1).x(d => x(d.genre)))
     .force("y", d3.forceY().strength(0.1).y( height/2 ))
     .force("center", d3.forceCenter().x(width / 3).y(height /dividedBy)) // Attraction to the center of the svg area
     .force("charge", d3.forceManyBody().strength(3)) // Nodes are attracted one each other of value is > 0
-    .force("collide", d3.forceCollide().strength(.1).radius(avoidOverlapRadius).iterations(1)) // Force that avoids circle overlapping
+    .force("collide", d3.forceCollide().strength(.5).radius(avoidOverlapRadius).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
@@ -273,7 +273,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 <section class="px-8 w-full md:py-32 md:px-0">
   <div class=" items-center max-w-7xl  mx-auto ">
     <div class="grid md:grid-cols-12 items-center sm:-mx-3">
-      <div class="w-full col-span-12 md:col-span-4 ">
+      <div class="w-full col-span-7 md:col-span-4 ">
         <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-2xl lg:text-2xl uppercase xl:text-4xl">
             <span class="block xl:inline">Digital Spaces</span>
@@ -281,7 +281,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
           <div class="flex md:flex-col w-full flex-wrap gap-2">
             <!-- Create a legend of formats and their colors -->
             {#each genres as genre}
-            <div class="flex gap-2 justify-center items-center">
+            <div class="flex flex-wrap gap-2 justify-center items-center">
               <div class="mr-2 hidden md:block">
                 <svg height="30" width="30">
                     <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
@@ -290,7 +290,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
               <div class=" hidden md:block flex-1 font-medium ">
                 <p class=" text-sm">{genre.genre}</p></div>
             
-            <div class="block md:hidden">
+            <div class="flex flex-wrap md:hidden">
                 <div style="background-color: {genre.color}; width: 100%;" class="py-1 px-2">{genre.genre}</div>
             </div>
         </div>  
@@ -299,7 +299,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
        
         </div>
       </div>
-      <div   on:mousemove={handleMousemove} class="w-full relative col-span-8 ">
+      <div   on:mousemove={handleMousemove} class="w-full max-w-6xl relative col-span-8 ">
         <div class="w-full h-auto ">
             
 				<div 

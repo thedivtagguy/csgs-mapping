@@ -5,7 +5,7 @@
 	import {scale } from "svelte/transition";
  	 import { quintOut } from "svelte/easing";
 	 import checkMobile  from "$utils/checkMobile.js";
-
+	import {onMount} from "svelte";
 
 	
 	setContext(key, {
@@ -16,7 +16,10 @@
 	let map;
 	let show = false;
 	$: pointData = {};
-    let zoom = checkMobile() ? [3.5] : [4];
+    let zoom = 4;
+	onMount(()=> {
+		zoom = checkMobile() ? [3.5] : [4];
+	})
 
 	function initMap(container) {
 			// Create a popup, but don't add it to the map yet.

@@ -1,6 +1,7 @@
 @import "variables.css";
 @import "normalize.css";
 @import "font.css";
+@import "flowbite/dist/flowbite.css";
 
 /* colors defined in variables.css */
 :root {

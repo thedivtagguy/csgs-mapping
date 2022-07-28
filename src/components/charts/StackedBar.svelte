@@ -162,13 +162,13 @@
 
 	<ModalOpen bind:this={modal}/>
 
-	<section class="grid grid-cols-12 gap-6 ">
-		<div class="col-span-3 py-6">
+	<section class="grid grid-cols-1 px-6 md:grid-cols-12 gap-6 ">
+		<div class="md:col-span-3 col-span-12 md:py-6">
 			<h1 class="text-4xl uppercase font-bold">{title}</h1>
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
-			<div class="flex flex-col gap-2">
+			<div class="flex md:flex-col flex-wrap gap-2">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
 				<div class="flex gap-2 justify-center items-center">

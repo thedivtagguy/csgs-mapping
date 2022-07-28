@@ -20,9 +20,9 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
 <main class="">
     <Menu />
 
-    <div class="container my-12">
+    <div class="container md:my-12">
         <div class="box">
-          <img  width="1200" src="/assets/animation.gif" alt="animation">
+          <img  width="1000" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
             <Header />
@@ -31,7 +31,7 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
 
 
 
-<div class="py-12 ">
+<div class="py-2 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -90,20 +90,30 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
 
 <style>    .container{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     margin: 20px;
 }
+
+/* MObile */
+@media (max-width: 768px) {
+    .container{
+        height: 70vh;
+    }
+}
 .box{
     width: 100%;
-    height: 100%;            
+    height: 100px;            
     position: absolute;
     top: 0;
+/* Center */
     left: 0;
-    opacity: 0.8;  /* for demo purpose  */
+    right: 0;
+    margin: auto;
+
 }
 .stack-top{
     z-index: 9;
-    margin: 20px; /* for demo purpose  */
+    /* margin: 20px; for demo purpose  */
 }
 </style>

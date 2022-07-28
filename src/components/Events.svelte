@@ -59,16 +59,16 @@
 </script>
 
 <!-- Iterate and show all story headings -->
-<main class="py-12">
+<main class="py-12 px-8 md:px-0">
     {#if upcoming}
     <div class="col-span-3 py-6">
         <h3 class="text-4xl uppercase font-sans font-bold">Upcoming Events</h3>
       </div>
-    <div class="main flex">
+    <div class="main md:flex">
         {#each events as event}
         {#if event.upcoming == "TRUE"}
 
-        <div class="portfolio_item -ml-4 p-4">
+        <div class="md:portfolio_item -ml-4 p-4">
            <EventCard event={event}
               />
         </div>
@@ -90,7 +90,7 @@
     {#each types as type}
     <h2 class="text-4xl uppercase font-bold text-left">{type}</h2>
     <!-- Show all events in a flex grid -->
-    <div class="main grid grid-cols-4">
+    <div class="main grid grid-cols-1 md:grid-cols-4">
         {#each events as event}
         {#if event.type == type}
         <div class="-ml-4 p-4">

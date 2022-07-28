@@ -11,7 +11,7 @@
   {#if isOpen}
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
-        <div class="contents relative w-1/3">
+        <div class="contents relative md:w-1/3">
             <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded-lg overflow-hidden">
           
             <div class="p-4 bg-[color:var(--color-aqua)]">
@@ -61,7 +61,7 @@
                     <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
                   {/if}
                   {#if data[modalContent.link]}
-                  <a href="{data[modalContent.link]}" class=" absolute right-10 bottom-10" rel="external">
+                  <a href="{data[modalContent.link]}" class=" md:absolute right-10 bottom-10" rel="external">
                     <button class="bg-[color:var(--color-orange)]  text-sm my-2 hover:bg-[color:var(--color-green)] text-black font-bold py-1 px-2 " onclick="search.start()">
                       Read More
                     </button>
@@ -93,7 +93,7 @@
   }
 
   .contents {
-    min-width: 240px;
+    min-width: 320px;
     border-radius: 6px;
     padding: 16px;
     display: flex;

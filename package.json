@@ -32,6 +32,7 @@
     "d3": "^7.4.4",
     "dotenv": "^16.0.1",
     "feather-icons": "4.28.0",
+    "flowbite": "^1.5.1",
     "google-drive-getfilelist": "^1.0.5",
     "instantsearch.js": "^4.42.0",
     "lodash.debounce": "4.0.8",

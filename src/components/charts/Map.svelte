@@ -3,7 +3,9 @@
 	import { mapboxgl, key } from './mapbox.js';
     import geoData from "$data/organizationsScatter.json"
 	import {scale } from "svelte/transition";
-  import { quintOut } from "svelte/easing";
+ 	 import { quintOut } from "svelte/easing";
+	 import checkMobile  from "$utils/checkMobile.js";
+
 
 	
 	setContext(key, {
@@ -14,7 +16,7 @@
 	let map;
 	let show = false;
 	$: pointData = {};
-
+    let zoom = checkMobile() ? [3.5] : [4];
 
 	function initMap(container) {
 			// Create a popup, but don't add it to the map yet.
@@ -26,7 +28,7 @@
 			container: container,
 			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
 			center: [80.9, 22.7],
-			zoom: 4,
+			zoom: zoom,
 			maxZoom: 15
 		});
 		map.addControl(new mapboxgl.NavigationControl());
@@ -221,7 +223,7 @@
 </svelte:head>
 	<h3 class="text-4xl py-6 uppercase font-sans font-bold">Institutions</h3>
 	
-<div id="map-background" use:initMap>
+<div class="relative" id="map-background" use:initMap>
 
 	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} style="visibility: {show ? 'visible' : 'hidden'}" class="sidebar pb-8" >
 		<div class="p-4 bg-[color:var(--color-aqua)]">
@@ -287,6 +289,23 @@
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		z-index: 1;
+	}
+
+	/* Mobile  */
+	@media (max-width: 768px) {
+		.sidebar {
+		visibility: hidden;
+		position: absolute;
+		width: 94%;
+		height: 30%;
+		bottom: 5px;
+		margin: 10px;
+		background: var(--color-background);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		z-index: 7;
+		overflow: auto;
+	}
+
 	}
 	#name {
 		width: 100%;

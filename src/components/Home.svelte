@@ -13,14 +13,13 @@
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
-let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#BEF3E0", "#BED6F3", "#0E8587","#818181"];
-</script>
+    let genreColors =  ["#F3DF8C", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#BEF3E0", "#C0AAAF", "#79A5AE", "#F4D6C5" , "#818181"];</script>
 
 <!-- Iterate and show all story headings -->
 <main class="">
     <Menu />
 
-    <div class="container md:my-12">
+    <div class="container ">
         <div class="box">
           <img  width="1000" src="/assets/animation.gif" alt="animation">
         </div>
@@ -44,6 +43,7 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
         dataset={publications}
         facet="keyword"
         facetTwo="keyword2"
+        combine={['keyword', 'keyword2', 'keyword3']}
         colors={genreColors}
         sortBy="year"
         modalContent={{
@@ -92,7 +92,6 @@ let genreColors =  ["#F3DF8C", "#79A5AE", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B
     width: 100%;
     height: 90vh;
     position: relative;
-    margin: 20px;
 }
 
 /* MObile */

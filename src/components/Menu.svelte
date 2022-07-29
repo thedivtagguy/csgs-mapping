@@ -12,8 +12,9 @@
 
 <nav class="px-8 border-gray-200 my-8 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="/" class="flex items-center">
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CSGS Resources</span>
+    <a href="/" class="flex justify-center items-center">
+        <span class="self-center font-lora text-xl font-semibold whitespace-nowrap dark:text-white">Mapping Sexuality <br class="md:hidden block">in India
+          </span>
     </a>
     <div class="flex md:order-2">
       <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">

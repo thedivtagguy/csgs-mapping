@@ -13,8 +13,8 @@
         "region": "Andhra Pradesh",
         "latitude": "15.9128998",
         "longitude": "79.7399875",
-        "scatterLat": "15.9128998",
-        "scatterLong": "79.7399875",
+        "scatterLat": "15.7128998",
+        "scatterLong": "79.5399875",
         "count": "0",
         "name": "Department of Women's Studies, Sri Padmavati Mahila Visvavidyalayam",
         "location": "https://www.spmvv.ac.in/acad.html",
@@ -29,8 +29,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.7399875",
-          "15.9128998"
+          "79.5399875",
+          "15.7128998"
         ]
       }
     },
@@ -40,8 +40,8 @@
         "region": "Andhra Pradesh",
         "latitude": "15.9128998",
         "longitude": "79.7399875",
-        "scatterLat": "15.9228998",
-        "scatterLong": "79.7399875",
+        "scatterLat": "15.7128998",
+        "scatterLong": "79.6599875",
         "count": "1",
         "name": "Centre for women's Studies, Sri Venkateswara University",
         "location": "https://www.svuniversity.edu.in/Master/Extensionstudies.html",
@@ -56,8 +56,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.7399875",
-          "15.9228998"
+          "79.6599875",
+          "15.7128998"
         ]
       }
     },
@@ -67,8 +67,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2179994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "94.5277528",
         "count": "0",
         "name": "Turbu Daleh Multipurpose Cooperative Society",
         "location": "",
@@ -83,8 +83,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2179994"
+          "94.5277528",
+          "28.0179994"
         ]
       }
     },
@@ -94,8 +94,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2279994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "94.6477528",
         "count": "1",
         "name": "Women Studies and Research Centre, Rajiv Gandhi University",
         "location": "https://rgu.ac.in/women-studies-and-research-centre/",
@@ -110,8 +110,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2279994"
+          "94.6477528",
+          "28.0179994"
         ]
       }
     },
@@ -121,8 +121,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2379994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "94.7677528",
         "count": "2",
         "name": "Arunachal Pradesh Women's Welfare Society",
         "location": "https://www.apwws1979.org/",
@@ -137,8 +137,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2379994"
+          "94.7677528",
+          "28.0179994"
         ]
       }
     },
@@ -148,8 +148,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2479994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "94.8877528",
         "count": "3",
         "name": "Oju Welfare Association",
         "location": "http://owaap.org.in/index.php",
@@ -164,8 +164,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2479994"
+          "94.8877528",
+          "28.0179994"
         ]
       }
     },
@@ -175,8 +175,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2579994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "95.0077528",
         "count": "4",
         "name": "Hidden Land Exploration Society",
         "location": "",
@@ -191,8 +191,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2579994"
+          "95.0077528",
+          "28.0179994"
         ]
       }
     },
@@ -202,8 +202,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2006043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "92.7375739",
         "count": "0",
         "name": "Xukia",
         "location": "https://www.facebook.com/xukia.assam/",
@@ -218,8 +218,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2006043"
+          "92.7375739",
+          "26.0006043"
         ]
       }
     },
@@ -229,8 +229,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2106043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "92.8575739",
         "count": "1",
         "name": "Centre for Women's Studies, Dibrugarh University",
         "location": "https://dibru.ac.in/centre-for-womens-studies/",
@@ -245,8 +245,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2106043"
+          "92.8575739",
+          "26.0006043"
         ]
       }
     },
@@ -256,8 +256,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2206043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "92.9775739",
         "count": "2",
         "name": "Chandraprabha Saikiani Centre for Women Studies, Tezpur University",
         "location": "http://www.tezu.ernet.in/wsc/about-us.php",
@@ -272,8 +272,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2206043"
+          "92.9775739",
+          "26.0006043"
         ]
       }
     },
@@ -283,8 +283,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2306043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.0975739",
         "count": "3",
         "name": "Women's Studies Research Centre, Gauhati University",
         "location": "https://www.gauhati.ac.in/academic/arts/womens-study#nav-10",
@@ -299,8 +299,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2306043"
+          "93.0975739",
+          "26.0006043"
         ]
       }
     },
@@ -310,15 +310,15 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2406043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.2175739",
         "count": "4",
         "name": "NEThing",
         "location": "https://www.nething.org/",
         "type": "Creative Collective",
         "active": "",
         "contact": "hi@nething.org",
-        "programs": "1. Feminist Learning Centre: 1.1. Feminist Participatory Action Research with a focus on climate justice and labour's rights\n1.2. Training and workshops with a focus on women’s participation on governance and politics, women’s property rights, women’s rights to land and natural resources, labour rights, violence against women, women and law.\n1.3. Documentation and archival of women's narratives under the Feminist Learning Centre\n2. Creative Collective: workshops, performances, screenings, exhibitions, and other programs for writers, artists,and social activists to discuss society and politics\n3. We Write, We Speak: workshops and discussions to further the feminist discourse",
+        "programs": "1. Feminist Learning Centre: 1.1. Feminist Participatory Action Research with a focus on climate justice and labour's rights\n1.2. Training and workshops with a focus on women’s participation on governance and politics, women’s property rights, women’s rights to land and natural resources, labour rights, violence against women, women and law.\n1.3. Documentation and archival of Women's Narratives under the Feminist Learning Centre\n2. Creative Collective: workshops, performances, screenings, exhibitions, and other programs for writers, artists,and social activists to discuss society and politics\n3. We Write, We Speak: workshops and discussions to further the feminist discourse",
         "keywords": "Research",
         "id": 12,
         "color": "#F3BEF1"
@@ -326,8 +326,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2406043"
+          "93.2175739",
+          "26.0006043"
         ]
       }
     },
@@ -337,8 +337,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2506043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.3375739",
         "count": "5",
         "name": "Drishti: A Queer Collective",
         "location": "https://www.facebook.com/DrishtiAQueerCollective/",
@@ -353,8 +353,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2506043"
+          "93.3375739",
+          "26.0006043"
         ]
       }
     },
@@ -364,8 +364,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2606043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.4575739",
         "count": "6",
         "name": "Xobdo: Dialogue, Dignity, Movement Foundation",
         "location": "https://www.instagram.com/xobdo_assam/",
@@ -380,8 +380,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2606043"
+          "93.4575739",
+          "26.0006043"
         ]
       }
     },
@@ -391,8 +391,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2706043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.5775739",
         "count": "7",
         "name": "Lambda, IIT Guwahati",
         "location": "https://www.facebook.com/lambdaiitg/",
@@ -407,8 +407,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2706043"
+          "93.5775739",
+          "26.0006043"
         ]
       }
     },
@@ -418,8 +418,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2806043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.6975739",
         "count": "8",
         "name": "Xomonnoy",
         "location": "https://www.facebook.com/Xomonnoy/",
@@ -434,8 +434,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2806043"
+          "93.6975739",
+          "26.0006043"
         ]
       }
     },
@@ -445,8 +445,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2906043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "93.8175739",
         "count": "9",
         "name": "All Adivasi Women's Association of Assam",
         "location": "",
@@ -461,8 +461,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2906043"
+          "93.8175739",
+          "26.0006043"
         ]
       }
     },
@@ -472,8 +472,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2006043",
-        "scatterLong": "92.9575739",
+        "scatterLat": "26.1206043",
+        "scatterLong": "92.7375739",
         "count": "10",
         "name": "Sexuality and Gender Equality (SAGE): The Barak Queer Collective",
         "location": "https://www.facebook.com/Sagethebarakqueercollective/",
@@ -488,8 +488,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9575739",
-          "26.2006043"
+          "92.7375739",
+          "26.1206043"
         ]
       }
     },
@@ -499,8 +499,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2106043",
-        "scatterLong": "92.9575739",
+        "scatterLat": "26.1206043",
+        "scatterLong": "92.8575739",
         "count": "11",
         "name": "Omeo Kumar Das Institute of Social Change and Development",
         "location": "http://www.okd.in/",
@@ -515,8 +515,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9575739",
-          "26.2106043"
+          "92.8575739",
+          "26.1206043"
         ]
       }
     },
@@ -526,8 +526,8 @@
         "region": "Assam, Meghalaya, Nagaland",
         "latitude": "25.4670308",
         "longitude": "91.366216",
-        "scatterLat": "25.4670308",
-        "scatterLong": "91.366216",
+        "scatterLat": "25.2670308",
+        "scatterLong": "91.166216",
         "count": "0",
         "name": "North East Network (NEN)",
         "location": "https://northeastnetwork.org/",
@@ -542,8 +542,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "91.366216",
-          "25.4670308"
+          "91.166216",
+          "25.2670308"
         ]
       }
     },
@@ -553,8 +553,8 @@
         "region": "Bangalore",
         "latitude": "12.9715987",
         "longitude": "77.5945627",
-        "scatterLat": "12.9715987",
-        "scatterLong": "77.5945627",
+        "scatterLat": "12.7715987",
+        "scatterLong": "77.3945627",
         "count": "0",
         "name": "Queer Archive for Memory Reflection and Activism",
         "location": "https://qamra.in/",
@@ -569,8 +569,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.5945627",
-          "12.9715987"
+          "77.3945627",
+          "12.7715987"
         ]
       }
     },
@@ -580,8 +580,8 @@
         "region": "Bihar",
         "latitude": "25.0960742",
         "longitude": "85.3131194",
-        "scatterLat": "25.0960742",
-        "scatterLong": "85.3131194",
+        "scatterLat": "24.8960742",
+        "scatterLong": "85.1131194",
         "count": "0",
         "name": "Dostanasafar",
         "location": "https://www.facebook.com/dostanasafar.bihar",
@@ -596,8 +596,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "85.3131194",
-          "25.0960742"
+          "85.1131194",
+          "24.8960742"
         ]
       }
     },
@@ -607,8 +607,8 @@
         "region": "Chandigarh",
         "latitude": "30.7333148",
         "longitude": "76.7794179",
-        "scatterLat": "30.7333148",
-        "scatterLong": "76.7794179",
+        "scatterLat": "30.5333148",
+        "scatterLong": "76.5794179",
         "count": "0",
         "name": "Department cum Centre for Women's Studies and Development, Panjab University",
         "location": "https://cwsd.puchd.ac.in/",
@@ -623,8 +623,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.7794179",
-          "30.7333148"
+          "76.5794179",
+          "30.5333148"
         ]
       }
     },
@@ -634,8 +634,8 @@
         "region": "Chhattisgarh",
         "latitude": "21.2786567",
         "longitude": "81.8661442",
-        "scatterLat": "21.2786567",
-        "scatterLong": "81.8661442",
+        "scatterLat": "21.0786567",
+        "scatterLong": "81.6661442",
         "count": "0",
         "name": "Centre for Women's Studies, Pt. Ravishankar Shukla University",
         "location": "https://www.prsu.ac.in/academic-departments/utd-departments/Centre-for-Womens-Studies/9",
@@ -650,8 +650,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "81.8661442",
-          "21.2786567"
+          "81.6661442",
+          "21.0786567"
         ]
       }
     },
@@ -661,8 +661,8 @@
         "region": "Chhattisgarh",
         "latitude": "21.2786567",
         "longitude": "81.8661442",
-        "scatterLat": "21.2886567",
-        "scatterLong": "81.8661442",
+        "scatterLat": "21.0786567",
+        "scatterLong": "81.7861442",
         "count": "1",
         "name": "Women Studies for Development Centre",
         "location": "https://ggu.ac.in/gguold/womens_studies_development_centre.html",
@@ -677,8 +677,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "81.8661442",
-          "21.2886567"
+          "81.7861442",
+          "21.0786567"
         ]
       }
     },
@@ -688,9 +688,9 @@
         "region": "Chhattisgarh",
         "latitude": "22.0796545",
         "longitude": "82.1409152",
-        "scatterLat": "22.0796545",
-        "scatterLong": "82.1409152",
-        "count": "0",
+        "scatterLat": "21.8796545",
+        "scatterLong": "82.1809152",
+        "count": "2",
         "name": "HAQ: Queer Alliance, Hidayatullah National Law University",
         "location": "https://www.facebook.com/allianceforqueers/",
         "type": "Community Organisation",
@@ -704,8 +704,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "82.1409152",
-          "22.0796545"
+          "82.1809152",
+          "21.8796545"
         ]
       }
     },
@@ -715,9 +715,9 @@
         "region": "Chhattisgarh",
         "latitude": "22.0796545",
         "longitude": "82.1409152",
-        "scatterLat": "22.0896545",
-        "scatterLong": "82.1409152",
-        "count": "1",
+        "scatterLat": "21.8796545",
+        "scatterLong": "82.3009152",
+        "count": "3",
         "name": "LGBTQ Chhattisgarh",
         "location": "https://www.instagram.com/lgbtqchhattisgarh/?hl=en",
         "type": "Community Organisation",
@@ -731,8 +731,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "82.1409152",
-          "22.0896545"
+          "82.3009152",
+          "21.8796545"
         ]
       }
     },
@@ -742,9 +742,9 @@
         "region": "Chhattisgarh",
         "latitude": "22.0796545",
         "longitude": "82.1409152",
-        "scatterLat": "22.0996545",
-        "scatterLong": "82.1409152",
-        "count": "2",
+        "scatterLat": "21.8796545",
+        "scatterLong": "82.4209152",
+        "count": "4",
         "name": "Mitwa Samiti",
         "location": "",
         "type": "NGO",
@@ -758,8 +758,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "82.1409152",
-          "22.0996545"
+          "82.4209152",
+          "21.8796545"
         ]
       }
     },
@@ -767,10 +767,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "76.9025",
         "count": "0",
         "name": "Nirantar",
         "location": "https://www.nirantar.net/",
@@ -785,8 +785,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7040592"
+          "76.9025",
+          "28.5041"
         ]
       }
     },
@@ -794,10 +794,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.0225",
         "count": "1",
         "name": "Nazariya: A Queer Feminist Resource Group",
         "location": "https://nazariyaqfrg.wordpress.com/",
@@ -812,8 +812,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7140592"
+          "77.0225",
+          "28.5041"
         ]
       }
     },
@@ -821,10 +821,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.1425",
         "count": "2",
         "name": "Sangini (India) Trust",
         "location": "https://sanginiindia.wordpress.com/",
@@ -839,8 +839,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7240592"
+          "77.1425",
+          "28.5041"
         ]
       }
     },
@@ -848,10 +848,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.2625",
         "count": "3",
         "name": "ABVA",
         "location": "http://aidsbhedbhavvirodhiandolan.blogspot.com/2021/08/",
@@ -866,8 +866,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7340592"
+          "77.2625",
+          "28.5041"
         ]
       }
     },
@@ -875,10 +875,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.3825",
         "count": "4",
         "name": "Gender at Work India",
         "location": "https://genderatwork.org/genderatwork-india/",
@@ -893,8 +893,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7440592"
+          "77.3825",
+          "28.5041"
         ]
       }
     },
@@ -902,10 +902,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.5025",
         "count": "5",
         "name": "Naz Foundation",
         "location": "https://www.nazindia.org/",
@@ -920,8 +920,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7540592"
+          "77.5025",
+          "28.5041"
         ]
       }
     },
@@ -929,10 +929,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7640592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.6225",
         "count": "6",
         "name": "Sakhi",
         "location": "",
@@ -947,8 +947,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7640592"
+          "77.6225",
+          "28.5041"
         ]
       }
     },
@@ -956,10 +956,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7740592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.7425",
         "count": "7",
         "name": "Talking About Reproductive and Sexual Health Issues (TARSHI)",
         "location": "https://www.tarshi.net/",
@@ -974,8 +974,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7740592"
+          "77.7425",
+          "28.5041"
         ]
       }
     },
@@ -983,10 +983,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7840592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.8625",
         "count": "8",
         "name": "Creating Resources for Empowerment in Action (CREA)",
         "location": "https://creaworld.org/",
@@ -1001,8 +1001,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7840592"
+          "77.8625",
+          "28.5041"
         ]
       }
     },
@@ -1010,10 +1010,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7940592",
-        "scatterLong": "77.1024902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.5041",
+        "scatterLong": "77.9825",
         "count": "9",
         "name": "Jagori",
         "location": "https://www.jagori.org/",
@@ -1028,8 +1028,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7940592"
+          "77.9825",
+          "28.5041"
         ]
       }
     },
@@ -1037,10 +1037,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "76.9025",
         "count": "10",
         "name": "Sangat: A Feminist Network",
         "location": "https://www.sangatnetwork.org/",
@@ -1055,8 +1055,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7040592"
+          "76.9025",
+          "28.6241"
         ]
       }
     },
@@ -1064,10 +1064,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.0225",
         "count": "11",
         "name": "Women in Security, Conflict Management, and Peace (WISCOMP)",
         "location": "https://wiscomp.org/",
@@ -1082,8 +1082,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7140592"
+          "77.0225",
+          "28.6241"
         ]
       }
     },
@@ -1091,10 +1091,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.1425",
         "count": "12",
         "name": "Centre For Social Research (CSR India)",
         "location": "https://www.csrindia.org/",
@@ -1109,8 +1109,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7240592"
+          "77.1425",
+          "28.6241"
         ]
       }
     },
@@ -1118,10 +1118,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.2625",
         "count": "13",
         "name": "Action India",
         "location": "https://www.action-india.org/",
@@ -1136,8 +1136,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7340592"
+          "77.2625",
+          "28.6241"
         ]
       }
     },
@@ -1145,10 +1145,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.3825",
         "count": "14",
         "name": "Rahi Foundation",
         "location": "https://www.rahifoundation.org/about.html",
@@ -1163,8 +1163,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7440592"
+          "77.3825",
+          "28.6241"
         ]
       }
     },
@@ -1172,10 +1172,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.5025",
         "count": "15",
         "name": "Gather Sisters",
         "location": "https://gathersisters.com/",
@@ -1190,8 +1190,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7540592"
+          "77.5025",
+          "28.6241"
         ]
       }
     },
@@ -1199,10 +1199,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7640592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.6225",
         "count": "16",
         "name": "Pinjra Tod (Break the Cage)",
         "location": "https://pinjratod.wordpress.com/",
@@ -1217,8 +1217,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7640592"
+          "77.6225",
+          "28.6241"
         ]
       }
     },
@@ -1226,10 +1226,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7740592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.7425",
         "count": "17",
         "name": "Zubaan",
         "location": "https://zubaanbooks.com/",
@@ -1244,8 +1244,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7740592"
+          "77.7425",
+          "28.6241"
         ]
       }
     },
@@ -1253,10 +1253,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7840592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.8625",
         "count": "18",
         "name": "Women's Studies Centre, Jesus & Mary College, Delhi University",
         "location": "https://www.jmc.ac.in/compulsorysocieties/womensstudiescentre",
@@ -1271,8 +1271,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7840592"
+          "77.8625",
+          "28.6241"
         ]
       }
     },
@@ -1280,10 +1280,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7940592",
-        "scatterLong": "77.1224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.6241",
+        "scatterLong": "77.9825",
         "count": "19",
         "name": "Centre For Women's Studies, Jawaharlal Nehru University",
         "location": "https://www.jnu.ac.in/sss/cws",
@@ -1298,8 +1298,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1224902",
-          "28.7940592"
+          "77.9825",
+          "28.6241"
         ]
       }
     },
@@ -1307,10 +1307,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "76.9025",
         "count": "20",
         "name": "School of Gender and Development Studies, Indira Gandhi National Open University",
         "location": "http://ignou.ac.in/ignou/aboutignou/school/sogds/introduction",
@@ -1325,8 +1325,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7040592"
+          "76.9025",
+          "28.7441"
         ]
       }
     },
@@ -1334,10 +1334,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.0225",
         "count": "21",
         "name": "Sarojini Naidu Centre For Women's Studies, Jamia Millia Islamia",
         "location": "https://www.jmi.ac.in/scws",
@@ -1352,8 +1352,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7140592"
+          "77.0225",
+          "28.7441"
         ]
       }
     },
@@ -1361,10 +1361,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.1425",
         "count": "22",
         "name": "Centre for Women's Studies, Shri Lal Bahadur Shastri National Sanskrit University",
         "location": "https://www.slbsrsv.ac.in/administration/sections/centre-womens-studies/about-centre",
@@ -1379,8 +1379,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7240592"
+          "77.1425",
+          "28.7441"
         ]
       }
     },
@@ -1388,10 +1388,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.2625",
         "count": "23",
         "name": "Centre for Gender, Culture and Social Processes, St. Stephen's College, University of Delhi",
         "location": "https://www.ststephens.edu/centre-for-gender-culture-social-processes/",
@@ -1406,8 +1406,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7340592"
+          "77.2625",
+          "28.7441"
         ]
       }
     },
@@ -1415,10 +1415,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.3825",
         "count": "24",
         "name": "Women's Studies and Development Centre of Advanced Study, University of Delhi",
         "location": "http://wsdc.du.ac.in/",
@@ -1433,8 +1433,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7440592"
+          "77.3825",
+          "28.7441"
         ]
       }
     },
@@ -1442,10 +1442,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.5025",
         "count": "25",
         "name": "Department of Gender Studies, School of Human Studies, Ambedkar University",
         "location": "https://shs.aud.ac.in/",
@@ -1460,8 +1460,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7540592"
+          "77.5025",
+          "28.7441"
         ]
       }
     },
@@ -1469,10 +1469,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7640592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.6225",
         "count": "26",
         "name": "Feminist Approach To Technology",
         "location": "https://www.fat-net.org/",
@@ -1487,8 +1487,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7640592"
+          "77.6225",
+          "28.7441"
         ]
       }
     },
@@ -1496,10 +1496,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7740592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.7425",
         "count": "27",
         "name": "Partners for Law in Development",
         "location": "https://pldindia.org/",
@@ -1514,8 +1514,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7740592"
+          "77.7425",
+          "28.7441"
         ]
       }
     },
@@ -1523,10 +1523,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7840592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.8625",
         "count": "28",
         "name": "Indian Association for Women's Studies",
         "location": "http://www.iaws.co.in/",
@@ -1541,8 +1541,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7840592"
+          "77.8625",
+          "28.7441"
         ]
       }
     },
@@ -1550,10 +1550,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7940592",
-        "scatterLong": "77.1424902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.7441",
+        "scatterLong": "77.9825",
         "count": "29",
         "name": "Voices Against 377",
         "location": "http://www.voicesagainst377.org/",
@@ -1568,8 +1568,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1424902",
-          "28.7940592"
+          "77.9825",
+          "28.7441"
         ]
       }
     },
@@ -1577,10 +1577,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "76.9025",
         "count": "30",
         "name": "Nazariya LGBT",
         "location": "https://nazariyalgbt.wordpress.com/",
@@ -1595,8 +1595,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7040592"
+          "76.9025",
+          "28.8641"
         ]
       }
     },
@@ -1604,10 +1604,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.0225",
         "count": "31",
         "name": "Azad Foundation",
         "location": "http://azadfoundation.com/",
@@ -1622,8 +1622,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7140592"
+          "77.0225",
+          "28.8641"
         ]
       }
     },
@@ -1631,10 +1631,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.1425",
         "count": "32",
         "name": "SAMA: Resource Group for Women and Health",
         "location": "https://samawomenshealth.in/",
@@ -1649,8 +1649,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7240592"
+          "77.1425",
+          "28.8641"
         ]
       }
     },
@@ -1658,10 +1658,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.2625",
         "count": "33",
         "name": "Dhanak: A Queer Group, Jawaharlal Nehru University",
         "location": "https://www.facebook.com/dhanak.jnu/",
@@ -1676,8 +1676,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7340592"
+          "77.2625",
+          "28.8641"
         ]
       }
     },
@@ -1685,10 +1685,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.3825",
         "count": "34",
         "name": "Nigah: Queering Perspectives",
         "location": "http://nigahdelhi.blogspot.com/",
@@ -1703,8 +1703,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7440592"
+          "77.3825",
+          "28.8641"
         ]
       }
     },
@@ -1712,10 +1712,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.5025",
         "count": "35",
         "name": "PRISM (People for the Rights of Indian Sexuality Minorities) / Thursday Forum",
         "location": "",
@@ -1730,8 +1730,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7540592"
+          "77.5025",
+          "28.8641"
         ]
       }
     },
@@ -1739,10 +1739,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7640592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.6225",
         "count": "36",
         "name": "Saheli: Women's Resource Centre",
         "location": "https://sites.google.com/site/saheliorgsite/",
@@ -1757,8 +1757,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7640592"
+          "77.6225",
+          "28.8641"
         ]
       }
     },
@@ -1766,10 +1766,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7740592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.7425",
         "count": "37",
         "name": "Queer Campus",
         "location": "http://queercampus.blogspot.com/",
@@ -1784,8 +1784,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7740592"
+          "77.7425",
+          "28.8641"
         ]
       }
     },
@@ -1793,10 +1793,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7840592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.8625",
         "count": "38",
         "name": "AUD Queer Collective, Ambedkar University",
         "location": "https://www.facebook.com/AUDQC/",
@@ -1811,8 +1811,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7840592"
+          "77.8625",
+          "28.8641"
         ]
       }
     },
@@ -1820,10 +1820,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7940592",
-        "scatterLong": "77.1624902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.8641",
+        "scatterLong": "77.9825",
         "count": "39",
         "name": "Miranda House Queer Collective, University of Delhi",
         "location": "https://mirandahouseqc.wordpress.com/",
@@ -1838,8 +1838,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1624902",
-          "28.7940592"
+          "77.9825",
+          "28.8641"
         ]
       }
     },
@@ -1847,10 +1847,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "76.9025",
         "count": "40",
         "name": "Jamia Queer Collective, Jamia Milia Islamia",
         "location": "https://jamiaqueercollective.wordpress.com/",
@@ -1865,8 +1865,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7040592"
+          "76.9025",
+          "28.9841"
         ]
       }
     },
@@ -1874,10 +1874,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.0225",
         "count": "41",
         "name": "Indradhanu: LGBTQ Collective, IIT Delhi",
         "location": "https://www.facebook.com/indradhanu.iit/",
@@ -1892,8 +1892,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7140592"
+          "77.0225",
+          "28.9841"
         ]
       }
     },
@@ -1901,10 +1901,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.1425",
         "count": "42",
         "name": "All India Women's Conference",
         "location": "http://www.aiwc.org.in/",
@@ -1919,8 +1919,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7240592"
+          "77.1425",
+          "28.9841"
         ]
       }
     },
@@ -1928,10 +1928,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.2625",
         "count": "43",
         "name": "Mahila Dakshata Samiti",
         "location": "http://www.mdsnational.org/",
@@ -1946,8 +1946,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7340592"
+          "77.2625",
+          "28.9841"
         ]
       }
     },
@@ -1955,10 +1955,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.3825",
         "count": "44",
         "name": "Transmen Collective: Lives of Transmen in India",
         "location": "https://transmencollective.wordpress.com/",
@@ -1973,8 +1973,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7440592"
+          "77.3825",
+          "28.9841"
         ]
       }
     },
@@ -1982,10 +1982,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.5025",
         "count": "45",
         "name": "Harmless Hugs",
         "location": "https://www.facebook.com/harmlesshugs/",
@@ -2000,8 +2000,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7540592"
+          "77.5025",
+          "28.9841"
         ]
       }
     },
@@ -2009,10 +2009,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7640592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.6225",
         "count": "46",
         "name": "Aarambh Foundation",
         "location": "https://www.facebook.com/Aarambh-Foundation-India-Trust-156729291683453",
@@ -2027,8 +2027,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7640592"
+          "77.6225",
+          "28.9841"
         ]
       }
     },
@@ -2036,10 +2036,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7740592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.7425",
         "count": "47",
         "name": "Mitr Trust",
         "location": "https://www.facebook.com/Mitrtrustdelhi/",
@@ -2054,8 +2054,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7740592"
+          "77.7425",
+          "28.9841"
         ]
       }
     },
@@ -2063,10 +2063,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7840592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.8625",
         "count": "48",
         "name": "BI-Collective Delhi",
         "location": "https://bicollectivedelhi.wordpress.com/",
@@ -2081,8 +2081,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7840592"
+          "77.8625",
+          "28.9841"
         ]
       }
     },
@@ -2090,10 +2090,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7940592",
-        "scatterLong": "77.1824902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "28.9841",
+        "scatterLong": "77.9825",
         "count": "49",
         "name": "Keshav Suri Foundation",
         "location": "https://keshavsuri.foundation/",
@@ -2108,8 +2108,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1824902",
-          "28.7940592"
+          "77.9825",
+          "28.9841"
         ]
       }
     },
@@ -2117,10 +2117,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "76.9025",
         "count": "50",
         "name": "Deepa Ardnareshwar Empowerment Foundation",
         "location": "https://www.facebook.com/Deepaardnareshwar/",
@@ -2135,8 +2135,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7040592"
+          "76.9025",
+          "29.1041"
         ]
       }
     },
@@ -2144,10 +2144,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7140592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "77.0225",
         "count": "51",
         "name": "Impulse New Delhi",
         "location": "https://www.facebook.com/ImpulseNewDelhi/",
@@ -2162,8 +2162,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7140592"
+          "77.0225",
+          "29.1041"
         ]
       }
     },
@@ -2171,10 +2171,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7240592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "77.1425",
         "count": "52",
         "name": "Centre For Health and Social Justice",
         "location": "https://chsj.org/",
@@ -2189,8 +2189,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7240592"
+          "77.1425",
+          "29.1041"
         ]
       }
     },
@@ -2198,10 +2198,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7340592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "77.2625",
         "count": "53",
         "name": "Karma Care: Centre for Councelling and Wellbeing",
         "location": "https://www.karmacare.in/",
@@ -2216,8 +2216,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7340592"
+          "77.2625",
+          "29.1041"
         ]
       }
     },
@@ -2225,10 +2225,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7440592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "77.3825",
         "count": "54",
         "name": "Breakthrough India",
         "location": "https://inbreakthrough.org/",
@@ -2243,8 +2243,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7440592"
+          "77.3825",
+          "29.1041"
         ]
       }
     },
@@ -2252,10 +2252,10 @@
       "type": "Feature",
       "properties": {
         "region": "Delhi",
-        "latitude": "28.7040592",
-        "longitude": "77.1024902",
-        "scatterLat": "28.7540592",
-        "scatterLong": "77.2224902",
+        "latitude": "28.7041",
+        "longitude": "77.1025",
+        "scatterLat": "29.1041",
+        "scatterLong": "77.5025",
         "count": "55",
         "name": "DU Queer Collective, University of Delhi",
         "location": "https://duqueercollective.wordpress.com/",
@@ -2270,8 +2270,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2224902",
-          "28.7540592"
+          "77.5025",
+          "29.1041"
         ]
       }
     },
@@ -2281,8 +2281,8 @@
         "region": "Goa",
         "latitude": "15.2993265",
         "longitude": "74.123996",
-        "scatterLat": "15.2993265",
-        "scatterLong": "74.123996",
+        "scatterLat": "15.0993265",
+        "scatterLong": "73.923996",
         "count": "0",
         "name": "Video Volunteers",
         "location": "https://www.videovolunteers.org/",
@@ -2297,8 +2297,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.123996",
-          "15.2993265"
+          "73.923996",
+          "15.0993265"
         ]
       }
     },
@@ -2308,8 +2308,8 @@
         "region": "Goa",
         "latitude": "15.2993265",
         "longitude": "74.123996",
-        "scatterLat": "15.3093265",
-        "scatterLong": "74.123996",
+        "scatterLat": "15.0993265",
+        "scatterLong": "74.043996",
         "count": "1",
         "name": "Goa Rainbow Trust",
         "location": "https://www.facebook.com/grtgoa/",
@@ -2324,8 +2324,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.123996",
-          "15.3093265"
+          "74.043996",
+          "15.0993265"
         ]
       }
     },
@@ -2335,8 +2335,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.258652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "70.9923805",
         "count": "0",
         "name": "SWATI: Society for Women’s Action and Training Initiative",
         "location": "https://www.swati.org.in/",
@@ -2351,8 +2351,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.258652"
+          "70.9923805",
+          "22.058652"
         ]
       }
     },
@@ -2362,8 +2362,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.268652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.1123805",
         "count": "1",
         "name": "Anandi",
         "location": "https://anandi-india.org/about-us/#mission-vision",
@@ -2378,8 +2378,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.268652"
+          "71.1123805",
+          "22.058652"
         ]
       }
     },
@@ -2389,8 +2389,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.278652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.2323805",
         "count": "2",
         "name": "QueerAbad",
         "location": "https://www.facebook.com/queerabad/",
@@ -2405,8 +2405,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.278652"
+          "71.2323805",
+          "22.058652"
         ]
       }
     },
@@ -2416,8 +2416,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.288652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.3523805",
         "count": "3",
         "name": "Lakshay Trust",
         "location": "http://www.lakshya-trust.org/who-we-are/about-lakshya",
@@ -2432,8 +2432,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.288652"
+          "71.3523805",
+          "22.058652"
         ]
       }
     },
@@ -2443,8 +2443,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.298652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.4723805",
         "count": "4",
         "name": "Self Employed Women's Association(SEWA)",
         "location": "https://www.sewa.org/",
@@ -2459,8 +2459,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.298652"
+          "71.4723805",
+          "22.058652"
         ]
       }
     },
@@ -2470,8 +2470,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.308652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.5923805",
         "count": "5",
         "name": "Vikalp Women’s Group",
         "location": "https://vikalpwomensgroup.wordpress.com/",
@@ -2486,8 +2486,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.308652"
+          "71.5923805",
+          "22.058652"
         ]
       }
     },
@@ -2497,8 +2497,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.318652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.7123805",
         "count": "6",
         "name": "Women's Studies Centre, Sardar Patel University",
         "location": "https://www.spuvvn.edu/academics/academic-centres/womens-study-centre/",
@@ -2513,8 +2513,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.318652"
+          "71.7123805",
+          "22.058652"
         ]
       }
     },
@@ -2524,8 +2524,8 @@
         "region": "Gujarat, Maharashtra, Karnataka, Kerela, Tamil Nadu, Andhra Pradesh, Telangana, Jharkhand",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1124372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "78.8192997",
         "count": "0",
         "name": "National Network of Sex Workers",
         "location": "http://nnswindia.org/",
@@ -2540,8 +2540,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1124372"
+          "78.8192997",
+          "17.9124372"
         ]
       }
     },
@@ -2551,8 +2551,8 @@
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0587757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "75.885601",
         "count": "0",
         "name": "Women's Studies Research Centre, Kurukshetra University",
         "location": "https://www.kuk.ac.in/information.php?m=Yg==&L01_id=MTE=&L01_direction=H&L02_id=ODQ=",
@@ -2567,8 +2567,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0587757"
+          "75.885601",
+          "28.8587757"
         ]
       }
     },
@@ -2578,8 +2578,8 @@
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0687757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "76.005601",
         "count": "1",
         "name": "Women's Studies Centre, Maharshi Dayanand University",
         "location": "https://mdu.ac.in/defaultMatter.aspx?PageId=292",
@@ -2594,8 +2594,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0687757"
+          "76.005601",
+          "28.8587757"
         ]
       }
     },
@@ -2605,8 +2605,8 @@
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0787757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "76.125601",
         "count": "2",
         "name": "Centre For Women, Law, And Social Change, O. P. Jindal Global University",
         "location": "https://jgu.edu.in/jgls/women-law-and-social-change/",
@@ -2621,8 +2621,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0787757"
+          "76.125601",
+          "28.8587757"
         ]
       }
     },
@@ -2632,8 +2632,8 @@
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0887757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "76.245601",
         "count": "3",
         "name": "Centre for Studies in Gender and Sexuality, Ashoka University",
         "location": "http://csgs.ashoka.edu.in/",
@@ -2648,8 +2648,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0887757"
+          "76.245601",
+          "28.8587757"
         ]
       }
     },
@@ -2659,8 +2659,8 @@
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0987757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "76.365601",
         "count": "4",
         "name": "The Feminist Collective, Ashoka University",
         "location": "https://thefeministcollectiveashokau.wordpress.com/",
@@ -2675,8 +2675,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0987757"
+          "76.365601",
+          "28.8587757"
         ]
       }
     },
@@ -2686,8 +2686,8 @@
         "region": "Himachal Pradesh",
         "latitude": "31.1048294",
         "longitude": "77.1733901",
-        "scatterLat": "31.1048294",
-        "scatterLong": "77.1733901",
+        "scatterLat": "30.9048294",
+        "scatterLong": "76.9733901",
         "count": "0",
         "name": "Centre for Women's Studies and Development, Himachal Pradesh University",
         "location": "https://hpuniv.ac.in/university-detail/home.php?women-studies-and-development",
@@ -2702,8 +2702,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1733901",
-          "31.1048294"
+          "76.9733901",
+          "30.9048294"
         ]
       }
     },
@@ -2713,8 +2713,8 @@
         "region": "Himachal Pradesh",
         "latitude": "31.1048294",
         "longitude": "77.1733901",
-        "scatterLat": "31.1148294",
-        "scatterLong": "77.1733901",
+        "scatterLat": "30.9048294",
+        "scatterLong": "77.0933901",
         "count": "1",
         "name": "Sajhe Sapne",
         "location": "https://sajhesapne.org/about",
@@ -2729,8 +2729,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1733901",
-          "31.1148294"
+          "77.0933901",
+          "30.9048294"
         ]
       }
     },
@@ -2740,8 +2740,8 @@
         "region": "Himachal Pradesh",
         "latitude": "31.1048294",
         "longitude": "77.1733901",
-        "scatterLat": "31.1248294",
-        "scatterLong": "77.1733901",
+        "scatterLat": "30.9048294",
+        "scatterLong": "77.2133901",
         "count": "2",
         "name": "Himachal Queer Collective",
         "location": "https://www.instagram.com/himachalqueercollective/",
@@ -2756,8 +2756,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1733901",
-          "31.1248294"
+          "77.2133901",
+          "30.9048294"
         ]
       }
     },
@@ -2767,8 +2767,8 @@
         "region": "Himachal Pradesh",
         "latitude": "31.1048294",
         "longitude": "77.1733901",
-        "scatterLat": "31.1348294",
-        "scatterLong": "77.1733901",
+        "scatterLat": "30.9048294",
+        "scatterLong": "77.3333901",
         "count": "3",
         "name": "Sambaavnaa Institute of Public Policy and Politics",
         "location": "https://www.sambhaavnaa.org/",
@@ -2783,8 +2783,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1733901",
-          "31.1348294"
+          "77.3333901",
+          "30.9048294"
         ]
       }
     },
@@ -2794,8 +2794,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.277839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.1412179",
         "count": "0",
         "name": "Association of Parents of Disappeared Persons (APDP)",
         "location": "https://apdpkashmir.com/",
@@ -2810,8 +2810,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.277839"
+          "75.1412179",
+          "33.077839"
         ]
       }
     },
@@ -2821,8 +2821,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.287839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.2612179",
         "count": "1",
         "name": "Kashmir Women's Collective",
         "location": "https://www.facebook.com/kashmirwomenscollective/",
@@ -2837,8 +2837,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.287839"
+          "75.2612179",
+          "33.077839"
         ]
       }
     },
@@ -2848,8 +2848,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.297839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.3812179",
         "count": "2",
         "name": "Mehram: Women’s Cell, Kashmir",
         "location": "facebook.com/MehramKashmir/",
@@ -2864,8 +2864,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.297839"
+          "75.3812179",
+          "33.077839"
         ]
       }
     },
@@ -2875,8 +2875,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.307839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.5012179",
         "count": "3",
         "name": "Centre for Women's Studies, University of Jammu",
         "location": "https://www.jammuuniversity.ac.in/cws/introduction",
@@ -2891,8 +2891,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.307839"
+          "75.5012179",
+          "33.077839"
         ]
       }
     },
@@ -2902,8 +2902,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.317839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.6212179",
         "count": "4",
         "name": "Centre for Women's Studies and Research, University of Kashmir",
         "location": "http://wsc.uok.edu.in/Main/Default.aspx",
@@ -2918,8 +2918,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.317839"
+          "75.6212179",
+          "33.077839"
         ]
       }
     },
@@ -2929,8 +2929,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.327839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.7412179",
         "count": "5",
         "name": "Sonzal Welfare Trust",
         "location": "https://www.facebook.com/sonzalwelfare/",
@@ -2945,8 +2945,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.327839"
+          "75.7412179",
+          "33.077839"
         ]
       }
     },
@@ -2956,8 +2956,8 @@
         "region": "Jharkhand",
         "latitude": "23.6101808",
         "longitude": "85.2799354",
-        "scatterLat": "23.6101808",
-        "scatterLong": "85.2799354",
+        "scatterLat": "23.4101808",
+        "scatterLong": "85.0799354",
         "count": "0",
         "name": "LGBTQ Jamshedpur",
         "location": "https://www.instagram.com/jamshedpurpride/",
@@ -2972,8 +2972,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "85.2799354",
-          "23.6101808"
+          "85.0799354",
+          "23.4101808"
         ]
       }
     },
@@ -2983,8 +2983,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3172775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.5138884",
         "count": "0",
         "name": "ALF (Alternative Law forum )",
         "location": "http://altlawforum.org/about/",
@@ -2999,8 +2999,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3172775"
+          "75.5138884",
+          "15.1172775"
         ]
       }
     },
@@ -3010,8 +3010,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3272775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.6338884",
         "count": "1",
         "name": "Ahalyabai Post Graduate Centre for Women's Studies Research and Extension",
         "location": "http://ka.kswu.ac.in/womenstudies",
@@ -3026,8 +3026,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3272775"
+          "75.6338884",
+          "15.1172775"
         ]
       }
     },
@@ -3037,8 +3037,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3372775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.7538884",
         "count": "2",
         "name": "Centre for Ideal Womanhood",
         "location": "http://ka.kswu.ac.in/womanhood",
@@ -3053,8 +3053,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3372775"
+          "75.7538884",
+          "15.1172775"
         ]
       }
     },
@@ -3064,8 +3064,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3472775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.8738884",
         "count": "3",
         "name": "Centre for Women's Studies, Kuvempu University",
         "location": "http://www.kuvempu.ac.in/eng/women_study_center.php",
@@ -3080,8 +3080,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3472775"
+          "75.8738884",
+          "15.1172775"
         ]
       }
     },
@@ -3091,8 +3091,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3572775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.9938884",
         "count": "4",
         "name": "Centre For Women's Studies, Mangalore University",
         "location": "https://mangaloreuniversity.ac.in/center-women-study",
@@ -3107,8 +3107,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3572775"
+          "75.9938884",
+          "15.1172775"
         ]
       }
     },
@@ -3118,8 +3118,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3672775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "76.1138884",
         "count": "5",
         "name": "Department of Women's Studies",
         "location": "http://vskub.ac.in/department-of-womens-study/",
@@ -3134,8 +3134,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3672775"
+          "76.1138884",
+          "15.1172775"
         ]
       }
     },
@@ -3145,8 +3145,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3772775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "76.2338884",
         "count": "6",
         "name": "Centre for Women and Law, NLSIU",
         "location": "https://www.nls.ac.in/centres/centre-for-women-and-the-law/",
@@ -3161,8 +3161,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3772775"
+          "76.2338884",
+          "15.1172775"
         ]
       }
     },
@@ -3172,8 +3172,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3872775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "76.3538884",
         "count": "7",
         "name": "Deoartment of PG studies and research in Women's Studies, Gulbarga University",
         "location": "https://gug.ac.in/load?menu=m03&page=fss-women-studies",
@@ -3188,8 +3188,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3872775"
+          "76.3538884",
+          "15.1172775"
         ]
       }
     },
@@ -3199,8 +3199,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3972775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "76.4738884",
         "count": "8",
         "name": "Centre for Women's Studies, Bangalore University",
         "location": "https://eng.bangaloreuniversity.ac.in/women-studies/",
@@ -3215,8 +3215,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3972775"
+          "76.4738884",
+          "15.1172775"
         ]
       }
     },
@@ -3226,8 +3226,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.4072775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "76.5938884",
         "count": "9",
         "name": "WHaQ!",
         "location": "http://whaq.blogspot.com/",
@@ -3242,8 +3242,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.4072775"
+          "76.5938884",
+          "15.1172775"
         ]
       }
     },
@@ -3253,8 +3253,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3172775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "75.5138884",
         "count": "10",
         "name": "Solidarity Foundation: For The Dignity of Sex Workers, Gender and Sexual Minorities",
         "location": "https://www.solidarityfoundation.in/",
@@ -3269,8 +3269,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3172775"
+          "75.5138884",
+          "15.2372775"
         ]
       }
     },
@@ -3280,8 +3280,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3272775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "75.6338884",
         "count": "11",
         "name": "Aravani Art Project",
         "location": "https://aravaniartproject.com/",
@@ -3296,8 +3296,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3272775"
+          "75.6338884",
+          "15.2372775"
         ]
       }
     },
@@ -3307,8 +3307,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3372775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "75.7538884",
         "count": "12",
         "name": "Ondede: Dignity, Voice and Sexuality",
         "location": "https://ondede.wordpress.com/about/",
@@ -3323,8 +3323,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3372775"
+          "75.7538884",
+          "15.2372775"
         ]
       }
     },
@@ -3334,8 +3334,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3472775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "75.8738884",
         "count": "13",
         "name": "Ashodaya Samiti",
         "location": "http://www.ashodayasamithi.org/frontend/httpdocs/",
@@ -3350,8 +3350,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3472775"
+          "75.8738884",
+          "15.2372775"
         ]
       }
     },
@@ -3361,8 +3361,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3572775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "75.9938884",
         "count": "14",
         "name": "Sahodari Foundation",
         "location": "https://sahodari.org/",
@@ -3377,8 +3377,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3572775"
+          "75.9938884",
+          "15.2372775"
         ]
       }
     },
@@ -3388,8 +3388,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3672775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "76.1138884",
         "count": "15",
         "name": "Vimochana",
         "location": "https://www.vimochana.co.in/",
@@ -3404,8 +3404,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3672775"
+          "76.1138884",
+          "15.2372775"
         ]
       }
     },
@@ -3415,8 +3415,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3772775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "76.2338884",
         "count": "16",
         "name": "Maara: A Media and Arts Collective",
         "location": "https://www.maraa.in/",
@@ -3431,8 +3431,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3772775"
+          "76.2338884",
+          "15.2372775"
         ]
       }
     },
@@ -3442,8 +3442,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3872775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "76.3538884",
         "count": "17",
         "name": "Centre for Law and Policy Research",
         "location": "https://clpr.org.in/",
@@ -3458,8 +3458,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3872775"
+          "76.3538884",
+          "15.2372775"
         ]
       }
     },
@@ -3469,8 +3469,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3972775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "76.4738884",
         "count": "18",
         "name": "Sangama",
         "location": "http://sangama.org/",
@@ -3485,8 +3485,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.3972775"
+          "76.4738884",
+          "15.2372775"
         ]
       }
     },
@@ -3496,8 +3496,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.4072775",
-        "scatterLong": "75.7338884",
+        "scatterLat": "15.2372775",
+        "scatterLong": "76.5938884",
         "count": "19",
         "name": "Hidden Pockets Collective",
         "location": "https://www.hidden-pockets.com/",
@@ -3512,8 +3512,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "15.4072775"
+          "76.5938884",
+          "15.2372775"
         ]
       }
     },
@@ -3523,9 +3523,9 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3172775",
-        "scatterLong": "75.7138884",
-        "count": "0",
+        "scatterLat": "15.3572775",
+        "scatterLong": "75.5138884",
+        "count": "20",
         "name": "Swabhava",
         "location": "http://swabhava.org/",
         "type": "Charitable Trust",
@@ -3539,8 +3539,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3172775"
+          "75.5138884",
+          "15.3572775"
         ]
       }
     },
@@ -3550,9 +3550,9 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3272775",
-        "scatterLong": "75.7138884",
-        "count": "1",
+        "scatterLat": "15.3572775",
+        "scatterLong": "75.6338884",
+        "count": "21",
         "name": "Mobbera Foundation",
         "location": "https://mobberafoundation.com/",
         "type": "NGO",
@@ -3566,8 +3566,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3272775"
+          "75.6338884",
+          "15.3572775"
         ]
       }
     },
@@ -3577,9 +3577,9 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3372775",
-        "scatterLong": "75.7138884",
-        "count": "2",
+        "scatterLat": "15.3572775",
+        "scatterLong": "75.7538884",
+        "count": "22",
         "name": "Indian Institute of Human Settlement( IIHS)",
         "location": "",
         "type": "Research Organization",
@@ -3593,8 +3593,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3372775"
+          "75.7538884",
+          "15.3572775"
         ]
       }
     },
@@ -3604,9 +3604,9 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3472775",
-        "scatterLong": "75.7138884",
-        "count": "3",
+        "scatterLat": "15.3572775",
+        "scatterLong": "75.8738884",
+        "count": "23",
         "name": "Hasiru Dala",
         "location": "https://hasirudala.in/",
         "type": "NGO",
@@ -3620,8 +3620,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3472775"
+          "75.8738884",
+          "15.3572775"
         ]
       }
     },
@@ -3632,8 +3632,8 @@
         "latitude": "15.3172775",
         "longitude": "75.7138884",
         "scatterLat": "15.3572775",
-        "scatterLong": "75.7138884",
-        "count": "4",
+        "scatterLong": "75.9938884",
+        "count": "24",
         "name": "Vidyaranya Foundation",
         "location": "https://www.vidyaranya.org/",
         "type": "NGO",
@@ -3647,7 +3647,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
+          "75.9938884",
           "15.3572775"
         ]
       }
@@ -3658,8 +3658,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8505159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.0710833",
         "count": "0",
         "name": "Women's Studies Centre , Cochin University of Science and Technolongy",
         "location": "https://wsc.cusat.ac.in/",
@@ -3674,8 +3674,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8505159"
+          "76.0710833",
+          "10.6505159"
         ]
       }
     },
@@ -3685,8 +3685,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8605159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.1910833",
         "count": "1",
         "name": "Department of Women's Studies, University of Calicut",
         "location": "https://womenstudies.uoc.ac.in/",
@@ -3701,8 +3701,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8605159"
+          "76.1910833",
+          "10.6505159"
         ]
       }
     },
@@ -3712,8 +3712,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8705159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.3110833",
         "count": "2",
         "name": "Thulyata Mahila Samajam",
         "location": "NA",
@@ -3728,8 +3728,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8705159"
+          "76.3110833",
+          "10.6505159"
         ]
       }
     },
@@ -3739,8 +3739,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8805159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.4310833",
         "count": "3",
         "name": "Anweshi Women's Counselling Centre",
         "location": "https://anweshi.org/",
@@ -3755,8 +3755,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8805159"
+          "76.4310833",
+          "10.6505159"
         ]
       }
     },
@@ -3766,8 +3766,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8905159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.5510833",
         "count": "4",
         "name": "Navjyothi Mahila Samajam",
         "location": "NA",
@@ -3782,8 +3782,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8905159"
+          "76.5510833",
+          "10.6505159"
         ]
       }
     },
@@ -3793,9 +3793,9 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8505159",
-        "scatterLong": "76.2710833",
-        "count": "0",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.6710833",
+        "count": "5",
         "name": "Sahayatrika",
         "location": "https://www.facebook.com/sahayatrika.shr/",
         "type": "NGO",
@@ -3809,8 +3809,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8505159"
+          "76.6710833",
+          "10.6505159"
         ]
       }
     },
@@ -3820,9 +3820,9 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8605159",
-        "scatterLong": "76.2710833",
-        "count": "1",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.7910833",
+        "count": "6",
         "name": "Sakhi: Women's Resource Centre",
         "location": "http://sakhikerala.org/about-us/",
         "type": "NGO and a Research Centre",
@@ -3836,8 +3836,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8605159"
+          "76.7910833",
+          "10.6505159"
         ]
       }
     },
@@ -3847,9 +3847,9 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8705159",
-        "scatterLong": "76.2710833",
-        "count": "2",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.9110833",
+        "count": "7",
         "name": "Sarojini Naidu Mahila Samajam",
         "location": "NA",
         "type": "NGO",
@@ -3863,8 +3863,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8705159"
+          "76.9110833",
+          "10.6505159"
         ]
       }
     },
@@ -3874,9 +3874,9 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8805159",
-        "scatterLong": "76.2710833",
-        "count": "3",
+        "scatterLat": "10.6505159",
+        "scatterLong": "77.0310833",
+        "count": "8",
         "name": "Queerala",
         "location": "http://queerala.org/about-us/",
         "type": "NGO",
@@ -3890,8 +3890,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8805159"
+          "77.0310833",
+          "10.6505159"
         ]
       }
     },
@@ -3901,8 +3901,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.5138884",
         "count": "0",
         "name": "Krantijyoti Svitribai Phule Women's Studies Centre",
         "location": "http://www.unipune.ac.in/snc/womens_studies_centre/default.htm",
@@ -3917,8 +3917,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7514798"
+          "75.5138884",
+          "19.5514798"
         ]
       }
     },
@@ -3928,8 +3928,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7614798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.6338884",
         "count": "1",
         "name": "Department of Gender and Women's Studies, Sant Gadge Baba Amravati University",
         "location": "https://www.sgbau.ac.in/departments/GenderAndWoman/Default.aspx",
@@ -3944,8 +3944,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7614798"
+          "75.6338884",
+          "19.5514798"
         ]
       }
     },
@@ -3955,8 +3955,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7714798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.7538884",
         "count": "2",
         "name": "the Centre for Women's Studies and Development, RTM University",
         "location": "https://www.nagpuruniversity.ac.in/index.php/otherdepartment/Contentpage/index/Ri94bXErSUpWZjlQWlZYTzZ3PT0%3D/RlBrcXZ1cEdTZnhTWlZRPQ%3D%3D/en",
@@ -3971,8 +3971,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7714798"
+          "75.7538884",
+          "19.5514798"
         ]
       }
     },
@@ -3982,8 +3982,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7814798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.8738884",
         "count": "3",
         "name": "SNDT Women's University",
         "location": "https://sndt.ac.in/programmes/master-degree-courses/ma-in-womens-studies",
@@ -3998,8 +3998,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7814798"
+          "75.8738884",
+          "19.5514798"
         ]
       }
     },
@@ -4009,8 +4009,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7914798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.9938884",
         "count": "4",
         "name": "The Godrej India Culture Lab",
         "location": "https://indiaculturelab.org/about/",
@@ -4025,8 +4025,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7914798"
+          "75.9938884",
+          "19.5514798"
         ]
       }
     },
@@ -4036,8 +4036,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8014798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "76.1138884",
         "count": "5",
         "name": "Jnanapravaha",
         "location": "https://www.jp-india.org/#",
@@ -4052,8 +4052,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.8014798"
+          "76.1138884",
+          "19.5514798"
         ]
       }
     },
@@ -4063,8 +4063,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8114798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "76.2338884",
         "count": "6",
         "name": "BICAR (Bombay Institute for Critical Analysis and Research",
         "location": "https://www.bicar.org/para-academy",
@@ -4079,8 +4079,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.8114798"
+          "76.2338884",
+          "19.5514798"
         ]
       }
     },
@@ -4090,8 +4090,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8214798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "76.3538884",
         "count": "7",
         "name": "Sparrow: Sound and picture archive for research on Women",
         "location": "https://www.sparrowonline.org/profile.html",
@@ -4106,8 +4106,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.8214798"
+          "76.3538884",
+          "19.5514798"
         ]
       }
     },
@@ -4117,8 +4117,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8314798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "76.4738884",
         "count": "8",
         "name": "Majlis",
         "location": "https://majlislaw.com/",
@@ -4133,8 +4133,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.8314798"
+          "76.4738884",
+          "19.5514798"
         ]
       }
     },
@@ -4144,8 +4144,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8414798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "76.5938884",
         "count": "9",
         "name": "Centre for education and documentation",
         "location": "https://ced.org.in/",
@@ -4160,8 +4160,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.8414798"
+          "76.5938884",
+          "19.5514798"
         ]
       }
     },
@@ -4171,8 +4171,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "75.5138884",
         "count": "10",
         "name": "Gaurav CBO",
         "location": "https://www.facebook.com/Gaurav-CBO-381451278984851/",
@@ -4187,8 +4187,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.7514798"
+          "75.5138884",
+          "19.6714798"
         ]
       }
     },
@@ -4198,8 +4198,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7614798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "75.6338884",
         "count": "11",
         "name": "queer Ink",
         "location": "https://www.queer-ink.com/",
@@ -4214,8 +4214,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.7614798"
+          "75.6338884",
+          "19.6714798"
         ]
       }
     },
@@ -4225,8 +4225,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7714798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "75.7538884",
         "count": "12",
         "name": "Humsafar Trust",
         "location": "https://humsafar.org/",
@@ -4241,8 +4241,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.7714798"
+          "75.7538884",
+          "19.6714798"
         ]
       }
     },
@@ -4252,8 +4252,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7814798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "75.8738884",
         "count": "13",
         "name": "LABIA (Lesbians and Bisexuals in Action)",
         "location": "https://twitter.com/labia_lbt?lang=en",
@@ -4268,8 +4268,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.7814798"
+          "75.8738884",
+          "19.6714798"
         ]
       }
     },
@@ -4279,8 +4279,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7914798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "75.9938884",
         "count": "14",
         "name": "Qknit",
         "location": "http://theqknit.lgbtq.co.in/",
@@ -4295,8 +4295,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.7914798"
+          "75.9938884",
+          "19.6714798"
         ]
       }
     },
@@ -4306,8 +4306,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8014798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "76.1138884",
         "count": "15",
         "name": "Udaan Trust",
         "location": "https://en.wikipedia.org/wiki/Udaan_Trust",
@@ -4322,8 +4322,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.8014798"
+          "76.1138884",
+          "19.6714798"
         ]
       }
     },
@@ -4333,8 +4333,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8114798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "76.2338884",
         "count": "16",
         "name": "CEHAT",
         "location": "http://www.cehat.org/",
@@ -4349,8 +4349,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.8114798"
+          "76.2338884",
+          "19.6714798"
         ]
       }
     },
@@ -4360,8 +4360,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8214798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "76.3538884",
         "count": "17",
         "name": "Sneha",
         "location": "https://snehamumbai.org/",
@@ -4376,8 +4376,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.8214798"
+          "76.3538884",
+          "19.6714798"
         ]
       }
     },
@@ -4387,8 +4387,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8314798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "76.4738884",
         "count": "18",
         "name": "The Gender Lab",
         "location": "https://thegenderlab.org/",
@@ -4403,8 +4403,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.8314798"
+          "76.4738884",
+          "19.6714798"
         ]
       }
     },
@@ -4414,8 +4414,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8414798",
-        "scatterLong": "75.7338884",
+        "scatterLat": "19.6714798",
+        "scatterLong": "76.5938884",
         "count": "19",
         "name": "Pride Circle",
         "location": "https://www.thepridecircle.com/our-story/",
@@ -4430,8 +4430,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7338884",
-          "19.8414798"
+          "76.5938884",
+          "19.6714798"
         ]
       }
     },
@@ -4441,8 +4441,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "75.5138884",
         "count": "20",
         "name": "Safe City",
         "location": "https://www.safecity.in/",
@@ -4457,8 +4457,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.7514798"
+          "75.5138884",
+          "19.7914798"
         ]
       }
     },
@@ -4468,8 +4468,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7614798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "75.6338884",
         "count": "21",
         "name": "Mariwala Health Initiative",
         "location": "https://mhi.org.in/",
@@ -4484,8 +4484,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.7614798"
+          "75.6338884",
+          "19.7914798"
         ]
       }
     },
@@ -4495,7 +4495,7 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7714798",
+        "scatterLat": "19.7914798",
         "scatterLong": "75.7538884",
         "count": "22",
         "name": "Equal Community Foundation",
@@ -4512,7 +4512,7 @@
         "type": "Point",
         "coordinates": [
           "75.7538884",
-          "19.7714798"
+          "19.7914798"
         ]
       }
     },
@@ -4522,8 +4522,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7814798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "75.8738884",
         "count": "23",
         "name": "Awaaz-e-Niswaan",
         "location": "http://niswaan.org/",
@@ -4538,8 +4538,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.7814798"
+          "75.8738884",
+          "19.7914798"
         ]
       }
     },
@@ -4550,7 +4550,7 @@
         "latitude": "19.7514798",
         "longitude": "75.7138884",
         "scatterLat": "19.7914798",
-        "scatterLong": "75.7538884",
+        "scatterLong": "75.9938884",
         "count": "24",
         "name": "Human Rights Law Network",
         "location": "https://2019.hrln.org/",
@@ -4565,7 +4565,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
+          "75.9938884",
           "19.7914798"
         ]
       }
@@ -4576,8 +4576,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8014798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "76.1138884",
         "count": "25",
         "name": "SANGRAM",
         "location": "https://www.sangram.org/",
@@ -4592,8 +4592,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.8014798"
+          "76.1138884",
+          "19.7914798"
         ]
       }
     },
@@ -4603,8 +4603,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8114798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "76.2338884",
         "count": "26",
         "name": "Point of View",
         "location": "https://pointofview.in/",
@@ -4619,8 +4619,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.8114798"
+          "76.2338884",
+          "19.7914798"
         ]
       }
     },
@@ -4630,8 +4630,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8214798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "76.3538884",
         "count": "27",
         "name": "Umang",
         "location": "https://www.facebook.com/umanglbt/",
@@ -4646,8 +4646,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.8214798"
+          "76.3538884",
+          "19.7914798"
         ]
       }
     },
@@ -4657,8 +4657,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8314798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "76.4738884",
         "count": "28",
         "name": "Transgender Welfare, Equity, and Empowerment Trust (TWEET) Foundation",
         "location": "https://tweetindia.org/",
@@ -4673,8 +4673,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.8314798"
+          "76.4738884",
+          "19.7914798"
         ]
       }
     },
@@ -4684,8 +4684,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.8414798",
-        "scatterLong": "75.7538884",
+        "scatterLat": "19.7914798",
+        "scatterLong": "76.5938884",
         "count": "29",
         "name": "Advanced Centre for women's studies, TISS(Mumbai campus)",
         "location": "https://www.tiss.edu/view/6/mumbai-campus/school-of-development-studies/advanced-centre-for-womens-studies/about-us-25/",
@@ -4700,8 +4700,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7538884",
-          "19.8414798"
+          "76.5938884",
+          "19.7914798"
         ]
       }
     },
@@ -4711,8 +4711,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7738884",
+        "scatterLat": "19.9114798",
+        "scatterLong": "75.5138884",
         "count": "30",
         "name": "Tarabai Shinde Women's Studies Centre, Dr. Babasaheb Ambedkar Marathwada University",
         "location": "http://www.bamu.ac.in/ts-wsc/AboutWomensStudyCenter/AboutStudyCentre.aspx",
@@ -4727,8 +4727,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7738884",
-          "19.7514798"
+          "75.5138884",
+          "19.9114798"
         ]
       }
     },
@@ -4738,8 +4738,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7614798",
-        "scatterLong": "75.7738884",
+        "scatterLat": "19.9114798",
+        "scatterLong": "75.6338884",
         "count": "31",
         "name": "Samabhavana Society",
         "location": "http://www.samabhavanasociety.org/",
@@ -4754,8 +4754,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7738884",
-          "19.7614798"
+          "75.6338884",
+          "19.9114798"
         ]
       }
     },
@@ -4765,8 +4765,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7714798",
-        "scatterLong": "75.7738884",
+        "scatterLat": "19.9114798",
+        "scatterLong": "75.7538884",
         "count": "32",
         "name": "The Veshya Anyay Mukti Parishad (VAMP)",
         "location": "https://www.nswp.org/members/asia-and-the-pacific/vamp-veshya-anyay-mukti-parishad",
@@ -4781,8 +4781,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7738884",
-          "19.7714798"
+          "75.7538884",
+          "19.9114798"
         ]
       }
     },
@@ -4792,8 +4792,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7814798",
-        "scatterLong": "75.7738884",
+        "scatterLat": "19.9114798",
+        "scatterLong": "75.8738884",
         "count": "33",
         "name": "Sweekar - The Rainbow Parents",
         "location": "https://www.facebook.com/SweekarTheRainbowParents/",
@@ -4808,8 +4808,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7738884",
-          "19.7814798"
+          "75.8738884",
+          "19.9114798"
         ]
       }
     },
@@ -4819,8 +4819,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7914798",
-        "scatterLong": "75.7738884",
+        "scatterLat": "19.9114798",
+        "scatterLong": "75.9938884",
         "count": "34",
         "name": "Lawyer's Collective",
         "location": "https://lawyerscollective.org/",
@@ -4835,8 +4835,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7738884",
-          "19.7914798"
+          "75.9938884",
+          "19.9114798"
         ]
       }
     },
@@ -4846,8 +4846,8 @@
         "region": "Maharashtra (Pan Indian)",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.5138884",
         "count": "0",
         "name": "Ghar (Gay housing assistance and resource)",
         "location": "https://www.facebook.com/groups/ghar.mumbai/",
@@ -4862,8 +4862,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7514798"
+          "75.5138884",
+          "19.5514798"
         ]
       }
     },
@@ -4873,8 +4873,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.5138884",
         "count": "0",
         "name": "Solidarity and Action Against the HIV Infection in India (SAATHII)",
         "location": "https://saathii.org/about-saathii/",
@@ -4889,8 +4889,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7514798"
+          "75.5138884",
+          "19.5514798"
         ]
       }
     },
@@ -4900,8 +4900,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.6637173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "93.7062688",
         "count": "0",
         "name": "All Manipur Nupi Maanbi Association (AMANA)",
         "location": "https://www.facebook.com/AMANAMANIPUR/",
@@ -4916,8 +4916,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.6637173"
+          "93.7062688",
+          "24.4637173"
         ]
       }
     },
@@ -4927,8 +4927,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.6737173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "93.8262688",
         "count": "1",
         "name": "Matai Project",
         "location": "mataiproject.org/",
@@ -4943,8 +4943,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.6737173"
+          "93.8262688",
+          "24.4637173"
         ]
       }
     },
@@ -4954,8 +4954,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.6837173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "93.9462688",
         "count": "2",
         "name": "Ya All",
         "location": "http://www.yaall.org/",
@@ -4970,8 +4970,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.6837173"
+          "93.9462688",
+          "24.4637173"
         ]
       }
     },
@@ -4981,8 +4981,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.6937173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "94.0662688",
         "count": "3",
         "name": "Empowering Trans Ability (ETA)",
         "location": "https://www.facebook.com/pages/category/Community/Empowering-Trans-Ability-ETA-Imphal-Manipur-1007664919312869/",
@@ -4997,8 +4997,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.6937173"
+          "94.0662688",
+          "24.4637173"
         ]
       }
     },
@@ -5008,8 +5008,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.7037173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "94.1862688",
         "count": "4",
         "name": "All Trans Man Association (ATMA)",
         "location": "https://www.facebook.com/Pinlaishram/?ref=page_internal",
@@ -5024,8 +5024,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.7037173"
+          "94.1862688",
+          "24.4637173"
         ]
       }
     },
@@ -5035,8 +5035,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.7137173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "94.3062688",
         "count": "5",
         "name": "Women's Studies Centre, Manipur University",
         "location": "",
@@ -5051,8 +5051,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.7137173"
+          "94.3062688",
+          "24.4637173"
         ]
       }
     },
@@ -5062,8 +5062,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.7237173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "94.4262688",
         "count": "6",
         "name": "Mingsel Foundation",
         "location": "https://www.instagram.com/mingselfoundation/?hl=en",
@@ -5078,8 +5078,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.7237173"
+          "94.4262688",
+          "24.4637173"
         ]
       }
     },
@@ -5089,8 +5089,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.7337173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "94.5462688",
         "count": "7",
         "name": "Forum Of Partner of Transmen and Transmasculine Person of Manipur",
         "location": "https://www.facebook.com/pages/category/Nonprofit-Organization/Forum-Of-Partner-of-Transmen-and-Transmasculine-Person-of-Manipur-104563961855671/",
@@ -5105,8 +5105,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.7337173"
+          "94.5462688",
+          "24.4637173"
         ]
       }
     },
@@ -5116,8 +5116,8 @@
         "region": "Mehgalaya",
         "latitude": "25.4670308",
         "longitude": "91.366216",
-        "scatterLat": "25.4670308",
-        "scatterLong": "91.366216",
+        "scatterLat": "25.2670308",
+        "scatterLong": "91.166216",
         "count": "0",
         "name": "Shamakami",
         "location": "https://www.facebook.com/Shamakami-Lam-Jingshai-176022939104547/",
@@ -5132,8 +5132,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "91.366216",
-          "25.4670308"
+          "91.166216",
+          "25.2670308"
         ]
       }
     },
@@ -5143,8 +5143,8 @@
         "region": "Mehgalaya",
         "latitude": "25.4670308",
         "longitude": "91.366216",
-        "scatterLat": "25.4770308",
-        "scatterLong": "91.366216",
+        "scatterLat": "25.2670308",
+        "scatterLong": "91.286216",
         "count": "1",
         "name": "LGBTQIA Shillong",
         "location": "https://shillonglgbtqia.wordpress.com/",
@@ -5159,8 +5159,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "91.366216",
-          "25.4770308"
+          "91.286216",
+          "25.2670308"
         ]
       }
     },
@@ -5170,8 +5170,8 @@
         "region": "Mizoram",
         "latitude": "23.164543",
         "longitude": "92.9375739",
-        "scatterLat": "23.164543",
-        "scatterLong": "92.9375739",
+        "scatterLat": "22.964543",
+        "scatterLong": "92.7375739",
         "count": "0",
         "name": "Lonestar Society",
         "location": "https://www.facebook.com/Lonestar-Society-Mizoram-104547524269789/",
@@ -5186,8 +5186,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "23.164543"
+          "92.7375739",
+          "22.964543"
         ]
       }
     },
@@ -5197,8 +5197,8 @@
         "region": "MP",
         "latitude": "22.9734229",
         "longitude": "78.6568942",
-        "scatterLat": "22.9734229",
-        "scatterLong": "78.6568942",
+        "scatterLat": "22.7734229",
+        "scatterLong": "78.4568942",
         "count": "0",
         "name": "Vanangana",
         "location": "https://bundelkhand.in/vanangna",
@@ -5213,8 +5213,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "22.9734229"
+          "78.4568942",
+          "22.7734229"
         ]
       }
     },
@@ -5224,8 +5224,8 @@
         "region": "MP",
         "latitude": "22.9734229",
         "longitude": "78.6568942",
-        "scatterLat": "22.9834229",
-        "scatterLong": "78.6568942",
+        "scatterLat": "22.7734229",
+        "scatterLong": "78.5768942",
         "count": "1",
         "name": "Women's Studies Department, Barkatullah Vishwavidyalaya",
         "location": "http://www.bubhopal.ac.in/1155/Women-Studies",
@@ -5240,8 +5240,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "22.9834229"
+          "78.5768942",
+          "22.7734229"
         ]
       }
     },
@@ -5251,8 +5251,8 @@
         "region": "Mumbai",
         "latitude": "19.0759837",
         "longitude": "72.8776559",
-        "scatterLat": "19.0759837",
-        "scatterLong": "72.8776559",
+        "scatterLat": "18.8759837",
+        "scatterLong": "72.6776559",
         "count": "0",
         "name": "Vacha: Voices of Women & Girls",
         "location": "https://vacha.org.in/",
@@ -5267,8 +5267,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "72.8776559",
-          "19.0759837"
+          "72.6776559",
+          "18.8759837"
         ]
       }
     },
@@ -5278,8 +5278,8 @@
         "region": "Nagaland",
         "latitude": "26.1584354",
         "longitude": "94.5624426",
-        "scatterLat": "26.1584354",
-        "scatterLong": "94.5624426",
+        "scatterLat": "25.9584354",
+        "scatterLong": "94.3624426",
         "count": "0",
         "name": "Women Studies Centre, Nagaland University",
         "location": "https://www.kohima.nagalanduniversity.ac.in/women",
@@ -5294,8 +5294,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.5624426",
-          "26.1584354"
+          "94.3624426",
+          "25.9584354"
         ]
       }
     },
@@ -5305,8 +5305,8 @@
         "region": "Nagaland",
         "latitude": "26.1584354",
         "longitude": "94.5624426",
-        "scatterLat": "26.1684354",
-        "scatterLong": "94.5624426",
+        "scatterLat": "25.9584354",
+        "scatterLong": "94.4824426",
         "count": "1",
         "name": "God is Love Ministry",
         "location": "https://www.facebook.com/godnl7/",
@@ -5321,8 +5321,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.5624426",
-          "26.1684354"
+          "94.4824426",
+          "25.9584354"
         ]
       }
     },
@@ -5332,8 +5332,8 @@
         "region": "Nagaland",
         "latitude": "26.1584354",
         "longitude": "94.5624426",
-        "scatterLat": "26.1784354",
-        "scatterLong": "94.5624426",
+        "scatterLat": "25.9584354",
+        "scatterLong": "94.6024426",
         "count": "2",
         "name": "Guardian Angel",
         "location": "",
@@ -5348,8 +5348,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.5624426",
-          "26.1784354"
+          "94.6024426",
+          "25.9584354"
         ]
       }
     },
@@ -5359,8 +5359,8 @@
         "region": "New Delhi",
         "latitude": "28.6139391",
         "longitude": "77.2090212",
-        "scatterLat": "28.6139391",
-        "scatterLong": "77.2090212",
+        "scatterLat": "28.4139391",
+        "scatterLong": "77.0090212",
         "count": "0",
         "name": "Centre for Women's Development Studies",
         "location": "https://www.cwds.ac.in/",
@@ -5375,8 +5375,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.2090212",
-          "28.6139391"
+          "77.0090212",
+          "28.4139391"
         ]
       }
     },
@@ -5386,8 +5386,8 @@
         "region": "Punjab",
         "latitude": "31.1471305",
         "longitude": "75.3412179",
-        "scatterLat": "31.1471305",
-        "scatterLong": "75.3412179",
+        "scatterLat": "30.9471305",
+        "scatterLong": "75.1412179",
         "count": "0",
         "name": "Women's Studies Centre, Punjabi University",
         "location": "http://www.punjabiuniversity.ac.in/pages/Department.aspx?dsenc=94",
@@ -5402,8 +5402,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "31.1471305"
+          "75.1412179",
+          "30.9471305"
         ]
       }
     },
@@ -5413,8 +5413,8 @@
         "region": "Punjab",
         "latitude": "31.1471305",
         "longitude": "75.3412179",
-        "scatterLat": "31.1571305",
-        "scatterLong": "75.3412179",
+        "scatterLat": "30.9471305",
+        "scatterLong": "75.2612179",
         "count": "1",
         "name": "Kashish Foundation",
         "location": "https://www.facebook.com/Kashish-Foundation-563136950369045/",
@@ -5429,8 +5429,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "31.1571305"
+          "75.2612179",
+          "30.9471305"
         ]
       }
     },
@@ -5440,9 +5440,9 @@
         "region": "Punjab",
         "latitude": "31.1471305",
         "longitude": "75.3412179",
-        "scatterLat": "31.1471305",
-        "scatterLong": "75.3412179",
-        "count": "0",
+        "scatterLat": "30.9471305",
+        "scatterLong": "75.3812179",
+        "count": "2",
         "name": "Saksham Trust",
         "location": "https://www.facebook.com/SakshamTrustNGOChandigarh/",
         "type": "NGO",
@@ -5456,8 +5456,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "31.1471305"
+          "75.3812179",
+          "30.9471305"
         ]
       }
     },
@@ -5467,9 +5467,9 @@
         "region": "Punjab",
         "latitude": "31.1471305",
         "longitude": "75.3412179",
-        "scatterLat": "31.1571305",
-        "scatterLong": "75.3412179",
-        "count": "1",
+        "scatterLat": "30.9471305",
+        "scatterLong": "75.5012179",
+        "count": "3",
         "name": "Mansa Foundation",
         "location": "https://www.facebook.com/mansafoundation2012",
         "type": "Community organisation",
@@ -5483,8 +5483,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "31.1571305"
+          "75.5012179",
+          "30.9471305"
         ]
       }
     },
@@ -5494,8 +5494,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0238036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.0179326",
         "count": "0",
         "name": "Women's Studies Centre, Banasthali Vidyapith",
         "location": "http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/faculties/social-science/sociology/womenstudycentre.html",
@@ -5510,8 +5510,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0238036"
+          "74.0179326",
+          "26.8238036"
         ]
       }
     },
@@ -5521,8 +5521,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0338036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.1379326",
         "count": "1",
         "name": "Centre for Women's Studies, Birla Institute of Technology and Science",
         "location": "https://www.bits-pilani.ac.in/Pilani/centres",
@@ -5537,8 +5537,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0338036"
+          "74.1379326",
+          "26.8238036"
         ]
       }
     },
@@ -5548,8 +5548,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0438036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.2579326",
         "count": "2",
         "name": "Centre for Women's Studies, Jai Narain Vyas University",
         "location": "https://www.facebook.com/CWS.JNVUJodhpur/about/?ref=page_internal",
@@ -5564,8 +5564,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0438036"
+          "74.2579326",
+          "26.8238036"
         ]
       }
     },
@@ -5575,8 +5575,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0538036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.3779326",
         "count": "3",
         "name": "Centre for Gender Studies, National Law University",
         "location": "http://www.nlujodhpur.ac.in/gender.php",
@@ -5591,8 +5591,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0538036"
+          "74.3779326",
+          "26.8238036"
         ]
       }
     },
@@ -5602,8 +5602,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0638036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.4979326",
         "count": "4",
         "name": "Centre for Women's Studies, Mohanlal Sukhadia University",
         "location": "https://cfws.mlsu.ac.in/",
@@ -5618,8 +5618,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0638036"
+          "74.4979326",
+          "26.8238036"
         ]
       }
     },
@@ -5629,8 +5629,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0738036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.6179326",
         "count": "5",
         "name": "Centre for Women's Studies, University of Rajasthan",
         "location": "https://www.uniraj.ac.in/#",
@@ -5645,8 +5645,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0738036"
+          "74.6179326",
+          "26.8238036"
         ]
       }
     },
@@ -5656,8 +5656,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0838036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.7379326",
         "count": "6",
         "name": "Mahila Jan Adhikar Samiti",
         "location": "https://mahilajanadhikar.org/",
@@ -5672,8 +5672,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0838036"
+          "74.7379326",
+          "26.8238036"
         ]
       }
     },
@@ -5683,8 +5683,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0938036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.8579326",
         "count": "7",
         "name": "Nai Bhor Sanstha",
         "location": "https://www.facebook.com/naibhor.sanstha/",
@@ -5699,8 +5699,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0938036"
+          "74.8579326",
+          "26.8238036"
         ]
       }
     },
@@ -5710,8 +5710,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.1038036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.9779326",
         "count": "8",
         "name": "Jaipur Pride Community",
         "location": "https://www.instagram.com/jaipurpridecommunity/?hl=en",
@@ -5726,8 +5726,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.1038036"
+          "74.9779326",
+          "26.8238036"
         ]
       }
     },
@@ -5737,8 +5737,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.1138036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "75.0979326",
         "count": "9",
         "name": "Sambhali Trust",
         "location": "https://www.sambhali-trust.org/projects/sambhali-garima-project/index.html",
@@ -5753,8 +5753,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.1138036"
+          "75.0979326",
+          "26.8238036"
         ]
       }
     },
@@ -5764,8 +5764,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0238036",
-        "scatterLong": "74.2379326",
+        "scatterLat": "26.9438036",
+        "scatterLong": "74.0179326",
         "count": "10",
         "name": "Nai Bhor Sanstha",
         "location": "https://www.facebook.com/naibhor.sanstha/",
@@ -5780,8 +5780,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2379326",
-          "27.0238036"
+          "74.0179326",
+          "26.9438036"
         ]
       }
     },
@@ -5791,8 +5791,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0338036",
-        "scatterLong": "74.2379326",
+        "scatterLat": "26.9438036",
+        "scatterLong": "74.1379326",
         "count": "11",
         "name": "UGC Women's Studies Centre, Mohanlal Sukhadia University",
         "location": "https://cfws.mlsu.ac.in/",
@@ -5807,8 +5807,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2379326",
-          "27.0338036"
+          "74.1379326",
+          "26.9438036"
         ]
       }
     },
@@ -5818,8 +5818,8 @@
         "region": "Rajasthan (Rural)",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0238036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.0179326",
         "count": "0",
         "name": "Mazdoor Kisan Shakti Sangathan(MKSS)",
         "location": "http://mkssindia.org/",
@@ -5834,8 +5834,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0238036"
+          "74.0179326",
+          "26.8238036"
         ]
       }
     },
@@ -5845,8 +5845,8 @@
         "region": "Sikkim",
         "latitude": "27.5329718",
         "longitude": "88.5122178",
-        "scatterLat": "27.5329718",
-        "scatterLong": "88.5122178",
+        "scatterLat": "27.3329718",
+        "scatterLong": "88.3122178",
         "count": "0",
         "name": "Rainbow Hills Association",
         "location": "https://www.facebook.com/RainbowHillsAssociation/",
@@ -5861,8 +5861,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "88.5122178",
-          "27.5329718"
+          "88.3122178",
+          "27.3329718"
         ]
       }
     },
@@ -5872,8 +5872,8 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1271225",
-        "scatterLong": "78.6568942",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.4568942",
         "count": "0",
         "name": "",
         "location": "",
@@ -5888,8 +5888,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1271225"
+          "78.4568942",
+          "10.9271225"
         ]
       }
     },
@@ -5899,9 +5899,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1271225",
-        "scatterLong": "78.6568942",
-        "count": "0",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.5768942",
+        "count": "1",
         "name": "Orinam",
         "location": "http://orinam.net/",
         "type": "LGBTQIA+ Collective",
@@ -5915,8 +5915,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1271225"
+          "78.5768942",
+          "10.9271225"
         ]
       }
     },
@@ -5926,9 +5926,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1371225",
-        "scatterLong": "78.6568942",
-        "count": "1",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.6968942",
+        "count": "2",
         "name": "Sahodharan",
         "location": "http://www.sahodaran.org/",
         "type": "Male Sexual Health Project",
@@ -5942,8 +5942,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1371225"
+          "78.6968942",
+          "10.9271225"
         ]
       }
     },
@@ -5953,9 +5953,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1471225",
-        "scatterLong": "78.6568942",
-        "count": "2",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.8168942",
+        "count": "3",
         "name": "Nirangal",
         "location": "https://nirangal.ngo/our-network/",
         "type": "NGO",
@@ -5969,8 +5969,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1471225"
+          "78.8168942",
+          "10.9271225"
         ]
       }
     },
@@ -5980,9 +5980,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1571225",
-        "scatterLong": "78.6568942",
-        "count": "3",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.9368942",
+        "count": "4",
         "name": "",
         "location": "",
         "type": "",
@@ -5996,8 +5996,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1571225"
+          "78.9368942",
+          "10.9271225"
         ]
       }
     },
@@ -6007,9 +6007,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1671225",
-        "scatterLong": "78.6568942",
-        "count": "4",
+        "scatterLat": "10.9271225",
+        "scatterLong": "79.0568942",
+        "count": "5",
         "name": "Madras Institute of Development Studies",
         "location": "https://www.mids.ac.in/",
         "type": "Academic Institution",
@@ -6023,8 +6023,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1671225"
+          "79.0568942",
+          "10.9271225"
         ]
       }
     },
@@ -6034,9 +6034,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1771225",
-        "scatterLong": "78.6568942",
-        "count": "5",
+        "scatterLat": "10.9271225",
+        "scatterLong": "79.1768942",
+        "count": "6",
         "name": "Centre For Women's Studies",
         "location": "https://alagappauniversity.ac.in/modules/Academics/faculty-of-arts/school-of-social-sciences/Centre-for-Womens-Studies.php",
         "type": "",
@@ -6050,8 +6050,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1771225"
+          "79.1768942",
+          "10.9271225"
         ]
       }
     },
@@ -6061,9 +6061,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1871225",
-        "scatterLong": "78.6568942",
-        "count": "6",
+        "scatterLat": "10.9271225",
+        "scatterLong": "79.2968942",
+        "count": "7",
         "name": "Avinashilingam Institute for Home Sciences and Higher Education for women",
         "location": "https://avinuty.ac.in/maincampus/tempp/cws/Index.html",
         "type": "Academic Centre",
@@ -6077,8 +6077,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1871225"
+          "79.2968942",
+          "10.9271225"
         ]
       }
     },
@@ -6088,9 +6088,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1971225",
-        "scatterLong": "78.6568942",
-        "count": "7",
+        "scatterLat": "10.9271225",
+        "scatterLong": "79.4168942",
+        "count": "8",
         "name": "Bharathidasan University,",
         "location": "https://www.bdu.ac.in/schools/social-sciences/womens-studies/",
         "type": "Academic Centre",
@@ -6104,8 +6104,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1971225"
+          "79.4168942",
+          "10.9271225"
         ]
       }
     },
@@ -6115,9 +6115,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.2071225",
-        "scatterLong": "78.6568942",
-        "count": "8",
+        "scatterLat": "10.9271225",
+        "scatterLong": "79.5368942",
+        "count": "9",
         "name": "Department and Centre for women's studies, Mother Teresa Women's University",
         "location": "https://www.motherteresawomenuniv.ac.in/CWS.html",
         "type": "Academic centre",
@@ -6131,8 +6131,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.2071225"
+          "79.5368942",
+          "10.9271225"
         ]
       }
     },
@@ -6142,9 +6142,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.2171225",
-        "scatterLong": "78.6568942",
-        "count": "9",
+        "scatterLat": "11.0471225",
+        "scatterLong": "78.4568942",
+        "count": "10",
         "name": "Centre For Women's Studies, Lady Doak College",
         "location": "https://www.ladydoakcollege.edu.in/cws.html",
         "type": "Academic Centre",
@@ -6158,8 +6158,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.2171225"
+          "78.4568942",
+          "11.0471225"
         ]
       }
     },
@@ -6169,9 +6169,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1271225",
-        "scatterLong": "78.6768942",
-        "count": "10",
+        "scatterLat": "11.0471225",
+        "scatterLong": "78.5768942",
+        "count": "11",
         "name": "Department of Women's Studies, University of Madras",
         "location": "https://www.unom.ac.in/index.php?route=department/department/about&deptid=79",
         "type": "Academic Centre",
@@ -6185,8 +6185,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6768942",
-          "11.1271225"
+          "78.5768942",
+          "11.0471225"
         ]
       }
     },
@@ -6196,9 +6196,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1371225",
-        "scatterLong": "78.6768942",
-        "count": "11",
+        "scatterLat": "11.0471225",
+        "scatterLong": "78.6968942",
+        "count": "12",
         "name": "Women's Studies Centre, Periyar University",
         "location": "https://www.periyaruniversity.ac.in/centre/cws/",
         "type": "Academic Centre",
@@ -6212,8 +6212,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6768942",
-          "11.1371225"
+          "78.6968942",
+          "11.0471225"
         ]
       }
     },
@@ -6223,9 +6223,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1471225",
-        "scatterLong": "78.6768942",
-        "count": "12",
+        "scatterLat": "11.0471225",
+        "scatterLong": "78.8168942",
+        "count": "13",
         "name": "Department of Women's Studies, Bharatiar University",
         "location": "https://b-u.ac.in/52/department-womens-studies",
         "type": "Academic Centre",
@@ -6239,8 +6239,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6768942",
-          "11.1471225"
+          "78.8168942",
+          "11.0471225"
         ]
       }
     },
@@ -6250,9 +6250,9 @@
         "region": "Tamilnadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1571225",
-        "scatterLong": "78.6768942",
-        "count": "13",
+        "scatterLat": "11.0471225",
+        "scatterLong": "78.9368942",
+        "count": "14",
         "name": "Women's Studies Centre, Madurai Kamraj University",
         "location": "https://mkuniversity.ac.in/new/centre/wsc/pgm_offer.php",
         "type": "Academic Centre",
@@ -6266,8 +6266,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6768942",
-          "11.1571225"
+          "78.9368942",
+          "11.0471225"
         ]
       }
     },
@@ -6277,8 +6277,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1124372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "78.8192997",
         "count": "0",
         "name": "Prajwala",
         "location": "https://www.prajwalaindia.com/",
@@ -6293,8 +6293,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1124372"
+          "78.8192997",
+          "17.9124372"
         ]
       }
     },
@@ -6304,8 +6304,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1224372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "78.9392997",
         "count": "1",
         "name": "Anveshi: Research centre for Women's Studies",
         "location": "https://www.anveshi.org.in/",
@@ -6320,8 +6320,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1224372"
+          "78.9392997",
+          "17.9124372"
         ]
       }
     },
@@ -6331,8 +6331,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1324372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.0592997",
         "count": "2",
         "name": "Shaheen Women's Resource and welfare centre",
         "location": "https://shaheencollective.org/",
@@ -6347,8 +6347,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1324372"
+          "79.0592997",
+          "17.9124372"
         ]
       }
     },
@@ -6358,8 +6358,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1424372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.1792997",
         "count": "3",
         "name": "Pause For Perspective",
         "location": "http://hyderabadpsychologist.com/",
@@ -6374,8 +6374,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1424372"
+          "79.1792997",
+          "17.9124372"
         ]
       }
     },
@@ -6385,8 +6385,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1524372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.2992997",
         "count": "4",
         "name": "Lamakaan",
         "location": "https://www.facebook.com/lamakaan/",
@@ -6401,8 +6401,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1524372"
+          "79.2992997",
+          "17.9124372"
         ]
       }
     },
@@ -6412,8 +6412,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1624372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.4192997",
         "count": "5",
         "name": "Council For Social Development, Hyderabad",
         "location": "http://www.csdhyd.org/",
@@ -6428,8 +6428,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1624372"
+          "79.4192997",
+          "17.9124372"
         ]
       }
     },
@@ -6439,8 +6439,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1724372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.5392997",
         "count": "6",
         "name": "School of Gender Studies, TISS (Hyderabad Campus",
         "location": "https://www.tiss.edu/view/6/hyderabad-campus/school-of-gender-studies/about-school-of-gender-studies/",
@@ -6455,8 +6455,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1724372"
+          "79.5392997",
+          "17.9124372"
         ]
       }
     },
@@ -6466,8 +6466,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1824372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.6592997",
         "count": "7",
         "name": "Centre for Women's Studies, University of Hyderabad",
         "location": "https://centres.uohyd.ac.in/cws/",
@@ -6482,8 +6482,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1824372"
+          "79.6592997",
+          "17.9124372"
         ]
       }
     },
@@ -6493,8 +6493,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1924372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.7792997",
         "count": "8",
         "name": "Centre for Women's Studies, Osmania University",
         "location": "https://www.osmania.ac.in/research-rnt.php#",
@@ -6509,8 +6509,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1924372"
+          "79.7792997",
+          "17.9124372"
         ]
       }
     },
@@ -6520,8 +6520,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.2024372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "79.8992997",
         "count": "9",
         "name": "Centre For Women's Studies, MANUU",
         "location": "https://manuu.edu.in/University/Centre/CWS/Profile",
@@ -6536,8 +6536,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.2024372"
+          "79.8992997",
+          "17.9124372"
         ]
       }
     },
@@ -6547,15 +6547,15 @@
         "region": "Tripura",
         "latitude": "23.9408482",
         "longitude": "91.9881527",
-        "scatterLat": "23.9408482",
-        "scatterLong": "91.9881527",
+        "scatterLat": "23.7408482",
+        "scatterLong": "91.7881527",
         "count": "0",
         "name": "Women's Studies Centre, Tripura University",
         "location": "tripurauniv.ac.in/Page/WomenStudyCentre",
         "type": "Academic Research Centre",
         "active": "2006",
         "contact": "0381-2379135 (O)",
-        "programs": "1. Post-graduate diploma course on Women's Studies\n2. Research, documentation, and seminars of women's narratives, Violence Against Women, and Women's Rights, Women and Health and Gender Empowerment\n3. Advocacy and awareness campaigns on gender sensitisation, women's rights, and skill development training programs for women",
+        "programs": "1. Post-graduate diploma course on Women's Studies\n2. Research, documentation, and seminars of Women's Narratives, Violence Against Women, and Women's Rights, Women and Health and Gender Empowerment\n3. Advocacy and awareness campaigns on gender sensitisation, women's rights, and skill development training programs for women",
         "keywords": "Education",
         "id": 243,
         "color": "#CADEAD"
@@ -6563,8 +6563,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "91.9881527",
-          "23.9408482"
+          "91.7881527",
+          "23.7408482"
         ]
       }
     },
@@ -6574,8 +6574,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8467088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "80.7461592",
         "count": "0",
         "name": "The YP Foundation",
         "location": "https://theypfoundation.org/",
@@ -6590,8 +6590,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8467088"
+          "80.7461592",
+          "26.6467088"
         ]
       }
     },
@@ -6601,8 +6601,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8567088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "80.8661592",
         "count": "1",
         "name": "Sayfty: Empowering Women Against Violence",
         "location": "https://sayfty.com/",
@@ -6617,8 +6617,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8567088"
+          "80.8661592",
+          "26.6467088"
         ]
       }
     },
@@ -6628,8 +6628,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8667088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "80.9861592",
         "count": "2",
         "name": "Joint Women's Programme",
         "location": "https://www.jwpindia.org/",
@@ -6644,8 +6644,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8667088"
+          "80.9861592",
+          "26.6467088"
         ]
       }
     },
@@ -6655,8 +6655,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8767088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.1061592",
         "count": "3",
         "name": "Institute of Women's Studies, University of Lucknow",
         "location": "https://udrc.lkouniv.ac.in/Department/DepartmentDetail/History?dept=47&cd=MwAxADAA",
@@ -6671,8 +6671,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8767088"
+          "81.1061592",
+          "26.6467088"
         ]
       }
     },
@@ -6682,8 +6682,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8867088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.2261592",
         "count": "4",
         "name": "Centre for Law on Gender and Sexuality, Delhi Metropolitan Education, Guru Gobind Singh Indraprastha University",
         "location": "https://www.facebook.com/groups/2015923748660057",
@@ -6698,8 +6698,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8867088"
+          "81.2261592",
+          "26.6467088"
         ]
       }
     },
@@ -6709,8 +6709,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8967088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.3461592",
         "count": "5",
         "name": "Advanced Centre for Women's Studies, Aligarh Muslim University",
         "location": "https://www.amu.ac.in/department/centre-for-women-s-studies",
@@ -6725,8 +6725,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8967088"
+          "81.3461592",
+          "26.6467088"
         ]
       }
     },
@@ -6736,8 +6736,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.9067088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.4661592",
         "count": "6",
         "name": "Centre for Women's Studies, University of Allahabad",
         "location": "https://www.allduniv.ac.in/centre-institute/centre-for-women-s-studies",
@@ -6752,8 +6752,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.9067088"
+          "81.4661592",
+          "26.6467088"
         ]
       }
     },
@@ -6763,8 +6763,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.9167088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.5861592",
         "count": "7",
         "name": "Centre for Women's Studies and Development, Banaras Hindu University",
         "location": "https://www.bhu.ac.in/social_sciences/cwsd/",
@@ -6779,8 +6779,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.9167088"
+          "81.5861592",
+          "26.6467088"
         ]
       }
     },
@@ -6790,8 +6790,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.9267088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.7061592",
         "count": "8",
         "name": "Amity Institute of Social Science, Amity University, Noida campus",
         "location": "https://www.amity.edu/course-list.aspx?fd=Social%20Science&Programs=Post%20Graduate",
@@ -6806,8 +6806,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.9267088"
+          "81.7061592",
+          "26.6467088"
         ]
       }
     },
@@ -6817,8 +6817,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.9367088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "81.8261592",
         "count": "9",
         "name": "Led By Foundation",
         "location": "https://www.ledby.org/",
@@ -6833,8 +6833,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.9367088"
+          "81.8261592",
+          "26.6467088"
         ]
       }
     },
@@ -6844,8 +6844,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8467088",
-        "scatterLong": "80.9661592",
+        "scatterLat": "26.7667088",
+        "scatterLong": "80.7461592",
         "count": "10",
         "name": "Bharosa Trust",
         "location": "",
@@ -6860,8 +6860,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9661592",
-          "26.8467088"
+          "80.7461592",
+          "26.7667088"
         ]
       }
     },
@@ -6871,8 +6871,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8567088",
-        "scatterLong": "80.9661592",
+        "scatterLat": "26.7667088",
+        "scatterLong": "80.8661592",
         "count": "11",
         "name": "The SNU Queer Collective, Shiv Nadar University",
         "location": "https://www.facebook.com/snuqc/",
@@ -6887,8 +6887,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9661592",
-          "26.8567088"
+          "80.8661592",
+          "26.7667088"
         ]
       }
     },
@@ -6898,8 +6898,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8667088",
-        "scatterLong": "80.9661592",
+        "scatterLat": "26.7667088",
+        "scatterLong": "80.9861592",
         "count": "12",
         "name": "Resistance Alliance for Queer Solidarity, University of Allahabad",
         "location": "https://www.facebook.com/raqsallahabad/",
@@ -6914,8 +6914,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9661592",
-          "26.8667088"
+          "80.9861592",
+          "26.7667088"
         ]
       }
     },
@@ -6925,8 +6925,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8767088",
-        "scatterLong": "80.9661592",
+        "scatterLat": "26.7667088",
+        "scatterLong": "81.1061592",
         "count": "13",
         "name": "Men's Action for Stopping Violence Against Women (MASVAW)",
         "location": "https://masvaw.blogspot.com/",
@@ -6941,8 +6941,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9661592",
-          "26.8767088"
+          "81.1061592",
+          "26.7667088"
         ]
       }
     },
@@ -6952,8 +6952,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8867088",
-        "scatterLong": "80.9661592",
+        "scatterLat": "26.7667088",
+        "scatterLong": "81.2261592",
         "count": "14",
         "name": "Rehbar Trust",
         "location": "https://www.facebook.com/Rehbar-Trust-934791326858313/",
@@ -6968,8 +6968,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9661592",
-          "26.8867088"
+          "81.2261592",
+          "26.7667088"
         ]
       }
     },
@@ -6979,8 +6979,8 @@
         "region": "Uttar Pradesh, Jharkhand",
         "latitude": "23.6101808",
         "longitude": "85.2799354",
-        "scatterLat": "23.6101808",
-        "scatterLong": "85.2799354",
+        "scatterLat": "23.4101808",
+        "scatterLong": "85.0799354",
         "count": "0",
         "name": "Forum to Engage Men (FEM)",
         "location": "http://menengage.org/regions/asia/india/",
@@ -6995,8 +6995,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "85.2799354",
-          "23.6101808"
+          "85.0799354",
+          "23.4101808"
         ]
       }
     },
@@ -7006,8 +7006,8 @@
         "region": "Uttarakhand",
         "latitude": "30.066753",
         "longitude": "79.0192997",
-        "scatterLat": "30.066753",
-        "scatterLong": "79.0192997",
+        "scatterLat": "29.866753",
+        "scatterLong": "78.8192997",
         "count": "0",
         "name": "Women Studies Centre, Hemvati Nandan Bahuguna Garhwal University",
         "location": "https://www.facebook.com/bourai123/ http://www.hnbgu.ac.in/",
@@ -7022,8 +7022,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "30.066753"
+          "78.8192997",
+          "29.866753"
         ]
       }
     },
@@ -7033,8 +7033,8 @@
         "region": "Uttarakhand",
         "latitude": "30.066753",
         "longitude": "79.0192997",
-        "scatterLat": "30.076753",
-        "scatterLong": "79.0192997",
+        "scatterLat": "29.866753",
+        "scatterLong": "78.9392997",
         "count": "1",
         "name": "Qagaar: Queer and Gender Support group, IIT Roorkie",
         "location": "https://www.facebook.com/lookovertherainbows/",
@@ -7049,8 +7049,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "30.076753"
+          "78.9392997",
+          "29.866753"
         ]
       }
     },
@@ -7060,8 +7060,8 @@
         "region": "Uttarakhand",
         "latitude": "30.066753",
         "longitude": "79.0192997",
-        "scatterLat": "30.086753",
-        "scatterLong": "79.0192997",
+        "scatterLat": "29.866753",
+        "scatterLong": "79.0592997",
         "count": "2",
         "name": "Queer Collective Dehradun",
         "location": "https://www.instagram.com/queercollectivedehradun/",
@@ -7076,8 +7076,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "30.086753"
+          "79.0592997",
+          "29.866753"
         ]
       }
     },
@@ -7087,8 +7087,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9867569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "87.6549755",
         "count": "0",
         "name": "Samabhabona",
         "location": "https://bdssamabhabona.org/",
@@ -7103,8 +7103,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "22.9867569"
+          "87.6549755",
+          "22.7867569"
         ]
       }
     },
@@ -7114,8 +7114,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9967569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "87.7749755",
         "count": "1",
         "name": "Swayam: Ending Violence against women",
         "location": "https://swayam.info/",
@@ -7130,8 +7130,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "22.9967569"
+          "87.7749755",
+          "22.7867569"
         ]
       }
     },
@@ -7141,8 +7141,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0067569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "87.8949755",
         "count": "2",
         "name": "Pratyay Gender Trust",
         "location": "https://www.facebook.com/PratyayGenderTrust/",
@@ -7157,8 +7157,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0067569"
+          "87.8949755",
+          "22.7867569"
         ]
       }
     },
@@ -7168,8 +7168,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0167569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.0149755",
         "count": "3",
         "name": "Sappho For Equality: The Activist Forum For Lesbian, Bisexual Woman and Transman Rights",
         "location": "https://www.sapphokolkata.in/",
@@ -7184,8 +7184,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0167569"
+          "88.0149755",
+          "22.7867569"
         ]
       }
     },
@@ -7195,8 +7195,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0267569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.1349755",
         "count": "4",
         "name": "School Of Women's Studies, Jadavpur University",
         "location": "http://www.jaduniv.edu.in/view_department.php?deptid=150",
@@ -7211,8 +7211,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0267569"
+          "88.1349755",
+          "22.7867569"
         ]
       }
     },
@@ -7222,8 +7222,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0367569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.2549755",
         "count": "5",
         "name": "Centre for Women's Studies, Vidhya-Bhavana, Visva Bharati University",
         "location": "http://visvabharati.ac.in/CentreforWomensStudies.html",
@@ -7238,8 +7238,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0367569"
+          "88.2549755",
+          "22.7867569"
         ]
       }
     },
@@ -7249,8 +7249,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0467569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.3749755",
         "count": "6",
         "name": "Women's Studies Research Centre, University of Calcutta",
         "location": "https://www.caluniv.ac.in/academic/women-studies.html",
@@ -7265,8 +7265,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0467569"
+          "88.3749755",
+          "22.7867569"
         ]
       }
     },
@@ -7276,8 +7276,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0567569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.4949755",
         "count": "7",
         "name": "Centre for Women's Studies, Raiganj University",
         "location": "https://raiganjuniversity.ac.in/centre-for-womens-studies-cws/",
@@ -7292,8 +7292,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0567569"
+          "88.4949755",
+          "22.7867569"
         ]
       }
     },
@@ -7303,8 +7303,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0667569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.6149755",
         "count": "8",
         "name": "Department of Women's Studies, University of North Bengal",
         "location": "https://www.nbu.ac.in/dept/cws.aspx",
@@ -7319,8 +7319,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0667569"
+          "88.6149755",
+          "22.7867569"
         ]
       }
     },
@@ -7330,8 +7330,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0767569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "88.7349755",
         "count": "9",
         "name": "Centre for Women's Studies, Rabindra Bharati University",
         "location": "http://www.rbu.ac.in/home/page/69",
@@ -7346,8 +7346,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "23.0767569"
+          "88.7349755",
+          "22.7867569"
         ]
       }
     },
@@ -7357,8 +7357,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9867569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "87.6549755",
         "count": "10",
         "name": "Women's Studies Centre, Vidyasagar University",
         "location": "http://www.vidyasagar.ac.in/ResearchCentres/Centre_WSC/Default.aspx",
@@ -7373,8 +7373,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "22.9867569"
+          "87.6549755",
+          "22.9067569"
         ]
       }
     },
@@ -7384,8 +7384,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9967569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "87.7749755",
         "count": "11",
         "name": "Manas Bangla",
         "location": "",
@@ -7400,8 +7400,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "22.9967569"
+          "87.7749755",
+          "22.9067569"
         ]
       }
     },
@@ -7411,8 +7411,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0067569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "87.8949755",
         "count": "12",
         "name": "Varta Trust",
         "location": "https://vartagensex.org/",
@@ -7427,8 +7427,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0067569"
+          "87.8949755",
+          "22.9067569"
         ]
       }
     },
@@ -7438,8 +7438,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0167569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.0149755",
         "count": "13",
         "name": "Durbar Mahila Samanwaya Committee (DMSC)",
         "location": "http://www.durbar.org/",
@@ -7454,8 +7454,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0167569"
+          "88.0149755",
+          "22.9067569"
         ]
       }
     },
@@ -7465,8 +7465,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0267569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.1349755",
         "count": "14",
         "name": "Sruti Disability Rights Centre",
         "location": "https://www.facebook.com/Sruti-Disability-Rights-Centre-311750672203155/",
@@ -7481,8 +7481,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0267569"
+          "88.1349755",
+          "22.9067569"
         ]
       }
     },
@@ -7492,8 +7492,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0367569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.2549755",
         "count": "15",
         "name": "Ambar: Gender and Sexual Diversity Resource Group, IIT Kharagpur",
         "location": "https://www.facebook.com/ambar.iitkgp/",
@@ -7508,8 +7508,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0367569"
+          "88.2549755",
+          "22.9067569"
         ]
       }
     },
@@ -7519,8 +7519,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0467569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.3749755",
         "count": "16",
         "name": "Amra Odbhuth Collective",
         "location": "https://www.facebook.com/amraodbhuth/",
@@ -7535,8 +7535,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0467569"
+          "88.3749755",
+          "22.9067569"
         ]
       }
     },
@@ -7546,8 +7546,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0567569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.4949755",
         "count": "17",
         "name": "People Like Us (PLUS)",
         "location": "",
@@ -7562,8 +7562,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0567569"
+          "88.4949755",
+          "22.9067569"
         ]
       }
     },
@@ -7573,8 +7573,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0667569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.6149755",
         "count": "18",
         "name": "Maitree",
         "location": "",
@@ -7589,8 +7589,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0667569"
+          "88.6149755",
+          "22.9067569"
         ]
       }
     },
@@ -7600,8 +7600,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0767569",
-        "scatterLong": "87.8749755",
+        "scatterLat": "22.9067569",
+        "scatterLong": "88.7349755",
         "count": "19",
         "name": "Parichiti: Making Women Visible",
         "location": "https://www.parichiti.org.in/",
@@ -7616,8 +7616,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8749755",
-          "23.0767569"
+          "88.7349755",
+          "22.9067569"
         ]
       }
     },
@@ -7627,8 +7627,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9867569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "87.6549755",
         "count": "20",
         "name": "Association of Transgender / Hijra in Bengal (ATHB)",
         "location": "",
@@ -7643,8 +7643,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "22.9867569"
+          "87.6549755",
+          "23.0267569"
         ]
       }
     },
@@ -7654,8 +7654,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9967569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "87.7749755",
         "count": "21",
         "name": "Gokhale Road Bandhan",
         "location": "",
@@ -7670,8 +7670,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "22.9967569"
+          "87.7749755",
+          "23.0267569"
         ]
       }
     },
@@ -7681,7 +7681,7 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0067569",
+        "scatterLat": "23.0267569",
         "scatterLong": "87.8949755",
         "count": "22",
         "name": "Dinajpur Notun Aalo Society",
@@ -7698,7 +7698,7 @@
         "type": "Point",
         "coordinates": [
           "87.8949755",
-          "23.0067569"
+          "23.0267569"
         ]
       }
     },
@@ -7708,8 +7708,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0167569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.0149755",
         "count": "23",
         "name": "Dumdum Swikriti Society",
         "location": "",
@@ -7724,8 +7724,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0167569"
+          "88.0149755",
+          "23.0267569"
         ]
       }
     },
@@ -7736,7 +7736,7 @@
         "latitude": "22.9867569",
         "longitude": "87.8549755",
         "scatterLat": "23.0267569",
-        "scatterLong": "87.8949755",
+        "scatterLong": "88.1349755",
         "count": "24",
         "name": "Amitie Trust",
         "location": "https://www.facebook.com/amitie.trust",
@@ -7751,7 +7751,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
+          "88.1349755",
           "23.0267569"
         ]
       }
@@ -7762,8 +7762,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0367569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.2549755",
         "count": "25",
         "name": "Kolkata Rishta",
         "location": "https://www.facebook.com/Kolkata-Rista-1190601444294299/",
@@ -7778,8 +7778,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0367569"
+          "88.2549755",
+          "23.0267569"
         ]
       }
     },
@@ -7789,8 +7789,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0467569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.3749755",
         "count": "26",
         "name": "Madhya Banglar Samngram",
         "location": "https://www.facebook.com/madhyabanglar.sangram.3/?ref=page_internal",
@@ -7805,8 +7805,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0467569"
+          "88.3749755",
+          "23.0267569"
         ]
       }
     },
@@ -7816,8 +7816,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0567569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.4949755",
         "count": "27",
         "name": "West Bengal Forum for Gender and Sexual Minority Rights (WBFGSMR)",
         "location": "https://www.facebook.com/wbfgsmr/",
@@ -7832,8 +7832,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0567569"
+          "88.4949755",
+          "23.0267569"
         ]
       }
     },
@@ -7843,8 +7843,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0667569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.6149755",
         "count": "28",
         "name": "Miitjyu Society",
         "location": "https://www.facebook.com/Miitjyu-Society-810705295705114/",
@@ -7859,8 +7859,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0667569"
+          "88.6149755",
+          "23.0267569"
         ]
       }
     },
@@ -7870,8 +7870,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "23.0767569",
-        "scatterLong": "87.8949755",
+        "scatterLat": "23.0267569",
+        "scatterLong": "88.7349755",
         "count": "29",
         "name": "Gender Study Research Group, West Bengal State University",
         "location": "https://www.facebook.com/WBSUGRSG/",
@@ -7886,8 +7886,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8949755",
-          "23.0767569"
+          "88.7349755",
+          "23.0267569"
         ]
       }
     }

@@ -2,14 +2,8 @@
 	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
-import StackedMobile from './StackedMobile.svelte';
 	
 	let selected;
-	let decade = '2020';
-
-	let gridWdith = 10;
-	let gridHeight = 10;
-	$: console.log(decade);
 
 	//////////////////////////////////////////////////////////////////
 	let modal;
@@ -25,6 +19,7 @@ import StackedMobile from './StackedMobile.svelte';
 	export let colorBy = "";		// What do we want to color by?
   	export let direction = "right";
 	export let facetTwo = null;
+	export let combine = [];
 
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
@@ -65,7 +60,10 @@ import StackedMobile from './StackedMobile.svelte';
 
 	// Create an array of unique facets
 
-	let facets = dataset.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+	let facets = [];
+	let facetsTwo = [];
+
+	facets = dataset.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
 	// Remove empty facets
 	facets.forEach(d => {
 		if (d === '') {
@@ -78,7 +76,7 @@ import StackedMobile from './StackedMobile.svelte';
 	});
 
 	if (facetTwo){
-		let facetsTwo = dataset.map(d => d[facetTwo]).filter((v, i, a) => a.indexOf(v) === i);
+		facetsTwo = dataset.map(d => d[facetTwo]).filter((v, i, a) => a.indexOf(v) === i);
 		facetsTwo.forEach(d => {
 			if (d === '') {
 				facetsTwo.splice(facetsTwo.indexOf(d), 1);
@@ -93,6 +91,12 @@ import StackedMobile from './StackedMobile.svelte';
 	}
 
 	const colorBys = dataset.map(d => d[colorBy]).filter((v, i, a) => a.indexOf(v) === i);
+	// Remove anything that is blank
+	colorBys.forEach(d => {
+		if (d === '') {
+			colorBys.splice(colorBys.indexOf(d), 1);
+		}
+	});
 
 
 	// Iterate through data2 and add an item called color with the associated color for each book
@@ -115,7 +119,7 @@ import StackedMobile from './StackedMobile.svelte';
 		};
 	});
 
-	console.log(data2);
+
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -160,7 +164,7 @@ import StackedMobile from './StackedMobile.svelte';
 
 
 </script>
-<main >
+<main>
 	
 
 	
@@ -174,10 +178,10 @@ import StackedMobile from './StackedMobile.svelte';
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
-			<div class="flex  md:flex-col flex-wrap gap-2">
+			<div class="flex md:flex-col flex-wrap gap-2">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
-				<div class="md:flex hidden gap-2 justify-center items-center">
+				<div class="flex gap-2 justify-center items-center">
 				  <div class="mr-2">
 					<!-- Small svg polygon -->
 					<svg width="40" height="20">
@@ -188,12 +192,6 @@ import StackedMobile from './StackedMobile.svelte';
 				  <div class=" flex-1 font-medium ">
 					<p class="text-sm">{item.name}</p></div>
 				</div>  
-
-				<div class="flex md:hidden">
-					<div style="background-color:{item.color};" class="flex-1 px-2 py-1">
-						<p class="text-sm">{item.name}</p>
-					</div>
-				</div>
 				{/each}
 			  </div>
 		   
@@ -204,7 +202,7 @@ import StackedMobile from './StackedMobile.svelte';
 			<!-- Dropdown for selecting facets -->
 
 			<div class="chart relative" >
-				<div id="facets" class="flex z-10 {direction}-0 md:absolute flex-col gap-8 justify-start my-8">
+				<div id="facets" class="flex z-10 {direction}-0 absolute flex-col gap-8 justify-start pb-8my-8">
 					<select bind:value={selected} class="rounded-md " >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
@@ -254,7 +252,7 @@ import StackedMobile from './StackedMobile.svelte';
 						<g class="tick" transform="translate({xScale(i)/6} ,{height + 10})">
 								<text x="{barWidth/2}" y="-90">
 								{#if point[0].year  >= 1920 && point[0].year <= 1990 && id == "publications"}
-									1940 - 1990
+									1940-90
 								{:else}
 									{point[0].year}
 								{/if}
@@ -293,25 +291,6 @@ import StackedMobile from './StackedMobile.svelte';
 						{/each}
 						</g>
 				</svg>
-
-				<!-- Start Mobile -->
-				<StackedMobile
-				id="publications"
-				title="Publications"
-				width={950}
-				colorBy="genre"
-				dataset={dataset}
-				facet="keyword"
-				facetTwo="keyword2"
-				colors={colors}
-				sortBy="year"
-				modalContent={{
-					label: "genre",
-					title: "title",
-					year: "year",
-				}}
-				/>
-
 			</div>
 		</div>
 	
@@ -328,10 +307,10 @@ import StackedMobile from './StackedMobile.svelte';
 		margin: 0 auto;
 	}
 
-	.chartSVGMobile {
+	.chartSVG {
 		position: relative;
 		width: 100%;
-		height: 400px;
+		height: 720px;
 	}
 
 	.tick {

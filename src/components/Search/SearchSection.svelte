@@ -122,7 +122,7 @@ search.addWidgets([
           item:
            `
         <div class="py-4">
-          <h4 class="font-semibold text-xl">{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h4>
+          <h4 class="font-semibold text-xl">{{ name }}</h4>
           <p class="text-sm hit-description">{{ type }}</p>
           <div class="flex flex-row justify-items-center items-center gap-4">
             <p class="text-sm hit-description">{{ region }}</p>
@@ -130,7 +130,7 @@ search.addWidgets([
             <a href={{location}}><p class="text-sm hit-description">{{ location }}</p></a>
           </div>
           <h6 class="text-sm"><span class="font-bold"><a href="mailto:{{ contact }}">{{contact}}</a></span></h6>
-          <p class="text-sm hit-description">>{{#helpers.highlight}}{ "attribute": "programs" }{{/helpers.highlight}}</p>
+          <p class="text-sm hit-description">{{#helpers.highlight}}{ "attribute": "programs" }{{/helpers.highlight}}</p>
           </div>
            `,
         },

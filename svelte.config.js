@@ -23,7 +23,7 @@ const algoliaConfig = {
     { name: `organizations`, getData: loadOrganizations },
   ],
   settings: {
-    attributesToHighlight: [`title`],
+    attributesToHighlight: [`title`, `programs`],
   },
 }
 

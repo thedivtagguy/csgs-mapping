@@ -18,7 +18,7 @@
 </script>
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <a href="{link}">
-  <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">
+  <button id="menu" on:mouseover="{() => hover = true}" on:mouseleave="{() => hover = false}">
     <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" fill="black" class="button">
       <line on:click={() => click = !click} class:active-top={active}
   
@@ -46,45 +46,49 @@
   transition-property: transform;
   transition-duration: 0.1s;
   transform-origin: center;
-  fill: black;
-  font-weight: 700;
+  fill: #3a3a3a;
+   font-style: normal;
+   text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
   text-anchor: middle;
 }
-.active-top  {
+.hover-top  {
   transform: translateY(-10px);
 }
 
-.active-bot {
+.hover-bot {
   transform: rotate(-1deg);
 }
 
-.active-left {
+.hover-left {
    transform: rotate(-2deg);
   transform: translateX(-20px);
   
 }
 
-.active-right {
+.hover-right {
     transform: rotate(5deg);
   transform: translateX(20px);
 
 
 }
 
-.click-top {
+.active-top {
   transform: translateY(-15px);
 }
 
-.click-bot {
+.acctive-bot {
   transform: rotate(-1.5deg);
 }
 
-.click-left {
+.active-left {
   transform: rotate(-2.5deg);
   transform: translateX(-25px);
 }
 
-.click-right {
+.active-right {
   transform: rotate(5.5deg);
   transform: translateX(25px);
 }

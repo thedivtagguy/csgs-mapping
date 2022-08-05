@@ -23,7 +23,7 @@ function goToSearch(e){
             <div class="flex items-center justify-between">
                 <a href="https://csgs.ashoka.edu.in/">
                     <div>
-                        <img rel="preload" src="/assets/csgs-logo.png" alt="CSGS logo" width="100">
+                        <img rel="preload" src="/assets/logo-a.png" alt="Directory logo" width="150">
                     </div>
                 </a>
                 

@@ -834,6 +834,10 @@ html {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }

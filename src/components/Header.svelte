@@ -30,9 +30,8 @@
     <section class=" flex justify-center items-start flex-row h-screen">
       <div class="container px-6 text-left">
           <div class="max-w-4xl py-8">
-              <p class="mt-6 px-6 text-gray-500 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero similique
-                obcaecati illum mollitia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero similique
-                obcaecati illum mollitia.</p>
+              <p class="mt-6 px-7 text-gray-500 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
+              </p>
           </div>      
     
       <div >

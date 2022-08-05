@@ -72,6 +72,8 @@ let genreColors =  ["#F3DF8C", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1B
             id="av"
             title="Audio Visual Material"
             dataset={av}
+            width={950}
+            
             facet="keyword"
             colorBy="format"
             colors={genreColors}
@@ -89,7 +91,7 @@ let genreColors =  ["#F3DF8C", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1B
 
 <style>    .container{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     position: relative;
     margin: 20px;
 }

@@ -21,7 +21,7 @@ import StackedMobile from './StackedMobile.svelte';
   	export let direction = "right";
 	export let facetTwo = null;
 	export let combine = [];
-
+	export let combineYear = true;
 	///////////////////////////////////////////////////////////////////
 	// Data Preprocessing /////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
@@ -246,7 +246,9 @@ import StackedMobile from './StackedMobile.svelte';
 						id={id}
 						selected = {selected}
 						facet = {facet}
-						facets = {facets}/>
+						facets = {facets}
+						combineYear = {combineYear}
+						/>
 				</div>
 				<svg  class="chartSVG hidden md:block">						
 

@@ -51,6 +51,7 @@
             title: "title",
             year: "year",
         }}
+         combineYear={true}
         />
     </section>
     <section id="events">
@@ -83,6 +84,7 @@
                 year: "year",
             }}
             direction="left"
+            combineYear={false}
         />
     </section>
 </div>

@@ -18,6 +18,7 @@
 	export let selected = "";	// The selected facet
 	export let facet = "";
 	export let facets = [];
+	export let combineYear = false;
 	////////////////////////////////////////////////////////////////////
 	//////// D3 Config /////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////
@@ -74,7 +75,7 @@
 
 		<select bind:value={year} class="rounded-md " >
 			{#each years as year, i}
-			// If year is less than 1990, only display '1940-90' Once
+			{#if combineYear}
 				{#if year < 1990 && i == 0}
 					<option class="capitalize" value={year}>
 						1940-90
@@ -85,7 +86,12 @@
 				
 				</option>
 				{/if}
-				
+			{/if}
+			{#if !combineYear}
+				<option class="capitalize" value={year}>
+					{year}
+				</option>
+			{/if}
 			{/each}
 		</select>
 	

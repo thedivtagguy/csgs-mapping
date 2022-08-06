@@ -134,9 +134,9 @@ onMount(async () => {
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
     if (mobileCheck()) {
-        width = window.innerWidth/1.2;
+        width = window.innerWidth/1.1;
         height = window.innerHeight / 3;
-        dividedBy = 3;
+        dividedBy = 4;
         avoidOverlapRadius = 12;
         nodeRadius = 25;
     }
@@ -214,6 +214,8 @@ var simulation = d3.forceSimulation()
 
     // Apply these forces to the nodes and update their positions.
     // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+
+    // Start simulation only when section is in view
     simulation
         .nodes(data)
         .on("tick", function(d) {

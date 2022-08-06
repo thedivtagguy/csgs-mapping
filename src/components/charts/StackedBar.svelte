@@ -2,6 +2,7 @@
 	import { scaleLinear } from 'd3-scale';
 	import ModalOpen from '../modal/ModalOpen.svelte';
 	import polygonGenerator from './polygons.js';
+import StackedMobile from './StackedMobile.svelte';
 	
 	let selected;
 
@@ -178,22 +179,26 @@
 			<p class="text-gray-600 py-4 text-sm">
 				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
 			</p>
-			<div class="flex md:flex-col flex-wrap gap-2">
+
+			<div class="flex md:flex-col w-full flex-wrap gap-2">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
-				<div class="flex gap-2 justify-center items-center">
-				  <div class="mr-2">
-					<!-- Small svg polygon -->
-					<svg width="40" height="20">
-					  <path d="{polygonGenerator(true, 20 ,30 )}" fill={item.color} />
-						
-					</svg>
+				<div class="flex flex-wrap gap-2 justify-center items-center">
+				  <div class="mr-2 hidden md:block">
+					<svg height="30" width="30">
+						<path d={polygonGenerator(true, 20, 30)} fill={item.color}/>
+					  </svg> 
 				  </div>
-				  <div class=" flex-1 font-medium ">
-					<p class="text-sm">{item.name}</p></div>
-				</div>  
+				  <div class=" hidden md:block flex-1 font-medium ">
+					<p class=" text-sm">{item.name}</p></div>
+				
+				<div class="flex flex-wrap md:hidden">
+					<div style="background-color: {item.color}; width: 100%;" class="py-1 px-2">{item.name}</div>
+				</div>
+			</div>  
 				{/each}
 			  </div>
+		  
 		   
 		</div>
 		
@@ -202,7 +207,7 @@
 			<!-- Dropdown for selecting facets -->
 
 			<div class="chart relative" >
-				<div id="facets" class="flex z-10 {direction}-0 absolute flex-col gap-8 justify-start pb-8my-8">
+				<div id="facets" class="md:flex z-10 hidden {direction}-0 md:absolute flex-col gap-8 justify-start pb-8my-8">
 					<select bind:value={selected} class="rounded-md " >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
@@ -235,7 +240,14 @@
 					</div>
 				</div>
 
-
+				<div class="block md:hidden mt-4">
+					<StackedMobile data={data2}
+						modalContent = {modalContent}
+						id={id}
+						selected = {selected}
+						facet = {facet}
+						facets = {facets}/>
+				</div>
 				<svg  class="chartSVG hidden md:block">						
 
 					<g class="axis y-axis">
@@ -291,6 +303,8 @@
 						{/each}
 						</g>
 				</svg>
+
+			
 			</div>
 		</div>
 	

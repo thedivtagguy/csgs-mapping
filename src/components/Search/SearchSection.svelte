@@ -121,7 +121,7 @@ search.addWidgets([
         templates: {
           item:
            `
-        <div class="py-4">
+        <div class="py-4 max-w-4">
           <h4 class="font-semibold text-xl">{{ name }}</h4>
           <p class="text-sm hit-description">{{ type }}</p>
           <div class="flex flex-row justify-items-center items-center gap-4">
@@ -130,7 +130,7 @@ search.addWidgets([
             <a href={{location}}><p class="text-sm hit-description">{{ location }}</p></a>
           </div>
           <h6 class="text-sm"><span class="font-bold"><a href="mailto:{{ contact }}">{{contact}}</a></span></h6>
-          <p class="text-sm hit-description">{{#helpers.highlight}}{ "attribute": "programs" }{{/helpers.highlight}}</p>
+          <p class="text-sm hit-description break-normal ">{{#helpers.highlight}}{ "attribute": "programs" }{{/helpers.highlight}}</p>
           </div>
            `,
         },
@@ -222,7 +222,7 @@ search.start();
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 </svelte:head>
 <main class="py-12">
-  <div class="flex justify-start  gap-8 items-center">
+  <div class="flex flex-col md:flex-row  justify-start  gap-8 items-start md:items-center">
     <a href="/">
       <button class="bg-[color:var(--color-orange)] hover:bg-[color:var(--color-green)] text-black font-bold py-2 px-4 " onclick="search.start()">
         Back to Home
@@ -232,7 +232,7 @@ search.start();
     <div id="stats">
       <p id="statsNumber"></p>
     </div>
-    <div id="facets" class="flex flex-co ml-auto gap-8 justify-start my-8">
+    <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">
       <select bind:value={selected} 
  
       class="rounded-md h-12 w-[200px] " >
@@ -249,7 +249,7 @@ search.start();
 
 
   <div hidden={selected === 'publications-search' ? false : selected === 'all' ? false : true} >
-    <section class="grid  py-12 grid-cols-12">
+    <section class="grid  px-10 py-12 md:grid-cols-12">
       <div class="col-span-3">
         <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Publications</h3>
       </div>
@@ -260,7 +260,7 @@ search.start();
   </div>
 
   <div hidden={selected === 'events-search' ? false : selected === 'all' ? false : true} >
-    <section class="grid  py-12 grid-cols-12">
+    <section class="grid px-10 py-12 md:grid-cols-12">
       <div class="col-span-3">
         <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Events</h3>
       </div>
@@ -271,18 +271,18 @@ search.start();
   </div>
 
   <div hidden={selected === 'institutions-search' ? false : selected === 'all' ? false : true} >
-    <section class="grid  py-12 grid-cols-12">
+    <section class="grid  px-10 py-12 md:grid-cols-12">
       <div class="col-span-3">
         <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Institutions</h3>
       </div>
-      <div class="col-span-9">
+      <div class="md:col-span-9 max-w-12">
         <div id="institutions-search"></div>
       </div>
     </section>
   </div>
 
   <div hidden={selected === 'av-search' ? false : selected === 'all' ? false : true} >
-    <section class="grid  py-12 grid-cols-12">
+    <section class="grid  px-10 py-12 md:grid-cols-12">
       <div class="col-span-3">
         <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Audio Visual Material</h3>
       </div>
@@ -293,7 +293,7 @@ search.start();
   </div>
 
   <div hidden={selected === 'digital-spaces-search' ? false : selected === 'all' ? false : true} >
-    <section class="grid  py-12 grid-cols-12">
+    <section class="grid px-10  py-12 md:grid-cols-12">
       <div class="col-span-3">
         <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Digital Spaces</h3>
       </div>

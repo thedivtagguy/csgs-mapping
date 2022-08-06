@@ -73,10 +73,19 @@
 		</select>
 
 		<select bind:value={year} class="rounded-md " >
-			{#each years as year}
+			{#each years as year, i}
+			// If year is less than 1990, only display '1940-90' Once
+				{#if year < 1990 && i == 0}
+					<option class="capitalize" value={year}>
+						1940-90
+					</option>
+				{:else}
 				<option class="capitalize" value={year}>
 					{year <= 1990 ? "1940-1990" : year}
+				
 				</option>
+				{/if}
+				
 			{/each}
 		</select>
 	

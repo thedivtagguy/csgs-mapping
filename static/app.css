@@ -784,6 +784,9 @@ html {
 .-mt-2 {
   margin-top: -0.5rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .block {
   display: block;
 }
@@ -857,6 +860,9 @@ html {
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
 }
 .flex-1 {
   -webkit-box-flex: 1;
@@ -958,8 +964,14 @@ html {
 .overflow-hidden {
   overflow: hidden;
 }
+.whitespace-normal {
+  white-space: normal;
+}
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.whitespace-pre-line {
+  white-space: pre-line;
 }
 .whitespace-pre-wrap {
   white-space: pre-wrap;
@@ -1131,6 +1143,14 @@ html {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1272,6 +1292,10 @@ html {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(88 80 236 / var(--tw-text-opacity));
 }
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
@@ -1492,8 +1516,18 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .sm\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   .sm\:pr-5 {
     padding-right: 1.25rem;
+  }
+  .sm\:text-left {
+    text-align: left;
+  }
+  .sm\:text-center {
+    text-align: center;
   }
   .sm\:text-sm {
     font-size: 0.875rem;
@@ -1502,6 +1536,9 @@ html {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+  .sm\:tracking-tight {
+    letter-spacing: -0.025em;
   }
 }
 @media (min-width: 768px) {
@@ -1655,12 +1692,24 @@ html {
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .lg\:pr-0 {
     padding-right: 0px;
   }
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 @media (min-width: 1280px) {

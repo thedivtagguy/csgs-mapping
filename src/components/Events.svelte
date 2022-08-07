@@ -64,11 +64,11 @@
     <div class="col-span-3 py-6">
         <h3 class="text-4xl uppercase font-sans font-bold">Upcoming Events</h3>
       </div>
-    <div class="main md:flex">
+    <div class="main flex flex-row md:flex">
         {#each events as event}
         {#if event.upcoming == "TRUE"}
 
-        <div class="md:portfolio_item -ml-4 p-4">
+        <div class="md:portfolio_item portfolio_item -ml-4 p-4">
            <EventCard event={event}
               />
         </div>
@@ -113,8 +113,20 @@
     min-width: 25%;
     width:30%;
     }
+
+    /* Media query */
+    @media only screen and (max-width: 600px) {
+        .portfolio_item {  
+    min-width: 100%;
+    }
+}
+
     .flex {
     display: flex;
     display: -webkit-flex;
+    }
+
+    .main {
+        overflow-x: auto;
     }
 </style>

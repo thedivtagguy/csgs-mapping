@@ -2,7 +2,7 @@
   export let title = "Center for Sexuality and Gender Studies";
   export let description =
     "Center for Sexuality and Gender Studies Resources";
-  export let url = "https://thedivtagguy.com";
+  export let url = "https://csgs.ashoka.edu.in";
   // export let slug = 
   //   "common/assets/thumbnails/960/social.jpg"
 </script>
@@ -35,7 +35,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="https://csgs.ac.in" />
-  <meta name="twitter:creator" content="@thedivtagguy" />
+  <meta name="twitter:creator" content="@csgs_ashoka" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <!-- <meta name="twitter:image:src" content="https://thedivtagguy.com/{slug}" /> -->

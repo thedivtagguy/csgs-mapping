@@ -133,12 +133,17 @@ onMount(async () => {
     let dividedBy = 2;
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
+    let defaultRange = [50, 100, 150, 200, 250, 300, 350,400, 500];
+
+
     if (mobileCheck()) {
         width = window.innerWidth/1.1;
         height = window.innerHeight / 3;
         dividedBy = 4;
         avoidOverlapRadius = 12;
         nodeRadius = 25;
+
+        defaultRange = [25, 50, 75, 100, 125, 150, 175, 200, 250];
     }
 
 
@@ -170,7 +175,7 @@ const data = digital;
     // A scale that gives a X target position for each group
     const x = d3.scaleOrdinal()
         .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
-        .range([50, 100, 150, 200, 250, 300, 350,400, 500])
+        .range(defaultRange)
 
 
 

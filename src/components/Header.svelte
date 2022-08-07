@@ -11,17 +11,19 @@
       url: "#publications",
     },
     {
+      title: "Events",
+      url: "#events",
+    },
+    {
       title: "Digital Spaces",
       url: "#digital-spaces",
     },
+    
     {
       title: "Audio Visual Material",
       url: "#av-material",
     },
-    {
-      title: "Events",
-      url: "#events",
-    },
+    
   ];
 </script>
 

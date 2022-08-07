@@ -19,7 +19,7 @@ function goToSearch(e){
 }
 </script>
     <nav class="">
-        <div class="container px-6 py-3 mx-auto md:flex">
+        <div class="container px-10 py-3 mx-auto md:flex">
             <div class="flex items-center justify-between">
                 <a href="https://csgs.ashoka.edu.in/">
                     <div>

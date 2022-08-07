@@ -27,9 +27,6 @@
             <Header />
         </div>
     </div>
-
-
-
 <div class="py-2 ">
     <section id="map">
         <Mapbox />

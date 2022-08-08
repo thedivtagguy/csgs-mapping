@@ -21,7 +21,7 @@
 
     <div class="container ">
         <div class="box">
-          <img  width="1000" src="/assets/animation.gif" alt="animation">
+          <img  width="1440" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
             <Header />
@@ -71,7 +71,9 @@
             id="av"
             title="Audio Visual Material"
             dataset={av}
-            facet="format"
+            facet="keyword"
+        facetTwo="keyword2"
+        combine={['keyword', 'keyword2', 'keyword3']}
             colorBy="format"
             colors={genreColors}
             sortBy="year"

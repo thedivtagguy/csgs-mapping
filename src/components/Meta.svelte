@@ -1,7 +1,7 @@
 <script>
-  export let title = "Center for Sexuality and Gender Studies";
+  export let title = "Mapping Sexuality in India";
   export let description =
-    "Center for Sexuality and Gender Studies Resources";
+    "The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India";
   export let url = "https://csgs.ashoka.edu.in";
   // export let slug = 
   //   "common/assets/thumbnails/960/social.jpg"
@@ -22,7 +22,7 @@
   <meta name="news_keywords" content="" />
 
   <meta property="og:title" content={title} />
-  <meta property="og:site_name" content="Center for Sexuality and Gender Studies" />
+  <meta property="og:site_name" content="Mapping Sexuality in India" />
   <meta property="og:url" content={url} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
   <meta name="robots" content="max-image-preview:large" />
  
   <link rel="canonical" href="{url}/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.png"> 
 </svelte:head>

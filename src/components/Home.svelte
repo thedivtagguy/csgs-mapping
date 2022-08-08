@@ -21,13 +21,13 @@
 
     <div class="container ">
         <div class="box">
-          <img  width="1440" src="/assets/animation.gif" alt="animation">
+          <img  width= "1000" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
             <Header />
         </div>
     </div>
-<div class="py-2 ">
+<div class="py-4 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -91,6 +91,7 @@
 
 <style>    .container{
     width: 100%;
+    margin-left: 4em;
     height: 90vh;
     position: relative;
 }

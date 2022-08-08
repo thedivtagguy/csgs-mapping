@@ -17,54 +17,35 @@
 <!-- Section 1 -->
 <section class="h-auto ">
     <div class="bg"></div>
-  <div class="max-w-5xl content py-8 px-4  sm:text-left">
+  <div class="max-w-7xl content py-8 px-4  sm:text-left">
     <p
-      class="mt-1 text-xl font-semibold font-sans text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl"
+      class="mt-1 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"
     >
       About the directory
     </p>
     <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
-      The Directory – Mapping Sexuality in India – is a compendium of the names of institutions,
-      organisations, publications, audio-visual material, digital outlets, and events in the broad
-      sphere of gender and sexuality studies in India. The Centre for Studies in Gender and
-      Sexuality (CSGS) at Ashoka University has compiled this directory as an urgent resource to
-      produce knowledge that can help researchers, activists, and media outlets as they work on
-      gender and sexuality in India. 
+      The Directory – Mapping Sexuality in India – is a compendium of the names of institutions, organisations, publications, audio-visual material, digital outlets, and events in the broad sphere of gender and sexuality studies in India. <a href="https://csgs.ashoka.edu.in/">The Centre for Studies in Gender and Sexuality (CSGS) </a>at Ashoka University has compiled this directory as an urgent resource to produce knowledge that can help researchers, activists, and media outlets as they work on gender and sexuality in India. 
       
-      The resources listed in the Directory are ones that engage with
-      questions of identity, rights, inequality, fantasy, pleasure, and politics through which we
-      approach the domains of gender and sexuality. While this list is far from exhaustive, the
-      Centre hopes that these interactive maps, charts, and figures in the Directory provide an
-      enriching and user-friendly experience to anyone who wishes to navigate the diverse kinds of
-      interventions in the field. For more in-depth information about the project, the process and
-      the relevance of creating such a repository, click here. 
+      The resources listed in the Directory are ones that engage with questions of identity, rights, inequality, fantasy, pleasure, and politics through which we approach the domains of gender and sexuality. While this list is far from exhaustive, the Centre hopes that these interactive maps, charts, and figures in the Directory provide an enriching and user-friendly experience to anyone who wishes to navigate the diverse kinds of interventions in the field. For more in-depth information about the project, the process and the relevance of creating such a repository, <a href="https://csgs.ashoka.edu.in/">click here.</a>
       
-      The CSGS envisages this as a one-stop digital repository that will be regularly updated based
-      on user inputs. <a href="/contact">Have a resource to add? </a>
+      The CSGS envisages this as a one-stop digital repository that will be regularly updated based on user inputs. <a href="/contact">Have a resource to add? </a>
       
-      The data for the Directory was compiled under the aegis of the Governing Intimacies
-      Project, located at the University of Witwatersrand, South Africa.
+      The data for the Directory was compiled under the aegis of the Governing Intimacies Project, located at the University of Witwatersrand, South Africa.
     </p>
 
     <p
-      class="mt-8 text-xl font-semibold font-sans text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl"
+      class="mt-8 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"
     >
       About the design
     </p>
     <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
-      The design attempts to capture the diversity of the directory in its use of line, colour,
-      shape, and interaction. The main buttons on the homepage break open when hovered over, to echo
-      the CSGS logo and the idea that gender and sexuality do not fit into neat little boxes.
+      The design attempts to capture the diversity of the directory in its use of line, colour, shape, and interaction. The main buttons on the homepage break open when hovered over, to echo the CSGS logo and the idea that gender and sexuality do not fit into neat little boxes.
      
-      Similarly, in the visualisations, no shape is quite rectangular or perfectly circular.
-      Instead, they are all unique, and not one is exactly the same as the other. The shapes are
-      generated differently each time the website loads. The animation on the homepage morphs shapes
-      and colours continuously, as a visual metaphor for the fluidity of gender and sexuality and
-      how they interact with one another.
+      Similarly, in the visualisations, no shape is quite rectangular or perfectly circular. Instead, they are all unique, and not one is exactly the same as the other. The shapes are generated differently each time the website loads. The animation on the homepage morphs shape and colour continuously, as a visual metaphor for the fluidity of gender and sexuality and how they interact with one another.
     </p>
 
     <p
-      class="mt-8 text-xl font-semibold font-sans text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl"
+      class="mt-8 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"
     >
       About the team
     </p>
@@ -72,22 +53,16 @@
       Project Lead: Samreen Mushtaq 
       Research Assistants: Yanam Bage, with support from Varun Tiwari
       Project Contributors: Shreyashi Sharma, Srija, Neel 
-      Data Visualisation and Design by: Nithya Subramanian & Aman Bhargava
+      Data Visualisation and Design by: <a href = "https://www.nithyasubramanian.com/">Nithya Subramanian </a> and <a href = "https://thedivtagguy.com/"> Aman Bhargava</a>
     </p>
 
     <p
-      class="mt-8 text-xl font-semibold font-sans text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl"
+      class="mt-8 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"
     >
       About CSGS
     </p>
     <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
-      The Centre for Studies in Gender and Sexuality (CSGS) was established at Ashoka University in
-      2015, and is one of the Centres of Excellence at the university. It is the first Centre of its
-      kind in India to study the spectrum of questions relating to both gender and sexuality. The
-      mandate of the Centre is to take seriously the multiplicity of norms, identities, issues,
-      practices, and movements in the broad spheres covered by both gender and sexuality. Our
-      engagement with these fields takes place through invited talks, international conferences,
-      published articles, and multiple workshops.
+      The Centre for Studies in Gender and Sexuality (CSGS) was established at Ashoka University in 2015, and is one of the Centres of Excellence at the university. It is the first Centre of its kind in India to study the spectrum of questions relating to both gender and sexuality. The mandate of the Centre is to take seriously the multiplicity of norms, identities, issues, practices, and movements in the broad spheres covered by both gender and sexuality. Our engagement with these fields takes place through invited talks, international conferences, published articles, and multiple workshops.
     </p>
   </div>
 </section>

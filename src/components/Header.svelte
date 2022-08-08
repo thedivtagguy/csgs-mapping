@@ -30,7 +30,7 @@
   
     <section class=" flex justify-left items-start flex-row md:h-screen">
       <div class="container md:px-0 text-left">
-          <div class="max-w-3xl md:py-6">
+          <div class="max-w-7xl md:py-3">
               <p class="md:mt-6 px-6 text-lg font-light text-gray-700 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
               </p>
           </div>      

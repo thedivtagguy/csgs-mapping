@@ -839,6 +839,9 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+.w-screen {
+  width: 100vw;
+}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -1046,6 +1049,14 @@ html {
 .bg-\[color\:var\(--color-orange\)\] {
   background-color: var(--color-orange);
 }
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.bg-\[color\:\#f1efe2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 239 226 / var(--tw-bg-opacity));
+}
 .p-4 {
   padding: 1rem;
 }
@@ -1157,6 +1168,12 @@ html {
 }
 .pb-8 {
   padding-bottom: 2rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pl-6 {
+  padding-left: 1.5rem;
 }
 .text-left {
   text-align: left;
@@ -1385,6 +1402,9 @@ html {
 .focus\:border-blue-400:focus {
   --tw-border-opacity: 1;
   border-color: rgb(118 169 250 / var(--tw-border-opacity));
+}
+.focus\:border-blue-400\/0:focus {
+  border-color: rgb(118 169 250 / 0);
 }
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
@@ -1641,6 +1661,14 @@ html {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+  .md\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
   .md\:pr-0 {
     padding-right: 0px;
   }
@@ -1664,6 +1692,14 @@ html {
   .md\:hover\:text-blue-700:hover {
     --tw-text-opacity: 1;
     color: rgb(26 86 219 / var(--tw-text-opacity));
+  }
+  .md\:hover\:text-\[\#F67C87\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(246 124 135 / var(--tw-text-opacity));
+  }
+  .md\:hover\:text-\[\#79A5AE\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(121 165 174 / var(--tw-text-opacity));
   }
   .dark .md\:dark\:bg-transparent {
     background-color: transparent;

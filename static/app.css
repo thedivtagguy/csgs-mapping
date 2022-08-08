@@ -1008,6 +1008,9 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
+.border-gray-400\/0 {
+  border-color: rgb(156 163 175 / 0);
+}
 .bg-\[color\:var\(--color-turquoise\)\] {
   background-color: var(--color-turquoise);
 }
@@ -1117,6 +1120,14 @@ html {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1208,6 +1219,12 @@ html {
 }
 .font-normal {
   font-weight: 400;
+}
+.font-thin {
+  font-weight: 100;
+}
+.font-light {
+  font-weight: 300;
 }
 .uppercase {
   text-transform: uppercase;

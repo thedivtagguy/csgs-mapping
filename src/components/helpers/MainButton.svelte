@@ -39,16 +39,17 @@
   transition-property: transform;
   transition-duration: 0.1s;
   transform-origin: center;
-  stroke: black;
+  stroke: #3a3a3a;
 }
 
 .button__label {
   transition-property: transform;
   transition-duration: 0.1s;
   transform-origin: center;
-  fill: black;
-  font-weight: 700;
-  text-anchor: middle;
+  fill: #3a3a3a;
+  text-transform: uppercase;
+  font-weight: 400;
+    text-anchor: middle;
 }
 .active-top  {
   transform: translateY(-10px);

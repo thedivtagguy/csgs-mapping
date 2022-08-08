@@ -71,9 +71,9 @@
             id="av"
             title="Audio Visual Material"
             dataset={av}
-            facet="keyword"
+            facet="keywords"
         facetTwo="keyword2"
-        combine={['keyword', 'keyword2', 'keyword3']}
+        combine={['keywords', 'keyword2', 'keyword3']}
             colorBy="format"
             colors={genreColors}
             sortBy="year"

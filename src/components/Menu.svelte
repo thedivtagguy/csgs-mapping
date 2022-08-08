@@ -24,7 +24,7 @@
       <ul class="flex flex-col px-8 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700">
         <form class="flex  justify-center items-center" >
       
-          <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
+          <input bind:value={query} type="text" class="w-full searchbar pl-10 pr-4 text-gray-700 bg-[color:var(--color-darker-background)] border rounded-md border-gray-400/0   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
           <!-- Submit button -->
           <input type="submit" class="w-full hidden bg-gray-800 text-white rounded-md border-0 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" value="Search" on:click={goToSearch}>
               <a  rel="external" href="/search?publications[query]={query}">

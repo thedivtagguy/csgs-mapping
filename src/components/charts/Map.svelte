@@ -29,7 +29,7 @@
 	});
 		map = new mapboxgl.Map({
 			container: container,
-			style: 'mapbox://styles/thedivtagguy/cl4ktlt35001d16mim8rtqh8i',
+			style: 'mapbox://styles/nithya13/cl4grsr36003j15nyv4moit0e',
 			center: [80.9, 22.7],
 			zoom: zoom,
 			maxZoom: 15
@@ -45,8 +45,8 @@
 				// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
 				data: geoData,
 				cluster: true,
-				clusterMaxZoom: 6, // Max zoom to cluster points on
-				clusterRadius: 40 // Radius of each cluster when clustering points (defaults to 50)
+				clusterMaxZoom: 4, // Max zoom to cluster points on
+				clusterRadius: 20 // Radius of each cluster when clustering points (defaults to 50)
 			});
 
 			map.addLayer({
@@ -65,18 +65,18 @@
 						['get', 'point_count'],
 						'#F67C87',
 						100,
-						'#f1f075',
+						'#F3DF8C',
 						750,
-						'#f28cb1'
+						'#79A5AE'
 					],
 					'circle-radius': [
 						'step',
 						['get', 'point_count'],
-						30,
+						20,
 						100,
-						40,
+						30,
 						750,
-						50
+						35
 					]
 				}
 			});
@@ -103,27 +103,27 @@
 					'circle-color': [
 						'match', 
 						['get', 'type'],
-						'Academic Research Centre',
-						'#CADEAD',
+						'Academic/ Research Centre',
+						'#A8DCC6',
 						'Collective',
-						'#F67C87',
-						'Community Organization',
 						'#F3DF8C',
-						'NGO',
-						'#79A5AE',
-						'Publishing house',
-						'#F3BEF1',
-						'Non-profit organization',
-						'#f3bef1',
-						'Resource Group',
+						'Community Organisation',
 						'#F7B289',
-						'Service Provider',
+						'NGO',
 						'#F3BEF1',
-						'#C43540'
+						'Non-profit Organisation',
+						'#79A5AE',
+						'Publishing House',
+						'#9597BE',
+						'Resource Group',
+						'#D1BB80',
+						'Service Provider',
+						'#D08C87',
+						'#3A3A3A'
 
 					],
-					'circle-radius': 8,
-					'circle-stroke-width': 1,
+					'circle-radius': 10,
+					'circle-stroke-width': 0,
 					'circle-stroke-color': '#fff'
 				}
 			});
@@ -224,7 +224,7 @@
 		
 	/>
 </svelte:head>
-	<h3 class="text-4xl py-6 uppercase font-sans font-bold">Institutions</h3>
+	<h3 class="text-4xl py-6 uppercase font-sans font-semibold">Institutions</h3>
 	
 <div class="relative" id="map-background" use:initMap>
 

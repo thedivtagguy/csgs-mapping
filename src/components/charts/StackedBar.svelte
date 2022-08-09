@@ -365,7 +365,7 @@ import StackedMobile from './StackedMobile.svelte';
 		opacity: 1;
 		stroke: #828282;
 		stroke-width: 0.5px;
-		filter: drop-shadow(16px 16px 10px black);
+		filter: drop-shadow(4px 4px 2px black);
 	}
 
 	.bars.inactive {

@@ -174,10 +174,10 @@ import StackedMobile from './StackedMobile.svelte';
 	<ModalOpen bind:this={modal}/>
 
 	<section class="grid grid-cols-1 px-6 md:grid-cols-12 gap-6 ">
-		<div class="md:col-span-3 col-span-12 md:py-6">
+		<div class="md:col-span-3 col-span-12 md:py-8">
 			<h1 class="text-4xl uppercase font-bold">{title}</h1>
-			<p class="text-gray-600 py-4 text-sm">
-				This chart shows the number of publications by genre in the last five years. Use the sidebar to filter by facets or click on a box to read more.
+			<p class="text-gray-700 py-4 text-sm">
+				This chart shows {title} by genre. Use the dropdown to filter by keyword or click on a box to read more
 			</p>
 
 			<div class="flex md:flex-col w-full flex-wrap gap-2">
@@ -357,12 +357,15 @@ import StackedMobile from './StackedMobile.svelte';
 
 	.bars  {
 		stroke: #828282;
-		stroke-width: 0.5px;
+		stroke-width: 0px;
 		margin-bottom: 17px;
 	}
 
 	.bars.active {
 		opacity: 1;
+		stroke: #828282;
+		stroke-width: 0.5px;
+		filter: drop-shadow(16px 16px 10px black);
 	}
 
 	.bars.inactive {

@@ -127,7 +127,6 @@
 					'circle-stroke-color': '#fff'
 				}
 			});
-
 			// inspect a cluster on click
 			map.on('click', 'clusters', (e) => {
 				const features = map.queryRenderedFeatures(e.point, {

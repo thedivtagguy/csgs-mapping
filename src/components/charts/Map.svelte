@@ -1,7 +1,7 @@
 <script>
 	import { setContext } from 'svelte';
 	import { mapboxgl, key } from './mapbox.js';
-    import geoData from "$data/organizationsScatter.json"
+    import geoData from "$data/indices/organizationsScatter.json"
 	import {scale } from "svelte/transition";
  	 import { quintOut } from "svelte/easing";
 	 import checkMobile  from "$utils/checkMobile.js";
@@ -103,7 +103,7 @@
 					'circle-color': [
 						'match', 
 						['get', 'type'],
-						'Academic/ Research Centre',
+						'Academic/ Research centre',
 						'#A8DCC6',
 						'Collective',
 						'#F3DF8C',

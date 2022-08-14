@@ -4,7 +4,7 @@ const { parse } = require('csv/sync');
 const inPath = `${CWD}/src/data/`;
 const outPath = `${CWD}/src/data/`;
 // Read file
-const csv = fs.readFileSync(`${inPath}organizationsScatter.csv`, 'utf8');
+const csv = fs.readFileSync(`${inPath}organizations.csv`, 'utf8');
 
 const colorDictionary = {
     "Academic Research Centre": "#CADEAD",

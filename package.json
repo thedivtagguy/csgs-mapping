@@ -14,7 +14,7 @@
     "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development  postcss src/styles/tailwind.css -o static/app.css -w",
     "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/styles/tailwind.css -o static/app.css",
     "dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\" ",
-    "build": "npm run gdoc && npm run json && npm run tailwind:build && npm run build:only cross-env NODE_ENV=production",
+    "build": "npm run gdoc && npm run json && npm run geojson && npm run tailwind:build && npm run build:only cross-env NODE_ENV=production",
     "style": "node tasks/style-dictionary.cjs",
     "start": "svelte-kit start",
     "lint": "prettier --check .",

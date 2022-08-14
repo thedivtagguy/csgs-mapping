@@ -1,7 +1,7 @@
 <script>
 	import { setContext } from 'svelte';
 	import { mapboxgl, key } from './mapbox.js';
-    import geoData from "$data/indices/organizationsScatter.json"
+    import geoData from "$data/organizationsScatter.json"
 	import {scale } from "svelte/transition";
  	 import { quintOut } from "svelte/easing";
 	 import checkMobile  from "$utils/checkMobile.js";

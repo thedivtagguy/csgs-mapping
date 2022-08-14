@@ -71,10 +71,7 @@ import StackedMobile from './StackedMobile.svelte';
 			facets.splice(facets.indexOf(d), 1);
 		}
 	});
-	// Capitalize the facets
-	facets.forEach(d => {
-		d = d.charAt(0).toUpperCase() + d.slice(1);
-	});
+
 
 	if (facetTwo){
 		facetsTwo = dataset.map(d => d[facetTwo]).filter((v, i, a) => a.indexOf(v) === i);
@@ -83,9 +80,7 @@ import StackedMobile from './StackedMobile.svelte';
 				facetsTwo.splice(facetsTwo.indexOf(d), 1);
 			}
 		});
-		facetsTwo.forEach(d => {
-			d = d.charAt(0).toUpperCase() + d.slice(1);
-		});
+		
 		facets = facets.concat(facetsTwo);
 		// Remove duplicates
 		facets = facets.filter((v, i, a) => a.indexOf(v) === i);

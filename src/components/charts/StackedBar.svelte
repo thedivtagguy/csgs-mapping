@@ -72,7 +72,6 @@ import StackedMobile from './StackedMobile.svelte';
 		}
 	});
 
-
 	if (facetTwo){
 		facetsTwo = dataset.map(d => d[facetTwo]).filter((v, i, a) => a.indexOf(v) === i);
 		facetsTwo.forEach(d => {
@@ -80,7 +79,6 @@ import StackedMobile from './StackedMobile.svelte';
 				facetsTwo.splice(facetsTwo.indexOf(d), 1);
 			}
 		});
-		
 		facets = facets.concat(facetsTwo);
 		// Remove duplicates
 		facets = facets.filter((v, i, a) => a.indexOf(v) === i);

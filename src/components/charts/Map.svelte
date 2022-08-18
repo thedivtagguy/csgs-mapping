@@ -7,6 +7,7 @@
 	 import checkMobile  from "$utils/checkMobile.js";
 	import {onMount} from "svelte";
 
+
 	
 	setContext(key, {
 		getMap: () => map,
@@ -16,7 +17,7 @@
 	let map;
 	let show = false;
 	$: pointData = {};
-    let zoom = 4;
+    let zoom = 3;
 	onMount(()=> {
 		zoom = checkMobile() ? [3.5] : [4];
 	})
@@ -39,20 +40,20 @@
 			// Add a new source from our GeoJSON data and
 			// set the 'cluster' option to true. GL-JS will
 			// add the point_count property to your source data.
-			map.addSource('earthquakes', {
+			map.addSource('orgs', {
 				type: 'geojson',
 				// Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
 				// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
 				data: geoData,
 				cluster: true,
-				clusterMaxZoom: 4, // Max zoom to cluster points on
+				clusterMaxZoom: 3, // Max zoom to cluster points on
 				clusterRadius: 20 // Radius of each cluster when clustering points (defaults to 50)
 			});
 
 			map.addLayer({
 				id: 'clusters',
 				type: 'circle',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['has', 'point_count'],
 				paint: {
 					// Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
@@ -84,7 +85,7 @@
 			map.addLayer({
 				id: 'cluster-count',
 				type: 'symbol',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['has', 'point_count'],
 				layout: {
 					'text-field': '{point_count_abbreviated}',
@@ -96,7 +97,7 @@
 			map.addLayer({
 				id: 'unclustered-point',
 				type: 'circle',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['!', ['has', 'point_count']],
 				paint: {
 					// Color is from the color key of the point
@@ -133,7 +134,7 @@
 					layers: ['clusters']
 				});
 				const clusterId = features[0].properties.cluster_id;
-				map.getSource('earthquakes').getClusterExpansionZoom(
+				map.getSource('orgs').getClusterExpansionZoom(
 					clusterId,
 					(err, zoom) => {
 						if (err) return;
@@ -223,7 +224,11 @@
 		
 	/>
 </svelte:head>
-	<h3 class="text-4xl py-6 uppercase font-sans font-semibold">Institutions</h3>
+	<h3 class="text-4xl py-2 uppercase font-sans font-semibold">Institutions</h3>
+	<p class="text-gray-700 py-2 text-sm w-1/3">
+		This chart shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each to read more
+	</p>
+
 	
 <div class="relative" id="map-background" use:initMap>
 

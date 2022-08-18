@@ -839,6 +839,18 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+.w-0\.5 {
+  width: 0.125rem;
+}
+.w-0 {
+  width: 0px;
+}
+.w-2\.5 {
+  width: 0.625rem;
+}
+.w-2 {
+  width: 0.5rem;
+}
 .max-w-5xl {
   max-width: 64rem;
 }

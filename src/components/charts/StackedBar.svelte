@@ -201,7 +201,7 @@ import StackedMobile from './StackedMobile.svelte';
 
 			<div class="chart relative" >
 				<div id="facets" class="md:flex z-10 hidden {direction}-0 md:absolute flex-col gap-8 justify-start pb-8my-8">
-					<select bind:value={selected} class="rounded-md " >
+					<select bind:value={selected} class="rounded-none " >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
 								{facet}
@@ -212,7 +212,8 @@ import StackedMobile from './StackedMobile.svelte';
 				</div>
 
 				<div 
-				id="infobox"
+				
+				id="infobox" 
 				style="top: {positionY}px;
 				right: {positionX }px;
 				visibility: {nameVar ? 'visible' : 'hidden'};
@@ -279,6 +280,11 @@ import StackedMobile from './StackedMobile.svelte';
 								// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
 								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
 								};
+																	
+								filter: {
+								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? "drop-shadow(.0rem .0rem 0rem #000000)" : "drop-shadow(.03rem .03rem .1rem #373737)"								
+									};
+
 								pointer-events: {
 									// If selected is equal to null, pointer events are all. If selected is not null and not equal to the facet, pointer events are none.
 									selected === `All ${facet}s` ? 'all' : selected !== point[j][facet] ? 'none' : 'all'

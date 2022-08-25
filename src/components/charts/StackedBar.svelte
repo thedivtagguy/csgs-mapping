@@ -282,7 +282,7 @@ import StackedMobile from './StackedMobile.svelte';
 								};
 																	
 								filter: {
-								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? "drop-shadow(.0rem .0rem 0rem #000000)" : "drop-shadow(.03rem .03rem .1rem #373737)"								
+								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? "drop-shadow(.0rem .0rem 0rem #000000)" : "drop-shadow(.04rem .02rem .1rem #373737)"								
 									};
 
 								pointer-events: {
@@ -293,9 +293,11 @@ import StackedMobile from './StackedMobile.svelte';
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
+								
 								on:click={() => modal.handleOpen(point[j], modalContent, id)}
 								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
 								on:mouseover="{() => tooltip(point[j])}"
+								
 								on:mouseleave="{() => [nameVar] = [null]}"
 							></path>
 						

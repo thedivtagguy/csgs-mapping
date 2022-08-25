@@ -21,7 +21,7 @@
 
     <div class="container ">
         <div class="box">
-          <img  width= "1000" src="/assets/animation.gif" alt="animation">
+          <img  width= "1440" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
             <Header />

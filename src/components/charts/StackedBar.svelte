@@ -165,8 +165,8 @@ import StackedMobile from './StackedMobile.svelte';
 	<!-- Modal component binding-->
 
 	<ModalOpen bind:this={modal}/>
-
-	<section class="grid grid-cols-1 px-6 md:grid-cols-12 gap-6 ">
+	
+	<section class="grid grid-cols-1 px-8 w-full md:py-32 md:grid-cols-12 gap-6 ">
 		<div class="md:col-span-3 col-span-12 md:py-8">
 			<h1 class="text-4xl uppercase font-bold">{title}</h1>
 			<p class="text-gray-700 py-4 text-sm">
@@ -277,18 +277,18 @@ import StackedMobile from './StackedMobile.svelte';
 							
 							<path 
 								style="opacity:{
-								// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
-								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
-								};
-																	
-								filter: {
-								selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? "drop-shadow(.0rem .0rem 0rem #000000)" : "drop-shadow(.04rem .02rem .1rem #373737)"								
+									// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
+									selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
 									};
-
-								pointer-events: {
-									// If selected is equal to null, pointer events are all. If selected is not null and not equal to the facet, pointer events are none.
-									selected === `All ${facet}s` ? 'all' : selected !== point[j][facet] ? 'none' : 'all'
-								}"
+									pointer-events: {
+										// If selected is equal to null, pointer events are all. If selected is not null and not equal to the facet, pointer events are none.
+										selected === `All ${facet}s` ? 'all' : selected !== point[j][facet] ? 'none' : 'all'
+									};
+									-webkit-filter: {
+										// If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
+										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 0px 2px rgba(40,40,40,0.6))'
+									};
+								"
 								
 								class="bars boxes hover:cursor-pointer"
 								id="bar-{point[j].id}"

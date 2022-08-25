@@ -19,7 +19,7 @@
 <main class="">
     <Menu />
 
-    <div class="container ">
+    <div class="container">
         <div class="box">
           <img  width= "1440" src="/assets/animation.gif" alt="animation">
         </div>
@@ -27,7 +27,7 @@
             <Header />
         </div>
     </div>
-<div class="py-4 ">
+<div class="py-20 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -72,7 +72,7 @@
             title="Audio Visual Material"
             dataset={av}
             facet="keyword"
-            
+            width={950}
         
             colorBy="format"
             colors={genreColors}
@@ -97,6 +97,9 @@
 }
 
 /* MObile */
+#map {
+    z-index: 99;
+}
 @media (max-width: 768px) {
     .container{
         height: 70vh;
@@ -114,7 +117,7 @@
 
 }
 .stack-top{
-    z-index: 9;
+    z-index: 1;
     /* margin: 20px; for demo purpose  */
 }
 </style>

@@ -277,7 +277,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
     <ModalOpen bind:this={modal} />
   
 <!-- Section 1 -->
-<section class="px-8 w-full md:py-32 md:px-0">
+<section class="px-8 w-full md:py-8 md:px-0">
   <div class=" items-center max-w-7xl  mx-auto ">
     <div class="grid md:grid-cols-12 items-center sm:-mx-3">
       <div class="w-full col-span-7 md:col-span-3 ">

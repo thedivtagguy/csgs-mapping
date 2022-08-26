@@ -70,7 +70,7 @@
   transition: all 0.1s;
 }
 .press-effect:active {
-  -webkit-transform: scale(0.88);
-  transform: scale(0.88);
+  -webkit-transform: scale(0.92);
+  transform: scale(0.92);
 }
   </style>

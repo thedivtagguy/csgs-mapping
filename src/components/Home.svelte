@@ -24,6 +24,7 @@
           <img  width= "1440" src="/assets/animation.gif" alt="animation">
         </div>
         <div class="box stack-top" >
+            
             <Header />
         </div>
     </div>
@@ -91,25 +92,35 @@
 
 <style>    .container{
     width: 100%;
-    margin-left: 4em;
-    height: 90vh;
+    margin-left: 0em;
+    height: 99vh;
     position: relative;
 }
 
 /* MObile */
-#map {
-    z-index: 99;
-}
 @media (max-width: 768px) {
     .container{
-        height: 70vh;
+        height: 90vh;
     }
+    img {
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform: rotate(-90deg) scale(2, 2) translate(-15vh, 0px) ;
+    position: relative; 
+    z-index: 0;
+    
+    
+}
+    
 }
 .box{
     width: 100%;
-    height: 100px;            
+    height: 100vh;     
+     
     position: absolute;
-    top: 0;
+    top: -300;
+    z-index: 1;
 /* Center */
     left: 0;
     right: 0;
@@ -117,6 +128,7 @@
 
 }
 .stack-top{
+    position: relative;
     z-index: 1;
     /* margin: 20px; for demo purpose  */
 }

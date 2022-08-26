@@ -1301,6 +1301,9 @@ html {
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.outline {
+  outline-style: solid;
+}
 .blur {
   --tw-blur: blur(8px);
   -webkit-filter: var(--tw-filter);
@@ -1556,6 +1559,12 @@ html {
   .md\:mt-6 {
     margin-top: 1.5rem;
   }
+  .md\:mt-3 {
+    margin-top: 0.75rem;
+  }
+  .md\:mt-2 {
+    margin-top: 0.5rem;
+  }
   .md\:block {
     display: block;
   }
@@ -1648,6 +1657,14 @@ html {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
   .md\:pr-0 {
     padding-right: 0px;

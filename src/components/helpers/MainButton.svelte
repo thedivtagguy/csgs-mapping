@@ -1,7 +1,7 @@
 <script>
 
   let active = false;
-  let click = true;
+  
   export let label = 'Example';
   export let link;
   let width, viewBoxWidth;
@@ -19,16 +19,13 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <a href="{link}">
   <button id="menu" on:mouseover="{() => active = true}" on:mouseleave="{() => active = false}">
-    <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" fill="black" class="button">
-      <line on:click={() => click = !click} class:active-top={active}
-  
-  
-  
-        x1="0%" y1="20" x2="100%" y2="20" class="button__bar button__bar--top" />
+    <svg viewBox="0 0 {viewBoxWidth} 100" width="{width + 100}" height="100" class="button press-effect">
+
+      <line class:active-top={active} x1="0%" y1="20" x2="100%" y2="20" class="button__bar button__bar--top" />
       <line class:active-left={active} x1="0%" y1="20" x2="0" y2="80" class="button__bar button__bar--mid side-left" />
       <line class:active-right={active} x1="100%" y1="20" x2="100%" y2="80" class="button__bar button__bar--mid side-right" />
       <line class:active-bot={active} x1="0" y1="80" x2="100%" y2="80" class="button__bar button__bar--bot" />
-      <text x="50%" y="55%" class="button__label">{label}</text>
+      <text x="50%" y="57%" class="button__label">{label}</text>
     </svg>
   </button>
 </a>
@@ -40,6 +37,7 @@
   transition-duration: 0.1s;
   transform-origin: center;
   stroke: #3a3a3a;
+  stroke-width: 1px;
 }
 
 .button__label {
@@ -48,46 +46,33 @@
   transform-origin: center;
   fill: #3a3a3a;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
     text-anchor: middle;
 }
 .active-top  {
-  transform: translateY(-10px);
+  transform: translateY(2px);
+  transform: rotate(1deg);
 }
 
 .active-bot {
   transform: rotate(-1deg);
+  transform: translateY(2px);
 }
 
 .active-left {
-   transform: rotate(-2deg);
-  transform: translateX(-20px);
-  
-}
+   transform: translateX(-20px);
+  }
 
 .active-right {
-    transform: rotate(5deg);
   transform: translateX(20px);
-
-
 }
 
-.click-top {
-  transform: translateY(-15px);
+.press-effect {
+ -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
-
-.click-bot {
-  transform: rotate(-1.5deg);
+.press-effect:active {
+  -webkit-transform: scale(0.88);
+  transform: scale(0.88);
 }
-
-.click-left {
-  transform: rotate(-2.5deg);
-  transform: translateX(-25px);
-}
-
-.click-right {
-  transform: rotate(5.5deg);
-  transform: translateX(25px);
-}
-
   </style>

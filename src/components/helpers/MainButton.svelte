@@ -46,25 +46,23 @@
   transform-origin: center;
   fill: #3a3a3a;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
     text-anchor: middle;
 }
 .active-top  {
-  transform: translateY(2px);
-  transform: rotate(1deg);
-}
+  transform: translate(2px, 0px) rotate(-1deg) ;
+  }
 
 .active-bot {
-  transform: rotate(-1deg);
-  transform: translateY(2px);
-}
+  transform: rotate(1deg) translateY(1px) ;
+  }
 
 .active-left {
-   transform: translateX(-20px);
+   transform: translateX(-20px) rotate(-2deg) ;
   }
 
 .active-right {
-  transform: translateX(20px);
+  transform: translateX(20px) rotate(-1deg) ;
 }
 
 .press-effect {

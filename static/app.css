@@ -1666,6 +1666,10 @@ html {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  .md\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
   .md\:pr-0 {
     padding-right: 0px;
   }

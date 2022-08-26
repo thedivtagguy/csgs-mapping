@@ -50,21 +50,19 @@
       text-anchor: middle;
   }
   .active-top  {
-    transform: translateY(-10px);
-  }
+    transform: translate(1px, 1px) rotate(-1deg) ;
+    }
   
   .active-bot {
-    transform: rotate(-1deg);
-  }
+    transform: rotate(1deg) translateY(2px) ;
+    }
   
   .active-left {
-     transform: rotate(-2deg);
-    transform: translateX(-10px);
+     transform: translateX(-13px) rotate(-2deg) ;
     }
   
   .active-right {
-      transform: rotate(5deg);
-    transform: translateX(15px);
+    transform: translateX(15px) rotate(2deg) ;
   }
   
   .press-effect {

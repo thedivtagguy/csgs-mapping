@@ -28,7 +28,7 @@
             <Header />
         </div>
     </div>
-<div class="py-20 ">
+<div class="py-10 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -90,7 +90,13 @@
 </div>
 </main>
 
-<style>    .container{
+<style>    
+#map{
+    position:relative;
+    z-index: 99;
+}
+
+.container{
     width: 100%;
     margin-left: 0em;
     height: 99vh;

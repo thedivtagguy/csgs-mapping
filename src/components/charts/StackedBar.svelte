@@ -167,13 +167,13 @@ import StackedMobile from './StackedMobile.svelte';
 	<ModalOpen bind:this={modal}/>
 	
 	<section class="grid grid-cols-1 px-8 w-full md:py-32 md:grid-cols-12 gap-6 ">
-		<div class="md:col-span-3 col-span-12 md:py-8">
+		<div class="md:col-span-3 col-span-12 md:py-3">
 			<h1 class="text-4xl uppercase font-bold">{title}</h1>
-			<p class="text-gray-700 py-4 text-sm">
+			<p class="text-gray-700 py-4 text-sm font-medium">
 				This chart shows {title} by genre. Use the dropdown to filter by keyword or click on a box to read more
 			</p>
 
-			<div class="flex md:flex-col w-full flex-wrap gap-2">
+			<div class="flex md:flex-col w-full flex-wrap gap-1">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
 				<div class="flex flex-wrap gap-2 justify-center items-center">
@@ -182,11 +182,11 @@ import StackedMobile from './StackedMobile.svelte';
 						<path d={polygonGenerator(true, 20, 30)} fill={item.color}/>
 					  </svg> 
 				  </div>
-				  <div class=" hidden md:block flex-1 font-medium ">
-					<p class=" text-sm">{item.name}</p></div>
+				  <div class=" hidden md:block flex-1 ">
+					<p class=" text-gray-700 text-sm ">{item.name}</p></div>
 				
 				<div class="flex flex-wrap md:hidden">
-					<div style="background-color: {item.color}; width: 100%;" class="py-1 px-2">{item.name}</div>
+					<div style="background-color: {item.color}; width: 100%;" class="px-2">{item.name}</div>
 				</div>
 			</div>  
 				{/each}
@@ -320,7 +320,7 @@ import StackedMobile from './StackedMobile.svelte';
 
 	.chart {
 		width: 100%;
-		max-width: 1100px;
+		max-width: 950px;
 		margin: 0 auto;
 	}
 
@@ -331,9 +331,8 @@ import StackedMobile from './StackedMobile.svelte';
 	}
 
 	.tick {
-		font-family: Helvetica, Arial;
-		font-size: .525em;
-		font-weight: 200;
+		font-size: .6em;
+		font-weight: 400;
 	}
 
 	.tick line {
@@ -342,7 +341,7 @@ import StackedMobile from './StackedMobile.svelte';
 	}
 
 	.tick text {
-		fill: rgb(137, 137, 137);
+		fill: #3a3a3a;
 		text-anchor: start;
 		font-size: 10px;
 	}

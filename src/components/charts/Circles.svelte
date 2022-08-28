@@ -128,22 +128,22 @@ onMount(async () => {
 
     // Check if mobile device
 
-    let  width = 850;
+    let  width = 650;
     let height = 600;
     let dividedBy = 2;
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
-    let defaultRange = [50, 100, 150, 200, 250, 300, 350,400, 500];
+    let defaultRange = [25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
 
 
     if (mobileCheck()) {
-        width = window.innerWidth/1.1;
-        height = window.innerHeight / 3;
-        dividedBy = 4;
-        avoidOverlapRadius = 12;
-        nodeRadius = 25;
+        width = window.innerWidth;
+        height = window.innerHeight/1.4;
+        dividedBy = 2.5;
+        avoidOverlapRadius = 23;
+        nodeRadius = 45;
 
-        defaultRange = [25, 50, 75, 100, 125, 150, 175, 200, 250];
+        defaultRange = [10, 30, 50, 70, 90, 110, 130, 150, 190, 210, 230, 250];
     }
 
 
@@ -158,7 +158,7 @@ onMount(async () => {
         svg = d3.select("#my_dataviz")
         .append("svg")
         .attr("width", width)
-        .attr("height", 700)
+        .attr("height", 650)
     }
     // append the svg object to the body of the page
    
@@ -173,7 +173,7 @@ const data = digital;
 
 
     // A scale that gives a X target position for each group
-    const x = d3.scaleOrdinal()
+    const ordering = d3.scaleOrdinal()
         .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
         .range(defaultRange)
 
@@ -211,10 +211,10 @@ const data = digital;
    
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
-    .force("x", d3.forceX().strength(0.1).x(d => x(d.genre)))
-    .force("y", d3.forceY().strength(0.1).y( height/2 ))
-    .force("center", d3.forceCenter().x(width / 2).y(height /dividedBy)) // Attraction to the center of the svg area
-    .force("charge", d3.forceManyBody().strength(3)) // Nodes are attracted one each other of value is > 0
+    .force("x", d3.forceX().strength(0.1).x(width))
+    .force("y", d3.forceY().strength(0.1).y( d => ordering(d.genre) ))
+    .force("center", d3.forceCenter().x(width / dividedBy).y(height /2)) // Attraction to the center of the svg area
+    .force("charge", d3.forceManyBody().strength(2)) // Nodes are attracted one each other of value is > 0
     .force("collide", d3.forceCollide().strength(.5).radius(avoidOverlapRadius).iterations(1)) // Force that avoids circle overlapping
 
     // Apply these forces to the nodes and update their positions.
@@ -277,11 +277,11 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
     <ModalOpen bind:this={modal} />
   
 <!-- Section 1 -->
-<section class="px-8 w-full md:py-8 md:px-0">
+<section class="md:px-8 w-full md:py-8 md:px-0">
   <div class=" items-center max-w-7xl  mx-auto ">
     <div class="grid md:grid-cols-12 items-center sm:-mx-3">
       <div class="w-full col-span-7 md:col-span-3 ">
-        <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+        <div class="px-8 w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-2xl lg:text-2xl uppercase xl:text-4xl">
             <span class="block xl:inline">Digital Spaces</span>
           </h1>

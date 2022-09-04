@@ -29,7 +29,7 @@
 		</div>
 	  </div>
 	  <div class="mt-5 md:mt-0 md:col-span-2">
-		<form id="myform" on:submit{handleSubmit} name="hello" method="POST" data-netlify="true">
+		<form id="myform" on:submit{handleSubmit} name="submission" method="POST" data-netlify="true">
 		  <div class="overflow-hidden sm:rounded-md">
 			<div class="px-4 py-5  sm:p-6">
 			  <div class="flex flex-col gap-6">
@@ -88,7 +88,7 @@
 			  </button>
 			</div>
 		  </div>
-		  <input type="hidden" name="form-name" value="hello">
+		  <input type="hidden" name="form-name" value="submission">
 
 		</form>
 	  </div>

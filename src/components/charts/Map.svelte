@@ -7,17 +7,17 @@
 	 import checkMobile  from "$utils/checkMobile.js";
 	import {onMount} from "svelte";
 
+
 	
 	setContext(key, {
 		getMap: () => map,
 	});
 
 
-	
 	let map;
 	let show = false;
 	$: pointData = {};
-    let zoom = 4;
+    let zoom = 3;
 	onMount(()=> {
 		zoom = checkMobile() ? [3.5] : [4];
 	})
@@ -40,20 +40,20 @@
 			// Add a new source from our GeoJSON data and
 			// set the 'cluster' option to true. GL-JS will
 			// add the point_count property to your source data.
-			map.addSource('earthquakes', {
+			map.addSource('orgs', {
 				type: 'geojson',
 				// Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
 				// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
 				data: geoData,
 				cluster: true,
-				clusterMaxZoom: 4, // Max zoom to cluster points on
+				clusterMaxZoom: 3, // Max zoom to cluster points on
 				clusterRadius: 20 // Radius of each cluster when clustering points (defaults to 50)
 			});
 
 			map.addLayer({
 				id: 'clusters',
 				type: 'circle',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['has', 'point_count'],
 				paint: {
 					// Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
@@ -85,7 +85,7 @@
 			map.addLayer({
 				id: 'cluster-count',
 				type: 'symbol',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['has', 'point_count'],
 				layout: {
 					'text-field': '{point_count_abbreviated}',
@@ -97,14 +97,14 @@
 			map.addLayer({
 				id: 'unclustered-point',
 				type: 'circle',
-				source: 'earthquakes',
+				source: 'orgs',
 				filter: ['!', ['has', 'point_count']],
 				paint: {
 					// Color is from the color key of the point
 					'circle-color': [
 						'match', 
 						['get', 'type'],
-						'Academic/ Research centre',
+						'Academic/ Research Centre',
 						'#A8DCC6',
 						'Collective',
 						'#F3DF8C',
@@ -128,14 +128,13 @@
 					'circle-stroke-color': '#fff'
 				}
 			});
-
 			// inspect a cluster on click
 			map.on('click', 'clusters', (e) => {
 				const features = map.queryRenderedFeatures(e.point, {
 					layers: ['clusters']
 				});
 				const clusterId = features[0].properties.cluster_id;
-				map.getSource('earthquakes').getClusterExpansionZoom(
+				map.getSource('orgs').getClusterExpansionZoom(
 					clusterId,
 					(err, zoom) => {
 						if (err) return;
@@ -214,21 +213,7 @@
 		});
 
 	}
-
-
-
-
-	const legend = {
-		'Academic/ Research centre': '#A8DCC6',
-		'Collective': '#F3DF8C',
-		'Community Organisation': '#F7B289',
-		'NGO': '#F3BEF1',
-		'Non-profit Organisation': '#79A5AE',
-		'Publishing House': '#9597BE',
-		'Resource Group': '#D1BB80',
-		'Service Provider': '#D08C87',
-		'Other': '#3A3A3A'
-	}
+		
 </script>
 
 <!-- this special element will be explained in a later section -->
@@ -239,15 +224,12 @@
 		
 	/>
 </svelte:head>
-	<h3 class="text-4xl  uppercase font-sans font-semibold">Institutions</h3>
-	<p class="text-gray-700 my-4 text-sm md:w-1/3">
+	<h3 class="text-4xl py-2 uppercase font-sans font-semibold">Institutions</h3>
+	<p class="text-gray-700 py-2 text-sm w-1/3">
 		This chart shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each to read more
 	</p>
-	<div class="flex flex-wrap gap-1 pb-4 items-center">
-		{#each Object.keys(legend) as key}
-				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-black'} px-2 text-sm">{key}</p>
-		{/each}
-		</div>
+
+	
 <div class="relative" id="map-background" use:initMap>
 
 	<div  transition:scale={{ delay: 250, duration: 300, easing: quintOut }} style="visibility: {show ? 'visible' : 'hidden'}" class="sidebar pb-8" >
@@ -283,8 +265,6 @@
 			
 		
 	</div>
-
-	
 </div>
 
 

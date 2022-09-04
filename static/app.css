@@ -821,9 +821,6 @@ html {
 .h-12 {
   height: 3rem;
 }
-.h-4 {
-  height: 1rem;
-}
 .w-full {
   width: 100%;
 }
@@ -842,8 +839,17 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
-.w-4 {
-  width: 1rem;
+.w-0\.5 {
+  width: 0.125rem;
+}
+.w-0 {
+  width: 0px;
+}
+.w-2\.5 {
+  width: 0.625rem;
+}
+.w-2 {
+  width: 0.5rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -1126,10 +1132,6 @@ html {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;

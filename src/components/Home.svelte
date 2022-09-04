@@ -57,7 +57,6 @@
     </section>
     <section id="digital-spaces">
         <Circles
-        
         modalContent={{
             label: "genre",
             title: "name",

@@ -7,8 +7,18 @@ import {
 
 import digital from "$data/indices/digitalSpaces.csv.json";
 import ModalOpen from "../modal/ModalOpen.svelte";
+import { data } from './Tooltip.svelte';
+for(i =0; i< digital.length; i++){
+    console.log(digital[i].keyword);
+}
+
+
     export let modalContent;
     let modal;
+    let selected;
+    let facet = "";
+    export let direction = "right";
+    
     // Create an object genres that contains the genre and the genre color
     const genres = [
         {
@@ -84,7 +94,19 @@ function pathGenerator(i,radius = 50) {
         path1.closePath();
         return path1;
     }
+
+
     
+
+
+
+
+
+
+
+
+
+
     // Go through the data and create a new key for each genre with the value of the color
     digital.forEach(function(d) {
     d.color = "#cadead";
@@ -133,7 +155,7 @@ onMount(async () => {
     let dividedBy = 2;
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
-    let defaultRange = [25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
+    let defaultRange = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
 
 
     if (mobileCheck()) {
@@ -143,7 +165,7 @@ onMount(async () => {
         avoidOverlapRadius = 23;
         nodeRadius = 45;
 
-        defaultRange = [10, 30, 50, 70, 90, 110, 130, 150, 190, 210, 230, 250];
+        defaultRange = [0, 10, 30, 50, 70, 90, 110, 130, 150, 190, 210, 230, 250];
     }
 
 
@@ -164,7 +186,13 @@ onMount(async () => {
    
 
 
+
 const data = digital;
+//keyword);
+//console.log(droppingdown);
+selected = {selected}
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -206,7 +234,7 @@ const data = digital;
  });
  node.on("mouseleave", function(d, i) {
     nameVar = null;
-    console.log(nameVar);
+    
  });
    
 // Features of the forces applied to the nodes:
@@ -246,10 +274,23 @@ var simulation = d3.forceSimulation()
         d.fy = null;
     }
 
-    console.log(data);
+    
   
  
 });
+let facets = [];
+    facets = data.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+	// Remove empty facets
+	facets.forEach(d => {
+		if (d === '') {
+			facets.splice(facets.indexOf(d), 1);
+		}
+	});
+    
+
+	
+    facets.unshift(`All ${facet}s`);
+	
 
 
 let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
@@ -270,8 +311,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 		// Position it right next to the bar
 		positionX = 800 - m.offsetX - 80;
 		positionY = m.offsetY - 70;
-        console.log(positionX);
-	}
+        }
 </script>
 <main>
     <ModalOpen bind:this={modal} />
@@ -331,6 +371,19 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 						
 					</div>
 				</div>
+                <div class="chart relative" >
+                    <div id="facets" class="md:flex z-10 hidden {direction}-0 md:absolute flex-col gap-8 justify-start pb-8my-8">
+                        <select bind:value={selected} class="rounded-none " >
+                            {#each facets as facet}
+                                <option class="capitalize" value={facet}>
+                                    {facet}
+                                </option>
+                            {/each}
+                        </select>
+                    
+                    </div>
+    
+                    <div 
 
           <div id="my_dataviz"></div>
 

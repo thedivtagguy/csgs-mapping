@@ -689,11 +689,11 @@ html {
 .bottom-10 {
   bottom: 2.5rem;
 }
-.z-20 {
-  z-index: 20;
-}
 .z-10 {
   z-index: 10;
+}
+.z-20 {
+  z-index: 20;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
@@ -824,8 +824,8 @@ html {
 .w-full {
   width: 100%;
 }
-.w-1\/4 {
-  width: 25%;
+.w-2\/3 {
+  width: 66.666667%;
 }
 .w-6 {
   width: 1.5rem;
@@ -838,9 +838,6 @@ html {
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-2\/3 {
-  width: 66.666667%;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -927,11 +924,11 @@ html {
 .gap-6 {
   gap: 1.5rem;
 }
-.gap-1 {
-  gap: 0.25rem;
-}
 .gap-8 {
   gap: 2rem;
+}
+.gap-1 {
+  gap: 0.25rem;
 }
 .gap-4 {
   gap: 1rem;
@@ -1099,6 +1096,10 @@ html {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1107,13 +1108,13 @@ html {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -1126,14 +1127,6 @@ html {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
@@ -1177,9 +1170,6 @@ html {
 .font-sans {
   font-family: Roboto, sans-serif;
 }
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1187,6 +1177,14 @@ html {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -1196,10 +1194,6 @@ html {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1207,10 +1201,6 @@ html {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1252,6 +1242,14 @@ html {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1263,14 +1261,6 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-\[color\:var\(--off-white\)\] {
   color: var(--off-white);
@@ -1307,9 +1297,6 @@ html {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.outline {
-  outline-style: solid;
 }
 .blur {
   --tw-blur: blur(8px);
@@ -1563,12 +1550,6 @@ html {
   .md\:mt-0 {
     margin-top: 0px;
   }
-  .md\:mt-6 {
-    margin-top: 1.5rem;
-  }
-  .md\:mt-3 {
-    margin-top: 0.75rem;
-  }
   .md\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -1591,14 +1572,11 @@ html {
   .md\:w-auto {
     width: auto;
   }
-  .md\:w-1\/3 {
-    width: 33.333333%;
-  }
-  .md\:w-2\/3 {
-    width: 66.666667%;
-  }
   .md\:w-full {
     width: 100%;
+  }
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1653,22 +1631,6 @@ html {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
-  .md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-  .md\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -1677,21 +1639,21 @@ html {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
-  .md\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-  .md\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
   .md\:pr-0 {
     padding-right: 0px;

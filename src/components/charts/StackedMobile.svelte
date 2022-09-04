@@ -7,7 +7,7 @@
 
 	let gridWdith = 10;
 	let gridHeight = 10;
-	$: console.log(year);
+	
 
 	//////////////////////////////////////////////////////////////////
 	export let data = [];	// The dataset to be used

@@ -8,9 +8,10 @@ import {
 import digital from "$data/indices/digitalSpaces.csv.json";
 import ModalOpen from "../modal/ModalOpen.svelte";
 import { data } from './Tooltip.svelte';
-for(i =0; i< digital.length; i++){
-    console.log(digital[i].keyword);
-}
+//for(i =0; i< digital.length; i++){
+  //  console.log(digital[i].keyword);
+//}
+
 
 
     export let modalContent;

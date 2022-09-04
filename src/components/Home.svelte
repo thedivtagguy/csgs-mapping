@@ -21,7 +21,11 @@
 
     <div class="container ">
         <div class="box">
-          <img  width= "1000" src="/assets/animation.webm" alt="animation">
+          <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
+          <video  width= "1000" autoplay loop muted playsinline>
+            <source src="/assets/animation.webm" type="video/webm">
+            <!-- <source src="my-animation.mp4" type="video/mp4"> -->
+          </video>
         </div>
         <div class="box stack-top" >
             <Header />

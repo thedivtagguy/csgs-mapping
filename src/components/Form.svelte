@@ -51,13 +51,13 @@
 			
   
 				<div class="col-span-6 sm:col-span-3 lg:col-span-2">
-				  <label for="postal_code" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Name or Link*</label>
-				  <input required type="text" name="resource" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+				  <label for="resource_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Name or Link*</label>
+				  <input required type="text" name="resource" id="resource_name" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 				</div>
 
 				<div class="col-span-6 sm:col-span-3 lg:col-span-2">
-					<label for="postal_code" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Do they have a contact address? Email or number? If yes, please drop it below</label>
-					<input type="text" name="resource_contact" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+					<label for="resource_contact" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Do they have a contact address? Email or number? If yes, please drop it below</label>
+					<input type="text" name="resource_contact" id="resource_contact" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 				  </div>
 
 

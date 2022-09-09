@@ -211,6 +211,14 @@ selected = {selected}
             .attr("class", "cursor-pointer")
             .style("fill", d => d.color)
             .style("fill-opacity", 1)
+            .on('mouseover', function (d) {
+                this.parentNode.parentNode.appendChild(this.parentNode);      	    
+                    this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
+                        d3.select(this).style('stroke', '#3a3a3a').style('stroke-width', '2px') ;
+                })
+            .on('mouseout', function (d) {
+                        d3.select(this).style('stroke-width', '0px') ;
+                })
             
 
         .call(d3.drag() // call specific function when circle is dragged
@@ -233,12 +241,10 @@ selected = {selected}
  
  node.on("mouseenter", function(d, i) {
     tooltip(i);
-    d3.select(this).attr("stroke-width", "7px");
- });
+     });
  node.on("mouseleave", function(d, i) {
     nameVar = null;
-    d3.select(this).attr("stroke-width", "5px");
-    
+      
  });
 
 
@@ -406,6 +412,11 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 
 </main>
 <style>
+    .cursor-pointer:hover{
+  cursor: pointer;
+  stroke: #3a3a3a;
+  stroke-width: 0.1em;
+}
    path:hover {
   stroke: #3a3a3a;
   stroke-width: 0.1em;

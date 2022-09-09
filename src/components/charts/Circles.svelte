@@ -8,16 +8,12 @@ import {
 import digital from "$data/indices/digitalSpaces.csv.json";
 import ModalOpen from "../modal/ModalOpen.svelte";
 import { data } from './Tooltip.svelte';
-//for(i =0; i< digital.length; i++){
-  //  console.log(digital[i].keyword);
-//}
-
 
 
     export let modalContent;
     let modal;
     let selected;
-    let facet = "";
+    let facet = "keyword";
     export let direction = "right";
     
     // Create an object genres that contains the genre and the genre color
@@ -52,20 +48,17 @@ import { data } from './Tooltip.svelte';
         },
         {
             genre: "Photo Project",
-            color: "#BEF3E0"
+            color: "#D08C87"
         },
         {
             genre: "Support Group",
-            color: "#BED6F3"
+            color: "#C0AAAF"
         },
         {
             genre: "Virtual Book Club",
             color: "#D1BB80"
         },
-        {
-            genre: "Media",
-            color: "#D08C87"
-        },
+        
         {
             genre: "Other",
             color: "#3a3a3a"
@@ -126,9 +119,9 @@ function pathGenerator(i,radius = 50) {
         } else if (d.genre == 'Media') {
             d.color = '#A8DCC6';
         } else if (d.genre == 'Photo Project') {
-            d.color = '#BEF3E0';
+            d.color = '#D08C87';
         } else if (d.genre == 'Support Group') {
-            d.color = '#BED6F3';
+            d.color = '#C0AAAF';
         } else if (d.genre == 'Virtual Book Club') {
             d.color = '#D1BB80';
         } else if (d.genre == 'Media') {
@@ -217,7 +210,8 @@ selected = {selected}
             .attr("transform", 'translate (' + width / 2 + ',' + height / 2+ ')')
             .attr("class", "cursor-pointer")
             .style("fill", d => d.color)
-            .style("fill-opacity", 0.9)
+            .style("fill-opacity", 1)
+            
 
         .call(d3.drag() // call specific function when circle is dragged
             .on("start", dragstarted)
@@ -225,6 +219,13 @@ selected = {selected}
             .on("end", dragended));
 
  // Function to display details of a circle when hovered
+//  node.on('mouseover', function (d, i) {
+//      d3.select(this).attr("stroke", 7);
+// })
+// node.on('mouseout', function (d, i) {
+//      d3.select(this).attr("stroke", 5);
+// });
+ 
  node.on("click", function(d, i) {
      
      modal.handleOpen(i, modalContent);
@@ -232,12 +233,20 @@ selected = {selected}
  
  node.on("mouseenter", function(d, i) {
     tooltip(i);
+    d3.select(this).attr("stroke-width", "7px");
  });
  node.on("mouseleave", function(d, i) {
     nameVar = null;
+    d3.select(this).attr("stroke-width", "5px");
     
  });
-   
+
+
+
+
+
+
+
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
     .force("x", d3.forceX().strength(0.1).x(width))
@@ -280,7 +289,7 @@ var simulation = d3.forceSimulation()
  
 });
 let facets = [];
-    facets = data.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+    facets = digital.map(d => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
 	// Remove empty facets
 	facets.forEach(d => {
 		if (d === '') {
@@ -396,3 +405,30 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 </section>
 
 </main>
+<style>
+   path:hover {
+  stroke: #3a3a3a;
+  stroke-width: 0.1em;
+}
+    select::-ms-expand {
+  display: none;
+}
+select {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5em 1em 0.5em 0.5em;
+    border: 1px solid #eee;
+    font: inherit;
+    line-height: inherit;
+    color:var(--color-heading);
+    font-weight: 500;
+    background-color: var(--color-orange);
+    text-transform: capitalize;
+  
+  }
+  option {
+		text-transform: capitalize;
+	}
+
+
+</style>

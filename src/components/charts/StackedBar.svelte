@@ -294,9 +294,10 @@ import StackedMobile from './StackedMobile.svelte';
 								id="bar-{point[j].id}"
 								fill="{point[j].color}"
 								
+								
 								on:click={() => modal.handleOpen(point[j], modalContent, id)}
 								d="{polygonGenerator(false, xScale(i)/6, yScale(j)).polygon}"
-								on:mouseover="{() => tooltip(point[j])}"
+								on:mouseover="{() => tooltip(point[j]) }"
 								
 								on:mouseleave="{() => [nameVar] = [null]}"
 							></path>
@@ -316,7 +317,12 @@ import StackedMobile from './StackedMobile.svelte';
 </main>
 
 <style>
-
+	
+		path:hover {
+  stroke: #3a3a3a;
+  stroke-width: 0.1em;
+}
+	
 
 	.chart {
 		width: 100%;
@@ -357,8 +363,9 @@ import StackedMobile from './StackedMobile.svelte';
 
 	.bars  {
 		stroke: #828282;
-		stroke-width: 0px;
+		stroke-width: 0.0px;
 		margin-bottom: 17px;
+				
 	}
 
 	.bars.active {
@@ -371,6 +378,7 @@ import StackedMobile from './StackedMobile.svelte';
 	.bars.inactive {
 		opacity: 0.3;
 	}
+	
 
 	select::-ms-expand {
   display: none;

@@ -17,7 +17,12 @@
             <div class="p-4 bg-[color:var(--color-aqua)]">
               <div class="flex  justify-between gap-6 items-center">
                {#if data[modalContent.title]}
-                <h3 class="text-lg font-sans font-semibold"> {data[modalContent.title]}</h3>
+                {#if data[modalContent.link]}
+                             
+                <h3 class="text-lg text-gray-600 font-semibold"> <a href="{data[modalContent.link]}" target="_blank" rel="external" class ="hover:text-gray-800"> {data[modalContent.title]}</a></h3>
+                {:else}
+                <h3 class="text-lg text-gray-600 font-semibold">{data[modalContent.title]}</h3>
+                {/if}
              {/if}
                 <button class="text-gray-600 hover:text-gray-800" on:click={closeModal}>
                   <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -37,36 +42,30 @@
               </div>
                 <div class="my-2 px-4  flex flex-col justify-start items-start">
                   {#if data.author}
-                  <p class="font-semibold text-gray-700 text-sm">Author: <span class="font-normal">{data.author}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Author: <span class="font-normal">{data.author}</span></p>
                   {/if}
                   {#if data.director}
-                  <p class="font-semibold text-gray-700 text-sm">Director: <span class="font-normal">{data.director}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Director: <span class="font-normal">{data.director}</span></p>
                   {/if}
                   {#if id == 'publications'}
-                  <p class="font-semibold text-gray-700 text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
                   {:else}
-                  <p class="font-semibold text-gray-700 text-sm">Year: <span class="font-normal"> {data[modalContent.year]}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data[modalContent.year]}</span></p>
                   {/if}
                   {#if data.publisher}
-                  <p class="font-semibold text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
                   {#if data.producedBy}
-                  <p class="font-semibold text-gray-700 text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
                   {/if}
                   {#if data.language}
-                  <p class="font-semibold text-gray-700 text-sm">Language: <span class="font-normal">{data.language}</span></p>
+                  <p class="font-light text-gray-700 text-sm">Language: <span class="font-normal">{data.language}</span></p>
                   {/if}
                   {#if data[modalContent.contact]}
-                  <p class="font-semibold text-gray-700 text-sm">Contact:
+                  <p class="font-light text-gray-700 text-sm">Contact:
                     <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
                   {/if}
-                  {#if data[modalContent.link]}
-                  <a href="{data[modalContent.link]}" class=" md:absolute right-10 bottom-10" rel="external">
-                    <button class="bg-[color:var(--color-orange)]  text-sm my-2 hover:bg-[color:var(--color-green)] text-gray-700 font-semibold py-1 px-2 " onclick="search.start()">
-                      Read More
-                    </button>
-                  </a>
-                  {/if}
+                  
                 </div>
             </div>
              

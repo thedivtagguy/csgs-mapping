@@ -76,6 +76,7 @@
     "mkdirp": "^1.0.4",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",
+    "scrollmagic": "^2.0.8",
     "svelte-modals": "^1.1.0"
   }
 }

@@ -1,5 +1,7 @@
 <script>
+
 import * as d3 from 'd3';
+
 
 import {
     onMount
@@ -15,6 +17,7 @@ import { data } from './Tooltip.svelte';
     let selected;
     let facet = "keyword";
     export let direction = "right";
+
     
     // Create an object genres that contains the genre and the genre color
     const genres = [
@@ -185,8 +188,15 @@ const data = digital;
 //keyword);
 //console.log(droppingdown);
 selected = {selected}
+console.log(selected);
+
+	
 
 
+
+	// Convert that to an array of objects
+	let data2 = Object.values(data);
+console.log(data2);
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -194,7 +204,7 @@ selected = {selected}
 ///////////////////////////////////////////////////////////////////////////////
 
 
-    // A scale that gives a X target position for each group
+    // A scale that gives a Y target position for each group
     const ordering = d3.scaleOrdinal()
         .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
         .range(defaultRange)
@@ -226,13 +236,7 @@ selected = {selected}
             .on("drag", dragged)
             .on("end", dragended));
 
- // Function to display details of a circle when hovered
-//  node.on('mouseover', function (d, i) {
-//      d3.select(this).attr("stroke", 7);
-// })
-// node.on('mouseout', function (d, i) {
-//      d3.select(this).attr("stroke", 5);
-// });
+ 
  
  node.on("click", function(d, i) {
      
@@ -256,7 +260,7 @@ selected = {selected}
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
     .force("x", d3.forceX().strength(0.1).x(width))
-    .force("y", d3.forceY().strength(0.1).y( d => ordering(d.genre) ))
+    .force("y", d3.forceY().strength(0.3).y( d => ordering(d.genre) ))
     .force("center", d3.forceCenter().x(width / dividedBy).y(height /2)) // Attraction to the center of the svg area
     .force("charge", d3.forceManyBody().strength(2)) // Nodes are attracted one each other of value is > 0
     .force("collide", d3.forceCollide().strength(.5).radius(avoidOverlapRadius).iterations(1)) // Force that avoids circle overlapping
@@ -269,8 +273,9 @@ var simulation = d3.forceSimulation()
         .nodes(data)
         .on("tick", function(d) {
             node
-          .attr("transform", function(d) {return 'translate (' + d.x + ',' + d.y +')' })
-        });
+          .attr("transform", function(d) {return 'translate (' + d.x + ',' + d.y +')' });
+          });
+        
 
     // What happens when a circle is dragged?
     function dragstarted(event, d) {
@@ -337,15 +342,18 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
   <div class=" items-center max-w-7xl  mx-auto ">
     <div class="grid md:grid-cols-12 items-center sm:-mx-3">
       <div class="w-full col-span-7 md:col-span-3 ">
-        <div class="px-8 w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-2xl lg:text-2xl uppercase xl:text-4xl">
+        <div class="px-8 w-full pb-6 space-y-2 sm:max-w-md lg:max-w-lg md:space-y-2 lg:space-y-8 xl:space-y-2 sm:pr-5 lg:pr-0 md:pb-0">
+          <h1 class="text-4xl uppercase font-bold">
             <span class="block xl:inline">Digital Spaces</span>
           </h1>
           <div class="flex md:flex-col w-full flex-wrap gap-2">
+            <p class="text-gray-700 text-sm font-medium py-2" >
+				This chart shows digital spaces by genre. Use the dropdown to filter by keyword or click on a blob to read more
+			</p>
             <!-- Create a legend of formats and their colors -->
             {#each genres as genre}
             <div class="flex flex-wrap gap-2 justify-center items-center">
-              <div class="mr-2 hidden md:block">
+              <div class=" hidden md:block">
                 <svg height="30" width="30">
                     <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
                   </svg> 
@@ -362,6 +370,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
        
         </div>
       </div>
+      
       <div   on:mousemove={handleMousemove} class="w-full max-w-6xl relative col-span-9 ">
         <div class="w-full h-auto ">
             
@@ -389,7 +398,7 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 				</div>
                 <div class="chart relative" >
                     <div id="facets" class="md:flex z-10 hidden {direction}-0 md:absolute flex-col gap-8 justify-start pb-8my-8">
-                        <select bind:value={selected} class="rounded-none " >
+                        <select bind:value={selected} class="rounded-none" >
                             {#each facets as facet}
                                 <option class="capitalize" value={facet}>
                                     {facet}
@@ -399,9 +408,34 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
                     
                     </div>
     
-                    <div 
+                    <div>
+          <div id="my_dataviz">
+            <g class='bars'>
+                {#each data as point, i}
+                    {#each {length: point[0].totalCount} as book, j}
+                    
+                    <path 
+                        style="opacity:{
+                            // If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
+                            selected === `All ${facet}s` ? 1 : selected !== point[j][facet] ? 0.2 : 1								
+                            };
+                            pointer-events: {
+                                // If selected is equal to null, pointer events are all. If selected is not null and not equal to the facet, pointer events are none.
+                                selected === `All ${facet}s` ? 'all' : selected !== point[j][facet] ? 'none' : 'all'
+                            };
+                            -webkit-filter: {
+                                // If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
+                                selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 0px 2px rgba(40,40,40,0.6))'
+                            };
+                        ">
+                    </path>
+						
 
-          <div id="my_dataviz"></div>
+                    {/each}
+                {/each}
+                </g>
+                        
+          </div>
 
           </div>
       </div>
@@ -417,18 +451,14 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
   stroke: #3a3a3a;
   stroke-width: 0.1em;
 }
-   path:hover {
-  stroke: #3a3a3a;
-  stroke-width: 0.1em;
-}
-    select::-ms-expand {
+   select::-ms-expand {
   display: none;
 }
 select {
     display: inline-block;
     box-sizing: border-box;
     padding: 0.5em 1em 0.5em 0.5em;
-    border: 1px solid #eee;
+    border: 0px solid #f1cfe2;
     font: inherit;
     line-height: inherit;
     color:var(--color-heading);

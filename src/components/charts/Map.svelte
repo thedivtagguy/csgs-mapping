@@ -240,12 +240,12 @@
 	/>
 </svelte:head>
 	<h3 class="text-4xl  uppercase font-sans font-semibold">Institutions</h3>
-	<p class="text-gray-700 my-4 text-sm md:w-full">
+	<p class="text-gray-700 my-4 text-sm md:w-full font-medium ">
 		This map shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each to read more
 	</p>
 	<div class="flex flex-wrap gap-1 pb-4 items-center">
 		{#each Object.keys(legend) as key}
-				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-black'} px-2 text-sm">{key}</p>
+				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-gray-700'} px-2 text-sm">{key}</p>
 		{/each}
 		</div>
 <div class="relative" id="map-background" use:initMap>
@@ -299,7 +299,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 380px;
-		height: 50%;
+		height: 80%;
 		background: var(--color-background);
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -311,7 +311,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 380px;
-		height: 50%;
+		height: 80%;
 		background: var(--color-background);
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -324,7 +324,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 94%;
-		height: 30%;
+		height: 70%;
 		bottom: 5px;
 		margin: 10px;
 		background: var(--color-background);

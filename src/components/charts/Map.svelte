@@ -267,10 +267,10 @@
 		<div id="keywords">
 			<p id="keyword"></p>
 		</div>
-		<p class="text-sm px-[10px]" id="type">{pointData.type} | {pointData.region}</p>
+		<p class="text-xs px-[10px] font-medium" id="type">{pointData.type} | {pointData.region}</p>
 		<div >
 			{#if pointData.programs && pointData.programs instanceof Array}
-				<p class="text-lg font-bold py-2 px-[10px]" id="programs">Programs:</p>
+				<p class="text-sm font-semibold py-2 px-[10px]" id="programs">Programs</p>
 				<ul class=" list-none px-[10px] list-inside">
 					{#each pointData.programs as program}
 						<li class="text-sm py-1">{program}</li>
@@ -338,7 +338,7 @@
 		width: 100%;
 		font-weight: 700;
 		font-size: 20px;
-		line-height: 1.2em;
+		line-height: 1.1em;
 		padding: 10px;
 		text-transform: uppercase;
 		background-color: var(--color-aqua);
@@ -357,9 +357,10 @@
 
 	:global(#keyword) {
 		background-color: var(--color-orange);
-		font-weight: 600;
-		padding: 1px 10px 1px 10px;
-		font-size: 14px;
+		font-weight: 300;
+		padding: 0px 10px 0px 10px;
+		font-size: 12px;
 		text-transform: uppercase;
+		color: var(--color-heading-text);
 	}
 </style>

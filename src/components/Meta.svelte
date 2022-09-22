@@ -19,7 +19,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="description" content={description} />
   <meta name="author" content="Center for Sexuality and Gender Studies" />
-  <meta name="news_keywords" content="" />
+  <meta name="keywords" content="Advocacy, Capacity building, Capacity Building courses, Digital Archive, Education, Gender, Gender sensitisation, HIV/AIDS prevention, Legal aid, LGBTQ rights, Mental health Research, Self Help Groups, Sex workers, Sexual abuse prevention, Sexual and reproductive health, Support group, Support services, Technology, Women's rights" />
 
   <meta property="og:title" content={title} />
   <meta property="og:site_name" content="Mapping Sexuality in India" />

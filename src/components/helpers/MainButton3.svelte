@@ -6,7 +6,8 @@
     export let link;
     let width, viewBoxWidth;
     // Get width of text bounding box
-    let textWidth = label.length * 8;
+    //let textWidth = label.length * 8;
+    let textWidth = 180;
     // Set width of viewBox based on text width
     viewBoxWidth = textWidth + 150;
     width = viewBoxWidth - 50;

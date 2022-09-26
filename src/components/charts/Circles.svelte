@@ -461,7 +461,7 @@ select {
     border: 0px solid #f1cfe2;
     font: inherit;
     line-height: inherit;
-    color:var(--color-heading);
+    color:#3a3a3a;
     font-weight: 500;
     background-color: var(--color-orange);
     text-transform: capitalize;

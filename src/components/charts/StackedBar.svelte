@@ -201,7 +201,7 @@ import StackedMobile from './StackedMobile.svelte';
 
 			<div class="chart relative" >
 				<div id="facets" class="md:flex z-10 hidden {direction}-0 md:absolute flex-col gap-8 justify-start pb-8my-8">
-					<select bind:value={selected} class="rounded-none " >
+					<select bind:value={selected} class="rounded-none" >
 						{#each facets as facet}
 							<option class="capitalize" value={facet}>
 								{facet}
@@ -390,7 +390,7 @@ select {
   border: 1px solid #eee;
   font: inherit;
   line-height: inherit;
-  color:var(--color-heading);
+  color: #3a3a3a;
   font-weight: 500;
   background-color: var(--color-orange);
   text-transform: capitalize;

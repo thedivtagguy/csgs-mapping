@@ -14,6 +14,6 @@
           <span class="mr-1 ">{event.location}</span> · <span class="mx-1">From {event.year} onwards</span>
         </p>
         <p class="pt-2 text-sm ">{event.contact}</p>
-        <a href={event.link} class="pt-4 text-sm font-bold hover:text-blue-400" rel="external"> Visit </a>
+        <a href={event.link} target="_blank" class="pt-4 text-sm font-bold hover:text-blue-400" rel="external"> Visit </a>
     </div>
   </div>

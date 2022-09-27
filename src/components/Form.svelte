@@ -29,7 +29,7 @@
 		</div>
 	  </div>
 	  <div class="mt-5 md:mt-0 md:col-span-2">
-		<form id="myform" on:submit{handleSubmit} name="hello" method="POST" data-netlify="true">
+		<form id="myform" on:submit{handleSubmit} name="submission" method="POST" data-netlify="true">
 		  <div class="overflow-hidden sm:rounded-md">
 			<div class="px-4 py-5  sm:p-6">
 			  <div class="flex flex-col gap-6">
@@ -51,13 +51,13 @@
 			
   
 				<div class="col-span-6 sm:col-span-3 lg:col-span-2">
-				  <label for="postal_code" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Name or Link*</label>
-				  <input required type="text" name="resource" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+				  <label for="resource_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Name or Link*</label>
+				  <input required type="text" name="resource" id="resource_name" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 				</div>
 
 				<div class="col-span-6 sm:col-span-3 lg:col-span-2">
-					<label for="postal_code" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Do they have a contact address? Email or number? If yes, please drop it below</label>
-					<input type="text" name="resource_contact" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+					<label for="resource_contact" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Do they have a contact address? Email or number? If yes, please drop it below</label>
+					<input type="text" name="resource_contact" id="resource_contact" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 				  </div>
 
 
@@ -65,7 +65,7 @@
 
 				<div>
 					<label for="category" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Category*</label>
-					<select required id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					<select required id="category" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 					<option selected="">Select category</option>
 					<option value="Institutions/Organization">Institutions/Organization</option>
 					<option value="Publication">Publication</option>
@@ -76,8 +76,8 @@
 				</div>
 
 				<div>
-					<label for="message" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Optional: If you have any additional comments, we'd love to hear from you</label>
-					<textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+					<label for="comments" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Optional: If you have any additional comments, we'd love to hear from you</label>
+					<textarea id="comments" name="comments" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
 					
 				</div>
 			  </div>
@@ -88,7 +88,7 @@
 			  </button>
 			</div>
 		  </div>
-		  <input type="hidden" name="form-name" value="hello">
+		  <input type="hidden" name="form-name" value="submission">
 
 		</form>
 	  </div>

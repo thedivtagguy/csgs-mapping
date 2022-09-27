@@ -19,16 +19,19 @@
 <main class="">
     <Menu />
 
-    <div class="container">
+    <div class="container ">
         <div class="box">
-          <img  width= "1440" src="/assets/animation.gif" alt="animation">
+          <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
+          <video  width= "1000" autoplay loop muted playsinline>
+            <source src="/assets/animation.webm" type="video/webm">
+            <source src="/assets/animation.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="box stack-top" >
-            
             <Header />
         </div>
     </div>
-<div class="py-10 ">
+<div class="py-4 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -57,6 +60,7 @@
     </section>
     <section id="digital-spaces">
         <Circles
+        
         modalContent={{
             label: "genre",
             title: "name",
@@ -72,8 +76,8 @@
             title="Audio Visual Material"
             dataset={av}
             facet="keyword"
-            width={950}
-        
+        facetTwo="keyword2"
+        combine={['keyword', 'keyword2', 'keyword3']}
             colorBy="format"
             colors={genreColors}
             sortBy="year"
@@ -89,43 +93,24 @@
 </div>
 </main>
 
-<style>    
-#map{
-    position:relative;
-    z-index: 99;
-}
-
-.container{
+<style>    .container{
     width: 100%;
-    margin-left: 0em;
-    height: 99vh;
+    margin-left: 4em;
+    height: 90vh;
     position: relative;
 }
 
 /* MObile */
 @media (max-width: 768px) {
     .container{
-        height: 90vh;
+        height: 70vh;
     }
-    img {
-    -moz-transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform: rotate(-90deg) scale(2, 2) translate(-15vh, 0px) ;
-    position: relative; 
-    z-index: 0;
-    
-    
-}
-    
 }
 .box{
     width: 100%;
-    height: 100vh;     
-     
+    height: 100px;            
     position: absolute;
-    top: -300;
-    z-index: 1;
+    top: 0;
 /* Center */
     left: 0;
     right: 0;
@@ -133,8 +118,7 @@
 
 }
 .stack-top{
-    position: relative;
-    z-index: 1;
+    z-index: 9;
     /* margin: 20px; for demo purpose  */
 }
 </style>

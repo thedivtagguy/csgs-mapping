@@ -1121,6 +1121,10 @@ html {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }

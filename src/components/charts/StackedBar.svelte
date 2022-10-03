@@ -119,7 +119,7 @@ import StackedMobile from './StackedMobile.svelte';
 	////////////////////////////////////////////////////////////////////
 
 	const xTicks = ["1990-2030", 1995, 2000, 2005, 2010, 2015];
-	const yTicks = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+	const yTicks = [0, 55];
 	const padding = { top: 100, right: 65, bottom: 30, left: 25 };
 
 
@@ -179,7 +179,7 @@ import StackedMobile from './StackedMobile.svelte';
 				<div class="flex flex-wrap gap-2 justify-center items-center">
 				  <div class="mr-2 hidden md:block">
 					<svg height="30" width="30">
-						<path d={polygonGenerator(true, 20, 30)} fill={item.color}/>
+						<path id = "legendPath" d={polygonGenerator(true, 30, 30)} fill={item.color}/>
 					  </svg> 
 				  </div>
 				  <div class=" hidden md:block flex-1 ">
@@ -329,6 +329,9 @@ import StackedMobile from './StackedMobile.svelte';
 </main>
 
 <style>
+	#legendPath:hover{
+		stroke: none;
+	}
 	
 		path:hover {
   stroke: #3a3a3a;
@@ -354,7 +357,7 @@ import StackedMobile from './StackedMobile.svelte';
 	}
 
 	.tick line {
-		stroke: #e2e2e2;
+		stroke: rgb(187, 187, 187, 0);
 		stroke-dasharray: 2;
 	}
 
@@ -366,7 +369,7 @@ import StackedMobile from './StackedMobile.svelte';
 
 	.tick.tick-0 line {
 		stroke-dasharray: 0;
-		stroke: rgb(187, 187, 187);
+		stroke: rgb(187, 187, 187, 100);
 	}
 
 	.x-axis .tick text {
@@ -376,7 +379,7 @@ import StackedMobile from './StackedMobile.svelte';
 	.bars  {
 		stroke: #828282;
 		stroke-width: 0.0px;
-		margin-bottom: 17px;
+		margin-bottom: 0px;
 				
 	}
 

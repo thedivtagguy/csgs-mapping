@@ -72,7 +72,7 @@ import { data } from './Tooltip.svelte';
 //Blob generation function
 ///////////////////////////////////////////////////////////////////////////////
 
-function pathGenerator(i,radius = 50) {
+function pathGenerator(i, radius) {
         var a = radius; // a is sort of the radius of the blob
 
         //Generating 4 random numbers by which each vertex can vary.
@@ -352,19 +352,20 @@ let m = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 			</p>
             <!-- Create a legend of formats and their colors -->
             {#each genres as genre}
-            <div class="flex flex-wrap gap-2 justify-center items-center">
+            <div class="flex flex-wrap gap-1 justify-center items-center">
               <div class=" hidden md:block">
                 <svg height="30" width="30">
                     <path d={pathGenerator(genre.genre, 30)} fill={genre.color}/>
-                  </svg> 
+                </svg> 
               </div>
-              <div class=" hidden md:block flex-1 font-medium ">
-                <p class=" text-sm">{genre.genre}</p></div>
+              <div class=" hidden md:block flex-1 font-regular ">
+                <p class=" text-gray-700 text-sm">{genre.genre}</p>
+              </div>
             
-            <div class="flex flex-wrap md:hidden">
-                <div style="background-color: {genre.color}; width: 100%;" class="py-1 px-2">{genre.genre}</div>
-            </div>
-        </div>  
+                <div class="flex flex-wrap md:hidden">
+                    <div style="background-color: {genre.color}; width: 100%;" class="py-1 px-2">{genre.genre}</div>
+                </div>
+            </div>  
             {/each}
           </div>
        

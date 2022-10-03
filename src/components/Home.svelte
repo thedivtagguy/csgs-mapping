@@ -22,7 +22,7 @@
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1000" autoplay loop muted playsinline>
+          <video  width= "1200" autoplay loop muted playsinline>
             <source src="/assets/animation.webm" type="video/webm">
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>
@@ -93,19 +93,38 @@
 </div>
 </main>
 
-<style>    .container{
+<style>    
+
+#map{
+    position:relative;
+    z-index: 99;
+}
+.container{
     width: 100%;
-    margin-left: 4em;
+    margin-left: 0em;
     height: 90vh;
     position: relative;
 }
 
 /* MObile */
+
+
 @media (max-width: 768px) {
     .container{
-        height: 70vh;
+        height: 60vh;
     }
+    video {
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform: rotate(-90deg) scale(2, 2) translate(-15vh, 0px) ;
+    position: relative; 
+    z-index: 0;
+    
+    
 }
+}
+
 .box{
     width: 100%;
     height: 100px;            

@@ -286,19 +286,19 @@ import StackedMobile from './StackedMobile.svelte';
 									};
 									-webkit-filter: {
 										// If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
-										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 2px rgba(20,20,20,0.6))'
+										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 1.5px rgba(20,20,20,0.6))'
 									};
 									-moz-filter:  {
 										// If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
-										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 2px rgba(20,20,20,0.6))'
+										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 1.5px rgba(20,20,20,0.6))'
 									};
 									-ms-filter:  {
 										// If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
-										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 2px rgba(20,20,20,0.6))'
+										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 1.5px rgba(20,20,20,0.6))'
 									};
 									-o-filter: {
 										// If selected is equal to null, filter is none. If selected is not null and not equal to the facet, filter is blur.
-										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 2px rgba(20,20,20,0.6))'
+										selected === `All ${facet}s` ? 'none' : selected !== point[j][facet] ? 'none' : 'drop-shadow(0px 1px 1.5px rgba(20,20,20,0.6))'
 									};
 								"
 								

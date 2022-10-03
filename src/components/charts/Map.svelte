@@ -104,7 +104,7 @@
 					'circle-color': [
 						'match', 
 						['get', 'type'],
-						'Academic/ Research Centre',
+						'Academic/ Research centre',
 						'#A8DCC6',
 						'Collective',
 						'#F3DF8C',

@@ -193,7 +193,7 @@
       })
       .attr("transform", "translate (" + width / 2 + "," + height / 2 + ")")
       .attr("class", function (d) {
-        return "blob " + d.keyword.replaceAll(" ", "_");
+        return "blob " + d.keyword.replaceAll(" ", "_").replaceAll(",", "2").replaceAll("/", "3");
       })
       .style("fill", (d) => d.color)
       .style("fill-opacity", 1)
@@ -234,7 +234,7 @@
       });
 
       
-      d3.selectAll("." + selected.replaceAll(" ", "_")).style("filter", 'drop-shadow(2px 2px 2px rgba(30,30,30,0.6))').style("opacity", 1);
+      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3")).style("filter", 'drop-shadow(2px 2px 2px rgba(30,30,30,0.6))').style("opacity", 1);
   });
    console.log("selected:", selected);
 

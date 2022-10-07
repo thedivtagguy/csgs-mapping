@@ -187,8 +187,7 @@ onMount(async () => {
 const data = digital;
 //keyword);
 //console.log(droppingdown);
-selected = {selected}
-console.log(selected);
+
 
 	
 

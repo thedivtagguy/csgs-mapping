@@ -39,7 +39,7 @@
             </div>      
     
           <div >
-            <div class="flex flex-col justify-start items-start md:py-0">
+            <div class="flex flex-col justify-start items-start md:py-2">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>

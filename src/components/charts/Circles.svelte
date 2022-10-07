@@ -193,7 +193,7 @@
       })
       .attr("transform", "translate (" + width / 2 + "," + height / 2 + ")")
       .attr("class", function (d) {
-        return "blob " + d.keyword.replaceAll(" ", "_").replaceAll(",", "2").replaceAll("/", "3");
+        return "blob " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
       })
       .style("fill", (d) => d.color)
       .style("fill-opacity", 1)

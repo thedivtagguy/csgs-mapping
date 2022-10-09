@@ -20,10 +20,11 @@ search.addWidgets([
   searchBox({
     container: '#searchbox',
     searchAsYouType: false,
+    
     placeholder: 'Search our archive',
     templates: {
     submit: `
-<div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
+<div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
   <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="30" height="30" viewBox="-5 -5 28 28">
     <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
       <circle cx="7.11" cy="7.11" r="7.11"/>
@@ -33,7 +34,7 @@ search.addWidgets([
 </div>
     `,
     reset: `
-    <div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
+    <div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
   <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="25" height="25" viewBox="-200 -200 700 700">
     <g fill="black" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
       <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
@@ -223,11 +224,7 @@ search.start();
 </svelte:head>
 <main class="py-12">
   <div class="flex flex-col md:flex-row  justify-start  gap-8 items-start md:items-center">
-    <a href="/">
-      <button class="bg-[color:var(--color-orange)] hover:bg-[color:var(--color-green)] text-black font-bold py-2 px-4 " onclick="search.start()">
-        Back to Home
-      </button>
-    </a>
+    
     <div id="searchbox" class="hidden"></div>
     <div id="stats">
       <p id="statsNumber"></p>
@@ -235,7 +232,7 @@ search.start();
     <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">
       <select bind:value={selected} 
  
-      class="rounded-md h-12 w-[200px] " >
+      class="rounded-none h-12 w-[200px] text-gray-700 " >
         <option value="all">All</option>
         <option value="publications-search">Publications</option>
         <option value="events-search">Events</option>

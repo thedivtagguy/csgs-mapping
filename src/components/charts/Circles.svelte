@@ -148,7 +148,7 @@
       width = widthMobile;
       height = window.innerHeight / 1.4;
       dividedBy = 3;
-      avoidOverlapRadius = 23;
+      avoidOverlapRadius = 19;
       nodeRadius = 40;
 
       defaultRange = [ 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195];

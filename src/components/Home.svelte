@@ -51,6 +51,7 @@
             label: "genre",
             title: "title",
             year: "year",
+            link: "link",
         }}
          combineYear={true}
         />
@@ -85,6 +86,7 @@
                 label: "format",
                 title: "title",
                 year: "year",
+                link: "link",
             }}
             direction="left"
             combineYear={false}

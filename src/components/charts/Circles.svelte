@@ -143,6 +143,7 @@
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
     let defaultRange = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
+    let strengthX = 2;
 
     if (mobileCheck()) {
       width = widthMobile;
@@ -150,6 +151,7 @@
       dividedBy = 3;
       avoidOverlapRadius = 19;
       nodeRadius = 40;
+      strengthX = 3;
 
       defaultRange = [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225];
     }
@@ -237,18 +239,17 @@
       d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3")).style("filter", 'drop-shadow(2px 2px 2px rgba(30,30,30,0.6))').style("opacity", 1);
   });
    console.log("selected:", selected);
-
-
+  
     /////////////////////////////////////////////////////////////////////////
     // Features of the forces applied to the nodes:
     var simulation = d3
       .forceSimulation()
-      .force("x", d3.forceX().strength(0.1).x(width))
+      .force("x", d3.forceX().strength(strengthX).x(width))
       .force(
         "y",
         d3
           .forceY()
-          .strength(0.3)
+          .strength(0.2)
           .y((d) => ordering(d.genre))
       )
       .force(

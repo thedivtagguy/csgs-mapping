@@ -71,10 +71,10 @@
 
     //Generating 4 random numbers by which each vertex can vary.
 
-    var c1 = 7 * Math.random();
-    var c2 = 8 * Math.random();
-    var c3 = 6 * Math.random();
-    var c4 = 7 * Math.random();
+    var c1 = 5 * Math.random();
+    var c2 = 4 * Math.random();
+    var c3 = 5 * Math.random();
+    var c4 = 4 * Math.random();
 
     var path1 = d3.path();
     path1.moveTo(c1, a / 2 - c1);
@@ -149,7 +149,7 @@
       height = window.innerHeight / 1.4;
       dividedBy = 4.5;
       avoidOverlapRadius = 23;
-      nodeRadius = 35;
+      nodeRadius = 45;
 
       defaultRange = [0, 10, 30, 50, 70, 90, 110, 130, 150, 190, 210, 230, 250];
     }

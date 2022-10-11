@@ -137,7 +137,7 @@
     // Check if mobile device
 
     let width = 650;
-    let widthMobile = 360;
+    let widthMobile = 375;
     let height = 650;
     let dividedBy = 2;
     let avoidOverlapRadius = 28;
@@ -146,12 +146,12 @@
 
     if (mobileCheck()) {
       width = widthMobile;
-      height = window.innerHeight / 1.3;
-      dividedBy = 3;
+      height = window.innerHeight / 1.4;
+      dividedBy = 2;
       avoidOverlapRadius = 23;
       nodeRadius = 45;
 
-      defaultRange = [0, 10, 30, 50, 70, 90, 110, 130, 150, 190, 210];
+      defaultRange = [ 30, 50, 70, 90, 110, 130, 150, 190, 210, 230, 250];
     }
 
     let svg;

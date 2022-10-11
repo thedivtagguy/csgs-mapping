@@ -230,15 +230,18 @@
 
     ////////////////////////////////////////////////////////////////////
 
+    
+
     d3.selectAll("#facets").on("change", function () {
       d3.selectAll(".blob").style("filter", 'drop-shadow(0px 0px 0px rgba(30,30,30,0))').style("opacity", function(d){
         if (selected == "All keywords") {return 1} else {return 0.2}
-      });
+      })
+      .style("pointer-events", function(d) { if (selected === "All keywords") {return "all"} else {return "none"}});
 
       
-      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3")).style("filter", 'drop-shadow(2px 2px 2px rgba(30,30,30,0.6))').style("opacity", 1);
+      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3")).style("filter", 'drop-shadow(2px 2px 2px rgba(30,30,30,0.6))').style("opacity", 1).style("pointer-events", "all") ;
   });
-   console.log("selected:", selected);
+   
   
     /////////////////////////////////////////////////////////////////////////
     // Features of the forces applied to the nodes:

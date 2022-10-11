@@ -148,12 +148,12 @@
     if (mobileCheck()) {
       width = widthMobile;
       height = window.innerHeight / 1.4;
-      dividedBy = 3;
+      dividedBy = 2;
       avoidOverlapRadius = 19;
       nodeRadius = 40;
       strengthX = 0.3;
 
-      defaultRange = [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225];
+      defaultRange = [30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225];
     }
 
     let svg;

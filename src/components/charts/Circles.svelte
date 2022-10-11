@@ -145,7 +145,7 @@
     let defaultRange = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
 
     if (mobileCheck()) {
-      width = widthMobile;
+      width = window.innerWidth;
       height = window.innerHeight / 1.4;
       dividedBy = 2;
       avoidOverlapRadius = 23;

@@ -16,7 +16,7 @@
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
 <!-- Iterate and show all story headings -->
-<main class="">
+<main class="py-4">
     <Menu />
 
     <div class="container ">
@@ -111,13 +111,14 @@
 
 @media (max-width: 768px) {
     .container{
-        height: 60vh;
+        height: 90vh;
+        z-index: 0;
     }
     video {
     -moz-transform:rotate(-90deg);
     -webkit-transform:rotate(-90deg);
     -ms-transform:rotate(-90deg);
-    transform: rotate(-90deg) scale(2, 2) translate(-15vh, 0px) ;
+    transform: rotate(-90deg) scale(1.5, 1.5) translate(-15vh, 0px) ;
     position: relative; 
     z-index: 0;
     

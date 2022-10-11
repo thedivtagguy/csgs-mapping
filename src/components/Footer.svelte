@@ -22,7 +22,7 @@
       A Project by 
      </p>
     <a sveltekit:prefetch  href="https://csgs.ashoka.edu.in/" aria-label="CSGS">
-    The Centre for Studies in Gender and Sexuality, Ashoka University</a>
+    Centre for Studies in Gender and Sexuality, Ashoka University</a>
   </div>
   <!-- <section class="flex mx-auto font-sans pb-4 font-bold gap-6 text-xs justify-center items-center ">
     {#each links as link}

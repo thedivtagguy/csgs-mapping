@@ -17,7 +17,7 @@
   const genres = [
     {
       genre: "Art Project",
-      color: "#cadead"
+      color: "#C2DF97"
     },
     {
       genre: "Blog",
@@ -58,7 +58,7 @@
 
     {
       genre: "Other",
-      color: "#3a3a3a"
+      color: "#919191"
     }
   ];
 
@@ -88,9 +88,9 @@
 
   // Go through the data and create a new key for each genre with the value of the color
   digital.forEach(function (d) {
-    d.color = "#cadead";
+    d.color = "#C2DF97";
     if (d.genre == "Art Project") {
-      d.color = "#cadead";
+      d.color = "#C2DF97";
     } else if (d.genre == "Blog") {
       d.color = "#F67C87";
     } else if (d.genre == "Community") {
@@ -112,7 +112,7 @@
     } else if (d.genre == "Media") {
       d.color = "#D08C87";
     } else {
-      d.color = "#3a3a3a";
+      d.color = "#919191";
     }
   });
 

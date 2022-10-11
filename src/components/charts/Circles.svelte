@@ -147,7 +147,7 @@
     if (mobileCheck()) {
       width = widthMobile;
       height = window.innerHeight / 1.4;
-      dividedBy = 4.5;
+      dividedBy = 2;
       avoidOverlapRadius = 23;
       nodeRadius = 45;
 

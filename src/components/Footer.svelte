@@ -12,7 +12,7 @@
 <section class="about mx-auto py-4">
   <div class="flex justify-center py-6 gap-2 items-center">
     <p class = " py-1 text-base  text-gray-700">
-      If you liked this project, do consider sharing it?
+      If you like this project, do consider sharing it!
      </p>
     <Twitter class="share-button" text="{title}" {url} hashtags="gender,sexuality, dataviz"/>
     

@@ -143,7 +143,7 @@
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;
     let defaultRange = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
-    let strengthX = 0.2;
+    let strengthX = 0.1;
 
     if (mobileCheck()) {
       width = widthMobile;

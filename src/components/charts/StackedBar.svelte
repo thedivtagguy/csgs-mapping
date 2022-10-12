@@ -257,7 +257,7 @@ import StackedMobile from './StackedMobile.svelte';
 					<g class="axis x-axis">
 						{#each data2 as point, i}
 						{#if i % 4 === 0 }	
-						<g class="tick" transform="translate({xScale(i)/6} ,{height + 10})">
+						<g class="tick" transform="translate({2+xScale(i)/6} ,{height})">
 								<text x="{barWidth/2}" y="-90">
 								{#if point[0].year  >= 1920 && point[0].year <= 1990 && id == "publications"}
 									1940-90
@@ -352,7 +352,7 @@ import StackedMobile from './StackedMobile.svelte';
 	}
 
 	.tick {
-		font-size: .6em;
+		font-size: .65em;
 		font-weight: 400;
 	}
 
@@ -364,7 +364,7 @@ import StackedMobile from './StackedMobile.svelte';
 	.tick text {
 		fill: #3a3a3a;
 		text-anchor: start;
-		font-size: 10px;
+		font-size: 11px;
 	}
 
 	.tick.tick-0 line {

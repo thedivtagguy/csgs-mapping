@@ -404,6 +404,7 @@ select {
   padding: 0.5em 1em 0.5em 0.5em;
   border: 1px solid #eee;
   font: inherit;
+  font-size:95%;
   line-height: inherit;
   color: #3a3a3a;
   font-weight: 500;

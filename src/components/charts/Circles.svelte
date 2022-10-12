@@ -432,6 +432,7 @@
     padding: 0.5em 1em 0.5em 0.5em;
     border: 0px solid #f1cfe2;
     font: inherit;
+    font-size: 95%;
     line-height: inherit;
     color: #3a3a3a;
     font-weight: 500;

@@ -252,7 +252,7 @@
 		<div class="p-4 bg-[color:var(--color-aqua)]">
 			<div class="flex  justify-between gap-6 items-center">
 			 
-			  <h3 class="text-lg font-sans font-bold"> {pointData.name}</h3>
+			  <h3 class="text-lg font-sans font-bold"><a href="{pointData.location}" target="_blank" rel="external" class ="hover:text-gray-400">{pointData.name}</a></h3>
 		   
 			  <button class="text-gray-600 hover:text-gray-800" on:click="{() => show = false}" >
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

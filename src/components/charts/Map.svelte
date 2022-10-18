@@ -238,7 +238,7 @@
 </svelte:head>
 	<h3 class="text-4xl py-2 uppercase font-sans font-semibold">Institutions</h3>
 	<p class="text-gray-700 py-2 text-sm font-medium ">
-		This chart shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each circle to read more
+		This map shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each circle to read more
 	</p>
 	<div class="flex flex-wrap gap-1 pb-4 items-center">
 		{#each Object.keys(legend) as key}

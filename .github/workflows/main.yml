@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: amanbhargava.in 
+        server: 151.106.96.76 
         username: u518077716
         password: ${{ secrets.ftp_password }}
         local-dir: ./build/

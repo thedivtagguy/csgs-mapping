@@ -1,14 +1,8 @@
 <script>
-    import { goto } from '$app/navigation';
+    import SearchForm from "./Search/SearchForm.svelte";
 
-    let query = '';
-
-    function goToSearch(e){
-        e.preventDefault();
-        goto('/search?publications[query]=' + query);
-    }
 </script>
- 
+
 
 
 <nav class="p-3  rounded border-gray-200 ">
@@ -22,22 +16,7 @@
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
       <ul class="flex flex-col px-8 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700">
-        <form class="flex  justify-center items-center" >
-      
-          <input bind:value={query} type="text" class="w-full searchbar pl-6 pr-4 text-gray-700 font-light bg-[color:var(--color-darker-background)]  border-gray-400/0   focus:border-blue-400/0 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search our archive">
-          <!-- Submit button -->
-          <input type="submit" class="w-full hidden bg-gray-800 text-white rounded-md border-0 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" value="Search" on:click={goToSearch}>
-              <a  rel="external" href="/search?publications[query]={query}">
-                  <div class="bg-[color:#f1efe2] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" stroke="#3a3a3a" width="30" height="30" viewBox="-5 -5 28 28">
-                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
-                          <circle cx="7.11" cy="7.11" r="7.11"/>
-                          <path d="M16 16l-3.87-3.87"/>
-                        </g>
-                      </svg>
-                    </div>
-              </a>
-</form>
+        <SearchForm />
         <li>
           <a href="/about" class="block uppercase py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
         </li>

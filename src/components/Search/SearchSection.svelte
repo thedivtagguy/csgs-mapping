@@ -195,25 +195,6 @@ search.addWidgets([
     ]),
 
 
-    stats({
-      container: '#stats',
-      templates: {
-        text: `
-      {{#areHitsSorted}}
-        {{#hasNoSortedResults}}No relevant results{{/hasNoSortedResults}}
-        {{#hasOneSortedResults}}1 relevant result{{/hasOneSortedResults}}
-        {{#hasManySortedResults}}{{#helpers.formatNumber}}{{nbSortedHits}}{{/helpers.formatNumber}} relevant results{{/hasManySortedResults}}
-        sorted out of {{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}}
-      {{/areHitsSorted}}
-      {{^areHitsSorted}}
-        {{#hasNoResults}}No results{{/hasNoResults}}
-        {{#hasOneResult}}1 result{{/hasOneResult}}
-        {{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results{{/hasManyResults}}
-      {{/areHitsSorted}}
-      found for <span class="font-bold capitalize">{{query}}</span> 
-    `,
-      },
-    }),
 ]);
 
 search.start();
@@ -230,7 +211,6 @@ search.start();
     
     <div id="searchbox" class="hidden"></div>
     <div id="stats">
-      <p id="statsNumber"></p>
     </div>
     <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">
       <select bind:value={selected} 

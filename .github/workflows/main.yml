@@ -1,6 +1,14 @@
 on: push
 name: 🚀 Deploy website on push
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Create new build
+      run: npm install
+    - name: Compile and minify for production
+      run: npm run build
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest

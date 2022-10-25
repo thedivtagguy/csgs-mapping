@@ -14,3 +14,5 @@ jobs:
         server: 151.106.96.76
         username: u518077716
         password: ${{ secrets.ftp_password }}
+        local-dir: ./build/
+        server-dir: public-html/

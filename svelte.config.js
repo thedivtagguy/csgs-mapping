@@ -24,6 +24,7 @@ const algoliaConfig = {
   ],
   settings: {
     attributesToHighlight: [`title`, `programs`],
+    typoTolerance: `min`,
   },
 }
 

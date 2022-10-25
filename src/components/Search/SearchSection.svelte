@@ -1,7 +1,7 @@
 <script>
 import algoliasearch from 'algoliasearch/lite.js';
 import instantsearch from 'instantsearch.js';
-import { stats, searchBox, hits, index, pagination } from 'instantsearch.js/es/widgets/index.js';
+import { stats, searchBox, hits, index, pagination, configure } from 'instantsearch.js/es/widgets/index.js';
 import {onMount} from 'svelte';
 const searchClient = algoliasearch('8P43BBJQAR', '2c3f24b6adc627d1edf4a3e6879e1e62');
 let selected;
@@ -15,6 +15,8 @@ onMount(() => {
   routing: true,
   hitsPerPage: 10,
 });
+
+
 
 search.addWidgets([
   searchBox({
@@ -91,6 +93,7 @@ search.addWidgets([
   }),
 
   index({ indexName: 'events',   hitsPerPage: 10 })
+  
     .addWidgets([
       hits({
         container: '#events-search',

@@ -12,6 +12,7 @@ jobs:
 
 
   web-deploy:
+    needs: build
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:

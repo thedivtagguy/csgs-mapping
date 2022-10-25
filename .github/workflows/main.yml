@@ -17,4 +17,4 @@ jobs:
         local-dir: ./build/
         server-dir: public-html/
         port: 22
-        protocol: sftp
+        protocol: ftps

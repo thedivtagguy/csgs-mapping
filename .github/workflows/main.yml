@@ -15,5 +15,5 @@ jobs:
         username: u518077716
         password: ${{ secrets.ftp_password }}
         local-dir: ./build/
-        server-dir: public-html/
+        server-dir: domains/amanbhargava.in/public-html/
         port: 21

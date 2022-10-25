@@ -104,7 +104,7 @@
 					'circle-color': [
 						'match', 
 						['get', 'type'],
-						'Academic/ Research Centre',
+						'Academic/ Research centre',
 						'#A8DCC6',
 						'Collective',
 						'#F3DF8C',
@@ -213,6 +213,18 @@
 		});
 
 	}
+
+	const legend = {
+		'Academic/ Research centre': '#A8DCC6',
+		'Collective': '#F3DF8C',
+		'Community Organisation': '#F7B289',
+		'NGO': '#F3BEF1',
+		'Non-profit Organisation': '#79A5AE',
+		'Publishing House': '#9597BE',
+		'Resource Group': '#D1BB80',
+		'Service Provider': '#D08C87',
+		'Other': '#3A3A3A'
+	}
 		
 </script>
 
@@ -225,10 +237,14 @@
 	/>
 </svelte:head>
 	<h3 class="text-4xl py-2 uppercase font-sans font-semibold">Institutions</h3>
-	<p class="text-gray-700 py-2 text-sm w-1/3">
-		This chart shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each to read more
+	<p class="text-gray-700 py-2 text-sm font-medium ">
+		This map shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each circle to read more
 	</p>
-
+	<div class="flex flex-wrap gap-1 pb-4 items-center">
+		{#each Object.keys(legend) as key}
+				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-gray-700'} px-2 text-sm">{key}</p>
+		{/each}
+	</div>
 	
 <div class="relative" id="map-background" use:initMap>
 
@@ -236,23 +252,24 @@
 		<div class="p-4 bg-[color:var(--color-aqua)]">
 			<div class="flex  justify-between gap-6 items-center">
 			 
-			  <h3 class="text-lg font-sans font-bold"> {pointData.name}</h3>
+			  <h3 class="text-lg font-sans font-bold"><a href="{pointData.location}" target="_blank" rel="external" class ="hover:text-gray-400">{pointData.name}</a></h3>
 		   
 			  <button class="text-gray-600 hover:text-gray-800" on:click="{() => show = false}" >
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
 				</svg>
 			  </button>
+			  
 			</div>
 			
 		  </div>
 		<div id="keywords">
 			<p id="keyword"></p>
 		</div>
-		<p class="text-sm px-[10px]" id="type">{pointData.type} | {pointData.region}</p>
+		<p class="text-xs px-[10px] font-medium" id="type">{pointData.type} | {pointData.region}</p>
 		<div >
 			{#if pointData.programs && pointData.programs instanceof Array}
-				<p class="text-lg font-bold py-2 px-[10px]" id="programs">Programs:</p>
+				<p class="text-sm font-semibold py-2 px-[10px]" id="programs">Programs:</p>
 				<ul class=" list-none px-[10px] list-inside">
 					{#each pointData.programs as program}
 						<li class="text-sm py-1">{program}</li>
@@ -279,7 +296,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 380px;
-		height: 50%;
+		height: 80%;
 		background: var(--color-background);
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -291,7 +308,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 380px;
-		height: 50%;
+		height: 80%;
 		background: var(--color-background);
 		margin: 20px 20px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -304,7 +321,7 @@
 		visibility: hidden;
 		position: absolute;
 		width: 94%;
-		height: 30%;
+		height: 70%;
 		bottom: 5px;
 		margin: 10px;
 		background: var(--color-background);
@@ -337,9 +354,10 @@
 
 	:global(#keyword) {
 		background-color: var(--color-orange);
-		font-weight: 600;
-		padding: 1px 10px 1px 10px;
-		font-size: 14px;
+		font-weight: 300;
+		padding: 0px 10px 0px 10px;
+		font-size: 12px;
 		text-transform: uppercase;
+		color: var(--color-heading-text);
 	}
 </style>

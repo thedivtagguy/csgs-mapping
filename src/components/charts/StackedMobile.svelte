@@ -5,8 +5,8 @@
 	let modal;
 	let year = '2020';
 
-	let gridWdith = 10;
-	let gridHeight = 10;
+	let gridWdith = 20;
+	let gridHeight = 20;
 	
 
 	//////////////////////////////////////////////////////////////////
@@ -64,8 +64,8 @@
 
 <section>
 	<ModalOpen bind:this={modal}/>
-	<div id="facets" class="flex z-10 my-8  flex-col gap-4 justify-start pb-8my-8">
-		<select bind:value={selected} class="rounded-md " >
+	<div id="facets" class="flex z-10 my-8  flex-col gap-4 justify-start pb-5my-8">
+		<select bind:value={selected} class="rounded-none " >
 			{#each facets as facet}
 				<option class="capitalize" value={facet}>
 					{facet}
@@ -73,7 +73,7 @@
 			{/each}
 		</select>
 
-		<select bind:value={year} class="rounded-md " >
+		<select bind:value={year} class="rounded-none " >
 			{#each years as year, i}
 			{#if combineYear}
 				{#if year < 1990 && i == 0}
@@ -97,11 +97,11 @@
 	
 	</div>
 
-    <div class="grid grid-cols-6 gap-1">
+    <div class="grid grid-cols-4 gap-1">
 		{#each data as point, i}
 		{#each {length: point[0].totalCount} as book, j}
 		{#if point[0].year == year}
-		<svg width="40" height="20">
+		<svg width="70" height="30">
 			<path
 			style="opacity:{
 				// If selected is equal to null, opacity if full. If selected is not null and not equal to the facet, opacity is 0.1
@@ -115,7 +115,7 @@
 								on:click={() => modal.handleOpen(point[j], modalContent, id)}
 								on:mouseover="{() => tooltip(point[j])}"
 								on:mouseleave="{() => [nameVar] = [null]}"
-			d="{polygonGenerator(true, 20 ,30 )}" />
+			d="{polygonGenerator(true, 20 ,30, 60, 40 )}" />
 			  
 		  </svg>
 	

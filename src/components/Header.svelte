@@ -33,13 +33,13 @@
     <section class=" flex justify-left items-start flex-row md:h-screen">
         <div class="container md:px-20 text-left">
           
-            <div class="max-w-7xl md:py-1">
+            <div class="max-w-7xl md:py-0">
                 <p class="md:mt-2 px-6 py-1 text-xl font-light text-gray-700 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
                 </p>
             </div>      
     
           <div >
-            <div class="flex flex-col justify-start items-start md:py-3">
+            <div class="flex flex-col justify-start items-start md:py-2">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>

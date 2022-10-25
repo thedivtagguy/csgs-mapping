@@ -19,7 +19,7 @@
                {#if data[modalContent.title]}
                 {#if data[modalContent.link]}
                              
-                <h3 class="text-lg text-gray-600 font-semibold"> <a href="{data[modalContent.link]}" target="_blank" rel="external" class ="hover:text-gray-800"> {data[modalContent.title]}</a></h3>
+                <h3 class="text-lg text-gray-600 font-semibold"> <a href="{data[modalContent.link]}" target="_blank" rel="external" class ="hover:text-gray-400"> {data[modalContent.title]}</a></h3>
                 {:else}
                 <h3 class="text-lg text-gray-600 font-semibold">{data[modalContent.title]}</h3>
                 {/if}

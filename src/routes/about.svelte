@@ -24,9 +24,9 @@
       About the directory
     </p>
     <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
-      The Directory – Mapping Sexuality in India – is a compendium of the names of institutions, organisations, publications, audio-visual material, digital outlets, and events in the broad sphere of gender and sexuality studies in India. <a href="https://csgs.ashoka.edu.in/">The Centre for Studies in Gender and Sexuality (CSGS) </a>at Ashoka University has compiled this directory as an urgent resource to produce knowledge that can help researchers, activists, and media outlets as they work on gender and sexuality in India. 
+      The Directory – Mapping Sexuality in India – is a compendium of the names of institutions, organisations, publications, audio-visual material, digital outlets, and events in the broad sphere of gender and sexuality studies in India. <a href="https://csgs.ashoka.edu.in/" target="_blank" rel="noopener noreferrer">The Centre for Studies in Gender and Sexuality (CSGS) </a>at Ashoka University has compiled this directory as an urgent resource to produce knowledge that can help researchers, activists, and media outlets as they work on gender and sexuality in India. 
       
-      The resources listed in the Directory are ones that engage with questions of identity, rights, inequality, fantasy, pleasure, and politics through which we approach the domains of gender and sexuality. While this list is far from exhaustive, the Centre hopes that these interactive maps, charts, and figures in the Directory provide an enriching and user-friendly experience to anyone who wishes to navigate the diverse kinds of interventions in the field. For more in-depth information about the project, the process and the relevance of creating such a repository, <a href="https://csgs.ashoka.edu.in/">click here.</a>
+      The resources listed in the Directory are ones that engage with questions of identity, rights, inequality, fantasy, pleasure, and politics through which we approach the domains of gender and sexuality. While this list is far from exhaustive, the Centre hopes that these interactive maps, charts, and figures in the Directory provide an enriching and user-friendly experience to anyone who wishes to navigate the diverse kinds of interventions in the field. For more in-depth information about the project, the process and the relevance of creating such a repository, <a href="https://medium.com/@csgs/mapping-sexuality-in-india-insights-from-the-csgs-project-10c8af3871" target="_blank" rel="noopener noreferrer">click here.</a>
       
       The CSGS envisages this as a one-stop digital repository that will be regularly updated based on user inputs. <a href="/contact">Have a resource to add? </a>
       
@@ -53,7 +53,7 @@
       Project Lead: Samreen Mushtaq 
       Research Assistants: Yanam Bage, with support from Varun Tiwari
       Project Contributors: Shreyashi Sharma, Srija, Neel 
-      Data Visualisation and Design by: <a href = "https://www.nithyasubramanian.com/">Nithya Subramanian </a> and <a href = "https://thedivtagguy.com/"> Aman Bhargava</a>
+      Data Visualisation and Design by: <a href = "https://www.nithyasubramanian.com/" target="_blank" rel="noopener noreferrer">Nithya Subramanian </a> and <a href = "https://thedivtagguy.com/" target="_blank" rel="noopener noreferrer"> Aman Bhargava</a>
     </p>
 
     <p

@@ -207,24 +207,24 @@ search.start();
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 </svelte:head>
 <main class="py-12">
-  <div class="flex flex-col md:flex-row  justify-start  gap-8 items-start md:items-center">
+  <div class="flex flex-col md:flex-row sticky top-0 bg-[color:var(--color-background)] justify-start  gap-2 md:gap-8 items-start lg:items-center">
     
-    <div id="searchbox"></div>
-    <div id="stats">
+    <div class="grow" id="searchbox"></div>
+
+    <div class="flex-row justify-self-end flex justify-center items-center gap-8">
+      <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">
+        <select bind:value={selected}
+        class="rounded-none h-12 w-[200px] text-gray-700 " >
+          <option value="all">All</option>
+          <option value="publications-search">Publications</option>
+          <option value="events-search">Events</option>
+          <option value="av-search">Audio Visual Materials</option>
+          <option value="institutions-search">Institutions</option>
+          <option value="digital-spaces-search">Digital Spaces</option>
+        </select>
+      </div>
+      <div id="paginate"></div>
     </div>
-    <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">
-      <select bind:value={selected} 
- 
-      class="rounded-none h-12 w-[200px] text-gray-700 " >
-        <option value="all">All</option>
-        <option value="publications-search">Publications</option>
-        <option value="events-search">Events</option>
-        <option value="av-search">Audio Visual Materials</option>
-        <option value="institutions-search">Institutions</option>
-        <option value="digital-spaces-search">Digital Spaces</option>
-      </select>
-    </div>
-    <div id="paginate"></div>
   </div>
 
 
@@ -290,7 +290,7 @@ search.start();
     padding: 10px;
     border: 1px solid #d5d2bf;
     border-radius: 6px;
-    width: 600px;
+    width: 100%;
   }
 
   .ais-SearchBox-submitIcon path{

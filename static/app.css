@@ -873,6 +873,12 @@ html {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
+.top-0 {
+  top: 0px;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1059,6 +1065,14 @@ html {
   -webkit-box-flex: 1;
           flex: 1 1 0%;
 }
+.flex-grow-0 {
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+}
+.grow {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
 .transform {
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1146,6 +1160,9 @@ html {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.justify-self-end {
+  justify-self: end;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1810,6 +1827,9 @@ html {
   .md\:gap-6 {
     gap: 1.5rem;
   }
+  .md\:gap-8 {
+    gap: 2rem;
+  }
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1900,8 +1920,15 @@ html {
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
   }
+  .lg\:block {
+    display: block;
+  }
   .lg\:max-w-lg {
     max-width: 32rem;
+  }
+  .lg\:items-center {
+    -webkit-box-align: center;
+            align-items: center;
   }
   .lg\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;

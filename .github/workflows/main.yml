@@ -17,3 +17,4 @@ jobs:
         local-dir: ./build/
         server-dir: domains/amanbhargava.in/public_html/
         port: 21
+        dangerous-clean-slate: true

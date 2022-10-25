@@ -209,7 +209,7 @@ search.start();
 <main class="py-12">
   <div class="flex flex-col md:flex-row  justify-start  gap-8 items-start md:items-center">
     
-    <div id="searchbox" class="hidden"></div>
+    <div id="searchbox"></div>
     <div id="stats">
     </div>
     <div id="facets" class="flex flex-col ml-auto gap-8 justify-start items-stretch my-8">

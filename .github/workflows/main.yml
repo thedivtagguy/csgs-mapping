@@ -9,20 +9,21 @@ jobs:
       run: npm install
     - name: Compile and minify for production
       run: npm run build
+
+
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: ftp.amanbhargava.in
         username: u518077716
         password: ${{ secrets.ftp_password }}
-        local-dir: ./build/
+        local-dir: ${{ github.workspace }}/csgs-mapping/build/
         server-dir: domains/amanbhargava.in/public_html/
         port: 21
         dangerous-clean-slate: true

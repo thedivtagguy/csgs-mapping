@@ -26,9 +26,9 @@ search.addWidgets([
     placeholder: 'Search our archive',
     templates: {
     submit: `
-<div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
+<div class="bg-[color:#f1efe2] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
   <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="30" height="30" viewBox="-5 -5 28 28">
-    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
+    <g fill="none" fill-rule="evenodd" stroke="currentColor" searc stroke-width="1.67" transform="translate(1 1)">
       <circle cx="7.11" cy="7.11" r="7.11"/>
       <path d="M16 16l-3.87-3.87"/>
     </g>
@@ -36,9 +36,9 @@ search.addWidgets([
 </div>
     `,
     reset: `
-    <div class="bg-[color:#d5d2bf] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
+    <div class="bg-[color:#f1efe2] hover:bg-[color:#f0f0f0] text-[color:var(--off-white)] w-[40px] h-[40px] m-1 p-1 rounded-none">
   <svg xmlns="http://www.w3.org/2000/svg" stroke="#f0f0f0" width="25" height="25" viewBox="-200 -200 700 700">
-    <g fill="black" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.67" transform="translate(1 1)">
+    <g fill="black" fill-rule="evenodd" stroke="currentColor" searc stroke-width="1.67" transform="translate(1 1)">
       <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
 	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
 	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
@@ -289,7 +289,7 @@ search.start();
   .ais-SearchBox-input {
     padding: 10px;
     border: 1px solid #d5d2bf;
-    border-radius: 6px;
+    border-radius: 1px;
     width: 100%;
   }
 

@@ -22,7 +22,7 @@
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1200" autoplay loop muted playsinline>
+          <video  width= "1440" autoplay loop muted playsinline>
             <source src="/assets/animation.webm" type="video/webm">
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>

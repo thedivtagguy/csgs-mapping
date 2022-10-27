@@ -41,7 +41,7 @@
     <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
       The design attempts to capture the diversity of the directory in its use of line, colour, shape, and interaction. The main buttons on the homepage break open when hovered over, to echo the CSGS logo and the idea that gender and sexuality do not fit into neat little boxes.
      
-      Similarly, in the visualisations, no shape is quite rectangular or perfectly circular. Instead, they are all unique, and not one is exactly the same as the other. The shapes are generated differently each time the website loads. The animation on the homepage morphs shape and colour continuously, as a visual metaphor for the fluidity of gender and sexuality and how they interact with one another.
+      Similarly, in the charts, no shape is quite rectangular or perfectly circular. Instead, they are all unique, and not one is exactly the same as the other. The shapes are generated differently each time the website loads. The animation on the homepage morphs shape and colour continuously, as a visual metaphor for the fluidity of gender and sexuality and how they interact with one another.
     </p>
 
     <p

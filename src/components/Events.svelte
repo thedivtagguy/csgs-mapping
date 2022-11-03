@@ -77,7 +77,7 @@
      </div>
      <div class="flex justify-end">
          <a href="/events">
-            <button class="bg-[color:var(--color-turquoise)] mx-4 hover:bg-[color:var(--color-green)] text-gray-700 font-bold py-4 px-4 " onclick="search.start()">
+            <button class="bg-[color:var(--color-turquoise)] mx-4 hover:bg-[color:var(--color-green)] text-gray-700 font-bold py-2 px-4 " onclick="search.start()">
               See All Events
             </button>
           </a>
@@ -124,7 +124,7 @@
     .flex {
     display: flex;
     display: -webkit-flex;
-    }
+        }
 
     .main {
         overflow-x: auto;

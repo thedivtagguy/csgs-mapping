@@ -223,7 +223,7 @@
 		'Publishing House': '#9597BE',
 		'Resource Group': '#D1BB80',
 		'Service Provider': '#D08C87',
-		'Other': '#3A3A3A'
+		'Other': '#919191'
 	}
 		
 </script>

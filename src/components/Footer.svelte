@@ -2,7 +2,7 @@
   import { Twitter, WhatsApp }  from 'svelte-share-buttons-component';
   export const prerender = true;
 
-	const url = 'https://csgs.netlify.app';
+	const url = 'http://mappingsexuality.ashoka.edu.in/';
 	const title = 'Mapping Sexuality in India';
 	const desc = 'The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India';
     

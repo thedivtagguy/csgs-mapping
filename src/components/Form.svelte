@@ -34,14 +34,14 @@
 			<div class="px-4 py-5  sm:p-6">
 			  <div class="flex flex-col gap-6">
 				<div class="col-span-6 sm:col-span-3">
-				  <label for="first_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Name*</label>
+				  <label for="first_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Your name*</label>
 				  <input required type="text" name="name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full  sm:text-sm border-gray-300 rounded-xs">
 				</div>
   
 				
   
 				<div class="col-span-6 sm:col-span-4">
-				  <label for="email_address" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Email address*</label>
+				  <label for="email_address" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Your email address*</label>
 				  <input required type="text" name="email" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-xs">
 				</div>
   
@@ -51,7 +51,7 @@
 			
   
 				<div class="col-span-6 sm:col-span-3 lg:col-span-2">
-				  <label for="resource_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource Name or Link*</label>
+				  <label for="resource_name" class="blocktext-sm pb-2 font-medium text-gray-900 dark:text-gray-400">Resource name or link*</label>
 				  <input required type="text" name="resource" id="resource_name" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full  sm:text-sm border-gray-300 rounded-xs">
 				</div>
 
@@ -83,7 +83,7 @@
 			  </div>
 			</div>
 			<div class="px-4 py-3 0 text-right sm:px-6">
-			  <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-sm text-white bg-green-400 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+			  <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-gray-700 font-bold bg-[color:var(--color-turquoise)] hover:bg-[color:var(--color-green)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
 				Save
 			  </button>
 			</div>

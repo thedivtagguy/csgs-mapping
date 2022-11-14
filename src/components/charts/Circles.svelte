@@ -138,7 +138,7 @@
 
     let width = 650;
     let widthMobile = 375;
-    let height = 650;
+    let height = 670;
     let dividedBy = 2;
     let avoidOverlapRadius = 28;
     let nodeRadius = 50;

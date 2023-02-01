@@ -11,8 +11,9 @@
     let marches = {};
     let festivals = {};
     let conferences = {};
+    let others = {};
 
-    const colors = [ 'yellow', 'green', 'orange'];
+    const colors = [ 'yellow', 'green', 'orange', 'pink'];
 
     
     // Read in events and look for the type column. If type is march, add that row to the march object
@@ -28,12 +29,16 @@
         } else if (event.type === "Conferences") {
             conferences[event.id] = event;
         } 
+        else if (event.type === "Other") {
+            others[event.id] = event;
+        } 
     });
 
     // Convert march, festival and concert objects to arrays
     let marchArray = Object.values(marches);
     let festivalArray = Object.values(festivals);
     let conferencesArray = Object.values(conferences);
+    let othersArray = Object.values(others);
 
     // Assign a color randomly to each event from the array of colors
     // This is done by choosing a random index from the array of colors
@@ -54,8 +59,12 @@
         let color = colors[2];
         event.color = color;
     });
+    othersArray.forEach(event => {
+        let color = colors[3];
+        event.color = color;
+    });
   
-  const types = ["Pride Marches", "Literary and Film Festivals", "Conferences"];
+  const types = ["Pride Marches", "Literary and Film Festivals", "Conferences", "Other"];
 </script>
 
 <!-- Iterate and show all story headings -->

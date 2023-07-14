@@ -13,6 +13,7 @@
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
+    import Judgements from "./charts/Judgements.svelte";
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
 <!-- Iterate and show all story headings -->
@@ -91,6 +92,9 @@
             direction="left"
             combineYear={false}
         />
+    </section>
+    <section id="judgements">
+        <Judgements upcoming = {true}/>
     </section>
 </div>
 </main>

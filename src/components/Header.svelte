@@ -24,6 +24,11 @@
       title: "Audio Visual Material",
       url: "#av-material",
     },
+
+    {
+      title: "Judgements",
+      url: "#judgements",
+    },
   
   ];
   </script>
@@ -39,13 +44,14 @@
             </div>      
     
           <div >
-            <div class="flex flex-col justify-start items-start md:py-2">
+            <div class="flex flex-cols-2 gap-4 flex-wrap justify-start items-start md:py-2 w-full ">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>
                 <MainButton3 label={pages[2].title} link={pages[2].url}/>
                 <MainButton2 label={pages[3].title} link={pages[3].url}/>
                 <MainButton3 label={pages[4].title} link={pages[4].url}/>
+                <MainButton label={pages[5].title} link={pages[5].url}/>
             </div>
           </div>
       </div>

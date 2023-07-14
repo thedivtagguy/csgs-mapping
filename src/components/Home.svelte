@@ -13,7 +13,12 @@
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
+<<<<<<< Updated upstream
     let genreColors =  ["#F3DF8C", "#CADEAD", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#BEF3E0", "#C0AAAF", "#79A5AE", "#F4D6C5" , "#818181"];</script>
+=======
+    import Judgements from './Judgements.svelte';
+    let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
+>>>>>>> Stashed changes
 
 <!-- Iterate and show all story headings -->
 <main class="">
@@ -86,6 +91,11 @@
             combineYear={false}
         />
     </section>
+    <section id="judgements">
+        <Judgements />
+                  
+            
+    </section>
 </div>
 </main>
 
@@ -94,6 +104,7 @@
     margin-left: 4em;
     height: 90vh;
     position: relative;
+    
 }
 
 /* MObile */

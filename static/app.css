@@ -821,6 +821,12 @@ html {
 .h-12 {
   height: 3rem;
 }
+.h-5 {
+  height: 1.25rem;
+}
+.max-h-full {
+  max-height: 100%;
+}
 .w-full {
   width: 100%;
 }
@@ -839,6 +845,7 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+<<<<<<< Updated upstream
 .w-0\.5 {
   width: 0.125rem;
 }
@@ -850,6 +857,13 @@ html {
 }
 .w-2 {
   width: 0.5rem;
+=======
+.w-5 {
+  width: 1.25rem;
+}
+.w-auto {
+  width: auto;
+>>>>>>> Stashed changes
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -859,6 +873,9 @@ html {
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.max-w-full {
+  max-width: 100%;
 }
 .flex-1 {
   -webkit-box-flex: 1;
@@ -882,6 +899,9 @@ html {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-row {
   -webkit-box-orient: horizontal;
@@ -957,6 +977,12 @@ html {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 .whitespace-pre-line {
   white-space: pre-line;
@@ -1042,6 +1068,7 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(241 239 226 / var(--tw-bg-opacity));
 }
+<<<<<<< Updated upstream
 .bg-\[color\:var\(--color-aqua\)\] {
   background-color: var(--color-aqua);
 }
@@ -1058,6 +1085,14 @@ html {
 .bg-\[color\:\#d5d2bf\] {
   --tw-bg-opacity: 1;
   background-color: rgb(213 210 191 / var(--tw-bg-opacity));
+=======
+.bg-local {
+  background-attachment: local;
+}
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
+>>>>>>> Stashed changes
 }
 .p-4 {
   padding: 1rem;
@@ -1638,6 +1673,10 @@ html {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .md\:pr-0 {
     padding-right: 0px;

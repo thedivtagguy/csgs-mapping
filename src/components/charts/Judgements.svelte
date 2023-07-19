@@ -23,9 +23,9 @@
     </div>
 <div class = "button">
     <!-- svelte-ignore a11y-missing-attribute -->
-    <object id = "SC" data = "SC.svg" type = "svg/svg+xml" width = "46" height  = "46">
-        <param name = "src" value = "/assets/SC.svg">
-    </object>
+    
+    <object id = "SC" data = "/assets/SC.svg">
+        </object>
         
 </div>
 
@@ -33,5 +33,10 @@
 </main>
 
 <style> 
+object:hover {
+    -ms-transform: scale(1.1em);
+    -webkit-transform: scale(1.1);
+    tansform: scale(1.1);
+}
 </style>
     

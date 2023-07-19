@@ -1121,10 +1121,6 @@ html {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1646,10 +1642,6 @@ html {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
   .md\:pr-0 {
     padding-right: 0px;

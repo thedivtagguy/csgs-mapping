@@ -94,9 +94,10 @@
         />
     </section>
     <section id="judgements">
-        <Judgements id="judgements"
+        <Judgements 
+        id="judgements"
         title="judgements"
-        width={1950}/>
+        />
     </section>
 </div>
 </main>

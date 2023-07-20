@@ -853,6 +853,9 @@ html {
   -webkit-box-flex: 1;
           flex: 1 1 0%;
 }
+.flex-shrink {
+  flex-shrink: 1;
+}
 .grow {
   -webkit-box-flex: 1;
           flex-grow: 1;
@@ -1277,9 +1280,6 @@ html {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.outline {
-  outline-style: solid;
 }
 .blur {
   --tw-blur: blur(8px);

@@ -1,14 +1,12 @@
 <script>
-  import ModalOpen from "../modal/ModalOpen.svelte";
-  let modal;
-  export let modalContent;
+  
   export let title = "";
-  export let height = 800; // Height of the chart
-  export let width = 1900;
+  export let height = 900; // Height of the chart
+  export let width = 5000;
 </script>
 
 <main>
-  <ModalOpen bind:this={modal} />
+
 
   <section>
     <div class="container">
@@ -96,14 +94,6 @@
           />
         </svg>
       </div>
-
-      <div class="button">
-        <!-- svelte-ignore a11y-missing-attribute -->
-
-        <object id="SC" data="/assets/SC.svg" />
-        <p>Tuka Ram And Anr Vs State of Maharashtra</p>
-      </div>
-      
       <div class="curvy_Line">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +109,15 @@
           />
         </svg>
       </div>
+
+      <div class="button">
+        <!-- svelte-ignore a11y-missing-attribute -->
+
+        <object id="SC" data="/assets/SC.svg" />
+        <p>Tuka Ram And Anr Vs State of Maharashtra</p>
+      </div>
+
+      
     </div>
   </section>
 </main>
@@ -144,7 +143,7 @@
     display: flex;
   }
   .curvy_Line {
-    z-index: 10;
+    z-index: 1;
   }
   .button:hover {
     -ms-transform: scale(1.1em);
@@ -156,7 +155,7 @@
     z-index: -1;
   }
   .button {
-    z-index: 3;
+    z-index: 13;
     width: 5.9375rem;
     height: 1.4375rem;
     flex-shrink: 0;

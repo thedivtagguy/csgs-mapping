@@ -1,8 +1,7 @@
 <script>
   
   export let title = "";
-  export let height = 900; // Height of the chart
-  export let width = 5000;
+  
 </script>
 
 <main>
@@ -24,9 +23,9 @@
         >
           <line
             id="Line 1"
-            x1="3"
+            x1="8"
             y1="734"
-            x2="3"
+            x2="8"
             y2="1.31134e-07"
             stroke="#F7B289"
             stroke-width="2"
@@ -94,12 +93,13 @@
           />
         </svg>
       </div>
+      
       <div class="curvy_Line">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="4094"
           height="226"
-          viewBox="0 0 4094 226"
+          viewBox="0 -300 4194 226"
           fill="none"
         >
           <path
@@ -109,12 +109,18 @@
           />
         </svg>
       </div>
-
+      <div class = "blobs">
+        <svg width="8" height="8" viewBox="-159 -161 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.95707 2.99209C5.95707 4.6418 4.57092 6.22526 2.9143 5.9735C1.96766 5.82774 0 4.72131 0 3.07159C0 1.42188 1.23739 -0.0886942 2.9143 0.00406065C6.59944 0.216072 5.95707 2.3163 5.95707 2.99209Z" fill="#F67C87"/>
+          </svg>
+          
+          
+      </div>
       <div class="button">
         <!-- svelte-ignore a11y-missing-attribute -->
 
         <object id="SC" data="/assets/SC.svg" />
-        <p>Tuka Ram And Anr Vs State of Maharashtra</p>
+        <p class = "leading-4 text-sm">Tuka Ram And Anr vs State of Maharashtra</p>
       </div>
 
       
@@ -125,14 +131,18 @@
 <style>
   main {
     overflow-x: auto;
+    overflow-y: auto;
   }
   body {
     display: grid;
   }
   .container {
     width: 5000px;
-    height: 800px;
+    height: 900px;
     position: relative;
+  }
+  .blobs{
+    z-index: 4;
   }
   svg {
     display: block;
@@ -156,14 +166,15 @@
   }
   .button {
     z-index: 13;
+    position:absolute;
     width: 5.9375rem;
     height: 1.4375rem;
     flex-shrink: 0;
     color: #3a3a3a;
     text-align: center;
     font-family: Roboto;
-    font-size: 13px;
-    line-height: 0.8rem;
+    font-size: 12px;
+    line-height: 0.6rem;
     font-weight: 400;
   }
 </style>

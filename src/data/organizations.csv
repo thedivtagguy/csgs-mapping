@@ -1,7 +1,7 @@
 region,latitude,longitude,scatterLat,scatterLong,count,name,location,type,active,contact,programs,keywords
-Allahabad,26.8467088,80.9461592,26.8467088,80.9461592,0,"Resistance Alliance for Queer Solidarity, University of Allahabad",https://www.facebook.com/raqsallahabad/,Community Organisation,,,Advocacy and campaigns for queer rights,Advocacy
+Allahabad,25.4358,81.8463,25.4358,81.8463,0,"Resistance Alliance for Queer Solidarity, University of Allahabad",https://www.facebook.com/raqsallahabad/,Community Organisation,,,Advocacy and campaigns for queer rights,Advocacy
 Andhra Pradesh,15.9128998,79.7399875,15.9128998,79.7399875,0,"Centre for women's Studies, Sri Venkateswara University",https://www.svuniversity.edu.in/Master/Extensionstudies.html,Academic/ Research centre,NA,NA,"Capacity building and awareness activities centred on Health and Hygiene, Population Education, Social Empowerment of Women",Education
-Arunachal Pradesh,28.2179994,94.7277528,28.2179994,94.7277528,0,"Women Studies and Research centre, Rajiv Gandhi University",https://rgu.ac.in/women-studies-and-research-centre/,Academic/ Research centre,2009,ehansingrgu@yahoo.co.in,"1. Research, documentation, and awareness workshops with a focus on Women, Work, and Land rights, Women and Health, Women and Political Empowerment, Indeigenous Knowledge Systems, and Gender Based Violence
+Arunachal Pradesh,28.2179994,94.7277528,28.0179994,94.5777528,0,"Women Studies and Research centre, Rajiv Gandhi University",https://rgu.ac.in/women-studies-and-research-centre/,Academic/ Research centre,2009,ehansingrgu@yahoo.co.in,"1. Research, documentation, and awareness workshops with a focus on Women, Work, and Land rights, Women and Health, Women and Political Empowerment, Indeigenous Knowledge Systems, and Gender Based Violence
 2. Gender sensitisation programs at educational institutes and other spaces like Engaging Men in Promoting Gender Equality
 3. Extention programs with other organisations on rural women's experiences along with capacity building and skill development trainings
 4. Awareness campaigns on women's rights and training on gender equality",Education
@@ -22,7 +22,7 @@ Arunachal Pradesh,28.2179994,94.7277528,28.0179994,94.7277528,3,Oju Welfare Asso
 Arunachal Pradesh,28.2179994,94.7277528,28.0179994,94.7777528,4,Hidden Land Exploration Society,,NGO,2002,,"1. Targeted Intervention on Harm Reduction Services. 
 2. Community outreach and mobilization through Peer led approach.
 3. Abscess management, STI Management, Harm Reduction Counselling, referral and linkages to various Govt. and Social health facilities like ICTC, ART, DOTS, STI Clinic, PPTCT, VIHAAN, ANP+ etc.",HIV/AIDS prevention
-Assam,26.2006043,92.9375739,26.2006043,92.9375739,0,"Chandraprabha Saikiani Centre for Women Studies, Tezpur University",http://www.tezu.ernet.in/wsc/about-us.php,Academic/ Research centre,2009,hodwsc@tezu.ernet.in,"1. Post-Graduate Diploma course in Women's Studies
+Assam,26.2006043,92.9375739,26.0006043,92.7875739,0,"Chandraprabha Saikiani Centre for Women Studies, Tezpur University",http://www.tezu.ernet.in/wsc/about-us.php,Academic/ Research centre,2009,hodwsc@tezu.ernet.in,"1. Post-Graduate Diploma course in Women's Studies
 2. Doctor of Philosophy in Women's Studies
 3. Elective courses offered under Choice Based Cresit System: Introduction to Women's Studies, Women and Digital Literacy
 4. Gender sensitization, capacity building and skill development training programs, awareness programs and community outreach programs on women's rights and gender equality",Education
@@ -64,19 +64,19 @@ Chandigarh,30.7333148,76.7794179,30.7333148,76.7794179,0,"Department cum Centre 
 2. Doctor of Philosophy in Women's Studies
 3. Training and interdisciplinary programs with a focus on development studies and human rights law
 4. Gender senstisation and women's empowerment programs",Education
-Chhattisgarh,21.2786567,81.8661442,21.2786567,81.8661442,0,"Centre for Women's Studies, Pt. Ravishankar Shukla University",https://www.prsu.ac.in/academic-departments/utd-departments/Centre-for-Womens-Studies/9,Academic/ Research centre,2001,,"1. Gender sensitisation programs and awareness campaigns on issues such as Dowry practice, Gender Based Violence, Women's rights and legal protection
+Chhattisgarh,21.2786567,81.8661442,21.0786567,81.7161442,0,"Centre for Women's Studies, Pt. Ravishankar Shukla University",https://www.prsu.ac.in/academic-departments/utd-departments/Centre-for-Womens-Studies/9,Academic/ Research centre,2001,,"1. Gender sensitisation programs and awareness campaigns on issues such as Dowry practice, Gender Based Violence, Women's rights and legal protection
 2. Counselling centre for women
 3. capacity building, skill development programs, and self defence training workshops",Gender sensitisation
 Chhattisgarh,21.2786567,81.8661442,21.0786567,81.7661442,1,Women Studies for Development Centre,https://ggu.ac.in/gguold/womens_studies_development_centre.html,Academic/ Research centre,2005,,"1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice
 2. Research",Gender sensitisation
-Chhattisgarh,22.0796545,82.1409152,22.0796545,82.1409152,0,"HAQ: Queer Alliance, Hidayatullah National Law University",https://www.facebook.com/allianceforqueers/,Community Organisation,2017?,hnlu.aq@gmail.com,Advocacy and campaigns for queer rights,Advocacy
+Chhattisgarh,22.0796545,82.1409152,21.8796545,81.9909152,0,"HAQ: Queer Alliance, Hidayatullah National Law University",https://www.facebook.com/allianceforqueers/,Community Organisation,2017?,hnlu.aq@gmail.com,Advocacy and campaigns for queer rights,Advocacy
 Chhattisgarh,22.0796545,82.1409152,21.8796545,82.0409152,1,LGBTQ Chhattisgarh,https://www.instagram.com/lgbtqchhattisgarh/?hl=en,Community Organisation,2019,,"1. Advocacy for the rights of GSM
 2. Sensitisation workshops and other cultural events like Queer flash mobs",LGBTQ rights
 Chhattisgarh,22.0796545,82.1409152,21.8796545,82.0909152,2,Mitwa Samiti,,NGO,,,"1. Advocacy for the rights of the hijra community
 2. Sensitisation programs and capacity building programs
 3. Awareness campaigns on HIV / AIDS",Capacity Building
 "Dadar West, Mumbai",19.02641807,72.84071323,19.02641807,72.84071323,0,Men Against Violence and Abuse (MAVA),http://www.mavaindia.org/,NGO,1993,mavamumbai@gmail.com,Gender sensitization and training program among young men,Gender sensitisation
-Delhi,28.7040592,77.1024902,28.7040592,77.1024902,0,"Women's Studies Centre, Jesus & Mary College, Delhi University",https://www.jmc.ac.in/compulsorysocieties/womensstudiescentre,Academic/ Research centre,2014?,jmcwsc@gmail.com,"1. Gender and Law, Certificate course, 2020
+Delhi,28.7040592,77.1024902,28.5040592,76.9524902,0,"Women's Studies Centre, Jesus & Mary College, Delhi University",https://www.jmc.ac.in/compulsorysocieties/womensstudiescentre,Academic/ Research centre,2014?,jmcwsc@gmail.com,"1. Gender and Law, Certificate course, 2020
 2. Gender analysis of the Lockdown, Certificate course, 2020
 3. Public Health and Global Care Chains, Certificate course, 2021
 4. LGBTQIA [PLUS] Writings from India, Certificate course, 2021
@@ -174,7 +174,7 @@ Delhi,28.7040592,77.1024902,28.6040592,77.2524902,26,BI-Collective Delhi,https:/
 Delhi,28.7040592,77.1024902,28.6040592,77.3024902,27,Impulse New Delhi,https://www.facebook.com/ImpulseNewDelhi/,Community Organisation,2014,info.impulsenewdelhi@impulsegrp.org,"Awareness programs on sexual health, especially HIV/AIDS within the MSM,TG and Hijra (MTH) community",Sexual and reproductive health
 Delhi,28.7040592,77.1024902,28.6040592,77.3524902,28,All India Queer Association,https://allindiaqueerassociation.com/,Community Organisation,2019,aiqalgbt@gmail.com,"1. Advocacy for the rights of the queer community with a queer-marxist political sensibility
 2. Conferences, workshops, and cultural events (singing, stand-up acts, poetry performance, etc) with a focus on issues like queer empowerment, mental health, and healthcare for trans individuals. ",Advocacy
-Delhi,28.7040592,77.1024902,28.6040592,77.4024902,29,Centre For Health and Social Justice,https://chsj.org/,Community Organisation,2005,chsj@chsj.or,"1. Advocacy and campaigns with a focus on social justice in the fields of health, Human Development, Gender Equality and Human rights.
+Delhi,28.7040592,77.1024902,28.6040592,77.4024902,29,Centre For Health and Social Justice,https://chsj.org/,Community Organisation,2005,chsj@chsj.org,"1. Advocacy and campaigns with a focus on social justice in the fields of health, Human Development, Gender Equality and Human rights.
 2. Project MITRA (Mens Initiative to Transform Relationship through Action) focuses on the role played by men and boys in the discourse of gender equality",Advocacy
 Delhi,28.7040592,77.1024902,28.6540592,76.9524902,30,"DU Queer Collective, University of Delhi",https://duqueerCollective.wordpress.com/,Community Organisation,2014,duqueerCollective@gmail.com,Advocacy and campaigns for queer rights,Advocacy
 Delhi,28.7040592,77.1024902,28.6540592,77.0024902,31,Nirantar,https://www.nirantar.net/,NGO,1993,nirantar.mail@gmail.com,"1. Women's Education and Empowerment.
@@ -334,9 +334,9 @@ Dibrugarh,27.4705,94.9125,27.4705,94.9125,0,"Centre for Women's Studies, Dibruga
 3. Master of Arts in Women's Studies
 4. Set up 43 Women's Studies Cell in various colleges affiliated to Dibhrugarh University
 5. Research work, documentation, archival, discussions, training programs, community outreach and extention programs with a focus on Violence Against Women, oral history, Gender Sensitization, advocating women’s rights, and varied experiences of women.",Education
-Goa,15.2993265,74.123996,15.2993265,74.123996,0,Goa Rainbow Trust,https://www.facebook.com/grtgoa/,Collective,NA,goarainbowtrust@gmail.com,1. Sensitisation sessions for LGBTQIA+ inclusion 2. Counselling and legal assistance 3. Campaigns and advocacy,LGBTQ Rights
+Goa,15.2993265,74.123996,15.0993265,73.973996,0,Goa Rainbow Trust,https://www.facebook.com/grtgoa/,Collective,NA,goarainbowtrust@gmail.com,1. Sensitisation sessions for LGBTQIA+ inclusion 2. Counselling and legal assistance 3. Campaigns and advocacy,LGBTQ Rights
 Goa,15.2993265,74.123996,15.0993265,74.023996,1,Video Volunteers,https://www.videovolunteers.org/,NGO,2003,info@videovolunteers.org,"Indiaunheard: Empowering marginalized citizens to use journalism as a tool to voice their interests to authority and demand intervention whenever necessary, They work in the field of caste, Forced evictions, Covid Relief, Reproductive rights etc. ",Advocacy
-Gujarat,22.258652,71.1923805,22.258652,71.1923805,0,"Women's Studies Centre, Sardar Patel University",https://www.spuvvn.edu/academics/academic-centres/womens-study-centre/,Academic/ Research centre,2005,,"Education and research around issues faced by women, capacity building initiatives for women",Education
+Gujarat,22.258652,71.1923805,22.058652,71.0423805,0,"Women's Studies Centre, Sardar Patel University",https://www.spuvvn.edu/academics/academic-centres/womens-study-centre/,Academic/ Research centre,2005,,"Education and research around issues faced by women, capacity building initiatives for women",Education
 Gujarat,22.258652,71.1923805,22.058652,71.0923805,1,National Network of Sex Workers,http://nnswindia.org/,Collective,1997,nationalnetworkofsexworkers@gmail.com,"1. Advocacy for the local, regional, national, and international rights of sex workers
 2. Documentation and research on issues concerning sex workers such as violence, discrimination, and social oppression
 3. Awareness campaigns and other programs addressing misconceptions, stigma, and discrimination that marginalises sex workers",Sex workers
@@ -350,7 +350,8 @@ Gujarat,22.258652,71.1923805,22.058652,71.1923805,3,SWATI: Society for Women’s
 Gujarat,22.258652,71.1923805,22.058652,71.2423805,4,Anandi ,https://anandi-india.org/about-us/#mission-vision,NGO,1995,info@anandi-india.org,"Field level intervention, Women's Leadership Building, Campaigns and Networking and Feminist Research and Advocacy. ",Advocacy
 Gujarat,22.258652,71.1923805,22.058652,71.2923805,5,Lakshay Trust,http://www.lakshya-trust.org/who-we-are/about-lakshya,NGO,2000,lakshyatrustrajkot@yahoo.com,"HIV Aids Outreach Program, Distribution of IF, Condom Promotion, STI Care Health Camps, Counselling , Needs Assessment study",Advocacy
 Gujarat,22.258652,71.1923805,22.058652,71.3423805,6,Vikalp Women’s Group,https://vikalpwomensgroup.wordpress.com/,NGO,1996,vikalpwomensgroup@gmail.com,"Violence against women and access to justice- Women's Court, Sexuality- Crisis Intervention and shelter, Initiating meets with family, Exposure visits. Economic- Sakhi Sangathan groups, Micro Finance literacy.",Sexual Abuse Prevention
-Haryana,29.0587757,76.085601,29.0587757,76.085601,0,"Women's Studies Research centre, Kurukshetra University",https://www.kuk.ac.in/information.php?m=Yg==&L01_id=MTE=&L01_direction=H&L02_id=ODQ=,Academic/ Research centre,1989,chairperson.wsc@kuk.ac.in,"1. Master of Arts in Women's Studies
+Gujarat,22.258652,71.1923805,22.058652,71.3923805,7,Mahila Housing Trust,https://www.mahilahousingtrust.org,NGO,1994,info@mahilahsg.org,"Grassroots programs in habitat development, climate change resilience and participatory governance",Advocacy
+Haryana,29.0587757,76.085601,28.8587757,75.935601,0,"Women's Studies Research centre, Kurukshetra University",https://www.kuk.ac.in/information.php?m=Yg==&L01_id=MTE=&L01_direction=H&L02_id=ODQ=,Academic/ Research centre,1989,chairperson.wsc@kuk.ac.in,"1. Master of Arts in Women's Studies
 2. Post-graduate Diploma course in Women's Studies
 3. Gender equity awareness programs
 4. Seminars and conferences with a focus on gender sensitisation., sustainable development, and legal rights",Education
@@ -369,7 +370,7 @@ Haryana,29.0587757,76.085601,28.8587757,76.085601,3,"Centre for Studies in Gende
 6. Reading Group on issues concerning gender, sexuality, identity and activism.
 7. CSGS Specials: Film screanings, performance art, and other campaigns on issues of gender and sexuality. 8. Workshops on gender and sexuality",Research
 Haryana,29.0587757,76.085601,28.8587757,76.135601,4,"The Feminist Collective, Ashoka University",https://thefeministCollectiveashokau.wordpress.com/,Community Organisation,2018,feministCollective@ashoka.edu.in,Advocacy and campaigns for gender eqality,Advocacy
-Himachal Pradesh,31.1048294,77.1733901,31.1048294,77.1733901,0,"Centre for Women's Studies and Development, Himachal Pradesh University",https://hpuniv.ac.in/university-detail/home.php?women-studies-and-development,Academic/ Research centre,2001,cwsdhpus@gmail.com,"1. Workshops and programs with a focus on women, development, and health.
+Himachal Pradesh,31.1048294,77.1733901,30.9048294,77.0233901,0,"Centre for Women's Studies and Development, Himachal Pradesh University",https://hpuniv.ac.in/university-detail/home.php?women-studies-and-development,Academic/ Research centre,2001,cwsdhpus@gmail.com,"1. Workshops and programs with a focus on women, development, and health.
 2. Capacity building programs for women in management
 3. Seminars on gender based violence, child sexual abuse, and human rights
 4. Gender sensitisation campaigns, consumer awareness programs, and self-defence trainings
@@ -383,7 +384,7 @@ Himachal Pradesh,31.1048294,77.1733901,30.9048294,77.1733901,3,Sajhe Sapne,https
    1.1. Management and Rural Development Professional course
    1.2. Mathematics Educators Professional course
 2. Sapnewali: Podcast and a radio show on life and leadership lessons from women achievers in villages for women empowerment.",Women's rights
-J&K,33.277839,75.3412179,33.277839,75.3412179,0,"Centre for Women's Studies, University of Jammu",https://www.jammuuniversity.ac.in/cws/introduction,Academic/ Research centre,2005,0191 2435248 Ext. 2882,"1. Three months certificate course on gender issues, since 2006
+J&K,33.277839,75.3412179,33.077839,75.1912179,0,"Centre for Women's Studies, University of Jammu",https://www.jammuuniversity.ac.in/cws/introduction,Academic/ Research centre,2005,0191 2435248 Ext. 2882,"1. Three months certificate course on gender issues, since 2006
 2. Three months certificate course on women and law, since 2012
 3. Gender sensitisation workshops and seminars with a focus on gender equality and women's empowerment
 4.  Skill development training programs as part of capacty building
@@ -413,7 +414,7 @@ J&K,33.277839,75.3412179,33.077839,75.4912179,6,Sonzal Welfare Trust,https://www
 6. Aims to build Self Help Groups for the transgender community",Legal aid
 Jharkhand,23.6101808,85.2799354,23.6101808,85.2799354,0,LGBTQ Jamshedpur,https://www.instagram.com/jamshedpurpride/,Community Organisation,,,"1. Queer rights advocacy and support group
 2. Community building",Advocacy
-Karnataka,15.3172775,75.7138884,15.3172775,75.7138884,0,ALF (Alternative Law forum ),http://altlawforum.org/about/,Academic/ Research centre,2000,contact@altlawforum.org,"Advocacy and research in the field of law. Focus on Gender, sexuality, Media, Culture, Informal labour etc",Advocacy
+Karnataka,15.3172775,75.7138884,15.1172775,75.5638884,0,ALF (Alternative Law forum ),http://altlawforum.org/about/,Academic/ Research centre,2000,contact@altlawforum.org,"Advocacy and research in the field of law. Focus on Gender, sexuality, Media, Culture, Informal labour etc",Advocacy
 Karnataka,15.3172775,75.7138884,15.1172775,75.6138884,1,Ahalyabai Post Graduate Centre for Women's Studies Research and Extension,http://ka.kswu.ac.in/womenstudies,Academic/ Research centre,NA,dr.laxmi@yahoomail.com,"MA, Mphil and PhD in Women's Studies. Certificate Course in Women's Empowerment. ",Education
 Karnataka,15.3172775,75.7138884,15.1172775,75.6638884,2,Centre for Ideal Womanhood,http://ka.kswu.ac.in/womanhood,Academic/ Research centre,2013,drsowbhagya@gmail.com,"PG Diploma in Ideal Womanhood (1 year), Certificate Course in Geriatric care, Certificate Course in Parenting. ",Capacity Building
 Karnataka,15.3172775,75.7138884,15.1172775,75.7138884,3,"Centre for Women's Studies, Kuvempu University",http://www.kuvempu.ac.in/eng/women_study_center.php,Academic/ Research centre,2016,uccf@kuvempu.ac.in,"The Centre conducts seminars, workshops and Training on gender issues.",Gender Sensitisation
@@ -438,7 +439,7 @@ Karnataka,15.3172775,75.7138884,15.2172775,75.6138884,21,Hidden Pockets Collecti
 Karnataka,15.3172775,75.7138884,15.2172775,75.6638884,22,WHaQ! ,http://whaq.blogspot.com/,Service Provider,2014,whaqbangalore@gmail.com,"Support space for women loving women, includes meetings, social meetups and fitness groups",LGBTQ Rights
 Karnataka,15.3172775,75.7138884,15.2172775,75.7138884,23,Centre for Law and Policy Research,https://clpr.org.in/,Service Provider,2015,reachout@clpr.org.in,Focus on areas like 1.Constitutional Culture. 2.Governance Reform. 3. Disability Rights. 4. Gender and Sexuality. 5. Transgender rights. 6. Discrimination and intersectionality,Research
 Karnataka,15.3172775,75.7138884,15.2172775,75.7638884,24,Swabhava,http://swabhava.org/,Service Provider,1999,swabhavatrust@gmail.com,"Programs to enhance access to social, medical and legal support to LGBTQ people in Bangalore",LGBTQ Rights
-Kerala,10.8505159,76.2710833,10.8505159,76.2710833,0,"Women's Studies Centre , Cochin University of Science and Technolongy ",https://wsc.cusat.ac.in/,Academic/ Research centre,2010,wsc.cusat@gmail.com,"The Centre's primary engagement is organising conferences, Seminars, Workshops and other activities related to gender sensitization and awareness of gender related issues in the university",Gender Sensitisation
+Kerala,10.8505159,76.2710833,10.6505159,76.1210833,0,"Women's Studies Centre , Cochin University of Science and Technolongy ",https://wsc.cusat.ac.in/,Academic/ Research centre,2010,wsc.cusat@gmail.com,"The Centre's primary engagement is organising conferences, Seminars, Workshops and other activities related to gender sensitization and awareness of gender related issues in the university",Gender Sensitisation
 Kerala,10.8505159,76.2710833,10.6505159,76.1710833,1,"Department of Women's Studies, University of Calicut",https://womenstudies.uoc.ac.in/,Academic/ Research centre,2005,wshod@uoc.ac.in,"The Department offers MA, Mphil and Phd in women's Studies. ",Education
 Kerala,10.8505159,76.2710833,10.6505159,76.2210833,2,Thulyata Mahila Samajam,NA,NGO,1997,"thulyatamahilasamaj@gmail,com",NA,Self Help Groups
 Kerala,10.8505159,76.2710833,10.6505159,76.2710833,3,Anweshi Women's Counselling Centre,https://anweshi.org/,NGO,1993,info@anweshi.org,"1. Counseling and legal aid to abused and persecuted women. 2. Work with Kerala's acclaimed decentralized government bodies, 3. Short Stay homes. 4: Education and activism.",Advocacy
@@ -461,7 +462,7 @@ Kolkata,22.53673645,88.33402585,22.53673645,88.33402585,0,"Women's Studies Resea
 2. Doctor of Philosophy in Women's Studies
 3. Research work with a focus on gender, society, development, history, education, literature, and media studies
 4. Conferences, seminars, film screenings, consultation, and lectures on issues like women empowerment, disability studies, Convention on the Elimination of all forms of Discrimination Against Women (CEDAW), Gender and labour, and Gender Based Violence",Education
-Maharashtra,19.7514798,75.7138884,19.7514798,75.7138884,0,Krantijyoti Svitribai Phule Women's Studies Centre,http://www.unipune.ac.in/snc/womens_studies_centre/default.htm,Academic/ Research centre,1987,wsc@unipune.ac.in,"MA in Gender, Culture and Development Studies, Mphil in Gender/Women's Studies, Post Graduate Interdiscplinary Diploma in gender, Culture and Development , Post Graduate Interdiscplinary Certificate course in Women's Studies. Interdiscplinary Diploma in Gender",Education
+Maharashtra,19.7514798,75.7138884,19.5514798,75.5638884,0,Krantijyoti Svitribai Phule Women's Studies Centre,http://www.unipune.ac.in/snc/womens_studies_centre/default.htm,Academic/ Research centre,1987,wsc@unipune.ac.in,"MA in Gender, Culture and Development Studies, Mphil in Gender/Women's Studies, Post Graduate Interdiscplinary Diploma in gender, Culture and Development , Post Graduate Interdiscplinary Certificate course in Women's Studies. Interdiscplinary Diploma in Gender",Education
 Maharashtra,19.7514798,75.7138884,19.5514798,75.6138884,1,"Department of Gender and Women's Studies, Sant Gadge Baba Amravati University",https://www.sgbau.ac.in/departments/GenderAndWoman/Default.aspx,Academic/ Research centre,2010,reg@sgbau.ac.in,"MA in Gender and Women's Studies. Thrust areas of research include Gender and Higher education, Family, Kinship, Gender and Literature, Gender and Development",Education
 Maharashtra,19.7514798,75.7138884,19.5514798,75.6638884,2,"the Centre for Women's Studies and Development, RTM University",https://www.nagpuruniversity.ac.in/index.php/otherdepartment/Contentpage/index/Ri94bXErSUpWZjlQWlZYTzZ3PT0%3D/RlBrcXZ1cEdTZnhTWlZRPQ%3D%3D/en,Academic/ Research centre,2005,svdesh@gmail.com,1. PG Diploma in Women's Studies 2. Research projects to highlight women's issues,Education
 Maharashtra,19.7514798,75.7138884,19.5514798,75.7138884,3,SNDT Women's University ,https://sndt.ac.in/programmes/master-degree-courses/ma-in-womens-studies,Academic/ Research centre,,rcws@sndt.ac.in,"MA, PhD in Women's Studies",Education
@@ -548,7 +549,7 @@ Maharashtra,19.7514798,75.7138884,19.7014798,75.7138884,33,Lawyer's Collective,h
 5. Research, campaign and legal aid for Lesbian, Gay, Bisexual, and Transgender rights and the rights of sex workers",Legal Aid
 Maharashtra,19.7514798,75.7138884,19.7014798,75.7638884,34,Mariwala Health Initiative,https://mhi.org.in/,Service Provider,2015,contact@mariwalahealthinitiative.org,Mental Health and Suicide Prevention with an emphasis on Queer Affirmative Counselling Practice.,Mental Health
 Maharashtra,19.7514798,75.7138884,19.7014798,75.8138884,35,Human Rights Law Network ,https://2019.hrln.org/,Service Provider,1989,contact@hrln.org,"Anti trafficking and anti slavery initiative, Campaign against Acid Attack, Campaign against Sexual Harrasment, Childs right initiative, Covid19, Criminal Justice Initiative Right to food Initiative, Right to Education Initiative, Right to Education Initiative, Right to Reproductive rights initiative etc.",Sexual Abuse Prevention
-Manipur,24.6637173,93.9062688,24.6637173,93.9062688,0,"Women's Studies Centre, Manipur University",,Academic/ Research centre,,,"1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice
+Manipur,24.6637173,93.9062688,24.4637173,93.7562688,0,"Women's Studies Centre, Manipur University",,Academic/ Research centre,,,"1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice
 2. Research",Gender sensitisation
 Manipur,24.6637173,93.9062688,24.4637173,93.8062688,1,All Manipur Nupi Maanbi Association (AMANA),https://www.facebook.com/AMANAMANIPUR/,Non-profit Organisation,,nupimanbi@gmail.com,"1. Advocacy and campaigns for the rights of Transgender people
 2. Gender Sensitisation programs
@@ -573,16 +574,16 @@ Manipur,24.6637173,93.9062688,24.4637173,94.0562688,6,Empowering Trans Ability (
 Manipur,24.6637173,93.9062688,24.4637173,94.1062688,7,All Trans Man Association (ATMA),https://www.facebook.com/Pinlaishram/?ref=page_internal,Service Provider,,atmamanipurtransman@gmail.com,"1. Organisational support and crisis intervention for transmen
 2. Advocacy for the legal, medical, social, and educational rights of the queer community
 3. Awareness campaigns and training programs on legal rights",Advocacy
-Mehgalaya,25.4670308,91.366216,25.4670308,91.366216,0,Shamakami,https://www.facebook.com/Shamakami-Lam-Jingshai-176022939104547/,Community Organisation,,lamjingshai_2010@yahoo.com,"1. Support and relief work for MSM (Men who have sex with men), Transgender persons, and FSW (Female Sex Worker)
+Mehgalaya,25.4670308,91.366216,25.2670308,91.216216,0,Shamakami,https://www.facebook.com/Shamakami-Lam-Jingshai-176022939104547/,Community Organisation,,lamjingshai_2010@yahoo.com,"1. Support and relief work for MSM (Men who have sex with men), Transgender persons, and FSW (Female Sex Worker)
 2. Advocacy for the legal, medical, social, and educational rights of the queer community",Support services
 Mehgalaya,25.4670308,91.366216,25.2670308,91.266216,1,LGBTQIA Shillong,https://shillonglgbtqia.wordpress.com/,Community Organisation,,shillong.lgbtq@gmail.com,"1. Documentation and archival of LGBTQIA [plus] narratives.
 2. Advocacy, meet-ups and discussions for the rights of LGBTQIA [plus] identifying persons.",Advocacy
 Mizoram,23.164543,92.9375739,23.164543,92.9375739,0,Lonestar Society,https://www.facebook.com/Lonestar-Society-Mizoram-104547524269789/,Non-profit Organisation,,,"1. Advocacy for the rights of Gender and sexual minorities (GSM)
 2. Sensitisation programs and workshops",LGBTQ rights
-MP,22.9734229,78.6568942,22.9734229,78.6568942,0,"Women's Studies Department, Barkatullah Vishwavidyalaya",http://www.bubhopal.ac.in/1155/Women-Studies,Academic/ Research centre,,,Mphil in Women's Studies. Certificate Course in Old Age Care.,Education
+MP,22.9734229,78.6568942,22.7734229,78.5068942,0,"Women's Studies Department, Barkatullah Vishwavidyalaya",http://www.bubhopal.ac.in/1155/Women-Studies,Academic/ Research centre,,,Mphil in Women's Studies. Certificate Course in Old Age Care.,Education
 MP,22.9734229,78.6568942,22.7734229,78.5568942,1,Vanangana ,https://bundelkhand.in/vanangna,Community Organisation,2003,05198- 233731,1. Creating platforms that allow women to come together. 2. Centering the voices of dalit bahujan and adivasi women in community and civic affairs. 3. Ensuring implementation of state programs. ,Advocacy
 Mumbai,19.0759837,72.8776559,19.0759837,72.8776559,0,Vacha: Voices of Women & Girls ,https://vacha.org.in/,NGO,1987,communications@vacha.org.in,1.Girls' Resource centre: Organizing resource centre dor adolescent girls in their bastis for skill and personality development. 2. Youth Empowerment : Enhanced participation of youth in community life by increased social awareness and capacity building 3. Research and Training 4. Awareness Building: Adressing issues affecting girls right and  help increase their particpation in community and civic affairs.  ,Capacity Building
-Nagaland,26.1584354,94.5624426,26.1584354,94.5624426,0,"Women Studies Centre, Nagaland University",https://www.kohima.nagalanduniversity.ac.in/women,Academic/ Research centre,2007,nuwsckma@nagalanduniversity.ac.in,"1. Research work, documentation, and archival with a focus on women and literacy, customary laws,  women's rights and development, and Violence Against Women
+Nagaland,26.1584354,94.5624426,25.9584354,94.4124426,0,"Women Studies Centre, Nagaland University",https://www.kohima.nagalanduniversity.ac.in/women,Academic/ Research centre,2007,nuwsckma@nagalanduniversity.ac.in,"1. Research work, documentation, and archival with a focus on women and literacy, customary laws,  women's rights and development, and Violence Against Women
 2. Gender sensitisation programs, capacity building skill development trainings, and programs on women's rights
 3. Translations into regional dialects and disseminations of  women's rights documents",Research
 Nagaland,26.1584354,94.5624426,25.9584354,94.4624426,1,God is Love Ministry,https://www.facebook.com/godnl7/,Community Organisation,,nagaland.godislove@gmail.com,"1. Advocacy for the rights of LGBTQIA [plus] individuals
@@ -603,7 +604,7 @@ New Delhi,28.6139391,77.2090212,28.6139391,77.2090212,0,Centre for Women's Devel
 Pitampura,28.69032276,77.13441996,28.69032276,77.13441996,0,Association for Transgender Health in India,https://www.athionline.com/,Non-profit Organisation,2018,write2athi@gmail.com,"1. Gender Friendly Healthcare Facility Initiative: Online certification course on Demystifying Gender, Orientation, Incongruence and Diversity, and related issues for healthcare providers and staff of healthcare facilities
 2. Gender Friendly Educational Institution Initiative: Certificate course on Gender, Gender In-congruence, sexual orientation and diversity for educationists, teachers, parents, and social workers/scientists.
 3. Indian Professional Association for Transgender Health: Professional arm of ATHI conducts conferences with the aim of Knowledge, Health, Empowerment and Mainstreaming transgender healthcare",Education
-Punjab,31.1471305,75.3412179,31.1471305,75.3412179,0,"Women's Studies Centre, Punjabi University",http://www.punjabiuniversity.ac.in/pages/Department.aspx?dsenc=94,Academic/ Research centre,2009,director@wscpedia.org,"1. Master of Arts in Women's Studies
+Punjab,31.1471305,75.3412179,30.9471305,75.1912179,0,"Women's Studies Centre, Punjabi University",http://www.punjabiuniversity.ac.in/pages/Department.aspx?dsenc=94,Academic/ Research centre,2009,director@wscpedia.org,"1. Master of Arts in Women's Studies
 2. Post-graduate diploma in Women and Child Development
 3. Post-graduate diploma in Gender Studies",Education
 Punjab,31.1471305,75.3412179,30.9471305,75.2412179,1,Mansa Foundation,https://www.facebook.com/mansafoundation2012,Community Organisation,2013,pehchan.mansa@gmail.com,Support and welfare services for the transgender community in Firozpur,Support services
@@ -611,7 +612,7 @@ Punjab,31.1471305,75.3412179,30.9471305,75.2912179,2,Saksham Trust,https://www.f
 2. Awareness programs on STI and STDs",HIV/AIDS prevention
 Punjab,31.1471305,75.3412179,30.9471305,75.3412179,3,Kashish Foundation,https://www.facebook.com/Kashish-Foundation-563136950369045/,Non-profit Organisation,,pehchan.kashish@gmail.com,"1. Targeted intervention for HIV and STI prevention and safe sex practices with MSM, Transgender people, and Hijra communities
 2. Advocacy and campaigns for human rights and Health education ",HIV/AIDS prevention
-Rajasthan,27.0238036,74.2179326,27.0238036,74.2179326,0,"Women's Studies Centre, Banasthali Vidyapith",http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/faculties/social-science/sociology/womenstudycentre.html,Academic/ Research centre,2005,wsrc.bv@gmail.com,"1. Post-graduate diploma in Women and Human Rights
+Rajasthan,27.0238036,74.2179326,26.8238036,74.0679326,0,"Women's Studies Centre, Banasthali Vidyapith",http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/faculties/social-science/sociology/womenstudycentre.html,Academic/ Research centre,2005,wsrc.bv@gmail.com,"1. Post-graduate diploma in Women and Human Rights
 2. Women Empowerment course under Master of Social Work
 3. Foundation course for undergraduate students, titled Women in Indian Society
 4. Compulsory interdisciplinary paper for postgraduate students, titled Women Studies
@@ -656,7 +657,7 @@ Santiniketan,22.9867569,87.8549755,22.9867569,87.8549755,0,"Centre for Women's S
 2. Research work, public lectures, and workshops on Gender sensitisation and awareness on Violence Against Women
 3. Extention programs with other organisations on women's issues",Education
 Sikkim,27.5329718,88.5122178,27.5329718,88.5122178,0,Rainbow Hills Association,https://www.facebook.com/RainbowHillsAssociation/,Community Organisation,,rainbowhills19@gmail.com,Advocacy and campaigns for queer rights,LGBTQ rights
-Tamil Nadu,11.1271225,78.6568942,11.1271225,78.6568942,0,Madras Institute of Development Studies ,https://www.mids.ac.in/,Academic/ Research centre,1977,office@mids.ac.in,"MIDS offers Doctoral Programs. The areas primary areas of research are as follows, 1. Economic Modelling and Public Finance
+Tamil Nadu,11.1271225,78.6568942,10.9271225,78.5068942,0,Madras Institute of Development Studies ,https://www.mids.ac.in/,Academic/ Research centre,1977,office@mids.ac.in,"MIDS offers Doctoral Programs. The areas primary areas of research are as follows, 1. Economic Modelling and Public Finance
 2. Employment, Skill Formation and Labour Markets
 3. Natural Resources, Ecology: Economics and Political Economy
 4. Poverty, Inequality and Discrimination
@@ -695,7 +696,7 @@ Treatment and care
 Psychoeducation
 Health Camp
 Nutrition and Diet ",Support Services
-Telangana,18.1124372,79.0192997,18.1124372,79.0192997,0,Anveshi: Research centre for Women's Studies,https://www.anveshi.org.in/,Academic/ Research centre,1985,91 40 27153690,"They have offered short courses on introduction to Women's studies and Queer Studies. Thrust areas of research include 1.Dalit Studies
+Telangana,18.1124372,79.0192997,17.9124372,78.8692997,0,Anveshi: Research centre for Women's Studies,https://www.anveshi.org.in/,Academic/ Research centre,1985,91 40 27153690,"They have offered short courses on introduction to Women's studies and Queer Studies. Thrust areas of research include 1.Dalit Studies
 2. Minorities Studies
 3. Health and Health Care Systems
 4. Migration and Urban Spaces
@@ -735,7 +736,7 @@ Tirupati,13.6198594,79.39890286,13.6198594,79.39890286,0,"Department of Women's 
 Tripura,23.9408482,91.9881527,23.9408482,91.9881527,0,"Women's Studies Centre, Tripura University",tripurauniv.ac.in/Page/WomenStudyCentre,Academic/ Research centre,2006,0381-2379135 (O),"1. Post-graduate diploma course on Women's Studies
 2. Research, documentation, and seminars of women's narratives, Violence Against Women, and Women's Rights, Women and Health and Gender Empowerment
 3. Advocacy and awareness campaigns on gender sensitisation, women's rights, and skill development training programs for women",Education
-Uttar Pradesh,26.8467088,80.9461592,26.8467088,80.9461592,0,"Institute of Women's Studies, University of Lucknow",https://udrc.lkouniv.ac.in/Department/DepartmentDetail/History?dept=47&cd=MwAxADAA,Academic/ Research centre,1997,archana.kshitish@gmail.com,"1. Master of Arts in Women's Studies
+Uttar Pradesh,26.8467088,80.9461592,26.6467088,80.7961592,0,"Institute of Women's Studies, University of Lucknow",https://udrc.lkouniv.ac.in/Department/DepartmentDetail/History?dept=47&cd=MwAxADAA,Academic/ Research centre,1997,archana.kshitish@gmail.com,"1. Master of Arts in Women's Studies
 2. Post-graduate diploma in garbh sanskar with a focus on pregnancy, pre and post natal care, diet yoga, human physiology, and issues related to couplehood and family
 3. Six months certificate course in Garbh Sanskar
 4. Capacity building training programs, gender sensitisation workshops, campaigns and awareness programs on gender and development
@@ -761,7 +762,7 @@ Uttar Pradesh,23.6101808,85.2799354,23.6101808,85.2799354,0,Forum to Engage Men 
 2. Community campaigns against Violence against Women, child abuse and gender-based discrimination
 3. Outreach programs and public events advocating greater participation of men for eradication of discrimination
 4. Partners include MASVAW (Men’s Action for Stopping Violence against Women) in Uttar Pradesh, Bapanchi Shala (School for Fathers) in Maharashtra, Men’s Action for Equity (MAE) in Madhya Pradesh, FEM- Jharkhand in Jharkhand, and some LGBTQ rights groups",Advocacy
-Uttar Pradesh,26.8467088,80.9461592,26.8467088,80.9461592,0,The YP Foundation,https://theypfoundation.org/,Community Organisation,2002,info@theypfoundation.org,"1. Feminist and Adolescent Youth-led Action: Comprehensive Sexuality Education (CSE) and Sexual and Reproductive Health and Rights (SRHR) awareness program 
+Uttar Pradesh,26.8467088,80.9461592,26.6467088,80.7961592,0,The YP Foundation,https://theypfoundation.org/,Community Organisation,2002,info@theypfoundation.org,"1. Feminist and Adolescent Youth-led Action: Comprehensive Sexuality Education (CSE) and Sexual and Reproductive Health and Rights (SRHR) awareness program 
 2. Know Your Body, Know Your Rights: CSE on issues of health, sexuality and human rights
 3. Learning Communities: Adolescent Girls' Leadership program
 4. Mardon Wali Baat: systematic reflection, dialogue, and action around masculinity and Gender Based Violence (GBV)
@@ -786,12 +787,12 @@ Uttar Pradesh,26.8467088,80.9461592,26.6467088,81.0961592,6,Led By Foundation,ht
 3. Capacity building events and workshops for Indian Muslim Women on professional development and leadership",Education
 Uttar Pradesh,26.8467088,80.9461592,26.6467088,81.1461592,7,Bharosa Trust,,Non-profit Organisation,2000,,"1. Targeted intervention for Men who have Sex with Men (MSM) on safe sex practices and HIV and STI prevention 
 2. Campaigns with special focus on Human Rights and Health Education",HIV/AIDS prevention
-Uttarakhand,30.066753,79.0192997,30.066753,79.0192997,0,"Women Studies Centre, Hemvati Nandan Bahuguna Garhwal University",https://www.facebook.com/bourai123/      http://www.hnbgu.ac.in/,Academic/ Research centre,,himanshubourai@yahoo.com,"1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice
+Uttarakhand,30.066753,79.0192997,29.866753,78.8692997,0,"Women Studies Centre, Hemvati Nandan Bahuguna Garhwal University",https://www.facebook.com/bourai123/      http://www.hnbgu.ac.in/,Academic/ Research centre,,himanshubourai@yahoo.com,"1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice
 2. Research",Education
 Uttarakhand,30.066753,79.0192997,29.866753,78.9192997,1,"Qagaar: Queer and Gender Support group, IIT Roorkie",https://www.facebook.com/lookovertherainbows/,Community Organisation,2013?,iitrqagaar@gmail.com,Advocacy and campaigns for queer rights,Advocacy
 Uttarakhand,30.066753,79.0192997,29.866753,78.9692997,2,Queer Collective Dehradun,https://www.instagram.com/queerCollectivedehradun/,Community Organisation,2017,queerCollectivedehradun@gmail.com,"1. Queer advocacy and support group
 2. Community building",Advocacy
-West Bengal,22.9867569,87.8549755,22.9867569,87.8549755,0,"School Of Women's Studies, Jadavpur University",http://www.jaduniv.edu.in/view_department.php?deptid=150,Academic/ Research centre,1988,"2414-6531 (D), 2414-6666 (O) Extn.2445","1. Master of Philosophy in Women's Studies
+West Bengal,22.9867569,87.8549755,22.7867569,87.7049755,0,"School Of Women's Studies, Jadavpur University",http://www.jaduniv.edu.in/view_department.php?deptid=150,Academic/ Research centre,1988,"2414-6531 (D), 2414-6666 (O) Extn.2445","1. Master of Philosophy in Women's Studies
 2. Research work with a focus on visibilising women, gender justice, and other issues
 3. Gender sensitisation programs",Education
 West Bengal,22.9867569,87.8549755,22.7867569,87.7549755,1,"Centre for Women's Studies, Raiganj University",https://raiganjuniversity.ac.in/centre-for-womens-studies-cws/,Academic/ Research centre,,Dr. Sanjukta Chatterjee,"1. Research, workshops, and lectures with a focus on gender sensitisation, addresing Violence Against Women, and Sexual Harassment at the Workplace

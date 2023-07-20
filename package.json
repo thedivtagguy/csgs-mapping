@@ -65,7 +65,7 @@
     "@lottiefiles/svelte-lottie-player": "^0.2.0",
     "@sveltejs/pancake": "^0.0.18",
     "algoliasearch": "^4.13.1",
-    "colorthief": "^2.3.2",
+    "colorthief": "^2.2.0",
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
     "csv": "^6.1.0",

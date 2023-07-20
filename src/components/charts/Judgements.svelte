@@ -110,10 +110,14 @@
         </svg>
       </div>
       <div class = "blobs">
-        <svg width="8" height="8" viewBox="-159 -161 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="2" height="71" viewBox="-162 -88 2 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.999744 0L1 71" stroke="black" stroke-opacity="0.8"/>
+          </svg>
+        <svg width="8" height="8" viewBox="-159 -88 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.95707 2.99209C5.95707 4.6418 4.57092 6.22526 2.9143 5.9735C1.96766 5.82774 0 4.72131 0 3.07159C0 1.42188 1.23739 -0.0886942 2.9143 0.00406065C6.59944 0.216072 5.95707 2.3163 5.95707 2.99209Z" fill="#F67C87"/>
           </svg>
           
+            
           
       </div>
       <div class="button">
@@ -156,20 +160,35 @@
     z-index: 1;
   }
   .button:hover {
-    -ms-transform: scale(1.1em);
-    -webkit-transform: scale(1.1);
-    tansform: scale(1.1);
+    -ms-transform: scale(1.05em);
+    -webkit-transform: scale(1.05);
+    tansform: scale(1.05);
+  }
+  .button object:hover{
+    filter: 
+    drop-shadow(-1px -1px 0px #3a3a3a) 
+    drop-shadow(1px -1px 0px #3a3a3a) 
+    drop-shadow(1px 1px 0px #3a3a3a)
+    drop-shadow(-1px 1px 0px #3a3a3a)
   }
   .time_Line {
     position: absolute;
     z-index: -1;
   }
   .button {
+    position: absolute;
+    
+  left: 55px;
+  top: 315px;
+    display:inline-flex;
+    flex-direction: column;
+    
+    
     z-index: 13;
-    position:absolute;
-    width: 5.9375rem;
-    height: 1.4375rem;
-    flex-shrink: 0;
+    
+    width: 13.9375rem;
+    height: 5.4375rem;
+    flex-shrink: 1;
     color: #3a3a3a;
     text-align: center;
     font-family: Roboto;

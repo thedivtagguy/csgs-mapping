@@ -55,6 +55,9 @@
                   {#if data.publisher}
                   <p class="font-light text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
+                  {#if data.court}
+                  <p class="font-light text-gray-700 text-sm">Court: <span class="font-normal">{data.publisher}</span></p>
+                  {/if}
                   {#if data.producedBy}
                   <p class="font-light text-gray-700 text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
                   {/if}

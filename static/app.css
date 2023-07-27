@@ -979,6 +979,9 @@ html {
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: -webkit-box;
   display: flex;
@@ -1414,11 +1417,11 @@ html {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-none {
-  line-height: 1;
-}
 .leading-4 {
   line-height: 1rem;
+}
+.leading-none {
+  line-height: 1;
 }
 .tracking-wide {
   letter-spacing: 0.025em;

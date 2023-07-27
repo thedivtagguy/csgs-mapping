@@ -1,28 +1,27 @@
 <script>
-  
+  import ModalOpen from "../modal/ModalOpen.svelte";
   export let title = "";
-  
+  let modal;
+  export let dataset = [];
+  export let id = ""; // ID prefix of the chart
+  export let sortBy = "year"; // What do we want to sort by?
+  export let modalContent;
 </script>
 
 <main>
-
-
   <section>
     <div class="container">
-      <h1 class="text-4xl uppercase font-bold">{title}</h1>
-      <p class="text-gray-700 py-4 text-sm font-medium">
-        Click on {title} to know more
-      </p>
-      <div class="time_Line">
-        <svg
-          width="4094"
-          height="734"
-          viewBox="0 0 4094 734"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      <div class="heading">
+        <h1 class="text-4xl px-10 uppercase font-bold">{title}</h1>
+        <p class="text-gray-700 py-4 px-10 text-sm font-medium">
+          Click on {title} to know more
+        </p>
+      </div>
+      
+          <div class = "timelines">
+            <svg>
           <line
-            id="Line 1"
+            
             x1="8"
             y1="734"
             x2="8"
@@ -32,7 +31,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 2"
+            
             x1="71"
             y1="734"
             x2="71"
@@ -42,7 +41,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 3"
+            
             x1="141"
             y1="734"
             x2="141"
@@ -52,7 +51,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 4"
+            
             x1="358"
             y1="734"
             x2="358"
@@ -62,7 +61,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 5"
+            
             x1="782"
             y1="734"
             x2="782"
@@ -72,7 +71,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 6"
+            
             x1="1499"
             y1="734"
             x2="1499"
@@ -82,7 +81,7 @@
             stroke-dasharray="6 6"
           />
           <line
-            id="Line 7"
+            
             x1="3102"
             y1="734"
             x2="3102"
@@ -92,8 +91,10 @@
             stroke-dasharray="6 6"
           />
         </svg>
+        
       </div>
       
+
       <div class="curvy_Line">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -109,22 +110,42 @@
           />
         </svg>
       </div>
-      <div class = "blobs">
-        <svg width="2" height="71" viewBox="-162 -88 2 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.999744 0L1 71" stroke="black" stroke-opacity="0.8"/>
-          </svg>
-        <svg width="8" height="8" viewBox="-159 -88 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.95707 2.99209C5.95707 4.6418 4.57092 6.22526 2.9143 5.9735C1.96766 5.82774 0 4.72131 0 3.07159C0 1.42188 1.23739 -0.0886942 2.9143 0.00406065C6.59944 0.216072 5.95707 2.3163 5.95707 2.99209Z" fill="#F67C87"/>
-          </svg>
-          
-            
-          
+
+      <div class="blobs">
+        <svg
+          width="2"
+          height="71"
+          viewBox="-162 -88 2 71"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0.999744 0L1 71" stroke="black" stroke-opacity="0.8" />
+        </svg>
+        <svg
+          width="8"
+          height="8"
+          viewBox="-159 -88 8 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.95707 2.99209C5.95707 4.6418 4.57092 6.22526 2.9143 5.9735C1.96766 5.82774 0 4.72131 0 3.07159C0 1.42188 1.23739 -0.0886942 2.9143 0.00406065C6.59944 0.216072 5.95707 2.3163 5.95707 2.99209Z"
+            fill="#F67C87"
+          />
+        </svg>
+
       </div>
-      <div class="button">
+      <div class="button button1">
         <!-- svelte-ignore a11y-missing-attribute -->
 
-        <object id="SC" data="/assets/SC.svg" />
-        <p class = "leading-4 text-sm">Tuka Ram And Anr vs State of Maharashtra</p>
+        <object class ="Punjab_Haryana1" data="/assets/Punjab_Haryana.svg" />
+        <p class="leading-4 text-sm">Tirath Kaur vs Kirpal Singh</p>
+      </div>
+      <div class="button button2">
+        <!-- svelte-ignore a11y-missing-attribute -->
+
+        <object class="SC1" data="/assets/SC.svg" />
+        <p class="leading-4 text-sm">Tuka Ram And Anr vs State of Maharashtra</p>
       </div>
 
       
@@ -132,68 +153,73 @@
   </section>
 </main>
 
+
 <style>
-  main {
-    overflow-x: auto;
-    overflow-y: auto;
-  }
-  body {
-    display: grid;
-  }
+  
+  
   .container {
+    
     width: 5000px;
-    height: 900px;
+    height: 700px;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(63, 80px);
+    grid-template-rows: repeat(9, 80px);
+    overflow-y: scroll;
   }
-  .blobs{
+  .heading{
+    grid-area: 1/ 1/ 3/ 50;
+    z-index: 10;
+
+  }
+  .blobs {
     z-index: 4;
+    grid-area: 3/1/4/1;
+  }
+
+  .timelines{
+    
+    grid-area: 2/ 1/ 8/ 53;
+    z-index: 1;
+    
   }
   svg {
     display: block;
     overflow: visible;
   }
-  section {
-    width: 100rem;
-    display: flex;
+
+.button1{
+  grid-area: 4/1/4/1;
+  }
+  .button2{
+  grid-area: 4/3/5/4;
   }
   .curvy_Line {
     z-index: 1;
+    grid-row-start: 1;
+    grid-column-start: 1;
   }
   .button:hover {
-    -ms-transform: scale(1.05em);
-    -webkit-transform: scale(1.05);
-    tansform: scale(1.05);
+    -ms-transform: scale(1.1em);
+    -webkit-transform: scale(1.1);
+    tansform: scale(1.1);
   }
-  .button object:hover{
-    filter: 
-    drop-shadow(-1px -1px 0px #3a3a3a) 
-    drop-shadow(1px -1px 0px #3a3a3a) 
-    drop-shadow(1px 1px 0px #3a3a3a)
-    drop-shadow(-1px 1px 0px #3a3a3a)
+  .button object:hover {
+    filter: drop-shadow(-1px -1px 0px #3a3a3a) drop-shadow(1px -1px 0px #3a3a3a)
+      drop-shadow(1px 1px 0px #3a3a3a) drop-shadow(-1px 1px 0px #3a3a3a);
   }
-  .time_Line {
-    position: absolute;
-    z-index: -1;
-  }
+  
   .button {
-    position: absolute;
-    
-  left: 55px;
-  top: 315px;
-    display:inline-flex;
-    flex-direction: column;
-    
-    
     z-index: 13;
-    
-    width: 13.9375rem;
-    height: 5.4375rem;
-    flex-shrink: 1;
     color: #3a3a3a;
     text-align: center;
     font-family: Roboto;
     font-size: 12px;
     line-height: 0.6rem;
     font-weight: 400;
+  }
+  .button object{
+    display: inline;
+    vertical-align: middle;
   }
 </style>

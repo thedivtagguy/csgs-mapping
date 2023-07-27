@@ -113,7 +113,7 @@
     color: #3a3a3a;
     text-align: center;
     font-family: Roboto;
-    font-size: 10px;
+    font-size: 9px;
     line-height: 0.6rem;
     font-weight: 400;
   }

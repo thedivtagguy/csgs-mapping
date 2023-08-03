@@ -39,14 +39,16 @@
                   {data[modalContent.label]}
                  </span>
                 {/if}
+                
               </div>
-                <div class="my-2 px-4  flex flex-col justify-start items-start">
+                <div class="my-2 px-4  flex columns-2 justify-start items-start">
                   {#if data.author}
                   <p class="font-light text-gray-700 text-sm">Author: <span class="font-normal">{data.author}</span></p>
                   {/if}
                   {#if data.director}
                   <p class="font-light text-gray-700 text-sm">Director: <span class="font-normal">{data.director}</span></p>
                   {/if}
+                  
                   {#if id == 'publications'}
                   <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
                   {:else}
@@ -55,6 +57,7 @@
                   {#if data.publisher}
                   <p class="font-light text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
+                  
                   {#if data.court}
                   <p class="font-light text-gray-700 text-sm">Court: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
@@ -67,6 +70,9 @@
                   {#if data[modalContent.contact]}
                   <p class="font-light text-gray-700 text-sm">Contact:
                     <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
+                  {/if}
+                  {#if data.asset}
+                  <img class="object-contain h-32 w-32 object-right justify-end" src = {data.asset}>
                   {/if}
                   
                 </div>

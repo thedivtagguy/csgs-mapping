@@ -96,15 +96,17 @@
     </section>
     <section id="judgements">
         <Judgements 
-        dataset = {judge}
+        
         modalContent={{
             label: "court",
             title: "judgement",
             year: "year",
+            asset: "asset"
             
         }}
         id="judgements"
         title="judgements"
+        dataset={judge}
         />
     </section>
 </div>

@@ -1,11 +1,15 @@
 <script>
   import ModalOpen from "../modal/ModalOpen.svelte";
-  export let title = "";
+  import judgements from "$data/indices/judgements.csv.json";
+
   let modal;
-  export let dataset = [];
+
+  export let title = "";
   export let id = ""; // ID prefix of the chart
-  export let sortBy = "year"; // What do we want to sort by?
   export let modalContent;
+  export let dataset = [];
+  let data2 = Object.values(judgements);
+  console.log(data2);
 </script>
 
 <main>
@@ -21,32 +25,38 @@
       <div class="background-Lines">
         <object class="background_lines" data="/assets/lines.svg" />
       </div>
-
-      <div class="button button1">
-        <object class="Punjab_Haryana1" data="/assets/Punjab_Haryana.svg" />
+      
+      <button class="button button1"  on:click={()=> {
+        modal.handleOpen(data2[0], modalContent, id);
+      }}>
+               
+      
+        <img class="Punjab_Haryana1" src="/assets/Punjab_Haryana.svg" />
         <p class="leading-4 text-sm">Tirath Kaur vs Kirpal Singh</p>
-      </div>
+       
+      </button>
 
       <div class="button button2">
-        <object class="SC1" data="/assets/SC.svg" />
+        <img class="SC1" src="/assets/SC.svg" />
         <p class="leading-4 text-sm">Tuka Ram And Anr vs State of Maharashtra</p>
       </div>
 
       <div class="button button3">
-        <object class="SC2" data="/assets/SC.svg" />
+        <img class="SC2" src="/assets/SC.svg" />
         <p class="leading-4 text-sm">Fazal Rab Choudhary vs State of Bihar</p>
       </div>
 
       <div class="button button4">
-        <object class="Punjab_Haryana2" data="/assets/Punjab_Haryana.svg" />
+        <img class="Punjab_Haryana2" src="/assets/Punjab_Haryana.svg" />
         <p class="leading-4 text-sm">Smt Harvinder Kaur vs Harmander Singh Choudhry</p>
       </div>
       <div class="button button5">
-        <object class="APHC1" data="/assets/AP HC.svg" />
+        <img class="APHC1" src="/assets/AP HC.svg" />
         <p class="leading-4 text-sm">T Sareetha vs Venkata Subbaiah</p>
       </div>
     </div>
   </section>
+  <ModalOpen bind:this={modal} />
 </main>
 
 <style>
@@ -84,7 +94,7 @@
 
   .button4 {
     padding-top: 20px;
-  padding-left: 25px;
+    padding-left: 25px;
     grid-area: 2/3/2/5;
   }
 
@@ -102,22 +112,23 @@
     -ms-transform: scale(1.1em);
     -webkit-transform: scale(1.1);
     tansform: scale(1.1);
+    font-weight: 500;
   }
-  /*.button object:hover {
+  .button img:hover {
     filter: drop-shadow(-1px -1px 0px #3a3a3a) drop-shadow(1px -1px 0px #3a3a3a)
       drop-shadow(1px 1px 0px #3a3a3a) drop-shadow(-1px 1px 0px #3a3a3a);
-  }*/
+  }
 
   .button {
     z-index: 13;
     color: #3a3a3a;
     text-align: center;
     font-family: Roboto;
-    font-size: 9px;
+    font-size: 8px;
     line-height: 0.6rem;
     font-weight: 400;
   }
-  .button object {
+  .button img {
     display: inline;
     vertical-align: middle;
   }

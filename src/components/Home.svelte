@@ -101,7 +101,8 @@
             label: "court",
             title: "judgement",
             year: "year",
-            asset: "asset"
+            asset: "asset", 
+            
             
         }}
         id="judgements"

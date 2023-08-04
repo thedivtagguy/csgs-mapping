@@ -41,15 +41,15 @@
                 {/if}
                 
               </div>
-                <div class="my-2 px-4  flex-columns justify-start items-start">
+                <div class="my-2 px-4 py-1 grid grid-cols-1 gap-4">
                   {#if data.asset}
-                  <img class="inline object-contain align-middle h-32 w-32 px-50" src = {data.asset}>
+                  <img class=" h-48 place-self-center" src = {data.asset}>
                   {/if}
                   {#if data.author}
                   <p class="font-light text-gray-700 text-sm">Author: <span class="font-normal">{data.author}</span></p>
                   {/if}
                   {#if data.description}
-                  <p class="font-light text-gray-700 text-sm">About: <span class="font-normal">{data.description}</span></p>
+                  <p class="font-light text-gray-700 text-sm"><span class="font-normal">{data.description}</span></p>
                   {/if}
                   {#if data.director}
                   <p class="font-light text-gray-700 text-sm">Director: <span class="font-normal">{data.director}</span></p>

@@ -216,10 +216,28 @@
         <p class="leading-3 text-xs py-1">Anuj Garg & Ors vs Hotel Association Of India & Ors</p>
       </button>
       <button class="button button30" on:click={()=> {
-        modal.handleOpen(data2[28], modalContent, id);
+        modal.handleOpen(data2[29], modalContent, id);
       }}>
         <img src="/assets/Madras HC.svg" />
         <p class="leading-3 text-xs py-1">S.Khusboo vs Kanniammal </p>
+      </button>
+      <button class="button button31" on:click={()=> {
+        modal.handleOpen(data2[30], modalContent, id);
+      }}>
+        <img src="/assets/Madras HC.svg" />
+        <p class="leading-3 text-xs py-1">National Insurance Co Ltd v Minor Deepika </p>
+      </button>
+      <button class="button button32" on:click={()=> {
+        modal.handleOpen(data2[30], modalContent, id);
+      }}>
+        <img src="/assets/Delhi HC.svg" />
+        <p class="leading-3 text-xs py-1">Prof Bidyug Chakraborty vs Delhi University & Ors</p>
+      </button>
+      <button class="button button33" on:click={()=> {
+        modal.handleOpen(data2[31], modalContent, id);
+      }}>
+        <img src="/assets/Delhi HC.svg" />
+        <p class="leading-3 text-xs py-1">Naz Foundation vs Government Of Nct Of Delhi</p>
       </button>
 
     </div>
@@ -378,6 +396,20 @@ padding-top: 15px;
   padding-left: 35px;
   padding-top: 25px;
     grid-area: 4/26/7/29;
+ }
+ .button31 {
+  
+    grid-area: 2/28/4/31;
+ }
+ .button32 {
+  padding-top: 20px;
+  padding-right: 40px;
+    grid-area: 11/27/14/30;
+ }
+ .button33 {
+  padding-right: 10px;
+  padding-top: 20px;
+        grid-area: 13/28/15/31;
  }
 
   .background-Lines {

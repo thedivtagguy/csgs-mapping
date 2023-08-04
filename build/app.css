@@ -790,9 +790,6 @@ html {
 .inline-block {
   display: inline-block;
 }
-.inline {
-  display: inline;
-}
 .flex {
   display: -webkit-box;
   display: flex;
@@ -954,6 +951,9 @@ html {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.place-self-center {
+  place-self: center;
+}
 .justify-self-end {
   justify-self: end;
 }
@@ -1055,10 +1055,6 @@ html {
 .bg-\[color\:\#f1efe2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(241 239 226 / var(--tw-bg-opacity));
-}
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .p-4 {
   padding: 1rem;
@@ -1176,9 +1172,6 @@ html {
 .text-right {
   text-align: right;
 }
-.align-middle {
-  vertical-align: middle;
-}
 .font-sans {
   font-family: Roboto, sans-serif;
 }
@@ -1238,8 +1231,8 @@ html {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-4 {
-  line-height: 1rem;
+.leading-3 {
+  line-height: .75rem;
 }
 .leading-none {
   line-height: 1;

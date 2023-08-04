@@ -9,7 +9,7 @@
   export let modalContent;
   export let dataset = [];
   let data2 = Object.values(judgements);
-  console.log(data2);
+
 </script>
 
 <main>
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="heading">
         <h1 class="text-4xl px-10 uppercase font-bold">{title}</h1>
-        <p class="text-gray-700 py-4 px-10 text-sm font-medium">
+        <p class="text-gray-700 py-2 px-10 text-sm font-medium">
           Click on {title} to know more
         </p>
       </div>
@@ -29,31 +29,38 @@
       <button class="button button1"  on:click={()=> {
         modal.handleOpen(data2[0], modalContent, id);
       }}>
-               
-      
         <img class="Punjab_Haryana1" src="/assets/Punjab_Haryana.svg" />
         <p class="leading-4 text-sm">Tirath Kaur vs Kirpal Singh</p>
-       
       </button>
 
-      <div class="button button2">
+      <button class="button button2" on:click={()=> {
+        modal.handleOpen(data2[1], modalContent, id);
+      }}>
         <img class="SC1" src="/assets/SC.svg" />
         <p class="leading-4 text-sm">Tuka Ram And Anr vs State of Maharashtra</p>
-      </div>
+      </button>
 
-      <div class="button button3">
+      <button class="button button3" on:click={()=> {
+        modal.handleOpen(data2[2], modalContent, id);
+      }}>
         <img class="SC2" src="/assets/SC.svg" />
         <p class="leading-4 text-sm">Fazal Rab Choudhary vs State of Bihar</p>
-      </div>
+      </button>
 
-      <div class="button button4">
-        <img class="Punjab_Haryana2" src="/assets/Punjab_Haryana.svg" />
+      <button class="button button4" on:click={()=> {
+        modal.handleOpen(data2[4], modalContent, id);
+      }}>
+        <img class="Delhi1" src="/assets/Delhi HC.svg" />
         <p class="leading-4 text-sm">Smt Harvinder Kaur vs Harmander Singh Choudhry</p>
-      </div>
-      <div class="button button5">
+      </button>
+
+      <button class="button button5" on:click={()=> {
+        modal.handleOpen(data2[3], modalContent, id);
+      }}>
         <img class="APHC1" src="/assets/AP HC.svg" />
         <p class="leading-4 text-sm">T Sareetha vs Venkata Subbaiah</p>
-      </div>
+      </button>
+
     </div>
   </section>
   <ModalOpen bind:this={modal} />
@@ -62,11 +69,12 @@
 <style>
   .container {
     width: 5000px;
-    height: 780px;
+    height: 800px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(63, 80px);
     grid-template-rows: repeat(10, 78px);
+    overflow-x: scroll;
   }
   .heading {
     grid-area: 1/ 1/ 2/ 50;

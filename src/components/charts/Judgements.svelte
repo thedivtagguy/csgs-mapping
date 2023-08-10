@@ -1080,6 +1080,7 @@ padding-top: 15px;
 }
 
 .button92 {
+  
   padding-left: 20px;
 padding-top: 15px;
       grid-area: 12/71/14/75;

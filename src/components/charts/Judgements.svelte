@@ -968,7 +968,7 @@ padding-top: 15px;
 }
 .button68 {
   padding-top: 30px;
-  paddng-left: 10px;
+  padding-left: 10px;
     grid-area: 10/57/12/59;
 }
 .button69 {
@@ -1093,7 +1093,7 @@ padding-top: 15px;
   .button:hover {
     -ms-transform: scale(1.1em);
     -webkit-transform: scale(1.1);
-    tansform: scale(1.1);
+    transform: scale(1.1);
     font-weight: 500;
   }
   .button img:hover {

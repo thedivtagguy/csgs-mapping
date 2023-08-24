@@ -737,6 +737,10 @@ html {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;

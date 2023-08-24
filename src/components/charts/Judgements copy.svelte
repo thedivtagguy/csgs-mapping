@@ -106,7 +106,7 @@
         .attr("width", widthMobile)
         .attr("height", height);
     } else {
-      svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height).attr('fill', 'black');
+      svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height);
     }
 const data = data2;
 
@@ -131,9 +131,10 @@ const data = data2;
       .attr("font-family", "Roboto")
       .style("font-size", "11px")
       .attr("text-anchor", "middle")
-      
       .text( (d) => d.judgement)
       .call(wrap, 100);
+
+      console.log(node);
 
       node.attr("class", function (d) {
         return "blob " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
@@ -233,15 +234,14 @@ const data = data2;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
     overflow-x: scroll;
-    direction: ltr;
     
       
   }
-   #judgementsblock{
+   /* #judgementsblock{
     
     grid-column-start: 1;
     grid-row-start: 1;
-  } 
+  }  */
   .chart {
     grid-area: 1/14/2/19;
   }
@@ -259,7 +259,7 @@ image:hover{
     transform: scale(1.1);
 }
   
-  .blob:hover {
+  /* .blob:hover {
     -ms-transform: scale(1.1em);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -268,7 +268,7 @@ image:hover{
   .blob img:hover {
     filter: drop-shadow(1px 1px 0px #3a3a3a) drop-shadow(-1px 1px 0px #3a3a3a)
       drop-shadow(1px -1px 0px #3a3a3a) drop-shadow(-1px -1px 0px #3a3a3a);
-  }
+  } */
 
 .label-text{
   font-size: 5px;

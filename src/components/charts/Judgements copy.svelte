@@ -88,7 +88,7 @@
 
     let width = 4600;
     let widthMobile = 375;
-    let height = 670;
+    let height = 690;
     
 
     if (mobileCheck()) {
@@ -132,8 +132,8 @@ const data = data2;
       .style("font-size", "11px")
       .attr("text-anchor", "middle")
       
-      .text( (d) => d.judgement);
-      // .call(wrap, 100);
+      .text( (d) => d.judgement)
+      .call(wrap, 120);
 
       node.attr("class", function (d) {
         return "blob " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");

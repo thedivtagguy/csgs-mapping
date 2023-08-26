@@ -118,13 +118,15 @@ const data = data2;
       .append("g");
       
       node.append("svg:image")
+      .attr("class", "drawing")
       .attr("xlink:href", (d) => d.asset)
       .attr("x", (d) => d.x)
       .attr("y", (d) => d.y);
 
       node
       .append("text")
-      .attr("x", (d) => d.x)
+      .attr("class", "words")
+            .attr("x", (d) => d.x)
       .attr("y", (d) => d.y )
       .attr("transform", "translate(20, 0)")
       .attr("fill", "#3a3a3a")
@@ -142,12 +144,24 @@ const data = data2;
         this.parentNode.parentNode.appendChild(this.parentNode);
         this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
         d3.select(this)
-        .style("font-weight", "500")
-        .style("border", "black");
+        .selectAll(".words")
+        .style("font-weight", "500");
+
+        d3.select(this)
+        .selectAll(".drawing")
+        .attr("style", "filter: drop-shadow(0px 0px 1px rgba(30,30,30,1))");
+        //.attr("style", "outline: thin solid gray;");
         
       })
       .on("mouseout", function (d) {
-        d3.select(this).style("font-weight", "400");
+        d3.select(this)
+        .style("cursor", "pointer")
+        .selectAll(".words")
+        .style("font-weight", "400");
+        d3.select(this)
+        .selectAll(".drawing")
+        .attr("style", "filter: drop-shadow(0px 0px 0px rgba(30,30,30,0.0))");
+        //.attr("style", "outline: thin solid gray;");
       });
 
       d3.selectAll("#facets").on("change", function () {

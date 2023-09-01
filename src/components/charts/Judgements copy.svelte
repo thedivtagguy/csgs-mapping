@@ -90,7 +90,7 @@
 
     let width = 4100;
     let widthMobile = 375;
-    let height = 690;
+    let height = 680;
 
 
 // let amountToScroll = width +200 - window.innerWidth;

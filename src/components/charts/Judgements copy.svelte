@@ -93,7 +93,7 @@
     let height = 690;
 
 
-let amountToScroll = width - window.innerWidth;
+let amountToScroll = width +200 - window.innerWidth;
 console.log(amountToScroll);
     gsap.registerPlugin(ScrollTrigger);
 
@@ -103,12 +103,12 @@ console.log(amountToScroll);
       
       
       scrollTrigger: {
-        trigger: "#timelinewrapper",
+        trigger: "#judgements",
         
-        start:"top 20%",
-        end: "650 10%",
-      //end: "+=" + amountToScroll,
-      //pin: true,
+        start:"100 20%",
+        
+      end: "+=" + amountToScroll,
+      pin: true,
       
       scrub: true,
         
@@ -312,8 +312,8 @@ const data = data2;
     display: grid;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; */
     
     direction: ltr;
     
@@ -323,6 +323,10 @@ const data = data2;
     grid-column-start: 1;
     grid-row-start: 1;
     position: absolute;
+  }
+
+  #timelinewrapper{
+    
   }
    #timeline .background_lines{
     position: absolute;

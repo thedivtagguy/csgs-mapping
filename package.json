@@ -73,6 +73,7 @@
     "d3-collection": "^1.0.7",
     "d3-scale": "^4.0.2",
     "googleapis": "^92.0.0",
+    "gsap": "^3.12.2",
     "mkdirp": "^1.0.4",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",

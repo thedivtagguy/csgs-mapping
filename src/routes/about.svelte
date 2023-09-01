@@ -55,6 +55,25 @@
       Project Contributors: Shreyashi Sharma, Srija, Neel 
       Data Visualisation and Design by: <a href = "https://www.nithyasubramanian.com/" target="_blank" rel="noopener noreferrer">Nithya Subramanian </a> and <a href = "https://thedivtagguy.com/" target="_blank" rel="noopener noreferrer"> Aman Bhargava</a>
     </p>
+    <p
+      class="mt-8 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"
+    >
+    Sex, Sexuality and the Law
+
+    </p>
+    <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
+      Sex, Sexuality and the Law was conceptualized by the CSGS as an Experiential Learning Module for Young India Fellowship. It attempts to map the legal judgments over the past five decades which have contributed to the development of the discourse around sex, sexuality, and sexual justice in India. 
+The CSGS aims to map these plethora of judgments to examine India as a sexual state through the law’s engagement with, and regulation of, sexuality. It builds on the Centre’s existing work to map the field of gender and sexuality studies in India, which is significantly shaped by discursive formations pushed through the law. It will act as a valuable repository for lawyers, activists, scholars and anyone curious to navigate the field of sexuality and sexual justice through the legal lens. 
+In addition to this visualization, the Young India Fellows have also created the Sexual Justice Project podcast series under the aegis of the CSGS with discussions from eminent legal scholars and lawyers around these judgments. It is available on Spotify <a href = "https://open.spotify.com/show/5XwPMRHgiOcGSwtUXUM0sP?si=3066ee46e3e24d08" target="_blank" rel="noopener noreferrer">here </a>
+</p>
+<p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
+  Project Leads: Samreen Mushtaq, Shreyashi Sharma
+Project Contributor: Charul Mehndiratta
+Legal Judgments Compiled by: Aliya Sheriff, Kuhoo Tiwari, Nishita Singh, Shreya Kaul, Sonakshi Grover
+Design and Data Visualisation: <a href = "https://www.nithyasubramanian.com/" target="_blank" rel="noopener noreferrer">Nithya Subramanian </a>
+</p>
+
+
 
     <p
       class="mt-8 text-xl font-light font-sans text-gray-700 sm:text-5xl sm:tracking-tight lg:text-3xl"

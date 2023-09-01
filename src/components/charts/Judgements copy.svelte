@@ -4,10 +4,14 @@
   import judgements from "$data/indices/judgements.csv.json";
   import { onMount } from "svelte";
   import * as d3 from "d3";
+  import {gsap} from "gsap/dist/gsap.js";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+ 
 
   let modal;
   
  
+
 
   export let title = "";
   export let id = ""; // ID prefix of the chart
@@ -84,11 +88,65 @@
       return check;
     };
 
-    // Check if mobile device
-
-    let width = 4600;
+    let width = 4100;
     let widthMobile = 375;
     let height = 690;
+
+
+let amountToScroll = width - window.innerWidth;
+console.log(amountToScroll);
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('#timeline', {
+      x: -amountToScroll,
+      duration: 10,
+      
+      
+      scrollTrigger: {
+        trigger: "#timelinewrapper",
+        
+        start: "top 20%",
+        end: "650 10%",
+      //end: "+=" + amountToScroll,
+      //pin: true,
+      
+      scrub: true,
+        
+      //toggleActions: "restart none none none",
+      //markers: true
+      // play pause resume reverse restart 
+    //onEnter onLeave onEnterBack onLeaveBack
+    
+      }
+      
+    });
+    
+// let tl = gsap.timeline({
+//   ScrollTrigger: {
+//     trigger: "#timeline",
+//     start: 'top center',
+//     end: 'bottom center',
+//     scrub: true,
+//     markers: true
+//   }
+// });
+// tl.to('#timeline', {
+//   x:800
+// })
+    
+// gsap.to("#timeline", {
+//   xPercent: -100,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#timeline",
+//     pin: ".main",
+//     pinSpacing: true,
+//     scrub: 1,
+//     end: "+=3000",
+//   }
+// });
+    // Check if mobile device
+
     
 
     if (mobileCheck()) {
@@ -106,7 +164,7 @@
         .attr("width", widthMobile)
         .attr("height", height);
     } else {
-      svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height).attr('fill', 'black');
+      svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height);
     }
 const data = data2;
 
@@ -150,7 +208,7 @@ const data = data2;
         d3.select(this)
         .selectAll(".drawing")
         .attr("style", "filter: drop-shadow(0px 0px 1px rgba(30,30,30,1))");
-        //.attr("style", "outline: thin solid gray;");
+        
         
       })
       .on("mouseout", function (d) {
@@ -161,19 +219,17 @@ const data = data2;
         d3.select(this)
         .selectAll(".drawing")
         .attr("style", "filter: drop-shadow(0px 0px 0px rgba(30,30,30,0.0))");
-        //.attr("style", "outline: thin solid gray;");
+        
       });
 
       d3.selectAll("#facets").on("change", function () {
        d3.selectAll(".blob")
-      //.selectAll(".drawing")
-      //   .style("filter", "drop-shadow(0px 0px 0px rgba(30,30,30,0))");
-      //   d3.selectAll(".blob")
+      
         .style("opacity", function (d) {
           if (selected == "All keywords") {
             return 1;
           } else {
-            return 0.2;
+            return 0.1;
           }
         })
         .style("pointer-events", function (d) {
@@ -185,9 +241,7 @@ const data = data2;
         });
 
       d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3") )
-      // .select(".drawing")
-      //   .style("filter", "drop-shadow(2px 2px 2px rgba(30,30,30,0.6))");
-      //   d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3"))
+      
         .style("opacity", 1)
         .style("pointer-events", "all");
     });
@@ -201,6 +255,7 @@ const data = data2;
   
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <main>
   
@@ -213,7 +268,7 @@ const data = data2;
         </p>
       </div>
 
-      <object class="background_lines" data="/assets/lines.svg"/>
+      
 
        <div class = "chart relative md:flex">
         <div
@@ -229,10 +284,17 @@ const data = data2;
                 </select>
               </div>
        </div>
+      <div id = "timelinewrapper">
+        <div id = "timeline">
+          <object class="background_lines" data="/assets/lines.svg"/>
+          <div id="judgementsblock" >
+            
+           
+        </div>  
+      </div>
       
-              
-        
-        <div id="judgementsblock" ></div> 
+      </div> 
+       
           
         
       </div>
@@ -244,21 +306,32 @@ const data = data2;
 <style>
 
   .container {
-    width: 4600px;
+    width: 4100px;
     height: 770px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    
     direction: ltr;
     
       
   }
-   #judgementsblock{
-    
+  #timeline {
     grid-column-start: 1;
     grid-row-start: 1;
+    position: absolute;
+  }
+   #timeline .background_lines{
+    position: absolute;
+    
+    z-index: -1;
+  } 
+  #timeline #judgementsblock svg{
+    position: absolute;
+    z-index: 4;
   } 
   .chart {
     grid-area: 1/14/2/19;
@@ -268,43 +341,19 @@ const data = data2;
     z-index: 10;
   }
 .background_lines{
+  position: relative;
   z-index: -1;
 }
   
-image:hover{
-  -ms-transform: scale(1.1em);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+.move{
+  transform: translate(-2700px);
 }
-  
-  .blob:hover {
-    -ms-transform: scale(1.1em);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    font-weight: 500;
-  }
-  .blob img:hover {
-    filter: drop-shadow(1px 1px 0px #3a3a3a) drop-shadow(-1px 1px 0px #3a3a3a)
-      drop-shadow(1px -1px 0px #3a3a3a) drop-shadow(-1px -1px 0px #3a3a3a);
-  }
 
 .label-text{
   font-size: 5px;
   color: #3a3a3a;
 }
-  .button {
-    z-index: 9;
-    color: #3a3a3a;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 6px;
-    line-height: 0.6rem;
-    font-weight: 400;
-  }
-  .button img {
-    display: inline;
-    vertical-align: middle;
-  }
+  
   select {
     display: flex;
     box-sizing: border-box;
@@ -318,4 +367,5 @@ image:hover{
     background-color: var(--color-orange);
     text-transform: capitalize;
   }
+  
 </style>

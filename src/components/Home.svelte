@@ -102,6 +102,7 @@
             title: "judgement",
             year: "year",
             asset: "asset", 
+            link: "link",
             
             
         }}

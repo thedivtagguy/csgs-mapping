@@ -93,33 +93,33 @@
     let height = 690;
 
 
-let amountToScroll = width +200 - window.innerWidth;
-console.log(amountToScroll);
-    gsap.registerPlugin(ScrollTrigger);
+// let amountToScroll = width +200 - window.innerWidth;
+// console.log(amountToScroll);
+//     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('#timeline', {
-      x: -amountToScroll,
-      duration: 10,
+//     gsap.to('#timeline', {
+//       x: -amountToScroll,
+//       duration: 10,
       
       
-      scrollTrigger: {
-        trigger: "#judgements",
+//       scrollTrigger: {
+//         trigger: "#judgements",
         
-        start:"100 20%",
+//         start:"100 20%",
         
-      end: "+=" + amountToScroll,
-      pin: true,
+//       end: "+=" + amountToScroll,
+//       pin: true,
       
-      scrub: true,
+//       scrub: true,
         
-      //toggleActions: "restart none none none",
-      //markers: true
-      // play pause resume reverse restart 
-    //onEnter onLeave onEnterBack onLeaveBack
+//       //toggleActions: "restart none none none",
+//       //markers: true
+//       // play pause resume reverse restart 
+//     //onEnter onLeave onEnterBack onLeaveBack
     
-      }
+//       }
       
-    });
+//     });
     
 // let tl = gsap.timeline({
 //   ScrollTrigger: {
@@ -325,9 +325,7 @@ const data = data2;
     position: absolute;
   }
 
-  #timelinewrapper{
-    
-  }
+  
    #timeline .background_lines{
     position: absolute;
     

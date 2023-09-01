@@ -105,7 +105,7 @@ console.log(amountToScroll);
       scrollTrigger: {
         trigger: "#timelinewrapper",
         
-        start: "top 20%",
+        start:"top 20%",
         end: "650 10%",
       //end: "+=" + amountToScroll,
       //pin: true,

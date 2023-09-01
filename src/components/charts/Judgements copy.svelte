@@ -4,8 +4,8 @@
   import judgements from "$data/indices/judgements.csv.json";
   import { onMount } from "svelte";
   import * as d3 from "d3";
-  import {gsap} from "gsap/dist/gsap.js";
-  import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+  // import {gsap} from "gsap/gsap.js";
+  // import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
  
 
   let modal;

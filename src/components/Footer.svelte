@@ -8,8 +8,8 @@
     
 </script>
 
-<footer class="max-w-5xl mx-auto  py-4">
-<section class="about mx-auto py-4">
+<footer class="max-w-5xl mx-auto py-4 ">
+<section class="about mx-auto mt-auto py-4">
   <div class="flex justify-center py-6 gap-2 items-center">
     <p class = " py-1 text-base  text-gray-700">
       If you like this project, do consider sharing it!

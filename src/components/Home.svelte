@@ -96,7 +96,7 @@
     </section>
     <section id="judgements">
         <Judgements 
-        
+        id = "judgements2"
         modalContent={{
             label: "court",
             title: "judgement",
@@ -106,7 +106,7 @@
             
             
         }}
-        id="judgements"
+        
         title="judgements"
         dataset={judge}
         />

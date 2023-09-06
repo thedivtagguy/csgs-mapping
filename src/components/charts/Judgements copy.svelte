@@ -1,17 +1,12 @@
 <script>
-  
   import ModalOpen from "../modal/ModalOpen.svelte";
   import judgements from "$data/indices/judgements.csv.json";
   import { onMount } from "svelte";
   import * as d3 from "d3";
-  // import {gsap} from "gsap/dist/gsap.js";
-  // import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
- 
+  import { gsap } from "gsap/dist/gsap.js";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
   let modal;
-  
- 
-
 
   export let title = "";
   export let id = ""; // ID prefix of the chart
@@ -33,43 +28,44 @@
   });
   facets.unshift(`All ${facet}s`);
 
-
   ////text wrap function
 
   function wrap(text, width) {
     text.each(function () {
-        var text = d3.select(this),
-            words = text.text().split(/\s+/).reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 1.1, // ems
-            x = text.attr("x"),
-            y = text.attr("y"),
-            dy = 5.5, 
-            //parseFloat(text.attr("dy")),
-            tspan = text.text(null)
-                        .append("tspan")
-                        .attr("x", x)
-                        .attr("y", y)
-                        .attr("dy", dy + "em");
-        while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().getComputedTextLength() > width) {
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                tspan = text.append("tspan")
-                            .attr("x", x)
-                            .attr("y", y)
-                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
-                            .text(word);
-            }
+      var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        y = text.attr("y"),
+        dy = 5.5,
+        //parseFloat(text.attr("dy")),
+        tspan = text
+          .text(null)
+          .append("tspan")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", dy + "em");
+      while ((word = words.pop())) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text
+            .append("tspan")
+            .attr("x", x)
+            .attr("y", y)
+            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+            .text(word);
         }
+      }
     });
-}
-/////////////////////////////////////////////////////////////////////////
+  }
+  /////////////////////////////////////////////////////////////////////////
   onMount(async () => {
     // Check mobile device
     window.mobileCheck = function () {
@@ -92,67 +88,56 @@
     let widthMobile = 375;
     let height = 680;
 
+    let amountToScroll = width + 200 - window.innerWidth;
+    console.log(amountToScroll);
+    gsap.registerPlugin(ScrollTrigger);
 
-// let amountToScroll = width +200 - window.innerWidth;
-// console.log(amountToScroll);
-//     gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#timelinewrapper", {
+      x: -amountToScroll,
+      duration: 10,
 
-//     gsap.to('#timeline', {
-//       x: -amountToScroll,
-//       duration: 10,
-      
-      
-//       scrollTrigger: {
-//         trigger: "#judgements",
+      scrollTrigger: {
+        trigger: "#timelinewrapper",
+
+        start: "100 20%",
+
+        end: "+=" + amountToScroll,
+        pin: true,
+        scrub: true
+
         
-//         start:"100 20%",
-        
-//       end: "+=" + amountToScroll,
-//       pin: true,
-      
-//       scrub: true,
-        
-//       //toggleActions: "restart none none none",
-//       //markers: true
-//       // play pause resume reverse restart 
-//     //onEnter onLeave onEnterBack onLeaveBack
-    
-//       }
-      
-//     });
-    
-// let tl = gsap.timeline({
-//   ScrollTrigger: {
-//     trigger: "#timeline",
-//     start: 'top center',
-//     end: 'bottom center',
-//     scrub: true,
-//     markers: true
-//   }
-// });
-// tl.to('#timeline', {
-//   x:800
-// })
-    
-// gsap.to("#timeline", {
-//   xPercent: -100,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: "#timeline",
-//     pin: ".main",
-//     pinSpacing: true,
-//     scrub: 1,
-//     end: "+=3000",
-//   }
-// });
+      }
+    });
+
+    // let tl = gsap.timeline({
+    //   ScrollTrigger: {
+    //     trigger: "#timeline",
+    //     start: 'top center',
+    //     end: 'bottom center',
+    //     scrub: true,
+    //     markers: true
+    //   }
+    // });
+    // tl.to('#timeline', {
+    //   x:800
+    // })
+
+    // gsap.to("#timeline", {
+    //   xPercent: -100,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: "#timeline",
+    //     pin: ".main",
+    //     pinSpacing: true,
+    //     scrub: 1,
+    //     end: "+=3000",
+    //   }
+    // });
     // Check if mobile device
-
-    
 
     if (mobileCheck()) {
       width = widthMobile;
       height = window.innerHeight / 1.4;
-      
     }
 
     let svg;
@@ -166,65 +151,54 @@
     } else {
       svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height);
     }
-const data = data2;
+    const data = data2;
 
-    const node = svg
-      
-      .selectAll("g")
-      .data(data)
-      .enter()
-      .append("g");
-      
-      node.append("svg:image")
+    const node = svg.selectAll("g").data(data).enter().append("g");
+
+    node
+      .append("svg:image")
       .attr("class", "drawing")
       .attr("xlink:href", (d) => d.asset)
       .attr("x", (d) => d.x)
       .attr("y", (d) => d.y);
 
-      node
+    node
       .append("text")
       .attr("class", "words")
-            .attr("x", (d) => d.x)
-      .attr("y", (d) => d.y )
+      .attr("x", (d) => d.x)
+      .attr("y", (d) => d.y)
       .attr("transform", "translate(20, 0)")
       .attr("fill", "#3a3a3a")
       .attr("font-family", "Roboto")
       .style("font-size", "11px")
       .attr("text-anchor", "middle")
-      
-      .text( (d) => d.judgement)
+
+      .text((d) => d.judgement)
       .call(wrap, 120);
 
-      node.attr("class", function (d) {
+    node
+      .attr("class", function (d) {
         return "blob " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
       })
       .on("mouseover", function (d) {
         this.parentNode.parentNode.appendChild(this.parentNode);
         this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
-        d3.select(this)
-        .selectAll(".words")
-        .style("font-weight", "500");
+        d3.select(this).selectAll(".words").style("font-weight", "500");
 
         d3.select(this)
-        .selectAll(".drawing")
-        .attr("style", "filter: drop-shadow(0px 0px 1px rgba(30,30,30,1))");
-        
-        
+          .selectAll(".drawing")
+          .attr("style", "filter: drop-shadow(0px 0px 1px rgba(30,30,30,1))");
       })
       .on("mouseout", function (d) {
+        d3.select(this).style("cursor", "pointer").selectAll(".words").style("font-weight", "400");
         d3.select(this)
-        .style("cursor", "pointer")
-        .selectAll(".words")
-        .style("font-weight", "400");
-        d3.select(this)
-        .selectAll(".drawing")
-        .attr("style", "filter: drop-shadow(0px 0px 0px rgba(30,30,30,0.0))");
-        
+          .selectAll(".drawing")
+          .attr("style", "filter: drop-shadow(0px 0px 0px rgba(30,30,30,0.0))");
       });
 
-      d3.selectAll("#facets").on("change", function () {
-       d3.selectAll(".blob")
-      
+    d3.selectAll("#facets").on("change", function () {
+      d3.selectAll(".blob")
+
         .style("opacity", function (d) {
           if (selected == "All keywords") {
             return 1;
@@ -240,8 +214,8 @@ const data = data2;
           }
         });
 
-      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3") )
-      
+      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3"))
+
         .style("opacity", 1)
         .style("pointer-events", "all");
     });
@@ -249,16 +223,13 @@ const data = data2;
     node.on("click", function (d, i) {
       modal.handleOpen(i, modalContent);
     });
-     
   });
-
-  
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <main>
-  
+  <ModalOpen bind:this={modal} />
   <section>
     <div class="container">
       <div class="heading">
@@ -268,43 +239,34 @@ const data = data2;
         </p>
       </div>
 
-      
-
-       <div class = "chart relative md:flex">
+      <div class="chart relative md:flex">
         <div
-                id="facets"
-                class="md:flex z-10 hidden {direction}-4 md:absolute flex-col gap-8 justify-start pb-8 my-1"
-              >
-                <select bind:value={selected} class="rounded-none">
-                  {#each facets as facet}
-                    <option class="capitalize" value={facet}>
-                      {facet}
-                    </option>
-                  {/each}
-                </select>
-              </div>
-       </div>
-      <div id = "timelinewrapper">
-        <div id = "timeline">
-          <object class="background_lines" data="/assets/lines.svg"/>
-          <div id="judgementsblock" >
-            
-           
-        </div>  
+          id="facets"
+          class="md:flex z-10 hidden {direction}-4 md:absolute flex-col gap-8 justify-start pb-8 my-1"
+        >
+          <select bind:value={selected} class="rounded-none">
+            {#each facets as facet}
+              <option class="capitalize" value={facet}>
+                {facet}
+              </option>
+            {/each}
+          </select>
+        </div>
       </div>
-      
-      </div> 
-       
-          
+      <div id="timelinewrapper">
+        <div id="timeline">
+          <object class="background_lines" data="/assets/lines.svg" />
+          <div id="judgementsblock" />
+        </div>
         
       </div>
+      
+    </div>
     
   </section>
-  <ModalOpen bind:this={modal} />
 </main>
 
 <style>
-
   .container {
     width: 4100px;
     height: 770px;
@@ -314,10 +276,8 @@ const data = data2;
     grid-template-rows: repeat(15, 50px);
     /* overflow-x: scroll;
     -webkit-overflow-scrolling: touch; */
-    
+
     direction: ltr;
-    
-      
   }
   #timeline {
     grid-column-start: 1;
@@ -325,16 +285,15 @@ const data = data2;
     position: absolute;
   }
 
-  
-   #timeline .background_lines{
+  #timeline .background_lines {
     position: absolute;
-    
+
     z-index: -1;
-  } 
-  #timeline #judgementsblock svg{
+  }
+  #timeline #judgementsblock svg {
     position: absolute;
     z-index: 4;
-  } 
+  }
   .chart {
     grid-area: 1/14/2/19;
   }
@@ -342,20 +301,20 @@ const data = data2;
     grid-area: 1/ 1/ 2/ 152;
     z-index: 10;
   }
-.background_lines{
-  position: relative;
-  z-index: -1;
-}
-  
-.move{
-  transform: translate(-2700px);
-}
+  .background_lines {
+    position: relative;
+    z-index: -1;
+  }
 
-.label-text{
-  font-size: 5px;
-  color: #3a3a3a;
-}
-  
+  .move {
+    transform: translate(-2700px);
+  }
+
+  .label-text {
+    font-size: 5px;
+    color: #3a3a3a;
+  }
+
   select {
     display: flex;
     box-sizing: border-box;
@@ -369,5 +328,4 @@ const data = data2;
     background-color: var(--color-orange);
     text-transform: capitalize;
   }
-  
 </style>

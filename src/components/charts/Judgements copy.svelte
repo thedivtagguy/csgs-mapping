@@ -85,14 +85,14 @@
     };
 
     let width = 4300;
-    let widthMobile = 4100;
+    let widthMobile = 4300;
     let height = 680;
 
     let amountToScroll = width - window.innerWidth;
     
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#timeline", {
+    gsap.to("#timelinewrapper", {
       x: -amountToScroll,
       duration: 10,
 
@@ -103,8 +103,7 @@
 
         end: "+=" + amountToScroll,
         pin: true,
-        scrub: true,
-        
+        scrub: true
 
         
       }
@@ -210,6 +209,7 @@
   <ModalOpen bind:this={modal} />
   <section>
     <div class="container">
+      
       <div class="heading">
         <h1 class="text-4xl px-10 uppercase font-bold">{title}</h1>
         <p class="text-gray-700 py-2 px-10 text-sm font-medium">
@@ -232,9 +232,12 @@
         </div>
       </div>
       <div id="timelinewrapper">
+        
         <div id="timeline">
+          
           <object class="background_lines" data="/assets/lines.svg" />
           <div id="judgementsblock" />
+          
         </div>
         
       </div>
@@ -242,6 +245,7 @@
     </div>
     
   </section>
+  
 </main>
 
 <style>

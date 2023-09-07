@@ -24,7 +24,7 @@
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1440" autoplay loop muted playsinline>
+          <video  width= "1300" autoplay loop muted playsinline>
             <source src="/assets/animation.webm" type="video/webm">
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>
@@ -33,7 +33,7 @@
             <Header />
         </div>
     </div>
-<div class="py-4 ">
+<div class="pt-2 sm:py-2 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -96,7 +96,7 @@
     </section>
     <section id="judgements">
         <Judgements 
-        id = "judgements2"
+        id = "judge"
         modalContent={{
             label: "court",
             title: "judgement",

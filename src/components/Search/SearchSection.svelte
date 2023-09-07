@@ -193,6 +193,29 @@ search.addWidgets([
         },
       }),
     ]),
+    index({ indexName: 'judgements',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#judgements-search',
+        templates: {
+          item:
+           `
+           <div class="py-4">
+          <h4 class="font-semibold text-xl">{{judgement }}</h4>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ description }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ active }}</p>
+            <p> | </p>
+           <a href={{{link}}}> <p class="text-sm hit-description">{{ link }}</p></a>
+          </div>
+          <p class="font-bold text-sm"><a href="mailto:{{ contact }}">{{ contact }}</a></p>
+          <p class="text-sm hit-description">{{keywords}}</p>
+        </div>
+           `,
+        },
+      }),
+    ]),
 
 
 ]);
@@ -221,6 +244,7 @@ search.start();
           <option value="av-search">Audio Visual Materials</option>
           <option value="institutions-search">Institutions</option>
           <option value="digital-spaces-search">Digital Spaces</option>
+          <option value="judgements-search">Judgements</option>
         </select>
       </div>
       <div id="paginate"></div>
@@ -279,6 +303,16 @@ search.start();
       </div>
       <div class="col-span-9">
         <div id="digital-spaces-search"></div>
+      </div>
+    </section>
+  </div>
+  <div hidden={selected === 'judgements-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid px-10  py-12 md:grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Judgements</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="judgements-search"></div>
       </div>
     </section>
   </div>

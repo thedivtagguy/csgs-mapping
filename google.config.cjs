@@ -34,4 +34,4 @@ module.exports = [
     gid: "0",
     filepath: "src/data/organizationsScatter.csv"
   }
-];
+   ];

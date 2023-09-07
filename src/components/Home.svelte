@@ -107,7 +107,7 @@
             
         }}
         
-        title="judgements"
+        title="judgments"
         dataset={judge}
         />
     </section>

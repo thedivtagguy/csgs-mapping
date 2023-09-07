@@ -28,4 +28,5 @@
       left: 0;
       background: rgba(0,0,0,0.20);
     }
+    
   </style>

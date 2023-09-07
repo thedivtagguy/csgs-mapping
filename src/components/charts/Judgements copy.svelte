@@ -28,7 +28,7 @@
   });
   facets.unshift(`All ${facet}s`);
 
-  ////text wrap function
+  ////text wrap function////////////////////////////////////////////////////////////////////////////////
 
   function wrap(text, width) {
     text.each(function () {
@@ -84,60 +84,38 @@
       return check;
     };
 
-    let width = 4100;
-    let widthMobile = 375;
+    let width = 4300;
+    let widthMobile = 4100;
     let height = 680;
 
-    let amountToScroll = width + 200 - window.innerWidth;
-    console.log(amountToScroll);
+    let amountToScroll = width - window.innerWidth;
+    
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#timelinewrapper", {
+    gsap.to("#timeline", {
       x: -amountToScroll,
       duration: 10,
 
       scrollTrigger: {
-        trigger: "#timelinewrapper",
+        trigger: "#judgements",
 
         start: "100 20%",
 
         end: "+=" + amountToScroll,
         pin: true,
-        scrub: true
+        scrub: true,
+        
 
         
       }
     });
 
-    // let tl = gsap.timeline({
-    //   ScrollTrigger: {
-    //     trigger: "#timeline",
-    //     start: 'top center',
-    //     end: 'bottom center',
-    //     scrub: true,
-    //     markers: true
-    //   }
-    // });
-    // tl.to('#timeline', {
-    //   x:800
-    // })
-
-    // gsap.to("#timeline", {
-    //   xPercent: -100,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: "#timeline",
-    //     pin: ".main",
-    //     pinSpacing: true,
-    //     scrub: 1,
-    //     end: "+=3000",
-    //   }
-    // });
+    
     // Check if mobile device
 
     if (mobileCheck()) {
       width = widthMobile;
-      height = window.innerHeight / 1.4;
+      height = window.innerHeight / 1.5;
     }
 
     let svg;

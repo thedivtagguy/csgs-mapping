@@ -26,7 +26,7 @@
     },
 
     {
-      title: "Judgements",
+      title: "Judgments",
       url: "#judgements",
     },
   

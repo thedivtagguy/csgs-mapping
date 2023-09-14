@@ -8,10 +8,10 @@
 <nav class="p-3  rounded border-gray-200 ">
   <div class="container flex flex-wrap justify-between items-center pb-2 pr-6 md:pr-0 mx-auto">
     <a href="https://csgs.ashoka.edu.in/" class="flex justify-center items-center">
-      <img src="/assets/CSGS logo.png" width="250" alt="Main logo image">
+      <img src="/assets/CSGS logo.png" width="220" alt="Main logo image">
     </a>
-    <a href="/" class="flex justify-center items-center block  py-2 pl-7 mx-auto">
-      <img src="/assets/logo.png" width="160" alt="Mapping Sexuality logo image">
+    <a href="/" class="flex justify-center items-center block  py-7 pl-7 mx-auto text-2xl text-gray-700 text-bold">
+      Mapping Sexuality in India
     </a>
     <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-md md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="navbar-solid-bg" aria-expanded="false">
       <span class="sr-only">Open main menu</span>

@@ -72,6 +72,7 @@
 					<option value="AV Material">AV Material</option>
 					<option value="Event">Event</option>
 					<option value="Digital Space">Digital Space</option>
+					<option value="Judgment">Judgment</option>
 					</select>
 				</div>
 

@@ -11,7 +11,7 @@
       <img src="/assets/CSGS logo.png" width="220" alt="Main logo image">
     </a>
     <a href="/" class="flex justify-center items-center block  py-1 mx-auto text-2xl text-gray-700 text-bold">
-      <img src="/assets/logo.png" width="170" alt="Section logo image">
+      <img src="/assets/logo.png" width="160" alt="Section logo image">
     </a>
     <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-md md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="navbar-solid-bg" aria-expanded="false">
       <span class="sr-only">Open main menu</span>

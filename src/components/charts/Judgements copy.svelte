@@ -205,8 +205,9 @@
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<ModalOpen bind:this={modal} />
 <main>
-  <ModalOpen bind:this={modal} />
+ 
   <section>
     <div class="container">
       

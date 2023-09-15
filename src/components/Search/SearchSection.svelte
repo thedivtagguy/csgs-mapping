@@ -201,16 +201,15 @@ search.addWidgets([
           item:
            `
            <div class="py-4">
-          <h4 class="font-semibold text-xl">{{judgement }}</h4>
+          <h4 class="font-semibold text-xl"><a href={{{link}}} target=”_blank”>{{judgement }}</h4>
           <div class="flex flex-row justify-items-center items-center gap-4">
-            <p class="text-sm hit-description">{{ description }}</p>
+            <p class="text-sm hit-description">{{ court }}</p>
             <p> | </p>
-            <p class="text-sm hit-description">{{ active }}</p>
+            <p class="text-sm hit-description">{{ year }}</p>
             <p> | </p>
-           <a href={{{link}}}> <p class="text-sm hit-description">{{ link }}</p></a>
+            <p class="text-sm hit-description">{{keyword}}</p>
           </div>
-          <p class="font-bold text-sm"><a href="mailto:{{ contact }}">{{ contact }}</a></p>
-          <p class="text-sm hit-description">{{keywords}}</p>
+          
         </div>
            `,
         },

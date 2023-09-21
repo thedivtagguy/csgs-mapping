@@ -84,8 +84,8 @@
       return check;
     };
 
-    let width = 4300;
-    let widthMobile = 4300;
+    let width = 4400;
+    let widthMobile = 4400;
     let height = 680;
 
     let amountToScroll = width - window.innerWidth;
@@ -97,13 +97,15 @@
       duration: 10,
 
       scrollTrigger: {
-        trigger: "#judgements",
+        trigger: "#timelinewrapper",
 
-        start: "100 20%",
+        start: "100 10%",
 
         end: "+=" + amountToScroll,
-        pin: true,
-        scrub: true
+        pin: "#timeline",
+        pinSpacing: true,
+        scrub: true,
+        markers: true,
 
         
       }

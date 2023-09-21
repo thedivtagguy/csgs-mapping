@@ -1,5 +1,5 @@
 <script>
-    import { Modals, openModal, modals, closeModal } from 'svelte-modals'
+    import { Modals, openModal, modals, closeModal, closeAllModals } from 'svelte-modals'
       import Modal from './Modal.svelte'
       export const handleOpen = (data, modalContent, id) => {
           openModal(Modal, { 
@@ -14,7 +14,7 @@
     <div
       slot="backdrop"
       class="backdrop"
-      on:click={closeModal}
+      on:click={closeAllModals}
     />
   </Modals>
   

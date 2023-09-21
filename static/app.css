@@ -1129,10 +1129,6 @@ html {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1163,9 +1159,6 @@ html {
 }
 .pr-6 {
   padding-right: 1.5rem;
-}
-.pl-7 {
-  padding-left: 1.75rem;
 }
 .pr-2 {
   padding-right: 0.5rem;

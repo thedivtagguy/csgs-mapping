@@ -92,7 +92,7 @@
     
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#timelinewrapper", {
+    gsap.to("#timeline", {
       x: -amountToScroll,
       duration: 10,
 

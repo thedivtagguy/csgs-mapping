@@ -91,18 +91,19 @@
     let amountToScroll = width - window.innerWidth;
     
     gsap.registerPlugin(ScrollTrigger);
+    let tl = gsap.timeline;
 
     gsap.to("#timeline", {
       x: -amountToScroll,
-      duration: 10,
+      duration: 15,
 
       scrollTrigger: {
-        trigger: "#timelinewrapper",
+        trigger: ".judgementscontainer",
 
-        start: "100 10%",
+        start: "100 20%",
 
         end: "+=" + amountToScroll,
-        pin: "#timeline",
+        pin: true,
         pinSpacing: true,
         scrub: true,
         markers: true,
@@ -211,7 +212,7 @@
 <main>
  
   <section>
-    <div class="container">
+    <div class="judgementscontainer">
       
       <div class="heading">
         <h1 class="text-4xl px-10 uppercase font-bold">{title}</h1>
@@ -252,7 +253,7 @@
 </main>
 
 <style>
-  .container {
+  .judgementscontainer {
     width: 4100px;
     height: 770px;
     position: relative;

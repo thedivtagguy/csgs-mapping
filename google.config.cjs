@@ -33,5 +33,12 @@ module.exports = [
     id: "1JDokc6P3BQECsfADTLSRpalAy5OWzXqlbaOkKdbdlWA",
     gid: "0",
     filepath: "src/data/organizationsScatter.csv"
+  },
+
+  {
+    
+    id: "2PACX-1vTqd6s66K8kwDi_z7mp5_iVnKKizYIJ1mofk42DqQxJhlw9QzLBEoqFhkCUNLrfn6PfD7SZWd-_zeW2",
+    gid: "1796987334",
+    filepath: "src/data/judgements.csv"
   }
    ];

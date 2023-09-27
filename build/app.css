@@ -1252,9 +1252,6 @@ html {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-3 {
-  line-height: .75rem;
-}
 .leading-none {
   line-height: 1;
 }

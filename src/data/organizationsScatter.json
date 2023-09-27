@@ -11,10 +11,10 @@
       "type": "Feature",
       "properties": {
         "region": "Allahabad",
-        "latitude": "26.8467088",
-        "longitude": "80.9461592",
-        "scatterLat": "26.8467088",
-        "scatterLong": "80.9461592",
+        "latitude": "25.4358",
+        "longitude": "81.8463",
+        "scatterLat": "25.4358",
+        "scatterLong": "81.8463",
         "count": "0",
         "name": "Resistance Alliance for Queer Solidarity, University of Allahabad",
         "location": "https://www.facebook.com/raqsallahabad/",
@@ -29,8 +29,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8467088"
+          "81.8463",
+          "25.4358"
         ]
       }
     },
@@ -67,8 +67,8 @@
         "region": "Arunachal Pradesh",
         "latitude": "28.2179994",
         "longitude": "94.7277528",
-        "scatterLat": "28.2179994",
-        "scatterLong": "94.7277528",
+        "scatterLat": "28.0179994",
+        "scatterLong": "94.5777528",
         "count": "0",
         "name": "Women Studies and Research centre, Rajiv Gandhi University",
         "location": "https://rgu.ac.in/women-studies-and-research-centre/",
@@ -83,8 +83,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.7277528",
-          "28.2179994"
+          "94.5777528",
+          "28.0179994"
         ]
       }
     },
@@ -202,8 +202,8 @@
         "region": "Assam",
         "latitude": "26.2006043",
         "longitude": "92.9375739",
-        "scatterLat": "26.2006043",
-        "scatterLong": "92.9375739",
+        "scatterLat": "26.0006043",
+        "scatterLong": "92.7875739",
         "count": "0",
         "name": "Chandraprabha Saikiani Centre for Women Studies, Tezpur University",
         "location": "http://www.tezu.ernet.in/wsc/about-us.php",
@@ -218,8 +218,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "92.9375739",
-          "26.2006043"
+          "92.7875739",
+          "26.0006043"
         ]
       }
     },
@@ -607,8 +607,8 @@
         "region": "Chhattisgarh",
         "latitude": "21.2786567",
         "longitude": "81.8661442",
-        "scatterLat": "21.2786567",
-        "scatterLong": "81.8661442",
+        "scatterLat": "21.0786567",
+        "scatterLong": "81.7161442",
         "count": "0",
         "name": "Centre for Women's Studies, Pt. Ravishankar Shukla University",
         "location": "https://www.prsu.ac.in/academic-departments/utd-departments/Centre-for-Womens-Studies/9",
@@ -623,8 +623,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "81.8661442",
-          "21.2786567"
+          "81.7161442",
+          "21.0786567"
         ]
       }
     },
@@ -661,8 +661,8 @@
         "region": "Chhattisgarh",
         "latitude": "22.0796545",
         "longitude": "82.1409152",
-        "scatterLat": "22.0796545",
-        "scatterLong": "82.1409152",
+        "scatterLat": "21.8796545",
+        "scatterLong": "81.9909152",
         "count": "0",
         "name": "HAQ: Queer Alliance, Hidayatullah National Law University",
         "location": "https://www.facebook.com/allianceforqueers/",
@@ -677,8 +677,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "82.1409152",
-          "22.0796545"
+          "81.9909152",
+          "21.8796545"
         ]
       }
     },
@@ -769,8 +769,8 @@
         "region": "Delhi",
         "latitude": "28.7040592",
         "longitude": "77.1024902",
-        "scatterLat": "28.7040592",
-        "scatterLong": "77.1024902",
+        "scatterLat": "28.5040592",
+        "scatterLong": "76.9524902",
         "count": "0",
         "name": "Women's Studies Centre, Jesus & Mary College, Delhi University",
         "location": "https://www.jmc.ac.in/compulsorysocieties/womensstudiescentre",
@@ -785,8 +785,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1024902",
-          "28.7040592"
+          "76.9524902",
+          "28.5040592"
         ]
       }
     },
@@ -1559,7 +1559,7 @@
         "location": "https://chsj.org/",
         "type": "Community Organisation",
         "active": "2005",
-        "contact": "chsj@chsj.or",
+        "contact": "chsj@chsj.org",
         "programs": "1. Advocacy and campaigns with a focus on social justice in the fields of health, Human Development, Gender Equality and Human rights.\n2. Project MITRA (Mens Initiative to Transform Relationship through Action) focuses on the role played by men and boys in the discourse of gender equality",
         "keywords": "Advocacy",
         "id": 58,
@@ -2389,8 +2389,8 @@
         "region": "Goa",
         "latitude": "15.2993265",
         "longitude": "74.123996",
-        "scatterLat": "15.2993265",
-        "scatterLong": "74.123996",
+        "scatterLat": "15.0993265",
+        "scatterLong": "73.973996",
         "count": "0",
         "name": "Goa Rainbow Trust",
         "location": "https://www.facebook.com/grtgoa/",
@@ -2405,8 +2405,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.123996",
-          "15.2993265"
+          "73.973996",
+          "15.0993265"
         ]
       }
     },
@@ -2443,8 +2443,8 @@
         "region": "Gujarat",
         "latitude": "22.258652",
         "longitude": "71.1923805",
-        "scatterLat": "22.258652",
-        "scatterLong": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.0423805",
         "count": "0",
         "name": "Women's Studies Centre, Sardar Patel University",
         "location": "https://www.spuvvn.edu/academics/academic-centres/womens-study-centre/",
@@ -2459,8 +2459,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "71.1923805",
-          "22.258652"
+          "71.0423805",
+          "22.058652"
         ]
       }
     },
@@ -2629,11 +2629,38 @@
     {
       "type": "Feature",
       "properties": {
+        "region": "Gujarat",
+        "latitude": "22.258652",
+        "longitude": "71.1923805",
+        "scatterLat": "22.058652",
+        "scatterLong": "71.3923805",
+        "count": "7",
+        "name": "Mahila Housing Trust",
+        "location": "https://www.mahilahousingtrust.org",
+        "type": "NGO",
+        "active": "1994",
+        "contact": "info@mahilahsg.org",
+        "programs": "Grassroots programs in habitat development, climate change resilience and participatory governance",
+        "keywords": "Advocacy",
+        "id": 98,
+        "color": "#79A5AE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "71.3923805",
+          "22.058652"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "region": "Haryana",
         "latitude": "29.0587757",
         "longitude": "76.085601",
-        "scatterLat": "29.0587757",
-        "scatterLong": "76.085601",
+        "scatterLat": "28.8587757",
+        "scatterLong": "75.935601",
         "count": "0",
         "name": "Women's Studies Research centre, Kurukshetra University",
         "location": "https://www.kuk.ac.in/information.php?m=Yg==&L01_id=MTE=&L01_direction=H&L02_id=ODQ=",
@@ -2642,14 +2669,14 @@
         "contact": "chairperson.wsc@kuk.ac.in",
         "programs": "1. Master of Arts in Women's Studies\n2. Post-graduate Diploma course in Women's Studies\n3. Gender equity awareness programs\n4. Seminars and conferences with a focus on gender sensitisation., sustainable development, and legal rights",
         "keywords": "Education",
-        "id": 98,
+        "id": 99,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.085601",
-          "29.0587757"
+          "75.935601",
+          "28.8587757"
         ]
       }
     },
@@ -2669,7 +2696,7 @@
         "contact": "womenstudies.mdu@gmail.com",
         "programs": "1. Workshops and seminars with a focus on women's empowerment and development, gender based violence, gender inequality, and women's rights.\n2. Community outreach programs with a focus on women, health, and legal issues\n3. Research projects on customary traditions, social change, and the marriage institution. \n4. Gender sensitisation programs",
         "keywords": "Education",
-        "id": 99,
+        "id": 100,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2696,7 +2723,7 @@
         "contact": "sshc.jgu@gmail.com",
         "programs": "1. Bachelor of Arts in Gender Studies, 2022\n2. Research projects on Gender Based Violence in Haryana\n3. Centre staff teach courses with a focus on Feminist Jurisprudence, Gender Law and Governance, Human Rights of Women, and Family Law.",
         "keywords": "Education",
-        "id": 100,
+        "id": 101,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2723,7 +2750,7 @@
         "contact": "csgs@ashoka.edu.in",
         "programs": "1. ISHQ: Issues in Society, History, and Queerness, a monthly speaker series\n2. ADA: Art, Desire, Activism, arts series that encourages conversations on sexuality, desire, and gender expression\n3. TAP: Theory and Practice: Transnational conversations on gender and sexuality\n4. Summer of ISHQ: Webinar series on Issues of Society, History, and Queerness\n5. Candid: A Queer Feminist Baithak: a public platform for open ended discussions on questions of gender and sexuality, culture and politics.\n6. Reading Group on issues concerning gender, sexuality, identity and activism.\n7. CSGS Specials: Film screanings, performance art, and other campaigns on issues of gender and sexuality. 8. Workshops on gender and sexuality",
         "keywords": "Research",
-        "id": 101,
+        "id": 102,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2750,7 +2777,7 @@
         "contact": "feministCollective@ashoka.edu.in",
         "programs": "Advocacy and campaigns for gender eqality",
         "keywords": "Advocacy",
-        "id": 102,
+        "id": 103,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2767,8 +2794,8 @@
         "region": "Himachal Pradesh",
         "latitude": "31.1048294",
         "longitude": "77.1733901",
-        "scatterLat": "31.1048294",
-        "scatterLong": "77.1733901",
+        "scatterLat": "30.9048294",
+        "scatterLong": "77.0233901",
         "count": "0",
         "name": "Centre for Women's Studies and Development, Himachal Pradesh University",
         "location": "https://hpuniv.ac.in/university-detail/home.php?women-studies-and-development",
@@ -2777,14 +2804,14 @@
         "contact": "cwsdhpus@gmail.com",
         "programs": "1. Workshops and programs with a focus on women, development, and health.\n2. Capacity building programs for women in management\n3. Seminars on gender based violence, child sexual abuse, and human rights\n4. Gender sensitisation campaigns, consumer awareness programs, and self-defence trainings\n5. Implemented Gender Champions Scheme under the Ministry of Women and Child Developement",
         "keywords": "Education",
-        "id": 103,
+        "id": 104,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "77.1733901",
-          "31.1048294"
+          "77.0233901",
+          "30.9048294"
         ]
       }
     },
@@ -2804,7 +2831,7 @@
         "contact": "info@sambhaavnaa.org",
         "programs": "1. Workshops on social issues for activsts, educators, and social work practitioners.\n   1.1. Theatre of The Oppressed\n   1.2. Beyond the Binary of Gender: Transfeminist perspectives from India\n   1.3. Ethnographic Research Methods for Activists",
         "keywords": "Education",
-        "id": 104,
+        "id": 105,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2831,7 +2858,7 @@
         "contact": "himachalqueerCollective@gmail.com",
         "programs": "LGBTQIA [plus] resource centre",
         "keywords": "Advocacy",
-        "id": 105,
+        "id": 106,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2858,7 +2885,7 @@
         "contact": "soochna@sajhesapne.org",
         "programs": "1. Sapna Centres: Offers Skill Development training, guaranteed placements, and on the job training to young women in rural areas\n   1.1. Management and Rural Development Professional course\n   1.2. Mathematics Educators Professional course\n2. Sapnewali: Podcast and a radio show on life and leadership lessons from women achievers in villages for women empowerment.",
         "keywords": "Women's rights",
-        "id": 106,
+        "id": 107,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2875,8 +2902,8 @@
         "region": "J&K",
         "latitude": "33.277839",
         "longitude": "75.3412179",
-        "scatterLat": "33.277839",
-        "scatterLong": "75.3412179",
+        "scatterLat": "33.077839",
+        "scatterLong": "75.1912179",
         "count": "0",
         "name": "Centre for Women's Studies, University of Jammu",
         "location": "https://www.jammuuniversity.ac.in/cws/introduction",
@@ -2885,14 +2912,14 @@
         "contact": "0191 2435248 Ext. 2882",
         "programs": "1. Three months certificate course on gender issues, since 2006\n2. Three months certificate course on women and law, since 2012\n3. Gender sensitisation workshops and seminars with a focus on gender equality and women's empowerment\n4.  Skill development training programs as part of capacty building\n5. Fiedldwork with comunity women, self-help groups and other organisations on issues like nutrition, health, and women's development  ",
         "keywords": "Education",
-        "id": 107,
+        "id": 108,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "33.277839"
+          "75.1912179",
+          "33.077839"
         ]
       }
     },
@@ -2912,7 +2939,7 @@
         "contact": "coordinatorcwsrku@gmail.com",
         "programs": "1. Master of Arts in Gender Studies \n2. Certificate course in Women and Law\n3. Choice Based Credit System (CBCS) papers offered to University students:\n    3.1. Women and Society in Kashmir \n    3.2. Women and Society in India\n4. Refresher courses in Women's studies for University staff\n5. Gender sensitisation and women's development programs\n6. Seminars with a focus on women, health, gender based violence, and human rights\n7. Implemented Gender Champions Scheme under the Ministry of Women and Child Developement",
         "keywords": "Education",
-        "id": 108,
+        "id": 109,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2939,7 +2966,7 @@
         "contact": "apdp.kashmir@yahoo.com",
         "programs": "1. Awareness campaigns against enforced disappearances and enforced silence\n2. Documention of enforced disappearances in Kashmir since 1989\n3. Legal aid and support to parents and family members of persons subjected to enforced diasappearances. ",
         "keywords": "Legal aid",
-        "id": 109,
+        "id": 110,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2966,7 +2993,7 @@
         "contact": "",
         "programs": "1. Documentation of violence including killings, torture, sexual violence, enforced disappearances, internet bans in Kashmir 2. Legal aid to victims' families 3. Awareness and advocacy",
         "keywords": "Research",
-        "id": 110,
+        "id": 111,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -2993,7 +3020,7 @@
         "contact": "kashmirwomensCollective@gmail.com",
         "programs": "1. Gatherings to discuss women's safety and empowerment inside and outside of the home space.\n2. Support system for women facing violence, discrimination, and oppression\n3. Conversation and Climb: Gathering for trips and discussions on women's mobility, choice, and recreation.",
         "keywords": "Capacity building",
-        "id": 111,
+        "id": 112,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3020,7 +3047,7 @@
         "contact": "mehramkashmir@gmail.com",
         "programs": "Services on upliftment, assistance and redressal of Kashmiri women against sexual and gender based violence.",
         "keywords": "Legal aid",
-        "id": 112,
+        "id": 113,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3047,7 +3074,7 @@
         "contact": "sonzalwelfare@gmail.com",
         "programs": "1. Inclusive Sexual Health Clinic: Medical aid to gender and sexuality minority community in Jammu and Kashmir\n2. Legal aid and organisational support to survivors of Gender Based Violence\n3. Capacity buidling and skill development training for social empowerment\n4. Advocacy and campaigns for gender equality\n5. Documentation of gender and sexuality minority narratives\n6. Aims to build Self Help Groups for the transgender community",
         "keywords": "Legal aid",
-        "id": 113,
+        "id": 114,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3074,7 +3101,7 @@
         "contact": "",
         "programs": "1. Queer rights advocacy and support group\n2. Community building",
         "keywords": "Advocacy",
-        "id": 114,
+        "id": 115,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3091,8 +3118,8 @@
         "region": "Karnataka",
         "latitude": "15.3172775",
         "longitude": "75.7138884",
-        "scatterLat": "15.3172775",
-        "scatterLong": "75.7138884",
+        "scatterLat": "15.1172775",
+        "scatterLong": "75.5638884",
         "count": "0",
         "name": "ALF (Alternative Law forum )",
         "location": "http://altlawforum.org/about/",
@@ -3101,14 +3128,14 @@
         "contact": "contact@altlawforum.org",
         "programs": "Advocacy and research in the field of law. Focus on Gender, sexuality, Media, Culture, Informal labour etc",
         "keywords": "Advocacy",
-        "id": 115,
+        "id": 116,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "15.3172775"
+          "75.5638884",
+          "15.1172775"
         ]
       }
     },
@@ -3128,7 +3155,7 @@
         "contact": "dr.laxmi@yahoomail.com",
         "programs": "MA, Mphil and PhD in Women's Studies. Certificate Course in Women's Empowerment. ",
         "keywords": "Education",
-        "id": 116,
+        "id": 117,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3155,7 +3182,7 @@
         "contact": "drsowbhagya@gmail.com",
         "programs": "PG Diploma in Ideal Womanhood (1 year), Certificate Course in Geriatric care, Certificate Course in Parenting. ",
         "keywords": "Capacity Building",
-        "id": 117,
+        "id": 118,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3182,7 +3209,7 @@
         "contact": "uccf@kuvempu.ac.in",
         "programs": "The Centre conducts seminars, workshops and Training on gender issues.",
         "keywords": "Gender Sensitisation",
-        "id": 118,
+        "id": 119,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3209,7 +3236,7 @@
         "contact": "",
         "programs": "The Centre's Primary engagement is organizing workshops, seminars and colloquiams on topics like Gender and Education, panchayati raj education, Violence against women and Role of Community in Prevention of violence against women.",
         "keywords": "Gender Sensitisation",
-        "id": 119,
+        "id": 120,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3236,7 +3263,7 @@
         "contact": "",
         "programs": "MA in Women's Studies ",
         "keywords": "Education",
-        "id": 120,
+        "id": 121,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3263,7 +3290,7 @@
         "contact": "contactus@nls.ac.in",
         "programs": "The centre aims to look at the law and legal process from the perspective of gender justice.",
         "keywords": "Education",
-        "id": 121,
+        "id": 122,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3290,7 +3317,7 @@
         "contact": "NA",
         "programs": "MA, Mphil and PhD in Women's Studies. Thrust areas in the field of Women and Empowerment, Gender and Empowerment of law, Women and environment , Women and NGO",
         "keywords": "Education",
-        "id": 122,
+        "id": 123,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3317,7 +3344,7 @@
         "contact": "dept.womenstudies@bub.ernet.in",
         "programs": "MA in women's studies",
         "keywords": "Education",
-        "id": 123,
+        "id": 124,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3344,7 +3371,7 @@
         "contact": "pvasanth@iihs.co.in",
         "programs": "BA, MA and Doctoral programme in Urban Practice. A year long Fellowship in Urban Practice",
         "keywords": "Research",
-        "id": 124,
+        "id": 125,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3371,7 +3398,7 @@
         "contact": "https://aravaniartproject.com/contact-us",
         "programs": "Multiple art installations and solo/group exhibitions/workshops with NGO's, Art festivals etc across South and western India. ",
         "keywords": "LGBTQ Rights",
-        "id": 125,
+        "id": 126,
         "color": "#F67C87"
       },
       "geometry": {
@@ -3398,7 +3425,7 @@
         "contact": "INFO@MARAA.IN",
         "programs": "1. Bevaru: Bevaru is a bi-monthly newspaper dedicated to the struggles and resilience of the women workers in Bangalore, particularly sex workers, garment workers, domestic workers and powrakarmikas (waste pickers). 2. Chu Kar Dekho: Performative exploration of gender based violence. 3. Kaay Boltay: Experiment in creative protest with an emphasis on Comedy. ",
         "keywords": "Women's Rights",
-        "id": 126,
+        "id": 127,
         "color": "#F67C87"
       },
       "geometry": {
@@ -3425,7 +3452,7 @@
         "contact": "solidarityfoundation2013@gmail.com",
         "programs": "1. Crisis Intervention. 2. Expanding Livelihood Options 3. Advocacy for children of sex workers 4. Corporate Involvement",
         "keywords": "Sex Workers",
-        "id": 127,
+        "id": 128,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3452,7 +3479,7 @@
         "contact": "ondededvs@gmail.com",
         "programs": "Programs to strengthen the linkages between multiple stake holders in the development sector.",
         "keywords": "Advocacy",
-        "id": 128,
+        "id": 129,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3479,7 +3506,7 @@
         "contact": "9916930313",
         "programs": "1. Social entrepreneurship by sex workers. 2. PreP tablets for people at higher risk of HIV/AIDS",
         "keywords": "HIV/AIDS Prevention",
-        "id": 129,
+        "id": 130,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3506,7 +3533,7 @@
         "contact": "reachsahodari@gmail.com",
         "programs": "1. Redwall Project:The RedWall is an artivism project initiated by Trans rights activist and artist Kalki Subramaniam to empower the voices of the under privileged women, non-binary and gender-diverse people of India against sexual abuse and assault. 2.The Thoorikai project: The Thoorikai Project encourages Trans people to use art to channel their experiences into tangible forms of work",
         "keywords": "LGBTQ Rights",
-        "id": 130,
+        "id": 131,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3533,7 +3560,7 @@
         "contact": "vimochana79@gmail.com",
         "programs": "1. Campaign on Dowry Violence and Unnatural Deaths of women in marriage. 2. Campaign against declining sex ratios in the districts of Mandya, Ramnagar and Channapatna. 3. Fortnight campaigns against early marriage/child marriage in tribal communities of Mysore and Kodagu. 4. Campaign on Prevention of sexual harassment act. 5. Nun So Powerful: Women's platform for justice. 6. Batein Aman Ki: Dialogue to safeguard constitutional values. 7. Campaigns against Dilution of 498A. ",
         "keywords": "Gender Sensitisation",
-        "id": 131,
+        "id": 132,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3560,7 +3587,7 @@
         "contact": "sangama@sangama.org",
         "programs": "1. Campaign for sexual minority rights. 2. Advocacy and campaign for repeal of section 377 of Indian Penal Code. 3. Campaign for sex workers' rights. 4. HIV/AIDS Health campaign. ",
         "keywords": "Sex Workers",
-        "id": 132,
+        "id": 133,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3587,7 +3614,7 @@
         "contact": "mobberafoundation@gmail.com",
         "programs": "1. Shiksha sthaan: Siksha Sthaan aspires to provide training in various skill sets that will enhance the knowledge curve through a productive workshop environment, guided by trained candidates to teach a skill, which improves the scope of career opportunities. 2: Project Upadhi: We hope to take a stride in the path of creating equal opportunities for everyone regardless of their gender or sex. Through this project we aim to locate job opportunities for members of the queer community and aid them in progressing towards financial independence and self-reliance. 3.Khairiyat: A HIV initiative by Mobbera Foundation Create awareness, and to provide a platform for HIV +ve folks for any support they require, right from testing to providing medical supplies and counselling (mental / nutrition / overall health).",
         "keywords": "Capacity Building",
-        "id": 133,
+        "id": 134,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3614,7 +3641,7 @@
         "contact": "info@hasirudala.in",
         "programs": "Programs on Livelihood, Housing, Social Security, Zero Waste, Health of Waste pickers. ",
         "keywords": "Advocacy",
-        "id": 134,
+        "id": 135,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3641,7 +3668,7 @@
         "contact": "https://www.vidyaranya.org/contact-us/",
         "programs": "1. Ujjwala: Ujjwala is our initiative that focuses on victims of trafficking through rehabilitation centres. Vidyaranya has impacted over 380 women since its inception in 2008 2. Swadhar: Swadhar is an institute that targets the well-being of widows, sexual victims, survivors of natural calamities, and exploited women, who are disowned and uncared by their families and relatives. 3. Spandana Hostel: Spandana Hostel for Disabled Students, Trainees and Working Women",
         "keywords": "Sexual Abuse Prevention",
-        "id": 135,
+        "id": 136,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3668,7 +3695,7 @@
         "contact": "jasmine@hidden-pockets.com",
         "programs": "Programs on sexual and reproductive health",
         "keywords": "Sexual and Reproductive Health",
-        "id": 136,
+        "id": 137,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3695,7 +3722,7 @@
         "contact": "whaqbangalore@gmail.com",
         "programs": "Support space for women loving women, includes meetings, social meetups and fitness groups",
         "keywords": "LGBTQ Rights",
-        "id": 137,
+        "id": 138,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3722,7 +3749,7 @@
         "contact": "reachout@clpr.org.in",
         "programs": "Focus on areas like 1.Constitutional Culture. 2.Governance Reform. 3. Disability Rights. 4. Gender and Sexuality. 5. Transgender rights. 6. Discrimination and intersectionality",
         "keywords": "Research",
-        "id": 138,
+        "id": 139,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3749,7 +3776,7 @@
         "contact": "swabhavatrust@gmail.com",
         "programs": "Programs to enhance access to social, medical and legal support to LGBTQ people in Bangalore",
         "keywords": "LGBTQ Rights",
-        "id": 139,
+        "id": 140,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3766,8 +3793,8 @@
         "region": "Kerala",
         "latitude": "10.8505159",
         "longitude": "76.2710833",
-        "scatterLat": "10.8505159",
-        "scatterLong": "76.2710833",
+        "scatterLat": "10.6505159",
+        "scatterLong": "76.1210833",
         "count": "0",
         "name": "Women's Studies Centre , Cochin University of Science and Technolongy ",
         "location": "https://wsc.cusat.ac.in/",
@@ -3776,14 +3803,14 @@
         "contact": "wsc.cusat@gmail.com",
         "programs": "The Centre's primary engagement is organising conferences, Seminars, Workshops and other activities related to gender sensitization and awareness of gender related issues in the university",
         "keywords": "Gender Sensitisation",
-        "id": 140,
+        "id": 141,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "76.2710833",
-          "10.8505159"
+          "76.1210833",
+          "10.6505159"
         ]
       }
     },
@@ -3803,7 +3830,7 @@
         "contact": "wshod@uoc.ac.in",
         "programs": "The Department offers MA, Mphil and Phd in women's Studies. ",
         "keywords": "Education",
-        "id": 141,
+        "id": 142,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -3830,7 +3857,7 @@
         "contact": "thulyatamahilasamaj@gmail,com",
         "programs": "NA",
         "keywords": "Self Help Groups",
-        "id": 142,
+        "id": 143,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3857,7 +3884,7 @@
         "contact": "info@anweshi.org",
         "programs": "1. Counseling and legal aid to abused and persecuted women. 2. Work with Kerala's acclaimed decentralized government bodies, 3. Short Stay homes. 4: Education and activism.",
         "keywords": "Advocacy",
-        "id": 143,
+        "id": 144,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3884,7 +3911,7 @@
         "contact": "Mobile no: +91 9539985678",
         "programs": "NA",
         "keywords": "Self Help Groups",
-        "id": 144,
+        "id": 145,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3911,7 +3938,7 @@
         "contact": "sahayatrika@gmail.com",
         "programs": "Counselling services; community organising and awareness through public events and collaborations",
         "keywords": "LGBTQ Rights",
-        "id": 145,
+        "id": 146,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3938,7 +3965,7 @@
         "contact": "sakhikerala@gmail.com",
         "programs": "1. Training and Capacity Building. 2. Research Program with an emphasis on the following themes: Gender and climate change\r\nSocial construction of self-image among adolescent girls in Kerala\r\nSexual abuse of girl children\r\nDeterminants and consequences of women’s work in the unorganized sector\r\nNon-party political process and women’s participation\r\nResource directory on Support services for women victims of violence\r\nGIS based information systems on Panchayats\r\nPolitical decentralisation and the Primary health care system in Kerala\r\nStudy on Cashew Sector\r\nStudy on gender based Violence\r\nStudy on maternal protectio",
         "keywords": "Capacity Building",
-        "id": 146,
+        "id": 147,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3965,7 +3992,7 @@
         "contact": "rema00814@gmail.com",
         "programs": "NA",
         "keywords": "Self Help Groups",
-        "id": 147,
+        "id": 148,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -3992,7 +4019,7 @@
         "contact": "queerala2014@gmail.com",
         "programs": "Capacity building and awareness through community gatherings and events, disseminating national and international LGBTIQ news in English and Malayalam, providing support services, assisting research projects on LGBTIQ issues ",
         "keywords": "LGBTQ Rights",
-        "id": 148,
+        "id": 149,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4019,7 +4046,7 @@
         "contact": "kswsrc@caluniv.ac.in kankana_wsrc@yahoo.co.in",
         "programs": "1. Master of Philosophy in Women's Studies\n2. Doctor of Philosophy in Women's Studies\n3. Research work with a focus on gender, society, development, history, education, literature, and media studies\n4. Conferences, seminars, film screenings, consultation, and lectures on issues like women empowerment, disability studies, Convention on the Elimination of all forms of Discrimination Against Women (CEDAW), Gender and labour, and Gender Based Violence",
         "keywords": "Education",
-        "id": 149,
+        "id": 150,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4036,8 +4063,8 @@
         "region": "Maharashtra",
         "latitude": "19.7514798",
         "longitude": "75.7138884",
-        "scatterLat": "19.7514798",
-        "scatterLong": "75.7138884",
+        "scatterLat": "19.5514798",
+        "scatterLong": "75.5638884",
         "count": "0",
         "name": "Krantijyoti Svitribai Phule Women's Studies Centre",
         "location": "http://www.unipune.ac.in/snc/womens_studies_centre/default.htm",
@@ -4046,14 +4073,14 @@
         "contact": "wsc@unipune.ac.in",
         "programs": "MA in Gender, Culture and Development Studies, Mphil in Gender/Women's Studies, Post Graduate Interdiscplinary Diploma in gender, Culture and Development , Post Graduate Interdiscplinary Certificate course in Women's Studies. Interdiscplinary Diploma in Gender",
         "keywords": "Education",
-        "id": 150,
+        "id": 151,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.7138884",
-          "19.7514798"
+          "75.5638884",
+          "19.5514798"
         ]
       }
     },
@@ -4073,7 +4100,7 @@
         "contact": "reg@sgbau.ac.in",
         "programs": "MA in Gender and Women's Studies. Thrust areas of research include Gender and Higher education, Family, Kinship, Gender and Literature, Gender and Development",
         "keywords": "Education",
-        "id": 151,
+        "id": 152,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4100,7 +4127,7 @@
         "contact": "svdesh@gmail.com",
         "programs": "1. PG Diploma in Women's Studies 2. Research projects to highlight women's issues",
         "keywords": "Education",
-        "id": 152,
+        "id": 153,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4127,7 +4154,7 @@
         "contact": "rcws@sndt.ac.in",
         "programs": "MA, PhD in Women's Studies",
         "keywords": "Education",
-        "id": 153,
+        "id": 154,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4154,7 +4181,7 @@
         "contact": "info@jp-india.org",
         "programs": "Offers Post Graduate programs in Indian Aesthetics,\r\nCriticism And Theory\r\nAesthetics, Criticism And Theory (ACT)\r\nSoutheast Asian Art And Architecture\r\nIslamic Aesthetics\r\nYoga And Tantra\r\nBuddhist Aesthetics\r\nCommunity Engagement\r\nCreative Processes\r\nCuratorial Processes\r\nSouthasian Painting\r\nCinema",
         "keywords": "Education",
-        "id": 154,
+        "id": 155,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4181,7 +4208,7 @@
         "contact": "info@bicar.org",
         "programs": "Offers post graduate certificate courses in Psychoanalysis, Continental thought and Curatorial Practices",
         "keywords": "Education",
-        "id": 155,
+        "id": 156,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4208,7 +4235,7 @@
         "contact": "acws@tiss.edu",
         "programs": "MA, Mphil and PhD in Women's Studies. Thrust areas of research include\n1. Labour and Migration\n2. Caste and Sexuality\n3. Gender-based Violence\n4. Feminist Methodologies and Ethics\n5. Feminist Science and Technology Studies\n6. Feminist Approaches to Health\n7. Feminist Disability Studies\n8. Women and Law -Child Rights\n9. Violence Against Women\n10. Caste, Class, Gende",
         "keywords": "Education",
-        "id": 156,
+        "id": 157,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4235,7 +4262,7 @@
         "contact": "director.wsc@bamu.ac.in",
         "programs": "MA in Women's Studies, PG Certificate Course in Women's Studies, The Centre also conducts seminars, workshops and Conferences at intra-university level. ( Also publishes academic work in Marathi)",
         "keywords": "Education",
-        "id": 157,
+        "id": 158,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4262,7 +4289,7 @@
         "contact": "indiaculturelab@godrejinds.com",
         "programs": "1. Leadership programme 2. Summer fellowships to study contemporary issues in India 3. Events on sexuality and gender diversity, gender-themed newsletters",
         "keywords": "Advocacy",
-        "id": 158,
+        "id": 159,
         "color": "#F67C87"
       },
       "geometry": {
@@ -4289,7 +4316,7 @@
         "contact": "umanglbt@gmail.com",
         "programs": "1. Advocacy and awareness on issues of sexuality, societal/family pressure, mental & other health concerns",
         "keywords": "LGBTQ Rights",
-        "id": 159,
+        "id": 160,
         "color": "#F67C87"
       },
       "geometry": {
@@ -4316,7 +4343,7 @@
         "contact": "gauaravcbo@gmail.com",
         "programs": "HIV awareness under the NACO funding especially with msm community. ",
         "keywords": "HIV/AIDS Prevention",
-        "id": 160,
+        "id": 161,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4343,7 +4370,7 @@
         "contact": "NA",
         "programs": "1. Research on queer issues \n2. Publish an annual journal called Scripts since 1998 \n3. Counselling services",
         "keywords": "Research",
-        "id": 161,
+        "id": 162,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4370,7 +4397,7 @@
         "contact": "qknitindia@gmail.com",
         "programs": "1. Capacity building for LGBTQIA+ community. 2. Regular bulletins through Queer Samachar",
         "keywords": "Advocacy",
-        "id": 162,
+        "id": 163,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4397,7 +4424,7 @@
         "contact": "9953911270",
         "programs": "Advocacy for trans rights, capacity building programs, helpline and health services for Transgenders in India",
         "keywords": "Capacity Building",
-        "id": 163,
+        "id": 164,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4424,7 +4451,7 @@
         "contact": "",
         "programs": "1. Support group for parents of queer persons\n2. Counselling, sensitisation, and awareness programs on LGBTQIA [plus] inclusion",
         "keywords": "Support Services",
-        "id": 164,
+        "id": 165,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4451,7 +4478,7 @@
         "contact": "sparrow1988@gmail.com",
         "programs": "1. research on women especially in the field of art and culture.",
         "keywords": "Digital Archive",
-        "id": 165,
+        "id": 166,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4478,7 +4505,7 @@
         "contact": "majlislaw@gmail.com",
         "programs": "1. legal and social support to survivors of sexual violence. 2. Advocacy for placing women's and children's right on the public policy agenda",
         "keywords": "Legal Aid",
-        "id": 166,
+        "id": 167,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4505,7 +4532,7 @@
         "contact": "cedbom@doccentre.net",
         "programs": "1. alternative research, documentation and educational infrastructure in critical areas particularly climate change, economic democracy, knowledge in civil society, new urbanism",
         "keywords": "Digital Archive",
-        "id": 167,
+        "id": 168,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4532,7 +4559,7 @@
         "contact": "info@humsafar.org",
         "programs": "1. Health: The Humsafar Trust runs three Targeted Interventions (TIs) supported by NACO-MDACS with an aim to reduce HIV/STI prevalence among Men who have Sex with Men (MSM) and TG/ Hijra communities \n2. Advocacy: Emphasis on sensitization, community mobilisation, media relations, crisis management and policy change. \n3. Capacity Building: Capacity Building of CBO's in Maharashtra, Gujarat, Rajasthan, Goa and MP",
         "keywords": "HIV/AIDS Prevention",
-        "id": 168,
+        "id": 169,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4559,7 +4586,7 @@
         "contact": "NA",
         "programs": "Multiple programs in the field of HIV/AIDS awareness",
         "keywords": "HIV/AIDS Prevention",
-        "id": 169,
+        "id": 170,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4586,7 +4613,7 @@
         "contact": "cehatmumbai@gmail.com",
         "programs": "1. Research on health, legislations, patients' rights, women's health, violence and health. \n2. Courses on health and human rights, sexual assault, training of trainers to respond to violence against women. \n3. Advocacy and campaign through filing PILs",
         "keywords": "Sexual Abuse Prevention",
-        "id": 170,
+        "id": 171,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4613,7 +4640,7 @@
         "contact": "communications@snehamumbai.org",
         "programs": "Programs in the field of Maternal and Newborn Health, Child Health and Nutrition, Empowerment Health and sexuality of Adolescents, Prevention of Violence against women and childern. ",
         "keywords": "Sexual and Reproductive Health",
-        "id": 171,
+        "id": 172,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4640,7 +4667,7 @@
         "contact": "fellowship@thegenderlab.org",
         "programs": "1. Research projects on issues of gender-based violence on marginalised communities. \n2. Community service based leadership programme.",
         "keywords": "Capacity Building",
-        "id": 172,
+        "id": 173,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4667,7 +4694,7 @@
         "contact": "https://www.safecity.in/contact-us/",
         "programs": "1. Global Diplomacy Lab - Research and praxis in the field of Urban design. \n2. Urban Thinkers Campus- Creating space for dialogues on safe spaces in cities",
         "keywords": "Research",
-        "id": 173,
+        "id": 174,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4694,7 +4721,7 @@
         "contact": "https://ecf.org.in/contact/",
         "programs": "1. Action for equality Programme: Gender sensitization for Young boys age13-17 2. \nRaise: Brings together multiple stakeholder to address the issue of gender sensitization amongst young and adolescent boys.",
         "keywords": "Gender sensitisation",
-        "id": 174,
+        "id": 175,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4721,7 +4748,7 @@
         "contact": "022 26523402",
         "programs": "1.Education - Scholarship for girls, Rehnuma Library and reading circle. \n2. Counselling and paralegal support to women and children facing gender based violence. \n3. Training in the field of sports, Personality Development and Photography",
         "keywords": "Support Services",
-        "id": 175,
+        "id": 176,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4748,7 +4775,7 @@
         "contact": "info@sangram.org",
         "programs": "1. Vidrohi Mahila Manch: Works with women and children facing violence \n2. VAMP: Collective of sex workers in Maharashtra and North Karnataka. \n3. Collective of Male and Trans Sex workers \n4. Nazariya: Works with Muslim Women at grassroot level. \n5. Mitra: Collective of Children of sex workers. \n6. Sangram Plus: Support group for HIV Positive women in Maharashtra \n7. CBM: Community based Monitoring Program",
         "keywords": "Sex Workers",
-        "id": 176,
+        "id": 177,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4775,7 +4802,7 @@
         "contact": "info@pointofview.org",
         "programs": "1. Gender. Sex. Tech: To equip women, Girls, queers and trans person to freely inhabit digital spaces. \n2. Engendering conversation about disability and sexuality through zines, workshops etc. ",
         "keywords": "Technology",
-        "id": 177,
+        "id": 178,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4802,7 +4829,7 @@
         "contact": "samabhav@samabhavanasociety.org",
         "programs": "1. SMILE: Students mastering important life skills education. \n2. HAI: Healthy Adolescent initiatives \n3. ASTITVA: Art Festival. \n4. DISNEY: Voluntary engagement Program. \n5: Male Child Advocacy: Advocacy and campaign for young and adolescent boys and increasing awareness about male child abuse.",
         "keywords": "Advocacy",
-        "id": 178,
+        "id": 179,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4829,7 +4856,7 @@
         "contact": "https://www.nswp.org/contact/contact",
         "programs": "1. Oppose Criminalization of Sex work. \n2. Speak out about Violence against sex workers especially by Police, Clients, Institutions, Intimate partners etc. \n3. Challenging Stigma and discrimination against Sex workers. \n4. Advocate for economic empowerment and social inclusion of sex work and sex workers",
         "keywords": "Sex workers",
-        "id": 179,
+        "id": 180,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4856,7 +4883,7 @@
         "contact": "info@saathii.org",
         "programs": "1. Technical Operational and Financial assistance to strengthen and expand access to HIV/AIDS,  Maternal and childs health, Legal and social prptection. 2. Advocacy for increased attention and political commitment on Public Health, Implementation of Supreme Court Rulings and acts such as HIV/AIDS Acts. 3. Knowledge transfer and sharing of science, law policy and advocacy updates 4. Networking to bring people from multiple sectors together and foster collaboration. ",
         "keywords": "HIV/AIDS prevention",
-        "id": 180,
+        "id": 181,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -4883,7 +4910,7 @@
         "contact": "info@queer-ink.com",
         "programs": "1. developing, publishing and promoting Indian LGBTHQIA+ Literature, in print, across screens and languages. 2. web-based Read & Listen platform 3. QShorts including fiction or non-fiction stories of 5,000 words",
         "keywords": "Research",
-        "id": 181,
+        "id": 182,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4910,7 +4937,7 @@
         "contact": "contact@thepridecircle.com",
         "programs": "Organizational Inclusion, Creating Affirming and supportive environment, Employability, Entrepreneurship",
         "keywords": "LGBTQ Rights",
-        "id": 182,
+        "id": 183,
         "color": "#F7B289"
       },
       "geometry": {
@@ -4937,7 +4964,7 @@
         "contact": "aidslaw@lawyersCollective.org",
         "programs": "1. Advocacy, campaigns, and legal services for access to medicine: Affordable medicines and treatment campaigns specially for HIV/AIDS\n2. Women's Rights Initiative: Providing legal inputs to organisations involved in the women's movement specially on gender based violence, domestic violence, personal laws, sexual harrassment at the workplace, public interest litigation, and social action interventions\n3. Advocacy, campaigns, and legal services for dignity, participation and evidence based policies for drug users\n4. Research and legal aid services to People Living with HIV (PLHIV) using a human rights framework\n5. Research, campaign and legal aid for Lesbian, Gay, Bisexual, and Transgender rights and the rights of sex workers",
         "keywords": "Legal Aid",
-        "id": 183,
+        "id": 184,
         "color": "#F7B289"
       },
       "geometry": {
@@ -4964,7 +4991,7 @@
         "contact": "contact@mariwalahealthinitiative.org",
         "programs": "Mental Health and Suicide Prevention with an emphasis on Queer Affirmative Counselling Practice.",
         "keywords": "Mental Health",
-        "id": 184,
+        "id": 185,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -4991,7 +5018,7 @@
         "contact": "contact@hrln.org",
         "programs": "Anti trafficking and anti slavery initiative, Campaign against Acid Attack, Campaign against Sexual Harrasment, Childs right initiative, Covid19, Criminal Justice Initiative Right to food Initiative, Right to Education Initiative, Right to Education Initiative, Right to Reproductive rights initiative etc.",
         "keywords": "Sexual Abuse Prevention",
-        "id": 185,
+        "id": 186,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5008,8 +5035,8 @@
         "region": "Manipur",
         "latitude": "24.6637173",
         "longitude": "93.9062688",
-        "scatterLat": "24.6637173",
-        "scatterLong": "93.9062688",
+        "scatterLat": "24.4637173",
+        "scatterLong": "93.7562688",
         "count": "0",
         "name": "Women's Studies Centre, Manipur University",
         "location": "",
@@ -5018,14 +5045,14 @@
         "contact": "",
         "programs": "1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice\n2. Research",
         "keywords": "Gender sensitisation",
-        "id": 186,
+        "id": 187,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "93.9062688",
-          "24.6637173"
+          "93.7562688",
+          "24.4637173"
         ]
       }
     },
@@ -5045,7 +5072,7 @@
         "contact": "nupimanbi@gmail.com",
         "programs": "1. Advocacy and campaigns for the rights of Transgender people\n2. Gender Sensitisation programs\n3. Financial aid, legal support and community support services\n4. Training workshops on human rights and trans legal rights",
         "keywords": "Legal aid",
-        "id": 187,
+        "id": 188,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5072,7 +5099,7 @@
         "contact": "",
         "programs": "1. Relief work for economically disadvantaged, sexual and gender minority communities\n2. Community education programs\n3. Trans affirmative programs like workshops on how to apply for Transgender Identification care and certificate",
         "keywords": "Education",
-        "id": 188,
+        "id": 189,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5099,7 +5126,7 @@
         "contact": "yaall.manipur@gmail.com",
         "programs": "1. Peer support helpline for issues related to mental health, Sexual Orientation, Gender Identity, and Expression (SOGIE), online bullying, and harassment. \n2. Meitram: Co-working and networking space run by queer individuals working as a resource centre and providing Library, Café, Counseling and short homestay services.\n3. Queer Games: Sports events as awareness campaigns of queer identity and rights held in Imphal, Kohima, Mizoram, Darjeeling, and Guwahati\n4. Khudol Initiative: Donation drives of books, stationaries, clothes, and other reusable items to people in need\n5. Training and capacity building workshops with initiatives like Emerging Queer Leaders Project, Project Seven Sisters, and North East Peer Support Project. \n6. Research on the health needs assessment with a special focus on Sexual Reproductive Health and Rights (SRHR) ",
         "keywords": "Mental health",
-        "id": 189,
+        "id": 190,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5126,7 +5153,7 @@
         "contact": "mingselfoundation@gmail.com",
         "programs": "1. Advocacy for the rights of LGBTQIA [plus] people and women\n2. Documentation, archival, and awareness of Gender Based Violence and Sexual Abuse and violations\n3. Educational webinars and discussions on issues like the rights of queer persons, review of Board of Secondary Education Manipur syllabus, sexual harrasment, human rights, and sustainable development",
         "keywords": "Advocacy",
-        "id": 190,
+        "id": 191,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5153,7 +5180,7 @@
         "contact": "",
         "programs": "1. Documention of the lives of transmen and their partners.\n2. Support and advocacy group for the rights of transmen. ",
         "keywords": "Support services",
-        "id": 191,
+        "id": 192,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5180,7 +5207,7 @@
         "contact": "",
         "programs": "1. Organisational support and crisis intervention for transmen, lesbians and bisexual women\n2. Advocacy for the legal, medical, social, and educational rights of the queer community",
         "keywords": "Advocacy",
-        "id": 192,
+        "id": 193,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5207,7 +5234,7 @@
         "contact": "atmamanipurtransman@gmail.com",
         "programs": "1. Organisational support and crisis intervention for transmen\n2. Advocacy for the legal, medical, social, and educational rights of the queer community\n3. Awareness campaigns and training programs on legal rights",
         "keywords": "Advocacy",
-        "id": 193,
+        "id": 194,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5224,8 +5251,8 @@
         "region": "Mehgalaya",
         "latitude": "25.4670308",
         "longitude": "91.366216",
-        "scatterLat": "25.4670308",
-        "scatterLong": "91.366216",
+        "scatterLat": "25.2670308",
+        "scatterLong": "91.216216",
         "count": "0",
         "name": "Shamakami",
         "location": "https://www.facebook.com/Shamakami-Lam-Jingshai-176022939104547/",
@@ -5234,14 +5261,14 @@
         "contact": "lamjingshai_2010@yahoo.com",
         "programs": "1. Support and relief work for MSM (Men who have sex with men), Transgender persons, and FSW (Female Sex Worker)\n2. Advocacy for the legal, medical, social, and educational rights of the queer community",
         "keywords": "Support services",
-        "id": 194,
+        "id": 195,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "91.366216",
-          "25.4670308"
+          "91.216216",
+          "25.2670308"
         ]
       }
     },
@@ -5261,7 +5288,7 @@
         "contact": "shillong.lgbtq@gmail.com",
         "programs": "1. Documentation and archival of LGBTQIA [plus] narratives.\n2. Advocacy, meet-ups and discussions for the rights of LGBTQIA [plus] identifying persons.",
         "keywords": "Advocacy",
-        "id": 195,
+        "id": 196,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5288,7 +5315,7 @@
         "contact": "",
         "programs": "1. Advocacy for the rights of Gender and sexual minorities (GSM)\n2. Sensitisation programs and workshops",
         "keywords": "LGBTQ rights",
-        "id": 196,
+        "id": 197,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5305,8 +5332,8 @@
         "region": "MP",
         "latitude": "22.9734229",
         "longitude": "78.6568942",
-        "scatterLat": "22.9734229",
-        "scatterLong": "78.6568942",
+        "scatterLat": "22.7734229",
+        "scatterLong": "78.5068942",
         "count": "0",
         "name": "Women's Studies Department, Barkatullah Vishwavidyalaya",
         "location": "http://www.bubhopal.ac.in/1155/Women-Studies",
@@ -5315,14 +5342,14 @@
         "contact": "",
         "programs": "Mphil in Women's Studies. Certificate Course in Old Age Care.",
         "keywords": "Education",
-        "id": 197,
+        "id": 198,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "22.9734229"
+          "78.5068942",
+          "22.7734229"
         ]
       }
     },
@@ -5342,7 +5369,7 @@
         "contact": "05198- 233731",
         "programs": "1. Creating platforms that allow women to come together. 2. Centering the voices of dalit bahujan and adivasi women in community and civic affairs. 3. Ensuring implementation of state programs. ",
         "keywords": "Advocacy",
-        "id": 198,
+        "id": 199,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5369,7 +5396,7 @@
         "contact": "communications@vacha.org.in",
         "programs": "1.Girls' Resource centre: Organizing resource centre dor adolescent girls in their bastis for skill and personality development. 2. Youth Empowerment : Enhanced participation of youth in community life by increased social awareness and capacity building 3. Research and Training 4. Awareness Building: Adressing issues affecting girls right and  help increase their particpation in community and civic affairs.  ",
         "keywords": "Capacity Building",
-        "id": 199,
+        "id": 200,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5386,8 +5413,8 @@
         "region": "Nagaland",
         "latitude": "26.1584354",
         "longitude": "94.5624426",
-        "scatterLat": "26.1584354",
-        "scatterLong": "94.5624426",
+        "scatterLat": "25.9584354",
+        "scatterLong": "94.4124426",
         "count": "0",
         "name": "Women Studies Centre, Nagaland University",
         "location": "https://www.kohima.nagalanduniversity.ac.in/women",
@@ -5396,14 +5423,14 @@
         "contact": "nuwsckma@nagalanduniversity.ac.in",
         "programs": "1. Research work, documentation, and archival with a focus on women and literacy, customary laws,  women's rights and development, and Violence Against Women\n2. Gender sensitisation programs, capacity building skill development trainings, and programs on women's rights\n3. Translations into regional dialects and disseminations of  women's rights documents",
         "keywords": "Research",
-        "id": 200,
+        "id": 201,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "94.5624426",
-          "26.1584354"
+          "94.4124426",
+          "25.9584354"
         ]
       }
     },
@@ -5423,7 +5450,7 @@
         "contact": "nagaland.godislove@gmail.com",
         "programs": "1. Advocacy for the rights of LGBTQIA [plus] individuals\n2. Community building\n3. Sensitisation programs.",
         "keywords": "LGBTQ rights",
-        "id": 201,
+        "id": 202,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5450,7 +5477,7 @@
         "contact": "",
         "programs": "1. Advocacy for the rights of the LGBT community in Dimapur\n2. Sensitisation programs",
         "keywords": "Advocacy",
-        "id": 202,
+        "id": 203,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5477,7 +5504,7 @@
         "contact": "cwds@cwds.ac.in",
         "programs": "1. Research methodology course in Gender Across Social Science Disciplines, 2021\n2. Orientation course in Region, Resources, and Gender Development, 2017, specially aimed at faculty members of Universities\n3. Orientation course in Towards a Multidisciplinary Research in Social Sciences, 2015, specially aimed at SC/ST postgraduate students from the North Eastern region of India\n4. Research Methodology and Training course in Addressing Exclusions: Approaching Gender, 2013, with a focus on inequalities and exclusions in the economic, political, social and cultural spheres. Course specially aimed at ST/ST candidates.\n5. Research Training course in Women's Studies: Concepts and Debates, 2011\n6. ICSSR post-doctoral fellowships in Women and Gender Studies\n7. Networking and advocacy with a focus on gender sensitisation, unpaid care work, domestic work, safe migration, child care and women’s work.\n8. Action research in Bankura and Medinipur with a focus on women empowerment and involvement in knowledge production\n9. Research projects with a focus on Gender, law, labour, conflict, health, politics, citizenship, and violence\n10. Re-presenting Indian Women 1875-1947: A visual documentary",
         "keywords": "Education",
-        "id": 203,
+        "id": 204,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5504,7 +5531,7 @@
         "contact": "write2athi@gmail.com",
         "programs": "1. Gender Friendly Healthcare Facility Initiative: Online certification course on Demystifying Gender, Orientation, Incongruence and Diversity, and related issues for healthcare providers and staff of healthcare facilities\n2. Gender Friendly Educational Institution Initiative: Certificate course on Gender, Gender In-congruence, sexual orientation and diversity for educationists, teachers, parents, and social workers/scientists.\n3. Indian Professional Association for Transgender Health: Professional arm of ATHI conducts conferences with the aim of Knowledge, Health, Empowerment and Mainstreaming transgender healthcare",
         "keywords": "Education",
-        "id": 204,
+        "id": 205,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5521,8 +5548,8 @@
         "region": "Punjab",
         "latitude": "31.1471305",
         "longitude": "75.3412179",
-        "scatterLat": "31.1471305",
-        "scatterLong": "75.3412179",
+        "scatterLat": "30.9471305",
+        "scatterLong": "75.1912179",
         "count": "0",
         "name": "Women's Studies Centre, Punjabi University",
         "location": "http://www.punjabiuniversity.ac.in/pages/Department.aspx?dsenc=94",
@@ -5531,14 +5558,14 @@
         "contact": "director@wscpedia.org",
         "programs": "1. Master of Arts in Women's Studies\n2. Post-graduate diploma in Women and Child Development\n3. Post-graduate diploma in Gender Studies",
         "keywords": "Education",
-        "id": 205,
+        "id": 206,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "75.3412179",
-          "31.1471305"
+          "75.1912179",
+          "30.9471305"
         ]
       }
     },
@@ -5558,7 +5585,7 @@
         "contact": "pehchan.mansa@gmail.com",
         "programs": "Support and welfare services for the transgender community in Firozpur",
         "keywords": "Support services",
-        "id": 206,
+        "id": 207,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5585,7 +5612,7 @@
         "contact": "",
         "programs": "1. Advocacy for the rights of Gender and Sexual minorities (GSM)\n2. Awareness programs on STI and STDs",
         "keywords": "HIV/AIDS prevention",
-        "id": 207,
+        "id": 208,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5612,7 +5639,7 @@
         "contact": "pehchan.kashish@gmail.com",
         "programs": "1. Targeted intervention for HIV and STI prevention and safe sex practices with MSM, Transgender people, and Hijra communities\n2. Advocacy and campaigns for human rights and Health education ",
         "keywords": "HIV/AIDS prevention",
-        "id": 208,
+        "id": 209,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5629,8 +5656,8 @@
         "region": "Rajasthan",
         "latitude": "27.0238036",
         "longitude": "74.2179326",
-        "scatterLat": "27.0238036",
-        "scatterLong": "74.2179326",
+        "scatterLat": "26.8238036",
+        "scatterLong": "74.0679326",
         "count": "0",
         "name": "Women's Studies Centre, Banasthali Vidyapith",
         "location": "http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/faculties/social-science/sociology/womenstudycentre.html",
@@ -5639,14 +5666,14 @@
         "contact": "wsrc.bv@gmail.com",
         "programs": "1. Post-graduate diploma in Women and Human Rights\n2. Women Empowerment course under Master of Social Work\n3. Foundation course for undergraduate students, titled Women in Indian Society\n4. Compulsory interdisciplinary paper for postgraduate students, titled Women Studies\n5. Counselling services\n6. Workshops, conferences, and awareness programs with a focus on gender sensitisation, women's development, gender based violence, and human rights awareness",
         "keywords": "Education",
-        "id": 209,
+        "id": 210,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "74.2179326",
-          "27.0238036"
+          "74.0679326",
+          "26.8238036"
         ]
       }
     },
@@ -5666,7 +5693,7 @@
         "contact": "",
         "programs": "1. Research project documenting women empowerment programs in Sekawati region, Rajasthan\n2. Advocacy and research programs on developing gender-friendly technology",
         "keywords": "Advocacy",
-        "id": 210,
+        "id": 211,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5693,7 +5720,7 @@
         "contact": "",
         "programs": "Post-graduate diploma in Gender Studies with a focus on Gender studies, Women in Politics and Governance, Issues in Women's empowerment, and Women and law",
         "keywords": "Education",
-        "id": 211,
+        "id": 212,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5720,7 +5747,7 @@
         "contact": "nlu-jod-rj@nic.in",
         "programs": "1. Post-graduate diploma in Gender studies\n2. Advocacy for capacity building, workshops on gender sensitisation and gender legislations\n3. Research projects and public lecture series on women's empowerment and gender justice.",
         "keywords": "Education",
-        "id": 212,
+        "id": 213,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5747,7 +5774,7 @@
         "contact": "",
         "programs": "1. Certificate course in Women and Legal Rights\n2. Undergraduate course in Gender Studies and Community Development\n3. Capacity building workshops\n4. Advocacy and programs on gender justice, gender sensitisation, community development, and women's empowerment",
         "keywords": "Education",
-        "id": 213,
+        "id": 214,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5774,7 +5801,7 @@
         "contact": "",
         "programs": "1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice\n2. Research",
         "keywords": "Research",
-        "id": 214,
+        "id": 215,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5801,7 +5828,7 @@
         "contact": "",
         "programs": "UG Gender Studies and Community Development Course and Certificate Course \"Women and Legal Rights\". Thrust areas of Research 1.Women’s empowerment.\r\n2. Marginalization of women.\r\n3.Critical analysis of stereotypes.\r\n4. Strengthen existing knowledge and build new knowledge on ‘Women in Indian Perspective’ (to address current and future challenges).\r\n5. Organizing camps for rural and tribal women to make them aware of health and hygiene.\r\n6.Community development with a gender perspective.\r\n7.Measures to strengthen Urban/Rural linkage and tribal development.\r\n8. Conduct evidence-based research on ‘Women and Economic Development",
         "keywords": "Education",
-        "id": 215,
+        "id": 216,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5828,7 +5855,7 @@
         "contact": "",
         "programs": "1. Support services for the queer community in Jaipur\n2. Meet-ups, movie screenings, discussions, and webinars on queer rights",
         "keywords": "Support services",
-        "id": 216,
+        "id": 217,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5855,7 +5882,7 @@
         "contact": "mahila.janadhikar@gmail.com",
         "programs": "1. Young Women Leadership Development program: empowering young women through education in technology, sports, and new media. \n2. Capacity building programs with a focus on women's safety and gender equality\n3. Advocacy, awareness campaigns, and intervention against Violence Against Women and Children, child marriage, and witch hunting\n4. Addressing Child Sexual Abuse and training adolescent individuals on child rights to education and protection\n5. Strengthening Panchayati Raj Institutions and Women's Leaderships in local Self Governance Systems through capacity building training projects\n6. Research and advocacy for health and nutrition rights of women and children",
         "keywords": "Women's rights",
-        "id": 217,
+        "id": 218,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5882,7 +5909,7 @@
         "contact": "naibhor.sanstha@gmail.com",
         "programs": "1. Support and welfare services for the transgender community\n2. Garima Greh: a shelter home for transgender persons in distress",
         "keywords": "Support services",
-        "id": 218,
+        "id": 219,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5909,7 +5936,7 @@
         "contact": "naibhor.sanstha@gmail.com",
         "programs": "Collaborate with NACO programs for HIV Awareness in rural districts of Rajasthan",
         "keywords": "Advocacy",
-        "id": 219,
+        "id": 220,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -5936,7 +5963,7 @@
         "contact": "info@sambhali.org",
         "programs": "1. Women Empowerment centres for educational support and vocational skill development training\n2. Awareness programs and workshops on Gender Based Violence and Sexual Abuse\n3. Relief work and emergeny helpline services for women in distress",
         "keywords": "Education",
-        "id": 220,
+        "id": 221,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -5963,7 +5990,7 @@
         "contact": "mkssrajasthan@gmail.com",
         "programs": "Movement for Right To Information, Implementation of Mahatma Gandhi Rural Employment Guarantee Scheme",
         "keywords": "Advocacy",
-        "id": 221,
+        "id": 222,
         "color": "#F67C87"
       },
       "geometry": {
@@ -5990,7 +6017,7 @@
         "contact": "cwsvb14@gmail.com",
         "programs": "1. Integrated Master of Philosophy and Doctor of Philosophy in Gender and Development with special focus on feminist thoughts, Gender, family, and work, Gender, Health, and Education, and Women, Environment, Religion, and Media, Women in Ancient India, and Women in Literature\n2. Research work, public lectures, and workshops on Gender sensitisation and awareness on Violence Against Women\n3. Extention programs with other organisations on women's issues",
         "keywords": "Education",
-        "id": 222,
+        "id": 223,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6017,7 +6044,7 @@
         "contact": "rainbowhills19@gmail.com",
         "programs": "Advocacy and campaigns for queer rights",
         "keywords": "LGBTQ rights",
-        "id": 223,
+        "id": 224,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6034,8 +6061,8 @@
         "region": "Tamil Nadu",
         "latitude": "11.1271225",
         "longitude": "78.6568942",
-        "scatterLat": "11.1271225",
-        "scatterLong": "78.6568942",
+        "scatterLat": "10.9271225",
+        "scatterLong": "78.5068942",
         "count": "0",
         "name": "Madras Institute of Development Studies ",
         "location": "https://www.mids.ac.in/",
@@ -6044,14 +6071,14 @@
         "contact": "office@mids.ac.in",
         "programs": "MIDS offers Doctoral Programs. The areas primary areas of research are as follows, 1. Economic Modelling and Public Finance\n2. Employment, Skill Formation and Labour Markets\n3. Natural Resources, Ecology: Economics and Political Economy\n4. Poverty, Inequality and Discrimination\n5. Caste, Gender and Sexuality Studies\n6. Social Movements and Social Transformation\n7. Social Sector Policies and Outcomes\n8. Social Theory\n9. Social and Cultural History\n10. Political Institutions, Governance and Decentralisation\n11. Sectoral Studies on Agriculture, Industry and Infrastructure and Value Chain Dynamics\n12. Contemporary Urban: Economy, Governance and Politics\n13. Dynamics of Rural Transformations and Rural - Urban Linkages",
         "keywords": "Education",
-        "id": 224,
+        "id": 225,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "78.6568942",
-          "11.1271225"
+          "78.5068942",
+          "10.9271225"
         ]
       }
     },
@@ -6071,7 +6098,7 @@
         "contact": "NA",
         "programs": "Certificate Course in Beauty Therapy, Certificate Course in Gender Studies, Certificate course in Guidance and Counselling and Certificate course in NGOManagement. ",
         "keywords": "Education",
-        "id": 225,
+        "id": 226,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6098,7 +6125,7 @@
         "contact": "kasthuri_ext@avinuty.ac.in",
         "programs": "The major areas of research include: (a) Accessibility and Utilization of Basic Services rendered to Women of SC community to meet out their Rights     and Entitlements.\n(b) Health care \n(c) Nutritional aspects such as breast feeding, food supplementation, nutrition and health education \n(d) Exercise and physical fitness of adolescent girls \n(e) Entrepreneurship development \n(f) Impact of women studies co-curricular programme \n(g) Women and employment",
         "keywords": "Education",
-        "id": 226,
+        "id": 227,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6125,7 +6152,7 @@
         "contact": "dws@bdu.ac.in",
         "programs": "MA, Mphil and PhD in Gender Studies. Certificates, Diploma and PG Diploma Programmes in Life skills and management, Certificates, Diploma and PG Diploma Programmes in Micro and small enterprise development",
         "keywords": "Education",
-        "id": 227,
+        "id": 228,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6152,7 +6179,7 @@
         "contact": "NA",
         "programs": "MA in Women's Studies. Mphil and PhD. Certificate courses in Web Designing and Video editing. A minor (Common paper) in Women's Empowerment. The Department also conducts outreach programmes for rural public, livelihood training, awareness programmes and entrepreneurship trainings.",
         "keywords": "Education",
-        "id": 228,
+        "id": 229,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6179,7 +6206,7 @@
         "contact": "NA",
         "programs": "Foundation Course in Women's Studies (Separately for UG and PG Students. Perspectives on Gender, Gender, Development and Health, Women, Dignity and Legal protection, Short film making, Biblical Perspectives on Gender, Biblical Perspective on Women.",
         "keywords": "Education",
-        "id": 229,
+        "id": 230,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6206,7 +6233,7 @@
         "contact": "NA",
         "programs": "Offers MA, Mphil and a PhD in Women's Studies",
         "keywords": "Education",
-        "id": 230,
+        "id": 231,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6233,7 +6260,7 @@
         "contact": "puwscdirector@gmail.com",
         "programs": "The department offers certificate course in association with other departments in the following fields. 1. Women and Entrepreneurship Practice, 2.  Women and Life management Practicals, 3. Gender Sensitization Practical, 4. Adobe Workshop, 5. Statistics using Software Packages, 6. Soft skills",
         "keywords": "Capacity Building",
-        "id": 231,
+        "id": 232,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6260,7 +6287,7 @@
         "contact": "NA",
         "programs": "MA in Women's Studies, Mphil in Women's Studies, PhD in Women's Studies. PG Diploma in Women Entrepreneurship. The Department specializes in Women Empowerment, Women and Child Welfare, Women and Child Rights, Gender Sensitization, Gender Budgeting and Gender Audit, awareness on Sexual Harassment of Women at Workplace (Prevention,  Prohibition and Redressal ) Act 2013, Internal Committee (IC), Gender  Equity Vs Gender Equality. ",
         "keywords": "Education",
-        "id": 232,
+        "id": 233,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6287,7 +6314,7 @@
         "contact": "",
         "programs": "MA in Women's Studies. ",
         "keywords": "Education",
-        "id": 233,
+        "id": 234,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6314,7 +6341,7 @@
         "contact": "http://orinam.net/contact/",
         "programs": "1. Resource section for learning about lgbtqia+ in the Indian milieu. 2. Blog Featuring narratives from LGBTQIA+ people. 3. The 377 archives- Various documented sources related to section 377. 4. Chennai Pride: Information and event updates on the Chennai Pride.",
         "keywords": "LGBTQ Rights",
-        "id": 234,
+        "id": 235,
         "color": "#F67C87"
       },
       "geometry": {
@@ -6341,7 +6368,7 @@
         "contact": "nirangal.india@gmail.com",
         "programs": "Projects for advocacy and awareness campaigns, particularly those relating to sexual orientation or gender identity (SOGI) issues.",
         "keywords": "Advocacy",
-        "id": 235,
+        "id": 236,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -6368,7 +6395,7 @@
         "contact": "sahodaranchennai@gmail.com",
         "programs": "1. Targeted Intervention: The services include-\r\nIdentifying and reaching out to the community\r\nDistributing condoms, lube, and educating them about safer sex to the individuals\r\nAccess to confidential STD testing and diagnoses\r\nCounselling Services\r\nTreatment and care\r\nPsychoeducation\r\nHealth Camp\r\nNutrition and Diet ",
         "keywords": "Support Services",
-        "id": 236,
+        "id": 237,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6385,8 +6412,8 @@
         "region": "Telangana",
         "latitude": "18.1124372",
         "longitude": "79.0192997",
-        "scatterLat": "18.1124372",
-        "scatterLong": "79.0192997",
+        "scatterLat": "17.9124372",
+        "scatterLong": "78.8692997",
         "count": "0",
         "name": "Anveshi: Research centre for Women's Studies",
         "location": "https://www.anveshi.org.in/",
@@ -6395,14 +6422,14 @@
         "contact": "91 40 27153690",
         "programs": "They have offered short courses on introduction to Women's studies and Queer Studies. Thrust areas of research include 1.Dalit Studies\n2. Minorities Studies\n3. Health and Health Care Systems\n4. Migration and Urban Spaces\n5. Public Domain and Outreach\n6. Law and Critical Legal Theory\n7. Education\n8. Critical Development Studies\n",
         "keywords": "Research",
-        "id": 237,
+        "id": 238,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "18.1124372"
+          "78.8692997",
+          "17.9124372"
         ]
       }
     },
@@ -6422,7 +6449,7 @@
         "contact": "admin@csdhyd.org",
         "programs": "Doctoral Program in Women's Studies and Social Sciences Through TISS. It also offers courses on Research Methodology, Proposal Writing, Academic writing for academics and people working in the development Sector. ",
         "keywords": "Education",
-        "id": 238,
+        "id": 239,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6449,7 +6476,7 @@
         "contact": "NA",
         "programs": "The Centre offers MA, Mphil and Phd courses in Women's Studies. Focus areas include Health, Development, Migration, Caste, Sexuality and Law. A key Field Action project of the School is the Sakhi One Stop Centres, set up in all 33 districts of the state of Telangana, for providing a range of services to women and girls affected by different forms of gender-based violence.",
         "keywords": "Support Services",
-        "id": 239,
+        "id": 240,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6476,7 +6503,7 @@
         "contact": "sheelas@uohyd.ac.in",
         "programs": "The Centre offers MA and PhD in Gender Studies. The thrust areas in which it works are as follows 1. Women’s Education\n2.Globalization and New Economic Policy\n3.Women and Governance\n4. Women’s issues ( Private and Public) 5.Women and Violence (Private and Public)\n6.Women’s Writing and Literature\n7. Feminist Theory and Methods\n8. Women, Media and Information technology\n9. Women and Development\n10. Women and Environment\n11. Women’s History,  12. Women & Science",
         "keywords": "Women's Rights",
-        "id": 240,
+        "id": 241,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6503,7 +6530,7 @@
         "contact": "NA",
         "programs": "1. Capacity building and awareness through organising seminars, workshops, extension lectures. 2. Collaboration with other women's studies centres to encourage women-focused research schemes and activities",
         "keywords": "Research",
-        "id": 241,
+        "id": 242,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6530,7 +6557,7 @@
         "contact": "cws@manuu.edu.in",
         "programs": "Centre undertakes programs to work for the empowerment of Urdu speaking women, through teaching, research, training and advocacy.\nCreate space for women to come together, and work for the upliftment of Women Community\nFacilitate gender analysis on critical issues",
         "keywords": "Education",
-        "id": 242,
+        "id": 243,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6557,7 +6584,7 @@
         "contact": "https://www.prajwalaindia.com/contactus.html",
         "programs": "work on Sex trafficking, Rescue and Rehabilation ",
         "keywords": "Support Services",
-        "id": 243,
+        "id": 244,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -6584,7 +6611,7 @@
         "contact": "info@shaheenCollective.org",
         "programs": "1. Means to Economic Empowerment of women in the local community. 2. Anti trafficking advocacy and activism 3. Health awareness among women and young and adolescent girls. 4. Unity in Diversity : Emphasis on Communal harmony.",
         "keywords": "Advocacy",
-        "id": 244,
+        "id": 245,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -6611,7 +6638,7 @@
         "contact": "pause.perspective@gmail.com",
         "programs": "1. Counselling services for adults, children and organizations. 2. Workshops and Programs. 3. Group Therapy.",
         "keywords": "Mental Health",
-        "id": 245,
+        "id": 246,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6638,7 +6665,7 @@
         "contact": "",
         "programs": "Department Offers an MA, Mphil and Phd in Women's studies. The Key areas of Research are:\n1.Gender and Development\n2. Women and Health\n3. Socio- Economic and Cultural Status of Women\n4. Women and Environmental issues\n5. Women and HIV / AIDS\n6. Violence against Women\n7. Empowerment of Women\n8. Gender Mainstreaming",
         "keywords": "Education",
-        "id": 246,
+        "id": 247,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6665,7 +6692,7 @@
         "contact": "0381-2379135 (O)",
         "programs": "1. Post-graduate diploma course on Women's Studies\n2. Research, documentation, and seminars of women's narratives, Violence Against Women, and Women's Rights, Women and Health and Gender Empowerment\n3. Advocacy and awareness campaigns on gender sensitisation, women's rights, and skill development training programs for women",
         "keywords": "Education",
-        "id": 247,
+        "id": 248,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6682,8 +6709,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8467088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "80.7961592",
         "count": "0",
         "name": "Institute of Women's Studies, University of Lucknow",
         "location": "https://udrc.lkouniv.ac.in/Department/DepartmentDetail/History?dept=47&cd=MwAxADAA",
@@ -6692,14 +6719,14 @@
         "contact": "archana.kshitish@gmail.com",
         "programs": "1. Master of Arts in Women's Studies\n2. Post-graduate diploma in garbh sanskar with a focus on pregnancy, pre and post natal care, diet yoga, human physiology, and issues related to couplehood and family\n3. Six months certificate course in Garbh Sanskar\n4. Capacity building training programs, gender sensitisation workshops, campaigns and awareness programs on gender and development\n",
         "keywords": "Education",
-        "id": 248,
+        "id": 249,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8467088"
+          "80.7961592",
+          "26.6467088"
         ]
       }
     },
@@ -6719,7 +6746,7 @@
         "contact": "lawgendersexuality@dme.ac.in",
         "programs": "1. Awareness campaigns on consent, gender sensitisation programs\n2. Research work on feminist jurisprudence and criminal justice system.\n3. Lecture series on laws on gender and sexuality",
         "keywords": "Research",
-        "id": 249,
+        "id": 250,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6746,7 +6773,7 @@
         "contact": "amucws@gmail.com , director.cws@amu.ac.in",
         "programs": "1. Bachelor of Arts (Honours) in Women's Studies\n2. Master of Arts in Women's Studies\n3. Doctor of Philosophy in Women's Studies\n4. Advocacy, awareness campaigns, and seminars on gender sensitisation, women empowernment, gender justice, and programs adressing gender based violence\n5. Research projects with a focus on Gender and Development, Human rights, Media and Gender studies, History, Language, and Women's issues",
         "keywords": "Education",
-        "id": 250,
+        "id": 251,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6773,7 +6800,7 @@
         "contact": "cwsalld@gmail.com",
         "programs": "1. Master of Arts in Women's Studies\n2. Three months certificate course in Understanding Gender\n3. Outreach programs, workshops, research projects, and lecture series with a focus on women's studies",
         "keywords": "Education",
-        "id": 251,
+        "id": 252,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6800,7 +6827,7 @@
         "contact": "0542-230-7433",
         "programs": "1. Post-graduate diploma in Gender and Women's Studies with a focus on History in Women's Movement, Theories of Feminism, Feminist Methodology, and Women in Literature and Culture\n2. Refresher course in Women's studies for teachers\n3. Refresher course in Women's studies for research scholars\n4. Health check-up camps, literary and legal awareness programs\n5. workshops, seminars, and training programs with a focus on gender sensitisation, capacity building, and gender equality",
         "keywords": "Education",
-        "id": 252,
+        "id": 253,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6827,7 +6854,7 @@
         "contact": "91(0)-120-4392521",
         "programs": "Master of Arts in Gender Studies",
         "keywords": "Education",
-        "id": 253,
+        "id": 254,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6854,7 +6881,7 @@
         "contact": "drsanjaymgkvp@gmail.com",
         "programs": "1. Advocacy for women's rights and gender just society\n2. Community campaigns against Violence against Women, child abuse and gender-based discrimination\n3. Outreach programs and public events advocating greater participation of men for eradication of discrimination\n4. Partners include MASVAW (Men’s Action for Stopping Violence against Women) in Uttar Pradesh, Bapanchi Shala (School for Fathers) in Maharashtra, Men’s Action for Equity (MAE) in Madhya Pradesh, FEM- Jharkhand in Jharkhand, and some LGBTQ rights groups",
         "keywords": "Advocacy",
-        "id": 254,
+        "id": 255,
         "color": "#F67C87"
       },
       "geometry": {
@@ -6871,8 +6898,8 @@
         "region": "Uttar Pradesh",
         "latitude": "26.8467088",
         "longitude": "80.9461592",
-        "scatterLat": "26.8467088",
-        "scatterLong": "80.9461592",
+        "scatterLat": "26.6467088",
+        "scatterLong": "80.7961592",
         "count": "0",
         "name": "The YP Foundation",
         "location": "https://theypfoundation.org/",
@@ -6881,14 +6908,14 @@
         "contact": "info@theypfoundation.org",
         "programs": "1. Feminist and Adolescent Youth-led Action: Comprehensive Sexuality Education (CSE) and Sexual and Reproductive Health and Rights (SRHR) awareness program \n2. Know Your Body, Know Your Rights: CSE on issues of health, sexuality and human rights\n3. Learning Communities: Adolescent Girls' Leadership program\n4. Mardon Wali Baat: systematic reflection, dialogue, and action around masculinity and Gender Based Violence (GBV)\n5. Safe Abortion for Everyone (SAFE): Facilitationg research work and and advocacy for comprehensive abortion services in India\n6. The Access Project: evidence generation and training programme that works towards advocating for young people’s right to quality health services without judgement, stigma and age related barriers.",
         "keywords": "Sexual and Reproductive Health",
-        "id": 255,
+        "id": 256,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "80.9461592",
-          "26.8467088"
+          "80.7961592",
+          "26.6467088"
         ]
       }
     },
@@ -6908,7 +6935,7 @@
         "contact": "snuqc@snu.edu.in",
         "programs": "Advocacy and campaigns for queer rights",
         "keywords": "Advocacy",
-        "id": 256,
+        "id": 257,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -6935,7 +6962,7 @@
         "contact": "masvaw@sahayogindia.org",
         "programs": "1. Gender sensitisation awareness campaigns and programs in educational institutes, workplaces, and Panchayats or local councils for men to examine their assumptions about gender roles and masculinity.\n2. Gaali Band program in schools to end the use of sexually coloured abuses that demean women.",
         "keywords": "Gender sensitisation",
-        "id": 257,
+        "id": 258,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -6962,7 +6989,7 @@
         "contact": "",
         "programs": "1. Advocacy, awareness campaigns, and sensitisation programs for the rights of the LGBTQ[plus] community. \n2. Conducted sessions on Same-Sex Marriage Recognition in India along with The Humsafar Trust and CONNECT",
         "keywords": "Advocacy",
-        "id": 258,
+        "id": 259,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -6989,7 +7016,7 @@
         "contact": "team@sayfty.com",
         "programs": "1. SafeUnsafe Touch: Educational and awareness raising workshop on child sexual abuse\n2. 16 Days of Activism Against Gender Based Violence: Yearly intrernational campaign to adress GBV\n3. Self Defence workshops, advocacy and social media campaigns for gender equality and safe space.",
         "keywords": "Sexual abuse prevention",
-        "id": 259,
+        "id": 260,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7016,7 +7043,7 @@
         "contact": "0124 405 3370",
         "programs": "1. Women, Children, and Fundamental Rights: Project Mera Sahara\n2. Education: campaigns for free, mandatory primary education for all children in slums and rural areas\n3. Health: Focus on awareness programs, capacity building, and community-based responses\n4. Women in Decision Making: Advocacy for women's rights and laws, training women for political leadership\n5. Gender sensitisation programs, skill training, and basic law awareness programs\n6. Action Against (gender based) Violence",
         "keywords": "Education",
-        "id": 260,
+        "id": 261,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7043,7 +7070,7 @@
         "contact": "akshat@ledby.org",
         "programs": "1. LedBy Her Annual Fellowship Program: Five months Leadership program for college going Indian Muslim Women\n2. LedBy Accelerator: One year program for Indian Muslim Women with a focus on enabling young women to accelerate their career journey\n3. Capacity building events and workshops for Indian Muslim Women on professional development and leadership",
         "keywords": "Education",
-        "id": 261,
+        "id": 262,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7070,7 +7097,7 @@
         "contact": "",
         "programs": "1. Targeted intervention for Men who have Sex with Men (MSM) on safe sex practices and HIV and STI prevention \n2. Campaigns with special focus on Human Rights and Health Education",
         "keywords": "HIV/AIDS prevention",
-        "id": 262,
+        "id": 263,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7087,8 +7114,8 @@
         "region": "Uttarakhand",
         "latitude": "30.066753",
         "longitude": "79.0192997",
-        "scatterLat": "30.066753",
-        "scatterLong": "79.0192997",
+        "scatterLat": "29.866753",
+        "scatterLong": "78.8692997",
         "count": "0",
         "name": "Women Studies Centre, Hemvati Nandan Bahuguna Garhwal University",
         "location": "https://www.facebook.com/bourai123/      http://www.hnbgu.ac.in/",
@@ -7097,14 +7124,14 @@
         "contact": "himanshubourai@yahoo.com",
         "programs": "1. Seminars, workshops, conferences, information dissemination, training, and consultancy with a focus on Gender sensitisation, equality, and gender justice\n2. Research",
         "keywords": "Education",
-        "id": 263,
+        "id": 264,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "79.0192997",
-          "30.066753"
+          "78.8692997",
+          "29.866753"
         ]
       }
     },
@@ -7124,7 +7151,7 @@
         "contact": "iitrqagaar@gmail.com",
         "programs": "Advocacy and campaigns for queer rights",
         "keywords": "Advocacy",
-        "id": 264,
+        "id": 265,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7151,7 +7178,7 @@
         "contact": "queerCollectivedehradun@gmail.com",
         "programs": "1. Queer advocacy and support group\n2. Community building",
         "keywords": "Advocacy",
-        "id": 265,
+        "id": 266,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7168,8 +7195,8 @@
         "region": "West Bengal",
         "latitude": "22.9867569",
         "longitude": "87.8549755",
-        "scatterLat": "22.9867569",
-        "scatterLong": "87.8549755",
+        "scatterLat": "22.7867569",
+        "scatterLong": "87.7049755",
         "count": "0",
         "name": "School Of Women's Studies, Jadavpur University",
         "location": "http://www.jaduniv.edu.in/view_department.php?deptid=150",
@@ -7178,14 +7205,14 @@
         "contact": "2414-6531 (D), 2414-6666 (O) Extn.2445",
         "programs": "1. Master of Philosophy in Women's Studies\n2. Research work with a focus on visibilising women, gender justice, and other issues\n3. Gender sensitisation programs",
         "keywords": "Education",
-        "id": 266,
+        "id": 267,
         "color": "#F3BEF1"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          "87.8549755",
-          "22.9867569"
+          "87.7049755",
+          "22.7867569"
         ]
       }
     },
@@ -7205,7 +7232,7 @@
         "contact": "Dr. Sanjukta Chatterjee",
         "programs": "1. Research, workshops, and lectures with a focus on gender sensitisation, addresing Violence Against Women, and Sexual Harassment at the Workplace\n2. Community outreach and extention programs along with NGOs and state government bodies",
         "keywords": "Education",
-        "id": 267,
+        "id": 268,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7232,7 +7259,7 @@
         "contact": "ziniamitra@nbu.ac.in",
         "programs": "Master of Arts in Women's Studies with a focus on feminist methodology, pedagogy, theories, and women's rights and law",
         "keywords": "Women's rights",
-        "id": 268,
+        "id": 269,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7259,7 +7286,7 @@
         "contact": "",
         "programs": "1. Master of Philosophy in Women's Studies\n2. Research work with a focus on creating feminist knowledges in the Bengali language and on integrating the gendered lens along with different art forms like painting, dance, music, drama, sculpture etc. ",
         "keywords": "Women's rights",
-        "id": 269,
+        "id": 270,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7286,7 +7313,7 @@
         "contact": "wsc@mail.vidyasagar.ac.in",
         "programs": "1. Master of Philosophy in Women's Studies\n2. Doctor of Philosophy in Women's Studies\n3. Refresher course for faculty members on Gender Women and Society: Debates and Developments, Gender Equity: Status, Ideologies and Future Challenges, and Recent Themes in Women’s Studies: Relevance of a Multidisciplinary Approach\n4. Special lectures on Women, Development, and Law, Violence Against Women, Gender Sensitisation programs, and Self Defence workshops",
         "keywords": "Women's rights",
-        "id": 270,
+        "id": 271,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7313,7 +7340,7 @@
         "contact": "",
         "programs": "Gender and Sexuality Sensitisation Program course, 2019",
         "keywords": "Gender sensitisation",
-        "id": 271,
+        "id": 272,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7340,7 +7367,7 @@
         "contact": "",
         "programs": "1. Advocacy for gender and sexuality minority rights\n2. Male-to-male sexual health program and HIV Control program, targeted interventions among kothi, panthi, dupli, hijra, gay, bisexual men, male commercial sex workers, laundas, and other male entertainment workers. \n3. Awareness programs, skill building trainings, and psychosocial support, counselling and testing centre\n4. Drop-in centres across West Bengal",
         "keywords": "HIV/AIDS prevention",
-        "id": 272,
+        "id": 273,
         "color": "#F67C87"
       },
       "geometry": {
@@ -7367,7 +7394,7 @@
         "contact": "amra.odbhut@gmail.com",
         "programs": "1. Reading and writing workshops\n2. Film screenings, art and music gatherings\n3. Discussions with a focus on queer and trans narratives",
         "keywords": "Advocacy",
-        "id": 273,
+        "id": 274,
         "color": "#F67C87"
       },
       "geometry": {
@@ -7394,7 +7421,7 @@
         "contact": "",
         "programs": "Advocacy and campaigns for gender equality",
         "keywords": "Advocacy",
-        "id": 274,
+        "id": 275,
         "color": "#F67C87"
       },
       "geometry": {
@@ -7421,7 +7448,7 @@
         "contact": "",
         "programs": "Advocacy and campaigns for Hijra rights",
         "keywords": "Advocacy",
-        "id": 275,
+        "id": 276,
         "color": "#F67C87"
       },
       "geometry": {
@@ -7448,7 +7475,7 @@
         "contact": "ambar.iitkharagpur@gmail.com",
         "programs": "Advocacy and campaigns for queer rights",
         "keywords": "Advocacy",
-        "id": 276,
+        "id": 277,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7475,7 +7502,7 @@
         "contact": "kolkatarista@yahoo.co.in",
         "programs": "1. Peer counselling\n2. Crisis management, legal aid and health care referral services (with a focus on HIV/AIDS, STI, STD) to Hijras and other male-to-female trans persons",
         "keywords": "HIV/AIDS prevention",
-        "id": 277,
+        "id": 278,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7502,7 +7529,7 @@
         "contact": "",
         "programs": "1. Advocacy for the rights of people with non-conforming genders and sexualities (GSM)\n2. Melas and other cultural events",
         "keywords": "LGBTQ rights",
-        "id": 278,
+        "id": 279,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7529,7 +7556,7 @@
         "contact": "bds.samabhabona@gmail.com",
         "programs": "1. Capacity building workshops with transgender individuals\n2. Advocacy for trans affirmative laws and policies and for the rights of sex workers\n3. Legal and community consultation services\n4. Documentation, translation, and archival of trans narratives\n5. Gender Sensitisation programs for educational institutes, neighbourhoods, families, and the police force\n6. Mental Health and Trauma Management workshops \n7. Support group for People Living with HIV (PLHIV)",
         "keywords": "Capacity building",
-        "id": 279,
+        "id": 280,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7556,7 +7583,7 @@
         "contact": "sappho1999@gmail.com",
         "programs": "1. Advocacy, awareness campaigns, seminars and other programs for the rights of Lesbian, Bisexual, and Transgender (LBT) persons\n2. Chorki: In-house study circle as part of queer feminist capacity building and empowerment \n3. Chetana: A resource cum drop in centre with a library and safe space for counselling sessions, workshops, and meetings\n4. Helpline services and Counselling services for the LGBT Community\n5. Gender sensitisation programs at educational institutes, and with the police and medical fraternity",
         "keywords": "Capacity building",
-        "id": 280,
+        "id": 281,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7583,7 +7610,7 @@
         "contact": "",
         "programs": "1. Counselling, rehabilitation, training, prevention campaigns, and research on HIV and AIDS\n2. Prothoma: A Shelter home for the transgender population, LGBTQ community, sex workers, and victims of sex trafficking\n3. Awareness campaigns and programs on Sexual Reproductive Health and Rights (SRHR)\n4. Intervention in issues related to human trafficking and support services to victims of trafficking",
         "keywords": "HIV/AIDS prevention",
-        "id": 281,
+        "id": 282,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7610,7 +7637,7 @@
         "contact": "parichiti@gmail.com",
         "programs": "1. Women Domestic Workers Collectives: Advocacy and awareness campaigns for the rights of WDW focusing on issues like formal contracts, workers benefits and social protection\n2. Drop-in centres provoding health care and vocational and self defence programs for women living in slum areas\n3. Gender sensitisation programs and other awareness campaigns on Violence against Women and Gender Based Violence engaging men's groups",
         "keywords": "Advocacy",
-        "id": 282,
+        "id": 283,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7637,7 +7664,7 @@
         "contact": "swikriti2003@hotmail.com\n+91 983 174 3608",
         "programs": "1. Awareness campaigns and programs with a focus on Human Rights, Legal rights, nutrition, and HIV AIDS\n2. Advocacy and support for lesbian, gay, bisexual and transgender persons \n3. counselling services about sexuality and sexual health.",
         "keywords": "Advocacy",
-        "id": 283,
+        "id": 284,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7664,7 +7691,7 @@
         "contact": "sangram_06@hotmail.com",
         "programs": "1. Counselling on gender, sexuality and sexual health\n2. Referrals for STI/HIV counselling, testing and treatment\n3. Anti-violence and crisis intervention support to trans, Hijra, Kothi and gay people in Murshidabad district of West Bengal\n4. Journal Padakshep\n5. Mass awareness campaigns and other community events, including theatre.",
         "keywords": "Mental health",
-        "id": 284,
+        "id": 285,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7691,7 +7718,7 @@
         "contact": "",
         "programs": "1. Advocacy for the rights of LGBTQI community with a special focus on MSM individuals\n2. Sensitisation programs and awareness campaigns",
         "keywords": "LGBTQ rights",
-        "id": 285,
+        "id": 286,
         "color": "#79A5AE"
       },
       "geometry": {
@@ -7718,7 +7745,7 @@
         "contact": "swayam@swayam.info",
         "programs": "1. Direct Support services to survivors of Violence Against Women (VAW), children, and family members of survivors through therapy, counselling, capacity building vocational trainings, legal aid and advice, workshops on legal rights, and other awareness campaign programs\n2. Collaboration with local panchayats, organisations, and individuals to build a violent free community through public education on women's rights, community mobilisation and action against Violence Against Women\n3. Gender sensitisation programs, trainings, seminars, and workshops on gender justice and programs and campaigns against Sexual Harrassment in the work place\n4. Research, publication, and archival of resource materials on Gender Based Violenc eand Gender Equality",
         "keywords": "Legal aid",
-        "id": 286,
+        "id": 287,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7745,7 +7772,7 @@
         "contact": "pratyaygendertrust@gmail.com",
         "programs": "1. Advocacy, campaigns, programs, discussions, and lectures on and for sexuality rights with a special focus on Calcutta’s kothi, hijda and other gender non-conforming/ transgender women. \n2. Legal and organisational support ",
         "keywords": "Legal aid",
-        "id": 287,
+        "id": 288,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7772,7 +7799,7 @@
         "contact": "durbar.sonagachi@gmail.com",
         "programs": "1. Advocacy and legal intervention for the rights of sex workers and other marginalized communities.\n2. Sensitisation programs and campaigns for administrators and policy makers with the aim to decriminalise and destigmatise sex work, sex workers, and the sex trade environment\n3. Development and Health: Combating the HIV pandemic through mobilisation of sex workers, broadening the base of targeted intervention to support and include children, middle man, babus (clients) and other family members of sex workers\n4. Development and Education: Helps and offers formal and non-formal education to children of sex workers through: \n     4.1. Special Study Centre in collaboration with IGNOU offering Bachelor Preparatory Program, Certificate in Food and Nutrition, Master of Arts in Gender and Development Studies\n     4.2. Rahul Vidhya Niketan: residential home for the children of sex workers at Baruipur\n     4.3. Sonagachi Research and Training Institute: Research, documentation, and capacity building trainings with a focus on sex workers in Kolkata, HIV/AIDS intervention, children of sex workers, sexual bahavious of middle class women, socio-economic conditions of the LGBT community, etc.\n5. Self Regulatory Board: campaigns, dicussions, and actions to remove all criminal activities surrounding sex trade, stop the entery of minor and unwilling trafficked girls into sex trade\n6. Komal Gandhar: cultural wing for dance, drama, Music Band, choir, mimes to further the discourse of sex workers' movement in India\n7. Durbar Sports: football coaching camps and training complexes for children of sex workers and other interested individuals\n8. Banking facility services and assistance in procuring government identification cards ",
         "keywords": "Advocacy",
-        "id": 288,
+        "id": 289,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7799,7 +7826,7 @@
         "contact": "sruti.darc@gmail.com",
         "programs": "Advocacy, campaigns, and inclusive educational discussions for the rights of persons with disabilities with a focus on disability, gender, and sexuality rights",
         "keywords": "Advocacy",
-        "id": 289,
+        "id": 290,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7826,7 +7853,7 @@
         "contact": "",
         "programs": "1. Legal and institutional support to the transgender and hijra community.\n2. Capacity building programs and skill development training with a focus on sustainable livelihood.",
         "keywords": "Legal aid",
-        "id": 290,
+        "id": 291,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7853,7 +7880,7 @@
         "contact": "dinajpurnotunaalo@gmail.com",
         "programs": "1. Advocacy for the rights of transgender, hijra, and Men who have sex with Men (MSM) individuals \n2. Network building and awareness campaigns to reduce the vulnerability of Transgender ,Hijra and MSM ( men having sex with men) communities\n3. Targeted Intervention project with a focus on HIV transmission prevention.\n4. Sensitisation programs",
         "keywords": "Advocacy",
-        "id": 291,
+        "id": 292,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7880,7 +7907,7 @@
         "contact": "amitie.trust@yahoo.com",
         "programs": "Legal counselling and services to lesbian, gay, bisexual and transgender people",
         "keywords": "Legal aid",
-        "id": 292,
+        "id": 293,
         "color": "#F3BEF1"
       },
       "geometry": {
@@ -7907,7 +7934,7 @@
         "contact": "vartablog@gmail.com",
         "programs": "1. Orientation, sensitisation, and training sessions for NGOs, educational institutions, government agencies, corporate bodies and other groups / agencies.\n2. Varta Community Reporters Training and Citizen Journalism Programme: Six months program on building communication, documentation and journalistic skills among youth and other groups marginalized around gender, sexuality or other social markers.\n3. Queer Archival Research chronicling the queer movement in Bengal and India\n4. Katha: Queer Kolkata Oral History Project\n5. Varta Online Locator: A database of queer friendly health and legal services in India\n6. Resources Agencies: Contacts for agencies providing information and support on gender, sexuality and associated issues\n7. Research, training, talks, seminars, and awareness campaigns on gender, sexuality, and intimacy",
         "keywords": "Gender sensitisation",
-        "id": 293,
+        "id": 294,
         "color": "#F7B289"
       },
       "geometry": {

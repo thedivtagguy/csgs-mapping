@@ -39,14 +39,22 @@
                   {data[modalContent.label]}
                  </span>
                 {/if}
+                
               </div>
-                <div class="my-2 px-4  flex flex-col justify-start items-start">
+                <div class="my-2 px-4 py-1 grid grid-cols-1 gap-4">
+                  {#if data.asset}
+                  <img class=" h-48 place-self-center" src = {data.asset}>
+                  {/if}
                   {#if data.author}
                   <p class="font-light text-gray-700 text-sm">Author: <span class="font-normal">{data.author}</span></p>
+                  {/if}
+                  {#if data.description}
+                  <p class="font-light text-gray-700 text-sm"><span class="font-normal">{data.description}</span></p>
                   {/if}
                   {#if data.director}
                   <p class="font-light text-gray-700 text-sm">Director: <span class="font-normal">{data.director}</span></p>
                   {/if}
+                  
                   {#if id == 'publications'}
                   <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
                   {:else}
@@ -55,6 +63,8 @@
                   {#if data.publisher}
                   <p class="font-light text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}
+                  
+                  
                   {#if data.producedBy}
                   <p class="font-light text-gray-700 text-sm">Produced By: <span class="font-normal">{data.producedBy}</span></p>
                   {/if}
@@ -65,6 +75,7 @@
                   <p class="font-light text-gray-700 text-sm">Contact:
                     <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
                   {/if}
+                  
                   
                 </div>
             </div>

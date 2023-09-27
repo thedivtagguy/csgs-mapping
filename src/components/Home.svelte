@@ -13,6 +13,8 @@
     import av from "$data/avMaterial.csv";
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
+    import Judgements from "./charts/Judgements copy.svelte";
+    import judge from "$data/judgements.csv";
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
 <!-- Iterate and show all story headings -->
@@ -22,7 +24,7 @@
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1440" autoplay loop muted playsinline>
+          <video  width= "1300" autoplay loop muted playsinline>
             <source src="/assets/animation.webm" type="video/webm">
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>
@@ -31,7 +33,7 @@
             <Header />
         </div>
     </div>
-<div class="py-4 ">
+<div class="pt-2 sm:py-2 ">
     <section id="map">
         <Mapbox />
     </section>
@@ -90,6 +92,23 @@
             }}
             direction="left"
             combineYear={false}
+        />
+    </section>
+    <section id="judgements">
+        <Judgements 
+        id = "judge"
+        modalContent={{
+            label: "court",
+            title: "judgement",
+            year: "year",
+            asset: "asset", 
+            link: "link",
+            
+            
+        }}
+        
+        title="judgments"
+        dataset={judge}
         />
     </section>
 </div>

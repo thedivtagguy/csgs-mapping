@@ -24,6 +24,11 @@
       title: "Audio Visual Material",
       url: "#av-material",
     },
+
+    {
+      title: "Judgments",
+      url: "#judgements",
+    },
   
   ];
   </script>
@@ -31,21 +36,22 @@
 <div class="container">
   
     <section class=" flex justify-left items-start flex-row md:h-screen">
-        <div class="container md:px-20 text-left">
+        <div class="container md:px-40 text-left">
           
             <div class="max-w-7xl md:py-0">
-                <p class="md:mt-2 px-6 py-1 text-xl font-light text-gray-700 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
+                <p class="md:mt-2 px-6 py-6 text-xl font-light text-gray-700 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
                 </p>
             </div>      
     
           <div >
-            <div class="flex flex-col justify-start items-start md:py-2">
+            <div class="flex flex-cols-2 gap-x-10 gap-y-0.5 flex-wrap justify-start items-start md:py-0 w-full ">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>
                 <MainButton3 label={pages[2].title} link={pages[2].url}/>
                 <MainButton2 label={pages[3].title} link={pages[3].url}/>
                 <MainButton3 label={pages[4].title} link={pages[4].url}/>
+                <MainButton label={pages[5].title} link={pages[5].url}/>
             </div>
           </div>
       </div>

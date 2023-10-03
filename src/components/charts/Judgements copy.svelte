@@ -18,15 +18,15 @@
   let selected;
   export let direction = "left";
 
-  let facets = [];
-  facets = dataset.map((d) => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+  let facets2 = [];
+  facets2 = dataset.map((d) => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
   // Remove empty facets
-  facets.forEach((d) => {
+  facets2.forEach((d) => {
     if (d === "") {
-      facets.splice(facets.indexOf(d), 1);
+      facets2.splice(facets2.indexOf(d), 1);
     }
   });
-  facets.unshift(`All ${facet}s`);
+  facets2.unshift(`All ${facet}s`);
 
   ////text wrap function////////////////////////////////////////////////////////////////////////////////
 
@@ -176,7 +176,7 @@
           .attr("style", "filter: drop-shadow(0px 0px 0px rgba(30,30,30,0.0))");
       });
 
-    d3.selectAll("#facets").on("change", function () {
+    d3.selectAll("#facets2").on("change", function () {
       d3.selectAll(".blob")
 
         .style("opacity", function (d) {
@@ -223,11 +223,11 @@
 
       <div class="chart relative md:flex">
         <div
-          id="facets"
+          id="facets2"
           class="md:flex z-10 hidden {direction}-4 md:absolute flex-col gap-8 justify-start pb-8 my-1"
         >
           <select bind:value={selected} class="rounded-none">
-            {#each facets as facet}
+            {#each facets2 as facet}
               <option class="capitalize" value={facet}>
                 {facet}
               </option>

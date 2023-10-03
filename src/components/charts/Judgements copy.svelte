@@ -14,19 +14,19 @@
   export let dataset = [];
   let data2 = Object.values(judgements);
 
-  let facet = "keyword";
-  let selected;
+  let facet1 = "keyword";
+  let selected2;
   export let direction = "left";
 
   let facets2 = [];
-  facets2 = dataset.map((d) => d[facet]).filter((v, i, a) => a.indexOf(v) === i);
+  facets2 = dataset.map((d) => d[facet1]).filter((v, i, a) => a.indexOf(v) === i);
   // Remove empty facets
   facets2.forEach((d) => {
     if (d === "") {
       facets2.splice(facets2.indexOf(d), 1);
     }
   });
-  facets2.unshift(`All ${facet}s`);
+  facets2.unshift(`All ${facet1}s`);
 
   ////text wrap function////////////////////////////////////////////////////////////////////////////////
 
@@ -133,16 +133,16 @@
     }
     const data = data2;
 
-    const node = svg.selectAll("g").data(data).enter().append("g");
+    const node2 = svg.selectAll("g").data(data).enter().append("g");
 
-    node
+    node2
       .append("svg:image")
       .attr("class", "drawing")
       .attr("xlink:href", (d) => d.asset)
       .attr("x", (d) => d.x)
       .attr("y", (d) => d.y);
 
-    node
+    node2
       .append("text")
       .attr("class", "words")
       .attr("x", (d) => d.x)
@@ -156,9 +156,9 @@
       .text((d) => d.judgement)
       .call(wrap, 120);
 
-    node
+    node2
       .attr("class", function (d) {
-        return "blob " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
+        return "blob2 " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
       })
       .on("mouseover", function (d) {
         this.parentNode.parentNode.appendChild(this.parentNode);
@@ -177,30 +177,30 @@
       });
 
     d3.selectAll("#facets2").on("change", function () {
-      d3.selectAll(".blob")
+      d3.selectAll(".blob2")
 
         .style("opacity", function (d) {
-          if (selected == "All keywords") {
+          if (selected2 == "All keywords") {
             return 1;
           } else {
             return 0.1;
           }
         })
         .style("pointer-events", function (d) {
-          if (selected === "All keywords") {
+          if (selected2 === "All keywords") {
             return "all";
           } else {
             return "none";
           }
         });
 
-      d3.selectAll("." + selected.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3"))
+      d3.selectAll("." + selected2.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3"))
 
         .style("opacity", 1)
         .style("pointer-events", "all");
     });
 
-    node.on("click", function (d, i) {
+    node2.on("click", function (d, i) {
       modal.handleOpen(i, modalContent);
     });
   });
@@ -226,10 +226,10 @@
           id="facets2"
           class="md:flex z-10 hidden {direction}-4 md:absolute flex-col gap-8 justify-start pb-8 my-1"
         >
-          <select bind:value={selected} class="rounded-none">
-            {#each facets2 as facet}
-              <option class="capitalize" value={facet}>
-                {facet}
+          <select bind:value={selected2} class="rounded-none">
+            {#each facets2 as facet1}
+              <option class="capitalize" value={facet1}>
+                {facet1}
               </option>
             {/each}
           </select>

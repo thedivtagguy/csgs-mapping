@@ -261,9 +261,9 @@
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
     /* overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
 
-    direction: ltr;
+    direction: ltr; */
   }
   #timeline {
     grid-column-start: 1;

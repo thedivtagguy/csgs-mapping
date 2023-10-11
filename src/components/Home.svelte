@@ -150,7 +150,7 @@
 .box{
     width: 100%;
     height: 100px;            
-    position: absolute;
+    position: relative;
     top: 0;
 /* Center */
     left: 0;

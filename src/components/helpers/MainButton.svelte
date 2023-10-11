@@ -9,7 +9,7 @@
   //let textWidth = label.length * 8;
   let textWidth = 180;
   // Set width of viewBox based on text width
-  viewBoxWidth = textWidth + 150;
+  viewBoxWidth = textWidth + 50;
   width = viewBoxWidth - 50;
 
   // If label is blank, set text to "Click me"

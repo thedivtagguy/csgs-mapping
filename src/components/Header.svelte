@@ -44,14 +44,14 @@
             </div>      
     
           <div >
-            <div class="flex flex-cols-2 gap-x-10 gap-y-0.5 flex-wrap justify-start items-start md:py-0 w-full ">
+            <div class="flex flex-cols-2 gap-x-4 md:gap-y-6 sm:gap-1 flex-wrap justify-start items-start md:py-0 h-max ">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>
                 <MainButton3 label={pages[2].title} link={pages[2].url}/>
                 <MainButton2 label={pages[3].title} link={pages[3].url}/>
-                <MainButton3 label={pages[4].title} link={pages[4].url}/>
-                <MainButton label={pages[5].title} link={pages[5].url}/>
+                <MainButton label={pages[4].title} link={pages[4].url}/>
+                <MainButton3 label={pages[5].title} link={pages[5].url}/>
             </div>
           </div>
       </div>

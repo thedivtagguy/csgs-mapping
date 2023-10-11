@@ -254,8 +254,8 @@
 
 <style>
   .judgementscontainer {
-    width: 4100px;
-    height: 770px;
+    width: 100%;
+    height: 90vh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(85, 50px);

@@ -1155,6 +1155,10 @@ html {
   padding-left: 10px;
   padding-right: 10px;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1691,6 +1695,14 @@ html {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+  .md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .md\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .md\:pr-0 {
     padding-right: 0px;

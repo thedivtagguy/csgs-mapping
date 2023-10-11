@@ -24,7 +24,7 @@
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1300" autoplay loop muted playsinline>
+          <video  width= "1100" autoplay loop muted playsinline>
             <source src="/assets/animation.webm" type="video/webm">
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>
@@ -125,6 +125,7 @@
     margin-left: 0em;
     height: 90vh;
     position: relative;
+    overflow-y: hidden;
 }
 
 /* MObile */
@@ -150,7 +151,7 @@
 .box{
     width: 100%;
     height: 100px;            
-    position: relative;
+    position: absolute;
     top: 0;
 /* Center */
     left: 0;

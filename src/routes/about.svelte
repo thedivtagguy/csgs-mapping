@@ -69,7 +69,7 @@ In addition to this visualization, the Young India Fellows have also created the
 <p class="mt-5   whitespace-pre-line mx-auto text-gray-500">
   Project Leads: Samreen Mushtaq, Shreyashi Sharma
 Project Contributor: Charul Mehndiratta
-Legal Judgments Compiled by: Aliya Sheriff, Kuhoo Tiwari, Nishita Singh, Shreya Kaul, Sonakshi Grover
+Research Team: Aliya Sheriff, Kuhoo Tiwari, Nishita Singh, Shreya Kaul, Sonakshi Grover
 Design and Data Visualisation: <a href = "https://www.nithyasubramanian.com/" target="_blank" rel="noopener noreferrer">Nithya Subramanian </a>
 </p>
 

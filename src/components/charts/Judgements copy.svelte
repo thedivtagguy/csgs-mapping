@@ -85,10 +85,11 @@
     };
 
     let width = 4400;
-    let widthMobile = 4400;
+    let widthMobile = 310;
     let height = 680;
 
     let amountToScroll = width - window.innerWidth;
+    let amountToScrollMobile = 4400;
     
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline;

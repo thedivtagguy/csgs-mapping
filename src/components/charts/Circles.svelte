@@ -137,7 +137,7 @@
     // Check if mobile device
 
     let width = 650;
-    let widthMobile = 375;
+    let widthMobile = 325;
     let height = 670;
     let dividedBy = 2;
     let avoidOverlapRadius = 28;

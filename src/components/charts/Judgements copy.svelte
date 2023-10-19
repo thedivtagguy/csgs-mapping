@@ -85,11 +85,11 @@
     };
 
     let width = 4400;
-    let widthMobile = 310;
+    let widthMobile = 4300;
     let height = 680;
 
     let amountToScroll = width - window.innerWidth;
-    let amountToScrollMobile = 4400;
+    let amountToScrollMobile = 4000;
     
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline;
@@ -119,6 +119,7 @@
     if (mobileCheck()) {
       width = widthMobile;
       height = window.innerHeight / 1.5;
+      amountToScroll = amountToScrollMobile;
     }
 
     let svg;

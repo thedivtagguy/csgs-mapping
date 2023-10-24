@@ -93,6 +93,9 @@
     
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline;
+    let mm = gsap.matchMedia();
+    
+    mm.add("(min-width: 800px)", () => {
 
     gsap.to("#timeline", {
       x: -amountToScroll,
@@ -112,6 +115,7 @@
         
       }
     });
+  })
 
     
     // Check if mobile device
@@ -256,21 +260,22 @@
 
 <style>
   .judgementscontainer {
-    width: 4100px;
+    width: 4400px;
     height: 770px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
-    /* overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; */
+    
 
-    direction: ltr;
+    
   }
   #timeline {
     grid-column-start: 1;
     grid-row-start: 1;
     position: absolute;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
   }
 
   #timeline .background_lines {

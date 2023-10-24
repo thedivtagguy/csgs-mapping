@@ -260,19 +260,19 @@
 
 <style>
   .judgementscontainer {
-    width: 100vw;
-    height: 770px;
-    position: relative;
+    
     display: grid;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
-    overflow-x: auto;
+    
 
     
   }
   #timelinewrapper{
-
-
+    width: 100vw;
+    height: 770px;
+    position: relative;
+    overflow-x: auto;
   }
   #timeline {
     grid-column-start: 1;

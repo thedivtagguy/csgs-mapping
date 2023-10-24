@@ -260,22 +260,25 @@
 
 <style>
   .judgementscontainer {
-    width: 4400px;
+    width: 100vw;
     height: 770px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(85, 50px);
     grid-template-rows: repeat(15, 50px);
-    
+    overflow-x: auto;
 
     
+  }
+  #timelinewrapper{
+
+
   }
   #timeline {
     grid-column-start: 1;
     grid-row-start: 1;
     position: absolute;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; 
+    
   }
 
   #timeline .background_lines {

@@ -21,7 +21,7 @@
 <main class="">
     <Menu />
 
-    <div class="container ">
+    <div class="container">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
           <video  width= "1300" autoplay loop muted playsinline>
@@ -122,9 +122,11 @@
 }
 .container{
     width: 100%;
-    margin-left: 0em;
+    
     height: 90vh;
     position: relative;
+    
+    
 }
 
 /* MObile */
@@ -149,17 +151,19 @@
 
 .box{
     width: 100%;
-    height: 100px;            
+    height: 80vh;            
     position: absolute;
     top: 0;
 /* Center */
     left: 0;
     right: 0;
     margin: auto;
+    
 
 }
 .stack-top{
     z-index: 9;
+    overflow-y: auto;
     /* margin: 20px; for demo purpose  */
 }
 </style>

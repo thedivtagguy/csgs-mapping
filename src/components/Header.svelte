@@ -35,8 +35,8 @@
 
 <div class="container">
   
-    <section class=" flex justify-left items-start flex-row md:h-screen">
-        <div class="container md:px-40 text-left">
+    <section class=" flex justify-left items-start flex-row md:h-auto">
+        <div class="md:px-40 text-left">
           
             <div class="max-w-7xl md:py-0">
                 <p class="md:mt-2 px-6 py-6 text-xl font-light text-gray-700 ">The Centre for Studies in Gender and Sexuality, Ashoka University, brings to you a one-stop resource directory on all things gender and sexuality in India
@@ -58,4 +58,13 @@
     
     </section>
 </div>
+
+<style>
+
+.container{
+  
+  overflow-y: visible;
+}
+
+</style>
 

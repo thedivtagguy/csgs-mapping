@@ -262,8 +262,8 @@
   .judgementscontainer {
     
     display: grid;
-    grid-template-columns: repeat(85, 50px);
-    grid-template-rows: repeat(15, 50px);
+    /* grid-template-columns: repeat(85, 50px);
+    grid-template-rows: repeat(15, 50px); */
     
 
     
@@ -302,9 +302,7 @@
     z-index: -1;
   }
 
-  .move {
-    transform: translate(-2700px);
-  }
+  
 
   .label-text {
     font-size: 5px;

@@ -1588,9 +1588,6 @@ html {
   .md\:hidden {
     display: none;
   }
-  .md\:h-screen {
-    height: 100vh;
-  }
   .md\:h-auto {
     height: auto;
   }

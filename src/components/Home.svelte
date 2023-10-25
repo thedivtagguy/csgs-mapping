@@ -118,7 +118,7 @@
 
 #map{
     position:relative;
-    z-index: 99;
+    z-index: 9;
 }
 .container{
     width: 100%;

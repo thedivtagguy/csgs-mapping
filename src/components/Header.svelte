@@ -44,7 +44,7 @@
             </div>      
     
           <div >
-            <div class="flex flex-cols-2 gap-x-10 gap-y-0.5 flex-wrap justify-start items-start md:py-0 w-full ">
+            <div class="flex flex-cols-2 gap-x-12 gap-y-0.5 flex-wrap justify-start items-start md:py-0 w-full ">
               
                 <MainButton label={pages[0].title} link={pages[0].url}/>
                 <MainButton2 label={pages[1].title} link={pages[1].url}/>

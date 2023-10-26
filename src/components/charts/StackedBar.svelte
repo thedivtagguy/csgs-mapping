@@ -173,7 +173,7 @@ import StackedMobile from './StackedMobile.svelte';
 				This chart shows {title} by genre. Use the dropdown to filter by keyword or click on a box to read more
 			</p>
 
-			<div class="flex md:flex-col w-full flex-wrap gap-1">
+			<div class="flex md:flex-col w-full flex-wrap gap-2">
 				<!-- Create a legend of formats and their colors -->
 				{#each colorByColors as item, i}
 				<div class="flex flex-wrap gap-2 justify-center items-center">

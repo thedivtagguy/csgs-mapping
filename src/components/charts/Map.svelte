@@ -237,12 +237,12 @@
 	/>
 </svelte:head>
 	<h3 class="text-4xl py-2 uppercase font-sans font-semibold">Institutions</h3>
-	<p class="text-gray-700 py-2 text-sm font-medium ">
+	<p class="text-gray-700 py-2 pb-2 text-sm font-medium ">
 		This map shows institutions and organisations coloured by genre. Where exact locations are unavailable, they are distributed as a grid within the state. Click on each circle to read more
 	</p>
-	<div class="flex flex-wrap gap-2 pb-4 justify-left items-center">
+	<div class="flex flex-wrap gap-2 py-2 justify-left items-center">
 		{#each Object.keys(legend) as key}
-				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-gray-700'} px-2 text-sm">{key}</p>
+				<p style="background-color: {legend[key]}" class="{key == 'Other' ? 'text-white' : 'text-gray-700'} px-2 text-base py-1 font-regular">{key}</p>
 		{/each}
 	</div>
 	

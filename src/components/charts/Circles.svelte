@@ -252,7 +252,7 @@
         "y",
         d3
           .forceY()
-          .strength(0.2)
+          .strength(0.1)
           .y((d) => ordering(d.genre))
       )
       .force(

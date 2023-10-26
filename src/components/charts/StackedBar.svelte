@@ -182,11 +182,11 @@ import StackedMobile from './StackedMobile.svelte';
 						<path id = "legendPath" d={polygonGenerator(true, 30, 30)} fill={item.color}/>
 					  </svg> 
 				  </div>
-				  <div class=" hidden md:block flex-1 ">
+				  <div class=" hidden md:block flex-1 font-regular">
 					<p class=" text-gray-700 text-sm ">{item.name}</p></div>
 				
 				<div class="flex flex-wrap md:hidden">
-					<div style="background-color: {item.color}; width: 100%;" class="px-2">{item.name}</div>
+					<div style="background-color: {item.color}; width: 100%;" class="py-1 px-2">{item.name}</div>
 				</div>
 			</div>  
 				{/each}

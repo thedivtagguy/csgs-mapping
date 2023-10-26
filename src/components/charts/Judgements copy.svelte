@@ -241,6 +241,7 @@
           </select>
         </div>
       </div>
+
       <div id="timelinewrapper">
         
         <div id="timeline">
@@ -262,15 +263,15 @@
   .judgementscontainer {
     
     display: grid;
-    /* grid-template-columns: repeat(85, 50px);
-    grid-template-rows: repeat(15, 50px); */
+    grid-template-columns: repeat(85, 50px);
+    grid-template-rows: repeat(15, 50px);
     
 
     
   }
   #timelinewrapper{
     width: 100vw;
-    height: 770px;
+    height: 700px;
     position: relative;
     overflow-x: auto;
   }

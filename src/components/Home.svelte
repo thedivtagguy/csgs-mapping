@@ -14,6 +14,7 @@
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
     import Judgements from "./charts/Judgements copy.svelte";
+    import qa from "./charts/qa.svelte";
     import judge from "$data/judgements.csv";
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
@@ -21,6 +22,7 @@
 <main class="">
     <Menu />
 
+<<<<<<< Updated upstream
     <div class="container ">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
@@ -29,11 +31,20 @@
             <source src="/assets/animation.mp4" type="video/mp4">
           </video>
         </div>
+=======
+    <div class="container">
+        
+>>>>>>> Stashed changes
         <div class="box stack-top" >
             <Header />
         </div>
+       
     </div>
+    
 <div class="pt-2 sm:py-2 ">
+    <section id="qa">
+        <img src = "static\assets\Banner.svg" alt="banner" style="width: 100%; height: 100%" />
+    </section>
     <section id="map">
         <Mapbox />
     </section>

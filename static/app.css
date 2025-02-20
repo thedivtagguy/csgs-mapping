@@ -1262,11 +1262,11 @@ html {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-3 {
-  line-height: .75rem;
-}
 .leading-none {
   line-height: 1;
+}
+.leading-3 {
+  line-height: .75rem;
 }
 .tracking-wide {
   letter-spacing: 0.025em;

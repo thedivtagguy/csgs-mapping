@@ -14,7 +14,6 @@
     import publications from "$data/publications.csv";
     import Events from './Events.svelte';
     import Judgements from "./charts/Judgements copy.svelte";
-    import qa from "./charts/qa.svelte";
     import judge from "$data/judgements.csv";
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
@@ -22,29 +21,16 @@
 <main class="">
     <Menu />
 
-<<<<<<< Updated upstream
-    <div class="container ">
+    <div class="container">
         <div class="box">
           <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1100" autoplay loop muted playsinline>
-            <source src="/assets/animation.webm" type="video/webm">
-            <source src="/assets/animation.mp4" type="video/mp4">
-          </video>
+          
         </div>
-=======
-    <div class="container">
-        
->>>>>>> Stashed changes
         <div class="box stack-top" >
             <Header />
         </div>
-       
     </div>
-    
 <div class="pt-2 sm:py-2 ">
-    <section id="qa">
-        <img src = "static\assets\Banner.svg" alt="banner" style="width: 100%; height: 100%" />
-    </section>
     <section id="map">
         <Mapbox />
     </section>
@@ -129,14 +115,15 @@
 
 #map{
     position:relative;
-    z-index: 99;
+    z-index: 9;
 }
 .container{
     width: 100%;
-    margin-left: 0em;
+    
     height: 90vh;
     position: relative;
-    overflow-y: hidden;
+    
+    
 }
 
 /* MObile */
@@ -151,7 +138,7 @@
     -moz-transform:rotate(-90deg);
     -webkit-transform:rotate(-90deg);
     -ms-transform:rotate(-90deg);
-    transform: rotate(-90deg) scale(1.5, 1.5) translate(-15vh, 0px) ;
+    transform: rotate(-90deg) scale(1.5, 1.5) translate(-18vh, 0px) ;
     position: relative; 
     z-index: 0;
     
@@ -161,17 +148,19 @@
 
 .box{
     width: 100%;
-    height: 100px;            
+    height: 80vh;            
     position: absolute;
     top: 0;
 /* Center */
     left: 0;
     right: 0;
     margin: auto;
+    
 
 }
 .stack-top{
     z-index: 9;
+    overflow-y: auto;
     /* margin: 20px; for demo purpose  */
 }
 </style>

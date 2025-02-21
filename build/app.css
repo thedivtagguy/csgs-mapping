@@ -945,10 +945,10 @@ html {
 .gap-4 {
   gap: 1rem;
 }
-.gap-x-10 {
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
+.gap-x-12 {
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
 }
 .gap-y-0\.5 {
   row-gap: 0.125rem;
@@ -1588,8 +1588,8 @@ html {
   .md\:hidden {
     display: none;
   }
-  .md\:h-screen {
-    height: 100vh;
+  .md\:h-auto {
+    height: auto;
   }
   .md\:w-auto {
     width: auto;

@@ -29,7 +29,7 @@
         
     </div>
     <section id = "qa">
-        <img src = ".\static\assets\Banner.svg" alt = "Queer Archive Banner">
+        <img src = "./static/assets/Banner.svg" alt = "Queer Archive Banner">
     </section>
 <div class="pt-2 sm:py-2 ">
     <section id="map">

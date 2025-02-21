@@ -22,17 +22,15 @@
     <Menu />
 
     <div class="container">
-        <div class="box">
-          <!-- <img  width= "1000" src="/assets/animation.webm" alt="animation"> -->
-          <video  width= "1300" autoplay loop muted playsinline>
-            <source src="/assets/animation.webm" type="video/webm">
-            <source src="/assets/animation.mp4" type="video/mp4">
-          </video>
-        </div>
+        
         <div class="box stack-top" >
             <Header />
         </div>
+        
     </div>
+    <section id = "qa">
+        <img src = ".\static\assets\Banner.svg" alt = "Queer Archive Banner">
+    </section>
 <div class="pt-2 sm:py-2 ">
     <section id="map">
         <Mapbox />

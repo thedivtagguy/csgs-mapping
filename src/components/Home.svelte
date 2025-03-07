@@ -34,12 +34,9 @@
             <Header />
         </div>
     </div>
-<<<<<<< Updated upstream
-=======
     <section id = "qa">
        <QA></QA>
     </section>
->>>>>>> Stashed changes
 <div class="pt-2 sm:py-2 ">
     <section id="map">
         <Mapbox />

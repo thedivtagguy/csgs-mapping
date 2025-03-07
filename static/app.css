@@ -945,21 +945,16 @@ html {
 .gap-4 {
   gap: 1rem;
 }
-.gap-x-10 {
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
+.gap-x-12 {
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
 }
 .gap-y-0\.5 {
   row-gap: 0.125rem;
 }
 .gap-y-0 {
   row-gap: 0px;
-}
-.gap-x-12 {
-  -webkit-column-gap: 3rem;
-     -moz-column-gap: 3rem;
-          column-gap: 3rem;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;

@@ -15,6 +15,7 @@
     import Events from './Events.svelte';
     import Judgements from "./charts/Judgements copy.svelte";
     import judge from "$data/judgements.csv";
+    import QA from "./charts/qa.svelte";
     let genreColors =  ["#F3DF8C", "#C2DF97", "#F67C87", "#F3BEF1", "#F7B289", "#D1BB80", "#D08C87", "#A8DCC6", "#C0AAAF", "#79A5AE", "#F8CAB0" , "#818181"];</script>
 
 <!-- Iterate and show all story headings -->
@@ -33,6 +34,12 @@
             <Header />
         </div>
     </div>
+<<<<<<< Updated upstream
+=======
+    <section id = "qa">
+       <QA></QA>
+    </section>
+>>>>>>> Stashed changes
 <div class="pt-2 sm:py-2 ">
     <section id="map">
         <Mapbox />
@@ -123,7 +130,7 @@
 .container{
     width: 100%;
     
-    height: 90vh;
+    height: 60vh;
     position: relative;
     
     
@@ -134,7 +141,7 @@
 
 @media (max-width: 768px) {
     .container{
-        height: 90vh;
+        height: 60vh;
         z-index: 0;
     }
     video {
@@ -151,7 +158,7 @@
 
 .box{
     width: 100%;
-    height: 80vh;            
+    height: 60vh;            
     position: absolute;
     top: 0;
 /* Center */
@@ -162,7 +169,7 @@
 
 }
 .stack-top{
-    z-index: 9;
+    z-index: 2;
     overflow-y: auto;
     /* margin: 20px; for demo purpose  */
 }

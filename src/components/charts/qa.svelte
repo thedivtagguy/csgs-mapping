@@ -46,19 +46,21 @@
       if (!animationState) {
         // Shrink and move
         gsap.to(rects, {
-          width: 10,
-          x: groupIndex === 0 ? "-=100" : "+=100",
-          duration: 1.5,
-          stagger: 0.1,
+          height: 0,
+          // width: 10,
+          // x: groupIndex === 0 ? "-=550" : "+=550",
+          duration: 2,
+          //stagger: 0.1,
           ease: "power2.inOut",
         });
       } else {
         // Restore original state
         gsap.to(rects, {
-          width: (i) => originalData[i]?.width || 30,
-          x: (i) => originalData[i]?.x || 0,
-          duration: 1.5,
-          stagger: 0.1,
+          height: 550,
+          // width: 30,
+          // x: 0,
+          duration: 2,
+          //stagger: 0.1,
           ease: "power2.inOut",
         });
       }
@@ -76,13 +78,13 @@
       <svg bind:this={svgElement} xmlns="http://www.w3.org/2000/svg">
         <!-- First group of rectangles (moves left) -->
         <g class="bar-group">
-          {#each Array(20).fill(0) as _, i}
+          {#each Array(15).fill(0) as _, i}
             <rect
               class="bar"
-              x={250 + i * 40}
+              x={15 + i * 40}
               y="150"
-              width="30"
-              height="600"
+              width="39"
+              height="550"
               rx="25"
               fill="#F67C87"
             />
@@ -91,13 +93,13 @@
   
         <!-- Second group of rectangles (moves right) -->
         <g class="bar-group">
-          {#each Array(20).fill(0) as _, i}
+          {#each Array(14).fill(0) as _, i}
             <rect
               class="bar"
-              x={650 + i * 40}
+              x={615 + i * 40}
               y="150"
-              width="30"
-              height="600"
+              width="39"
+              height="550"
               rx="25"
               fill="#F67C87"
             />

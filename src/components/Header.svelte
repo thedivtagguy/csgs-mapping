@@ -44,14 +44,25 @@
             </div>      
     
           <div >
-            <div class="flex flex-cols-2 gap-x-12 gap-y-0.5 flex-wrap justify-start items-start md:py-0 w-full ">
-              
-                <MainButton label={pages[0].title} link={pages[0].url}/>
-                <MainButton2 label={pages[1].title} link={pages[1].url}/>
-                <MainButton3 label={pages[2].title} link={pages[2].url}/>
-                <MainButton2 label={pages[3].title} link={pages[3].url}/>
-                <MainButton3 label={pages[4].title} link={pages[4].url}/>
-                <MainButton label={pages[5].title} link={pages[5].url}/>
+            <div class="flex flex-wrap justify-start items-start gap-4 w-full">
+              <div class="relative ml-[10px] mt-[0px]">
+                <MainButton label={pages[0].title} link={pages[0].url} />
+              </div>
+              <div class="relative ml-[35px] mt-[15px]">
+                <MainButton2 label={pages[1].title} link={pages[1].url} />
+              </div>
+              <div class="relative ml-[25px] mt-[-18px]">
+                <MainButton3 label={pages[2].title} link={pages[2].url} />
+              </div>
+              <div class="relative ml-[-20px] mt-[25px]">
+                <MainButton2 label={pages[3].title} link={pages[3].url} />
+              </div>
+              <div class="relative ml-[8px] mt-[-12px]">
+                <MainButton3 label={pages[4].title} link={pages[4].url} />
+              </div>
+              <div class="relative ml-[40px] mt-[25px]">
+                <MainButton label={pages[5].title} link={pages[5].url} />
+              </div>
             </div>
           </div>
       </div>

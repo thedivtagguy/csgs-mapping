@@ -690,6 +690,18 @@ html {
 .top-0 {
   top: 0px;
 }
+.left-0 {
+  left: 0px;
+}
+.left-1\/4 {
+  left: 25%;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.top-1\/4 {
+  top: 25%;
+}
 .z-10 {
   z-index: 10;
 }
@@ -790,6 +802,72 @@ html {
 }
 .-mt-2 {
   margin-top: -0.5rem;
+}
+.ml-\[10px\] {
+  margin-left: 10px;
+}
+.mt-\[5px\] {
+  margin-top: 5px;
+}
+.ml-\[-15px\] {
+  margin-left: -15px;
+}
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+.ml-\[5px\] {
+  margin-left: 5px;
+}
+.mt-\[-10px\] {
+  margin-top: -10px;
+}
+.ml-\[-20px\] {
+  margin-left: -20px;
+}
+.mt-\[-5px\] {
+  margin-top: -5px;
+}
+.ml-\[8px\] {
+  margin-left: 8px;
+}
+.mt-\[12px\] {
+  margin-top: 12px;
+}
+.ml-\[-10px\] {
+  margin-left: -10px;
+}
+.mt-\[-15px\] {
+  margin-top: -15px;
+}
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+.ml-\[35px\] {
+  margin-left: 35px;
+}
+.ml-\[25px\] {
+  margin-left: 25px;
+}
+.mt-\[-18px\] {
+  margin-top: -18px;
+}
+.mt-\[-12px\] {
+  margin-top: -12px;
+}
+.ml-\[-40px\] {
+  margin-left: -40px;
+}
+.mt-\[255px\] {
+  margin-top: 255px;
+}
+.mt-\[25px\] {
+  margin-top: 25px;
+}
+.ml-\[40px\] {
+  margin-left: 40px;
+}
+.mt-\[0px\] {
+  margin-top: 0px;
 }
 .block {
   display: block;

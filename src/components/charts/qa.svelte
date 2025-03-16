@@ -49,9 +49,9 @@
           height: 0,
           // width: 10,
           // x: groupIndex === 0 ? "-=550" : "+=550",
-          duration: 2,
+          duration: 1,
           //stagger: 0.1,
-          ease: "power2.inOut",
+          
         });
       } else {
         // Restore original state
@@ -61,7 +61,7 @@
           // x: 0,
           duration: 2,
           //stagger: 0.1,
-          ease: "power2.inOut",
+          ease: "bounce.out",
         });
       }
     });
@@ -73,17 +73,19 @@
   <main>
     
     <button class="animate-button1" on:click={toggleAnimation}>Body</button>
-    <button class="animate-button2" on:click={toggleAnimation}>Space</button>
+    <button class="animate-button1 spacebutton" on:click={toggleAnimation}>Space</button>
+    <button class="animate-button1 languagebutton" on:click={toggleAnimation}>Language</button>
+    <button class="animate-button1 rewritingsbutton" on:click={toggleAnimation}>Rewritings</button>
     <svg class="queer-archive" preserveAspectRatio="none" viewBox="0 0 1200 800">
       <svg bind:this={svgElement} xmlns="http://www.w3.org/2000/svg">
         <!-- First group of rectangles (moves left) -->
         <g class="bar-group">
-          {#each Array(15).fill(0) as _, i}
+          {#each Array(19).fill(0) as _, i}
             <rect
               class="bar"
-              x={15 + i * 40}
+              x={10 + i * 62}
               y="150"
-              width="39"
+              width="61"
               height="550"
               rx="25"
               fill="#F67C87"
@@ -91,20 +93,7 @@
           {/each}
         </g>
   
-        <!-- Second group of rectangles (moves right) -->
-        <g class="bar-group">
-          {#each Array(14).fill(0) as _, i}
-            <rect
-              class="bar"
-              x={615 + i * 40}
-              y="150"
-              width="39"
-              height="550"
-              rx="25"
-              fill="#F67C87"
-            />
-          {/each}
-        </g>
+        
       </svg>
       <image href="./assets/Banner.svg" x="0" y="0" width="100%" />
       
@@ -119,56 +108,45 @@
     /* Button styling */
     .animate-button1 {
       font-family: "Abril Fatface", cursive;
-      background-color: #F3DF8C;
+      background-color: #c2df97;
       color: #CC2F46;
       font-size: 24px;
       padding: 12px 24px;
-      border: #F7B289;
+      border: #f3bef1;
+      border-width: 2px;
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s;
-      position: absolute;
-      top: 1015px;
-      left: 300;
+      position: relative;
+      top: 350px;
+      left: 140px;
       transform: translateX(-50%);
       z-index: 10;
     }
   
     .animate-button1:hover {
-      background-color: #f3d14a;
+      background-color: #f3bef1;
       transform: translateX(-50%) scale(1.05);
     }
   
     .animate-button1:active {
       transform: translateX(-50%) scale(0.95);
     }
-  
-    .animate-button2 {
-      font-family: "Abril Fatface", cursive;
-      background-color: #F3DF8C;
-      color: #CC2F46;
-      font-size: 24px;
-      padding: 12px 24px;
-      border: #F7B289;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s;
-      position: absolute;
-      top: 915px;
-      left:600;
-      transform: translateX(-50%);
-      z-index: 10;
+  .spacebutton{
+    position: relative;
+      top: 270px;
+      left:300px;
+  }
+    .languagebutton{
+      position: relative;
+      top: 270px;
+      left:600px;
     }
-  
-    .animate-button2:hover {
-      background-color: #f3d14a;
-      transform: translateX(-50%) scale(1.05);
+    .rewritingsbutton{
+      position: relative;
+      top: 350px;
+      left:760px;
     }
-  
-    .animate-button2:active {
-      transform: translateX(-50%) scale(0.95);
-    }
-
     /* Center SVG container */
     .svg-container {
       position: relative;

@@ -121,7 +121,7 @@
 .container{
     width: 100%;
     
-    height: 60vh;
+    height: 55vh;
     position: relative;
     
     

@@ -110,12 +110,12 @@ const categoryIcons = {
     const cellSize = width / cols;
 const cellSize2 = width / 9;
 const cellSize3 = width - 20;
-    const svg3 = d3.select("#gridSvg");
+    const svg2 = d3.select("#gridSvg");
     data2.forEach((d) => {
       //  // Only take the first 25 items to fit the grid
       // const items = data2.slice(0, 25);
 
-      svg3
+      svg2
         .selectAll("image")
         .data(data2)
         .enter()
@@ -130,7 +130,7 @@ const cellSize3 = width - 20;
 
 const iconPath = "M176.61,333.2c46,7.88,100.27-35.87,100.27-87.48s-15.73-70.28-42.27-93.87S185.46,115.48,186,100.73,206,83,206,83s-8.89,12.2-3.29,20.64a25,25,0,0,0,33.91,7.87c11.9-7.19,22.61-26.54,13.27-52.1S219.37,21.11,187.92,27.5,111.25,64.86,90.61,112,54.73,219.8,77.83,261.45C101.09,303.39,122.06,323.86,176.61,333.2Z";
 
-const svg4 = d3.select("#gridSvg2");
+const svg3 = d3.select("#gridSvg2");
 
     data3.forEach((d, i) => {
       
@@ -141,7 +141,7 @@ const svg4 = d3.select("#gridSvg2");
 
 
      
-      svg4.selectAll("path")
+      svg3.selectAll("path")
       .data(data3)
         .enter()
         .append("path")
@@ -165,9 +165,9 @@ const svg4 = d3.select("#gridSvg2");
         d.color = categoryColors[d.artform]; // Assign color based on category
   });
 
-  const svg5 = d3.select("svg.svg5").attr("width", width).attr("height", height);
+  const svg4 = d3.select("svg.svg4").attr("width", width).attr("height", height);
 
-  svg5
+  svg4
       .selectAll("rect")
       .data(
         data4.map((d, i) => ({
@@ -273,11 +273,15 @@ const svg4 = d3.select("#gridSvg2");
   <div class="grid-container">
     <svg id="gridSvg2" width="1280" height="500" />
   </div>
-  <svg class="svg5" />
+  <svg class="svg4" />
   
 </main>
 
 <style>
+  svg {
+    border: none !important; /* Removes any CSS border */
+    outline: none; /* Removes any outline if applied */
+}
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
   /* Button styling */

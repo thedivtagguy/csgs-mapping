@@ -48,19 +48,19 @@
               <div class="relative ml-[10px] mt-[0px]">
                 <MainButton label={pages[0].title} link={pages[0].url} />
               </div>
-              <div class="relative ml-[35px] mt-[15px]">
+              <div class="relative ml-[45px] mt-[0px]">
                 <MainButton2 label={pages[1].title} link={pages[1].url} />
               </div>
-              <div class="relative ml-[25px] mt-[-18px]">
+              <div class="relative ml-[-25px] mt-[10px]">
                 <MainButton3 label={pages[2].title} link={pages[2].url} />
               </div>
-              <div class="relative ml-[-20px] mt-[25px]">
+              <div class="relative ml-[20px] mt-[10px]">
                 <MainButton2 label={pages[3].title} link={pages[3].url} />
               </div>
-              <div class="relative ml-[8px] mt-[-12px]">
+              <div class="relative ml-[30px] mt-[0px]">
                 <MainButton3 label={pages[4].title} link={pages[4].url} />
               </div>
-              <div class="relative ml-[40px] mt-[25px]">
+              <div class="relative ml-[60px] mt-[0px]">
                 <MainButton label={pages[5].title} link={pages[5].url} />
               </div>
             </div>

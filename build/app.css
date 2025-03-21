@@ -770,6 +770,30 @@ html {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.ml-\[10px\] {
+  margin-left: 10px;
+}
+.mt-\[0px\] {
+  margin-top: 0px;
+}
+.ml-\[45px\] {
+  margin-left: 45px;
+}
+.ml-\[-25px\] {
+  margin-left: -25px;
+}
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+.ml-\[30px\] {
+  margin-left: 30px;
+}
+.ml-\[60px\] {
+  margin-left: 60px;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -936,25 +960,14 @@ html {
 .gap-6 {
   gap: 1.5rem;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .gap-1 {
   gap: 0.25rem;
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-4 {
-  gap: 1rem;
-}
-.gap-x-10 {
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
-}
-.gap-y-0\.5 {
-  row-gap: 0.125rem;
-}
-.gap-y-0 {
-  row-gap: 0px;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1588,8 +1601,8 @@ html {
   .md\:hidden {
     display: none;
   }
-  .md\:h-screen {
-    height: 100vh;
+  .md\:h-auto {
+    height: auto;
   }
   .md\:w-auto {
     width: auto;

@@ -1,26 +1,31 @@
 <script>
   import ModalOpen from "../modal/ModalOpen.svelte";
-  import space from "$data/space.csv";
-  import body from "$data/body.csv";
+  
   import { onMount } from "svelte";
   import * as d3 from "d3";
   import { gsap } from "gsap/dist/gsap.js";
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
-  import rewritings from "$data/rewritings.csv";
-  import language from "$data/language.csv";
-
+  
+import data from "$data/qa.csv";
   let modal;
   let selected;
   export let direction = "right";
   export let modalContent;
   export let title = "";
   export let id = ""; // ID prefix of the chart
-  
+  // let body = [];
+  // let space = [];
+  // let language = [];
+  // let rewritings = [];
+
+
+console.log(data);
+ 
 
   let svgElement;
   let animationState = false; // Track animation state
 
-  let originalData = [];
+
 
   onMount(() => {
     if (!svgElement) {
@@ -35,10 +40,7 @@
     //   x: parseFloat(rect.getAttribute("x")),
     //   width: parseFloat(rect.getAttribute("width")),
     // }));
-    const data = space;
-    const data2 = body;
-    const data3 = rewritings;
-    const data4 = language;
+    
     const width = 1280,
       height = 500;
 
@@ -59,28 +61,34 @@
     };
 
     
-    // Load data from CSV
-    // d3.csv("data.csv").then(data => {
-    //     // Assign random positions to each object
-    data.forEach((d) => {
+ 
+    // Group elements based on their category
+    const body = data.filter(d => d.category === "Body");
+    const space = data.filter(d => d.category === "Space");
+    const language = data.filter(d => d.category === "Language");
+    const rewritings = data.filter(d => d.category === "Rewritings");
+ 
+    
+
+    space.forEach((d) => {
       d.x = Math.random() * width;
       d.y = Math.random() * height;
       d.color = categoryColors[d.artform];
     });
 
     // Create Voronoi diagram
-    const voronoi = d3.Delaunay.from(data.map((d) => [d.x, d.y])).voronoi([0, 0, width, height]);
+    const voronoi = d3.Delaunay.from(space.map((d) => [d.x, d.y])).voronoi([0, 0, width, height]);
     const svg = d3.select("svg.svg1").attr("width", width).attr("height", height);
 
     // Draw cells
     svg
       .selectAll("path")
       .data(
-        data.map((d, i) => ({
+        space.map((d, i) => ({
           polygon: voronoi.cellPolygon(i),
           color: d.color,
           name: d.name,
-          category: d.category
+          category: d.artform
         }))
       )
       .enter()
@@ -90,7 +98,8 @@
       .attr("stroke", "gray")
       .on("click", (event, d) => alert(`Clicked: ${d.name} (Artform ${d.artform})`));
 
-console.log(data2);
+
+      
 
       // Category-to-icon mapping (replace with your actual SVG icon paths)
 const categoryIcons = {
@@ -111,13 +120,11 @@ const categoryIcons = {
 const cellSize2 = width / 9;
 const cellSize3 = width - 20;
     const svg2 = d3.select("#gridSvg");
-    data2.forEach((d) => {
-      //  // Only take the first 25 items to fit the grid
-      // const items = data2.slice(0, 25);
-
+    body.forEach((d) => {
+      
       svg2
         .selectAll("image")
-        .data(data2)
+        .data(body)
         .enter()
         .append("image")
         .attr("x", (d, i) => (i % cols) * cellSize)
@@ -132,33 +139,38 @@ const iconPath = "M176.61,333.2c46,7.88,100.27-35.87,100.27-87.48s-15.73-70.28-4
 
 const svg3 = d3.select("#gridSvg2");
 
-    data3.forEach((d, i) => {
+    // rewritings.forEach((d, i) => {
       
-        d.x = (i % cols) * cellSize2;  // Columns left to right
-        d.y = (height - cellSize2) - Math.floor(i / cols) * cellSize2; // Rows bottom to top
-        d.color = categoryColors[d.artform]; // Assign color based on category
+    //     d.x = (i % cols) * cellSize2;  // Columns left to right
+    //     d.y = (height - cellSize2) - Math.floor(i / cols) * cellSize2; // Rows bottom to top
+    //     d.color = categoryColors[d.artform]; // Assign color based on category
   
 
 
      
-      svg3.selectAll("path")
-      .data(data3)
-        .enter()
-        .append("path")
-        .attr("d", iconPath)
-        .attr("transform", d => `translate(${d.x}, ${d.y}) scale(.3)`) // Adjust size
-        .attr("fill", d => d.color)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1)
-        .on("click", (event, d) => alert(`Clicked: ${d.name} (Artform ${d.artform})`));
- 
+      // Bind data and create paths
+svg3.selectAll(".grid-icon") // Use a specific class for selection
+    .data(rewritings)
+    .enter()
+    .append("path")
+    .attr("class", "grid-icon") // Add a class to avoid reselecting all paths
+    .attr("d", iconPath)
+    .attr("transform", (d, i) => {
+        const x = (i % cols) * cellSize2;  
+        const y = (height - cellSize2) - Math.floor(i / cols) * cellSize2;
+        return `translate(${x}, ${y}) scale(.3)`;  
+    })
+    .attr("fill", d => categoryColors[d.artform])
+    .attr("stroke", "black")
+    .attr("stroke-width", 1)
+    .on("click", (event, d) => alert(`Clicked: ${d.name} (Artform ${d.artform})`));
 
-    });
+    // });
 
 
 
     
-    data4.forEach((d, i) => {
+    language.forEach((d, i) => {
       
       d.x = 0;  // Columns left to right
         d.y = i*20 + 10; // Rows bottom to top
@@ -170,7 +182,7 @@ const svg3 = d3.select("#gridSvg2");
   svg4
       .selectAll("rect")
       .data(
-        data4.map((d, i) => ({
+        language.map((d, i) => ({
           
           color: d.color,
           x: d.x,

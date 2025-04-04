@@ -887,6 +887,9 @@ html {
   -webkit-box-flex: 1;
           flex: 1 1 0%;
 }
+.shrink {
+  flex-shrink: 1;
+}
 .grow {
   -webkit-box-flex: 1;
           flex-grow: 1;

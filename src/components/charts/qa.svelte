@@ -4,7 +4,8 @@
   import { onMount } from "svelte";
   import * as d3 from "d3";
   import { gsap } from "gsap/dist/gsap.js";
-  import data from "$data/qa.csv";
+  //import data from "$data/qa.csv";
+  import data from "$data/indices/qa.csv.json";
   let modal;
   let selected;
   export let direction = "right";

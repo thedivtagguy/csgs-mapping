@@ -76,7 +76,18 @@
                     <a href="mailto:{data[modalContent.contact]}" class="hover:underline font-normal">{data[modalContent.contact]}</a>
                   {/if}
                   
-                  
+                  {#if data.name}
+                  <p class="font-light text-gray-700 text-sm">Name: <span class="font-normal">{data.name}</span></p>
+                  {/if}
+                  {#if data.artform1}
+                  <p class="font-light text-gray-700 text-sm">Artform: <span class="font-normal">{data.artform1}</span></p>
+                  {/if}
+                  {#if data.plot}
+                  <p class="font-light text-gray-700 text-sm">Plot: <span class="font-normal">{data.plot}</span></p>
+                  {/if}
+                  {#if data.rationale}
+                  <p class="font-light text-gray-700 text-sm">Political rationale: <span class="font-normal">{data.rationale}</span></p>
+                  {/if}
                 </div>
             </div>
              

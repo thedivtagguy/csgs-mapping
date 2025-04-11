@@ -29,7 +29,14 @@
         </div>
     </div>
     <section id = "qa">
-       <QA></QA>
+       <QA
+        modalContent={{
+            artform: "artform1",
+            title: "title",
+            year: "year",
+            
+        }}
+       />
     </section>
 <div class="pt-2 sm:py-2 ">
     <section id="map">
@@ -50,7 +57,7 @@
         modalContent={{
             label: "genre",
             title: "title",
-            year: "year",
+            link: "link",
             
         }}
          combineYear={true}

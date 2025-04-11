@@ -95,113 +95,109 @@
     if (!rects.length) {
       console.error("No rectangles found in the SVG element!");
       return;
-    }    
-   
+    }
   });
 
- 
-
-function launchBodyVisualization() {
-  d3.select(svgContainer).selectAll("*").remove();
-  const svg = d3.select(svgContainer);
-    body.forEach((d) => {
-      svg
-        .selectAll("image")
-        .data(body)
-        .enter()
-        .append("image")
-        .attr("x", (d, i) => (i % cols) * cellSize)
-        .attr("y", (d, i) => height - cellSize - Math.floor(i / cols) * cellSize - 50)
-        .attr("width", 180)
-        .attr("height", 180)
-        .attr("href", (d) => categoryIcons[d.artform])
-        .on("click", function (d, i) {
-          modal.handleOpen(i, modalContent);
-        });
-    });
-
-}
-
+  function launchBodyVisualization() {
+    d3.select(svgContainer).selectAll("*").remove();
+    setTimeout(() => {
+      const svg = d3.select(svgContainer);
+      body.forEach((d) => {
+        svg
+          .selectAll("image")
+          .data(body)
+          .enter()
+          .append("image")
+          .attr("x", (d, i) => (i % cols) * cellSize)
+          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols) * cellSize - 50)
+          .attr("width", 180)
+          .attr("height", 180)
+          .attr("href", (d) => categoryIcons[d.artform])
+          .on("click", function (d, i) {
+            modal.handleOpen(i, modalContent);
+          });
+      });
+    }, 1000); // delay in milliseconds
+  }
 
   function launchSpaceVisualization() {
     console.log("Launching Visualization");
     // Clear previous SVG content if exists
     d3.select(svgContainer).selectAll("*").remove();
-
-    space.forEach((d) => {
-      d.x = Math.random() * width;
-      d.y = Math.random() * height;
-      d.color = categoryColors[d.artform];
-    });
-
-    // Create Voronoi diagram
-    const voronoi = d3.Delaunay.from(space.map((d) => [d.x, d.y])).voronoi([0, 0, width, height]);
-    d3.select(svgContainer)
-      .attr("width", width)
-      .attr("height", height)
-      .selectAll("path")
-      .data(
-        space.map((d, i) => ({
-          polygon: voronoi.cellPolygon(i).map(([x, y]) => [x, y + 100]),
-          color: d.color,
-          name: d.name,
-          category: d.artform
-        }))
-      )
-      .enter()
-      .append("path")
-      .attr("d", (d) => "M" + d.polygon.join("L") + "Z")
-      .attr("fill", (d) => d.color)
-      .attr("stroke", "gray")
-      .attr("transform", "translate(0, 200)") // 👈 Moves the Voronoi layer down by 100px
-      .on("click", function (d, i) {
-        modal.handleOpen(i, modalContent);
+    setTimeout(() => {
+      space.forEach((d) => {
+        d.x = Math.random() * width;
+        d.y = Math.random() * height;
+        d.color = categoryColors[d.artform];
       });
-    console.log("Visualization created");
+
+      // Create Voronoi diagram
+      const voronoi = d3.Delaunay.from(space.map((d) => [d.x, d.y])).voronoi([0, 0, width, height]);
+      d3.select(svgContainer)
+        .attr("width", width)
+        .attr("height", height)
+        .selectAll("path")
+        .data(
+          space.map((d, i) => ({
+            polygon: voronoi.cellPolygon(i).map(([x, y]) => [x, y + 100]),
+            color: d.color,
+            name: d.name,
+            category: d.artform
+          }))
+        )
+        .enter()
+        .append("path")
+        .attr("d", (d) => "M" + d.polygon.join("L") + "Z")
+        .attr("fill", (d) => d.color)
+        .attr("stroke", "gray")
+        .attr("transform", "translate(0, 200)") // 👈 Moves the Voronoi layer down by 100px
+        .on("click", function (d, i) {
+          modal.handleOpen(i, modalContent);
+        });
+      console.log("Visualization created");
+    }, 1000); // delay in milliseconds
   }
 
-
-function launchLanguageVisualization() {
-  console.log("Launching Visualization");
-      // Clear previous SVG content if exists
-      d3.select(svgContainer).selectAll("*").remove();
+  function launchLanguageVisualization() {
+    console.log("Launching Visualization");
+    // Clear previous SVG content if exists
+    d3.select(svgContainer).selectAll("*").remove();
+    setTimeout(() => {
       language.forEach((d, i) => {
-      d.x = 0; // Columns left to right
-      d.y = i * 20 + 10; // Rows bottom to top
-      d.color = categoryColors[d.artform]; // Assign color based on category
-    });
-
-    const svg = d3.select(svgContainer).attr("width", width).attr("height", height);
-
-    svg
-      .selectAll("rect")
-      .data(
-        language.map((d, i) => ({
-          color: d.color,
-          x: d.x,
-          y: d.y,
-          name: d.name,
-          artform: d.artform
-        }))
-      )
-      .enter()
-      .append("rect")
-      .attr("x", (d) => d.x)
-      .attr("y", (d) => d.y)
-      .attr("width", cellSize3) // Adjust width for spacing
-      .attr("height", 10) // Adjust height for spacing
-      .attr("fill", (d) => d.color)
-      .on("click", function (d, i) {
-        modal.handleOpen(i, modalContent);
+        d.x = 0; // Columns left to right
+        d.y = i * 20 + 10; // Rows bottom to top
+        d.color = categoryColors[d.artform]; // Assign color based on category
       });
-}
+      const iconPath = "./assets/qa/language1.svg";
+      const svg = d3.select(svgContainer);
 
+      svg
+        .selectAll("image") // Use a specific class for selection
+        .data(language)
+        .enter()
+        .append("image")
 
+        .attr("href", iconPath)
+        .attr("transform", (d, i) => {
+          const x = (i % cols) * cellSize2;
+          const y = height - cellSize2 - Math.floor(i / cols) * cellSize2;
+          return `translate(${x}, ${y}) scale(.3)`;
+        })
+        .attr("fill", (d) => categoryColors[d.artform])
+        .attr("stroke", "black")
+        .attr("stroke-width", 1)
+        .on("click", function (d, i) {
+          modal.handleOpen(i, modalContent);
+        });
+    }, 1000); // delay in milliseconds
+  }
 
   function launchRewritingsVisualization() {
-      console.log("Launching Visualization");
-      // Clear previous SVG content if exists
-      d3.select(svgContainer).selectAll("*").remove();
+    console.log("Launching Visualization");
+    // Clear previous SVG content if exists
+
+    d3.select(svgContainer).selectAll("*").remove();
+    setTimeout(() => {
       const iconPath =
         "M176.61,333.2c46,7.88,100.27-35.87,100.27-87.48s-15.73-70.28-42.27-93.87S185.46,115.48,186,100.73,206,83,206,83s-8.89,12.2-3.29,20.64a25,25,0,0,0,33.91,7.87c11.9-7.19,22.61-26.54,13.27-52.1S219.37,21.11,187.92,27.5,111.25,64.86,90.61,112,54.73,219.8,77.83,261.45C101.09,303.39,122.06,323.86,176.61,333.2Z";
 
@@ -226,11 +222,8 @@ function launchLanguageVisualization() {
         .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
-
-     
-    }
-
-
+    }, 1000); // delay in milliseconds
+  }
 
   function toggleAnimation() {
     let groups = svgElement.querySelectorAll(".bar-group");
@@ -279,40 +272,44 @@ function launchLanguageVisualization() {
 
   function handleBodyClick() {
     toggleAnimation();
+
     launchBodyVisualization();
-    }
+  }
 
   function handleSpaceClick() {
-       toggleAnimation();
+    toggleAnimation();
+
     launchSpaceVisualization();
   }
   function handleLanguageClick() {
     toggleAnimation();
+
     launchLanguageVisualization();
-     }
+  }
   function handleRewritingsClick() {
     toggleAnimation();
+
     launchRewritingsVisualization();
-     }
+    // delay in milliseconds
+  }
 </script>
 
 <ModalOpen bind:this={modal} />
+
 <main>
   <button class="animate-button1" on:click={handleBodyClick}>Body</button>
   <button class="animate-button1 spacebutton" on:click={handleSpaceClick}>Space</button>
   <button class="animate-button1 languagebutton" on:click={handleLanguageClick}>Language</button>
-  <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}>Rewritings</button>
+  <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}
+    >Rewritings</button
+  >
 
-  <svg class="queer-archive" preserveAspectRatio= "true" viewBox="0 0 1200 830">
-    <svg
-      bind:this={svgContainer}
-      class="voronoi"
-      
-      preserveAspectRatio="true"
-    />
-    
+  <!-- Voronoi SVG on top -->
+  <svg bind:this={svgContainer} class="voronoi" preserveAspectRatio="true" />
+
+  <!-- Queer Archive SVG underneath -->
+  <svg class="queer-archive" preserveAspectRatio="true" viewBox="0 0 1200 830">
     <svg bind:this={svgElement} class="bars" xmlns="http://www.w3.org/2000/svg">
-      <!-- First group of rectangles (moves left) -->
       <g class="bar-group">
         {#each Array(19).fill(0) as _, i}
           <rect
@@ -328,11 +325,8 @@ function launchLanguageVisualization() {
       </g>
     </svg>
     <image href="./assets/Banner.svg" x="0" y="0" width="100%" />
-
     <image href="./assets/Stage.svg" alt="Stage" x="20" y="700" width="97%" />
   </svg>
-
-  
 </main>
 
 <style>
@@ -385,28 +379,53 @@ function launchLanguageVisualization() {
     left: 760px;
   }
   /* Center SVG container */
-  .svg-container {
+  /* .svg-container {
     position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 80px; /* Space for the button */
-  }
-  .queer-archive {
+  /* } */
+  /* .queer-archive {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1; /* Behind the buttons */
+  /* } */
+
+  main {
+    position: relative;
   }
+
+  .queer-archive {
+    position: relative;
+    z-index: 1; /* base layer */
+    width: 100%;
+    height: auto;
+  }
+
   .voronoi {
+    position: absolute;
+    top: 20;
+    left: 10;
+    z-index: 2; /* on top of archive, below bars */
+    transform: translate(50px, 5px); /* → right 50px, ↑ up 30px */
+    pointer-events: auto; /* ensure interactivity */
+    justify-content: center;
+  }
+
+  .bars {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3; /* above voronoi */
     width: 100%;
     height: 100%;
-    z-index: -1; /* Behind the buttons */
+    pointer-events: none; /* only visual — not interactive */
   }
   .icon {
     width: 50px;

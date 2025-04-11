@@ -31,10 +31,12 @@
     <section id = "qa">
        <QA
         modalContent={{
-            artform: "artform1",
+            label: "artform1",
             title: "title",
-            year: "year",
-            
+           
+            link: "link",
+            plot: "plot",
+            rationale: "rationale",
         }}
        />
     </section>

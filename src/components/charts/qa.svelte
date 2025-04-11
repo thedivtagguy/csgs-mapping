@@ -66,7 +66,7 @@
     cols = 9;
   const cellSize = width / cols;
   const cellSize2 = width / 9;
-  const cellSize3 = width - 20;
+  const cellSize3 = width/7;
 
   onMount(() => {
     window.mobileCheck = function () {
@@ -140,9 +140,7 @@
         .data(
           space.map((d, i) => ({
             polygon: voronoi.cellPolygon(i).map(([x, y]) => [x, y + 100]),
-            color: d.color,
-            name: d.name,
-            category: d.artform
+            color: d.color
           }))
         )
         .enter()
@@ -179,9 +177,9 @@
 
         .attr("href", iconPath)
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize2;
-          const y = height - cellSize2 - Math.floor(i / cols) * cellSize2;
-          return `translate(${x}, ${y}) scale(.3)`;
+          const x = (i % cols) * cellSize3;
+          const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
+          return `translate(${x}, ${y}) scale(.5)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
         .attr("stroke", "black")

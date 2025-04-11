@@ -58,8 +58,12 @@
                   {#if id == 'publications'}
                   <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data.realYear}</span></p>
                   {:else}
+                  {#if data.year}
                   <p class="font-light text-gray-700 text-sm">Year: <span class="font-normal"> {data[modalContent.year]}</span></p>
                   {/if}
+                  {/if}
+                  
+               
                   {#if data.publisher}
                   <p class="font-light text-gray-700 text-sm">Publisher: <span class="font-normal">{data.publisher}</span></p>
                   {/if}

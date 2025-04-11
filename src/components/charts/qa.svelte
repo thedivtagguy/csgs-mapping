@@ -29,18 +29,23 @@
 
   // Define categories and their colors
   const categoryColors = {
-    Theatre: "#F3DF8C",
-    Dance: "#C2DF97",
-    Bollywood: "#F67C87",
-    "Launda naach": "#f3bef1",
-    Drag: "#F3DF8C",
-    "Spoken Word Poetry": "#F7B289",
-    Nautanki: "#D1BB80",
-    "Experiential Installation": "#D08C87",
-    "Contemporary Dance Movement": "#A8DCC",
-    "Immersive Multimedia Performance": "#C0AAAF",
-    Fusion: "#79A5AE",
-    "Documentary/Film": "#F8CAB0"
+
+    "Bollywood Dance":"#F3DF8C",
+"Classical Dance": "#C2DF97",
+"Contemporary Dance": "#F67C87",
+"Dance": "#f3bef1",
+"Drag": "#F3DF8C",
+"Folk Dance": "#F7B289",
+"Immersive Theatre":  "#D1BB80",
+"Mixed Media": "#D08C87",
+"Music": "#A8DCC",
+"Nautanki": "#C0AAAF",
+"Poetry": "#79A5AE",
+"Rap": "#F8CAB0",
+"Spoken Word": "ed1c34",
+"Storytelling": "#818181",
+"Theatre": "#F3328C",
+  
   };
 
   // Group elements based on their category

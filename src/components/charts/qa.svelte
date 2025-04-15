@@ -23,8 +23,8 @@
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
 
-  let width = 1170;
-  let height = 720;
+  let width = 1150;
+  let height = 800;
   let widthMobile = 300;
 
   // Define categories and their colors
@@ -42,9 +42,9 @@
 "Nautanki": "#C0AAAF",
 "Poetry": "#79A5AE",
 "Rap": "#F8CAB0",
-"Spoken Word": "ed1c34",
-"Storytelling": "#818181",
-"Theatre": "#F3328C",
+"Spoken Word": "#086788",
+"Storytelling": "0b2027",
+"Theatre": "#a13d63",
   
   };
 
@@ -94,7 +94,7 @@
       console.error("SVG element not found!");
       return;
     }
-
+  
     let rects = svgElement.querySelectorAll(".bar");
     let groups = svgElement.querySelectorAll(".bar-group");
     if (!rects.length) {
@@ -103,6 +103,7 @@
     }
   });
 
+///////////Body Visualization
   function launchBodyVisualization() {
     d3.select(svgContainer).selectAll("*").remove();
     setTimeout(() => {
@@ -124,7 +125,7 @@
       });
     }, 1000); // delay in milliseconds
   }
-
+////////////Space Visualization
   function launchSpaceVisualization() {
     console.log("Launching Visualization");
     // Clear previous SVG content if exists
@@ -161,6 +162,9 @@
     }, 1000); // delay in milliseconds
   }
 
+
+
+  //////////Language Visualization
   function launchLanguageVisualization() {
     console.log("Launching Visualization");
     // Clear previous SVG content if exists
@@ -171,7 +175,9 @@
         d.y = i * 20 + 10; // Rows bottom to top
         d.color = categoryColors[d.artform]; // Assign color based on category
       });
-      const iconPath = "./assets/qa/language1.svg";
+      const iconPath1 = "./assets/qa/language1.svg";
+      const iconPath2 = "./assets/qa/language2.svg";
+      const iconPath3 = "./assets/qa/language3.svg";
       const svg = d3.select(svgContainer);
 
       svg
@@ -180,7 +186,7 @@
         .enter()
         .append("image")
 
-        .attr("href", iconPath)
+        .attr("href", iconPath1)
         .attr("transform", (d, i) => {
           const x = (i % cols) * cellSize3;
           const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
@@ -194,7 +200,7 @@
         });
     }, 1000); // delay in milliseconds
   }
-
+/////////////Rewritings Visualization
   function launchRewritingsVisualization() {
     console.log("Launching Visualization");
     // Clear previous SVG content if exists
@@ -300,18 +306,19 @@
 <ModalOpen bind:this={modal} />
 
 <main>
-  <button class="animate-button1" on:click={handleBodyClick}>Body</button>
-  <button class="animate-button1 spacebutton" on:click={handleSpaceClick}>Space</button>
-  <button class="animate-button1 languagebutton" on:click={handleLanguageClick}>Language</button>
-  <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}
-    >Rewritings</button
-  >
-
-  <!-- Voronoi SVG on top -->
-  <svg bind:this={svgContainer} class="voronoi" preserveAspectRatio="true" />
-
-  <!-- Queer Archive SVG underneath -->
-  <svg class="queer-archive" preserveAspectRatio="true" viewBox="0 0 1200 830">
+  <div class="banner-container">
+    <img src="./assets/Banner.svg" alt="Banner" class = "banner"/>
+  </div>
+    <div class="button-row">
+    <button class="animate-button1" on:click={handleBodyClick}>Body</button>
+    <button class="animate-button1 spacebutton" on:click={handleSpaceClick}>Space</button>
+    <button class="animate-button1 languagebutton" on:click={handleLanguageClick}>Language</button>
+    <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}
+      >Rewritings</button>
+    
+    </div>
+   <!-- Queer Archive SVG underneath -->
+   <svg class="queer-archive" preserveAspectRatio="true" viewBox="0 0 1200 830">
     <svg bind:this={svgElement} class="bars" xmlns="http://www.w3.org/2000/svg">
       <g class="bar-group">
         {#each Array(19).fill(0) as _, i}
@@ -327,96 +334,107 @@
         {/each}
       </g>
     </svg>
-    <image href="./assets/Banner.svg" x="0" y="0" width="100%" />
-    <image href="./assets/Stage.svg" alt="Stage" x="20" y="700" width="97%" />
+    
+    <svg bind:this={svgContainer} class="voronoi"  width="100%"
+    height="100%" x = "20" y="-90"
+    viewBox={`0 0 ${width} ${height}`}    
+    preserveAspectRatio="xMidYMid meet" 
+   />
+   
+   
+    <image href="./assets/Stage.svg" alt="Stage" x="20" y="700" width="97%" z-index = "100"/>
   </svg>
+   
+ 
+
+
+ 
 </main>
 
 <style>
-  svg {
-    border: none !important; /* Removes any CSS border */
-    outline: none; /* Removes any outline if applied */
-  }
+
+
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+  
+  .banner-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 10;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  margin-bottom: 0;
+
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem 0;
+  
+  margin-top: 0; /* sits flush under banner */
+  z-index:10;
+}
 
   /* Button styling */
   .animate-button1 {
-    font-family: "Abril Fatface", cursive;
-    background-color: #c2df97;
-    color: #cc2f46;
-    font-size: 24px;
-    padding: 12px 24px;
-    border: #f3bef1;
-    border-width: 2px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    position: relative;
-    top: 350px;
-    left: 140px;
-    transform: translateX(-50%);
-    z-index: 10;
-  }
+  position: static;
+  font-family: "Abril Fatface", cursive;
+  background-color: #c2df97;
+  color: #cc2f46;
+  font-size: clamp(16px, 2.5vw, 24px);
+  padding: 0.5em 1.5em;
+  border: 2px solid #f3bef1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 11;
+}
 
-  .animate-button1:hover {
-    background-color: #f3bef1;
-    transform: translateX(-50%) scale(1.05);
-  }
+.animate-button1:hover {
+  background-color: #f3bef1;
+  transform: scale(1.05);
+}
 
-  .animate-button1:active {
-    transform: translateX(-50%) scale(0.95);
-  }
-  .spacebutton {
-    position: relative;
-    top: 270px;
-    left: 300px;
-  }
-  .languagebutton {
-    position: relative;
-    top: 270px;
-    left: 600px;
-  }
-  .rewritingsbutton {
-    position: relative;
-    top: 350px;
-    left: 760px;
-  }
-  /* Center SVG container */
-  /* .svg-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 80px; /* Space for the button */
-  /* } */
-  /* .queer-archive {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Behind the buttons */
-  /* } */
+.animate-button1:active {
+  transform: scale(0.95);
+}
 
+/* Optional: stack buttons vertically on smaller screens */
+@media (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+ 
   main {
     position: relative;
   }
 
   .queer-archive {
-    position: relative;
-    z-index: 1; /* base layer */
-    width: 100%;
-    height: auto;
-  }
-
+  position: relative;
+  top: -330px; /* pull it up under the button row */
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
   .voronoi {
+    
+  display: block;
     position: absolute;
-    top: 20;
-    left: 10;
     z-index: 2; /* on top of archive, below bars */
-    transform: translate(50px, 5px); /* → right 50px, ↑ up 30px */
+    transform: translate(0px, 0px); /* → right 50px, ↑ up 30px */
     pointer-events: auto; /* ensure interactivity */
     justify-content: center;
   }

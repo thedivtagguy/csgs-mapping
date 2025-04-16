@@ -23,29 +23,27 @@
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
 
-  let width = 1150;
-  let height = 800;
+  let width = 1100;
+  let height = 550;
   let widthMobile = 300;
 
   // Define categories and their colors
   const categoryColors = {
-
-    "Bollywood Dance":"#F3DF8C",
-"Classical Dance": "#C2DF97",
-"Contemporary Dance": "#F67C87",
-"Dance": "#f3bef1",
-"Drag": "#F3DF8C",
-"Folk Dance": "#F7B289",
-"Immersive Theatre":  "#D1BB80",
-"Mixed Media": "#D08C87",
-"Music": "#A8DCC",
-"Nautanki": "#C0AAAF",
-"Poetry": "#79A5AE",
-"Rap": "#F8CAB0",
-"Spoken Word": "#086788",
-"Storytelling": "0b2027",
-"Theatre": "#a13d63",
-  
+    "Bollywood Dance": "#F3DF8C",
+    "Classical Dance": "#C2DF97",
+    "Contemporary Dance": "#F67C87",
+    Dance: "#f3bef1",
+    Drag: "#F3DF8C",
+    "Folk Dance": "#F7B289",
+    "Immersive Theatre": "#D1BB80",
+    "Mixed Media": "#D08C87",
+    Music: "#A8DCC",
+    Nautanki: "#C0AAAF",
+    Poetry: "#79A5AE",
+    Rap: "#F8CAB0",
+    "Spoken Word": "#086788",
+    Storytelling: "0b2027",
+    Theatre: "#a13d63"
   };
 
   // Group elements based on their category
@@ -57,22 +55,27 @@
   // Category-to-icon mapping
   const categoryIcons = {
     Theatre: "./assets/qa/Theatre.svg",
+    "Contemporary Dance": "./assets/qa/Dance 1.svg",
     Dance: "./assets/qa/Dance 2.svg",
     "Documentary/Film": "./assets/qa/Film.svg",
     "Performance Art/Strip Tease/Drag": "./assets/qa/Drag.svg",
     Nautanki: "./assets/qa/Nautanki.svg",
-    "Spoken Word Poetry": "./assets/qa/Spoken word.svg",
-    "Immersive Multimedia Performance": "./assets/qa/Dance 1.svg",
+    "Poetry": "./assets/qa/Spoken word.svg",
+    "Immersive Theatre": "./assets/qa/Theatre.svg",
     "Experiential Installation": "./assets/qa/Film.svg",
-    "Contemporary Dance Movement": "./assets/qa/Dance 2.svg"
+    "Drag": "./assets/qa/Drag.svg",
+    "Bollywood Dance": "./assets/qa/Dance 1.svg", 
+    "Mixed Media": "./assets/qa/Mixed media.svg",
   };
 
   const rows = 4,
-    cols = 9;
-  const cellSize = width / cols;
-  const cellSize2 = width / 9;
-  const cellSize3 = width/7;
+    cols = 10;
+  const cellSize = width*1.2 / cols;
+  const cellSize2 = width / 8;
+  const cellSize3 = width / 7;
 
+ 
+  
   onMount(() => {
     window.mobileCheck = function () {
       let check = false;
@@ -94,7 +97,7 @@
       console.error("SVG element not found!");
       return;
     }
-  
+
     let rects = svgElement.querySelectorAll(".bar");
     let groups = svgElement.querySelectorAll(".bar-group");
     if (!rects.length) {
@@ -103,8 +106,9 @@
     }
   });
 
-///////////Body Visualization
+  ///////////Body Visualization
   function launchBodyVisualization() {
+    const tooltip = d3.select("#tooltip");
     d3.select(svgContainer).selectAll("*").remove();
     setTimeout(() => {
       const svg = d3.select(svgContainer);
@@ -116,57 +120,102 @@
           .append("image")
           .attr("x", (d, i) => (i % cols) * cellSize)
           .attr("y", (d, i) => height - cellSize - Math.floor(i / cols) * cellSize - 50)
-          .attr("width", 180)
-          .attr("height", 180)
+          .attr("width", 160)
+          .attr("height", 160)
           .attr("href", (d) => categoryIcons[d.artform])
+          .on("mouseover", function(event, d) {
+  d3.select(this).attr("stroke-width", 3);
+
+  tooltip
+    .style("opacity", 1)
+    .html(d.title || "No title");
+})
+.on("mousemove", function(event, d) {
+  const svgRect = svgContainer.getBoundingClientRect();
+  const x = event.clientX - svgRect.left;
+  const y = event.clientY - svgRect.top;
+
+  tooltip
+    .style("left", (x + 10) + "px")
+    .style("top", (y + 10) + "px");
+})
+.on("mouseout", function(event, d) {
+  d3.select(this).attr("stroke-width", 1);
+  tooltip.style("opacity", 0);
+})
           .on("click", function (d, i) {
             modal.handleOpen(i, modalContent);
           });
       });
     }, 1000); // delay in milliseconds
   }
-////////////Space Visualization
-  function launchSpaceVisualization() {
-    console.log("Launching Visualization");
-    // Clear previous SVG content if exists
-    d3.select(svgContainer).selectAll("*").remove();
-    setTimeout(() => {
-      space.forEach((d) => {
-        d.x = Math.random() * width;
-        d.y = Math.random() * height;
-        d.color = categoryColors[d.artform];
-      });
+  ////////////Space Visualization
 
-      // Create Voronoi diagram
-      const voronoi = d3.Delaunay.from(space.map((d) => [d.x, d.y])).voronoi([0, 0, width, height]);
-      d3.select(svgContainer)
-        .attr("width", width)
-        .attr("height", height)
-        .selectAll("path")
-        .data(
-          space.map((d, i) => ({
-            polygon: voronoi.cellPolygon(i).map(([x, y]) => [x, y + 100]),
-            color: d.color
-          }))
-        )
-        .enter()
-        .append("path")
-        .attr("d", (d) => "M" + d.polygon.join("L") + "Z")
-        .attr("fill", (d) => d.color)
-        .attr("stroke", "gray")
-        .attr("transform", "translate(0, 200)") // 👈 Moves the Voronoi layer down by 100px
-        .on("click", function (d, i) {
+  function launchSpaceVisualization() {
+    const tooltip = d3.select("#tooltip");
+
+  console.log("Launching Space Visualization");
+
+  d3.select(svgContainer).selectAll("*").remove();
+
+// Add a delay (if needed)
+setTimeout(() => {
+  // Assign position and color
+  space.forEach(d => {
+    d.x = Math.random() * width;
+    d.y = Math.random() * height;
+    d.color = categoryColors[d.artform];
+  });
+
+  // Create Voronoi structure
+  const delaunay = d3.Delaunay.from(space, d => d.x, d => d.y);
+  const voronoi = delaunay.voronoi([0, 0, width, height]);
+
+  // Bind space data directly
+  d3.select(svgContainer)
+    .selectAll("path")
+    .data(space)
+    .enter()
+    .append("path")
+    .attr("d", (d, i) => {
+      const polygon = voronoi.cellPolygon(i);
+      return polygon ? "M" + polygon.join("L") + "Z" : null;
+    })
+    .attr("fill", d => d.color)
+    .attr("stroke", "gray")
+    .attr("stroke-width", .1)
+    .attr("opacity", 0.9)
+    .attr("transform", "translate(50, 40)") 
+    .on("mouseover", function(event, d) {
+  d3.select(this).attr("stroke-width", 3);
+
+  tooltip
+    .style("opacity", 1)
+    .html(d.title || "No title");
+})
+.on("mousemove", function(event, d) {
+  const svgRect = svgContainer.getBoundingClientRect();
+  const x = event.clientX - svgRect.left;
+  const y = event.clientY - svgRect.top;
+
+  tooltip
+    .style("left", (x + 10) + "px")
+    .style("top", (y + 10) + "px");
+})
+.on("mouseout", function(event, d) {
+  d3.select(this).attr("stroke-width", 1);
+  tooltip.style("opacity", 0);
+})
+    .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
-      console.log("Visualization created");
-    }, 1000); // delay in milliseconds
+}, 1000);
+
   }
-
-
-
   //////////Language Visualization
   function launchLanguageVisualization() {
-    console.log("Launching Visualization");
+    const tooltip = d3.select("#tooltip");
+    
     // Clear previous SVG content if exists
     d3.select(svgContainer).selectAll("*").remove();
     setTimeout(() => {
@@ -175,34 +224,79 @@
         d.y = i * 20 + 10; // Rows bottom to top
         d.color = categoryColors[d.artform]; // Assign color based on category
       });
-      const iconPath1 = "./assets/qa/language1.svg";
-      const iconPath2 = "./assets/qa/language2.svg";
-      const iconPath3 = "./assets/qa/language3.svg";
-      const svg = d3.select(svgContainer);
+      const iconPath1 = [
+        { d: "M0 0 H266 V19 H0 Z" },
+        { d: "M0 28 H266 V47 H0 Z" },
+        { d: "M0 56 H266 V75 H0 Z" },
+        { d: "M0 84 H161 V103 H0 Z" }
+      ];
 
+      const iconPath2 = [
+        { d: "M0 0 H266 V19 H0 Z" },
+        { d: "M0 28 H266 V47 H0 Z" },
+        { d: "M0 56 H266 V75 H0 Z" },
+        { d: "M0 84 H40 V103 H0 Z" }
+      ];
+      const iconPath3 = [
+        { d: "M0 0 H266 V19 H0 Z" },
+        { d: "M0 28 H266 V47 H0 Z" },
+        { d: "M0 56 H266 V75 H0 Z" },
+        { d: "M0 84 H110 V103 H0 Z" }
+      ];
+      const iconGroups = [iconPath1, iconPath2, iconPath3];
+      const svg = d3.select(svgContainer);
       svg
-        .selectAll("image") // Use a specific class for selection
+        .selectAll(".language-icon")
         .data(language)
         .enter()
-        .append("image")
-
-        .attr("href", iconPath1)
+        .append("g")
+        .attr("class", "language-icon")
         .attr("transform", (d, i) => {
           const x = (i % cols) * cellSize3;
           const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
-          return `translate(${x}, ${y}) scale(.5)`;
+          return `translate(${x}, ${y}) scale(0.5)`;
         })
-        .attr("fill", (d) => categoryColors[d.artform])
-        .attr("stroke", "black")
-        .attr("stroke-width", 1)
+        .each(function (d) {
+          const group = d3.select(this);
+          const paths = iconGroups[Math.floor(Math.random() * iconGroups.length)];
+
+          paths.forEach((pathData) => {
+            group
+              .append("path")
+              .attr("d", pathData.d)
+              .attr("fill", categoryColors[d.artform])
+              .attr("stroke", "black")
+              .attr("stroke-width", 1);
+          });
+        })
+        .on("mouseover", function(event, d) {
+  d3.select(this).attr("stroke-width", 3);
+
+  tooltip
+    .style("opacity", 1)
+    .html(d.title || "No title");
+})
+.on("mousemove", function(event, d) {
+  const svgRect = svgContainer.getBoundingClientRect();
+  const x = event.clientX - svgRect.left;
+  const y = event.clientY - svgRect.top;
+
+  tooltip
+    .style("left", (x + 10) + "px")
+    .style("top", (y + 10) + "px");
+})
+.on("mouseout", function(event, d) {
+  d3.select(this).attr("stroke-width", 1);
+  tooltip.style("opacity", 0);
+})
         .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
     }, 1000); // delay in milliseconds
   }
-/////////////Rewritings Visualization
+  /////////////Rewritings Visualization
   function launchRewritingsVisualization() {
-    console.log("Launching Visualization");
+    const tooltip = d3.select("#tooltip");
     // Clear previous SVG content if exists
 
     d3.select(svgContainer).selectAll("*").remove();
@@ -223,11 +317,31 @@
         .attr("transform", (d, i) => {
           const x = (i % cols) * cellSize2;
           const y = height - cellSize2 - Math.floor(i / cols) * cellSize2;
-          return `translate(${x}, ${y}) scale(.3)`;
+          return `translate(${x}, ${y}) scale(.24)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
         .attr("stroke", "black")
         .attr("stroke-width", 1)
+        .on("mouseover", function(event, d) {
+  d3.select(this).attr("stroke-width", 3);
+
+  tooltip
+    .style("opacity", 1)
+    .html(d.title || "No title");
+})
+.on("mousemove", function(event, d) {
+  const svgRect = svgContainer.getBoundingClientRect();
+  const x = event.clientX - svgRect.left;
+  const y = event.clientY - svgRect.top;
+
+  tooltip
+    .style("left", (x + 10) + "px")
+    .style("top", (y +10) + "px");
+})
+.on("mouseout", function(event, d) {
+  d3.select(this).attr("stroke-width", 1);
+  tooltip.style("opacity", 0);
+})
         .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
@@ -306,26 +420,35 @@
 <ModalOpen bind:this={modal} />
 
 <main>
+
   <div class="banner-container">
-    <img src="./assets/Banner.svg" alt="Banner" class = "banner"/>
+    <img src="./assets/Banner.svg" alt="Banner" class="banner" />
   </div>
-    <div class="button-row">
+  <div class="button-row">
     <button class="animate-button1" on:click={handleBodyClick}>Body</button>
     <button class="animate-button1 spacebutton" on:click={handleSpaceClick}>Space</button>
     <button class="animate-button1 languagebutton" on:click={handleLanguageClick}>Language</button>
     <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}
-      >Rewritings</button>
-    
-    </div>
-   <!-- Queer Archive SVG underneath -->
-   <svg class="queer-archive" preserveAspectRatio="true" viewBox="0 0 1200 830">
-    <svg bind:this={svgElement} class="bars" xmlns="http://www.w3.org/2000/svg">
+      >Rewritings</button
+    >
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Queer Archive SVG underneath -->
+  <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true">
+    <!-- Voronoi should come before bars so it renders underneath -->
+    <g bind:this={svgContainer} class="voronoi" x = "20" y = "0">
+      <!-- D3 will populate here -->
+    </g>
+  
+    <g bind:this={svgElement} class="bars">
       <g class="bar-group">
         {#each Array(19).fill(0) as _, i}
           <rect
             class="bar"
             x={10 + i * 62}
-            y="150"
+            y="0"
             width="61"
             height="550"
             rx="25"
@@ -333,121 +456,109 @@
           />
         {/each}
       </g>
-    </svg>
-    
-    <svg bind:this={svgContainer} class="voronoi"  width="100%"
-    height="100%" x = "20" y="-90"
-    viewBox={`0 0 ${width} ${height}`}    
-    preserveAspectRatio="xMidYMid meet" 
-   />
-   
-   
-    <image href="./assets/Stage.svg" alt="Stage" x="20" y="700" width="97%" z-index = "100"/>
+    </g>
+  
+    <!-- Static image background -->
+    <rect class="bottom" 
+    x="2" 
+    y="550" 
+    width="98%" 
+    height="15%" 
+    fill="#F3DF8C" 
+    opacity="1" 
+    stroke="#79A5AE" 
+    stroke-width="6"
+    rx="2" 
+    ry="2" 
+/>
+    <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
   </svg>
-   
- 
-
-
- 
+  
 </main>
 
 <style>
-
-
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-  
+
   .banner-container {
-  position: relative;
-  width: 100%;
-  display: block;
-  z-index: 10;
-}
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 10;
+  }
 
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  
-  margin-bottom: 0;
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
 
-}
+    margin-bottom: 0;
+  }
 
-.button-row {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1rem 0;
-  
-  margin-top: 0; /* sits flush under banner */
-  z-index:10;
-}
+  .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0; /* ← Remove vertical padding */
+    margin: 0; /* ← Ensure no top margin */
+    z-index: 10;
+    align-items: flex-start;
+  }
 
   /* Button styling */
   .animate-button1 {
-  position: static;
-  font-family: "Abril Fatface", cursive;
-  background-color: #c2df97;
-  color: #cc2f46;
-  font-size: clamp(16px, 2.5vw, 24px);
-  padding: 0.5em 1.5em;
-  border: 2px solid #f3bef1;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
-  z-index: 11;
-}
-
-.animate-button1:hover {
-  background-color: #f3bef1;
-  transform: scale(1.05);
-}
-
-.animate-button1:active {
-  transform: scale(0.95);
-}
-
-/* Optional: stack buttons vertically on smaller screens */
-@media (max-width: 600px) {
-  .button-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
+    position: static;
+    font-family: "Abril Fatface", cursive;
+    background-color: #c2df97;
+    color: #cc2f46;
+    font-size: clamp(16px, 2.5vw, 24px);
+    padding: 0.5em 1.5em;
+    border: 2px solid #f3bef1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    z-index: 11;
+    top: 0;
   }
-}
- 
+
+  .animate-button1:hover {
+    background-color: #f3bef1;
+    transform: scale(1.05);
+  }
+
+  .animate-button1:active {
+    transform: scale(0.95);
+  }
+
+  /* Optional: stack buttons vertically on smaller screens */
+  @media (max-width: 600px) {
+    .button-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+
   main {
     position: relative;
   }
 
   .queer-archive {
-  position: relative;
-  top: -330px; /* pull it up under the button row */
-  z-index: 1;
   width: 100%;
   height: auto;
-}
-  .voronoi {
-    
   display: block;
-    position: absolute;
-    z-index: 2; /* on top of archive, below bars */
-    transform: translate(0px, 0px); /* → right 50px, ↑ up 30px */
-    pointer-events: auto; /* ensure interactivity */
-    justify-content: center;
-  }
+  transform: translateY(-100px); /* Adjust this value to move the SVG up or down */
+}
 
-  .bars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3; /* above voronoi */
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* only visual — not interactive */
-  }
+.voronoi {
+  pointer-events: auto; /* interactive layer */
+}
+
+.bars {
+  pointer-events: none; /* only for visuals */
+}
   .icon {
     width: 50px;
     height: 50px;
@@ -457,4 +568,22 @@
   .icon:hover {
     transform: scale(1.2);
   }
+
+  .tooltip {
+  position: absolute;
+  pointer-events: none;
+  background-color: #fae4b5; /* Fill color */
+  color: rgb(53, 49, 49); /* Font color */
+  
+  padding: 10px;
+  border-radius: 0px; /* Decorative border, rounded */
+  border: 2px dashed darkcyan ; /* Decorative border color */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); /* Soft shadow for better visibility */
+  font-size: 12px;
+  max-width: 200px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
 </style>

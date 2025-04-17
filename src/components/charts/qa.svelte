@@ -24,7 +24,7 @@
   let animationState = false; // assume false means full size
 
   let width = 1100;
-  let height = 550;
+  let height = 560;
   let widthMobile = 300;
 
   // Define categories and their colors
@@ -68,11 +68,12 @@
     "Mixed Media": "./assets/qa/Mixed media.svg",
   };
 
-  const rows = 4,
-    cols = 10;
-  const cellSize = width*1.2 / cols;
+  const rows = 4;
+    const cols = 8;
+    const cols2 = 10;
+  const cellSize = width*1.2 / cols2;
   const cellSize2 = width / 8;
-  const cellSize3 = width / 7;
+  const cellSize3 = width *1.1/ cols;
 
  
   
@@ -118,8 +119,8 @@
           .data(body)
           .enter()
           .append("image")
-          .attr("x", (d, i) => (i % cols) * cellSize)
-          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols) * cellSize - 50)
+          .attr("x", (d, i) => (i % cols2) * cellSize)
+          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 50)
           .attr("width", 160)
           .attr("height", 160)
           .attr("href", (d) => categoryIcons[d.artform])
@@ -225,24 +226,25 @@ setTimeout(() => {
         d.color = categoryColors[d.artform]; // Assign color based on category
       });
       const iconPath1 = [
-        { d: "M0 0 H266 V19 H0 Z" },
-        { d: "M0 28 H266 V47 H0 Z" },
-        { d: "M0 56 H266 V75 H0 Z" },
-        { d: "M0 84 H161 V103 H0 Z" }
-      ];
+  { d: "M0 0 H200 V30 H0 Z" },
+  { d: "M0 35 H200 V65 H0 Z" },
+  { d: "M0 70 H200 V100 H0 Z" },
+  { d: "M0 105 H140 V135 H0 Z" }
+];
 
-      const iconPath2 = [
-        { d: "M0 0 H266 V19 H0 Z" },
-        { d: "M0 28 H266 V47 H0 Z" },
-        { d: "M0 56 H266 V75 H0 Z" },
-        { d: "M0 84 H40 V103 H0 Z" }
-      ];
-      const iconPath3 = [
-        { d: "M0 0 H266 V19 H0 Z" },
-        { d: "M0 28 H266 V47 H0 Z" },
-        { d: "M0 56 H266 V75 H0 Z" },
-        { d: "M0 84 H110 V103 H0 Z" }
-      ];
+
+const iconPath2 = [
+  { d: "M0 0 H200 V30 H0 Z" },
+  { d: "M0 35 H200 V65 H0 Z" },
+  { d: "M0 70 H200 V100 H0 Z" },
+  { d: "M0 105 H80 V135 H0 Z" }
+    ];
+const iconPath3 = [
+  { d: "M0 0 H200 V30 H0 Z" },
+  { d: "M0 35 H200 V65 H0 Z" },
+  { d: "M0 70 H200 V100 H0 Z" },
+  { d: "M0 105 H40 V135 H0 Z" }
+];
       const iconGroups = [iconPath1, iconPath2, iconPath3];
       const svg = d3.select(svgContainer);
       svg
@@ -252,9 +254,9 @@ setTimeout(() => {
         .append("g")
         .attr("class", "language-icon")
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize3;
+          const x = (i % cols) * cellSize3 ;
           const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
-          return `translate(${x}, ${y}) scale(0.5)`;
+          return `translate(${x}, ${y}) scale(0.65)`;
         })
         .each(function (d) {
           const group = d3.select(this);
@@ -265,12 +267,11 @@ setTimeout(() => {
               .append("path")
               .attr("d", pathData.d)
               .attr("fill", categoryColors[d.artform])
-              .attr("stroke", "black")
-              .attr("stroke-width", 1);
+              
           });
         })
         .on("mouseover", function(event, d) {
-  d3.select(this).attr("stroke-width", 3);
+  d3.select(this).attr("stroke-width", 2).attr( "stroke", "gray");
 
   tooltip
     .style("opacity", 1)
@@ -286,7 +287,7 @@ setTimeout(() => {
     .style("top", (y + 10) + "px");
 })
 .on("mouseout", function(event, d) {
-  d3.select(this).attr("stroke-width", 1);
+  d3.select(this).attr("stroke-width", 0);
   tooltip.style("opacity", 0);
 })
         .on("click", function (d, i) {
@@ -315,8 +316,8 @@ setTimeout(() => {
         .attr("class", "grid-icon") // Add a class to avoid reselecting all paths
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize2;
-          const y = height - cellSize2 - Math.floor(i / cols) * cellSize2;
+          const x = (i % cols2) * cellSize2;
+          const y = height - cellSize2 - Math.floor(i / cols2) * cellSize2;
           return `translate(${x}, ${y}) scale(.24)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
@@ -438,7 +439,7 @@ setTimeout(() => {
   <!-- Queer Archive SVG underneath -->
   <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true">
     <!-- Voronoi should come before bars so it renders underneath -->
-    <g bind:this={svgContainer} class="voronoi" x = "20" y = "0">
+    <g bind:this={svgContainer} class="voronoi" x = "20" y = "50">
       <!-- D3 will populate here -->
     </g>
   
@@ -471,6 +472,8 @@ setTimeout(() => {
     rx="2" 
     ry="2" 
 />
+
+
     <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
   </svg>
   

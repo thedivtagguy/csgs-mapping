@@ -26,6 +26,7 @@
   let width = 1100;
   let height = 560;
   let widthMobile = 300;
+  
 
   // Define categories and their colors
   const categoryColors = {
@@ -51,6 +52,10 @@
   const space = data.filter((d) => d.category === "Space");
   const language = data.filter((d) => d.category === "Language");
   const rewritings = data.filter((d) => d.category === "Rewritings");
+
+ 
+
+  const allKeywords = [...new Set(data.map(d => d.keyword1))];
 
   // Category-to-icon mapping
   const categoryIcons = {
@@ -187,6 +192,9 @@ setTimeout(() => {
     .attr("stroke-width", .1)
     .attr("opacity", 0.9)
     .attr("transform", "translate(50, 40)") 
+    .attr("filter", (d) =>
+        selectedKeyword && d.keyword1 === selectedKeyword ? "url(#shadow)" : null
+      )
     .on("mouseover", function(event, d) {
   d3.select(this).attr("stroke-width", 3);
 
@@ -394,6 +402,30 @@ const iconPath3 = [
     console.log("Animation toggled. State now:", animationState);
   }
 
+  let selectedKeyword = null;
+
+function toggleKeyword(keyword) {
+  selectedKeyword = selectedKeyword === keyword ? null : keyword;
+  updateVisuals();
+}
+
+function updateVisuals() {
+  // Re-render the appropriate visualization
+  if (currentView === "space") {
+    launchSpaceVisualization();
+  } else if (currentView === "body") {
+    launchBodyVisualisation();
+  }
+
+  else if (currentView === "language") {
+    launchLanguageVisualization();
+  } else if (currentView === "rewritings") {
+    launchRewritingsVisualization();
+  }
+}
+
+
+
   function handleBodyClick() {
     toggleAnimation();
 
@@ -438,6 +470,11 @@ const iconPath3 = [
 
   <!-- Queer Archive SVG underneath -->
   <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true">
+    <defs>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
+      </filter>
+    </defs>
     <!-- Voronoi should come before bars so it renders underneath -->
     <g bind:this={svgContainer} class="voronoi" x = "20" y = "50">
       <!-- D3 will populate here -->
@@ -476,8 +513,18 @@ const iconPath3 = [
 
     <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
   </svg>
-  
-</main>
+  <div class="keyword-buttons">
+    {#each allKeywords as keyword}
+      <button
+        class="keyword-button"
+        on:click={() => toggleKeyword(keyword)}
+      >
+        {keyword}
+      </button>
+    {/each}
+  </div>
+
+  </main>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
@@ -588,5 +635,39 @@ const iconPath3 = [
   opacity: 0; /* Initially hidden */
   transition: opacity 0.2s ease;
   z-index: 1000;
+}
+.keyword-buttons {
+  position: absolute;
+  bottom: 12%; /* Adjust as needed to sit on rect */
+  left: 2%;
+  width: 96%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 5; /* Above the SVG */
+  pointer-events: auto;
+}
+
+.keyword-button {
+  background-color: #F7B289;
+  border: 1px dashed #ffffff;
+  color: black;
+  
+  padding: 0.4em 1em;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: .7rem;
+  
+}
+
+.keyword-button:hover {
+  background-color: #f67c87;
+  color: white;
+}
+.keyword-button:click {
+  background-color: #F3DF8C;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 </style>

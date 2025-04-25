@@ -1,14 +1,29 @@
 <script>
     import SearchForm from "./Search/SearchForm.svelte";
-    let aboutOpen = false
-  const toggleAbout = () => aboutOpen = !aboutOpen
+    import { onMount, onDestroy } from 'svelte';
 
-  // close on outside click
-  const handleClickOutside = e => {
-    if (!e.target.closest('.about-dropdown')) aboutOpen = false
+let aboutOpen = false;
+const toggleAbout = () => aboutOpen = !aboutOpen;
+
+function handleClickOutside(e) {
+  if (!e.target.closest('.about-dropdown')) {
+    aboutOpen = false;
   }
-  window.addEventListener('click', handleClickOutside)
+}
 
+let removeListener;
+
+onMount(() => {
+  // This guard ensures the code only runs in the browser
+  if (typeof window !== 'undefined') {
+    window.addEventListener('click', handleClickOutside);
+    removeListener = () => window.removeEventListener('click', handleClickOutside);
+  }
+});
+
+onDestroy(() => {
+  if (removeListener) removeListener();
+});
 </script>
 
 

@@ -36,21 +36,21 @@
               class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >
               About <!-- Chevron Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 inline-block ml-1 transition-transform duration-300"
-                :class="aboutOpen ? 'rotate-180' : 'rotate-0'"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 inline-block ml-1 transition-transform duration-300"
+      :class="aboutOpen ? 'rotate-180' : 'rotate-0'"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
             </a>
           
             {#if aboutOpen}

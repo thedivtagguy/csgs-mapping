@@ -26,7 +26,6 @@
   let width = 1100;
   let height = 560;
   let widthMobile = 300;
-  
 
   // Define categories and their colors
   const categoryColors = {
@@ -53,9 +52,8 @@
   const language = data.filter((d) => d.category === "Language");
   const rewritings = data.filter((d) => d.category === "Rewritings");
 
+  const allKeywords = [...new Set(data.map((d) => d.keyword1))];
  
-
-  const allKeywords = [...new Set(data.map(d => d.keyword1))];
 
   // Category-to-icon mapping
   const categoryIcons = {
@@ -65,23 +63,21 @@
     "Documentary/Film": "./assets/qa/Film.svg",
     "Performance Art/Strip Tease/Drag": "./assets/qa/Drag.svg",
     Nautanki: "./assets/qa/Nautanki.svg",
-    "Poetry": "./assets/qa/Spoken word.svg",
+    Poetry: "./assets/qa/Spoken word.svg",
     "Immersive Theatre": "./assets/qa/Theatre.svg",
     "Experiential Installation": "./assets/qa/Film.svg",
-    "Drag": "./assets/qa/Drag.svg",
-    "Bollywood Dance": "./assets/qa/Dance 1.svg", 
-    "Mixed Media": "./assets/qa/Mixed media.svg",
+    Drag: "./assets/qa/Drag.svg",
+    "Bollywood Dance": "./assets/qa/Dance 1.svg",
+    "Mixed Media": "./assets/qa/Mixed media.svg"
   };
 
   const rows = 4;
-    const cols = 8;
-    const cols2 = 10;
-  const cellSize = width*1.2 / cols2;
+  const cols = 8;
+  const cols2 = 10;
+  const cellSize = (width * 1.2) / cols2;
   const cellSize2 = width / 8;
-  const cellSize3 = width *1.1/ cols;
+  const cellSize3 = (width * 1.1) / cols;
 
- 
-  
   onMount(() => {
     window.mobileCheck = function () {
       let check = false;
@@ -120,35 +116,38 @@
       const svg = d3.select(svgContainer);
       body.forEach((d) => {
         svg
-          .selectAll("image")
-          .data(body)
-          .enter()
-          .append("image")
+        .selectAll(".data-shape")
+  .data(body)
+  .enter()
+  .append("image")
+  .attr("class", "data-shape")
+  .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % cols2) * cellSize)
           .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 50)
           .attr("width", 160)
           .attr("height", 160)
-          .attr("href", (d) => categoryIcons[d.artform])
-          .on("mouseover", function(event, d) {
-  d3.select(this).attr("stroke-width", 3);
+          // .attr("href", (d) => categoryIcons[d.artform])
+           .on("mouseover", function (event, d) {
+        d3.select(this)
+          .classed("image-with-stroke", true)
+          .classed("image-no-stroke", false);
 
-  tooltip
-    .style("opacity", 1)
-    .html(d.title || "No title");
-})
-.on("mousemove", function(event, d) {
-  const svgRect = svgContainer.getBoundingClientRect();
-  const x = event.clientX - svgRect.left;
-  const y = event.clientY - svgRect.top;
+        tooltip.style("opacity", 1).html(d.title || "No title");
+      })
+      .on("mousemove", function (event) {
+        const svgRect = svgContainer.getBoundingClientRect();
+        const x = event.clientX - svgRect.left;
+        const y = event.clientY - svgRect.top;
 
-  tooltip
-    .style("left", (x + 10) + "px")
-    .style("top", (y + 10) + "px");
-})
-.on("mouseout", function(event, d) {
-  d3.select(this).attr("stroke-width", 1);
-  tooltip.style("opacity", 0);
-})
+        tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
+      })
+      .on("mouseout", function () {
+        d3.select(this)
+          .classed("image-with-stroke", false)
+          .classed("image-no-stroke", true);
+
+        tooltip.style("opacity", 0);
+      })
           .on("click", function (d, i) {
             modal.handleOpen(i, modalContent);
           });
@@ -160,71 +159,68 @@
   function launchSpaceVisualization() {
     const tooltip = d3.select("#tooltip");
 
-  console.log("Launching Space Visualization");
+    console.log("Launching Space Visualization");
 
-  d3.select(svgContainer).selectAll("*").remove();
+    d3.select(svgContainer).selectAll("*").remove();
 
-// Add a delay (if needed)
-setTimeout(() => {
-  // Assign position and color
-  space.forEach(d => {
-    d.x = Math.random() * width;
-    d.y = Math.random() * height;
-    d.color = categoryColors[d.artform];
-  });
+    // Add a delay (if needed)
+    setTimeout(() => {
+      // Assign position and color
+      space.forEach((d) => {
+        d.x = Math.random() * width;
+        d.y = Math.random() * height;
+        d.color = categoryColors[d.artform];
+      });
 
-  // Create Voronoi structure
-  const delaunay = d3.Delaunay.from(space, d => d.x, d => d.y);
-  const voronoi = delaunay.voronoi([0, 0, width, height]);
+      // Create Voronoi structure
+      const delaunay = d3.Delaunay.from(
+        space,
+        (d) => d.x,
+        (d) => d.y
+      );
+      const voronoi = delaunay.voronoi([0, 0, width, height]);
 
-  // Bind space data directly
-  d3.select(svgContainer)
-    .selectAll("path")
-    .data(space)
-    .enter()
-    .append("path")
-    .attr("d", (d, i) => {
-      const polygon = voronoi.cellPolygon(i);
-      return polygon ? "M" + polygon.join("L") + "Z" : null;
-    })
-    .attr("fill", d => d.color)
-    .attr("stroke", "gray")
-    .attr("stroke-width", .1)
-    .attr("opacity", 0.9)
-    .attr("transform", "translate(50, 40)") 
-    .attr("filter", (d) =>
-        selectedKeyword && d.keyword1 === selectedKeyword ? "url(#shadow)" : null
-      )
-    .on("mouseover", function(event, d) {
-  d3.select(this).attr("stroke-width", 3);
+      // Bind space data directly
+      d3.select(svgContainer)
+        .selectAll(".data-shape")
+        .data(space)
+        .enter()
+        .append("path")
+        .attr("class", "data-shape")
+        .attr("d", (d, i) => {
+          const polygon = voronoi.cellPolygon(i);
+          return polygon ? "M" + polygon.join("L") + "Z" : null;
+        })
+        .attr("fill", (d) => d.color)
+        .attr("stroke", "gray")
+        .attr("stroke-width", 0.1)
+        .attr("opacity", 0.9)
+        .attr("transform", "translate(50, 40)")
+        .on("mouseover", function (event, d) {
+          d3.select(this).attr("stroke-width", 3);
 
-  tooltip
-    .style("opacity", 1)
-    .html(d.title || "No title");
-})
-.on("mousemove", function(event, d) {
-  const svgRect = svgContainer.getBoundingClientRect();
-  const x = event.clientX - svgRect.left;
-  const y = event.clientY - svgRect.top;
+          tooltip.style("opacity", 1).html(d.title || "No title");
+        })
+        .on("mousemove", function (event, d) {
+          const svgRect = svgContainer.getBoundingClientRect();
+          const x = event.clientX - svgRect.left;
+          const y = event.clientY - svgRect.top;
 
-  tooltip
-    .style("left", (x + 10) + "px")
-    .style("top", (y + 10) + "px");
-})
-.on("mouseout", function(event, d) {
-  d3.select(this).attr("stroke-width", 1);
-  tooltip.style("opacity", 0);
-})
-    .on("click", function (d, i) {
+          tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
+        })
+        .on("mouseout", function (event, d) {
+          d3.select(this).attr("stroke-width", 1);
+          tooltip.style("opacity", 0);
+        })
+        .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
-}, 1000);
-
+    }, 1000);
   }
   //////////Language Visualization
   function launchLanguageVisualization() {
     const tooltip = d3.select("#tooltip");
-    
+
     // Clear previous SVG content if exists
     d3.select(svgContainer).selectAll("*").remove();
     setTimeout(() => {
@@ -234,35 +230,34 @@ setTimeout(() => {
         d.color = categoryColors[d.artform]; // Assign color based on category
       });
       const iconPath1 = [
-  { d: "M0 0 H200 V30 H0 Z" },
-  { d: "M0 35 H200 V65 H0 Z" },
-  { d: "M0 70 H200 V100 H0 Z" },
-  { d: "M0 105 H140 V135 H0 Z" }
-];
+        { d: "M0 0 H200 V30 H0 Z" },
+        { d: "M0 35 H200 V65 H0 Z" },
+        { d: "M0 70 H200 V100 H0 Z" },
+        { d: "M0 105 H140 V135 H0 Z" }
+      ];
 
-
-const iconPath2 = [
-  { d: "M0 0 H200 V30 H0 Z" },
-  { d: "M0 35 H200 V65 H0 Z" },
-  { d: "M0 70 H200 V100 H0 Z" },
-  { d: "M0 105 H80 V135 H0 Z" }
-    ];
-const iconPath3 = [
-  { d: "M0 0 H200 V30 H0 Z" },
-  { d: "M0 35 H200 V65 H0 Z" },
-  { d: "M0 70 H200 V100 H0 Z" },
-  { d: "M0 105 H40 V135 H0 Z" }
-];
+      const iconPath2 = [
+        { d: "M0 0 H200 V30 H0 Z" },
+        { d: "M0 35 H200 V65 H0 Z" },
+        { d: "M0 70 H200 V100 H0 Z" },
+        { d: "M0 105 H80 V135 H0 Z" }
+      ];
+      const iconPath3 = [
+        { d: "M0 0 H200 V30 H0 Z" },
+        { d: "M0 35 H200 V65 H0 Z" },
+        { d: "M0 70 H200 V100 H0 Z" },
+        { d: "M0 105 H40 V135 H0 Z" }
+      ];
       const iconGroups = [iconPath1, iconPath2, iconPath3];
       const svg = d3.select(svgContainer);
       svg
-        .selectAll(".language-icon")
+        .selectAll(".data-shape")
         .data(language)
         .enter()
         .append("g")
-        .attr("class", "language-icon")
+        .attr("class", "data-shape")
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize3 ;
+          const x = (i % cols) * cellSize3;
           const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
           return `translate(${x}, ${y}) scale(0.65)`;
         })
@@ -271,33 +266,25 @@ const iconPath3 = [
           const paths = iconGroups[Math.floor(Math.random() * iconGroups.length)];
 
           paths.forEach((pathData) => {
-            group
-              .append("path")
-              .attr("d", pathData.d)
-              .attr("fill", categoryColors[d.artform])
-              
+            group.append("path").attr("d", pathData.d).attr("fill", categoryColors[d.artform]);
           });
         })
-        .on("mouseover", function(event, d) {
-  d3.select(this).attr("stroke-width", 2).attr( "stroke", "gray");
+        .on("mouseover", function (event, d) {
+          d3.select(this).attr("stroke-width", 2).attr("stroke", "gray");
 
-  tooltip
-    .style("opacity", 1)
-    .html(d.title || "No title");
-})
-.on("mousemove", function(event, d) {
-  const svgRect = svgContainer.getBoundingClientRect();
-  const x = event.clientX - svgRect.left;
-  const y = event.clientY - svgRect.top;
+          tooltip.style("opacity", 1).html(d.title || "No title");
+        })
+        .on("mousemove", function (event, d) {
+          const svgRect = svgContainer.getBoundingClientRect();
+          const x = event.clientX - svgRect.left;
+          const y = event.clientY - svgRect.top;
 
-  tooltip
-    .style("left", (x + 10) + "px")
-    .style("top", (y + 10) + "px");
-})
-.on("mouseout", function(event, d) {
-  d3.select(this).attr("stroke-width", 0);
-  tooltip.style("opacity", 0);
-})
+          tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
+        })
+        .on("mouseout", function (event, d) {
+          d3.select(this).attr("stroke-width", 0);
+          tooltip.style("opacity", 0);
+        })
         .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
@@ -317,11 +304,11 @@ const iconPath3 = [
 
       // Bind data and create paths
       svg
-        .selectAll(".grid-icon") // Use a specific class for selection
+        .selectAll(".data-shape") // Use a specific class for selection
         .data(rewritings)
         .enter()
         .append("path")
-        .attr("class", "grid-icon") // Add a class to avoid reselecting all paths
+        .attr("class", "data-shape") // Add a class to avoid reselecting all paths
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
           const x = (i % cols2) * cellSize2;
@@ -331,26 +318,22 @@ const iconPath3 = [
         .attr("fill", (d) => categoryColors[d.artform])
         .attr("stroke", "black")
         .attr("stroke-width", 1)
-        .on("mouseover", function(event, d) {
-  d3.select(this).attr("stroke-width", 3);
+        .on("mouseover", function (event, d) {
+          d3.select(this).attr("stroke-width", 3);
 
-  tooltip
-    .style("opacity", 1)
-    .html(d.title || "No title");
-})
-.on("mousemove", function(event, d) {
-  const svgRect = svgContainer.getBoundingClientRect();
-  const x = event.clientX - svgRect.left;
-  const y = event.clientY - svgRect.top;
+          tooltip.style("opacity", 1).html(d.title || "No title");
+        })
+        .on("mousemove", function (event, d) {
+          const svgRect = svgContainer.getBoundingClientRect();
+          const x = event.clientX - svgRect.left;
+          const y = event.clientY - svgRect.top;
 
-  tooltip
-    .style("left", (x + 10) + "px")
-    .style("top", (y +10) + "px");
-})
-.on("mouseout", function(event, d) {
-  d3.select(this).attr("stroke-width", 1);
-  tooltip.style("opacity", 0);
-})
+          tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
+        })
+        .on("mouseout", function (event, d) {
+          d3.select(this).attr("stroke-width", 1);
+          tooltip.style("opacity", 0);
+        })
         .on("click", function (d, i) {
           modal.handleOpen(i, modalContent);
         });
@@ -402,47 +385,55 @@ const iconPath3 = [
     console.log("Animation toggled. State now:", animationState);
   }
 
-  let selectedKeyword = null;
+  let selectedKeywords = [];
+  let currentView = "space"; // Default view; change as needed
 
-function toggleKeyword(keyword) {
-  selectedKeyword = selectedKeyword === keyword ? null : keyword;
-  updateVisuals();
-}
 
-function updateVisuals() {
-  // Re-render the appropriate visualization
-  if (currentView === "space") {
-    launchSpaceVisualization();
-  } else if (currentView === "body") {
-    launchBodyVisualisation();
+  function toggleKeyword(keyword) {
+    const index = selectedKeywords.indexOf(keyword);
+  if (index > -1) {
+    selectedKeywords.splice(index, 1); // Deselect
+  } else {
+    selectedKeywords.push(keyword); // Select
+  }
+    console.log("Selected keywords:", selectedKeywords);
+    
+    applyKeywordHighlight();
   }
 
-  else if (currentView === "language") {
-    launchLanguageVisualization();
-  } else if (currentView === "rewritings") {
-    launchRewritingsVisualization();
-  }
+  function applyKeywordHighlight() {
+  // Use D3 to select all elements for the current view
+  const container = d3.select(svgContainer);
+
+  container.selectAll(".data-shape") // use your actual class here
+    .style("filter", function(d) {
+      return selectedKeywords.includes(d.keyword1)
+        ? "drop-shadow(2px 2px 2px rgba(0,0,0,0.6))"
+        : "none";
+    });
 }
-
-
 
   function handleBodyClick() {
+    currentView = "body";
     toggleAnimation();
 
     launchBodyVisualization();
   }
 
   function handleSpaceClick() {
+    currentView = "space";
     toggleAnimation();
 
     launchSpaceVisualization();
   }
   function handleLanguageClick() {
+    currentView = "language";
     toggleAnimation();
 
     launchLanguageVisualization();
   }
   function handleRewritingsClick() {
+    currentView = "rewritings";
     toggleAnimation();
 
     launchRewritingsVisualization();
@@ -453,7 +444,6 @@ function updateVisuals() {
 <ModalOpen bind:this={modal} />
 
 <main>
-
   <div class="banner-container">
     <img src="./assets/Banner.svg" alt="Banner" class="banner" />
   </div>
@@ -466,7 +456,7 @@ function updateVisuals() {
     >
   </div>
 
-  <div id="tooltip" class="tooltip"></div>
+  <div id="tooltip" class="tooltip" />
 
   <!-- Queer Archive SVG underneath -->
   <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true">
@@ -476,55 +466,47 @@ function updateVisuals() {
       </filter>
     </defs>
     <!-- Voronoi should come before bars so it renders underneath -->
-    <g bind:this={svgContainer} class="voronoi" x = "20" y = "50">
+    <g bind:this={svgContainer} class="voronoi" x="20" y="50">
       <!-- D3 will populate here -->
     </g>
-  
+
     <g bind:this={svgElement} class="bars">
       <g class="bar-group">
         {#each Array(19).fill(0) as _, i}
-          <rect
-            class="bar"
-            x={10 + i * 62}
-            y="0"
-            width="61"
-            height="550"
-            rx="25"
-            fill="#F67C87"
-          />
+          <rect class="bar" x={10 + i * 62} y="0" width="61" height="550" rx="25" fill="#F67C87" />
         {/each}
       </g>
     </g>
-  
-    <!-- Static image background -->
-    <rect class="bottom" 
-    x="2" 
-    y="550" 
-    width="98%" 
-    height="15%" 
-    fill="#F3DF8C" 
-    opacity="1" 
-    stroke="#79A5AE" 
-    stroke-width="6"
-    rx="2" 
-    ry="2" 
-/>
 
+    <!-- Static image background -->
+    <rect
+      class="bottom"
+      x="2"
+      y="550"
+      width="98%"
+      height="15%"
+      fill="#F3DF8C"
+      opacity="1"
+      stroke="#79A5AE"
+      stroke-width="6"
+      rx="2"
+      ry="2"
+    />
 
     <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
   </svg>
   <div class="keyword-buttons">
     {#each allKeywords as keyword}
-      <button
-        class="keyword-button"
-        on:click={() => toggleKeyword(keyword)}
-      >
-        {keyword}
-      </button>
+    <button
+    class="keyword-button"
+    class:active={selectedKeywords.includes(keyword)}
+    on:click={() => toggleKeyword(keyword)}
+  >
+    {keyword}
+  </button>
     {/each}
   </div>
-
-  </main>
+</main>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
@@ -596,19 +578,19 @@ function updateVisuals() {
   }
 
   .queer-archive {
-  width: 100%;
-  height: auto;
-  display: block;
-  transform: translateY(-100px); /* Adjust this value to move the SVG up or down */
-}
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(-100px); /* Adjust this value to move the SVG up or down */
+  }
 
-.voronoi {
-  pointer-events: auto; /* interactive layer */
-}
+  .voronoi {
+    pointer-events: auto; /* interactive layer */
+  }
 
-.bars {
-  pointer-events: none; /* only for visuals */
-}
+  .bars {
+    pointer-events: none; /* only for visuals */
+  }
   .icon {
     width: 50px;
     height: 50px;
@@ -620,54 +602,65 @@ function updateVisuals() {
   }
 
   .tooltip {
-  position: absolute;
-  pointer-events: none;
-  background-color: #fae4b5; /* Fill color */
-  color: rgb(53, 49, 49); /* Font color */
-  
-  padding: 10px;
-  border-radius: 0px; /* Decorative border, rounded */
-  border: 2px dashed darkcyan ; /* Decorative border color */
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); /* Soft shadow for better visibility */
-  font-size: 12px;
-  max-width: 200px;
-  text-align: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.2s ease;
-  z-index: 1000;
-}
-.keyword-buttons {
-  position: absolute;
-  bottom: 12%; /* Adjust as needed to sit on rect */
-  left: 2%;
-  width: 96%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  z-index: 5; /* Above the SVG */
-  pointer-events: auto;
-}
+    position: absolute;
+    pointer-events: none;
+    background-color: #fae4b5; /* Fill color */
+    color: rgb(53, 49, 49); /* Font color */
 
-.keyword-button {
-  background-color: #F7B289;
-  border: 1px dashed #ffffff;
-  color: black;
-  
-  padding: 0.4em 1em;
-  border-radius: 1px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: .7rem;
-  
-}
+    padding: 10px;
+    border-radius: 0px; /* Decorative border, rounded */
+    border: 2px dashed darkcyan; /* Decorative border color */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); /* Soft shadow for better visibility */
+    font-size: 12px;
+    max-width: 200px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+  }
+  .keyword-buttons {
+    position: absolute;
+    bottom: 12%; /* Adjust as needed to sit on rect */
+    left: 2%;
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 5; /* Above the SVG */
+    pointer-events: auto;
+  }
 
-.keyword-button:hover {
-  background-color: #f67c87;
+  .keyword-button {
+    background-color: #f7b289;
+    border: 1px dashed #ffffff;
+    color: black;
+
+    padding: 0.4em 1em;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.7rem;
+  }
+
+  .keyword-button:hover {
+    background-color: #f67c87;
+    color: white;
+  }
+  
+
+  .keyword-button.active {
+  background-color: #cc2f46;
   color: white;
+  box-shadow: 0 0 10px rgba(204, 47, 70, 0.6);
 }
-.keyword-button:click {
-  background-color: #F3DF8C;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+  .image-with-stroke {
+  filter: drop-shadow(0 0 0 #cc2f46) drop-shadow(0 0 4px #cc2f46);
+  transition: filter 0.2s ease;
+}
+
+.image-no-stroke {
+  filter: none;
 }
 </style>

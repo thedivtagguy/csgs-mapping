@@ -690,11 +690,17 @@ html {
 .top-0 {
   top: 0px;
 }
+.left-0 {
+  left: 0px;
+}
 .z-10 {
   z-index: 10;
 }
 .z-20 {
   z-index: 20;
+}
+.z-50 {
+  z-index: 50;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
@@ -815,6 +821,15 @@ html {
 .-mt-2 {
   margin-top: -0.5rem;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.ml-1 {
+  margin-left: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -856,6 +871,9 @@ html {
 .h-12 {
   height: 3rem;
 }
+.h-4 {
+  height: 1rem;
+}
 .w-full {
   width: 100%;
 }
@@ -873,6 +891,12 @@ html {
 }
 .w-\[200px\] {
   width: 200px;
+}
+.w-40 {
+  width: 10rem;
+}
+.w-4 {
+  width: 1rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -894,6 +918,16 @@ html {
   -webkit-box-flex: 1;
           flex-grow: 1;
 }
+.rotate-180 {
+  --tw-rotate: 180deg;
+  -webkit-transform: var(--tw-transform);
+          transform: var(--tw-transform);
+}
+.rotate-0 {
+  --tw-rotate: 0deg;
+  -webkit-transform: var(--tw-transform);
+          transform: var(--tw-transform);
+}
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
@@ -903,6 +937,12 @@ html {
 }
 .list-none {
   list-style-type: none;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.list-decimal {
+  list-style-type: decimal;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1087,6 +1127,13 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(241 239 226 / var(--tw-bg-opacity));
 }
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
 .p-4 {
   padding: 1rem;
 }
@@ -1244,6 +1291,10 @@ html {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1264,6 +1315,9 @@ html {
 }
 .capitalize {
   text-transform: capitalize;
+}
+.italic {
+  font-style: italic;
 }
 .leading-6 {
   line-height: 1.5rem;
@@ -1290,9 +1344,17 @@ html {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(118 169 250 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1304,6 +1366,10 @@ html {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
@@ -1356,6 +1422,24 @@ html {
   -webkit-transition-duration: 150ms;
        -o-transition-duration: 150ms;
           transition-duration: 150ms;
+}
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+       -o-transition-duration: 150ms;
+          transition-duration: 150ms;
+}
+.duration-300 {
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 /* custom CSS goes here */
 /* Directive controlling where Tailwind injects responsive variations of utilities.
@@ -1571,6 +1655,14 @@ html {
     font-size: 3rem;
     line-height: 1;
   }
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   .sm\:tracking-tight {
     letter-spacing: -0.025em;
   }
@@ -1748,6 +1840,14 @@ html {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 1280px) {

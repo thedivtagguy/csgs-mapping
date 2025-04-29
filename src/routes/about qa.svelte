@@ -33,7 +33,7 @@
      <strong>Project Heads:</strong>  Dr. Arunima Theraja and Charul Mehndiratta
      <strong>Project Lead:</strong>  Jagriti Jain
       <strong>Core ELM Student Team:</strong> Serene George, Kehkasha, Heer Nimavat with support from Kallol Kashyap
-     <strong>Data Visualization and Design: </strong><a href = "https://www.poppadomco.com/" target = "_blank" class = "underline text-blue-400"> Nithya Subramanian
+     <strong>Data Visualization and Design: </strong><a href = "https://www.poppadomco.com/" target = "_blank" > Nithya Subramanian
      </a> </p> 
 
      <p class="mt-5 text-base mx-auto text-gray-500">A stage – an act – a dance – a song – a story – an audience – a memory – a moving body of moving bodies. This is unprecedented work. Among existing queer archives, we are India’s first archive of queer performance. Digital – globally accessible – dynamic – diverse – multilingual – a record of remembered and unremembered collective memory.</p>

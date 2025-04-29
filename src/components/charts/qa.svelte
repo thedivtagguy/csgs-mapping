@@ -18,7 +18,7 @@
   // let rewritings = [];
 
   let svgContainer;
-
+let showTitleCard = true;
   let svgElement;
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
@@ -30,20 +30,25 @@
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
-    "Classical Dance": "#C2DF97",
-    "Contemporary Dance": "#F67C87",
-    Dance: "#f3bef1",
-    Drag: "#F3DF8C",
-    "Folk Dance": "#F7B289",
-    "Immersive Theatre": "#D1BB80",
-    "Mixed Media": "#D08C87",
-    Music: "#A8DCC",
-    Nautanki: "#C0AAAF",
-    Poetry: "#79A5AE",
-    Rap: "#F8CAB0",
-    "Spoken Word": "#086788",
-    Storytelling: "0b2027",
-    Theatre: "#a13d63"
+  "Classical Dance": "#C2DF97",
+  "Contemporary Dance": "#F67C87",
+  "Dance as Political Discourse": "#A8DCC6",
+  "Dance Theatre": "#4D5270",
+  "Drag": "#F3DF8C",
+  "Experimental Dance": "#A9AEDB",
+  "Feminist Theatre": "#C65C7F",
+  "Film": "#F3BEF1",
+  "Folk Dance": "#F7B289",
+  "Immersive Theatre": "#C4D88D",
+  "Mixed Media": "#D08C87",
+  "Multimedia": "#867888",
+  "Music": "#A8DCCF",
+  "Nautanki": "#C0AAAF",
+  "Poetry": "#79A5AE",
+  "Rap": "#79A5AE",
+  "Spoken Word": "#79A5AE",
+  "Storytelling": "#55774d",
+  "Theatre": "#D1BB80"
   };
 
   // Group elements based on their category
@@ -59,8 +64,11 @@
   const categoryIcons = {
     Theatre: "./assets/qa/Theatre.svg",
     "Contemporary Dance": "./assets/qa/Dance 1.svg",
-    Dance: "./assets/qa/Dance 2.svg",
-    "Documentary/Film": "./assets/qa/Film.svg",
+    "Dance as Political Discourse": "./assets/qa/Political discourse.svg",
+    "Experimental Dance": "./assets/qa/Experimental dance.svg",
+    "Feminist Theatre": "./assets/qa/Feminist theatre.svg",
+    "Film": "./assets/qa/Film.svg",
+    "Immersive Theatre": "./assets/qa/Immersive theatre.svg",
     "Performance Art/Strip Tease/Drag": "./assets/qa/Drag.svg",
     Nautanki: "./assets/qa/Nautanki.svg",
     Poetry: "./assets/qa/Spoken word.svg",
@@ -341,6 +349,7 @@
   }
 
   function toggleAnimation() {
+    showTitleCard = false;
     let groups = svgElement.querySelectorAll(".bar-group");
 
     const animate = (toHeight, duration, ease = "none") => {
@@ -455,6 +464,12 @@
       >Rewritings</button
     >
   </div>
+  {#if showTitleCard}
+<div class = "title-card">
+    <p class="box-title">Click on the category buttons above to lift the curtain</p>
+    <p class="description">View visual representations of the performances in the archive. Click on the representations to know more, and use the keywords at the bottom of the stage to filter performances. Happy viewing!</p>
+  </div>
+  {/if}
 
   <div id="tooltip" class="tooltip" />
 
@@ -662,5 +677,40 @@
 
 .image-no-stroke {
   filter: none;
+}
+
+.title-card {
+  position: absolute;
+  top:350px; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #79A5AE;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  color: #ffffff;
+  text-align: center;
+ 
+    border: 2px solid #f3bef1;
+    border-radius: 8px;
+}
+.title-card .box-title {
+  font-family: "Abril Fatface", cursive;
+    
+    color: #ffffff;
+    font-size: clamp(16px, 2.5vw, 24px);
+   
+  
+  margin-bottom: 1rem;
+}
+
+.title-card .description {
+  
+  color: #ffffff;
+  font-size: .9rem;
+  line-height: 1.3;
+  font-weight: 400;
 }
 </style>

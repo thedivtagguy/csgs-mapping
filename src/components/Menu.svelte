@@ -62,9 +62,9 @@
         /></svg
       >
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+    <div class="hidden w-full md:block md:w-auto relative z-50" id="navbar-solid-bg">
       <ul
-        class="flex flex-col px-6 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700"
+        class="flex flex-col px-6 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700" style="z-index: 99990;"
       >
         <SearchForm />
         <li>
@@ -93,16 +93,16 @@
             </a>
 
             {#if aboutOpen}
-              <div class="absolute left-0 mt-2 w-40 bg-transparent border border-gray-200 rounded shadow-lg z-10000">
+              <div class="absolute left-0 mt-2 w-40 border border-gray-200 rounded shadow-sm z-10000 bg-[linear-gradient(to_bottom,_#F1efe2_30%,_#F3BEF1_90%)]">
                 <a
                   href="/about"
-                  class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100"
+                  class="block  py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-white/20"
                 >
                   About the Directory
                 </a>
                 <a
                   href="/about qa"
-                  class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100"
+                  class="block  py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-white/20"
                 >
                   The Queer Performance Archive
                 </a>
@@ -126,5 +126,8 @@
 <style>
   .searchbar {
     height: 40px;
+  }
+  .relative .about-dropdown{
+    z-index: 10000;
   }
 </style>

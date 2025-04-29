@@ -687,20 +687,20 @@ html {
   position: -webkit-sticky;
   position: sticky;
 }
+.left-0 {
+  left: 0px;
+}
 .top-0 {
   top: 0px;
 }
-.left-0 {
-  left: 0px;
+.z-50 {
+  z-index: 50;
 }
 .z-10 {
   z-index: 10;
 }
 .z-20 {
   z-index: 20;
-}
-.z-50 {
-  z-index: 50;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
@@ -806,8 +806,17 @@ html {
 .mt-4 {
   margin-top: 1rem;
 }
+.ml-1 {
+  margin-left: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .mr-1 {
   margin-right: 0.25rem;
@@ -820,15 +829,6 @@ html {
 }
 .-mt-2 {
   margin-top: -0.5rem;
-}
-.mt-3 {
-  margin-top: 0.75rem;
-}
-.mt-2 {
-  margin-top: 0.5rem;
-}
-.ml-1 {
-  margin-left: 0.25rem;
 }
 .block {
   display: block;
@@ -856,6 +856,9 @@ html {
 .h-6 {
   height: 1.5rem;
 }
+.h-4 {
+  height: 1rem;
+}
 .h-auto {
   height: auto;
 }
@@ -871,9 +874,6 @@ html {
 .h-12 {
   height: 3rem;
 }
-.h-4 {
-  height: 1rem;
-}
 .w-full {
   width: 100%;
 }
@@ -883,6 +883,12 @@ html {
 .w-6 {
   width: 1.5rem;
 }
+.w-4 {
+  width: 1rem;
+}
+.w-40 {
+  width: 10rem;
+}
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -891,12 +897,6 @@ html {
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-40 {
-  width: 10rem;
-}
-.w-4 {
-  width: 1rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -935,14 +935,14 @@ html {
 .list-inside {
   list-style-position: inside;
 }
-.list-none {
-  list-style-type: none;
-}
 .list-disc {
   list-style-type: disc;
 }
 .list-decimal {
   list-style-type: decimal;
+}
+.list-none {
+  list-style-type: none;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1127,12 +1127,10 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(241 239 226 / var(--tw-bg-opacity));
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-transparent {
-  background-color: transparent;
+.bg-\[linear-gradient\(to_bottom\2c _\#F1efe2_30\%\2c _\#F3BEF1_90\%\)\] {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #F1efe2), color-stop(90%, #F3BEF1));
+  background-image: -o-linear-gradient(top, #F1efe2 30%, #F3BEF1 90%);
+  background-image: linear-gradient(to bottom, #F1efe2 30%, #F3BEF1 90%);
 }
 .p-4 {
   padding: 1rem;
@@ -1344,10 +1342,6 @@ html {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1377,6 +1371,12 @@ html {
 }
 .underline-offset-2 {
   text-underline-offset: 2px;
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -1410,12 +1410,12 @@ html {
   -webkit-filter: var(--tw-filter);
           filter: var(--tw-filter);
 }
-.transition {
-  -webkit-transition-property: color, background-color, border-color, fill, stroke, opacity, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
-  -o-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1423,12 +1423,12 @@ html {
        -o-transition-duration: 150ms;
           transition-duration: 150ms;
 }
-.transition-transform {
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+.transition {
+  -webkit-transition-property: color, background-color, border-color, fill, stroke, opacity, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  -o-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1453,6 +1453,9 @@ html {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.hover\:bg-white\/20:hover {
+  background-color: rgb(255 255 255 / 0.2);
 }
 .hover\:bg-\[color\:\#f0f0f0\]:hover {
   --tw-bg-opacity: 1;

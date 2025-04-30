@@ -806,6 +806,30 @@ html {
 .-mt-2 {
   margin-top: -0.5rem;
 }
+.-mt-6 {
+  margin-top: -1.5rem;
+}
+.-mt-16 {
+  margin-top: -4rem;
+}
+.-mt-24 {
+  margin-top: -6rem;
+}
+.-mt-64 {
+  margin-top: -16rem;
+}
+.-mt-40 {
+  margin-top: -10rem;
+}
+.-mt-36 {
+  margin-top: -9rem;
+}
+.-mt-32 {
+  margin-top: -8rem;
+}
+.-mt-28 {
+  margin-top: -7rem;
+}
 .block {
   display: block;
 }
@@ -987,6 +1011,9 @@ html {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1182,6 +1209,10 @@ html {
   padding-left: 10px;
   padding-right: 10px;
 }
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1336,6 +1367,10 @@ html {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

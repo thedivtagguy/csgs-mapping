@@ -50,7 +50,16 @@
     Storytelling: "#55774d",
     Theatre: "#D1BB80"
   };
+  let showLegend = false;
 
+// Utility to determine text color (black or white) based on background
+function getTextColor(bg) {
+  const r = parseInt(bg.slice(1, 3), 16);
+  const g = parseInt(bg.slice(3, 5), 16);
+  const b = parseInt(bg.slice(5, 7), 16);
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b);
+  return luminance > 160 ? 'text-black' : 'text-white';
+};
   // Group elements based on their category
   const body = data.filter((d) => d.category === "Body");
   const space = data.filter((d) => d.category === "Space");
@@ -527,6 +536,25 @@
       </button>
     {/each}
   </div>
+
+  <!-- Mobile toggle -->
+<div class="md:hidden text-center mt-2">
+  <button class="px-4 py-2 bg-gray-800 text-white rounded" on:click={() => (showLegend = !showLegend)}>
+    {showLegend ? 'Hide Legend' : 'Show Legend'}
+  </button>
+</div>
+
+<!-- Legend Container -->
+<div class={`flex flex-wrap gap-1 justify-center -mt-24 ${showLegend ? '' : 'hidden'} md:flex`}>
+  {#each Object.entries(categoryColors) as [name, color]}
+    <div
+      class={`px-2 py-1 text-xs ${getTextColor(color)}`}
+      style="background-color: {color};"
+    >
+      {name}
+    </div>
+  {/each}
+</div>
 </main>
 
 <style>
@@ -632,7 +660,7 @@
   }
   .keyword-buttons {
     position: absolute;
-    bottom: 12%; /* Adjust as needed to sit on rect */
+    bottom: 11%; /* Adjust as needed to sit on rect */
     left: 2%;
     width: 96%;
     display: flex;
@@ -648,7 +676,7 @@
     border: 1px dashed #ffffff;
     color: black;
 
-    padding: 0.4em 1em;
+    padding: 0.4em .4em;
     border-radius: 1px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -667,34 +695,34 @@
 
   .title-card {
     position: absolute;
-    top: 350px; /* adjust as needed */
+    top: 40%; /* adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background-color: #79a5ae;
-    padding: 1.5rem;
+    background-color: #A8DCC6;
+    padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     max-width: 700px;
     color: #ffffff;
     text-align: center;
 
-    border: 2px solid #f3bef1;
+    border: 5px solid #f3bef1;
     border-radius: 8px;
   }
   .title-card .box-title {
     font-family: "Abril Fatface", cursive;
 
-    color: #ffffff;
-    font-size: clamp(16px, 2.5vw, 24px);
+    color: #7F2B01;
+    font-size: clamp(16px, 2vw, 28px);
 
     margin-bottom: 1rem;
   }
 
   .title-card .description {
-    color: #ffffff;
+    color: #7F2B01;
     font-size: 0.9rem;
-    line-height: 1.3;
+    line-height: 1.4;
     font-weight: 400;
   }
 </style>

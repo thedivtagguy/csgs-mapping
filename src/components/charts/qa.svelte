@@ -24,7 +24,7 @@
   let animationState = false; // assume false means full size
 
   let width = 1100;
-  let height = 560;
+  let height = 570;
   let widthMobile = 300;
 
   // Define categories and their colors
@@ -128,6 +128,8 @@
           .enter()
           .append("image")
           .attr("class", "data-shape")
+          // .attr("style", "filter: drop-shadow(1px 1px 0px #000000) ;")
+
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % cols2) * cellSize)
           .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 50)
@@ -135,7 +137,7 @@
           .attr("height", 160)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {
-            d3.select(this).classed("image-with-stroke", true).classed("image-no-stroke", false);
+            d3.select(this).attr("style", "filter: drop-shadow(1px 1px 0px #000000);");
 
             tooltip.style("opacity", 1).html(d.title || "No title");
           })
@@ -147,7 +149,7 @@
             tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
           })
           .on("mouseout", function () {
-            d3.select(this).classed("image-with-stroke", false).classed("image-no-stroke", true);
+            d3.select(this).attr("style", "filter: none;");
 
             tooltip.style("opacity", 0);
           })
@@ -200,7 +202,7 @@
         .attr("opacity", 0.9)
         .attr("transform", "translate(50, 40)")
         .on("mouseover", function (event, d) {
-          d3.select(this).attr("stroke-width", 3);
+          d3.select(this).attr("stroke-width", 3).attr("stroke", "#000000");
 
           tooltip.style("opacity", 1).html(d.title || "No title");
         })
@@ -212,7 +214,7 @@
           tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
         })
         .on("mouseout", function (event, d) {
-          d3.select(this).attr("stroke-width", 1);
+          d3.select(this).attr("stroke-width", 1).attr("stroke", "gray");
           tooltip.style("opacity", 0);
         })
         .on("click", function (d, i) {
@@ -273,7 +275,7 @@
           });
         })
         .on("mouseover", function (event, d) {
-          d3.select(this).attr("stroke-width", 2).attr("stroke", "gray");
+          d3.select(this).attr("stroke-width", 2).attr("stroke", "#000000");
 
           tooltip.style("opacity", 1).html(d.title || "No title");
         })
@@ -319,10 +321,10 @@
           return `translate(${x}, ${y}) scale(.24)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
-        .attr("stroke", "black")
-        .attr("stroke-width", 1)
+        
+        
         .on("mouseover", function (event, d) {
-          d3.select(this).attr("stroke-width", 3);
+          d3.select(this).attr("stroke-width", 6).attr("stroke", "#000000");
 
           tooltip.style("opacity", 1).html(d.title || "No title");
         })
@@ -334,7 +336,7 @@
           tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
         })
         .on("mouseout", function (event, d) {
-          d3.select(this).attr("stroke-width", 1);
+          d3.select(this).attr("stroke-width", 0);
           tooltip.style("opacity", 0);
         })
         .on("click", function (d, i) {
@@ -393,15 +395,15 @@
   let currentView = "space"; // Default view; change as needed
 
   function toggleKeyword(keyword) {
-  if (selectedKeywords.includes(keyword)) {
-    selectedKeywords = selectedKeywords.filter(k => k !== keyword); // Reassigns the array
-  } else {
-    selectedKeywords = [...selectedKeywords, keyword]; // Reassigns with new item
-  }
+    if (selectedKeywords.includes(keyword)) {
+      selectedKeywords = selectedKeywords.filter((k) => k !== keyword); // Reassigns the array
+    } else {
+      selectedKeywords = [...selectedKeywords, keyword]; // Reassigns with new item
+    }
 
-  console.log("Selected keywords:", selectedKeywords);
-  applyKeywordHighlight();
-}
+    console.log("Selected keywords:", selectedKeywords);
+    applyKeywordHighlight();
+  }
 
   function applyKeywordHighlight() {
     // Use D3 to select all elements for the current view
@@ -411,7 +413,7 @@
       .selectAll(".data-shape") // use your actual class here
       .style("filter", function (d) {
         return selectedKeywords.includes(d.keyword1)
-          ? "drop-shadow(2px 2px 2px rgba(0,0,0,0.6))"
+          ? "drop-shadow(2px 2px 4px rgba(0,0,0,1))"
           : "none";
       });
   }
@@ -513,8 +515,9 @@
       <button
         class="keyword-button"
         class:active={selectedKeywords.includes(keyword)}
-        
-        on:click={() => { toggleKeyword(keyword)}}
+        on:click={() => {
+          toggleKeyword(keyword);
+        }}
       >
         {keyword}
       </button>
@@ -595,7 +598,7 @@
     width: 100%;
     height: auto;
     display: block;
-    transform: translateY(-100px); /* Adjust this value to move the SVG up or down */
+    transform: translateY(-110px); /* Adjust this value to move the SVG up or down */
   }
 
   .voronoi {
@@ -605,7 +608,6 @@
   .bars {
     pointer-events: none; /* only for visuals */
   }
-  
 
   .tooltip {
     position: absolute;
@@ -654,18 +656,9 @@
     color: white;
   }
 
-  .keyword-button.active { background-color: #f67c87; filter: 
-   drop-shadow(0 0 6px #A8DCC6);}
-
-  
-  .image-with-stroke {
-    filter: 
-      drop-shadow(0 0 4px #cc2f46) drop-shadow(0 0 6px #cc2f46);
-    transition: filter 0.2s ease;
-  }
-
-  .image-no-stroke {
-    filter: none;
+  .keyword-button.active {
+    background-color: #f67c87;
+    filter: drop-shadow(0 0 6px #a8dcc6);
   }
 
   .title-card {

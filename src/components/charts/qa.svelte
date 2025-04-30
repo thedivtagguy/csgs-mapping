@@ -18,7 +18,7 @@
   // let rewritings = [];
 
   let svgContainer;
-let showTitleCard = true;
+  let showTitleCard = true;
   let svgElement;
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
@@ -30,25 +30,25 @@ let showTitleCard = true;
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
-  "Classical Dance": "#C2DF97",
-  "Contemporary Dance": "#F67C87",
-  "Dance as Political Discourse": "#A8DCC6",
-  "Dance Theatre": "#4D5270",
-  "Drag": "#F3DF8C",
-  "Experimental Dance": "#A9AEDB",
-  "Feminist Theatre": "#C65C7F",
-  "Film": "#F3BEF1",
-  "Folk Dance": "#F7B289",
-  "Immersive Theatre": "#C4D88D",
-  "Mixed Media": "#D08C87",
-  "Multimedia": "#867888",
-  "Music": "#A8DCCF",
-  "Nautanki": "#C0AAAF",
-  "Poetry": "#79A5AE",
-  "Rap": "#79A5AE",
-  "Spoken Word": "#79A5AE",
-  "Storytelling": "#55774d",
-  "Theatre": "#D1BB80"
+    "Classical Dance": "#C2DF97",
+    "Contemporary Dance": "#F67C87",
+    "Dance as Political Discourse": "#A8DCC6",
+    "Dance Theatre": "#4D5270",
+    Drag: "#F3DF8C",
+    "Experimental Dance": "#A9AEDB",
+    "Feminist Theatre": "#C65C7F",
+    Film: "#F3BEF1",
+    "Folk Dance": "#F7B289",
+    "Immersive Theatre": "#C4D88D",
+    "Mixed Media": "#D08C87",
+    Multimedia: "#867888",
+    Music: "#A8DCCF",
+    Nautanki: "#C0AAAF",
+    Poetry: "#79A5AE",
+    Rap: "#79A5AE",
+    "Spoken Word": "#79A5AE",
+    Storytelling: "#55774d",
+    Theatre: "#D1BB80"
   };
 
   // Group elements based on their category
@@ -58,7 +58,6 @@ let showTitleCard = true;
   const rewritings = data.filter((d) => d.category === "Rewritings");
 
   const allKeywords = [...new Set(data.map((d) => d.keyword1))];
- 
 
   // Category-to-icon mapping
   const categoryIcons = {
@@ -67,7 +66,7 @@ let showTitleCard = true;
     "Dance as Political Discourse": "./assets/qa/Political discourse.svg",
     "Experimental Dance": "./assets/qa/Experimental dance.svg",
     "Feminist Theatre": "./assets/qa/Feminist theatre.svg",
-    "Film": "./assets/qa/Film.svg",
+    Film: "./assets/qa/Film.svg",
     "Immersive Theatre": "./assets/qa/Immersive theatre.svg",
     "Performance Art/Strip Tease/Drag": "./assets/qa/Drag.svg",
     Nautanki: "./assets/qa/Nautanki.svg",
@@ -124,38 +123,34 @@ let showTitleCard = true;
       const svg = d3.select(svgContainer);
       body.forEach((d) => {
         svg
-        .selectAll(".data-shape")
-  .data(body)
-  .enter()
-  .append("image")
-  .attr("class", "data-shape")
-  .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
+          .selectAll(".data-shape")
+          .data(body)
+          .enter()
+          .append("image")
+          .attr("class", "data-shape")
+          .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % cols2) * cellSize)
           .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 50)
           .attr("width", 160)
           .attr("height", 160)
           // .attr("href", (d) => categoryIcons[d.artform])
-           .on("mouseover", function (event, d) {
-        d3.select(this)
-          .classed("image-with-stroke", true)
-          .classed("image-no-stroke", false);
+          .on("mouseover", function (event, d) {
+            d3.select(this).classed("image-with-stroke", true).classed("image-no-stroke", false);
 
-        tooltip.style("opacity", 1).html(d.title || "No title");
-      })
-      .on("mousemove", function (event) {
-        const svgRect = svgContainer.getBoundingClientRect();
-        const x = event.clientX - svgRect.left;
-        const y = event.clientY - svgRect.top;
+            tooltip.style("opacity", 1).html(d.title || "No title");
+          })
+          .on("mousemove", function (event) {
+            const svgRect = svgContainer.getBoundingClientRect();
+            const x = event.clientX - svgRect.left;
+            const y = event.clientY - svgRect.top;
 
-        tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
-      })
-      .on("mouseout", function () {
-        d3.select(this)
-          .classed("image-with-stroke", false)
-          .classed("image-no-stroke", true);
+            tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
+          })
+          .on("mouseout", function () {
+            d3.select(this).classed("image-with-stroke", false).classed("image-no-stroke", true);
 
-        tooltip.style("opacity", 0);
-      })
+            tooltip.style("opacity", 0);
+          })
           .on("click", function (d, i) {
             modal.handleOpen(i, modalContent);
           });
@@ -397,30 +392,29 @@ let showTitleCard = true;
   let selectedKeywords = [];
   let currentView = "space"; // Default view; change as needed
 
-
   function toggleKeyword(keyword) {
-    const index = selectedKeywords.indexOf(keyword);
-  if (index > -1) {
-    selectedKeywords.splice(index, 1); // Deselect
+  if (selectedKeywords.includes(keyword)) {
+    selectedKeywords = selectedKeywords.filter(k => k !== keyword); // Reassigns the array
   } else {
-    selectedKeywords.push(keyword); // Select
+    selectedKeywords = [...selectedKeywords, keyword]; // Reassigns with new item
   }
-    console.log("Selected keywords:", selectedKeywords);
-    
-    applyKeywordHighlight();
-  }
+
+  console.log("Selected keywords:", selectedKeywords);
+  applyKeywordHighlight();
+}
 
   function applyKeywordHighlight() {
-  // Use D3 to select all elements for the current view
-  const container = d3.select(svgContainer);
+    // Use D3 to select all elements for the current view
+    const container = d3.select(svgContainer);
 
-  container.selectAll(".data-shape") // use your actual class here
-    .style("filter", function(d) {
-      return selectedKeywords.includes(d.keyword1)
-        ? "drop-shadow(2px 2px 2px rgba(0,0,0,0.6))"
-        : "none";
-    });
-}
+    container
+      .selectAll(".data-shape") // use your actual class here
+      .style("filter", function (d) {
+        return selectedKeywords.includes(d.keyword1)
+          ? "drop-shadow(2px 2px 2px rgba(0,0,0,0.6))"
+          : "none";
+      });
+  }
 
   function handleBodyClick() {
     currentView = "body";
@@ -465,10 +459,14 @@ let showTitleCard = true;
     >
   </div>
   {#if showTitleCard}
-<div class = "title-card">
-    <p class="box-title">Click on the category buttons above to lift the curtain</p>
-    <p class="description">View visual representations of the performances in the archive. Click on the representations to know more, and use the keywords at the bottom of the stage to filter performances. Happy viewing!</p>
-  </div>
+    <div class="title-card">
+      <p class="box-title">Click on the category buttons above to lift the curtain</p>
+      <p class="description">
+        View visual representations of the performances in the archive. Click on the representations
+        to know more, and use the keywords at the bottom of the stage to filter performances. Happy
+        viewing!
+      </p>
+    </div>
   {/if}
 
   <div id="tooltip" class="tooltip" />
@@ -512,13 +510,14 @@ let showTitleCard = true;
   </svg>
   <div class="keyword-buttons">
     {#each allKeywords as keyword}
-    <button
-    class="keyword-button"
-    class:active={selectedKeywords.includes(keyword)}
-    on:click={() => toggleKeyword(keyword)}
-  >
-    {keyword}
-  </button>
+      <button
+        class="keyword-button"
+        class:active={selectedKeywords.includes(keyword)}
+        
+        on:click={() => { toggleKeyword(keyword)}}
+      >
+        {keyword}
+      </button>
     {/each}
   </div>
 </main>
@@ -606,15 +605,7 @@ let showTitleCard = true;
   .bars {
     pointer-events: none; /* only for visuals */
   }
-  .icon {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  .icon:hover {
-    transform: scale(1.2);
-  }
+  
 
   .tooltip {
     position: absolute;
@@ -662,55 +653,51 @@ let showTitleCard = true;
     background-color: #f67c87;
     color: white;
   }
+
+  .keyword-button.active { background-color: #f67c87; filter: 
+   drop-shadow(0 0 6px #A8DCC6);}
+
   
-
-  .keyword-button.active {
-  background-color: #cc2f46;
-  color: white;
-  box-shadow: 0 0 10px rgba(204, 47, 70, 0.6);
-}
-
   .image-with-stroke {
-  filter: drop-shadow(0 0 0 #cc2f46) drop-shadow(0 0 4px #cc2f46);
-  transition: filter 0.2s ease;
-}
+    filter: 
+      drop-shadow(0 0 4px #cc2f46) drop-shadow(0 0 6px #cc2f46);
+    transition: filter 0.2s ease;
+  }
 
-.image-no-stroke {
-  filter: none;
-}
+  .image-no-stroke {
+    filter: none;
+  }
 
-.title-card {
-  position: absolute;
-  top:350px; /* adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  background-color: #79A5AE;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  max-width: 700px;
-  color: #ffffff;
-  text-align: center;
- 
+  .title-card {
+    position: absolute;
+    top: 350px; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: #79a5ae;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    color: #ffffff;
+    text-align: center;
+
     border: 2px solid #f3bef1;
     border-radius: 8px;
-}
-.title-card .box-title {
-  font-family: "Abril Fatface", cursive;
-    
+  }
+  .title-card .box-title {
+    font-family: "Abril Fatface", cursive;
+
     color: #ffffff;
     font-size: clamp(16px, 2.5vw, 24px);
-   
-  
-  margin-bottom: 1rem;
-}
 
-.title-card .description {
-  
-  color: #ffffff;
-  font-size: .9rem;
-  line-height: 1.3;
-  font-weight: 400;
-}
+    margin-bottom: 1rem;
+  }
+
+  .title-card .description {
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    font-weight: 400;
+  }
 </style>

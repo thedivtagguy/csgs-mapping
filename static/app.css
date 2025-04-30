@@ -776,30 +776,6 @@ html {
 .mt-5 {
   margin-top: 1.25rem;
 }
-.ml-\[10px\] {
-  margin-left: 10px;
-}
-.mt-\[0px\] {
-  margin-top: 0px;
-}
-.ml-\[45px\] {
-  margin-left: 45px;
-}
-.ml-\[-25px\] {
-  margin-left: -25px;
-}
-.mt-\[10px\] {
-  margin-top: 10px;
-}
-.ml-\[20px\] {
-  margin-left: 20px;
-}
-.ml-\[30px\] {
-  margin-left: 30px;
-}
-.ml-\[60px\] {
-  margin-left: 60px;
-}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1281,10 +1257,6 @@ html {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1292,6 +1264,10 @@ html {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;

@@ -88,13 +88,15 @@ function getTextColor(bg) {
   };
 
   const rows = 4;
-  const cols = 8;
-  const cols2 = 10;
-  const cellSize = (width * 1.2) / cols2;
-  const cellSize2 = width / 8;
-  const cellSize3 = (width * 1.1) / cols;
+  const cols = 6;
+  const cols2 = 8;
+  const cellSize = (width)*1.1 / cols2;
+  const cellSize2 = width / 6;
+  const cellSize3 = (width) / cols;
 
-  onMount(() => {
+let barHeight;
+let yPos;
+onMount(async () => {
     window.mobileCheck = function () {
       let check = false;
       (function (a) {
@@ -109,8 +111,9 @@ function getTextColor(bg) {
           check = true;
       })(navigator.userAgent || navigator.vendor || window.opera);
       return check;
+     
     };
-
+    
     if (!svgElement) {
       console.error("SVG element not found!");
       return;
@@ -122,8 +125,16 @@ function getTextColor(bg) {
       console.error("No rectangles found in the SVG element!");
       return;
     }
+    if (mobileCheck()){
+    barHeight = 750;
+    yPos = 0;
+  } else {
+    barHeight = 550;
+    yPos = -110;
+  }
   });
-
+  
+  
   ///////////Body Visualization
   function launchBodyVisualization() {
     const tooltip = d3.select("#tooltip");
@@ -141,9 +152,9 @@ function getTextColor(bg) {
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % cols2) * cellSize)
-          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 50)
-          .attr("width", 160)
-          .attr("height", 160)
+          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 40)
+          .attr("width", 170)
+          .attr("height", 170)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {
             d3.select(this).attr("style", "filter: drop-shadow(1px 1px 0px #000000);");
@@ -238,11 +249,7 @@ function getTextColor(bg) {
     // Clear previous SVG content if exists
     d3.select(svgContainer).selectAll("*").remove();
     setTimeout(() => {
-      language.forEach((d, i) => {
-        d.x = 0; // Columns left to right
-        d.y = i * 20 + 10; // Rows bottom to top
-        d.color = categoryColors[d.artform]; // Assign color based on category
-      });
+      
       const iconPath1 = [
         { d: "M0 0 H200 V30 H0 Z" },
         { d: "M0 35 H200 V65 H0 Z" },
@@ -271,8 +278,8 @@ function getTextColor(bg) {
         .append("g")
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize3;
-          const y = height - cellSize3 - Math.floor(i / cols) * cellSize3;
+          const x = (i % cols) * cellSize3/.9;
+          const y = height - .7*cellSize3 - Math.floor(i / cols) * cellSize3;
           return `translate(${x}, ${y}) scale(0.65)`;
         })
         .each(function (d) {
@@ -463,13 +470,15 @@ function getTextColor(bg) {
 
 <main>
   <div class="banner-container">
-    <img src="./assets/Banner.svg" alt="Banner" class="banner" />
+    <a href="/about qa" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/Banner.svg" alt="Banner" class="banner" />
+    </a>
   </div>
   <div class="button-row">
-    <button class="animate-button1" on:click={handleBodyClick}>Body</button>
-    <button class="animate-button1 spacebutton" on:click={handleSpaceClick}>Space</button>
-    <button class="animate-button1 languagebutton" on:click={handleLanguageClick}>Language</button>
-    <button class="animate-button1 rewritingsbutton" on:click={handleRewritingsClick}
+    <button class="animate-button1 text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleBodyClick}>Body</button>
+    <button class="animate-button1 spacebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleSpaceClick}>Space</button>
+    <button class="animate-button1 languagebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleLanguageClick}>Language</button>
+    <button class="animate-button1 rewritingsbutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleRewritingsClick}
       >Rewritings</button
     >
   </div>
@@ -477,17 +486,18 @@ function getTextColor(bg) {
     <div class="title-card">
       <p class="box-title">Click on the category buttons above to lift the curtain</p>
       <p class="description">
-        View visual representations of the performances in the archive. Click on the representations
-        to know more, and use the keywords at the bottom of the stage to filter performances. There's a legend below the stage that maps colours to artforms. Happy
-        viewing!
-      </p>
+        <li>View visual representations of the performances in the archive </li>
+        <li>Click on the representations to know more, and use the keywords at the bottom of the stage to filter performances </li>
+        <li>There's a legend below the stage that maps colours to artforms </li> 
+        Happy exploring!
+      
     </div>
   {/if}
 
   <div id="tooltip" class="tooltip" />
 
   <!-- Queer Archive SVG underneath -->
-  <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true">
+  <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true" transform = "translate(0, {yPos})">
     <defs>
       <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
         <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
@@ -501,7 +511,8 @@ function getTextColor(bg) {
     <g bind:this={svgElement} class="bars">
       <g class="bar-group">
         {#each Array(19).fill(0) as _, i}
-          <rect class="bar" x={10 + i * 62} y="0" width="61" height="550" rx="25" fill="#F67C87" />
+          <rect class="bar" x={10 + i * 62} y="0" width="61"
+          height={barHeight} rx="25" fill="#F67C87" />
         {/each}
       </g>
     </g>
@@ -630,7 +641,7 @@ function getTextColor(bg) {
     width: 100%;
     height: auto;
     display: block;
-    transform: translateY(-110px); /* Adjust this value to move the SVG up or down */
+    /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
   }
 
   .voronoi {
@@ -703,9 +714,9 @@ function getTextColor(bg) {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    max-width: 700px;
+    max-width: 600px;
     color: #ffffff;
-    text-align: center;
+    
 
     border: 5px solid #f3bef1;
     border-radius: 8px;
@@ -715,14 +726,15 @@ function getTextColor(bg) {
 
     color: #7F2B01;
     font-size: clamp(16px, 2vw, 28px);
-    text-transform: uppercase;
+text-transform: uppercase;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .title-card .description {
     color: #7F2B01;
     font-size: 0.9rem;
-    line-height: 1.4;
+    line-height: 1.6;
     font-weight: 400;
   }
 </style>

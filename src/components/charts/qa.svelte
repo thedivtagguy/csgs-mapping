@@ -420,6 +420,7 @@
 
   function handleBodyClick() {
     currentView = "body";
+    selectedKeywords = [];
     toggleAnimation();
 
     launchBodyVisualization();
@@ -427,17 +428,20 @@
 
   function handleSpaceClick() {
     currentView = "space";
+    selectedKeywords = [];
     toggleAnimation();
 
     launchSpaceVisualization();
   }
   function handleLanguageClick() {
+    selectedKeywords = [];
     currentView = "language";
     toggleAnimation();
 
     launchLanguageVisualization();
   }
   function handleRewritingsClick() {
+    selectedKeywords = [];
     currentView = "rewritings";
     toggleAnimation();
 

@@ -12,9 +12,11 @@
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
         <div class="contents relative md:w-1/3">
-            <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded overflow-hidden">
+            <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded overflow-hidden" class:border-4={data.artform}
+  class:border-dashed={data.artform}
+  class:border-pink-500={data.artform}>
           
-            <div class="p-4 bg-[color:var(--color-aqua)]">
+            <div class="p-4 bg-[color:var(--color-aqua)]" class:bg-pink-300={data.artform}>
               <div class="flex  justify-between gap-6 items-center">
                {#if data[modalContent.title]}
                 {#if data[modalContent.link]}
@@ -81,16 +83,19 @@
                   {/if}
                   
                   {#if data.name}
-                  <p class="font-light text-gray-700 text-sm">Name: <span class="font-normal">{data.name}</span></p>
+                  <p class="font-bold text-gray-700 text-base">Name: <span class="font-normal">{data.name}</span></p>
                   {/if}
                   {#if data.artform1}
-                  <p class="font-light text-gray-700 text-sm">Artform: <span class="font-normal">{data.artform1}</span></p>
+                  <p class="font-bold text-gray-700 text-base">Artform: <span class="font-normal">{data.artform1}</span></p>
                   {/if}
                   {#if data.plot}
-                  <p class="font-light text-gray-700 text-sm">Plot: <span class="font-normal">{data.plot}</span></p>
+                  <p class="font-bold text-gray-700 text-base">Plot: <span class="font-normal">{data.plot}</span></p>
                   {/if}
                   {#if data.rationale}
-                  <p class="font-light text-gray-700 text-sm">Political rationale: <span class="font-normal">{data.rationale}</span></p>
+                  <p class="font-bold text-gray-700 text-base">Political rationale: <span class="font-normal">{data.rationale}</span></p>
+                  {/if}
+                  {#if data.links}
+                 <a href = "{data.links}" target="_blank" rel="external" class ="hover:text-gray-400"><p class="font-bold text-blue-500 text-base">View the performance</p></a>
                   {/if}
                 </div>
             </div>
@@ -113,6 +118,7 @@
     justify-content: center;
     align-items: center;
     z-index: 12;
+   
     /* allow click-through to backdrop */
     pointer-events: none;
   }
@@ -125,6 +131,8 @@
     flex-direction: column;
     justify-content: space-between;
     pointer-events: auto;
+    
+    
   }
 
 

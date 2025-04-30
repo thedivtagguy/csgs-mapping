@@ -31,7 +31,7 @@
     <section id = "qa">
        <QA
         modalContent={{
-            label: "artform1",
+            label: "keywords",
             title: "title",
            
             link: "link",

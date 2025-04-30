@@ -478,7 +478,7 @@ function getTextColor(bg) {
       <p class="box-title">Click on the category buttons above to lift the curtain</p>
       <p class="description">
         View visual representations of the performances in the archive. Click on the representations
-        to know more, and use the keywords at the bottom of the stage to filter performances. Happy
+        to know more, and use the keywords at the bottom of the stage to filter performances. There's a legend below the stage that maps colours to artforms. Happy
         viewing!
       </p>
     </div>
@@ -660,13 +660,13 @@ function getTextColor(bg) {
   }
   .keyword-buttons {
     position: absolute;
-    bottom: 11%; /* Adjust as needed to sit on rect */
+    bottom: 10%; /* Adjust as needed to sit on rect */
     left: 2%;
     width: 96%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: .7rem;
     z-index: 5; /* Above the SVG */
     pointer-events: auto;
   }
@@ -699,7 +699,7 @@ function getTextColor(bg) {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background-color: #A8DCC6;
+    background-color: #d3eee3;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -715,7 +715,7 @@ function getTextColor(bg) {
 
     color: #7F2B01;
     font-size: clamp(16px, 2vw, 28px);
-
+    text-transform: uppercase;
     margin-bottom: 1rem;
   }
 

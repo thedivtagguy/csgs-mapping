@@ -16,7 +16,7 @@
   // let space = [];
   // let language = [];
   // let rewritings = [];
-
+  let showExpandedLegend = false;
   let svgContainer;
   let showTitleCard = true;
   let svgElement;
@@ -39,10 +39,10 @@
     "Feminist Theatre": "#C65C7F",
     Film: "#F3BEF1",
     "Folk Dance": "#F7B289",
-    "Immersive Theatre": "#C4D88D",
+    "Immersive Theatre": "#bdc1ae",
     "Mixed Media": "#D08C87",
     Multimedia: "#867888",
-    Music: "#A8DCCF",
+    Music: "#99ad77",
     Nautanki: "#C0AAAF",
     Poetry: "#79A5AE",
     Rap: "#79A5AE",
@@ -489,7 +489,7 @@ onMount(async () => {
       <p class="description">
         <li>View visual representations of the performances in the archive </li>
         <li>Click on the representations to know more, and use the keywords at the bottom of the stage to filter performances </li>
-        <li>There's a legend below the stage that maps colours to artforms </li> 
+        <li>There's a legend in the scroll on the right, that maps colours to artforms </li> 
         Happy exploring!
       
     </div>
@@ -517,7 +517,8 @@ onMount(async () => {
         {/each}
       </g>
     </g>
-
+    
+    
     <!-- Static image background -->
     <rect
       class="bottom"
@@ -535,6 +536,31 @@ onMount(async () => {
 
     <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
   </svg>
+  <div class="legend-container absolute right-[3%] top-[32%] z-10" style = "filter: drop-shadow(1px 1px 1px #4c4c4c);">
+    {#if showExpandedLegend}
+      <img
+        src="./assets/qa/expanded.svg"
+        alt="Expanded Legend"
+        class="w-[130px] h-auto cursor-pointer"
+        tabindex="0"
+        on:click={() => showExpandedLegend = false}
+        on:keydown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            showExpandedLegend = false;
+          }
+        }}
+      />
+    {:else}
+      <img
+        src="./assets/qa/Legend.svg"
+        alt="Legend"
+        class="w-[130px] h-auto cursor-pointer"
+        on:click={() => showExpandedLegend = true}
+      />
+    {/if}
+    
+  </div>
+  
   <div class="keyword-buttons">
     {#each allKeywords as keyword}
       <button
@@ -550,14 +576,14 @@ onMount(async () => {
   </div>
 
   <!-- Mobile toggle -->
-<div class="md:hidden text-center mt-2">
+<!-- <div class="md:hidden text-center mt-2">
   <button class="px-4 py-2 bg-gray-800 text-white rounded" on:click={() => (showLegend = !showLegend)}>
     {showLegend ? 'Hide Legend' : 'Show Legend'}
   </button>
-</div>
+</div> -->
 
 <!-- Legend Container -->
-<div class={`flex flex-wrap gap-1 justify-center -mt-24 ${showLegend ? '' : 'hidden'} md:flex`}>
+<!-- <div class={`flex flex-wrap gap-1 justify-center -mt-24 ${showLegend ? '' : 'hidden'} md:flex`}>
   {#each Object.entries(categoryColors) as [name, color]}
     <div
       class={`px-2 py-1 text-xs ${getTextColor(color)}`}
@@ -566,7 +592,7 @@ onMount(async () => {
       {name}
     </div>
   {/each}
-</div>
+</div> -->
 </main>
 
 <style>
@@ -673,11 +699,11 @@ onMount(async () => {
   .keyword-buttons {
     position: absolute;
     bottom: 10%; /* Adjust as needed to sit on rect */
-    left: 2%;
-    width: 96%;
+    left: 10%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     gap: .7rem;
     z-index: 5; /* Above the SVG */
     pointer-events: auto;

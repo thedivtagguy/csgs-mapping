@@ -7,9 +7,9 @@
     let width, viewBoxWidth;
     // Get width of text bounding box
     //let textWidth = label.length * 8;
-    let textWidth = 180;
+    let textWidth = 160;
     // Set width of viewBox based on text width
-    viewBoxWidth = textWidth + 130;
+    viewBoxWidth = textWidth + 100;
     width = viewBoxWidth - 50;
   
     // If label is blank, set text to "Click me"
@@ -26,7 +26,7 @@
         <line class:active-left={active} x1="0%" y1="20" x2="0" y2="80" class="button__bar button__bar--mid side-left" />
         <line class:active-right={active} x1="100%" y1="20" x2="100%" y2="80" class="button__bar button__bar--mid side-right" />
         <line class:active-bot={active} x1="0" y1="80" x2="100%" y2="80" class="button__bar button__bar--bot" />
-        <text x="50%" y="57%" class="button__label">{label}</text>
+        <text x="50%" y="57%" class:text-active={active} class="button__label">{label}</text>
       </svg>
     </button>
   </a>
@@ -34,22 +34,27 @@
     <style>
   
   .button__bar {
-    transition-property: transform;
-    transition-duration: 0.1s;
-    transform-origin: center;
-    stroke: #3a3a3a;
-    stroke-width: 1px;
-  }
-  
-  .button__label {
-    transition-property: transform;
-    transition-duration: 0.1s;
-    transform-origin: center;
-    fill: #3a3a3a;
-    text-transform: uppercase;
-    font-weight: 400;
-      text-anchor: middle;
-  }
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transform-origin: center;
+  stroke: #F67C87;
+  stroke-width: 3px;
+  stroke-dashoffset: 10%;
+  stroke-dasharray: 4; /* 👈 makes it dashed */
+}
+
+.button__label {
+  font-family: 'Abril Fatface', serif;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transform-origin: center;
+  fill: #6d6d6d;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2rem; /* 👈 increase font size here */
+  text-anchor: middle;
+}
+
   .active-top  {
     transform: translate(1px, 1px) rotate(-1deg) ;
     }
@@ -65,7 +70,11 @@
   .active-right {
     transform: translateX(15px) rotate(2deg) ;
   }
-  
+  .text-active {
+    transform:scale(1.1);
+    
+    text-shadow: 1px 1px 5px #F67C87;
+  }
   .press-effect {
    -webkit-transition: all 0.1s;
     transition: all 0.1s;

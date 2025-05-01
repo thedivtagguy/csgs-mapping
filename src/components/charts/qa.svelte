@@ -90,8 +90,9 @@ function getTextColor(bg) {
   const rows = 4;
   const cols = 6;
   const cols2 = 8;
+  const colsRewritings = 10;
   const cellSize = (width)*1.1 / cols2;
-  const cellSize2 = width / 6;
+  const cellSize2 = width / 9;
   const cellSize3 = (width) / cols;
 
 let barHeight;
@@ -332,9 +333,9 @@ onMount(async () => {
         .attr("class", "data-shape") // Add a class to avoid reselecting all paths
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
-          const x = (i % cols2) * cellSize2;
-          const y = height - cellSize2 - Math.floor(i / cols2) * cellSize2;
-          return `translate(${x}, ${y}) scale(.24)`;
+          const x = (i % colsRewritings) * cellSize2;
+          const y = height -20 - cellSize2 - Math.floor(i / colsRewritings) * cellSize2;
+          return `translate(${x}, ${y}) scale(.3)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
         

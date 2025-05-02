@@ -23,8 +23,8 @@
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
 
-  let width = 1100;
-  let height = 570;
+  let width;
+  let height;
   let widthMobile = 300;
   let yPosition;
 let viewBoxHeight;
@@ -89,15 +89,9 @@ function getTextColor(bg) {
     "Bollywood Dance": "./assets/qa/Dance 1.svg",
     "Mixed Media": "./assets/qa/Mixed media.svg"
   };
-
-  const rows = 4;
-  const cols = 6;
-  const cols2 = 8;
-  const colsRewritings = 10;
-  const cellSize = (width)*1.1 / cols2;
-  const cellSize2 = width / 9;
-  const cellSize3 = (width) / cols;
-
+let colsLanguage, colsBody, colsRewritings, cellSizeBody, cellSizeRewritings, cellSizeLanguage;
+ 
+  
 
 onMount(async () => {
     window.mobileCheck = function () {
@@ -129,15 +123,32 @@ onMount(async () => {
       return;
     }
     if (mobileCheck()){
-    barHeight = 750;
+      width = 300;
+      height = 1100;
+    barHeight = 1050;
     yPos = 0;
-    yPosition = 750;
-    viewBoxHeight = 900;
+    yPosition = 1050;
+    viewBoxHeight = 1280;
+    colsLanguage = 3;
+  colsBody = 5;
+  colsRewritings = 4;
+  cellSizeBody = (width)*3.5 / colsBody;
+  cellSizeRewritings = width / 4;
+  cellSizeLanguage = (width) / colsLanguage;
   } else {
+    width = 1100;
+    height = 570;
     barHeight = 550;
     yPos = -110;
     yPosition = 550;
     viewBoxHeight = 650;
+    colsLanguage = 6;
+  colsBody = 8;
+  colsRewritings = 10;
+  cellSizeBody = (width)*1.1 / colsBody;
+  cellSizeRewritings = width / 9;
+  cellSizeLanguage = (width) / colsLanguage;
+
   }
   
   });
@@ -159,8 +170,8 @@ onMount(async () => {
           // .attr("style", "filter: drop-shadow(1px 1px 0px #000000) ;")
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
-          .attr("x", (d, i) => (i % cols2) * cellSize)
-          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 40)
+          .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
+          .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
           .attr("width", 170)
           .attr("height", 170)
           // .attr("href", (d) => categoryIcons[d.artform])
@@ -286,8 +297,8 @@ onMount(async () => {
         .append("g")
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize3/.9;
-          const y = height - .7*cellSize3 - Math.floor(i / cols) * cellSize3;
+          const x = (i % colsLanguage) * cellSizeLanguage/.9;
+          const y = height - .7*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
           return `translate(${x}, ${y}) scale(0.65)`;
         })
         .each(function (d) {
@@ -340,8 +351,8 @@ onMount(async () => {
         .attr("class", "data-shape") // Add a class to avoid reselecting all paths
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
-          const x = (i % colsRewritings) * cellSize2;
-          const y = height -20 - cellSize2 - Math.floor(i / colsRewritings) * cellSize2;
+          const x = (i % colsRewritings) * cellSizeRewritings;
+          const y = height -20 - cellSizeRewritings - Math.floor(i / colsRewritings) * cellSizeRewritings;
           return `translate(${x}, ${y}) scale(.3)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
@@ -433,14 +444,18 @@ onMount(async () => {
     // Use D3 to select all elements for the current view
     const container = d3.select(svgContainer);
 
-    container
-      .selectAll(".data-shape") // use your actual class here
-      .style("filter", function (d) {
-        return selectedKeywords.includes(d.keyword1)
-          ? "drop-shadow(2px 2px 4px rgba(0,0,0,1))"
-          : "none";
-      });
-  }
+    container.selectAll(".data-shape")
+    .style("filter", function (d) {
+      // If no keywords are selected, remove filters and reset opacity
+      if (selectedKeywords.length === 0) {
+        return "none";
+      }
+      // Apply highlight or dim based on match
+      return selectedKeywords.includes(d.keyword1)
+        ? "drop-shadow(2px 2px 2px rgba(0,0,0,.6))"
+        : "opacity(0.5)";
+    });
+}
 
   function handleBodyClick() {
     currentView = "body";
@@ -503,9 +518,10 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
-  <div class="legend-container absolute right-0 top-[30%] z-10 pointer-events-auto md:top-[30%]">
+  <div class="legend-container absolute right-[1%] top-[29%] z-10 pointer-events-auto md:top-[30%]" >
 
     {#if showExpandedLegend}
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <img
         src="./assets/qa/expanded.svg"
         alt="Expanded Legend"
@@ -519,6 +535,7 @@ onMount(async () => {
         }}
       />
     {:else}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img
         src="./assets/qa/Legend.svg"
         alt="Legend"
@@ -534,11 +551,7 @@ onMount(async () => {
   viewBox={`0 0 1200 ${viewBoxHeight}`}
   preserveAspectRatio="true"
   transform={`translate(0, ${yPos})`}>
-    <defs>
-      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
-      </filter>
-    </defs>
+    
     <!-- Voronoi should come before bars so it renders underneath -->
     <g bind:this={svgContainer} class="voronoi" x="20" y="50">
       <!-- D3 will populate here -->

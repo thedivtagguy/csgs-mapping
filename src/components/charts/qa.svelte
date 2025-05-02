@@ -26,7 +26,8 @@
   let width = 1100;
   let height = 570;
   let widthMobile = 300;
-
+  let yPosition;
+let viewBoxHeight;
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
@@ -50,7 +51,7 @@
     Storytelling: "#55774d",
     Theatre: "#D1BB80"
   };
-  let showLegend = false;
+  let showLegend = true;
 
 // Utility to determine text color (black or white) based on background
 function getTextColor(bg) {
@@ -129,10 +130,15 @@ onMount(async () => {
     if (mobileCheck()){
     barHeight = 750;
     yPos = 0;
+    yPosition = 750;
+    viewBoxHeight = 800;
   } else {
     barHeight = 550;
     yPos = -110;
+    yPosition = 550;
+    viewBoxHeight = 650;
   }
+  
   });
   
   
@@ -496,9 +502,36 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
-
+  <div class="legend-container absolute right-[0%] top-[30%] z-10 pointer-events-auto"> 
+    {#if showExpandedLegend}
+      <img
+        src="./assets/qa/expanded.svg"
+        alt="Expanded Legend"
+        class="w-[auto] h-[150px] cursor-pointer"
+        tabindex="0"
+        on:click={() => showExpandedLegend = false}
+        on:keydown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            showExpandedLegend = false;
+          }
+        }}
+      />
+    {:else}
+      <img
+        src="./assets/qa/Legend.svg"
+        alt="Legend"
+        class="w-[auto] h-[148px] cursor-pointer"
+        on:click={() => showExpandedLegend = true}
+      />
+    {/if}
+    
+  </div>
   <!-- Queer Archive SVG underneath -->
-  <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true" transform = "translate(0, {yPos})">
+  <svg
+  class="queer-archive"
+  viewBox={`0 0 1200 ${viewBoxHeight}`}
+  preserveAspectRatio="true"
+  transform={`translate(0, ${yPos})`}>
     <defs>
       <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
         <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
@@ -523,7 +556,7 @@ onMount(async () => {
     <rect
       class="bottom"
       x="2"
-      y="550"
+      y={yPosition}
       width="98%"
       height="15%"
       fill="#F3DF8C"
@@ -534,32 +567,9 @@ onMount(async () => {
       ry="2"
     />
 
-    <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
-  </svg>
-  <div class="legend-container absolute right-[3%] top-[32%] z-10" style = "filter: drop-shadow(1px 1px 1px #4c4c4c);">
-    {#if showExpandedLegend}
-      <img
-        src="./assets/qa/expanded.svg"
-        alt="Expanded Legend"
-        class="w-[130px] h-auto cursor-pointer"
-        tabindex="0"
-        on:click={() => showExpandedLegend = false}
-        on:keydown={(event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            showExpandedLegend = false;
-          }
-        }}
-      />
-    {:else}
-      <img
-        src="./assets/qa/Legend.svg"
-        alt="Legend"
-        class="w-[130px] h-auto cursor-pointer"
-        on:click={() => showExpandedLegend = true}
-      />
-    {/if}
     
-  </div>
+  </svg>
+  
   
   <div class="keyword-buttons">
     {#each allKeywords as keyword}
@@ -575,24 +585,7 @@ onMount(async () => {
     {/each}
   </div>
 
-  <!-- Mobile toggle -->
-<!-- <div class="md:hidden text-center mt-2">
-  <button class="px-4 py-2 bg-gray-800 text-white rounded" on:click={() => (showLegend = !showLegend)}>
-    {showLegend ? 'Hide Legend' : 'Show Legend'}
-  </button>
-</div> -->
-
-<!-- Legend Container -->
-<!-- <div class={`flex flex-wrap gap-1 justify-center -mt-24 ${showLegend ? '' : 'hidden'} md:flex`}>
-  {#each Object.entries(categoryColors) as [name, color]}
-    <div
-      class={`px-2 py-1 text-xs ${getTextColor(color)}`}
-      style="background-color: {color};"
-    >
-      {name}
-    </div>
-  {/each}
-</div> -->
+  
 </main>
 
 <style>
@@ -654,10 +647,12 @@ onMount(async () => {
   /* Optional: stack buttons vertically on smaller screens */
   @media (max-width: 600px) {
     .button-row {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.2rem;
     }
+
+    
   }
 
   main {
@@ -666,7 +661,7 @@ onMount(async () => {
 
   .queer-archive {
     width: 100%;
-    height: auto;
+   
     display: block;
     /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
   }
@@ -677,6 +672,7 @@ onMount(async () => {
 
   .bars {
     pointer-events: none; /* only for visuals */
+    z-index:11;
   }
 
   .tooltip {
@@ -698,12 +694,12 @@ onMount(async () => {
   }
   .keyword-buttons {
     position: absolute;
-    bottom: 10%; /* Adjust as needed to sit on rect */
-    left: 10%;
-    width: 80%;
+    bottom: 15%; /* Adjust as needed to sit on rect */
+    left: 5%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: center;
     gap: .7rem;
     z-index: 5; /* Above the SVG */
     pointer-events: auto;

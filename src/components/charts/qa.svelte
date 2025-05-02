@@ -28,6 +28,8 @@
   let widthMobile = 300;
   let yPosition;
 let viewBoxHeight;
+let barHeight;
+let yPos;
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
@@ -96,8 +98,7 @@ function getTextColor(bg) {
   const cellSize2 = width / 9;
   const cellSize3 = (width) / cols;
 
-let barHeight;
-let yPos;
+
 onMount(async () => {
     window.mobileCheck = function () {
       let check = false;
@@ -131,7 +132,7 @@ onMount(async () => {
     barHeight = 750;
     yPos = 0;
     yPosition = 750;
-    viewBoxHeight = 800;
+    viewBoxHeight = 900;
   } else {
     barHeight = 550;
     yPos = -110;
@@ -502,7 +503,8 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
-  <div class="legend-container absolute right-[0%] top-[30%] z-10 pointer-events-auto"> 
+  <div class="legend-container absolute right-0 top-[30%] z-10 pointer-events-auto md:top-[30%]">
+
     {#if showExpandedLegend}
       <img
         src="./assets/qa/expanded.svg"
@@ -571,7 +573,7 @@ onMount(async () => {
   </svg>
   
   
-  <div class="keyword-buttons">
+  <div class="keyword-buttons hidden md:flex">
     {#each allKeywords as keyword}
       <button
         class="keyword-button"
@@ -651,8 +653,27 @@ onMount(async () => {
       align-items: center;
       gap: 0.2rem;
     }
+    .legend-container {
+    top: auto !important;
+    bottom: -10% !important;
+    transform: scale(0.8);
+    right: 5%; /* optional: move it a bit inward from the right edge */
+  }
+    .title-card {
+      position: absolute;
+          top: 20% !important;
+    padding: .2rem;
+    width: 90%;
+  }
 
-    
+  .title-card .box-title {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+
+  .title-card .description {
+    font-size: clamp(13px, 4vw, 15px);
+  }
+  .keyword-buttons {display: none !important;}
   }
 
   main {

@@ -702,6 +702,9 @@ html {
 .top-0 {
   top: 0px;
 }
+.right-0 {
+  right: 0px;
+}
 .z-50 {
   z-index: 50;
 }
@@ -1718,6 +1721,9 @@ html {
 @media (min-width: 768px) {
   .md\:absolute {
     position: absolute;
+  }
+  .md\:top-\[30\%\] {
+    top: 30%;
   }
   .md\:col-span-1 {
     grid-column: span 1 / span 1;

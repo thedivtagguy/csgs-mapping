@@ -548,13 +548,7 @@ onMount(async () => {
     {/if}
     
   </div>
-  <div class="legend-container legend-container-mobile block md:hidden absolute right-[1%] top-[10%] z-10 pointer-events-auto" >
-    <img
-        src="./assets/qa/MobileLegend.svg"
-        alt="Legend"
-        class="w-[auto] h-[148px] cursor-pointer"
-       />
-  </div>
+  
   <!-- Queer Archive SVG underneath -->
   <svg
   class="queer-archive"
@@ -594,7 +588,31 @@ onMount(async () => {
 
     
   </svg>
-  
+  <div class="legend-container-mobile block md:hidden absolute left-[0%] top-[75%] z-10 pointer-events-auto" >
+    {#if showExpandedLegend}
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+      <img
+        src="./assets/qa/MobileLegendexpanded.svg"
+        alt="Expanded Legend"
+        class="w-[800px] h-[auto] cursor-pointer"
+        tabindex="0"
+        on:click={() => showExpandedLegend = false}
+        on:keydown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            showExpandedLegend = false;
+          }
+        }}
+      />
+    {:else}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        src="./assets/qa/MobileLegend.svg"
+        alt="Legend"
+        class="w-[800px] h-[auto] cursor-pointer"
+        on:click={() => showExpandedLegend = true}
+      />
+    {/if}
+  </div>
   
   <div class="keyword-buttons hidden md:flex bottom-[15%]">
     {#each allKeywords as keyword}

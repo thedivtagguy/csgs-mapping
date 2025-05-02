@@ -406,13 +406,13 @@ onMount(async () => {
       if (!animationState) {
         animate(0, 1); // shrink
       } else {
-        animate(550, 2, "bounce.out"); // bounce back
+        animate(barHeight, 2, "bounce.out"); // bounce back
       }
       animationState = !animationState;
       hasAnimatedOnce = true;
     } else {
       // Every other time: shrink then bounce back
-      animate(550, 1.5, "bounce.out"); // bounce back
+      animate(barHeight, 1.5, "bounce.out"); // bounce back
 
       // Then bounce back after a short delay
       setTimeout(() => {

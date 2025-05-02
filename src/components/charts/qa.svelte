@@ -28,6 +28,7 @@
   let widthMobile = 300;
   let yPosition;
 let viewBoxHeight;
+let viewBoxWidth;
 let barHeight;
 let yPos;
   // Define categories and their colors
@@ -126,8 +127,9 @@ onMount(async () => {
       width = 300;
       height = 1100;
     barHeight = 1050;
-    yPos = 0;
+    yPos = -50;
     yPosition = 1050;
+    viewBoxWidth = 1200;
     viewBoxHeight = 1280;
     colsLanguage = 3;
   colsBody = 5;
@@ -141,6 +143,7 @@ onMount(async () => {
     barHeight = 550;
     yPos = -110;
     yPosition = 550;
+    viewBoxWidth = 1200;
     viewBoxHeight = 650;
     colsLanguage = 6;
   colsBody = 8;
@@ -498,10 +501,10 @@ onMount(async () => {
     </a>
   </div>
   <div class="button-row">
-    <button class="animate-button1 text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleBodyClick}>Body</button>
-    <button class="animate-button1 spacebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleSpaceClick}>Space</button>
-    <button class="animate-button1 languagebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleLanguageClick}>Language</button>
-    <button class="animate-button1 rewritingsbutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleRewritingsClick}
+    <button class="animate-button1 text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleBodyClick}>Body</button>
+    <button class="animate-button1 spacebutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleSpaceClick}>Space</button>
+    <button class="animate-button1 languagebutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleLanguageClick}>Language</button>
+    <button class="animate-button1 rewritingsbutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleRewritingsClick}
       >Rewritings</button
     >
   </div>
@@ -518,7 +521,7 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
-  <div class="legend-container absolute right-[1%] top-[29%] z-10 pointer-events-auto md:top-[30%]" >
+  <div class="legend-container absolute right-[1%] top-[10%] z-10 pointer-events-auto md:top-[30%]" >
 
     {#if showExpandedLegend}
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -548,7 +551,7 @@ onMount(async () => {
   <!-- Queer Archive SVG underneath -->
   <svg
   class="queer-archive"
-  viewBox={`0 0 1200 ${viewBoxHeight}`}
+  viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
   preserveAspectRatio="true"
   transform={`translate(0, ${yPos})`}>
     

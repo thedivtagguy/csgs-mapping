@@ -122,7 +122,7 @@
 
     if (mobileCheck()) {
       width = widthMobile;
-      height = window.innerHeight / 1.5;
+     // height = window.innerHeight / 1.5;
     
     }
 

@@ -25,7 +25,7 @@
 
   let width;
   let height;
-  let widthMobile = 300;
+  
   let yPosition;
 let viewBoxHeight;
 let viewBoxWidth;
@@ -124,19 +124,19 @@ onMount(async () => {
       return;
     }
     if (mobileCheck()){
-      width = 300;
-      height = 1100;
+      width = 1100;
+      height = 1020;
     barHeight = 1050;
-    yPos = -50;
+    yPos = -70;
     yPosition = 1050;
     viewBoxWidth = 1200;
     viewBoxHeight = 1280;
-    colsLanguage = 3;
-  colsBody = 5;
-  colsRewritings = 4;
-  cellSizeBody = (width)*3.5 / colsBody;
-  cellSizeRewritings = width / 4;
-  cellSizeLanguage = (width) / colsLanguage;
+    colsLanguage = 5;
+  colsBody = 6;
+  colsRewritings = 7;
+  cellSizeBody = (width)*1.1 / colsBody;
+  cellSizeRewritings = width*1.1/ colsRewritings;
+  cellSizeLanguage = (width)*1.1 / colsLanguage;
   } else {
     width = 1100;
     height = 570;
@@ -301,8 +301,8 @@ onMount(async () => {
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
           const x = (i % colsLanguage) * cellSizeLanguage/.9;
-          const y = height - .7*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
-          return `translate(${x}, ${y}) scale(0.65)`;
+          const y = height - .65*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
+          return `translate(${x}, ${y}) scale(0.63)`;
         })
         .each(function (d) {
           const group = d3.select(this);
@@ -521,7 +521,7 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
-  <div class="legend-container absolute right-[1%] top-[10%] z-10 pointer-events-auto md:top-[30%]" >
+  <div class="legend-container absolute right-[1%] top-[10%] z-10 pointer-events-auto hidden md:block md:top-[30%]" >
 
     {#if showExpandedLegend}
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -548,15 +548,22 @@ onMount(async () => {
     {/if}
     
   </div>
+  <div class="legend-container legend-container-mobile block md:hidden absolute right-[1%] top-[10%] z-10 pointer-events-auto" >
+    <img
+        src="./assets/qa/MobileLegend.svg"
+        alt="Legend"
+        class="w-[auto] h-[148px] cursor-pointer"
+       />
+  </div>
   <!-- Queer Archive SVG underneath -->
   <svg
   class="queer-archive"
   viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
-  preserveAspectRatio="true"
+  preserveAspectRatio="xMidYMid meet"
   transform={`translate(0, ${yPos})`}>
     
     <!-- Voronoi should come before bars so it renders underneath -->
-    <g bind:this={svgContainer} class="voronoi" x="20" y="50">
+    <g bind:this={svgContainer} class="voronoi" x="20" y="0">
       <!-- D3 will populate here -->
     </g>
 
@@ -589,7 +596,7 @@ onMount(async () => {
   </svg>
   
   
-  <div class="keyword-buttons hidden md:flex">
+  <div class="keyword-buttons hidden md:flex bottom-[15%]">
     {#each allKeywords as keyword}
       <button
         class="keyword-button"
@@ -684,6 +691,9 @@ onMount(async () => {
 .tooltip{
   display: none;
 }
+.animate-button1{
+  padding: 0.6em 0.7em;
+}
   .title-card .box-title {
     font-size: clamp(16px, 5vw, 22px);
   }
@@ -733,7 +743,7 @@ onMount(async () => {
   }
   .keyword-buttons {
     position: absolute;
-    bottom: 15%; /* Adjust as needed to sit on rect */
+    
     left: 5%;
     width: 90%;
     display: flex;

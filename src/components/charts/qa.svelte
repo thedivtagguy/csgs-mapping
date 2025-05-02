@@ -681,7 +681,9 @@ onMount(async () => {
     padding: .2rem;
     width: 90%;
   }
-
+.tooltip{
+  display: none;
+}
   .title-card .box-title {
     font-size: clamp(16px, 5vw, 22px);
   }

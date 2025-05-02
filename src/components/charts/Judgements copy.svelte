@@ -121,7 +121,7 @@
     // Check if mobile device
 
     if (mobileCheck()) {
-      width = widthMobile;
+      //width = widthMobile;
      // height = window.innerHeight / 1.5;
     
     }
@@ -132,7 +132,7 @@
       svg = d3
         .select("#judgementsblock")
         .append("svg")
-        .attr("width", widthMobile)
+        .attr("width", width)
         .attr("height", height);
     } else {
       svg = d3.select("#judgementsblock").append("svg").attr("width", width).attr("height", height);
@@ -261,24 +261,21 @@
 
 <style>
   .judgementscontainer {
-    
-    display: grid;
-    grid-template-columns: repeat(85, 50px);
-    grid-template-rows: repeat(15, 50px);
-    
-
-    
-  }
-  #timelinewrapper{
-    width: 100vw;
-    height: 700px;
-    position: relative;
-    overflow-x: auto;
-  }
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+  #timelinewrapper {
+  width: 100vw;
+  height: 700px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
   #timeline {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    position: absolute;
+    width: 4250px; /* Or however wide you need */
+    position: relative;
     
   }
 
@@ -291,6 +288,21 @@
     position: absolute;
     z-index: 4;
   }
+  @media (max-width: 799px) {
+  #timelinewrapper {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa transparent;
+  }
+
+  #timelinewrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  #timelinewrapper::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 3px;
+  }
+}
   .chart {
     grid-area: 1/14/2/19;
   }

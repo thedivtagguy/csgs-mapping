@@ -11,7 +11,7 @@
   {#if isOpen}
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
-        <div class="contents relative md:w-1/3">
+        <div class="contents relative w-[90%] max-w-[22rem] md:w-1/3">
             <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded overflow-hidden" class:border-4={data.artform}
   class:border-dashed={data.artform}
   class:border-pink-500={data.artform}>

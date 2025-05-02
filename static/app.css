@@ -910,6 +910,9 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[90\%\] {
+  width: 90%;
+}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -923,6 +926,9 @@ html {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+.max-w-\[22rem\] {
+  max-width: 22rem;
 }
 .flex-1 {
   -webkit-box-flex: 1;

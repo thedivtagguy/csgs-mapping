@@ -5,18 +5,18 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-7a3b47cc.js">
-		<link rel="modulepreload" href="/_app/chunks/index-0d32f2ab.js">
-		<link rel="modulepreload" href="/_app/chunks/index-d2a74c13.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-fd8cfe40.js">
-		<link rel="modulepreload" href="/_app/pages/contact.svelte-30435940.js">
-		<link rel="modulepreload" href="/_app/chunks/Menu-c562a1fe.js">
+		<link rel="modulepreload" href="/_app/start-deaa4e2b.js">
+		<link rel="modulepreload" href="/_app/chunks/index-e8cc856b.js">
+		<link rel="modulepreload" href="/_app/chunks/index-0c8a97fe.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-32c4a054.js">
+		<link rel="modulepreload" href="/_app/pages/contact.svelte-11d6ae47.js">
+		<link rel="modulepreload" href="/_app/chunks/Menu-f11cc9d4.js">
 		<link rel="stylesheet" href="/_app/assets/start-c446e5f0.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-46b8cc39.css">
-		<link rel="stylesheet" href="/_app/assets/Menu-14b9e220.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-85fb071a.css">
+		<link rel="stylesheet" href="/_app/assets/Menu-cf16f5fb.css">
 
 		<script type="module">
-			import { start } from "/_app/start-7a3b47cc.js";
+			import { start } from "/_app/start-deaa4e2b.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -29,8 +29,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-fd8cfe40.js"),
-						import("/_app/pages/contact.svelte-30435940.js")
+						import("/_app/pages/__layout.svelte-32c4a054.js"),
+						import("/_app/pages/contact.svelte-11d6ae47.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -53,13 +53,16 @@
     <a href="/" class="flex justify-center items-center block py-1 mx-auto text-2xl text-gray-700 text-bold"><img src="/assets/logo.png" width="140" alt="Section logo image"></a>
     <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-md md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="navbar-solid-bg" aria-expanded="false"><span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg"><ul class="flex flex-col px-6 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700">
+    <div class="hidden w-full md:block md:w-auto relative z-50 svelte-1c7bx0" id="navbar-solid-bg"><ul class="flex flex-col px-6 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 justify-center items-center md:dark:bg-transparent dark:border-gray-700" style="z-index: 99990;">
 
  
 
 <a href="/search"><button class="bg-[color:var(--color-background)] hover:bg- border-gray-400/0 py-2 px-2 rounded inline-flex items-center"><span class="block uppercase py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SEARCH THE DIRECTORY</span></button></a>
-        <li><a href="/about" class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
-        <li><a href="/about qa" class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Queer Performance Archive</a></li>
+        <li><div class="relative about-dropdown svelte-1c7bx0"><a href="#" class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About 
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-1 transition-transform duration-300" :class="aboutOpen ? 'rotate-180' : 'rotate-0'" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+
+            </div></li>
+        
         <li><a href="/contact" class="block uppercase py-2 pr-2 pl-2 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#79A5AE] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Submit a resource</a></li></ul></div></div>
 </nav>
     <div class="mt-10 md:py-24 px-6 sm:mt-0"><div class="md:grid md:grid-cols-3 md:gap-6"><div class="md:col-span-1"><div class="px-4 sm:px-0"><h3 class="text-lg font-medium leading-6 text-gray-900">Contribute a Resource</h3>
@@ -102,7 +105,8 @@
   <div class="w-2/3 text-center mx-auto pb-4 "><p class="text-center mx-auto py-1 text-sm font-semibold text-gray-400 whitespace-pre-wrap">A Project by 
      </p>
     <a sveltekit:prefetch href="https://csgs.ashoka.edu.in/" aria-label="CSGS">Centre for Studies in Gender and Sexuality, Ashoka University</a></div>
-  </section></footer></main>
+  </section></footer>
+</main>
 
 
 

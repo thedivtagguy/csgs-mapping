@@ -711,6 +711,9 @@ html {
 .top-0 {
   top: 0px;
 }
+.top-\[78\%\] {
+  top: 78%;
+}
 .z-50 {
   z-index: 50;
 }
@@ -1063,12 +1066,6 @@ html {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-scroll {
-  overflow: scroll;
-}
-.overflow-y-auto {
-  overflow-y: auto;
 }
 .whitespace-pre-line {
   white-space: pre-line;

@@ -91,6 +91,7 @@ function getTextColor(bg) {
     "Mixed Media": "./assets/qa/Mixed media.svg"
   };
 let colsLanguage, colsBody, colsRewritings, cellSizeBody, cellSizeRewritings, cellSizeLanguage;
+let scaleLanguage, scaleBody, scaleRewritings;
  
   
 
@@ -137,6 +138,9 @@ onMount(async () => {
   cellSizeBody = (width)*1.05/4;
   cellSizeRewritings = width*1.1/ colsRewritings;
   cellSizeLanguage = (width)*.9/ colsLanguage;
+  scaleBody = 1;
+  scaleLanguage = 1.3;
+  scaleRewritings = .4;
   } else {
     width = 1100;
     height = 570;
@@ -150,7 +154,10 @@ onMount(async () => {
   colsRewritings = 10;
   cellSizeBody = (width)*1.1 / colsBody;
   cellSizeRewritings = width / 9;
-  cellSizeLanguage = (width) / colsLanguage;
+  cellSizeLanguage = (width)*.9 / colsLanguage;
+  scaleBody = 1;
+  scaleLanguage = .63;
+  scaleRewritings = .3;
 
   }
   
@@ -170,13 +177,14 @@ onMount(async () => {
           .enter()
           .append("image")
           .attr("class", "data-shape")
-          // .attr("style", "filter: drop-shadow(1px 1px 0px #000000) ;")
+          
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
           .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
-          .attr("width", 170)
-          .attr("height", 170)
+          // .attr("width", 170)
+          // .attr("height", 170)
+          .attr("transform", `scale(${scaleBody})`)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {
             d3.select(this).attr("style", "filter: drop-shadow(1px 1px 0px #000000);");
@@ -301,15 +309,16 @@ onMount(async () => {
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
           const x = 50+(i % colsLanguage) * cellSizeLanguage/.9;
-          const y = height - .65*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
-          return `translate(${x}, ${y}) scale(0.63)`;
+          const y = height - cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
+          return `translate(${x}, ${y})`;
         })
+        
         .each(function (d) {
           const group = d3.select(this);
           const paths = iconGroups[Math.floor(Math.random() * iconGroups.length)];
 
           paths.forEach((pathData) => {
-            group.append("path").attr("d", pathData.d).attr("fill", categoryColors[d.artform]);
+            group.append("path").attr("d", pathData.d).attr("fill", categoryColors[d.artform]) .attr("transform", `scale(${scaleLanguage})`);
           });
         })
         .on("mouseover", function (event, d) {
@@ -356,7 +365,7 @@ onMount(async () => {
         .attr("transform", (d, i) => {
           const x = (i % colsRewritings) * cellSizeRewritings;
           const y = height -20 - cellSizeRewritings - Math.floor(i / colsRewritings) * cellSizeRewritings;
-          return `translate(${x}, ${y}) scale(.3)`;
+          return `translate(${x}, ${y}) scale(${scaleRewritings})`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
         
@@ -555,6 +564,11 @@ onMount(async () => {
   viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
   preserveAspectRatio="xMidYMid meet"
   transform={`translate(0, ${yPos})`}>
+  <defs>
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="1" stdDeviation="0.5" flood-color="#000000" />
+    </filter>
+  </defs>
     
     <!-- Voronoi should come before bars so it renders underneath -->
     <g bind:this={svgContainer} class="voronoi" x="20" y="0">

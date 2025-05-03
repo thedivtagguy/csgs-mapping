@@ -129,7 +129,7 @@ onMount(async () => {
       height = 1956;
     barHeight = 1850;
     yPos = -70;
-    yPosition = 1850;
+    yPosition = 1810;
     viewBoxWidth = 1200;
     viewBoxHeight = 2133;
     colsLanguage = 3;
@@ -140,7 +140,7 @@ onMount(async () => {
   cellSizeLanguage = (width)*.9/ colsLanguage;
   scaleBody = 1;
   scaleLanguage = 1.3;
-  scaleRewritings = .4;
+  scaleRewritings = .35;
   } else {
     width = 1100;
     height = 570;
@@ -364,7 +364,7 @@ onMount(async () => {
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
           const x = (i % colsRewritings) * cellSizeRewritings;
-          const y = height -20 - cellSizeRewritings - Math.floor(i / colsRewritings) * cellSizeRewritings;
+          const y = height-40 - cellSizeRewritings - Math.floor(i / colsRewritings) * cellSizeRewritings;
           return `translate(${x}, ${y}) scale(${scaleRewritings})`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
@@ -602,7 +602,7 @@ onMount(async () => {
 
     
   </svg>
-  <div class="legend-container-mobile block md:hidden absolute left-[5%] top-[80%] z-10 pointer-events-auto" >
+  <div class="legend-container-mobile block md:hidden absolute left-[5%] top-[78%] z-10 pointer-events-auto " >
     {#if showExpandedLegend}
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <img

@@ -11,8 +11,8 @@
   {#if isOpen}
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
-        <div class="contents relative w-[90%] md:w-1/2 max-w-[32rem]">
-            <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded overflow-hidden" class:border-4={data.artform}
+        <div class="contents relative w-[90%] md:w-1/2 max-w-[32rem] max-h-[90vh] ">
+            <div class="c-card block pb-4 bg-[color:var(--color-background)] shadow-md hover:shadow-xl rounded " class:border-4={data.artform}
   class:border-dashed={data.artform}
   class:border-pink-500={data.artform}>
           
@@ -126,7 +126,7 @@
     justify-content: center;
     align-items: center;
     z-index: 12;
-   
+  overflow-y: auto;
     /* allow click-through to backdrop */
     pointer-events: none;
   }

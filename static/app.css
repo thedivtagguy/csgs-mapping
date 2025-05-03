@@ -699,26 +699,17 @@ html {
 .top-\[10\%\] {
   top: 10%;
 }
-.left-\[0\%\] {
-  left: 0%;
+.left-\[5\%\] {
+  left: 5%;
 }
-.top-\[75\%\] {
-  top: 75%;
+.top-\[80\%\] {
+  top: 80%;
 }
 .bottom-\[15\%\] {
   bottom: 15%;
 }
 .top-0 {
   top: 0px;
-}
-.top-\[85\%\] {
-  top: 85%;
-}
-.left-\[5\%\] {
-  left: 5%;
-}
-.top-\[80\%\] {
-  top: 80%;
 }
 .z-50 {
   z-index: 50;
@@ -886,6 +877,9 @@ html {
 .h-12 {
   height: 3rem;
 }
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
 .w-full {
   width: 100%;
 }
@@ -907,8 +901,8 @@ html {
 .w-\[auto\] {
   width: auto;
 }
-.w-\[800px\] {
-  width: 800px;
+.w-\[350px\] {
+  width: 350px;
 }
 .w-\[90\%\] {
   width: 90%;
@@ -921,15 +915,6 @@ html {
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-\[700px\] {
-  width: 700px;
-}
-.w-\[300px\] {
-  width: 300px;
-}
-.w-\[350px\] {
-  width: 350px;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -1078,6 +1063,12 @@ html {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-y-auto {
+  overflow-y: auto;
 }
 .whitespace-pre-line {
   white-space: pre-line;

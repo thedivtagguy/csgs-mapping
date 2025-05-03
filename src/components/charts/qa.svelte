@@ -125,18 +125,18 @@ onMount(async () => {
     }
     if (mobileCheck()){
       width = 1100;
-      height = 1020;
-    barHeight = 1050;
+      height = 1956;
+    barHeight = 1850;
     yPos = -70;
-    yPosition = 1050;
+    yPosition = 1850;
     viewBoxWidth = 1200;
-    viewBoxHeight = 1280;
-    colsLanguage = 5;
-  colsBody = 6;
-  colsRewritings = 7;
-  cellSizeBody = (width)*1.1 / colsBody;
+    viewBoxHeight = 2133;
+    colsLanguage = 3;
+  colsBody = 4;
+  colsRewritings = 5;
+  cellSizeBody = (width)*1.05/4;
   cellSizeRewritings = width*1.1/ colsRewritings;
-  cellSizeLanguage = (width)*1.1 / colsLanguage;
+  cellSizeLanguage = (width)*.9/ colsLanguage;
   } else {
     width = 1100;
     height = 570;
@@ -300,7 +300,7 @@ onMount(async () => {
         .append("g")
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
-          const x = (i % colsLanguage) * cellSizeLanguage/.9;
+          const x = 50+(i % colsLanguage) * cellSizeLanguage/.9;
           const y = height - .65*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
           return `translate(${x}, ${y}) scale(0.63)`;
         })
@@ -588,13 +588,13 @@ onMount(async () => {
 
     
   </svg>
-  <div class="legend-container-mobile block md:hidden absolute left-[0%] top-[75%] z-10 pointer-events-auto" >
+  <div class="legend-container-mobile block md:hidden absolute left-[5%] top-[80%] z-10 pointer-events-auto" >
     {#if showExpandedLegend}
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <img
         src="./assets/qa/MobileLegendexpanded.svg"
         alt="Expanded Legend"
-        class="w-[800px] h-[auto] cursor-pointer"
+        class="w-[350px] h-[auto] cursor-pointer"
         tabindex="0"
         on:click={() => showExpandedLegend = false}
         on:keydown={(event) => {
@@ -608,7 +608,7 @@ onMount(async () => {
       <img
         src="./assets/qa/MobileLegend.svg"
         alt="Legend"
-        class="w-[800px] h-[auto] cursor-pointer"
+        class="w-[350px] h-[auto] cursor-pointer"
         on:click={() => showExpandedLegend = true}
       />
     {/if}

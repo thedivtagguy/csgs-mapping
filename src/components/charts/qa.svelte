@@ -177,13 +177,13 @@ onMount(async () => {
           .enter()
           .append("image")
           .attr("class", "data-shape")
-          
+       
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
           .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
-          // .attr("width", 170)
-          // .attr("height", 170)
+          .attr("width", 170)
+          .attr("height", 170)
           .attr("transform", `scale(${scaleBody})`)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {

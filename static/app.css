@@ -674,6 +674,9 @@ html {
   white-space: nowrap;
   border-width: 0;
 }
+.pointer-events-auto {
+  pointer-events: auto;
+}
 .visible {
   visibility: visible;
 }
@@ -690,71 +693,23 @@ html {
 .left-0 {
   left: 0px;
 }
-.top-0 {
-  top: 0px;
+.right-\[1\%\] {
+  right: 1%;
 }
-.left-\[2\%\] {
-  left: 2%;
-}
-.top-\[550px\] {
-  top: 550px;
-}
-.left-\[10\%\] {
-  left: 10%;
-}
-.top-\[580px\] {
-  top: 580px;
+.top-\[10\%\] {
+  top: 10%;
 }
 .left-\[5\%\] {
   left: 5%;
 }
-.top-\[700px\] {
-  top: 700px;
+.top-\[80\%\] {
+  top: 80%;
 }
-.top-\[800px\] {
-  top: 800px;
+.bottom-\[15\%\] {
+  bottom: 15%;
 }
-.left-\[1\%\] {
-  left: 1%;
-}
-.top-\[650px\] {
-  top: 650px;
-}
-.right-\[2\%\] {
-  right: 2%;
-}
-.top-\[150px\] {
-  top: 150px;
-}
-.right-\[0\%\] {
-  right: 0%;
-}
-.top-\[200px\] {
-  top: 200px;
-}
-.top-\[250px\] {
-  top: 250px;
-}
-.right-\[1\%\] {
-  right: 1%;
-}
-.top-\[220px\] {
-  top: 220px;
-}
-.right-\[\.5\%\] {
-  right: .5%;
-}
-.top-\[30\%\] {
-  top: 30%;
-}
-.top-\[35\%\] {
-  top: 35%;
-}
-.top-\[32\%\] {
-  top: 32%;
-}
-.right-\[3\%\] {
-  right: 3%;
+.top-0 {
+  top: 0px;
 }
 .z-50 {
   z-index: 50;
@@ -860,9 +815,6 @@ html {
 .mr-1 {
   margin-right: 0.25rem;
 }
-.-mt-24 {
-  margin-top: -6rem;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -907,17 +859,26 @@ html {
 .h-full {
   height: 100%;
 }
+.h-\[150px\] {
+  height: 150px;
+}
+.h-\[148px\] {
+  height: 148px;
+}
+.h-\[auto\] {
+  height: auto;
+}
 .h-48 {
   height: 12rem;
-}
-.h-5 {
-  height: 1.25rem;
 }
 .h-\[40px\] {
   height: 40px;
 }
 .h-12 {
   height: 3rem;
+}
+.max-h-\[90vh\] {
+  max-height: 90vh;
 }
 .w-full {
   width: 100%;
@@ -937,29 +898,23 @@ html {
 .w-1\/3 {
   width: 33.333333%;
 }
-.w-auto {
+.w-\[auto\] {
   width: auto;
 }
-.w-5 {
-  width: 1.25rem;
+.w-\[350px\] {
+  width: 350px;
+}
+.w-\[90\%\] {
+  width: 90%;
+}
+.w-auto {
+  width: auto;
 }
 .w-\[40px\] {
   width: 40px;
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-\[50px\] {
-  width: 50px;
-}
-.w-\[100px\] {
-  width: 100px;
-}
-.w-\[150px\] {
-  width: 150px;
-}
-.w-\[130px\] {
-  width: 130px;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -969,6 +924,9 @@ html {
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.max-w-\[32rem\] {
+  max-width: 32rem;
 }
 .max-w-max {
   max-width: -webkit-max-content;
@@ -1106,6 +1064,12 @@ html {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .whitespace-pre-line {
   white-space: pre-line;
 }
@@ -1155,9 +1119,6 @@ html {
 .border-dashed {
   border-style: dashed;
 }
-.border-none {
-  border-style: none;
-}
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
@@ -1194,10 +1155,6 @@ html {
 .bg-\[color\:var\(--color-aqua\)\] {
   background-color: var(--color-aqua);
 }
-.bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
 .bg-\[color\:var\(--color-background\)\] {
   background-color: var(--color-background);
 }
@@ -1216,12 +1173,13 @@ html {
 .bg-\[color\:var\(--color-darker-background\)\] {
   background-color: var(--color-darker-background);
 }
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
 .bg-\[color\:\#f1efe2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(241 239 226 / var(--tw-bg-opacity));
-}
-.bg-transparent {
-  background-color: transparent;
 }
 .bg-\[linear-gradient\(to_bottom\2c _\#F1efe2_30\%\2c _\#F3BEF1_90\%\)\] {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #F1efe2), color-stop(90%, #F3BEF1));
@@ -1245,9 +1203,6 @@ html {
 }
 .p-1 {
   padding: 0.25rem;
-}
-.p-0 {
-  padding: 0px;
 }
 .px-6 {
   padding-left: 1.5rem;
@@ -1304,10 +1259,6 @@ html {
 .px-\[10px\] {
   padding-left: 10px;
   padding-right: 10px;
-}
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
@@ -1785,6 +1736,9 @@ html {
   .md\:absolute {
     position: absolute;
   }
+  .md\:top-\[30\%\] {
+    top: 30%;
+  }
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1822,8 +1776,8 @@ html {
   .md\:w-auto {
     width: auto;
   }
-  .md\:w-1\/3 {
-    width: 33.333333%;
+  .md\:w-1\/2 {
+    width: 50%;
   }
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));

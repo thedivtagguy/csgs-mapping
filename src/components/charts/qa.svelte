@@ -23,10 +23,14 @@
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
 
-  let width = 1100;
-  let height = 570;
-  let widthMobile = 300;
-
+  let width;
+  let height;
+  
+  let yPosition;
+let viewBoxHeight;
+let viewBoxWidth;
+let barHeight;
+let yPos;
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
@@ -50,7 +54,7 @@
     Storytelling: "#55774d",
     Theatre: "#D1BB80"
   };
-  let showLegend = false;
+  let showLegend = true;
 
 // Utility to determine text color (black or white) based on background
 function getTextColor(bg) {
@@ -86,17 +90,10 @@ function getTextColor(bg) {
     "Bollywood Dance": "./assets/qa/Dance 1.svg",
     "Mixed Media": "./assets/qa/Mixed media.svg"
   };
+let colsLanguage, colsBody, colsRewritings, cellSizeBody, cellSizeRewritings, cellSizeLanguage;
+ 
+  
 
-  const rows = 4;
-  const cols = 6;
-  const cols2 = 8;
-  const colsRewritings = 10;
-  const cellSize = (width)*1.1 / cols2;
-  const cellSize2 = width / 9;
-  const cellSize3 = (width) / cols;
-
-let barHeight;
-let yPos;
 onMount(async () => {
     window.mobileCheck = function () {
       let check = false;
@@ -127,12 +124,36 @@ onMount(async () => {
       return;
     }
     if (mobileCheck()){
-    barHeight = 750;
-    yPos = 0;
+      width = 1100;
+      height = 1956;
+    barHeight = 1850;
+    yPos = -70;
+    yPosition = 1850;
+    viewBoxWidth = 1200;
+    viewBoxHeight = 2133;
+    colsLanguage = 3;
+  colsBody = 4;
+  colsRewritings = 5;
+  cellSizeBody = (width)*1.05/4;
+  cellSizeRewritings = width*1.1/ colsRewritings;
+  cellSizeLanguage = (width)*.9/ colsLanguage;
   } else {
+    width = 1100;
+    height = 570;
     barHeight = 550;
     yPos = -110;
+    yPosition = 550;
+    viewBoxWidth = 1200;
+    viewBoxHeight = 650;
+    colsLanguage = 6;
+  colsBody = 8;
+  colsRewritings = 10;
+  cellSizeBody = (width)*1.1 / colsBody;
+  cellSizeRewritings = width / 9;
+  cellSizeLanguage = (width) / colsLanguage;
+
   }
+  
   });
   
   
@@ -152,8 +173,8 @@ onMount(async () => {
           // .attr("style", "filter: drop-shadow(1px 1px 0px #000000) ;")
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
-          .attr("x", (d, i) => (i % cols2) * cellSize)
-          .attr("y", (d, i) => height - cellSize - Math.floor(i / cols2) * cellSize - 40)
+          .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
+          .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
           .attr("width", 170)
           .attr("height", 170)
           // .attr("href", (d) => categoryIcons[d.artform])
@@ -279,9 +300,9 @@ onMount(async () => {
         .append("g")
         .attr("class", "data-shape")
         .attr("transform", (d, i) => {
-          const x = (i % cols) * cellSize3/.9;
-          const y = height - .7*cellSize3 - Math.floor(i / cols) * cellSize3;
-          return `translate(${x}, ${y}) scale(0.65)`;
+          const x = 50+(i % colsLanguage) * cellSizeLanguage/.9;
+          const y = height - .65*cellSizeLanguage - Math.floor(i / colsLanguage) * cellSizeLanguage;
+          return `translate(${x}, ${y}) scale(0.63)`;
         })
         .each(function (d) {
           const group = d3.select(this);
@@ -333,8 +354,8 @@ onMount(async () => {
         .attr("class", "data-shape") // Add a class to avoid reselecting all paths
         .attr("d", iconPath)
         .attr("transform", (d, i) => {
-          const x = (i % colsRewritings) * cellSize2;
-          const y = height -20 - cellSize2 - Math.floor(i / colsRewritings) * cellSize2;
+          const x = (i % colsRewritings) * cellSizeRewritings;
+          const y = height -20 - cellSizeRewritings - Math.floor(i / colsRewritings) * cellSizeRewritings;
           return `translate(${x}, ${y}) scale(.3)`;
         })
         .attr("fill", (d) => categoryColors[d.artform])
@@ -388,13 +409,13 @@ onMount(async () => {
       if (!animationState) {
         animate(0, 1); // shrink
       } else {
-        animate(550, 2, "bounce.out"); // bounce back
+        animate(barHeight, 2, "bounce.out"); // bounce back
       }
       animationState = !animationState;
       hasAnimatedOnce = true;
     } else {
       // Every other time: shrink then bounce back
-      animate(550, 1.5, "bounce.out"); // bounce back
+      animate(barHeight, 1.5, "bounce.out"); // bounce back
 
       // Then bounce back after a short delay
       setTimeout(() => {
@@ -426,14 +447,18 @@ onMount(async () => {
     // Use D3 to select all elements for the current view
     const container = d3.select(svgContainer);
 
-    container
-      .selectAll(".data-shape") // use your actual class here
-      .style("filter", function (d) {
-        return selectedKeywords.includes(d.keyword1)
-          ? "drop-shadow(2px 2px 4px rgba(0,0,0,1))"
-          : "none";
-      });
-  }
+    container.selectAll(".data-shape")
+    .style("filter", function (d) {
+      // If no keywords are selected, remove filters and reset opacity
+      if (selectedKeywords.length === 0) {
+        return "none";
+      }
+      // Apply highlight or dim based on match
+      return selectedKeywords.includes(d.keyword1)
+        ? "drop-shadow(2px 2px 2px rgba(0,0,0,.6))"
+        : "opacity(0.5)";
+    });
+}
 
   function handleBodyClick() {
     currentView = "body";
@@ -476,10 +501,10 @@ onMount(async () => {
     </a>
   </div>
   <div class="button-row">
-    <button class="animate-button1 text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleBodyClick}>Body</button>
-    <button class="animate-button1 spacebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleSpaceClick}>Space</button>
-    <button class="animate-button1 languagebutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleLanguageClick}>Language</button>
-    <button class="animate-button1 rewritingsbutton text-sm py-2 px-3 md:text-base md:py-3 md:px-6" on:click={handleRewritingsClick}
+    <button class="animate-button1 text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleBodyClick}>Body</button>
+    <button class="animate-button1 spacebutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleSpaceClick}>Space</button>
+    <button class="animate-button1 languagebutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleLanguageClick}>Language</button>
+    <button class="animate-button1 rewritingsbutton text-sm py-2 px-2 md:text-base md:py-3 md:px-6" on:click={handleRewritingsClick}
       >Rewritings</button
     >
   </div>
@@ -496,16 +521,43 @@ onMount(async () => {
   {/if}
 
   <div id="tooltip" class="tooltip" />
+  <div class="legend-container absolute right-[1%] top-[10%] z-10 pointer-events-auto hidden md:block md:top-[30%]" >
 
+    {#if showExpandedLegend}
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+      <img
+        src="./assets/qa/expanded.svg"
+        alt="Expanded Legend"
+        class="w-[auto] h-[150px] cursor-pointer"
+        tabindex="0"
+        on:click={() => showExpandedLegend = false}
+        on:keydown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            showExpandedLegend = false;
+          }
+        }}
+      />
+    {:else}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        src="./assets/qa/Legend.svg"
+        alt="Legend"
+        class="w-[auto] h-[148px] cursor-pointer"
+        on:click={() => showExpandedLegend = true}
+      />
+    {/if}
+    
+  </div>
+  
   <!-- Queer Archive SVG underneath -->
-  <svg class="queer-archive" viewBox="0 0 1200 650" preserveAspectRatio="true" transform = "translate(0, {yPos})">
-    <defs>
-      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
-      </filter>
-    </defs>
+  <svg
+  class="queer-archive"
+  viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
+  preserveAspectRatio="xMidYMid meet"
+  transform={`translate(0, ${yPos})`}>
+    
     <!-- Voronoi should come before bars so it renders underneath -->
-    <g bind:this={svgContainer} class="voronoi" x="20" y="50">
+    <g bind:this={svgContainer} class="voronoi" x="20" y="0">
       <!-- D3 will populate here -->
     </g>
 
@@ -523,7 +575,7 @@ onMount(async () => {
     <rect
       class="bottom"
       x="2"
-      y="550"
+      y={yPosition}
       width="98%"
       height="15%"
       fill="#F3DF8C"
@@ -534,14 +586,15 @@ onMount(async () => {
       ry="2"
     />
 
-    <!-- <image href="./assets/Stage.svg" alt="Stage" x="20" y="550" width="97%" /> -->
+    
   </svg>
-  <div class="legend-container absolute right-[3%] top-[32%] z-10" style = "filter: drop-shadow(1px 1px 1px #4c4c4c);">
+  <div class="legend-container-mobile block md:hidden absolute left-[5%] top-[80%] z-10 pointer-events-auto" >
     {#if showExpandedLegend}
+      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <img
-        src="./assets/qa/expanded.svg"
+        src="./assets/qa/MobileLegendexpanded.svg"
         alt="Expanded Legend"
-        class="w-[130px] h-auto cursor-pointer"
+        class="w-[350px] h-[auto] cursor-pointer"
         tabindex="0"
         on:click={() => showExpandedLegend = false}
         on:keydown={(event) => {
@@ -551,17 +604,17 @@ onMount(async () => {
         }}
       />
     {:else}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img
-        src="./assets/qa/Legend.svg"
+        src="./assets/qa/MobileLegend.svg"
         alt="Legend"
-        class="w-[130px] h-auto cursor-pointer"
+        class="w-[350px] h-[auto] cursor-pointer"
         on:click={() => showExpandedLegend = true}
       />
     {/if}
-    
   </div>
   
-  <div class="keyword-buttons">
+  <div class="keyword-buttons hidden md:flex bottom-[15%]">
     {#each allKeywords as keyword}
       <button
         class="keyword-button"
@@ -575,24 +628,7 @@ onMount(async () => {
     {/each}
   </div>
 
-  <!-- Mobile toggle -->
-<!-- <div class="md:hidden text-center mt-2">
-  <button class="px-4 py-2 bg-gray-800 text-white rounded" on:click={() => (showLegend = !showLegend)}>
-    {showLegend ? 'Hide Legend' : 'Show Legend'}
-  </button>
-</div> -->
-
-<!-- Legend Container -->
-<!-- <div class={`flex flex-wrap gap-1 justify-center -mt-24 ${showLegend ? '' : 'hidden'} md:flex`}>
-  {#each Object.entries(categoryColors) as [name, color]}
-    <div
-      class={`px-2 py-1 text-xs ${getTextColor(color)}`}
-      style="background-color: {color};"
-    >
-      {name}
-    </div>
-  {/each}
-</div> -->
+  
 </main>
 
 <style>
@@ -654,10 +690,36 @@ onMount(async () => {
   /* Optional: stack buttons vertically on smaller screens */
   @media (max-width: 600px) {
     .button-row {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.2rem;
     }
+    .legend-container {
+    top: auto !important;
+    bottom: -10% !important;
+    transform: scale(0.8);
+    right: 5%; /* optional: move it a bit inward from the right edge */
+  }
+    .title-card {
+      position: absolute;
+          top: 20% !important;
+    padding: .2rem;
+    width: 90%;
+  }
+.tooltip{
+  display: none;
+}
+.animate-button1{
+  padding: 0.6em 0.7em;
+}
+  .title-card .box-title {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+
+  .title-card .description {
+    font-size: clamp(13px, 4vw, 15px);
+  }
+  .keyword-buttons {display: none !important;}
   }
 
   main {
@@ -666,7 +728,7 @@ onMount(async () => {
 
   .queer-archive {
     width: 100%;
-    height: auto;
+   
     display: block;
     /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
   }
@@ -677,6 +739,7 @@ onMount(async () => {
 
   .bars {
     pointer-events: none; /* only for visuals */
+    z-index:11;
   }
 
   .tooltip {
@@ -698,12 +761,12 @@ onMount(async () => {
   }
   .keyword-buttons {
     position: absolute;
-    bottom: 10%; /* Adjust as needed to sit on rect */
-    left: 10%;
-    width: 80%;
+    
+    left: 5%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: center;
     gap: .7rem;
     z-index: 5; /* Above the SVG */
     pointer-events: auto;

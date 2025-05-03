@@ -141,24 +141,15 @@
 
 @media (max-width: 768px) {
     .container{
-        height: 60vh;
+        height: 80vh;
         z-index: 0;
     }
-    video {
-    -moz-transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform: rotate(-90deg) scale(1.5, 1.5) translate(-18vh, 0px) ;
-    position: relative; 
-    z-index: 0;
     
-    
-}
 }
 
 .box{
     width: 100%;
-    height: 60vh;            
+    height: 75vh;            
     position: absolute;
     top: 0;
 /* Center */

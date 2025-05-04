@@ -23,14 +23,7 @@
   let hasAnimatedOnce = false;
   let animationState = false; // assume false means full size
 
-  let width;
-  let height;
-  
-  let yPosition;
-let viewBoxHeight;
-let viewBoxWidth;
-let barHeight;
-let yPos = -80;
+ 
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
@@ -90,10 +83,27 @@ function getTextColor(bg) {
     "Bollywood Dance": "./assets/qa/Dance 1.svg",
     "Mixed Media": "./assets/qa/Mixed media.svg"
   };
-let colsLanguage, colsBody, colsRewritings, cellSizeBody, cellSizeRewritings, cellSizeLanguage;
-let scaleLanguage, scaleBody, scaleRewritings;
-let bodyWidths, bodyHeights;
- 
+
+
+   let width = 1100;
+    let height = 570;
+    let barHeight = 550;
+    let yPos = -80;
+    let yPosition = 550;
+    let viewBoxWidth = 1200;
+   let viewBoxHeight = 650;
+    let colsLanguage = 6;
+  let colsBody = 8;
+  let colsRewritings = 10;
+  let cellSizeBody = (width)*1.1 / colsBody;
+  let cellSizeRewritings = width / 9;
+  let cellSizeLanguage = (width)*.9 / colsLanguage;
+ let scaleBody = 1;
+ let scaleLanguage = .63;
+  let scaleRewritings = .3;
+let bodyWidths = 170;
+let bodyHeights = 170;
+
   
 
 onMount(async () => {
@@ -144,26 +154,7 @@ onMount(async () => {
   scaleRewritings = .35;
   bodyWidths = 200;
   bodyHeights = 200;
-  } else {
-    width = 1100;
-    height = 570;
-    barHeight = 550;
-    yPos = -80;
-    yPosition = 550;
-    viewBoxWidth = 1200;
-    viewBoxHeight = 650;
-    colsLanguage = 6;
-  colsBody = 8;
-  colsRewritings = 10;
-  cellSizeBody = (width)*1.1 / colsBody;
-  cellSizeRewritings = width / 9;
-  cellSizeLanguage = (width)*.9 / colsLanguage;
-  scaleBody = 1;
-  scaleLanguage = .63;
-  scaleRewritings = .3;
-bodyWidths = 170;
-bodyHeights = 170;
-  }
+  } 
   
   });
   

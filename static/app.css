@@ -931,6 +931,9 @@ html {
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[370px\] {
+  width: 370px;
+}
 .max-w-5xl {
   max-width: 64rem;
 }

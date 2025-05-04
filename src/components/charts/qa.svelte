@@ -30,7 +30,7 @@
 let viewBoxHeight;
 let viewBoxWidth;
 let barHeight;
-let yPos;
+let yPos = -80;
   // Define categories and their colors
   const categoryColors = {
     "Bollywood Dance": "#F3DF8C",
@@ -92,6 +92,7 @@ function getTextColor(bg) {
   };
 let colsLanguage, colsBody, colsRewritings, cellSizeBody, cellSizeRewritings, cellSizeLanguage;
 let scaleLanguage, scaleBody, scaleRewritings;
+let bodyWidths, bodyHeights;
  
   
 
@@ -141,6 +142,8 @@ onMount(async () => {
   scaleBody = 1;
   scaleLanguage = 1.3;
   scaleRewritings = .35;
+  bodyWidths = 200;
+  bodyHeights = 200;
   } else {
     width = 1100;
     height = 570;
@@ -158,7 +161,8 @@ onMount(async () => {
   scaleBody = 1;
   scaleLanguage = .63;
   scaleRewritings = .3;
-
+bodyWidths = 170;
+bodyHeights = 170;
   }
   
   });
@@ -182,8 +186,8 @@ onMount(async () => {
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
           .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
-          .attr("width", 170)
-          .attr("height", 170)
+          .attr("width", bodyWidths)
+          .attr("height", bodyHeights)
           .attr("transform", `scale(${scaleBody})`)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {

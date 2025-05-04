@@ -702,11 +702,11 @@ html {
 .left-\[5\%\] {
   left: 5%;
 }
-.top-\[80\%\] {
-  top: 80%;
+.top-\[78\%\] {
+  top: 78%;
 }
-.bottom-\[15\%\] {
-  bottom: 15%;
+.bottom-\[12\%\] {
+  bottom: 12%;
 }
 .top-0 {
   top: 0px;
@@ -901,8 +901,8 @@ html {
 .w-\[auto\] {
   width: auto;
 }
-.w-\[350px\] {
-  width: 350px;
+.w-\[370px\] {
+  width: 370px;
 }
 .w-\[90\%\] {
   width: 90%;

@@ -611,7 +611,7 @@ onMount(async () => {
       <img
         src="./assets/qa/MobileLegendexpanded.svg"
         alt="Expanded Legend"
-        class="w-[350px] h-[auto] cursor-pointer"
+        class="w-[370px] h-[auto] cursor-pointer"
         tabindex="0"
         on:click={() => showExpandedLegend = false}
         on:keydown={(event) => {
@@ -625,7 +625,7 @@ onMount(async () => {
       <img
         src="./assets/qa/MobileLegend.svg"
         alt="Legend"
-        class="w-[350px] h-[auto] cursor-pointer"
+        class="w-[370px] h-[auto] cursor-pointer"
         on:click={() => showExpandedLegend = true}
       />
     {/if}
@@ -711,12 +711,7 @@ onMount(async () => {
     transform: translateY(-80px); /* Adjust this value to move the SVG up or down */
     /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
   }
-  /* .voronoi {
-   
-   transform: translateX(20px); 
-   transform:translateY(-10px);/* Adjust this value to move the SVG up or down */
-   /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
- } */
+ 
     .button-row {
       flex-direction: row;
       align-items: center;

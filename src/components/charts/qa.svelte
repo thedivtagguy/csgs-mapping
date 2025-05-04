@@ -145,7 +145,7 @@ onMount(async () => {
     width = 1100;
     height = 570;
     barHeight = 550;
-    yPos = -110;
+    yPos = -80;
     yPosition = 550;
     viewBoxWidth = 1200;
     viewBoxHeight = 650;
@@ -177,13 +177,13 @@ onMount(async () => {
           .enter()
           .append("image")
           .attr("class", "data-shape")
-          
+       
 
           .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
           .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
           .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
-          // .attr("width", 170)
-          // .attr("height", 170)
+          .attr("width", 170)
+          .attr("height", 170)
           .attr("transform", `scale(${scaleBody})`)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {
@@ -250,7 +250,7 @@ onMount(async () => {
         .attr("stroke", "gray")
         .attr("stroke-width", 0.1)
         .attr("opacity", 0.9)
-        .attr("transform", "translate(50, 40)")
+        .attr("transform", "translate(50, 20)")
         .on("mouseover", function (event, d) {
           d3.select(this).attr("stroke-width", 3).attr("stroke", "#000000");
 
@@ -465,7 +465,15 @@ onMount(async () => {
       // Apply highlight or dim based on match
       return selectedKeywords.includes(d.keyword1)
         ? "drop-shadow(2px 2px 2px rgba(0,0,0,.6))"
-        : "opacity(0.5)";
+        : "none";
+    })
+    .style("opacity", function (d) {
+      // If no keywords are selected, remove filters and reset opacity
+      if (selectedKeywords.length === 0) {
+        return 1;
+      }
+      // Apply highlight or dim based on match
+      return selectedKeywords.includes(d.keyword1) ? 1 : 0.3;
     });
 }
 
@@ -522,8 +530,8 @@ onMount(async () => {
       <p class="box-title">Click on the category buttons above to lift the curtain</p>
       <p class="description">
         <li>View visual representations of the performances in the archive </li>
-        <li>Click on the representations to know more, and use the keywords at the bottom of the stage to filter performances </li>
-        <li>There's a legend in the scroll on the right, that maps colours to artforms </li> 
+        <li>Click on the representations to know more, and use the keywords at the bottom of the stage (on desktop) to filter performances </li>
+        <li>There's a legend in the scroll on the right (bottom, in mobile), that maps colours to artforms </li> 
         Happy exploring!
       
     </div>
@@ -628,7 +636,7 @@ onMount(async () => {
     {/if}
   </div>
   
-  <div class="keyword-buttons hidden md:flex bottom-[15%]">
+  <div class="keyword-buttons hidden md:flex bottom-[13%]">
     {#each allKeywords as keyword}
       <button
         class="keyword-button"

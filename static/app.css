@@ -711,6 +711,9 @@ html {
 .top-0 {
   top: 0px;
 }
+.bottom-\[13\%\] {
+  bottom: 13%;
+}
 .z-50 {
   z-index: 50;
 }

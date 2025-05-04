@@ -705,20 +705,11 @@ html {
 .top-\[78\%\] {
   top: 78%;
 }
-.bottom-\[15\%\] {
-  bottom: 15%;
+.bottom-\[12\%\] {
+  bottom: 12%;
 }
 .top-0 {
   top: 0px;
-}
-.bottom-\[13\%\] {
-  bottom: 13%;
-}
-.bottom-\[14\%\] {
-  bottom: 14%;
-}
-.bottom-\[12\%\] {
-  bottom: 12%;
 }
 .z-50 {
   z-index: 50;
@@ -886,12 +877,6 @@ html {
 .h-12 {
   height: 3rem;
 }
-.h-\[50px\] {
-  height: 50px;
-}
-.h-\[80px\] {
-  height: 80px;
-}
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -916,8 +901,8 @@ html {
 .w-\[auto\] {
   width: auto;
 }
-.w-\[350px\] {
-  width: 350px;
+.w-\[370px\] {
+  width: 370px;
 }
 .w-\[90\%\] {
   width: 90%;
@@ -930,9 +915,6 @@ html {
 }
 .w-\[200px\] {
   width: 200px;
-}
-.w-\[370px\] {
-  width: 370px;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -1358,9 +1340,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[10px\] {
-  font-size: 10px;
 }
 .font-bold {
   font-weight: 700;
@@ -1788,17 +1767,11 @@ html {
   .md\:h-auto {
     height: auto;
   }
-  .md\:h-\[100px\] {
-    height: 100px;
-  }
   .md\:w-auto {
     width: auto;
   }
   .md\:w-1\/2 {
     width: 50%;
-  }
-  .md\:w-\[500px\] {
-    width: 500px;
   }
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1893,9 +1866,6 @@ html {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-  .md\:text-\[16px\] {
-    font-size: 16px;
   }
   .md\:font-medium {
     font-weight: 500;

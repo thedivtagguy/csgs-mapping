@@ -566,7 +566,7 @@ onMount(async () => {
   class="queer-archive"
   viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
   preserveAspectRatio="xMidYMid meet"
-  transform={`translate(0, ${yPos})`}>
+  >
   <defs>
     <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="1" dy="1" stdDeviation="0.5" flood-color="#000000" />
@@ -631,7 +631,7 @@ onMount(async () => {
     {/if}
   </div>
   
-  <div class="keyword-buttons hidden md:flex bottom-[13%]">
+  <div class="keyword-buttons hidden md:flex bottom-[12%]">
     {#each allKeywords as keyword}
       <button
         class="keyword-button"
@@ -706,6 +706,17 @@ onMount(async () => {
 
   /* Optional: stack buttons vertically on smaller screens */
   @media (max-width: 600px) {
+    .queer-archive {
+   
+    transform: translateY(-80px); /* Adjust this value to move the SVG up or down */
+    /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
+  }
+  /* .voronoi {
+   
+   transform: translateX(20px); 
+   transform:translateY(-10px);/* Adjust this value to move the SVG up or down */
+   /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
+ } */
     .button-row {
       flex-direction: row;
       align-items: center;
@@ -747,6 +758,7 @@ onMount(async () => {
     width: 100%;
    
     display: block;
+    transform: translateY(-70px); /* Adjust this value to move the SVG up or down */
     /* transform: translateY(-110px); Adjust this value to move the SVG up or down */
   }
 

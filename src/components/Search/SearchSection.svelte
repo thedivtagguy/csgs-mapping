@@ -215,7 +215,28 @@ search.addWidgets([
         },
       }),
     ]),
-
+    index({ indexName: 'queer-archive',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#qa-search',
+        templates: {
+          item:
+           `
+           <div class="py-4">
+          <h4 class="font-semibold text-xl"><a href={{{links}}} target=”_blank”>{{title }}</h4>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ duration }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ plot }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{keywords}}</p>
+          </div>
+          
+        </div>
+           `,
+        },
+      }),
+    ]),
 
 ]);
 
@@ -244,6 +265,7 @@ search.start();
           <option value="institutions-search">Institutions</option>
           <option value="digital-spaces-search">Digital Spaces</option>
           <option value="judgements-search">Judgements</option>
+          <option value="qa-search">Queer Performance Archive</option>
         </select>
       </div>
       <div id="paginate"></div>
@@ -312,6 +334,16 @@ search.start();
       </div>
       <div class="col-span-9">
         <div id="judgements-search"></div>
+      </div>
+    </section>
+  </div>
+  <div hidden={selected === 'qa-search' ? false : selected === 'all' ? false : true} >
+    <section class="grid px-10  py-12 md:grid-cols-12">
+      <div class="col-span-3">
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Queer Performance Archive</h3>
+      </div>
+      <div class="col-span-9">
+        <div id="qa-search"></div>
       </div>
     </section>
   </div>

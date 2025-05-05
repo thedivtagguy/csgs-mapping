@@ -744,11 +744,11 @@ html {
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
-.m-1 {
-  margin: 0.25rem;
-}
 .m-auto {
   margin: auto;
+}
+.m-1 {
+  margin: 0.25rem;
 }
 .mx-auto {
   margin-left: auto;

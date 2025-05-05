@@ -690,6 +690,12 @@ html {
   position: -webkit-sticky;
   position: sticky;
 }
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .left-0 {
   left: 0px;
 }
@@ -737,6 +743,9 @@ html {
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+.m-auto {
+  margin: auto;
 }
 .m-1 {
   margin: 0.25rem;

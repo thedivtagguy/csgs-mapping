@@ -16,7 +16,7 @@
 
   let facet1 = "keyword";
   let selected2;
-  export let direction = "left";
+  export let direction = "right";
 
   let facets2 = [];
   facets2 = dataset.map((d) => d[facet1]).filter((v, i, a) => a.indexOf(v) === i);
@@ -88,7 +88,7 @@
     let widthMobile = 3300;
     let height = 680;
 
-    let amountToScroll = width - window.innerWidth+100;
+    let amountToScroll = width - window.innerWidth+50;
     let amountToScrollMobile = 0;
     
     gsap.registerPlugin(ScrollTrigger);
@@ -230,7 +230,7 @@
       <div class="chart relative md:flex">
         <div
           id="facets2"
-          class="md:flex z-10 hidden {direction}-4 md:absolute flex-col gap-8 justify-start pb-8 my-1"
+          class="hidden md:flex z-10 md:absolute inset-0 m-auto flex-col gap-8 justify-center items-center pb-8 my-1"
         >
           <select bind:value={selected2} class="rounded-none">
             {#each facets2 as facet1}
@@ -261,17 +261,17 @@
 
 <style>
   .judgementscontainer {
-  width: 100vw;
-  overflow-x: hidden;
+  width: 90vw;
+  
   position: relative;
 }
   #timelinewrapper {
-  width: 100vw;
+  width: 90vw;
   height: 700px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
   #timeline {
     width: 4250px; /* Or however wide you need */
@@ -290,6 +290,7 @@
   }
   @media (max-width: 799px) {
   #timelinewrapper {
+    overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #aaa transparent;
   }

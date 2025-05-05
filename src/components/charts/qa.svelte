@@ -174,7 +174,7 @@ onMount(async () => {
           .attr("class", "data-shape")
        
 
-          .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Theatre.svg")
+          .attr("href", (d) => categoryIcons[d.artform] || "./assets/qa/Dance1.svg")
           .attr("x", (d, i) => (i % colsBody) * cellSizeBody)
           .attr("y", (d, i) => height - cellSizeBody - Math.floor(i / colsBody) * cellSizeBody - 40)
           .attr("width", bodyWidths)
@@ -182,7 +182,10 @@ onMount(async () => {
           .attr("transform", `scale(${scaleBody})`)
           // .attr("href", (d) => categoryIcons[d.artform])
           .on("mouseover", function (event, d) {
-            d3.select(this).attr("style", "filter: drop-shadow(1px 1px 0px #000000);");
+            
+  d3.select(this).style("filter", "brightness(1.2) saturate(1.2) hue-rotate(30deg)");
+
+
 
             tooltip.style("opacity", 1).html(d.title || "No title");
           })
@@ -194,7 +197,7 @@ onMount(async () => {
             tooltip.style("left", x + 10 + "px").style("top", y + 10 + "px");
           })
           .on("mouseout", function () {
-            d3.select(this).attr("style", "filter: none;");
+            d3.select(this).style("filter", "brightness(1) saturate(1) hue-rotate(0deg)");
 
             tooltip.style("opacity", 0);
           })
@@ -851,4 +854,5 @@ text-transform: uppercase;
     line-height: 1.6;
     font-weight: 400;
   }
+  
 </style>

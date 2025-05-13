@@ -340,7 +340,7 @@ search.start();
   <div hidden={selected === 'qa-search' ? false : selected === 'all' ? false : true} >
     <section class="grid px-10  py-12 md:grid-cols-12">
       <div class="col-span-3">
-        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">Queer Performance Archive</h3>
+        <h3 class="font-sans font-bold uppercase text-2xl text-gray-800">The Queer Performance Archive</h3>
       </div>
       <div class="col-span-9">
         <div id="qa-search"></div>

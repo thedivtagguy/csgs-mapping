@@ -39,5 +39,11 @@ module.exports = [
     id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
     gid: "1796987334",
     filepath: "src/data/judgements.csv"
+  },
+  
+  {
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk/edit?gid=2108445617",
+    gid: "2108445617",
+    filepath: "src/data/qa.csv"
   }
    ];

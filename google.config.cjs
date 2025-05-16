@@ -42,7 +42,7 @@ module.exports = [
   },
   
   {
-    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk/edit?gid=2108445617",
+    id: "1-cISrwWlFXDyFctwbLvvF0clxq7ZSq-SoVChekDlhlk",
     gid: "2108445617",
     filepath: "src/data/qa.csv"
   }

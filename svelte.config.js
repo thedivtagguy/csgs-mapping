@@ -22,7 +22,7 @@ const algoliaConfig = {
     { name: `miscellaneous`, getData: loadMiscellaneous },
     { name: `organizations`, getData: loadOrganizations },
     { name: `judgements`, getData: loadJudgements },
-    { name: `qa`, getData: loadQA },
+    { name: `qa`, getData: loadQA  },
   ],
   settings: {
     attributesToHighlight: [`title`, `programs`],

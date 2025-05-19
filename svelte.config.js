@@ -7,7 +7,7 @@ import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 import { indexAlgolia } from 'svelte-algolia/server-side'
 import 'dotenv/config' // optional
-import { loadPublications, loadAVMaterial, loadDigitalSpaces, loadEvents, loadMiscellaneous, loadOrganizations, loadJudgements } from "./algoliaIndices.js";
+import { loadPublications, loadAVMaterial, loadDigitalSpaces, loadEvents, loadMiscellaneous, loadOrganizations } from "./algoliaIndices.js";
 
 
 const algoliaConfig = {

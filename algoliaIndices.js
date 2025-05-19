@@ -72,6 +72,6 @@ export {
   loadEvents,
   loadDigitalSpaces,
   loadMiscellaneous,
-  loadOrganizations,
+  loadOrganizations
   // loadJudgements
 }

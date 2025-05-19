@@ -8,7 +8,6 @@
     <ul>
       <li>{@html hit.genre}</li>
       <li>{@html hit.year}</li>
-      <li>{@html hit.artform}</li>
     </ul>
     <!-- Horizontal line -->
     <hr class="border-gray-200 border-2">

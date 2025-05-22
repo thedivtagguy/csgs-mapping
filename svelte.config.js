@@ -20,8 +20,8 @@ const algoliaConfig = {
     { name: `digitalSpaces`, getData: loadDigitalSpaces },
     { name: `events`, getData: loadEvents },
     { name: `miscellaneous`, getData: loadMiscellaneous },
-    { name: `organizations`, getData: loadOrganizations },
-    { name: `judgements`, getData: loadJudgements },
+    { name: `organizations`, getData: loadOrganizations }
+    
   ],
   settings: {
     attributesToHighlight: [`title`, `programs`],

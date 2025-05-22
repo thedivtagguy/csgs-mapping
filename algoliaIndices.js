@@ -57,21 +57,13 @@ async function loadOrganizations() {
     });
     return json.default.map((el) => ({ ...el, id: el.id }))
 }
-async function loadJudgements() {
-  // Fetch data from data/indices folder
-  const json = await import('./src/data/indices/judgements.csv.json', {
-    assert: { type: 'json' }
-  });
-  return json.default.map((el) => ({ ...el, id: el.id }))
-}
-
-async function loadQA() {
-  // Fetch data from data/indices folder
-  const json = await import('./src/data/indices/qa.csv.json', {
-    assert: { type: 'json' }
-  });
-  return json.default.map((el) => ({ ...el, id: el.id }))
-}
+// async function loadJudgements() {
+//   // Fetch data from data/indices folder
+//   const json = await import('./src/data/indices/judgements.csv.json', {
+//     assert: { type: 'json' }
+//   });
+//   return json.default.map((el) => ({ ...el, id: el.id }))
+// }
 
 export {
   // Export all the functions
@@ -80,7 +72,6 @@ export {
   loadEvents,
   loadDigitalSpaces,
   loadMiscellaneous,
-  loadOrganizations,
-  loadJudgements,
-  loadQA
+  loadOrganizations
+  // loadJudgements
 }

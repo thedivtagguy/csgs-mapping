@@ -193,50 +193,50 @@ search.addWidgets([
         },
       }),
     ]),
-    index({ indexName: 'judgements',   hitsPerPage: 3 })
-    .addWidgets([
-      hits({
-        container: '#judgements-search',
-        templates: {
-          item:
-           `
-           <div class="py-4">
-          <h4 class="font-semibold text-xl"><a href={{{link}}} target=”_blank”>{{judgement }}</h4>
-          <div class="flex flex-row justify-items-center items-center gap-4">
-            <p class="text-sm hit-description">{{ court }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{ year }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{keyword}}</p>
-          </div>
+    // index({ indexName: 'judgements',   hitsPerPage: 3 })
+    // .addWidgets([
+    //   hits({
+    //     container: '#judgements-search',
+    //     templates: {
+    //       item:
+    //        `
+    //        <div class="py-4">
+    //       <h4 class="font-semibold text-xl"><a href={{{link}}} target=”_blank”>{{judgement }}</h4>
+    //       <div class="flex flex-row justify-items-center items-center gap-4">
+    //         <p class="text-sm hit-description">{{ court }}</p>
+    //         <p> | </p>
+    //         <p class="text-sm hit-description">{{ year }}</p>
+    //         <p> | </p>
+    //         <p class="text-sm hit-description">{{keyword}}</p>
+    //       </div>
           
-        </div>
-           `,
-        },
-      }),
-    ]),
-    index({ indexName: 'queer-archive',   hitsPerPage: 3 })
-    .addWidgets([
-      hits({
-        container: '#qa-search',
-        templates: {
-          item:
-           `
-           <div class="py-4">
-          <h4 class="font-semibold text-xl"><a href={{{links}}} target=”_blank”>{{title }}</h4>
-          <div class="flex flex-row justify-items-center items-center gap-4">
-            <p class="text-sm hit-description">{{ duration }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{ plot }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{keywords}}</p>
-          </div>
+    //     </div>
+    //        `,
+    //     },
+    //   }),
+    // ]),
+    // index({ indexName: 'queer-archive',   hitsPerPage: 3 })
+    // .addWidgets([
+    //   hits({
+    //     container: '#qa-search',
+    //     templates: {
+    //       item:
+    //        `
+    //        <div class="py-4">
+    //       <h4 class="font-semibold text-xl"><a href={{{links}}} target=”_blank”>{{title }}</h4>
+    //       <div class="flex flex-row justify-items-center items-center gap-4">
+    //         <p class="text-sm hit-description">{{ duration }}</p>
+    //         <p> | </p>
+    //         <p class="text-sm hit-description">{{ plot }}</p>
+    //         <p> | </p>
+    //         <p class="text-sm hit-description">{{keywords}}</p>
+    //       </div>
           
-        </div>
-           `,
-        },
-      }),
-    ]),
+    //     </div>
+    //        `,
+    //     },
+    //   }),
+    // ]),
 
 ]);
 

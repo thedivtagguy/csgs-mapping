@@ -218,28 +218,28 @@ search.addWidgets([
         },
       }),
     ]),
-    //  index({ indexName: 'queerarchive',   hitsPerPage: 3 })
-    // .addWidgets([
-    //   hits({
-    //     container: '#qa-search',
-    //     templates: {
-    //       item:
-    //        `
-    //        <div class="py-4">
-    //       <h4 class="font-semibold text-xl"><a href={{{links}}} target=”_blank”>{{title}}</h4>
-    //       <div class="flex flex-row justify-items-center items-center gap-4">
-    //         <p class="text-sm hit-description">{{ court }}</p>
-    //         <p> | </p>
-    //         <p class="text-sm hit-description">{{ year }}</p>
-    //         <p> | </p>
-    //         <p class="text-sm hit-description">{{keyword}}</p>
-    //       </div>
+     index({ indexName: 'queerarchive',   hitsPerPage: 3 })
+    .addWidgets([
+      hits({
+        container: '#qa-search',
+        templates: {
+          item:
+           `
+           <div class="py-4">
+          <h4 class="font-semibold text-xl"><a href={{{links}}} target=”_blank”>{{title}}</h4>
+          <div class="flex flex-row justify-items-center items-center gap-4">
+            <p class="text-sm hit-description">{{ artform }}</p>
+            <p> | </p>
+            <p class="text-sm hit-description">{{ duration }}</p>
+            <p> | </p>
+           
+          </div>
           
-    //     </div>
-    //        `,
-    //     },
-    //   }),
-    // ]),
+        </div>
+           `,
+        },
+      }),
+    ]),
     
     // index({ indexName: 'queerarchive',   hitsPerPage: 3 })
     // .addWidgets([

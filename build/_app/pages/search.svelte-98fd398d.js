@@ -163,16 +163,9 @@ import { connectSearchBox } from 'instantsearch.js/es/connectors'`)}});var Nl=Qe
           </div>
           
         </div>
-           `}})]),mt({indexName:"queer-archive",hitsPerPage:3}).addWidgets([pt({container:"#qa-search",templates:{item:`
+           `}})]),mt({indexName:"queerarchive",hitsPerPage:3}).addWidgets([pt({container:"#qa-search",templates:{item:`
            <div class="py-4">
-          <h4 class="font-semibold text-xl"><a href={{{links}}} target=\u201D_blank\u201D>{{title }}</h4>
-          <div class="flex flex-row justify-items-center items-center gap-4">
-            <p class="text-sm hit-description">{{ duration }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{ plot }}</p>
-            <p> | </p>
-            <p class="text-sm hit-description">{{keywords}}</p>
-          </div>
+          <h4 class="font-semibold text-xl">{{title}}</h4>
           
         </div>
            `}})])]),s.start()});function a(){i=Bs(this),r(0,i)}return[i,a]}class nh extends Ln{constructor(e){super(),kn(this,e,rh,th,Un,{})}}function ih(t){let e,r,n,i,a;return r=new Vs({}),i=new nh({}),{c(){e=D("section"),Mt(r.$$.fragment),n=le(),Mt(i.$$.fragment)},l(s){e=A(s,"SECTION",{});var o=L(e);Bt(r.$$.fragment,o),n=fe(o),Bt(i.$$.fragment,o),o.forEach(I)},m(s,o){Zt(s,e,o),Vt(r,e,null),O(e,n),Vt(i,e,null),a=!0},p:Cr,i(s){a||(Kt(r.$$.fragment,s),Kt(i.$$.fragment,s),a=!0)},o(s){zt(r.$$.fragment,s),zt(i.$$.fragment,s),a=!1},d(s){s&&I(e),Jt(r),Jt(i)}}}class ah extends Ln{constructor(e){super(),kn(this,e,null,ih,Un,{})}}function sh(t){let e,r,n,i,a,s;return e=new Ks({}),n=new ah({}),a=new zs({}),{c(){Mt(e.$$.fragment),r=le(),Mt(n.$$.fragment),i=le(),Mt(a.$$.fragment)},l(o){Bt(e.$$.fragment,o),r=fe(o),Bt(n.$$.fragment,o),i=fe(o),Bt(a.$$.fragment,o)},m(o,l){Vt(e,o,l),Zt(o,r,l),Vt(n,o,l),Zt(o,i,l),Vt(a,o,l),s=!0},p:Cr,i(o){s||(Kt(e.$$.fragment,o),Kt(n.$$.fragment,o),Kt(a.$$.fragment,o),s=!0)},o(o){zt(e.$$.fragment,o),zt(n.$$.fragment,o),zt(a.$$.fragment,o),s=!1},d(o){Jt(e,o),o&&I(r),Jt(n,o),o&&I(i),Jt(a,o)}}}const fh=!0,hh=!0;class dh extends Ln{constructor(e){super(),kn(this,e,null,sh,Un,{})}}export{dh as default,fh as prerender,hh as router};

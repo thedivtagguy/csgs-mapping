@@ -7,7 +7,7 @@ import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 import { indexAlgolia } from 'svelte-algolia/server-side'
 import 'dotenv/config' // optional
-import { loadPublications, loadAVMaterial, loadDigitalSpaces, loadEvents, loadMiscellaneous, loadOrganizations } from "./algoliaIndices.js";
+import { loadPublications, loadAVMaterial, loadDigitalSpaces, loadEvents, loadMiscellaneous, loadOrganizations, loadJudgements, loadQA } from "./algoliaIndices.js";
 
 
 const algoliaConfig = {
@@ -20,7 +20,9 @@ const algoliaConfig = {
     { name: `digitalSpaces`, getData: loadDigitalSpaces },
     { name: `events`, getData: loadEvents },
     { name: `miscellaneous`, getData: loadMiscellaneous },
-    { name: `organizations`, getData: loadOrganizations }
+    { name: `organizations`, getData: loadOrganizations },
+     { name: `judgements`, getData: loadJudgements },
+     { name: `queerarchive`, getData: loadQA },
     
   ],
   settings: {

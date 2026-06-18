@@ -5,7 +5,7 @@ import svg from "vite-plugin-svgstring";
 import dsv from "@rollup/plugin-dsv";
 import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
-import { indexAlgolia } from 'svelte-algolia/server-side'
+//import { indexAlgolia } from 'svelte-algolia/server-side'
 import 'dotenv/config' // optional
 import { loadPublications, loadAVMaterial, loadDigitalSpaces, loadEvents, loadMiscellaneous, loadOrganizations, loadJudgements, loadQA } from "./algoliaIndices.js";
 
@@ -31,7 +31,7 @@ const algoliaConfig = {
   },
 }
 
-indexAlgolia(algoliaConfig)
+//indexAlgolia(algoliaConfig)
 const { thedivtagguy } = JSON.parse(fs.readFileSync("package.json", "utf8"));
 const dev = process.env.NODE_ENV === "development";
 const dir = thedivtagguy ? thedivtagguy.subdirectory : "";

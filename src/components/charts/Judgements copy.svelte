@@ -167,9 +167,8 @@
         return "blob2 " + d.keyword.replaceAll(" ", "_").replaceAll("'", "2").replaceAll("/", "3");
       })
       .on("mouseover", function (d) {
-        this.parentNode.parentNode.appendChild(this.parentNode);
-        this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
-        d3.select(this).selectAll(".words").style("font-weight", "500");
+        
+        d3.select(this).raise().selectAll(".words").style("font-weight", "500");
 
         d3.select(this)
           .selectAll(".drawing")

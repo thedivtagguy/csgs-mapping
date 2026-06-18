@@ -200,11 +200,13 @@
       .style("fill", (d) => d.color)
       .style("fill-opacity", 1)
       .on("mouseover", function (d) {
-        this.parentNode.parentNode.appendChild(this.parentNode);
-        this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
-        d3.select(this).style("stroke", "#3a3a3a").style("stroke-width", "2px");
+        
+        //this.parentNode.parentNode.appendChild(this.parentNode);
+        //this.parentNode.parentNode.parentNode.appendChild(this.parentNode.parentNode);
+        d3.select(this).raise().style("stroke", "#3a3a3a").style("stroke-width", "2px");
       })
       .on("mouseout", function (d) {
+        
         d3.select(this).style("stroke-width", "0px");
       })
 

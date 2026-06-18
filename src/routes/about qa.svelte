@@ -48,7 +48,7 @@
 
     <p class="mt-5 text-base mx-auto text-gray-500">In an interview with the team, the contemporary Launda Naach performer Swaja translated their taken name as ‘self-born, self-created’. This archive, therefore, not only preserves these acts of creation but also offers a space for continuously redefining and reimagining queer identity through performance.</p>
 
-    <p class="mt-5 text-base mx-auto text-gray-500">Queer performance, in the words of Navtej Johar<sup>2</sup>, holds within it the spirit of recklessness; teasing, and teetering between play and fight. This notion of recklessness aligns with Arondekar’s (2023) concept of abundance—a framework that invites a rethinking of queer identity and performance not as fixed, but as a fluid, dynamic force. Abundance is not merely a surplus of possibilities but a deliberate excess that challenges boundaries and expectations.</p>
+    <p class="mt-5 text-base mx-auto text-gray-500">Queer performance, in the words of Navtej Johar<sup>2</sup>, holds within it the spirit of recklessness; teasing, and teetering between play and fight This notion of recklessness aligns with Arondekar’s (2023) concept of abundance—a framework that invites a rethinking of queer identity and performance not as fixed, but as a fluid, dynamic force. Abundance is not merely a surplus of possibilities but a deliberate excess that challenges boundaries and expectations.</p>
 
     <p class="mt-8 text-lg font-light font-sans text-gray-700 sm:text-lg sm:tracking-tight lg:text-xl">
       Cataloging: A Key Step in Archiving

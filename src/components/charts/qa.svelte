@@ -77,6 +77,7 @@ function getTextColor(bg) {
     "Performance Art/Strip Tease/Drag": "./assets/qa/Drag.svg",
     Nautanki: "./assets/qa/Nautanki.svg",
     Poetry: "./assets/qa/Spoken word.svg",
+    "Spoken Word": "./assets/qa/Spoken word.svg",
     "Immersive Theatre": "./assets/qa/Theatre.svg",
     "Experiential Installation": "./assets/qa/Film.svg",
     Drag: "./assets/qa/Drag.svg",

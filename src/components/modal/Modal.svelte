@@ -9,6 +9,7 @@
   </script>
   
   {#if isOpen}
+ 
       <!-- on:introstart and on:outroend are required to transition 1 at a time between modals -->
     <div role="dialog" class="modal" transition:fly={{ y: 50 }} on:introstart on:outroend>
         <div class="contents relative w-[90%] md:w-1/2 max-w-[32rem] max-h-[90vh] ">

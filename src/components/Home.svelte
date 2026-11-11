@@ -28,6 +28,25 @@
             <Header />
         </div>
     </div>
+
+    <section id="judgements">
+        <Judgements 
+        id = "judge"
+        modalContent={{
+            label: "court",
+            title: "judgement",
+            year: "year",
+            asset: "asset", 
+            link: "link",
+            
+            
+        }}
+        
+        title="judgments"
+        dataset={judge}
+        />
+    </section>
+    
     <section id = "qa">
        <QA
         modalContent={{
@@ -41,7 +60,7 @@
        />
     </section>
 <div class="pt-2 sm:py-2 ">
-    <section id="map">
+    <!-- <section id="map">
         <Mapbox />
     </section>
     <section id="publications">
@@ -100,24 +119,8 @@
             direction="left"
             combineYear={false}
         />
-    </section>
-    <section id="judgements">
-        <Judgements 
-        id = "judge"
-        modalContent={{
-            label: "court",
-            title: "judgement",
-            year: "year",
-            asset: "asset", 
-            link: "link",
-            
-            
-        }}
-        
-        title="judgments"
-        dataset={judge}
-        />
-    </section>
+    </section> -->
+    
 </div>
 </main>
 

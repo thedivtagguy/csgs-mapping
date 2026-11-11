@@ -39,22 +39,20 @@
   transform-origin: center;
   stroke: #F67C87;
   stroke-width: 3px;
-  stroke-dashoffset: 10%;
-  stroke-dasharray: 4; /* 👈 makes it dashed */
+  
 }
 
 .button__label {
-  font-family: 'Abril Fatface', serif;
+  font-family:  serif;
   transition-property: transform;
   transition-duration: 0.1s;
   transform-origin: center;
-  fill: #6d6d6d;
+  fill: #505050;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.2rem; /* 👈 increase font size here */
+  font-weight: 800;
+  font-size: 1.5rem; /* 👈 increase font size here */
   text-anchor: middle;
 }
-
   .active-top  {
     transform: translate(1px, 1px) rotate(-1deg) ;
     }
